@@ -1,0 +1,8 @@
+# lixo do Windows
+Thumbs.db
+desktop.ini
+*~
+
+# backups locais
+*.bak
+*.orig

@@ -1,0 +1,9 @@
+# NAO converter fim de linha em NADA deste repositorio.
+#
+# O index.html e gerado por build.cmd e validado por SHA256. Os fontes em src/
+# (inclusive os .b64 congelados) tem que ser byte-exatos. Qualquer conversao de
+# LF para CRLF quebraria o hash e, no caso dos .b64, corromperia o payload.
+#
+# O Windows vem com core.autocrlf=true por padrao; esta linha vence essa config
+# para qualquer pessoa que clonar o repo.
+* -text
