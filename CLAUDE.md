@@ -26,6 +26,13 @@ direto: falha com erro de segurança.
 
 Para conferir sem sobrescrever: `.\build.cmd -OutFile C:\caminho\teste.html`
 
+**Use `-OutFile` só para comparar hash.** Depois de qualquer mudança de conteúdo
+(dados, layout, lógica), rode `.\build.cmd` sem `-OutFile`, para que o `index.html`
+da pasta seja de fato atualizado — é esse arquivo que o Felipe abre no navegador
+para revisar antes de publicar. Gerar em temporário e dizer que "está pronto" faz
+ele abrir a versão velha. O `deploy.cmd` já roda o build por dentro; não precisa
+buildar duas vezes.
+
 ## Estrutura
 
 ```
