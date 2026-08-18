@@ -126,3 +126,109 @@ Hash de referência (13 payloads, 8.893.043 bytes):
 
 Esse hash foi mantido através das Fases 1 e 2 — extrair fontes, libs e decompor o
 comparativo não mudou um byte da saída.
+
+## Rotina semanal da avaliação
+
+Toda segunda chega um HTML novo em `C:\Users\User\Downloads\MODELOS IA\Avaliação de
+Imóveis DD_MM.html`. Ele passa a ser a semana atual e a anterior é arquivada.
+
+**O relatório novo é a fonte de todo número — não calcule nada de cabeça.** Dentro
+dele: `CONFIG` (data, `numCorretores`), `DETALHES` (endereço, bairro, dorms, vagas,
+suítes, áreas de cada imóvel), `<tbody id="tbl-body">` (valores, nota, gap, faixa) e
+a tabela "Todas as semanas", que já traz a linha da semana atual pronta para conferir.
+
+Não há `python` nem `node` nesta máquina. Para parsear/validar JSON use o
+`ConvertFrom-Json` do PowerShell; para editar as linhas gigantes use `perl` lendo o
+texto novo de um arquivo (heredoc), porque quoting inline com `▲`, `−` e `·` quebra.
+
+### 1. Monta o `avaliacao.html` novo
+
+`src/tools/avaliacao.html` é o HTML cru **sem** os 14 bytes finais (`</body></html>`)
+mais um bloco de rodapé de 5.115 bytes: botão "Hub ZELT", classe `zelt-aninhado` e o
+`postMessage` de `focus`/`scroll`/`drawer`. Extraia o bloco do arquivo que está
+saindo — nunca reescreva na mão:
+
+```bash
+RAW="C:/Users/User/Downloads/MODELOS IA/Avaliação de Imóveis 25_08.html"
+OFF=$(grep -abo -- '<!-- ZELT: voltar ao hub -->' src/tools/avaliacao.html | cut -d: -f1)
+tail -c +$((OFF-7)) src/tools/avaliacao.html > rodape.txt
+head -c $(( $(wc -c < "$RAW") - 14 )) "$RAW" > nova.html
+cat rodape.txt >> nova.html
+```
+
+### 2. Congela a semana que sai
+
+```bash
+base64 -w0 src/tools/avaliacao.html > src/frozen/avaliacao-DD-MM.b64
+cp nova.html src/tools/avaliacao.html
+```
+
+Uma linha só, sem newline no fim — é assim que os outros `.b64` estão.
+
+### 3. `src/order.txt`
+
+O nome novo entra logo depois de `avaliacao`, mantendo a ordem cronológica invertida.
+
+### 4. `src/tools/avaliacoes.html` — três linhas
+
+Linhas 396–398, cada uma um array/objeto imenso numa única linha:
+
+- **`SEMANAS_NO_HUB`** — `"DD/MM/AAAA":"avaliacao"` na frente; a chave da semana
+  anterior passa a apontar para `"avaliacao-DD-MM"`.
+- **`KPIS`** — nova entrada na frente com `"atual":true`; a anterior vira `false`
+  (é o `atual` que desenha o "· atual" e a tag "Atual" no painel).
+- **`DADOS`** — os imóveis novos na frente, na ordem do ranking do relatório
+  (pior gap primeiro).
+
+Campos de cada imóvel no `DADOS`, nesta ordem:
+
+| campo | de onde vem |
+|---|---|
+| `c` | código |
+| `t` | prefixo do código: AP=Apartamento, CA=Casa, CO=Cobertura, TE=Terreno, SA=Sala comercial, PR=Prédio |
+| `cap` | coluna Captador |
+| `w` | data da semana, `DD/MM/AAAA` |
+| `a`, `k` | Anunciado, Consenso |
+| `g` | Gap em pontos percentuais (`-19.8`) |
+| `n` | Nota |
+| `f` | Leitura: `Revisar` / `Leve ajuste` / `Alinhado` |
+| `e`, `cm`, `b` | `DETALHES[cod].local` partido por ` · `: primeiro trecho, miolo, último |
+| `d`, `v`, `s` | dorms, vagas, suítes — **omita** o campo quando o imóvel não tem |
+| `m` + `ml` | `areaUtil`→`m² úteis`, `areaConstr`→`m² constr.`, `areaTotal`→`m² total` |
+| `mt` | `areaTerreno` |
+| `dr` | `a - k` |
+| `vd` | 1:1 com `f`: Revisar→`Acima do preço de mercado`, Leve ajuste→`Levemente acima do mercado`, Alinhado→`Dentro do preço de mercado` |
+
+No `KPIS`: `corretores` é o `CONFIG.numCorretores`; `gap_medio` e `nota_media` são as
+médias simples com uma decimal; as `bandas` são a contagem por `f` (Revisar / Leve
+ajuste / Alinhado). Os deltas comparam com a semana anterior no formato `▲ +3`,
+`▼ -1`, `— 0`, e `gap_delta` leva ` p.p.` no fim.
+
+### 5. `src/hub.html`
+
+O chip do primeiro card: `<span class="chip">Atualizado em DD/MM</span>`.
+
+### 6. Confere e publica
+
+```bash
+.\deploy.cmd "Avaliacao de Imoveis: semana DD/MM como atual, DD/MM arquivada"
+```
+
+Antes de publicar, valide as três linhas editadas — um `DADOS` com JSON quebrado
+deixa o painel em branco e o build não reclama:
+
+```powershell
+$l = [System.IO.File]::ReadAllLines('src\tools\avaliacoes.html', [System.Text.Encoding]::UTF8)
+foreach ($i in 395,396,397) {
+  $t = $l[$i]; $t = $t.Substring($t.IndexOf('=') + 1).Trim().TrimEnd(';')
+  try {
+    $o = $t | ConvertFrom-Json
+    $n = @($o).Count
+    if ($n -eq 1) { $n = @($o.PSObject.Properties).Count }
+    Write-Output ("linha " + ($i+1) + ": OK, " + $n + " itens")
+  } catch { Write-Output ("linha " + ($i+1) + ": JSON INVALIDO -> " + $_.Exception.Message) }
+}
+```
+
+A contagem de imóveis, a soma de `a` e a soma de `k` têm de bater com os KPIs do
+próprio relatório. Confira também que só uma semana ficou com `atual:true`.
