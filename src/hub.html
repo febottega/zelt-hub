@@ -875,6 +875,8 @@ body.tool-open{overflow:hidden}
     var html = b64ToText(tpl.textContent.trim());
     frame = document.createElement('iframe');
     frame.setAttribute('title', 'Ferramenta ZELT');
+    /* deixa a ferramenta copiar para a area de transferencia (Resumo p/ proprietario) */
+    frame.setAttribute('allow', 'clipboard-write');
     var done = false;
     /* logo de carregamento só aparece se a ferramenta demorar de verdade (>350ms) */
     loadTimer = setTimeout(function(){ if (!done) loading.classList.remove('hide'); }, 350);

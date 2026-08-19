@@ -105,6 +105,13 @@ header.top{background:var(--navy-900);color:#fff;padding:20px 0 0}
 .btn:hover{border-color:var(--zelt-orange);color:var(--orange-700);background:var(--orange-50);transform:translateY(-1px)}
 .btn.solid{background:var(--zelt-orange);border-color:var(--zelt-orange);color:var(--navy-900)}
 .btn.solid:hover{background:var(--orange-600);border-color:var(--orange-600);color:#fff}
+/* ação do painel: ocupa as duas colunas vazias da grade e alinha com os selects */
+.f-item-acao{grid-column:span 2;align-self:end}
+#bResumo{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%}
+#bResumo svg{width:15px;height:15px;flex:none}
+#bResumo.ok{background:var(--success);border-color:var(--success);color:#fff}
+#bResumo.erro{background:var(--danger);border-color:var(--danger);color:#fff}
+@media (max-width:760px){.f-item-acao{grid-column:1/-1}}
 .chips{display:flex;gap:7px;flex-wrap:wrap}
 .chip-f{
   display:inline-flex;align-items:center;gap:7px;font-size:12px;padding:5px 12px;
@@ -317,6 +324,12 @@ body.rel-mode{overflow:hidden}
       <div class="f-item"><label for="ftip">Tipo</label><select id="ftip"></select></div>
       <div class="f-item"><label for="fsem">Semana</label><select id="fsem"></select></div>
       <div class="f-item"><label for="ffai">Situação do preço</label><select id="ffai"></select></div>
+      <div class="f-item f-item-acao">
+        <button class="btn solid" id="bResumo" type="button" title="Copia a mensagem pronta para enviar ao proprietário">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+          <span class="rot">Resumo p/ proprietário</span>
+        </button>
+      </div>
     </div>
     <div class="f-actions">
       <button class="btn" id="bClear">Limpar filtros</button>
@@ -588,6 +601,67 @@ function initFiltros(){
     ["fcod","fend","fcap","fbai","fdor","fsui","ftip","fsem","ffai"].forEach(function(id){ document.getElementById(id).value=""; });
     render();
   });
+  document.getElementById("bResumo").addEventListener("click", function(){
+    var btn = this;
+    copiarTexto(MSG_PROPRIETARIO).then(function(ok){
+      avisoBotao(btn, ok ? "Mensagem copiada" : "Não deu — tente de novo", ok ? "ok" : "erro");
+    });
+  });
+}
+
+
+/* ---------------- resumo p/ proprietário ---------------- */
+/* Mensagem pronta que o corretor cola no WhatsApp. NOME, ENDEREÇO e os dois X
+   ficam em aberto de propósito: nome do proprietário e visualizações não estão
+   na base do painel, então quem envia preenche na hora. */
+var MSG_PROPRIETARIO = [
+  "Boa tarde, NOME! Tudo bem? Aqui é o Felipe da Zelt Imóveis 🌟",
+  "",
+  "Estou passando rapidinho para te atualizar da situação do seu imóvel localizado na ENDEREÇO, no qual está sob nossa intermediação. Esses arquivos que estou te enviando possui todo o desempenho do seu imóvel no nosso site e em todos os portais assim como também a avaliação de preço feito por nossa equipe de 16 corretores, e como você pode notar, seu imóvel tem tido um desempenho impecável acumulando X visualizações.",
+  "",
+  "Porém apesar desse potencial de venda incrível, seu imóvel acumulou um número de visitas e propostas menores que imóveis do mesmo padrão. Pelo imóvel ter bastante visualizações e ser atraente, localizamos que o problema pode ser que seu imóvel está um pouco acima do valor que o mercado, como se pode ver no relatório, algo em torno de X%. Portanto, gostaríamos de saber se você gostaria de aceitar nossa sugestão de preço ou ter um bate-papo comigo para eu te explicar melhor a situação do mercado e do seu imóvel.",
+  "",
+  "Fico no aguardo e uma ótima semana! 🤜"
+].join("\n");
+
+/* execCommand é obsoleto, mas dentro do iframe srcdoc do hub ele é a rede de
+   segurança quando a Clipboard API não está liberada. */
+function copiarViaTextarea(texto){
+  var ta = document.createElement("textarea");
+  ta.value = texto;
+  ta.setAttribute("readonly", "");
+  ta.style.position = "fixed";
+  ta.style.top = "-1000px";
+  ta.style.opacity = "0";
+  document.body.appendChild(ta);
+  ta.select();
+  try { ta.setSelectionRange(0, texto.length); } catch(_){ }
+  var ok = false;
+  try { ok = document.execCommand("copy"); } catch(_){ ok = false; }
+  document.body.removeChild(ta);
+  return ok;
+}
+
+function copiarTexto(texto){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(texto).then(function(){ return true; },
+      function(){ return copiarViaTextarea(texto); });
+  }
+  return Promise.resolve(copiarViaTextarea(texto));
+}
+
+function avisoBotao(btn, texto, classe){
+  var rot = btn.querySelector(".rot");
+  if (!rot) return;
+  if (!btn.getAttribute("data-rot")) btn.setAttribute("data-rot", rot.textContent);
+  rot.textContent = texto;
+  btn.classList.remove("ok", "erro");
+  if (classe) btn.classList.add(classe);
+  if (btn._volta) clearTimeout(btn._volta);
+  btn._volta = setTimeout(function(){
+    rot.textContent = btn.getAttribute("data-rot");
+    btn.classList.remove("ok", "erro");
+  }, 2600);
 }
 
 /* ---------------- filtro + ordenação ---------------- */
