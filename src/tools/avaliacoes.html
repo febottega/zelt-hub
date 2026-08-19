@@ -18,7 +18,7 @@
   --n-900:#1c1c22; --n-800:#2c2c35; --n-700:#42424e; --n-600:#595966;
   --n-500:#797985; --n-400:#a2a2ad; --n-300:#c9c9d1; --n-200:#e2e2e8;
   --n-100:#efeff2; --n-50:#f8f8fa;
-  --success:#25a06b; --warning:#e2851f; --warning-soft:#ffedd6;
+  --success:#25a06b; --success-soft:#d8f0e4; --warning:#e2851f; --warning-soft:#ffedd6;
   --danger:#e0463e; --danger-soft:#fbe0de; --info:#3a76c0; --info-soft:#dde9f7;
   --band-r:var(--danger); --band-r-soft:var(--danger-soft);
   --band-a:var(--warning); --band-a-soft:var(--warning-soft);
@@ -166,6 +166,27 @@ tbody td{padding:11px 10px;font-size:14px;vertical-align:middle}
 .wk{font-family:var(--font-display);font-size:12px;font-weight:500;color:var(--n-700);white-space:nowrap}
 .go-cell{width:34px;text-align:right;color:var(--n-400);font-size:15px}
 tbody tr:hover .go-cell{color:var(--zelt-orange)}
+/* ---- coluna "Feito": o corretor marca o que ja trabalhou ---- */
+.th-feito{width:58px;text-align:center;white-space:nowrap}
+td.c-feito{text-align:center}
+.fx{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:3px;position:relative}
+.fx input{position:absolute;opacity:0;width:0;height:0;margin:0}
+.fx .bx{
+  width:20px;height:20px;border-radius:5px;display:inline-block;position:relative;
+  border:1.5px solid var(--n-300);background:#fff;
+  transition:border-color .15s,background .15s;
+}
+.fx:hover .bx{border-color:var(--success)}
+.fx input:focus-visible + .bx{border-color:var(--zelt-orange);box-shadow:0 0 0 3px rgba(255,158,54,.35)}
+/* o check e desenhado em CSS (duas bordas giradas): nenhum asset novo */
+.fx .bx::after{
+  content:"";position:absolute;left:6px;top:2.5px;width:5px;height:9.5px;
+  border:solid var(--success);border-width:0 2.5px 2.5px 0;
+  transform:rotate(45deg) scale(.4);transform-origin:center;
+  opacity:0;transition:opacity .14s,transform .18s cubic-bezier(.22,1,.36,1);
+}
+.fx input:checked + .bx{border-color:var(--success);background:var(--success-soft)}
+.fx input:checked + .bx::after{opacity:1;transform:rotate(45deg) scale(1)}
 .empty{padding:48px 20px;text-align:center;color:var(--n-600)}
 .empty b{display:block;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--ls-wide);
   color:var(--navy-800);font-size:17px;margin-bottom:6px}
@@ -260,6 +281,8 @@ body.rel-mode{overflow:hidden}
   td.c-cod{margin-bottom:6px}
   td.c-end{margin-bottom:9px}
   td.c-money,td.c-gap,td.c-nota,td.c-cap,td.c-wk,td.c-pill,td.c-sui{margin-top:3px}
+  td.c-feito{margin-top:7px;text-align:left!important}
+  td.c-feito .fx{vertical-align:-5px}
   .go-cell{position:absolute;top:14px;right:14px;width:auto}
   .kpi .num{font-size:26px}
   .zelt-back-hub{padding:9px 15px;font-size:12px}
@@ -343,6 +366,7 @@ body.rel-mode{overflow:hidden}
         <th data-s="n" class="num">Nota <span class="ar">⇅</span></th>
         <th data-s="f">Situação <span class="ar">⇅</span></th>
         <th data-s="w">Semana <span class="ar">⇅</span></th>
+        <th class="th-feito" title="Marque os imóveis cujo preço você já trabalhou com o proprietário">Feito</th>
         <th aria-label="Abrir"></th>
       </tr></thead>
       <tbody id="tb"></tbody>
@@ -418,6 +442,39 @@ function dataOrd(d){ var p=String(d).split("/"); return p[2]+p[1]+p[0]; }
 var CACHE = {};          // slug -> html do relatório
 var PEND = null;         // {slug, data, codigo} aguardando o HTML
 var REL = null;          // relatório em exibição
+
+/* ---------------- coluna "Feito" ---------------- */
+/* Fica no localStorage do navegador, nao no repositorio: a marcacao e de quem
+   esta usando aquele computador, e o proximo corretor nao herda a lista do
+   anterior. A chave e codigo + semana porque o mesmo imovel reaparece em
+   semanas diferentes e cada rodada e um trabalho a parte. */
+var FEITO_CHAVE = "zelt_avaliacoes_feito_v1";
+var FEITO = {};
+
+function chaveFeito(r){ return (r.c || "") + "|" + (r.w || ""); }
+function estaFeito(r){ return FEITO[chaveFeito(r)] === 1; }
+
+function carregarFeito(){
+  try {
+    var cru = localStorage.getItem(FEITO_CHAVE);
+    var o = cru ? JSON.parse(cru) : null;
+    FEITO = (o && typeof o === "object") ? o : {};
+  } catch(e){
+    /* modo privado, storage cheio ou bloqueado: a ferramenta segue
+       funcionando, so nao lembra das marcacoes */
+    FEITO = {};
+  }
+}
+
+function salvarFeito(){
+  try { localStorage.setItem(FEITO_CHAVE, JSON.stringify(FEITO)); } catch(e){}
+}
+
+function marcarFeito(chave, ligado){
+  if (!chave) return;
+  if (ligado) FEITO[chave] = 1; else delete FEITO[chave];
+  salvarFeito();
+}
 
 function noHub(){ return window.parent !== window; }
 
@@ -756,12 +813,29 @@ function render(){
       '<td class="num c-nota" data-l="Nota"><span class="nota">' + dec1(r.n) + '</span></td>' +
       '<td class="c-pill" data-l="Situação"><span class="pill ' + cl + '">' + esc(r.f || "—") + '</span></td>' +
       '<td class="c-wk" data-l="Semana"><span class="wk">' + esc(r.w) + '</span></td>' +
+      '<td class="c-feito" data-l="Feito">' +
+        '<label class="fx" title="Marcar como já trabalhado">' +
+          '<input type="checkbox" data-k="' + esc(chaveFeito(r)) + '"' + (estaFeito(r) ? ' checked' : '') +
+          ' aria-label="Marcar ' + esc(r.c) + ' de ' + esc(r.w) + ' como já trabalhado">' +
+          '<span class="bx" aria-hidden="true"></span>' +
+        '</label></td>' +
       '<td class="go-cell" aria-hidden="true">↗</td>' +
       '</tr>';
   });
   tb.innerHTML = h;
   document.getElementById("empty").classList.toggle("hidden", LISTA.length > 0);
   document.getElementById("tbl").classList.toggle("hidden", LISTA.length === 0);
+
+  /* a celula do Feito nao pode deixar o clique subir para a linha, senao
+     marcar a caixinha abriria o relatorio da semana junto */
+  tb.querySelectorAll("td.c-feito").forEach(function(td){
+    td.addEventListener("click", function(ev){ ev.stopPropagation(); });
+  });
+  tb.querySelectorAll("td.c-feito input").forEach(function(cb){
+    cb.addEventListener("change", function(){
+      marcarFeito(cb.getAttribute("data-k"), cb.checked);
+    });
+  });
 
   tb.querySelectorAll("tr[data-i]").forEach(function(tr){
     tr.addEventListener("click", function(){
@@ -905,6 +979,7 @@ function kpi(valor, rotulo, delta){
     "<b>" + DADOS.length + " avaliações</b> de " + Object.keys(semanas).length +
     " semanas · clique em qualquer imóvel para ver o relatório da semana dele, já no ponto onde ele aparece" +
     (semEnd ? " · " + semEnd + " avaliações de formato antigo não têm endereço, bairro nem metragem" : "");
+  carregarFeito();
   initTabs();
   initFiltros();
   initCmp();
