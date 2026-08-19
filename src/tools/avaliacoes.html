@@ -603,7 +603,7 @@ function initFiltros(){
   });
   document.getElementById("bResumo").addEventListener("click", function(){
     var btn = this;
-    copiarTexto(MSG_PROPRIETARIO).then(function(ok){
+    copiarTexto(msgProprietario()).then(function(ok){
       avisoBotao(btn, ok ? "Mensagem copiada" : "Não deu — tente de novo", ok ? "ok" : "erro");
     });
   });
@@ -611,18 +611,29 @@ function initFiltros(){
 
 
 /* ---------------- resumo p/ proprietário ---------------- */
-/* Mensagem pronta que o corretor cola no WhatsApp. NOME, ENDEREÇO e os dois X
-   ficam em aberto de propósito: nome do proprietário e visualizações não estão
-   na base do painel, então quem envia preenche na hora. */
-var MSG_PROPRIETARIO = [
-  "Boa tarde, NOME! Tudo bem? Aqui é o Felipe da Zelt Imóveis 🌟",
-  "",
-  "Estou passando rapidinho para te atualizar da situação do seu imóvel localizado na ENDEREÇO, no qual está sob nossa intermediação. Esses arquivos que estou te enviando possui todo o desempenho do seu imóvel no nosso site e em todos os portais assim como também a avaliação de preço feito por nossa equipe de 16 corretores, e como você pode notar, seu imóvel tem tido um desempenho impecável acumulando X visualizações.",
-  "",
-  "Porém apesar desse potencial de venda incrível, seu imóvel acumulou um número de visitas e propostas menores que imóveis do mesmo padrão. Pelo imóvel ter bastante visualizações e ser atraente, localizamos que o problema pode ser que seu imóvel está um pouco acima do valor que o mercado, como se pode ver no relatório, algo em torno de X%. Portanto, gostaríamos de saber se você gostaria de aceitar nossa sugestão de preço ou ter um bate-papo comigo para eu te explicar melhor a situação do mercado e do seu imóvel.",
-  "",
-  "Fico no aguardo e uma ótima semana! 🤜"
-].join("\n");
+/* Mensagem pronta que o corretor cola no WhatsApp. CORRETOR, NOME, ENDEREÇO e os
+   dois X ficam em aberto de propósito: quem está enviando, o nome do proprietário
+   e as visualizações não estão na base do painel, então quem envia preenche na hora.
+   A saudação vem do relógio do computador de quem clica, montada no clique (e não
+   no carregamento) para o painel poder ficar aberto atravessando a virada da hora. */
+function saudacao(){
+  var h = new Date().getHours();
+  if (h >= 5  && h < 12) return "Bom dia";
+  if (h >= 12 && h < 18) return "Boa tarde";
+  return "Boa noite";
+}
+
+function msgProprietario(){
+  return [
+    saudacao() + ", NOME! Tudo bem? Aqui é o CORRETOR da Zelt Imóveis 🌟",
+    "",
+    "Estou passando rapidinho para te atualizar da situação do seu imóvel localizado na ENDEREÇO, no qual está sob nossa intermediação. Esses arquivos que estou te enviando possui todo o desempenho do seu imóvel no nosso site e em todos os portais assim como também a avaliação de preço feito por nossa equipe de 16 corretores, e como você pode notar, seu imóvel tem tido um desempenho impecável acumulando X visualizações.",
+    "",
+    "Porém apesar desse potencial de venda incrível, seu imóvel acumulou um número de visitas e propostas menores que imóveis do mesmo padrão. Pelo imóvel ter bastante visualizações e ser atraente, localizamos que o problema pode ser que seu imóvel está um pouco acima do valor que o mercado, como se pode ver no relatório, algo em torno de X%. Portanto, gostaríamos de saber se você gostaria de aceitar nossa sugestão de preço ou ter um bate-papo comigo para eu te explicar melhor a situação do mercado e do seu imóvel.",
+    "",
+    "Fico no aguardo e uma ótima semana! 🤜"
+  ].join("\n");
+}
 
 /* execCommand é obsoleto, mas dentro do iframe srcdoc do hub ele é a rede de
    segurança quando a Clipboard API não está liberada. */
