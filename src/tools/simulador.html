@@ -146,9 +146,28 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
   .stats-band{background:var(--zelt-navy) !important;break-inside:avoid;page-break-inside:avoid;padding:26px 28px}
   .stat .num{font-size:30px}
   .form-card,.cmp-card,.chart-card{box-shadow:none;border:1px solid var(--gray-200);break-inside:avoid;page-break-inside:avoid}
-  .flow-card{box-shadow:none;border:1px solid var(--gray-200)}
+  /* overflow:hidden serve para o arredondamento na tela, mas em papel ele cria
+     um contexto que atrapalha a tabela quebrar entre paginas -- e recortaria de
+     novo qualquer coisa que passasse da largura */
+  .flow-card{box-shadow:none;border:1px solid var(--gray-200);overflow:visible}
   .flow-card thead th{position:static;background:var(--zelt-navy) !important;color:var(--white) !important}
   thead{display:table-header-group}
+  /* Na tela este wrapper rola na horizontal; no papel nao ha para onde rolar e
+     o overflow simplesmente recortava as duas ultimas colunas (Total do mes e
+     Saldo devedor). Em impressao ele nao pode recortar nada. */
+  .flow-scroll{overflow:visible}
+  .flow-card table{width:100%;table-layout:auto}
+  /* as 7 colunas com nowrap nao cabem nos 186mm uteis do A4 no tamanho de
+     tela: aqui elas entram apertando fonte e respiro, sem esconder coluna */
+  .flow-card th,.flow-card td{padding:5px 6px;font-size:10px}
+  .flow-card thead th{font-size:9px;letter-spacing:.03em}
+  .flow-card thead th .sub{font-size:8px}
+  .flow-card td.mes{font-size:10.5px}
+  .flow-card tfoot td{padding:7px 6px;font-size:10px}
+  /* tfoot, por padrao, repete em TODA pagina: a linha de Totais reaparecia no
+     meio do documento e dava a impressao de que a tabela havia terminado ali.
+     Como table-row-group ela imprime uma vez, no fim. */
+  tfoot{display:table-row-group}
   .flow-card tbody tr{break-inside:avoid;page-break-inside:avoid}
   .flow-card tbody tr:hover{background:transparent}
   .flow-card td.p2{color:var(--orange-700) !important}
