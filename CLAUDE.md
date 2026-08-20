@@ -137,9 +137,19 @@ dele: `CONFIG` (data, `numCorretores`), `DETALHES` (endereço, bairro, dorms, va
 suítes, áreas de cada imóvel), `<tbody id="tbl-body">` (valores, nota, gap, faixa) e
 a tabela "Todas as semanas", que já traz a linha da semana atual pronta para conferir.
 
-Não há `python` nem `node` nesta máquina. Para parsear/validar JSON use o
-`ConvertFrom-Json` do PowerShell; para editar as linhas gigantes use `perl` lendo o
-texto novo de um arquivo (heredoc), porque quoting inline com `▲`, `−` e `·` quebra.
+**Ferramentas nesta máquina:** `node` (v24.19.0) e `npx` existem e rodam direto, tanto
+no bash quanto no PowerShell. `python` **não** existe: o `python` do PATH é o atalho da
+Microsoft Store e só devolve mensagem de erro. `perl` e o PowerShell 5.1 também estão
+disponíveis.
+
+Para ler e validar os dados, `node` é o caminho mais curto — inclusive para dar
+`eval` num `.js` de dados e conferir contagens, ou `node --check` num script. O
+`ConvertFrom-Json` do PowerShell serve igual para as três linhas do `avaliacoes.html`.
+
+Para **editar** as linhas gigantes use `perl` lendo o texto novo de um arquivo, nunca
+quoting inline: com `▲`, `−` e `·` no meio, quebra. E cuidado com heredoc — o `\n`
+escrito como barra dupla chega ao arquivo com uma barra só, então âncoras de busca não
+devem depender de escapes; prefira casar linhas inteiras ou usar classes de caractere.
 
 ### 1. Monta o `avaliacao.html` novo
 
