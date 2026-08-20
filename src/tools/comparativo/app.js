@@ -847,7 +847,14 @@ function salesTableHTML(emp, t){
     if(/^R\$/.test(cell)) cls="price-cell";
     return `<td class="${cls}">${cell}${extra}</td>`;
   }).join("")}${hasSum?`<td class="td-resumo"><button type="button" class="btn-resumo" data-emp="${emp.replace(/"/g,'&quot;')}" data-ri="${ri}">Copiar Resumo</button></td>`:""}</tr>`).join("");
-  const folderUrl = `https://drive.google.com/drive/folders/${t.folderId}`;
+  /* O folderId da propria tabela e a fonte preferida. Quando ele falta -- e tres
+     tabelas estavam sem: Carbono, Villa Toscana e Grand Park -- cai no
+     DRIVE_LINKS, que e o mesmo mapa que os outros botoes "Ir a tabela" usam.
+     Sem nenhum dos dois o botao nao vira link: interpolar um folderId ausente
+     gerava .../folders/undefined, que o Google responde com 404. */
+  const folderUrl = t.folderId
+    ? `https://drive.google.com/drive/folders/${t.folderId}`
+    : (DRIVE_LINKS[emp] || null);
   return `<section class="stable" id="tab-${salesSlug(emp)}">
     <div class="stable-head" role="button" tabindex="0">
       <div class="stable-tt">
@@ -861,7 +868,9 @@ function salesTableHTML(emp, t){
     <div class="stable-body">
       <div class="stable-actions">
         <span class="src">Recriada da tabela oficial — confira sempre a original antes de negociar.</span>
-        <a class="btn-orig" href="${folderUrl}" target="_blank" rel="noopener">Ir à tabela original ↗</a>
+        ${folderUrl
+          ? `<a class="btn-orig" href="${folderUrl}" target="_blank" rel="noopener">Ir à tabela original ↗</a>`
+          : `<span class="btn-orig disabled" title="Pasta da tabela original ainda não cadastrada">Ir à tabela original</span>`}
       </div>
       <div class="stable-scroll"><table class="sales"><thead>${head}</thead><tbody>${body}</tbody></table></div>
       ${t.note?`<div class="stable-note">${t.note}</div>`:""}
