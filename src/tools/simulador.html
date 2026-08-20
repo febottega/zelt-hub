@@ -155,6 +155,9 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
   /* Na tela este wrapper rola na horizontal; no papel nao ha para onde rolar e
      o overflow simplesmente recortava as duas ultimas colunas (Total do mes e
      Saldo devedor). Em impressao ele nao pode recortar nada. */
+  /* a tabela sempre abre em folha nova: antes ela comecava no pe da pagina
+     anterior e quebrava ja na primeira ou segunda linha */
+  #secFluxo{break-before:page;page-break-before:always}
   .flow-scroll{overflow:visible}
   .flow-card table{width:100%;table-layout:auto}
   /* as 7 colunas com nowrap nao cabem nos 186mm uteis do A4 no tamanho de
@@ -268,7 +271,7 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
   </div>
 </section>
 
-<section class="container" style="padding-top:0">
+<section class="container" id="secFluxo" style="padding-top:0">
   <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
     <div>
       <span class="overline">Fluxo detalhado</span>
@@ -413,6 +416,48 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
     renderCmp(orig,sim,extra,temExtra,freq);
     renderChart(P,prazo,orig,sim,temExtra);
     renderFlow(sim,temExtra,freq);
+    salvarSimulacao(freq);
+  }
+
+  // ===== ultima simulacao, no navegador deste computador =====
+  /* Guarda os valores como o corretor os ve (ja mascarados), para restaurar sem
+     reformatar. A chamada fica no fim do update(), depois do "if(erro) return":
+     assim o historico so registra simulacao que fecha, e um campo no meio de
+     uma digitacao invalida nao sobrescreve a ultima boa. */
+  var SIM_CHAVE = 'zelt_simulador_v1';
+  var SIM_CAMPOS = ['inValor','inEntrada','inTaxa','inPrazo','inExtra'];
+  var SIM_MASCARADOS = {inValor:1, inEntrada:1, inExtra:1};
+
+  function salvarSimulacao(freq){
+    try{
+      var o = {freq:freq};
+      SIM_CAMPOS.forEach(function(id){ o[id] = document.getElementById(id).value; });
+      localStorage.setItem(SIM_CHAVE, JSON.stringify(o));
+    }catch(e){ /* modo privado ou storage bloqueado: segue sem historico */ }
+  }
+
+  function restaurarSimulacao(){
+    var o = null;
+    try{ o = JSON.parse(localStorage.getItem(SIM_CHAVE) || 'null'); }catch(e){ return; }
+    if(!o || typeof o !== 'object') return;
+    /* tudo ou nada: um registro pela metade misturaria campos salvos com os
+       valores padrao e podia montar uma combinacao invalida -- por exemplo
+       entrada maior que o valor do imovel -- abrindo a ferramenta com erro
+       e sem tabela. */
+    var completo = SIM_CAMPOS.every(function(id){
+      return typeof o[id] === 'string' && o[id] !== '';
+    });
+    if(!completo) return;
+    SIM_CAMPOS.forEach(function(id){
+      document.getElementById(id).value = o[id];
+      if(SIM_MASCARADOS[id]) fmtMoney(id);
+    });
+    /* compara com a lista fechada em vez de interpolar o valor num seletor */
+    if(o.freq === 'mensal' || o.freq === 'anual'){
+      document.querySelectorAll('.freq-btn').forEach(function(x){
+        x.classList.toggle('active', x.dataset.freq === o.freq);
+      });
+    }
   }
 
   // ===== Stats =====
@@ -604,6 +649,7 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
     b.classList.add('active');
     update();
   });
+  restaurarSimulacao();
   update();
 })();
 </script>
