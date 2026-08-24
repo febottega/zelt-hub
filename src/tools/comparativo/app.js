@@ -18,6 +18,7 @@ const DRIVE_LINKS = {
   "N Studios": "https://drive.google.com/drive/folders/1hjuaDdLupfXwOHNexAUvI5eeumAYYxzs",
   "Residencial EB": "https://drive.google.com/drive/folders/1Ig1UoYH8Hk6mh2kRocGjoylX9e3L5Auq",
   "Carbono": "https://drive.google.com/drive/folders/1KIbI6g5eJ3jq_2Kk22BgNi400gqkorIj",
+  "Central Park": "https://drive.google.com/drive/folders/1ocdQjOiH2eEiZaFZdBEShSt1GnbLnFJc",
   "Imperial Park": "https://drive.google.com/drive/folders/1-LRwkJkBx_HoeBMq93gjetb77mp1d1HS",
   "Maldivas": "https://drive.google.com/drive/folders/1kqMAJvQF6Eu-3hZ5ZBzewHNhxSZRnJs8",
   "Lago di Garda": "https://drive.google.com/drive/folders/1YvUNpX6g_SVKRfHjfPnEkKRf4NuYe8Q3",
@@ -749,6 +750,14 @@ function parseBRL(s){
 function fmtBRL(n){
   return "R$ " + n.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
 }
+/* "Unidade" nao serve para loteamento. A propria tabela ja declara o que cada
+   linha e, no summary.tipoDefault ("Lote"), e o rotulo acompanha isso; um
+   summary.rotuloUnidade explicito tem prioridade se um dia precisar de
+   "Sala", "Casa" etc. */
+function rotuloUnidade(t){
+  const s = (t && t.summary) || {};
+  return s.rotuloUnidade || (s.tipoDefault === "Lote" ? "Lote" : "Unidade");
+}
 function andarDeUnidade(u){
   const d = String(u).replace(/\D/g,"");
   if(d.length < 3) return null;
@@ -776,7 +785,7 @@ function buildResumo(emp, ri){
   b1.push(`*${emp.toUpperCase()}* \u2014*${tipo}*`);
   if(d0.construtora) b1.push(`*Construtora ${d0.construtora}*`);
   const andar = (s.andar===false) ? null : andarDeUnidade(un);
-  b1.push(`*Unidade ${un}*${andar?` \u00b7 ${andar}`:""}`);
+  b1.push(`*${rotuloUnidade(t)} ${un}*${andar?` \u00b7 ${andar}`:""}`);
   const bits = (s.bits||[]).map(b=>{
     const v = r[b.col];
     if(vazio(v)) return null;
@@ -862,7 +871,7 @@ function salesTableHTML(emp, t){
         <div class="stable-sub"><b>${d0.construtora||""}</b>${d0.bairro?` · ${d0.bairro}`:""} · ${t.source} · ${t.ref}</div>
       </div>
       ${constLogo(d0,'stable-logo')}
-      <span class="stable-count">${t.rows.length} ${t.rows.length===1?'unidade':'unidades'}</span>
+      <span class="stable-count">${t.rows.length} ${rotuloUnidade(t).toLowerCase()}${t.rows.length===1?'':'s'}</span>
       <span class="stable-caret">▼</span>
     </div>
     <div class="stable-body">
@@ -1182,7 +1191,7 @@ function invFolhaPDF(emp,sel,d){
     </div>
     <div class="pdf-title">
       <h1>${emp}</h1>
-      <div class="pdf-sub">${dd.construtora||''}${dd.bairro?' · '+dd.bairro:''} · Unidade <b>${u}</b>${desc?' · '+desc:''}</div>
+      <div class="pdf-sub">${dd.construtora||''}${dd.bairro?' · '+dd.bairro:''} · ${rotuloUnidade(SALES_TABLES[emp])} <b>${u}</b>${desc?' · '+desc:''}</div>
     </div>
     <div class="pdf-lead">
       <div class="pdf-lead-l${d.media<0?' neg':''}">

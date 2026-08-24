@@ -1787,5 +1787,33 @@ const DATA = [
     "terreno": false,
     "sold": false,
     "id": 57
+  },
+  {
+    "tipo": "Terreno",
+    "construtora": "Embralot",
+    "empreendimento": "Central Park",
+    "bairro": "Itoupava Central",
+    "unidade": null,
+    "config": "Terreno",
+    "vagas": "-",
+    "vagasN": null,
+    "apriv": 172.45,
+    "atotal": 795.89,
+    "faixaArea": true,
+    "vmin": 270746.5,
+    "vmax": 1249547.3,
+    "media": 361610.45,
+    "rpriv": 1601.74,
+    "rtotal": null,
+    "entrega": "02/2029",
+    "entregaKey": 24350,
+    "pronto": false,
+    "condicao": "Entrada + 33x + 50% na entrega",
+    "correcao": "CUB até entrega / IPCA + 0,99% a.m. no financiamento",
+    "quartos": [],
+    "suites": [],
+    "terreno": true,
+    "sold": false,
+    "id": 58
   }
 ];
