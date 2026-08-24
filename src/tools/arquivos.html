@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZELT — Arquivos para clientes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --zelt-navy:#1e1b35; --zelt-orange:#ff9e36;
+  --navy-950:#100e1d; --navy-900:#1e1b35; --navy-800:#2a2647; --navy-700:#383360;
+  --navy-600:#4b4578; --navy-500:#635d92; --navy-400:#837eaa; --navy-300:#a9a5c5;
+  --navy-200:#d0cee0; --navy-100:#e8e7f0; --navy-50:#f4f3f9;
+  --orange-700:#c1701a; --orange-600:#e2851f; --orange-100:#ffedd6; --orange-50:#fff7ec;
+  --n-700:#42424e; --n-600:#595966; --n-500:#797985; --n-400:#a2a2ad;
+  --n-300:#c9c9d1; --n-200:#e2e2e8; --n-100:#efeff2; --n-50:#f8f8fa;
+  --white:#fff;
+  --font-display:'Oswald','Arial Narrow',sans-serif;
+  --font-body:'Atkinson Hyperlegible',Arial,sans-serif;
+  --radius-card:14px; --radius-pill:999px;
+  --shadow-card:0 1px 2px rgba(30,27,53,.06),0 8px 18px -6px rgba(30,27,53,.12),0 28px 50px -18px rgba(30,27,53,.18);
+  --ls-wide:.04em; --ls-overline:.18em;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh;
+  font-family:var(--font-body); font-size:16px; line-height:1.6; color:var(--n-700);
+  background:var(--navy-950);
+  -webkit-font-smoothing:antialiased;
+  display:flex; align-items:center; justify-content:center;
+  padding:32px 20px 84px;
+}
+/* leve textura de fundo, no mesmo espirito do hub */
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none;
+  background:
+    radial-gradient(42% 46% at 22% 24%,rgba(255,158,54,.09),transparent 70%),
+    radial-gradient(48% 52% at 78% 72%,rgba(99,93,146,.16),transparent 70%);
+}
+.painel{
+  position:relative; width:100%; max-width:780px;
+  background:var(--white); border-radius:var(--radius-card);
+  box-shadow:var(--shadow-card); overflow:hidden;
+  border-top:3px solid var(--zelt-orange);
+}
+.topo{padding:26px 30px 22px; border-bottom:1px solid var(--n-200)}
+.eyebrow{
+  font-family:var(--font-display); font-weight:500; font-size:11px;
+  letter-spacing:var(--ls-overline); text-transform:uppercase; color:var(--orange-700);
+  margin:0 0 8px; display:flex; align-items:center; gap:11px;
+}
+.eyebrow::before{content:""; width:26px; height:2px; background:var(--zelt-orange)}
+h1{
+  font-family:var(--font-display); font-weight:600; font-size:27px; line-height:1.12;
+  letter-spacing:-.01em; text-transform:uppercase; color:var(--navy-900); margin:0 0 8px;
+}
+.sub{margin:0; font-size:14.5px; color:var(--n-600); max-width:62ch}
+
+table{width:100%; border-collapse:collapse}
+tbody tr{border-top:1px solid var(--n-100)}
+tbody tr:first-child{border-top:0}
+tbody tr:hover{background:var(--orange-50)}
+td{padding:15px 30px; vertical-align:middle}
+td.info{padding-right:14px}
+.nome{
+  font-family:var(--font-display); font-weight:600; font-size:16.5px;
+  color:var(--navy-900); line-height:1.25; display:block; margin-bottom:3px;
+}
+.tag{
+  display:inline-block; font-family:var(--font-display); font-size:9.5px; font-weight:500;
+  text-transform:uppercase; letter-spacing:.1em; color:var(--n-600);
+  background:var(--n-100); border-radius:4px; padding:2px 7px; margin-left:8px; vertical-align:2px;
+}
+.desc{font-size:13.5px; color:var(--n-600); line-height:1.5}
+.meta{
+  font-family:var(--font-display); font-size:11px; font-weight:400; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--n-400); white-space:nowrap; text-align:right;
+}
+td.acao{width:1%; white-space:nowrap; text-align:right}
+.dl{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  font-family:var(--font-display); font-weight:500; font-size:12.5px;
+  letter-spacing:var(--ls-wide); text-transform:uppercase; text-decoration:none;
+  color:var(--navy-900); background:var(--zelt-orange);
+  border:1px solid var(--zelt-orange); border-radius:var(--radius-pill);
+  padding:10px 20px; cursor:pointer; transition:background .15s, border-color .15s, transform .15s;
+}
+.dl:hover{background:var(--orange-600); border-color:var(--orange-600); color:var(--white); transform:translateY(-1px)}
+.dl:active{transform:translateY(0)}
+.dl:focus-visible{outline:none; box-shadow:0 0 0 3px rgba(255,158,54,.45)}
+.dl svg{width:15px; height:15px; flex:none; stroke:currentColor}
+
+.pe{padding:16px 30px; background:var(--navy-50); border-top:1px solid var(--n-200);
+  font-size:12.5px; color:var(--n-600)}
+.pe b{color:var(--navy-800)}
+
+@media (max-width:620px){
+  body{padding:18px 12px 84px; align-items:flex-start}
+  .topo{padding:22px 20px 18px}
+  h1{font-size:23px}
+  td{padding:14px 20px; display:block}
+  td.info{padding-bottom:4px}
+  td.meta{text-align:left; padding-top:0; padding-bottom:6px}
+  td.acao{width:auto; text-align:left; padding-top:0}
+  .dl{width:100%}
+  .pe{padding:14px 20px}
+}
+</style>
+</head>
+<body>
+
+<main class="painel">
+  <div class="topo">
+    <p class="eyebrow">Material de apoio</p>
+    <h1>Arquivos para clientes</h1>
+    <p class="sub">Os materiais que a equipe envia ao cliente, sempre na versão mais recente. Abra numa aba nova, confira e mande para o cliente pelo WhatsApp ou e-mail.</p>
+  </div>
+  <table>
+    <tbody id="lista"></tbody>
+  </table>
+  <div class="pe">
+    Guardou uma cópia antiga no computador? <b>Pegue daqui antes de enviar</b> — é aqui que os arquivos são atualizados.
+  </div>
+</main>
+
+<script>
+/* Um item por arquivo. Para acrescentar, basta uma linha nova aqui e o PDF na
+   pasta arquivos/ do repositorio. O caminho e relativo: dentro do iframe do hub
+   ele resolve a partir do endereco do hub, e funciona igual abrindo o
+   index.html local. */
+var ARQUIVOS = [
+  {
+    nome: "Apresentação Central Park",
+    tag: "Pré-lançamento",
+    desc: "Apresentação do empreendimento para enviar a quem tem interesse no lançamento da Embralot, no Itoupava Central.",
+    arq: "ZELT-Apresentacao-Central-Park.pdf",
+    bytes: 1997145
+  },
+  {
+    nome: "Valorização de Imóveis em Blumenau",
+    tag: "Mercado",
+    desc: "Relatório sobre a valorização dos imóveis na cidade — o argumento de mercado para quem está decidindo comprar ou vender.",
+    arq: "ZELT-Valorizacao-Imoveis-Blumenau.pdf",
+    bytes: 257134
+  },
+  {
+    nome: "Como funciona nosso processo de vendas?",
+    tag: "Processo",
+    desc: "A gestão total da venda ZELT, passo a passo, para o proprietário entender o que a imobiliária faz pelo imóvel dele.",
+    arq: "ZELT-Processo-de-Vendas.pdf",
+    bytes: 1225491
+  }
+];
+
+function tamanho(bytes){
+  if(bytes >= 1048576) return (bytes/1048576).toFixed(1).replace(".", ",") + " MB";
+  return Math.round(bytes/1024) + " KB";
+}
+function esc(s){
+  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+var ICONE = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" ' +
+  'stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/>' +
+  '<path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></svg>';
+
+document.getElementById("lista").innerHTML = ARQUIVOS.map(function(a){
+  return '<tr>' +
+    '<td class="info">' +
+      '<span class="nome">' + esc(a.nome) +
+        (a.tag ? '<span class="tag">' + esc(a.tag) + '</span>' : '') +
+      '</span>' +
+      '<span class="desc">' + esc(a.desc) + '</span>' +
+    '</td>' +
+    '<td class="meta">PDF · ' + tamanho(a.bytes) + '</td>' +
+    '<td class="acao">' +
+      '<a class="dl" href="arquivos/' + encodeURIComponent(a.arq) + '"' +
+        ' target="_blank" rel="noopener"' +
+        ' title="Abrir ' + esc(a.nome) + ' em outra aba">' + ICONE + 'Abrir</a>' +
+    '</td>' +
+  '</tr>';
+}).join("");
+</script>
+
+<!-- ZELT: voltar ao hub -->
+<style>
+.zelt-back-hub{
+  position:fixed;left:16px;bottom:16px;z-index:99999;
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Oswald','Arial Narrow',sans-serif;
+  font-weight:500;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none;color:#fff;background:#1e1b35;
+  border:1px solid #383360;border-radius:999px;padding:10px 18px;
+  box-shadow:0 4px 12px rgba(30,27,53,.25);
+  transition:background .15s ease;
+}
+.zelt-back-hub:hover{background:#2a2647}
+.zelt-back-hub svg{width:14px;height:14px;stroke:#ff9e36}
+@media print{.zelt-back-hub{display:none!important}}
+</style>
+<a class="zelt-back-hub" href="#" title="Voltar ao Hub ZELT" onclick="event.preventDefault();if(window.parent!==window){window.parent.postMessage('zelt-close-tool','*');}else{history.back();}">
+<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+Hub ZELT
+</a>
+</body>
+</html>

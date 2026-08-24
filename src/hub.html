@@ -278,10 +278,9 @@ a,button{-webkit-tap-highlight-color:transparent}
   opacity:0;transform:translateY(72px) scale(.95);filter:blur(8px);
   transition:opacity .9s var(--ease-out),transform .9s var(--ease-out),filter .9s var(--ease-out),box-shadow .3s var(--ease-out);
 }
-.tool:nth-child(2){transition-delay:.12s}
-.tool:nth-child(3){transition-delay:.24s}
-.tool:nth-child(4){transition-delay:.36s}
-.tool:nth-child(5){transition-delay:.48s}
+/* o atraso escalonado de cada card e aplicado por indice no script, nao aqui:
+   com uma regra nth-child por card, acrescentar um card sem acrescentar a
+   regra fazia ele aparecer antes de todos os outros */
 .tool.revealed{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
 /* após revelar, hover/tilt não briga com o delay */
 .tool.settled{transition-delay:0s;transition:box-shadow .3s var(--ease-out)}
@@ -311,6 +310,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 .tool:nth-child(3) .tool-icon{animation-delay:3s}
 .tool:nth-child(4) .tool-icon{animation-delay:2.2s}
 .tool:nth-child(5) .tool-icon{animation-delay:.8s}
+.tool:nth-child(6) .tool-icon{animation-delay:2.6s}
 @keyframes iconFloat{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-4px)}
@@ -590,6 +590,18 @@ body.tool-open{overflow:hidden}
     <p class="tool-desc">Simule financiamentos pelo sistema SAC: parcelas, amortização e evolução do saldo devedor para apresentar ao cliente na hora da negociação.</p>
     <a class="btn" href="#simulador" data-tool="simulador" data-magnet>Abrir ferramenta <span class="arrow">→</span></a>
   </article>
+  <article class="tool" data-tilt>
+    <div class="tool-head">
+      <div class="tool-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 12v5"/><path d="M9.5 14.5 12 17l2.5-2.5"/></svg>
+      </div>
+      <span class="chip">Novo</span>
+    </div>
+    <p class="tool-kicker">Material de apoio</p>
+    <h2>Arquivos para Clientes</h2>
+    <p class="tool-desc">Os materiais que a equipe manda ao cliente reunidos num só lugar: processo de venda, valorização do mercado de Blumenau e apresentações de pré-lançamento, prontos para baixar e enviar.</p>
+    <a class="btn" href="#arquivos" data-tool="arquivos" data-magnet>Abrir ferramenta <span class="arrow">→</span></a>
+  </article>
 
   <article class="tool" data-tilt>
     <div class="tool-head">
@@ -659,9 +671,18 @@ body.tool-open{overflow:hidden}
 
   var revealables = Array.prototype.slice.call(document.querySelectorAll('.tool,.stat,#footerInner'));
 
+  /* Escalonamento da entrada dos cards, da esquerda para a direita, calculado
+     pela posicao. Antes vinha de regras nth-child no CSS: o 6o card entrou sem
+     regra e aparecia primeiro, com atraso zero. */
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.tool'));
+  function aplicaAtrasos(){
+    cards.forEach(function(el, i){ el.style.transitionDelay = (i * 0.12).toFixed(2) + 's'; });
+  }
+  aplicaAtrasos();
+
   function settle(el){
     if (el.classList.contains('tool')) {
-      setTimeout(function(){ el.classList.add('settled'); }, 1300);
+      setTimeout(function(){ el.style.transitionDelay = ''; el.classList.add('settled'); }, 1300);
     }
   }
   function reveal(el){
@@ -732,6 +753,7 @@ body.tool-open{overflow:hidden}
     pre.style.transition = '';
     /* esconde cards/stats/rodapé de novo */
     revealables.forEach(function(el){ el.classList.remove('revealed','settled'); });
+    aplicaAtrasos();
     counted = false;
     document.querySelectorAll('[data-count]').forEach(function(el){ el.textContent = '0'; });
     /* reinicia as animações do hero recriando os nós (reseta também o ::after do sublinhado) */
