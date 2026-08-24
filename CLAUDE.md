@@ -5,7 +5,7 @@ https://febottega.github.io/zelt-hub/ (repo `febottega/zelt-hub`, Pages no root 
 
 ## REGRA PRINCIPAL: nunca leia nem edite o index.html
 
-`index.html` (8,9 MB) é **gerado**. Contém as 13 ferramentas em base64 — ilegível
+`index.html` (9,2 MB) é **gerado**. Contém as 15 ferramentas em base64 — ilegível
 para busca, impossível de editar cirurgicamente. Lê-lo custa cerca de **2,5 milhões
 de tokens** e não cabe em nenhuma janela de contexto.
 
@@ -74,7 +74,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | CSS do comparativo | `tools/comparativo/style.css` | 46 KB |
 | HTML/estrutura do comparativo | `tools/comparativo/layout.html` | 75 KB |
 | gerador de documentos | `tools/gerador.html` | 285 KB |
-| simulador SAC | `tools/simulador.html` | 97 KB |
+| simulador SAC / PRICE | `tools/simulador.html` | 106 KB |
 | painel de avaliações (`DADOS`, `KPIS`) | `tools/avaliacoes.html` | 97 KB |
 | relatório da semana atual | `tools/avaliacao.html` | 407 KB |
 | hero, cards, overlay do hub | `hub.html` | 84 KB (~35 KB de código) |
@@ -84,7 +84,7 @@ Nunca leia esses arquivos por inteiro. Use `Grep` para localizar e `Edit` com
 
 ## As ferramentas
 
-Cinco cards. Quatro são payloads embutidos; o **Painel de Pauta** é externo
+Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
 (`uweradloff.github.io/painel-pauta-zelt/`).
 
 - **avaliacoes** — painel: array `DADOS` (imóveis) + `KPIS` (semanais). Filtros por
@@ -95,7 +95,12 @@ Cinco cards. Quatro são payloads embutidos; o **Painel de Pauta** é externo
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
   chaves, checklist). Rascunhos em `localStorage` (`zelt_*_v1`); exporta com
   html2canvas + pdf-lib.
-- **simulador** — financiamento SAC.
+- **simulador** — financiamento SAC ou PRICE, escolhido no `#sisToggle`. O mesmo
+  `simular(sis,...)` atende os dois: em SAC a amortização é fixa em `P/n`, em PRICE
+  a parcela é fixa na PMT e a amortização é o que sobra dela. A amortização extra
+  abate do saldo nos dois casos, encurtando o prazo.
+- **arquivos** — tabela de PDFs para o cliente; os arquivos ficam em `arquivos/` na
+  raiz do repo, fora do payload, e abrem em aba nova.
 
 Zero bibliotecas externas em runtime além do que está em `vendor/`. Gráficos são
 HTML/CSS/SVG próprios.
@@ -118,14 +123,14 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (13 payloads, 8.893.043 bytes):
+Hash de referência (15 payloads, 9.612.004 bytes):
 
 ```
-14A320BE283D87F4EDDF1DB59DA0CA667DDA8C3618F416EBFA7BD4E29B1BD2AD
+20A5EDC090C5C3E29B7F862E18DDD5B7AD26304232A5C0B344339BD032ABA8CD
 ```
 
-Esse hash foi mantido através das Fases 1 e 2 — extrair fontes, libs e decompor o
-comparativo não mudou um byte da saída.
+**Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
+um rebuild sem mudança de fonte dá a mesma saída, e um hash velho não prova nada.
 
 ## Rotina semanal da avaliação
 
