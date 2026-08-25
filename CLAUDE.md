@@ -5,7 +5,7 @@ https://febottega.github.io/zelt-hub/ (repo `febottega/zelt-hub`, Pages no root 
 
 ## REGRA PRINCIPAL: nunca leia nem edite o index.html
 
-`index.html` (9,2 MB) é **gerado**. Contém as 15 ferramentas em base64 — ilegível
+`index.html` (9,8 MB) é **gerado**. Contém as 16 ferramentas em base64 — ilegível
 para busca, impossível de editar cirurgicamente. Lê-lo custa cerca de **2,5 milhões
 de tokens** e não cabe em nenhuma janela de contexto.
 
@@ -89,7 +89,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
 
 - **avaliacoes** — painel: array `DADOS` (imóveis) + `KPIS` (semanais). Filtros por
   código, endereço, corretor, bairro, quartos, suítes, tipo, semana, faixa.
-- **avaliacao** + 8 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 9 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
 - **comparativo** — 57 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
@@ -123,10 +123,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (15 payloads, 9.612.004 bytes):
+Hash de referência (16 payloads, 10.301.976 bytes):
 
 ```
-20A5EDC090C5C3E29B7F862E18DDD5B7AD26304232A5C0B344339BD032ABA8CD
+67EB73570EC994B1338E40112C75287BA1A1F92CFC637590FFCFA7950F194E4B
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -186,7 +186,20 @@ O nome novo entra logo depois de `avaliacao`, mantendo a ordem cronológica inve
 
 ### 4. `src/tools/avaliacoes.html` — três linhas
 
-Linhas 396–398, cada uma um array/objeto imenso numa única linha:
+Três linhas, cada uma um array/objeto imenso numa única linha. **Não confie no
+número da linha** — ele muda toda semana, porque o arquivo cresce. Localize por
+nome:
+
+```bash
+grep -n "^var DADOS\|^var KPIS\|^var SEMANAS_NO_HUB" src/tools/avaliacoes.html
+```
+
+Emende o texto novo na frente da linha em vez de reparsear e reescrever tudo: os
+registros antigos guardam `7950000.0` (float com `.0`), e um `JSON.stringify`
+escreveria `7950000`, misturando 163 registros recosturados com a semana nova.
+No `DADOS`, `a`, `k`, `g`, `n`, `m`, `mt` e `dr` são float; `d`, `v` e `s` são int.
+
+O conteúdo de cada uma:
 
 - **`SEMANAS_NO_HUB`** — `"DD/MM/AAAA":"avaliacao"` na frente; a chave da semana
   anterior passa a apontar para `"avaliacao-DD-MM"`.
@@ -234,7 +247,7 @@ deixa o painel em branco e o build não reclama:
 
 ```powershell
 $l = [System.IO.File]::ReadAllLines('src\tools\avaliacoes.html', [System.Text.Encoding]::UTF8)
-foreach ($i in 395,396,397) {
+foreach ($i in $idx) {   # os indices vem do grep acima, menos 1
   $t = $l[$i]; $t = $t.Substring($t.IndexOf('=') + 1).Trim().TrimEnd(';')
   try {
     $o = $t | ConvertFrom-Json
