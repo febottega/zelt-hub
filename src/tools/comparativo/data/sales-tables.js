@@ -3236,7 +3236,7 @@ const SALES_TABLES = {
   "Villaggio di Fiori": {
     "folderId": "1qCUXgmpeqrn8INt6l6PxaHAdHroD_5tN",
     "source": "Tabela de vendas — lotes (Sforza)",
-    "ref": "Agosto/2026 · CUB R$ 3.151,24",
+    "ref": "Setembro/2026 · CUB R$ 3.158,88",
     "unitCol": 0,
     "columns": [
       "Lote",
@@ -3249,70 +3249,70 @@ const SALES_TABLES = {
         "17",
         "463,04 m²",
         "167,950",
-        "R$ 529.250,76"
+        "R$ 530.533,90"
       ],
       [
         "18",
         "389,51 m²",
         "162,894",
-        "R$ 513.318,95"
+        "R$ 514.563,46"
       ],
       [
         "20",
         "402,59 m²",
         "167,286",
-        "R$ 527.159,52"
+        "R$ 528.437,59"
       ],
       [
         "36",
         "352,61 m²",
         "150,146",
-        "R$ 473.145,93"
+        "R$ 474.293,05"
       ],
       [
         "37",
         "375,43 m²",
         "160,160",
-        "R$ 504.702,96"
+        "R$ 505.926,59"
       ],
       [
         "38",
         "690,34 m²",
         "171,180",
-        "R$ 539.429,26"
+        "R$ 540.737,08"
       ],
       [
         "39",
         "352,98 m²",
         "143,535",
-        "R$ 452.313,06"
+        "R$ 453.409,66"
       ],
       [
         "41",
         "322,29 m²",
         "134,609",
-        "R$ 424.186,71"
+        "R$ 425.215,12"
       ],
       [
         "42",
         "391,95 m²",
         "165,250",
-        "R$ 520.743,36"
+        "R$ 522.005,87"
       ],
       [
         "43",
         "343,05 m²",
         "143,506",
-        "R$ 452.221,40"
+        "R$ 453.317,78"
       ],
       [
         "44",
         "358,35 m²",
         "149,377",
-        "R$ 470.723,51"
+        "R$ 471.864,75"
       ]
     ],
-    "note": "11 lotes disponíveis, todos com situação DISPONÍVEL na tabela de agosto. Valores atrelados ao CUB (R$ 3.151,24) — quantidade de CUBs de cada lote conferida e inalterada em relação a julho, o reajuste em reais é só do índice. Condições: à vista com 5% de desconto (banco) ou 3% de desconto; financiamento direto com a construtora (somente lotes) com entrada de 20% — até 6x sem juros e sem INPC, até 12x sem juros com INPC mensal, até 24x juros de 0,5%, até 36x juros de 0,7%, até 48x juros de 0,8% e até 60x juros de 1%, todos com INPC anual. Obs.: a tabela traz uma seção 'Casas disponíveis' ainda sem nenhuma unidade listada. O rótulo do CUB na planilha da Sforza está como 'CUB 07/26', mas o valor usado (R$ 3.151,24) é o de agosto — erro de rótulo na origem.",
+    "note": "11 lotes disponíveis, todos com situação DISPONÍVEL na tabela de setembro. Valores atrelados ao CUB de R$ 3.158,88 — os 11 subiram exatamente 0,242%, que é a variação do índice (R$ 3.151,24 → R$ 3.158,88); área e quantidade de CUBs de cada lote conferidas e inalteradas em relação a agosto. Condições: à vista com 5% de desconto, financiamento bancário com 3% de desconto; financiamento direto com a construtora (somente lotes) com entrada de 20% do valor do lote — até 6x sem juros e sem INPC, até 12x sem juros com INPC mensal, até 24x juros de 0,5%, até 36x juros de 0,7%, até 48x juros de 0,8% e até 60x juros de 1%, todos com INPC anual. Obs.: a tabela traz uma seção \"Casas disponíveis\" ainda sem nenhuma unidade listada. O cabeçalho da coluna vem escrito \"CUB 08/26\", rótulo atrasado que a planilha da Sforza já trazia em junho e julho (\"CUB 05/26\"): o valor confere com o mês da própria tabela, é o rótulo que fica para trás.",
     "summary": {
       "tipoDefault": "Lote",
       "andar": false,
