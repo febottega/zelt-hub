@@ -5,7 +5,7 @@ https://febottega.github.io/zelt-hub/ (repo `febottega/zelt-hub`, Pages no root 
 
 ## REGRA PRINCIPAL: nunca leia nem edite o index.html
 
-`index.html` (9,8 MB) é **gerado**. Contém as 16 ferramentas em base64 — ilegível
+`index.html` (10,4 MB) é **gerado**. Contém as 17 ferramentas em base64 — ilegível
 para busca, impossível de editar cirurgicamente. Lê-lo custa cerca de **2,5 milhões
 de tokens** e não cabe em nenhuma janela de contexto.
 
@@ -89,7 +89,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
 
 - **avaliacoes** — painel: array `DADOS` (imóveis) + `KPIS` (semanais). Filtros por
   código, endereço, corretor, bairro, quartos, suítes, tipo, semana, faixa.
-- **avaliacao** + 9 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 10 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
 - **comparativo** — 57 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
@@ -123,10 +123,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (16 payloads, 10.301.976 bytes):
+Hash de referência (17 payloads, 10.907.040 bytes):
 
 ```
-67EB73570EC994B1338E40112C75287BA1A1F92CFC637590FFCFA7950F194E4B
+F60E74F04166B7983C94B8D7B261AB4D3CB9BABC341EB08780E5BE265BF9BDE4
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -213,7 +213,7 @@ Campos de cada imóvel no `DADOS`, nesta ordem:
 | campo | de onde vem |
 |---|---|
 | `c` | código |
-| `t` | prefixo do código: AP=Apartamento, CA=Casa, CO=Cobertura, TE=Terreno, SA=Sala comercial, PR=Prédio |
+| `t` | prefixo do código: AP=Apartamento, CA=Casa, CO=Cobertura, TE=Terreno, SA=Sala comercial, PR=Prédio, GA=Galpão. **Prefixo novo aparece de vez em quando** (o GA estreou em 01/09): confira o trecho do meio do `local`, que costuma nomear o tipo |
 | `cap` | coluna Captador |
 | `w` | data da semana, `DD/MM/AAAA` |
 | `a`, `k` | Anunciado, Consenso |
