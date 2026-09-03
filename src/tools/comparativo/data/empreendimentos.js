@@ -478,16 +478,16 @@ const DATA = [
     "empreendimento": "San Vito",
     "bairro": "Velha",
     "unidade": null,
-    "config": "3 suítes",
+    "config": "2 e 3 suítes",
     "vagas": "1",
     "vagasN": 1,
     "apriv": 76.29,
-    "atotal": 76.94,
+    "atotal": 105.91,
     "faixaArea": true,
     "vmin": 585000.0,
     "vmax": 630000.0,
     "media": 607500.0,
-    "rpriv": 7929.26,
+    "rpriv": 6668.5,
     "rtotal": null,
     "entrega": "07/2027",
     "entregaKey": 24331,
@@ -495,9 +495,11 @@ const DATA = [
     "condicao": "Entrada + 84x",
     "correcao": "Somente CUB",
     "quartos": [
+      2,
       3
     ],
     "suites": [
+      2,
       3
     ],
     "terreno": false,
@@ -1076,7 +1078,7 @@ const DATA = [
     "unidade": "402",
     "config": "3 suítes",
     "vagas": "2",
-    "vagasN": 1,
+    "vagasN": 2,
     "apriv": 125.95,
     "atotal": null,
     "faixaArea": false,
@@ -1131,38 +1133,6 @@ const DATA = [
     "terreno": false,
     "sold": false,
     "id": 35
-  },
-  {
-    "tipo": "Terraço",
-    "construtora": "HR Sul",
-    "empreendimento": "San Vito",
-    "bairro": "Velha",
-    "unidade": "404",
-    "config": "2 suítes",
-    "vagas": "1",
-    "vagasN": 1,
-    "apriv": 108.56,
-    "atotal": null,
-    "faixaArea": false,
-    "vmin": 650000.0,
-    "vmax": 650000.0,
-    "media": 650000.0,
-    "rpriv": 5987.47,
-    "rtotal": null,
-    "entrega": "07/2027",
-    "entregaKey": 24331,
-    "pronto": false,
-    "condicao": "Entrada + 84x",
-    "correcao": "Somente CUB",
-    "quartos": [
-      2
-    ],
-    "suites": [
-      2
-    ],
-    "terreno": false,
-    "sold": false,
-    "id": 36
   },
   {
     "tipo": "Terraço",

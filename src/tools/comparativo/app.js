@@ -736,6 +736,17 @@ const SPECIAL_UNITS = (()=>{
       (m[d.empreendimento] = m[d.empreendimento] || {})[String(d.unidade)] = d.tipo;
     }
   });
+  /* Unidade que esta na tabela de vendas mas nao tem card no comparativo
+     ficava sem tipo, e o resumo do WhatsApp a chamava de "Apartamento tipo".
+     A tabela pode declarar o tipo dela em summary.tipos: {"404":"Terraço"}.
+     O SALES_TABLES e incluido logo acima, entao ja esta disponivel aqui. */
+  Object.keys(SALES_TABLES).forEach(emp=>{
+    const tp = SALES_TABLES[emp].summary && SALES_TABLES[emp].summary.tipos;
+    if(!tp) return;
+    Object.keys(tp).forEach(un=>{
+      (m[emp] = m[emp] || {})[String(un)] = tp[un];
+    });
+  });
   return m;
 })();
 const salesSlug = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");

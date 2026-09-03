@@ -189,7 +189,7 @@ const SALES_TABLES = {
       ]
     ],
     "note": "Bloco A (João Pessoa). Mostrando apenas unidades disponíveis; 601, 602, 803, 902, 1004 e 1501 estão reservadas e as demais indisponíveis. Vaga extra de garagem: R$ 65.000,00. Valores vigentes em agosto/2026 — os preços não mudaram em relação ao mês anterior. Obs.: a HR Sul não atualiza os rótulos internos do arquivo, que ainda traz título de maio e \"válida até 31/06/2026\"; desconsiderar. Disponibilidade e número da vaga devem ser confirmados na negociação. Entrega: a única tabela que informa previsão é a de fev/2025, que traz dez/2027; as tabelas de 2026 removeram essa linha — a data do card (jul/2027) não vem dessas tabelas e precisa ser confirmada com a HR Sul.",
-    "summary": {
+    "summary": {"tipos": {"404": "Terraço"}, 
       "bits": [
         {
           "pre": "Área privativa: ",
