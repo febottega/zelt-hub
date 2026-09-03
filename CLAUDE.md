@@ -111,6 +111,15 @@ Cada payload é `<script type="text/plain" data-tool="NOME">BASE64</script>`. O 
 decodifica com `atob` + `TextDecoder('utf-8')` e injeta num `<iframe srcdoc>` num
 overlay. Rotas por hash + `pushState`; `Esc` fecha.
 
+Voltar ao hub: o clique no **logo da ZELT** no topo de cada ferramenta manda
+`zelt-close-tool`. O bloco fica no fim de cada fonte e a unica linha que muda
+e o seletor do logo (`var SELETOR`), porque cada ferramenta monta o cabecalho
+de um jeito; o clique usa delegacao no `document`, entao vale para logo
+desenhado por JS depois do load. A **arquivos** nao tem logo e usa um X no
+canto do painel. O relatorio semanal e os congelados seguem com o botao fixo
+antigo no codigo, mas ele ja fica `display:none` porque eles so abrem dentro
+do painel (`html.zelt-aninhado`), onde a volta e pela aba "Menu de Pesquisa".
+
 `postMessage`: `'zelt-close-tool'`, `{zelt:'get-tool'}` → `{zelt:'tool-html'}`,
 `{zelt:'open-tool', focus}`, `{zelt:'focus', code}`.
 
@@ -123,10 +132,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (17 payloads, 10.908.488 bytes):
+Hash de referência (17 payloads, 10.912.932 bytes):
 
 ```
-1094A97214DCD3BA161A9BF40C7FE3DE29923C800C5719010CB1F6532E2942FC
+6666126BD1672E47B87C3B7BFE499743F4E09D02C2FF11C7E0DABAF14082D52A
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

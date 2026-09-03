@@ -45,6 +45,9 @@ body::before{
   border-top:3px solid var(--zelt-orange);
 }
 .topo{padding:26px 30px 22px; border-bottom:1px solid var(--n-200)}
+/* espaco reservado para o X do canto: garante que a linha do titulo nunca
+   corra por baixo dele, em nenhuma largura */
+.topo .eyebrow, .topo h1{padding-right:44px}
 .eyebrow{
   font-family:var(--font-display); font-weight:500; font-size:11px;
   letter-spacing:var(--ls-overline); text-transform:uppercase; color:var(--orange-700);
@@ -191,25 +194,42 @@ document.getElementById("lista").innerHTML = ARQUIVOS.map(function(a){
 }).join("");
 </script>
 
-<!-- ZELT: voltar ao hub -->
+<!-- ZELT: fechar e voltar ao hub -->
 <style>
-.zelt-back-hub{
-  position:fixed;left:16px;bottom:16px;z-index:99999;
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:'Oswald','Arial Narrow',sans-serif;
-  font-weight:500;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
-  text-decoration:none;color:#fff;background:#1e1b35;
-  border:1px solid #383360;border-radius:999px;padding:10px 18px;
-  box-shadow:0 4px 12px rgba(30,27,53,.25);
-  transition:background .15s ease;
+/* Esta ferramenta nao tem logo da ZELT no topo, entao o caminho de volta e
+   um X no canto do painel. Fica dentro do card, e nao preso ao canto da
+   janela, porque o card e centralizado: no viewport o X cairia longe do
+   painel no desktop e por cima dele no tablet. */
+.zelt-hub-x{
+  position:absolute;top:12px;right:12px;z-index:5;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;padding:0;
+  background:var(--navy-50);border:1px solid var(--n-200);border-radius:50%;
+  cursor:pointer;transition:background .15s ease,border-color .15s ease,transform .2s ease;
 }
-.zelt-back-hub:hover{background:#2a2647}
-.zelt-back-hub svg{width:14px;height:14px;stroke:#ff9e36}
-@media print{.zelt-back-hub{display:none!important}}
+.zelt-hub-x:hover{background:var(--zelt-navy);border-color:var(--zelt-navy);transform:rotate(90deg)}
+.zelt-hub-x:focus-visible{outline:2px solid var(--zelt-orange);outline-offset:3px}
+.zelt-hub-x svg{width:16px;height:16px;display:block;stroke:var(--navy-700);transition:stroke .15s ease}
+.zelt-hub-x:hover svg{stroke:var(--zelt-orange)}
+@media print{.zelt-hub-x{display:none!important}}
 </style>
-<a class="zelt-back-hub" href="#" title="Voltar ao Hub ZELT" onclick="event.preventDefault();if(window.parent!==window){window.parent.postMessage('zelt-close-tool','*');}else{history.back();}">
-<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
-Hub ZELT
-</a>
+<script>
+(function(){
+  var b = document.createElement("button");
+  b.type = "button";
+  b.className = "zelt-hub-x";
+  b.title = "Fechar e voltar ao Hub ZELT";
+  b.setAttribute("aria-label", "Fechar e voltar ao Hub ZELT");
+  b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" ' +
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>';
+  b.addEventListener("click", function(){
+    if(window.parent !== window){ window.parent.postMessage("zelt-close-tool","*"); }
+    else { history.back(); }
+  });
+  /* dentro do painel, que ja e position:relative */
+  (document.querySelector(".painel") || document.body).appendChild(b);
+})();
+</script>
 </body>
 </html>
