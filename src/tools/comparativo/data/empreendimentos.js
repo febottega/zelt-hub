@@ -69,7 +69,7 @@ const DATA = [
     "empreendimento": "Carbono",
     "bairro": "Velha",
     "unidade": null,
-    "config": "1 e 2 quartos",
+    "config": "1 e 2 quartos (1 suíte)",
     "vagas": "1",
     "vagasN": 1,
     "apriv": 36.05,
@@ -89,7 +89,9 @@ const DATA = [
       1,
       2
     ],
-    "suites": [],
+    "suites": [
+      1
+    ],
     "terreno": false,
     "sold": false,
     "id": 2
@@ -443,7 +445,7 @@ const DATA = [
     "empreendimento": "Malta",
     "bairro": "Velha",
     "unidade": null,
-    "config": "2/3 quartos",
+    "config": "2/3 quartos (1 suíte)",
     "vagas": "2",
     "vagasN": 2,
     "apriv": 66.32,
@@ -463,7 +465,9 @@ const DATA = [
       2,
       3
     ],
-    "suites": [],
+    "suites": [
+      1
+    ],
     "terreno": false,
     "sold": false,
     "id": 14
@@ -474,7 +478,7 @@ const DATA = [
     "empreendimento": "San Vito",
     "bairro": "Velha",
     "unidade": null,
-    "config": "3 quartos",
+    "config": "3 suítes",
     "vagas": "1",
     "vagasN": 1,
     "apriv": 76.29,
@@ -493,7 +497,9 @@ const DATA = [
     "quartos": [
       3
     ],
-    "suites": [],
+    "suites": [
+      3
+    ],
     "terreno": false,
     "sold": false,
     "id": 15
@@ -628,7 +634,7 @@ const DATA = [
     "empreendimento": "Wissen",
     "bairro": "Itoupava Seca",
     "unidade": null,
-    "config": "2 quartos",
+    "config": "2 quartos (1 suíte)",
     "vagas": "1",
     "vagasN": 1,
     "apriv": 58.49,
@@ -647,7 +653,9 @@ const DATA = [
     "quartos": [
       2
     ],
-    "suites": [],
+    "suites": [
+      1
+    ],
     "terreno": false,
     "sold": false,
     "id": 20
@@ -784,7 +792,7 @@ const DATA = [
     "empreendimento": "Alphaville",
     "bairro": "Vorstadt",
     "unidade": null,
-    "config": "3 quartos",
+    "config": "3 quartos (1 suíte)",
     "vagas": "2",
     "vagasN": 2,
     "apriv": 101.0,
@@ -803,7 +811,9 @@ const DATA = [
     "quartos": [
       3
     ],
-    "suites": [],
+    "suites": [
+      1
+    ],
     "terreno": false,
     "sold": false,
     "id": 25
@@ -1064,7 +1074,7 @@ const DATA = [
     "empreendimento": "San Vito",
     "bairro": "Velha",
     "unidade": "402",
-    "config": "3 quartos",
+    "config": "3 suítes",
     "vagas": "2",
     "vagasN": 1,
     "apriv": 125.95,
@@ -1083,7 +1093,9 @@ const DATA = [
     "quartos": [
       3
     ],
-    "suites": [],
+    "suites": [
+      3
+    ],
     "terreno": false,
     "sold": false,
     "id": 34
@@ -1126,7 +1138,7 @@ const DATA = [
     "empreendimento": "San Vito",
     "bairro": "Velha",
     "unidade": "404",
-    "config": "2 quartos",
+    "config": "2 suítes",
     "vagas": "1",
     "vagasN": 1,
     "apriv": 108.56,
@@ -1145,7 +1157,9 @@ const DATA = [
     "quartos": [
       2
     ],
-    "suites": [],
+    "suites": [
+      2
+    ],
     "terreno": false,
     "sold": false,
     "id": 36
