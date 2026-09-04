@@ -693,7 +693,7 @@ body.tool-open{overflow:hidden}
      regra e aparecia primeiro, com atraso zero. */
   var cards = Array.prototype.slice.call(document.querySelectorAll('.tool'));
   function aplicaAtrasos(){
-    cards.forEach(function(el, i){ el.style.transitionDelay = (i * 0.12).toFixed(2) + 's'; });
+    cards.forEach(function(el, i){ el.style.transitionDelay = (i * 0.06).toFixed(2) + 's'; });
   }
   aplicaAtrasos();
 
