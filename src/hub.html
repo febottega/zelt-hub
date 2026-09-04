@@ -934,6 +934,11 @@ body.tool-open{overflow:hidden}
 
   document.querySelectorAll('[data-tool]').forEach(function(a){
     a.addEventListener('click', function(e){
+      /* ctrl/cmd, shift, alt ou botao que nao o principal: a intencao e abrir
+         em outra aba ou janela, entao deixa o navegador seguir o href="#nome".
+         O clique do meio nem dispara 'click' (dispara 'auxclick'), mas fica
+         coberto pelo teste do button. */
+      if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0) return;
       e.preventDefault();
       openTool(a.getAttribute('data-tool'));
     });
@@ -968,11 +973,17 @@ body.tool-open{overflow:hidden}
     if (name && document.querySelector('script[type="text/plain"][data-tool="' + name + '"]')) openTool(name);
   });
 
-  /* link direto com hash: abre a ferramenta ao carregar */
-  var initial = location.hash.replace('#','');
-  if (initial && document.querySelector('script[type="text/plain"][data-tool="' + initial + '"]')) {
-    window.addEventListener('load', function(){ setTimeout(function(){ openTool(initial); }, 600); });
-  }
+  /* Hash na URL abre a ferramenta ao carregar: link colado, favorito, F5 com
+     a ferramenta aberta, e o clique do meio do mouse (que abre "#nome" numa
+     aba nova). A checagem do payload precisa ficar DENTRO do load: os
+     payloads entram no fim do arquivo, depois deste script, entao no boot o
+     querySelector ainda nao os acha e o listener nunca era registrado. */
+  window.addEventListener('load', function(){
+    var initial = location.hash.replace('#','');
+    if (!initial) return;
+    if (!document.querySelector('script[type="text/plain"][data-tool="' + initial + '"]')) return;
+    setTimeout(function(){ openTool(initial); }, 600);
+  });
 })();
 </script>
 

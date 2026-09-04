@@ -47,10 +47,10 @@ button{font-family:inherit; cursor:pointer;}
 /* ---------- Topbar ---------- */
 .topbar{background:var(--navy-900); color:var(--white); position:sticky; top:0; z-index:40;
   box-shadow:0 2px 0 var(--orange-500);}
-.topbar-inner{max-width:1320px; margin:0 auto; padding:14px 24px; display:flex;
+.topbar-inner{max-width:1240px; margin:0 auto; padding:19px 20px 14px; display:flex;
   align-items:center; gap:18px; flex-wrap:wrap;}
 .brand{display:flex; align-items:center;}
-.zelt-logo{height:34px; width:auto; display:block;}
+.zelt-logo{height:30px; width:auto; display:block;}
 .topbar h1{font-family:var(--ff-display); font-weight:300; text-transform:uppercase;
   letter-spacing:.04em; font-size:20px; margin:0; color:var(--white);
   border-left:1px solid var(--navy-600); padding-left:18px;}
