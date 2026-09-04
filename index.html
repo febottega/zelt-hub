@@ -801,7 +801,10 @@ body.tool-open{overflow:hidden}
   /* Abertura direta por hash: a ferramenta entra por tras da cortina, que so
      levanta quando o iframe carrega (ver abreDireto, no fim do arquivo). Sem
      hash valido, a classe sai e a intro roda como sempre. */
-  var alvoDireto = parseRota(location.hash).tool;
+  /* Nome da ferramenta na URL. Sem usar parseRota: ela vive no outro bloco
+     de <script>, que e outro IIFE, e chamar de ca dava ReferenceError --
+     matava este script e a cortina do preloader ficava girando pra sempre. */
+  var alvoDireto = (location.hash || '').replace('#','').split('/')[0];
   var direto = !!(alvoDireto && document.querySelector('a[data-tool="' + alvoDireto + '"]'));
   if (!direto) document.documentElement.classList.remove('zelt-direto');
   window.zeltDireto = direto;
