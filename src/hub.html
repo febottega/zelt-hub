@@ -16,7 +16,7 @@
    script do fim do body confirma e desfaz se nao for ferramenta. */
 (function(){
   var n = (location.hash || '').replace('#','');
-  if (n && /^[a-z][a-z0-9-]{2,30}$/.test(n)) {
+  if (n && /^[a-z][a-z0-9-]{2,30}(\/[a-z0-9-]{1,60}){0,2}$/.test(n)) {
     document.documentElement.className += ' zelt-direto';
   }
 })();
@@ -801,7 +801,7 @@ body.tool-open{overflow:hidden}
   /* Abertura direta por hash: a ferramenta entra por tras da cortina, que so
      levanta quando o iframe carrega (ver abreDireto, no fim do arquivo). Sem
      hash valido, a classe sai e a intro roda como sempre. */
-  var alvoDireto = (location.hash || '').replace('#','');
+  var alvoDireto = parseRota(location.hash).tool;
   var direto = !!(alvoDireto && document.querySelector('a[data-tool="' + alvoDireto + '"]'));
   if (!direto) document.documentElement.classList.remove('zelt-direto');
   window.zeltDireto = direto;
@@ -918,7 +918,16 @@ body.tool-open{overflow:hidden}
     return new TextDecoder('utf-8').decode(bytes);
   }
 
-  function openTool(name, focus){
+  /* "comparativo/tabelas/villaggio-di-fiori" -> ferramenta + o resto, que
+     vai para a ferramenta por postMessage depois que ela carrega. */
+  function parseRota(h){
+    var s = String(h || '').replace(/^#/, '');
+    var i = s.indexOf("/");
+    if (i < 0) return { tool: s, resto: '' };
+    return { tool: s.slice(0, i), resto: s.slice(i + 1) };
+  }
+
+  function openTool(name, focus, resto){
     var tpl = document.querySelector('script[type="text/plain"][data-tool="' + name + '"]');
     if (!tpl) return;
     if (frame) { frame.remove(); frame = null; }
@@ -926,8 +935,9 @@ body.tool-open{overflow:hidden}
     loading.classList.add('hide');
     overlay.classList.add('open');
     document.body.classList.add('tool-open');
-    if (location.hash !== '#' + name) {
-      try { history.pushState(null, '', '#' + name); } catch(e) { location.hash = name; }
+    var rota = name + (resto ? '/' + resto : '');
+    if (location.hash !== '#' + rota) {
+      try { history.pushState(null, '', '#' + rota); } catch(e) { location.hash = rota; }
     }
     var html = b64ToText(tpl.textContent.trim());
     frame = document.createElement('iframe');
@@ -943,6 +953,12 @@ body.tool-open{overflow:hidden}
       loading.classList.add('hide');
       /* abertura direta: a ferramenta ja esta pronta, a cortina pode sair */
       if (window.zeltDireto) { window.zeltDireto = false; if (window.zeltAbreCortina) window.zeltAbreCortina(); }
+      /* sub-caminho da rota: a ferramenta se posiciona sozinha (aba, tabela) */
+      if (resto) {
+        setTimeout(function(){
+          try { frame.contentWindow.postMessage({zelt:'rota', rota:resto}, '*'); } catch(e){}
+        }, 60);
+      }
       /* pedido de destacar um imóvel dentro do relatório */
       if (focus) {
         setTimeout(function(){
@@ -985,6 +1001,17 @@ body.tool-open{overflow:hidden}
 
   window.addEventListener('message', function(e){
     if (e.data === 'zelt-close-tool') { closeTool(); return; }
+    /* a ferramenta trocou de aba: a URL acompanha, para poder ser copiada.
+       replaceState, nao pushState: trocar de aba nao enche o historico. */
+    if (e.data && e.data.zelt === 'rota-mudou' && typeof e.data.rota === 'string') {
+      var atual = parseRota(location.hash);
+      if (!atual.tool) return;
+      var nova = '#' + atual.tool + (e.data.rota ? '/' + e.data.rota : '');
+      if (location.hash !== nova) {
+        try { history.replaceState(null, '', nova); } catch(_){}
+      }
+      return;
+    }
     /* uma ferramenta pode pedir o HTML de outra para exibir dentro de si
        (ex.: painel de avaliações mostrando o relatório da semana) */
     if (e.data && e.data.zelt === 'get-tool' && typeof e.data.tool === 'string') {
@@ -1007,9 +1034,11 @@ body.tool-open{overflow:hidden}
     if (e.key === 'Escape' && overlay.classList.contains('open')) closeTool();
   });
   window.addEventListener('popstate', function(){
-    var name = location.hash.replace('#','');
-    if (!name && overlay.classList.contains('open')) { closeTool(); return; }
-    if (name && document.querySelector('script[type="text/plain"][data-tool="' + name + '"]')) openTool(name);
+    var r = parseRota(location.hash);
+    if (!r.tool && overlay.classList.contains('open')) { closeTool(); return; }
+    if (r.tool && document.querySelector('script[type="text/plain"][data-tool="' + r.tool + '"]')) {
+      openTool(r.tool, "", r.resto);
+    }
   });
 
   /* Hash na URL abre a ferramenta ao carregar: link colado, favorito, F5 com
@@ -1021,13 +1050,13 @@ body.tool-open{overflow:hidden}
      existem: nao precisa esperar o load (fontes e imagens) nem os 600ms da
      animacao -- na abertura direta nao ha animacao para esperar. */
   function abreDireto(){
-    var initial = location.hash.replace('#','');
-    if (!initial) return;
-    if (!document.querySelector('script[type="text/plain"][data-tool="' + initial + '"]')) {
+    var r = parseRota(location.hash);
+    if (!r.tool) return;
+    if (!document.querySelector('script[type="text/plain"][data-tool="' + r.tool + '"]')) {
       if (window.zeltAbreCortina && document.documentElement.classList.contains('zelt-direto')) window.zeltAbreCortina();
       return;
     }
-    openTool(initial);
+    openTool(r.tool, "", r.resto);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', abreDireto);
   else abreDireto();

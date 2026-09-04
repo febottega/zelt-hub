@@ -242,7 +242,7 @@ function cardHTML(d){
     <div class="deliv-line">Entrega: <b>${d.entrega||'—'}</b></div>
     <div class="actions">
       ${hasSalesTable(d.empreendimento)
-        ? `<button class="btn-table btn-vertabela" data-sales="${d.empreendimento.replace(/"/g,'&quot;')}">Ver tabela</button>`
+        ? `<a class="btn-table btn-vertabela" href="#comparativo/tabelas/${salesSlug(d.empreendimento)}" data-sales="${d.empreendimento.replace(/"/g,'&quot;')}">Ver tabela</a>`
         : (link
           ? `<a class="btn-table" href="${link}" target="_blank" rel="noopener">Ir à tabela ↗</a>`
           : `<a class="btn-table disabled" title="Tabela ainda não cadastrada">Ir à tabela</a>`)}
@@ -288,7 +288,10 @@ function render(){
     box.querySelectorAll(".card").forEach(card=>card.addEventListener("click",()=>toggle(+card.dataset.id)));
     box.querySelectorAll(".btn-compare").forEach(b=>b.addEventListener("click",e=>{e.stopPropagation(); toggle(+b.dataset.id);}));
     box.querySelectorAll(".btn-table").forEach(a=>a.addEventListener("click",e=>{e.stopPropagation(); if(a.classList.contains("disabled")) e.preventDefault();}));
-    box.querySelectorAll(".btn-vertabela").forEach(b=>b.addEventListener("click",e=>{e.stopPropagation(); openSalesTable(b.dataset.sales);}));
+    box.querySelectorAll(".btn-vertabela").forEach(b=>b.addEventListener("click",e=>{
+      if(cliqueDeNovaAba(e)) { e.stopPropagation(); return; }
+      e.preventDefault(); e.stopPropagation(); openSalesTable(b.dataset.sales);
+    }));
   } else {
     box.innerHTML=tableHTML(items);
     box.querySelectorAll("input[type=checkbox]").forEach(c=>c.addEventListener("change",()=>toggle(+c.dataset.id)));
@@ -632,7 +635,8 @@ function showCardPopup(id){
     e.stopPropagation(); if(a.classList.contains("disabled")) e.preventDefault();
   }));
   body.querySelectorAll(".btn-vertabela").forEach(b=>b.addEventListener("click",e=>{
-    e.stopPropagation(); openSalesTable(b.dataset.sales);
+    if(cliqueDeNovaAba(e)) { e.stopPropagation(); return; }
+    e.preventDefault(); e.stopPropagation(); openSalesTable(b.dataset.sales);
   }));
   wrap.classList.add("show");
 }
@@ -942,7 +946,10 @@ function renderSalesTables(filter, constr){
 function hasSalesTable(emp){ return !!SALES_TABLES[emp]; }
 function openSalesTable(emp){
   closeCardPopup();
+  avisandoRota = false;          /* a rota certa e a de baixo, com o empreendimento */
   switchTab("tabelas");
+  avisandoRota = true;
+  avisaRota("tabelas/" + salesSlug(emp));
   renderSalesTables("","");
   const search=document.getElementById("sales-search"); if(search) search.value="";
   const csel=document.getElementById("sales-constr"); if(csel) csel.value="";
@@ -954,6 +961,19 @@ function openSalesTable(emp){
   }
 }
 
+/* Clique com modificador ou botao secundario: a intencao e abrir em outra
+   aba ou janela, entao deixa o navegador seguir o href e nao faz nada aqui. */
+const cliqueDeNovaAba = e => e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0;
+
+/* Avisa o hub para a URL acompanhar a aba, senao o link copiado da barra de
+   endereco apontaria sempre para a primeira aba. */
+let avisandoRota = true;
+function avisaRota(rota){
+  if (!avisandoRota) return;
+  if (window.parent === window) return;
+  try { window.parent.postMessage({zelt:"rota-mudou", rota:rota}, "*"); } catch(_){}
+}
+
 function switchTab(tab){
   document.querySelectorAll("#tabs .tab").forEach(b=>b.classList.toggle("on",b.dataset.tab===tab));
   document.getElementById("view-comparativo").hidden = tab!=="comparativo";
@@ -962,12 +982,39 @@ function switchTab(tab){
   document.getElementById("view-tabelas").hidden = tab!=="tabelas";
   document.getElementById("view-investimentos").hidden = tab!=="investimentos";
   document.body.classList.toggle("on-precos", tab==="precos");
+  avisaRota(tab);
 }
 
 document.getElementById("tabs").addEventListener("click",e=>{
   const b=e.target.closest(".tab"); if(!b) return;
+  if(cliqueDeNovaAba(e)) return;
+  e.preventDefault();
   switchTab(b.dataset.tab);
 });
+/* Rota que chega do hub (link colado, favorito, clique do meio):
+     "investimentos"                        -> abre a aba
+     "tabelas/villaggio-di-fiori"           -> abre a aba e a tabela do empreendimento
+   Nao avisa a rota de volta: ela ja e a que esta na URL. */
+const ABAS_VALIDAS = ["comparativo","precos","tabelas","investimentos","mudancas"];
+function aplicaRota(rota){
+  const partes = String(rota||"").split("/").filter(Boolean);
+  if(!partes.length) return;
+  const aba = partes[0];
+  if(ABAS_VALIDAS.indexOf(aba) < 0) return;
+  avisandoRota = false;
+  if(aba === "tabelas" && partes[1]){
+    const emp = Object.keys(SALES_TABLES).find(k => salesSlug(k) === partes[1]);
+    if(emp) openSalesTable(emp); else switchTab("tabelas");
+  } else {
+    switchTab(aba);
+  }
+  avisandoRota = true;
+}
+window.addEventListener("message", e => {
+  const d = e.data;
+  if(d && d.zelt === "rota" && typeof d.rota === "string") aplicaRota(d.rota);
+});
+
 document.getElementById("metric-seg").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b) return;
   pstate.metric=b.dataset.metric;

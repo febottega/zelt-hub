@@ -427,6 +427,7 @@ table.cmp .rm:hover{border-color:var(--danger); color:var(--danger);}
 .tab{font-family:var(--ff-display); font-weight:300; text-transform:uppercase; letter-spacing:.04em;
   font-size:20px; line-height:1; color:var(--navy-300); background:none; border:none; cursor:pointer;
   padding:6px 4px 8px; border-bottom:3px solid transparent; transition:color .15s, border-color .15s;}
+.tab{text-decoration:none; display:inline-block;}
 .tab b{font-weight:600; color:var(--orange-400); opacity:.55; transition:opacity .15s;}
 .tab:hover{color:var(--navy-100);}
 .tab.on{color:var(--white); border-bottom-color:var(--orange-500);}
