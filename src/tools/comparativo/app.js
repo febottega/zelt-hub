@@ -27,6 +27,8 @@ const DRIVE_LINKS = {
   "Ed. Edimburgo": "https://drive.google.com/drive/folders/1ll9B4L6TwYt_wp5xkMYB0nSEqAbOOgHH",
   "Valverde": "https://drive.google.com/drive/folders/0B-BgRzC9en53T2FnNlZNZE5NSFU?resourcekey=0-1HlKu2VI0JM4abjgr0cO4w",
   "Malta": "https://drive.google.com/drive/folders/1ErfyF-eshDwhz04n-qrxwZ4tDuH60GHl",
+  "Tulum - Studios": "https://drive.google.com/drive/folders/15XiT_Sg4FvhcHBzDcaRLIrsZScNh_rpw",
+  "Tulum - 2 dormitórios": "https://drive.google.com/drive/folders/15XiT_Sg4FvhcHBzDcaRLIrsZScNh_rpw",
   "San Vito": "https://drive.google.com/drive/folders/1dI6c3bo7nUM47TfvNrpfgzerssDc4CLp",
   "Ed. Toulouse": "https://drive.google.com/drive/folders/1ahwXMTVHxZ9yrWpu1bwGNvniHr33zc6I",
   "Terraço Sky": "https://drive.google.com/drive/folders/1Vt5PunscKc8s8e3NQZM2A-oxvnYJ1_ks",

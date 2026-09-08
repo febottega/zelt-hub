@@ -1,4 +1,10 @@
 const PRICE_CHANGES = [
+  { emp: "Tulum - Studios", tipoMudanca: "status",
+    texto: "Lançamento exclusivo ZELT — primeira tabela do Tulum (tabela 00), com 39 dos 40 studios disponíveis e entrega prevista para dezembro/2030",
+    data: "08/09/2026" },
+  { emp: "Tulum - 2 dormitórios", tipoMudanca: "status",
+    texto: "Lançamento exclusivo ZELT — primeira tabela do Tulum (tabela 00), com 17 dos 35 apartamentos de 2 dormitórios disponíveis e entrega prevista para dezembro/2030",
+    data: "08/09/2026" },
   { emp: "Grand Park", tipoMudanca: "status",
     texto: "Cobertura 1801 vendida — saiu da tabela após 17 meses de histórico e valorização de 42.34% no parcelado; restou só o apto tipo 1803, em revenda",
     data: "01/08/2026" },

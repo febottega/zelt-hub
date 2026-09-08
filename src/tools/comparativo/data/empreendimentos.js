@@ -1799,5 +1799,67 @@ const DATA = [
     "terreno": true,
     "sold": false,
     "id": 58
+  },
+  {
+    "tipo": "Apartamento Tipo",
+    "construtora": "Hill",
+    "empreendimento": "Tulum - Studios",
+    "bairro": "Victor Konder",
+    "unidade": null,
+    "config": "1 dormitório (studio)",
+    "vagas": "1",
+    "vagasN": 1,
+    "apriv": 34.83,
+    "atotal": 36.32,
+    "faixaArea": true,
+    "vmin": 368501.4,
+    "vmax": 415006.85,
+    "media": 391754.13,
+    "rpriv": 11012.06,
+    "rtotal": null,
+    "entrega": "12/2030",
+    "entregaKey": 24372,
+    "pronto": false,
+    "condicao": "Entrada + 72x + 6 reforços",
+    "correcao": "Somente CUB",
+    "quartos": [
+      1
+    ],
+    "suites": [],
+    "terreno": false,
+    "sold": false,
+    "id": 59
+  },
+  {
+    "tipo": "Apartamento Tipo",
+    "construtora": "Hill",
+    "empreendimento": "Tulum - 2 dormitórios",
+    "bairro": "Victor Konder",
+    "unidade": null,
+    "config": "2 dormitórios (1 suíte)",
+    "vagas": "1",
+    "vagasN": 1,
+    "apriv": 49.55,
+    "atotal": 80.59,
+    "faixaArea": true,
+    "vmin": 518255.84,
+    "vmax": 688210.83,
+    "media": 603233.33,
+    "rpriv": 9270.53,
+    "rtotal": null,
+    "entrega": "12/2030",
+    "entregaKey": 24372,
+    "pronto": false,
+    "condicao": "Entrada + 72x + 6 reforços",
+    "correcao": "Somente CUB",
+    "quartos": [
+      2
+    ],
+    "suites": [
+      1
+    ],
+    "terreno": false,
+    "sold": false,
+    "id": 60
   }
 ];
