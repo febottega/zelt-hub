@@ -1067,14 +1067,25 @@ function invConstrutora(emp){
   return (d && d.construtora) || constructoraOf(emp) || "—";
 }
 /* unidades com historico QUE AINDA estao na tabela de vendas */
-function invUnidades(emp){
+function invUnidadesCom(emp,min){
   const H=PRICE_HISTORY[emp]; if(!H) return [];
   const t=SALES_TABLES[emp];
   const vivas = t ? t.rows.map(r=>String(r[t.unitCol])) : null;
   return Object.keys(H.unidades)
     .filter(u=>!vivas || vivas.includes(u))
-    .filter(u=>invSerie(emp,u).vals.filter(v=>v!=null).length>=2)
+    .filter(u=>invSerie(emp,u).vals.filter(v=>v!=null).length>=min)
     .sort((a,b)=>parseInt(a,10)-parseInt(b,10));
+}
+/* Lancamento: uma tabela so, nenhuma unidade chega a dois pontos. Sem tratar
+   esse caso a aba escondia o empreendimento inteiro. Aqui ele entra com os
+   precos de lancamento e a valorizacao fica "—" ate a segunda tabela -- nunca
+   0%, que seria afirmar que o preco nao mudou. O teste e por ausencia total de
+   par, entao empreendimento com serie de verdade nao muda de comportamento. */
+function invLancamento(emp){
+  return invUnidadesCom(emp,2).length===0 && invUnidadesCom(emp,1).length>0;
+}
+function invUnidades(emp){
+  return invUnidadesCom(emp, invLancamento(emp) ? 1 : 2);
 }
 function invCorte(emp){
   const H=PRICE_HISTORY[emp], n=H.datas.length;
@@ -1137,6 +1148,9 @@ function renderInvest(){
     return e.toLowerCase().includes(f) || invConstrutora(e).toLowerCase().includes(f);
   });
   emps.sort((a,b)=>{
+    /* sem variacao medida nao ha ranking: lancamento vai para o fim nas duas ordens */
+    const la=invLancamento(a)?1:0, lb=invLancamento(b)?1:0;
+    if(la!==lb) return la-lb;
     const va=invMedia(a)??-9, vb=invMedia(b)??-9;
     return invState.ordem==="desc" ? vb-va : va-vb;
   });
@@ -1148,15 +1162,19 @@ function renderInvest(){
   box.innerHTML=emps.map(e=>{
     const m=invMedia(e), n=invUnidades(e).length;
     const H=PRICE_HISTORY[e], ds=H.datas.slice(invCorte(e));
+    /* um levantamento so: nao ha "de X a Y" nem periodo para mostrar */
+    const janela = ds.length<2
+      ? `tabela de ${invMesLabel(ds[0])}, primeiro levantamento`
+      : `${invMesLabel(ds[0])} a ${invMesLabel(ds[ds.length-1])} (${invPeriodoLabel(invMesesEntre(ds[0],ds[ds.length-1]))})`;
     return `<div class="inv-card" data-emp="${e.replace(/"/g,'&quot;')}">
       <div class="inv-card-main">
         <div class="inv-emp">${e}</div>
         <div class="inv-meta"><b>${invConstrutora(e)}</b> · ${n} unidade${n>1?'s':''} disponíve${n>1?'is':'l'} com histórico
-        · ${invMesLabel(ds[0])} a ${invMesLabel(ds[ds.length-1])} (${invPeriodoLabel(invMesesEntre(ds[0],ds[ds.length-1]))})</div>
+        · ${janela}</div>
       </div>
       <div class="inv-val">
         <div class="inv-pct ${m<0?'neg':''}">${m==null?'—':pct(m)}</div>
-        <div class="inv-pct-lbl">valorização média</div>
+        <div class="inv-pct-lbl">${m==null?'sem variação medida ainda':'valorização média'}</div>
       </div>
     </div>`;
   }).join("");
@@ -1188,9 +1206,11 @@ function drawInvest(){
   const s0=invSerie(emp,sel[0]);
   const meses=Math.max(...sel.map(u=>invMesesUnidade(emp,u)));
   const chips=us.map(u=>`<button type="button" class="inv-chip ${sel.includes(u)?'on':''}" data-u="${u}">${u}</button>`).join("");
-  const vars=sel.map(u=>invVarUnidade(emp,u));
-  const media=vars.reduce((a,b)=>a+b,0)/vars.length;
-  const eqMes=Math.pow(1+media,1/Math.max(meses,0.5))-1;
+  /* Com um levantamento so nao existe variacao: media e equivalente mensal
+     ficam nulos e o painel mostra "—" no lugar do numero. */
+  const vars=sel.map(u=>invVarUnidade(emp,u)).filter(v=>v!=null);
+  const media=vars.length ? vars.reduce((a,b)=>a+b,0)/vars.length : null;
+  const eqMes=media==null ? null : Math.pow(1+media,1/Math.max(meses,0.5))-1;
   const primeiro=u=>{const{s,idx}=invPontos(emp,u); return s.vals[idx[0]];};
   const ultimo=u=>{const{s,idx}=invPontos(emp,u); return s.vals[idx[idx.length-1]];};
   const ini=sel.map(primeiro).reduce((a,b)=>a+b,0)/sel.length;
@@ -1199,20 +1219,24 @@ function drawInvest(){
 
   document.getElementById("inv-modal-body").innerHTML=`
     <div class="inv-h">${emp}</div>
-    <div class="inv-sub">${invConstrutora(emp)} · evolução de ${invMesLabel(s0.datas[invPontos(emp,sel[0]).idx[0]])} a
-      ${invMesLabel(s0.datas[invPontos(emp,sel[0]).idx.slice(-1)[0]])} · ${um?('unidade '+sel[0]):(sel.length+' unidades')}</div>
+    <div class="inv-sub">${invConstrutora(emp)} · ${media==null
+        ? ('tabela de '+invMesLabel(s0.datas[invPontos(emp,sel[0]).idx[0]])+', primeiro levantamento')
+        : ('evolução de '+invMesLabel(s0.datas[invPontos(emp,sel[0]).idx[0]])+' a '+invMesLabel(s0.datas[invPontos(emp,sel[0]).idx.slice(-1)[0]]))
+      } · ${um?('unidade '+sel[0]):(sel.length+' unidades')}</div>
     <div class="inv-chips">${chips}</div>
-    <p class="inv-hint">Clique em uma unidade para ver a evolução dela. Só aparecem unidades ainda disponíveis.</p>
+    <p class="inv-hint">${media==null
+      ? 'Preços da primeira tabela do empreendimento. A variação aparece quando sair a tabela seguinte. Só aparecem unidades ainda disponíveis.'
+      : 'Clique em uma unidade para ver a evolução dela. Só aparecem unidades ainda disponíveis.'}</p>
     <div class="inv-chart-wrap">${invChartSVG(emp,sel)}</div>
     <div class="inv-kpis">
-      <div class="inv-kpi"><div class="inv-kpi-l">${um?'Valor inicial':'Média inicial'}</div>
+      <div class="inv-kpi"><div class="inv-kpi-l">${media==null?'Preço de tabela':(um?'Valor inicial':'Média inicial')}</div>
         <div class="inv-kpi-v">${fmtBRL(ini)}</div></div>
-      <div class="inv-kpi"><div class="inv-kpi-l">${um?'Valor atual':'Média atual'}</div>
-        <div class="inv-kpi-v">${fmtBRL(fim)}</div></div>
-      <div class="inv-kpi"><div class="inv-kpi-l">Valorização em ${invPeriodoLabel(meses)}</div>
-        <div class="inv-kpi-v ${media<0?'neg':'pos'}">${pct(media)}</div></div>
+      <div class="inv-kpi"><div class="inv-kpi-l">${media==null?'Levantamento':(um?'Valor atual':'Média atual')}</div>
+        <div class="inv-kpi-v">${media==null?invMesLabel(s0.datas[invPontos(emp,sel[0]).idx[0]]):fmtBRL(fim)}</div></div>
+      <div class="inv-kpi"><div class="inv-kpi-l">${media==null?'Valorização':'Valorização em '+invPeriodoLabel(meses)}</div>
+        <div class="inv-kpi-v ${media==null?'':(media<0?'neg':'pos')}">${media==null?'—':pct(media)}</div></div>
       <div class="inv-kpi"><div class="inv-kpi-l">Equivalente mensal</div>
-        <div class="inv-kpi-v ${eqMes<0?'neg':'pos'}">${pct(eqMes)}</div></div>
+        <div class="inv-kpi-v ${eqMes==null?'':(eqMes<0?'neg':'pos')}">${eqMes==null?'—':pct(eqMes)}</div></div>
     </div>
     <div class="inv-actions">
       <button type="button" class="inv-btn" id="inv-pdf">Baixar PDF</button>
@@ -1252,28 +1276,28 @@ function invFolhaPDF(emp,sel,d){
   return `<div class="pdf-sheet">
     <div class="pdf-top">
       <img class="pdf-logo" src="${src}" alt="ZELT Imóveis">
-      <div class="pdf-top-r"><span>Relatório de valorização</span><b>${invHoje()}</b></div>
+      <div class="pdf-top-r"><span>${d.media==null?'Preços de lançamento':'Relatório de valorização'}</span><b>${invHoje()}</b></div>
     </div>
     <div class="pdf-title">
       <h1>${emp}</h1>
       <div class="pdf-sub">${dd.construtora||''}${dd.bairro?' · '+dd.bairro:''} · ${rotuloUnidade(SALES_TABLES[emp])} <b>${u}</b>${desc?' · '+desc:''}</div>
     </div>
     <div class="pdf-lead">
-      <div class="pdf-lead-l${d.media<0?' neg':''}">
-        <span>Valorização de ${de} a ${ate}</span>
-        <strong>${pct(d.media)}</strong>
+      <div class="pdf-lead-l${d.media!=null&&d.media<0?' neg':''}">
+        <span>${d.media==null?('Preço de tabela em '+de):('Valorização de '+de+' a '+ate)}</span>
+        <strong>${d.media==null?fmtBRL(d.ini):pct(d.media)}</strong>
       </div>
       <div class="pdf-lead-r">
         <div><span>Valor em ${de}</span><b>${fmtBRL(d.ini)}</b></div>
-        <div><span>Valor em ${ate}</span><b>${fmtBRL(d.fim)}</b></div>
+        ${d.media==null?'':`<div><span>Valor em ${ate}</span><b>${fmtBRL(d.fim)}</b></div>`}
       </div>
     </div>
     <div class="pdf-chart">${invChartSVG(emp,sel,{h:695})}</div>
     <div class="pdf-kpis">
-      <div><span>Período</span><b>${invPeriodoLabel(d.meses)}</b></div>
-      <div><span>Valorização total</span><b class="${d.media<0?'neg':'pos'}">${pct(d.media)}</b></div>
-      <div><span>Equivalente mensal</span><b class="${d.eqMes<0?'neg':'pos'}">${pct(d.eqMes)}</b></div>
-      <div><span>Variação em reais</span><b class="${d.fim<d.ini?'neg':'pos'}">${(d.fim<d.ini?'':'+')+fmtBRL(d.fim-d.ini)}</b></div>
+      <div><span>Período</span><b>${d.media==null?'1 levantamento':invPeriodoLabel(d.meses)}</b></div>
+      <div><span>Valorização total</span><b class="${d.media==null?'':(d.media<0?'neg':'pos')}">${d.media==null?'—':pct(d.media)}</b></div>
+      <div><span>Equivalente mensal</span><b class="${d.eqMes==null?'':(d.eqMes<0?'neg':'pos')}">${d.eqMes==null?'—':pct(d.eqMes)}</b></div>
+      <div><span>Variação em reais</span><b class="${d.media==null?'':(d.fim<d.ini?'neg':'pos')}">${d.media==null?'—':(d.fim<d.ini?'':'+')+fmtBRL(d.fim-d.ini)}</b></div>
     </div>
     <div class="pdf-src"><b>Fontes:</b> ${d.s0.fontes.join(" · ")}</div>
     <div class="pdf-foot">
@@ -1292,7 +1316,8 @@ function invChartSVG(emp,sel,opts){
   sel.forEach(u=>invSerie(emp,u).vals.forEach(v=>{ if(v==null) return; lo=Math.min(lo,v);hi=Math.max(hi,v); }));
   const pad=(hi-lo)*0.18 || hi*0.02;
   lo-=pad; hi+=pad;
-  const X=i=> ml + (n===1?0:(W-ml-mr)*i/(n-1));
+  /* uma data so: o ponto vai para o meio do grafico, nao colado no eixo */
+  const X=i=> ml + (n===1?(W-ml-mr)/2:(W-ml-mr)*i/(n-1));
   const Y=v=> mt + (Hh-mt-mb)*(1-(v-lo)/(hi-lo));
   const ticks=4;
   let grid="",ylab="";
