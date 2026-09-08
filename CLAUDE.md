@@ -67,7 +67,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 |---|---|---|
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **64 KB** |
 | os 59 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
-| histórico de preços | `tools/comparativo/data/price-history.js` | 45 KB |
+| histórico de preços | `tools/comparativo/data/price-history.js` | 48 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 5 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 128 KB |
 | logos das construtoras | `tools/comparativo/data/logos.js` | 44 KB |
@@ -132,10 +132,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.572.614 bytes):
+Hash de referência (18 payloads, 11.575.886 bytes):
 
 ```
-380C9310464606765A4412AD0C0A0CC3D776E267E68242BA47E8D323F0B208E3
+FB1F0E74F34883E8B572D0E7CAC647DD3E9E366B14C30050049720A2AAFCDA60
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

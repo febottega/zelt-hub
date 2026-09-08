@@ -1115,9 +1115,14 @@ function pct(v){ return (v>=0?"+":"") + (v*100).toFixed(2).replace(".",",") + "%
 function buildInvConstrDropdown(){
   const sel=document.getElementById("inv-constr"); if(!sel) return;
   const cont={};
-  Object.keys(PRICE_HISTORY).forEach(e=>{ const c=invConstrutora(e); cont[c]=(cont[c]||0)+1; });
+  /* Conta so o que a aba consegue mostrar. Uma serie com um unico levantamento
+     -- um lancamento recem cadastrado, por exemplo -- nao rende variacao, e o
+     renderInvest a descarta; contar essa serie aqui faria o filtro prometer
+     um empreendimento que a lista nao tem. */
+  const listaveis=Object.keys(PRICE_HISTORY).filter(e=>invUnidades(e).length);
+  listaveis.forEach(e=>{ const c=invConstrutora(e); cont[c]=(cont[c]||0)+1; });
   const nomes=Object.keys(cont).sort((a,b)=>a.localeCompare(b,'pt-BR'));
-  const tot=Object.keys(PRICE_HISTORY).length;
+  const tot=listaveis.length;
   sel.innerHTML=`<option value="">Todas as construtoras (${tot})</option>`+
     nomes.map(c=>`<option value="${c}">${c} (${cont[c]})</option>`).join("");
 }
