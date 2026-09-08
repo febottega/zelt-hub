@@ -5,7 +5,7 @@ https://febottega.github.io/zelt-hub/ (repo `febottega/zelt-hub`, Pages no root 
 
 ## REGRA PRINCIPAL: nunca leia nem edite o index.html
 
-`index.html` (10,4 MB) é **gerado**. Contém as 17 ferramentas em base64 — ilegível
+`index.html` (11 MB) é **gerado**. Contém as 18 ferramentas em base64 — ilegível
 para busca, impossível de editar cirurgicamente. Lê-lo custa cerca de **2,5 milhões
 de tokens** e não cabe em nenhuma janela de contexto.
 
@@ -43,11 +43,11 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 13 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 18 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          8 relatórios históricos em base64 — nunca editar, nunca ler
+   └─ frozen/          12 relatórios históricos em base64 — nunca editar, nunca ler
 ```
 
 ## Inclusões: `@@FILE:caminho@@`
@@ -76,7 +76,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | gerador de documentos | `tools/gerador.html` | 285 KB |
 | simulador SAC / PRICE | `tools/simulador.html` | 106 KB |
 | painel de avaliações (`DADOS`, `KPIS`) | `tools/avaliacoes.html` | 97 KB |
-| relatório da semana atual | `tools/avaliacao.html` | 407 KB |
+| relatório da semana atual | `tools/avaliacao.html` | 452 KB |
 | hero, cards, overlay do hub | `hub.html` | 84 KB (~35 KB de código) |
 
 Nunca leia esses arquivos por inteiro. Use `Grep` para localizar e `Edit` com
@@ -89,7 +89,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
 
 - **avaliacoes** — painel: array `DADOS` (imóveis) + `KPIS` (semanais). Filtros por
   código, endereço, corretor, bairro, quartos, suítes, tipo, semana, faixa.
-- **avaliacao** + 10 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 12 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
 - **comparativo** — 57 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
@@ -132,10 +132,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (17 payloads, 10.922.590 bytes):
+Hash de referência (18 payloads, 11.547.902 bytes):
 
 ```
-1A0C1842764853E48A1B9BED89BE7858812060838D766878475A595A0EC907C3
+B32D82AFFFDB4E2D02DEDBA8480C8A6235B4554C9AC7F5F1C81E732F4D44695B
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -222,7 +222,7 @@ Campos de cada imóvel no `DADOS`, nesta ordem:
 | campo | de onde vem |
 |---|---|
 | `c` | código |
-| `t` | prefixo do código: AP=Apartamento, CA=Casa, CO=Cobertura, TE=Terreno, SA=Sala comercial, PR=Prédio, GA=Galpão. **Prefixo novo aparece de vez em quando** (o GA estreou em 01/09): confira o trecho do meio do `local`, que costuma nomear o tipo |
+| `t` | prefixo do código: AP=Apartamento, CA=Casa, CO=Cobertura, TE=Terreno, SA=Sala comercial, PR=Prédio, GA=Galpão, CH=Chácara. **Prefixo novo aparece de vez em quando** (o GA estreou em 01/09, o CH em 08/09): confira o trecho do meio do `local`, que costuma nomear o tipo |
 | `cap` | coluna Captador |
 | `w` | data da semana, `DD/MM/AAAA` |
 | `a`, `k` | Anunciado, Consenso |
@@ -232,7 +232,7 @@ Campos de cada imóvel no `DADOS`, nesta ordem:
 | `e`, `cm`, `b` | `DETALHES[cod].local` partido por ` · `: primeiro trecho, miolo, último |
 | `d`, `v`, `s` | dorms, vagas, suítes — **omita** o campo quando o imóvel não tem |
 | `m` + `ml` | `areaUtil`→`m² úteis`, `areaConstr`→`m² constr.`, `areaTotal`→`m² total` |
-| `mt` | `areaTerreno` |
+| `mt` | `areaTerreno`; quando não há esse campo mas há `areaTotal` que não foi para o `m²` (chácara com `areaConstr` + `areaTotal`), o `areaTotal` é o terreno |
 | `dr` | `a - k` |
 | `vd` | 1:1 com `f`: Revisar→`Acima do preço de mercado`, Leve ajuste→`Levemente acima do mercado`, Alinhado→`Dentro do preço de mercado` |
 
