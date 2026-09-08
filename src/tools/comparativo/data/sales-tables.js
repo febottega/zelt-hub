@@ -1637,32 +1637,25 @@ const SALES_TABLES = {
   "Ed. Toulouse": {
     "folderId": "1ahwXMTVHxZ9yrWpu1bwGNvniHr33zc6I",
     "source": "Tabela da construtora (Speranzini)",
-    "ref": "Julho/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
       "Área priv.",
       "Entrada",
-      "60 parcelas",
+      "50 parcelas",
       "Valor total"
     ],
     "rows": [
       [
         "103",
         "83,52 m²",
-        "R$ 170.000,00",
-        "R$ 9.150,00",
-        "R$ 719.000,00"
-      ],
-      [
-        "104",
-        "84,52 m²",
-        "R$ 170.000,00",
-        "R$ 10.000,00",
-        "R$ 770.000,00"
+        "R$ 160.000,00",
+        "R$ 9.400,00",
+        "R$ 630.000,00"
       ]
     ],
-    "note": "Condição: entrada + 60 parcelas, sem reforços. Preço fechado — o total não é indexado ao CUB; só as parcelas são corrigidas pela variação do CUB ponderado a cada dia 05. Valores já com duas vagas simples inclusas (até dez/2025 a tabela vinha com uma vaga dupla, e cobrava R$ 10.000 a mais pela troca — a diferença de preço entre as duas épocas é essa, não reajuste). A vaga 27, dupla, está à venda por R$ 25.000 à parte. Entrega prevista: novembro/2026, inalterada nas sete revisões conhecidas. A entrada subiu de R$ 90.000 (2025) para R$ 170.000 e o parcelamento encurtou de 75x para 60x em 22/06/2026, com o valor total intacto. Última atualização da tabela: 03/07/2026.",
+    "note": "Última unidade: o apto 104 foi vendido e restou só o 103, que caiu de R$ 719.000 para R$ 630.000 (−12,38%) — a primeira redução nominal do empreendimento desde que a série começou, em junho de 2025. A condição também afrouxou: a entrada baixou de R$ 170.000 para R$ 160.000 e o parcelamento encurtou de 60x para 50x, com a parcela subindo de R$ 9.150 para R$ 9.400. Preço fechado — o total não é indexado ao CUB; só as parcelas são corrigidas pela variação do CUB ponderado a cada dia 05. Valor já com duas vagas simples inclusas (até dez/2025 a tabela vinha com uma vaga dupla, e cobrava R$ 10.000 a mais pela troca — a diferença de preço entre as duas épocas é essa, não reajuste). A vaga 27, dupla, está à venda por R$ 25.000 à parte. Entrega prevista: novembro/2026, inalterada em todos os levantamentos conhecidos. Última atualização da tabela: 08/09/2026.",
     "summary": {
       "bits": [
         {
@@ -1680,7 +1673,7 @@ const SALES_TABLES = {
           "col": 2
         },
         {
-          "label": "60 parcelas",
+          "label": "50 parcelas",
           "col": 3
         }
       ]
