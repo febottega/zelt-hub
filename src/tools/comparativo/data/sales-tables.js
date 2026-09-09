@@ -335,14 +335,14 @@ const SALES_TABLES = {
   "Kaisergarten": {
     "folderId": "13doD3mCsHmjNpZPBnSmuTwj5mtuHQdnA",
     "source": "Forma de integralização (Castelo)",
-    "ref": "Agosto/2026 · CUB R$ 3.151,24",
+    "ref": "Setembro/2026 · CUB R$ 3.158,88",
     "unitCol": 0,
     "columns": [
       "Apto",
       "Área",
       "Garagens",
       "Entrada",
-      "Parcela mensal (30x)",
+      "Parcela mensal (29x)",
       "Reforços (2x)",
       "Valor total",
       "Situação"
@@ -353,7 +353,7 @@ const SALES_TABLES = {
         "295,00 m²",
         "3",
         "R$ 1.052.645,88",
-        "R$ 48.556,53",
+        "R$ 50.230,90",
         "R$ 340.247,05",
         "R$ 3.189.835,99",
         "Disponível"
@@ -362,24 +362,24 @@ const SALES_TABLES = {
         "301",
         "295,00 m²",
         "3",
-        "R$ 840.893,46",
-        "R$ 38.788,80",
-        "R$ 271.802,25",
-        "R$ 2.548.161,99",
+        "R$ 842.932,15",
+        "R$ 40.223,63",
+        "R$ 272.461,22",
+        "R$ 2.554.339,86",
         "Revenda"
       ],
       [
         "Vaga extra",
         "12,50 m²",
         "1",
-        "R$ 40.910,34",
-        "R$ 1.887,12",
-        "R$ 13.223,46",
-        "R$ 123.970,73",
+        "R$ 41.009,52",
+        "R$ 1.956,92",
+        "R$ 13.255,52",
+        "R$ 124.271,29",
         "—"
       ]
     ],
-    "note": "Residencial Kaisergarten. Valores atrelados ao CUB (ref. ago/2026: R$ 3.151,24). Em CUBs: 1301 = 1.012,2479; 301 = 808,6220; vaga extra = 39,3403. Apartamentos de 3 suítes, 3 a 4 vagas, porcelanato nas áreas sociais e molhadas, laminado nas íntimas. Prédio com 2 elevadores, salão de festas, hall, área de piscina e academia mobiliados, playground. Reservas valem no máximo 7 dias, depois a unidade volta para venda automaticamente. Valor final ao cliente — acrescentar o percentual de corretagem. Obs.: a marcação de Disponível/Revenda por unidade não é legível na extração do PDF de agosto; mantida a do mês anterior (1301 disponível, 301 revenda) — confirmar com a Castelo. Endereço: Alameda Rio Branco 109, Jardim Blumenau.",
+    "note": "Residencial Kaisergarten. Valores atrelados ao CUB (ref. set/2026: R$ 3.158,88). Em CUBs: 1301 = 1.009,7997; 301 = 808,6220; vaga extra = 39,3403. O parcelamento encurtou de 30 para 29 parcelas. Atenção ao 1301: o total em reais está parado em R$ 3.189.835,99 desde junho, e é a contagem de CUBs que vem caindo (1.012,2479 em agosto, 1.009,7997 em setembro) — ou seja, a Castelo está absorvendo a alta do índice nessa unidade, não repassando. O 301 e a vaga extra acompanharam o CUB normalmente. Apartamentos de 3 suítes, 3 a 4 vagas, porcelanato nas áreas sociais e molhadas, laminado nas íntimas. Prédio com 2 elevadores, salão de festas, hall, área de piscina e academia mobiliados, playground. Reservas valem no máximo 7 dias, depois a unidade volta para venda automaticamente. Valor final ao cliente — acrescentar o percentual de corretagem. Obs.: a marcação de Disponível/Revenda por unidade não aparece no PDF de setembro (as duas linhas têm o mesmo fundo e o mesmo preto no texto); mantida a do mês anterior (1301 disponível, 301 revenda) — confirmar com a Castelo. Endereço: Alameda Rio Branco 109, Jardim Blumenau.",
     "summary": {
       "bits": [
         {
@@ -402,7 +402,7 @@ const SALES_TABLES = {
           "col": 3
         },
         {
-          "label": "30 parcelas",
+          "label": "29 parcelas",
           "col": 4
         },
         {
@@ -415,7 +415,7 @@ const SALES_TABLES = {
   "Gard": {
     "folderId": "17wfnR_CwPxNQtz3mDU465kxUiU8Y-a8J",
     "source": "Forma de integralização (Castelo)",
-    "ref": "Agosto/2026 · CUB R$ 3.151,24",
+    "ref": "Setembro/2026 · CUB R$ 3.158,88",
     "unitCol": 0,
     "columns": [
       "Apto",
@@ -434,10 +434,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 244.541,94",
-        "R$ 10.053,39",
-        "R$ 156.506,84",
-        "R$ 1.630.279,61",
+        "R$ 245.134,82",
+        "R$ 10.077,76",
+        "R$ 156.886,28",
+        "R$ 1.634.232,13",
         "Disponível"
       ],
       [
@@ -445,10 +445,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 240.597,72",
-        "R$ 9.891,24",
-        "R$ 153.982,54",
-        "R$ 1.603.984,78",
+        "R$ 241.181,03",
+        "R$ 9.915,22",
+        "R$ 154.355,86",
+        "R$ 1.607.873,55",
         "Disponível"
       ],
       [
@@ -456,10 +456,10 @@ const SALES_TABLES = {
         "Rio/Centro",
         "165 m²",
         "2",
-        "R$ 265.776,55",
-        "R$ 10.926,37",
-        "R$ 170.096,99",
-        "R$ 1.771.843,65",
+        "R$ 266.420,91",
+        "R$ 10.952,86",
+        "R$ 170.509,38",
+        "R$ 1.776.139,38",
         "Disponível"
       ],
       [
@@ -467,10 +467,10 @@ const SALES_TABLES = {
         "Alameda/Olímpico",
         "147 m²",
         "2",
-        "R$ 240.597,72",
-        "R$ 9.891,24",
-        "R$ 153.982,54",
-        "R$ 1.603.984,78",
+        "R$ 241.181,03",
+        "R$ 9.915,22",
+        "R$ 154.355,86",
+        "R$ 1.607.873,55",
         "Disponível"
       ],
       [
@@ -478,10 +478,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 236.653,49",
-        "R$ 9.729,09",
-        "R$ 151.458,23",
-        "R$ 1.577.689,95",
+        "R$ 237.227,24",
+        "R$ 9.752,68",
+        "R$ 151.825,44",
+        "R$ 1.581.514,96",
         "Disponível"
       ],
       [
@@ -489,10 +489,10 @@ const SALES_TABLES = {
         "Rio/Centro",
         "165 m²",
         "2",
-        "R$ 261.419,55",
-        "R$ 10.747,25",
-        "R$ 167.308,52",
-        "R$ 1.742.797,03",
+        "R$ 262.053,35",
+        "R$ 10.773,30",
+        "R$ 167.714,15",
+        "R$ 1.747.022,34",
         "Disponível"
       ],
       [
@@ -500,10 +500,10 @@ const SALES_TABLES = {
         "Alameda/Olímpico",
         "147 m²",
         "2",
-        "R$ 236.653,49",
-        "R$ 9.729,09",
-        "R$ 151.458,23",
-        "R$ 1.577.689,95",
+        "R$ 237.227,24",
+        "R$ 9.752,68",
+        "R$ 151.825,44",
+        "R$ 1.581.514,96",
         "Disponível"
       ],
       [
@@ -511,10 +511,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 232.709,27",
-        "R$ 9.566,94",
-        "R$ 148.933,93",
-        "R$ 1.551.395,11",
+        "R$ 233.273,46",
+        "R$ 9.590,13",
+        "R$ 149.295,01",
+        "R$ 1.555.156,38",
         "Disponível"
       ],
       [
@@ -522,10 +522,10 @@ const SALES_TABLES = {
         "Rio/Centro",
         "165 m²",
         "2",
-        "R$ 257.062,56",
-        "R$ 10.568,13",
-        "R$ 164.520,04",
-        "R$ 1.713.750,42",
+        "R$ 257.685,80",
+        "R$ 10.593,75",
+        "R$ 164.918,91",
+        "R$ 1.717.905,31",
         "Disponível"
       ],
       [
@@ -533,10 +533,10 @@ const SALES_TABLES = {
         "Alameda/Olímpico",
         "147 m²",
         "2",
-        "R$ 232.709,27",
-        "R$ 9.566,94",
-        "R$ 148.933,93",
-        "R$ 1.551.395,11",
+        "R$ 233.273,46",
+        "R$ 9.590,13",
+        "R$ 149.295,01",
+        "R$ 1.555.156,38",
         "Disponível"
       ],
       [
@@ -544,10 +544,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 228.765,04",
-        "R$ 9.404,79",
-        "R$ 146.409,63",
-        "R$ 1.525.100,28",
+        "R$ 229.319,67",
+        "R$ 9.427,59",
+        "R$ 146.764,59",
+        "R$ 1.528.797,80",
         "Disponível"
       ],
       [
@@ -555,10 +555,10 @@ const SALES_TABLES = {
         "Rio/Centro",
         "165 m²",
         "2",
-        "R$ 252.705,57",
-        "R$ 10.389,01",
-        "R$ 161.731,56",
-        "R$ 1.684.703,80",
+        "R$ 253.318,24",
+        "R$ 10.414,19",
+        "R$ 162.123,67",
+        "R$ 1.688.788,27",
         "Disponível"
       ],
       [
@@ -566,10 +566,10 @@ const SALES_TABLES = {
         "Alameda/Olímpico",
         "147 m²",
         "2",
-        "R$ 228.765,04",
-        "R$ 9.404,79",
-        "R$ 146.409,63",
-        "R$ 1.525.100,28",
+        "R$ 229.319,67",
+        "R$ 9.427,59",
+        "R$ 146.764,59",
+        "R$ 1.528.797,80",
         "Disponível"
       ],
       [
@@ -577,10 +577,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 224.820,82",
-        "R$ 9.242,63",
-        "R$ 143.885,32",
-        "R$ 1.498.805,45",
+        "R$ 225.365,88",
+        "R$ 9.265,04",
+        "R$ 144.234,16",
+        "R$ 1.502.439,22",
         "Disponível"
       ],
       [
@@ -588,10 +588,10 @@ const SALES_TABLES = {
         "Rio/Centro",
         "165 m²",
         "2",
-        "R$ 248.348,58",
-        "R$ 10.209,89",
-        "R$ 158.943,09",
-        "R$ 1.655.657,18",
+        "R$ 248.950,68",
+        "R$ 10.234,64",
+        "R$ 159.328,44",
+        "R$ 1.659.671,23",
         "Disponível"
       ],
       [
@@ -599,10 +599,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 220.876,59",
-        "R$ 9.080,48",
-        "R$ 141.361,02",
-        "R$ 1.472.510,62",
+        "R$ 221.412,10",
+        "R$ 9.102,50",
+        "R$ 141.703,74",
+        "R$ 1.476.080,63",
         "Disponível"
       ],
       [
@@ -610,10 +610,10 @@ const SALES_TABLES = {
         "Alameda/Olímpico",
         "147 m²",
         "2",
-        "R$ 220.876,59",
-        "R$ 9.080,48",
-        "R$ 141.361,02",
-        "R$ 1.472.510,62",
+        "R$ 221.412,10",
+        "R$ 9.102,50",
+        "R$ 141.703,74",
+        "R$ 1.476.080,63",
         "Disponível"
       ],
       [
@@ -621,10 +621,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 216.932,37",
-        "R$ 8.918,33",
-        "R$ 138.836,72",
-        "R$ 1.446.215,78",
+        "R$ 217.458,31",
+        "R$ 8.939,95",
+        "R$ 139.173,32",
+        "R$ 1.449.722,05",
         "Disponível"
       ],
       [
@@ -632,10 +632,10 @@ const SALES_TABLES = {
         "Rio/Centro",
         "165 m²",
         "2",
-        "R$ 239.634,59",
-        "R$ 9.851,64",
-        "R$ 153.366,14",
-        "R$ 1.597.563,95",
+        "R$ 240.215,57",
+        "R$ 9.875,53",
+        "R$ 153.737,97",
+        "R$ 1.601.437,15",
         "Disponível"
       ],
       [
@@ -643,10 +643,10 @@ const SALES_TABLES = {
         "Alameda/Olímpico",
         "147 m²",
         "2",
-        "R$ 216.932,37",
-        "R$ 8.918,33",
-        "R$ 138.836,72",
-        "R$ 1.446.215,78",
+        "R$ 217.458,31",
+        "R$ 8.939,95",
+        "R$ 139.173,32",
+        "R$ 1.449.722,05",
         "Disponível"
       ],
       [
@@ -654,10 +654,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 212.988,14",
-        "R$ 8.756,18",
-        "R$ 136.312,41",
-        "R$ 1.419.920,95",
+        "R$ 213.504,52",
+        "R$ 8.777,41",
+        "R$ 136.642,89",
+        "R$ 1.423.363,47",
         "Disponível"
       ],
       [
@@ -665,10 +665,10 @@ const SALES_TABLES = {
         "Rio/Olímpico",
         "147 m²",
         "2",
-        "R$ 209.043,92",
-        "R$ 8.594,03",
-        "R$ 133.788,11",
-        "R$ 1.393.626,12",
+        "R$ 209.550,73",
+        "R$ 8.614,86",
+        "R$ 134.112,47",
+        "R$ 1.397.004,89",
         "Disponível"
       ],
       [
@@ -676,10 +676,10 @@ const SALES_TABLES = {
         "Alameda/Olímpico",
         "147 m²",
         "2",
-        "R$ 205.099,69",
-        "R$ 8.431,88",
-        "R$ 131.263,80",
-        "R$ 1.367.331,29",
+        "R$ 205.596,95",
+        "R$ 8.452,32",
+        "R$ 131.582,05",
+        "R$ 1.370.646,30",
         "Disponível"
       ],
       [
@@ -687,10 +687,10 @@ const SALES_TABLES = {
         "Alameda/Olímpico",
         "147 m²",
         "2",
-        "R$ 197.211,24",
-        "R$ 8.107,57",
-        "R$ 126.215,20",
-        "R$ 1.314.741,62",
+        "R$ 197.689,37",
+        "R$ 8.127,23",
+        "R$ 126.521,20",
+        "R$ 1.317.929,14",
         "Disponível"
       ],
       [
@@ -698,14 +698,14 @@ const SALES_TABLES = {
         "Alameda/Olímpico",
         "147 m²",
         "2",
-        "R$ 185.378,57",
-        "R$ 7.621,12",
-        "R$ 118.642,28",
-        "R$ 1.235.857,12",
-        "Disponível"
+        "R$ 185.828,01",
+        "R$ 7.639,60",
+        "R$ 118.929,93",
+        "R$ 1.238.853,39",
+        "Reservada"
       ]
     ],
-    "note": "Residencial Gard. 25 apartamentos disponíveis. Valores atrelados ao CUB (ref. ago/2026: R$ 3.151,24). Apartamentos de 3 suítes, 2 vagas (com opção de vaga extra), venezianas elétricas nos dormitórios; coberturas com 4 vagas. Também disponíveis, fora da lista: vaga extra (R$ 99.370,01), depósitos tipo 1 a 3 (R$ 13.739,41 / R$ 17.174,26 / R$ 20.609,11) e 14 celeiros de 100 m² (R$ 1.249.004,69 cada). Obs.: a marcação de reservada por unidade não é legível na extração do PDF; todas listadas como disponíveis — confirmar antes de ofertar. Endereço: Rua Bonifácio da Cunha 98, Jardim Blumenau.",
+    "note": "Residencial Gard. 25 apartamentos na tabela: 24 disponíveis e a 1502 reservada. Valores atrelados ao CUB (ref. set/2026: R$ 3.158,88) — de agosto para setembro nenhuma unidade foi reprecificada, subiu só o índice (0,24%). Apartamentos de 3 suítes, 2 vagas (com opção de vaga extra), venezianas elétricas nos dormitórios; coberturas com 4 vagas. Também disponíveis, fora da lista: vaga extra (R$ 99.610,92), depósitos tipo 1 a 3 (R$ 13.772,72 / R$ 17.215,90 / R$ 20.659,08) e 14 celeiros de 100 m² (R$ 1.252.032,83 cada). A marcação de reservada vem da cor da linha no PDF, não do texto: o fundo verde é o mesmo do rótulo \"Unidade Reservada\" da legenda. Endereço: Rua Bonifácio da Cunha 98, Jardim Blumenau.",
     "summary": {
       "bits": [
         {
@@ -744,47 +744,56 @@ const SALES_TABLES = {
   "Residencial EB": {
     "folderId": "1Ig1UoYH8Hk6mh2kRocGjoylX9e3L5Auq",
     "source": "Forma de integralização residencial (Castelo)",
-    "ref": "Agosto/2026 · CUB R$ 3.151,24",
+    "ref": "Setembro/2026 · CUB R$ 3.158,88",
     "unitCol": 0,
     "columns": [
       "Unidade",
       "Área",
       "Garagens",
       "Entrada",
-      "Parcela mensal (14x)",
+      "Parcela mensal (13x)",
       "Reforços semestrais (2x)",
       "Valor total"
     ],
     "rows": [
       [
+        "1412",
+        "70,00 m²",
+        "1",
+        "R$ 72.093,50",
+        "R$ 24.031,17",
+        "R$ 48.062,33",
+        "R$ 480.623,32"
+      ],
+      [
         "1402",
         "73,00 m²",
         "1",
-        "R$ 74.534,38",
-        "R$ 23.070,16",
-        "R$ 49.689,58",
-        "R$ 496.895,84"
+        "R$ 74.715,08",
+        "R$ 24.905,03",
+        "R$ 49.810,05",
+        "R$ 498.100,53"
       ],
       [
         "1202",
         "73,00 m²",
         "1",
-        "R$ 72.363,47",
-        "R$ 22.398,22",
-        "R$ 48.242,31",
-        "R$ 482.423,14"
+        "R$ 72.538,91",
+        "R$ 24.179,64",
+        "R$ 48.359,28",
+        "R$ 483.592,75"
       ],
       [
         "1011",
         "69,50 m²",
         "1",
-        "R$ 67.319,19",
-        "R$ 20.836,89",
-        "R$ 44.879,46",
-        "R$ 448.794,58"
+        "R$ 67.482,40",
+        "R$ 22.494,13",
+        "R$ 44.988,27",
+        "R$ 449.882,66"
       ]
     ],
-    "note": "Residencial Egon Belz. Apenas unidades residenciais — as salas comerciais têm tabela própria e ficam fora desta lista. Valores atrelados ao CUB (ref. ago/2026: R$ 3.151,24). Em CUBs: 1402 = 157,6826; 1202 = 153,0899; 1011 = 142,4184. Prédio com piscina, 3 elevadores, academia, coworking, pub, lavanderia, espaço gourmet, aquecedor solar coletivo, piso vinílico e fechadura digital. Endereço: Almirante Tamandaré 570, Vila Nova.",
+    "note": "Residencial Egon Belz. Apenas unidades residenciais — as salas comerciais têm tabela própria e ficam fora desta lista. A unidade 1412 (70 m²) entrou na tabela em setembro; as outras três seguiram apenas o CUB. O parcelamento encurtou de 14 para 13 parcelas mensais: a integralização vai até a entrega, então some uma parcela por mês que passa. Valores atrelados ao CUB (ref. set/2026: R$ 3.158,88). Em CUBs: 1412 = 152,1499; 1402 = 157,6826; 1202 = 153,0899; 1011 = 142,4184. Prédio com piscina, 3 elevadores, academia, coworking, pub, lavanderia, espaço gourmet, aquecedor solar coletivo, piso vinílico e fechadura digital. Endereço: Almirante Tamandaré 570, Vila Nova.",
     "summary": {
       "bits": [
         {
@@ -806,7 +815,7 @@ const SALES_TABLES = {
           "col": 3
         },
         {
-          "label": "14 parcelas",
+          "label": "13 parcelas",
           "col": 4
         },
         {
@@ -2643,7 +2652,7 @@ const SALES_TABLES = {
   "Cipriani Tower": {
     "folderId": "15Vy0NNYnRatgWewAmS5IE1TERxkejUr3",
     "source": "Disponibilidade (O.M.A.)",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",

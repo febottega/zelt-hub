@@ -150,10 +150,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.618.310 bytes):
+Hash de referência (18 payloads, 11.622.094 bytes):
 
 ```
-8C7A97B47EC26CEAB265F1CE67D4517D78FE2B8974F3C225046C2B4169528597
+D45C043CB2B06649CA7B084A23F68C3C043699CB57FD890CCCE87671A9321E46
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -188,6 +188,18 @@ disponíveis.
 Para ler e validar os dados, `node` é o caminho mais curto — inclusive para dar
 `eval` num `.js` de dados e conferir contagens, ou `node --check` num script. O
 `ConvertFrom-Json` do PowerShell serve igual para as três linhas do `avaliacoes.html`.
+
+### Cor de célula em PDF do Excel (tabelas da Castelo)
+
+Nas tabelas da Castelo a marcação de **unidade reservada é só a cor de fundo da
+linha** — a extração de texto não vê. Para ler: no content stream, `r g b rg`
+define a cor e `x y w h re` + **`f*`** pinta (é `f*`, não `f`: `f*` nunca
+casa, porque não há fronteira de palavra depois do asterisco). O `re` seguido de
+`W* n` é recorte, não fundo. Retângulo de altura < 3pt é borda. Depois é cruzar o
+Y do retângulo com o Y da linha de texto. No Gard de set/2026 o verde `#92c09e` é
+o retângulo do rótulo "Unidade Reservada" da legenda, e só a linha da 1502 está
+verde. No Kaisergarten e no EB não há cor por unidade: todas as linhas têm o mesmo
+fundo e o mesmo preto no texto, então ali a situação continua vindo do mês anterior.
 
 Para **editar** as linhas gigantes use `perl` lendo o texto novo de um arquivo, nunca
 quoting inline: com `▲`, `−` e `·` no meio, quebra. E cuidado com heredoc — o `\n`
