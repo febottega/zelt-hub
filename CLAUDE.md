@@ -150,10 +150,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.624.934 bytes):
+Hash de referência (18 payloads, 11.625.690 bytes):
 
 ```
-1EF0BE48F2421BF3D5447CC4B3FBB937D5CA71D503F9CEAEB9CC4F3F7FE11678
+5F43B7AFB3F76E1D6C5D4B1CC02BA33B6BD3E8052F269A444919CA920CECB7AC
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -178,9 +178,13 @@ solução foi mover a **seção 4 (imóvel no negócio, opcional)** para a pági
 tinha 74mm livres. O branco que sobrou embaixo das assinaturas voltou para as
 seções 1-3 como margem maior, presa ao `#page1` — a `.sec-h` é compartilhada com os
 outros quatro documentos e com a própria página 2, que tem só 22mm de folga.
-Medido no fim: página 1 com 11mm de folga no caso normal e 1,3mm no pior caso que
-consegui construir (dois endereços quebrando em três linhas); seções em ordem
-1-2-3 / 4-5-6.
+Por fim as **linhas de assinatura viraram `position:absolute` no pé do #page1**
+(`bottom:22mm`, 3,4mm acima da marca): presas, elas não andam com o tamanho do
+cadastro e o texto que cresce em cima não empurra ninguém para fora da folha. O
+limite passou a ser "o conteúdo bate nas assinaturas", não "o conteúdo passa da
+página". Medido: cadastro normal deixa 34mm entre a data e as assinaturas, o pior
+caso que consegui construir deixa 5mm — e é essa faixa que absorve um cadastro
+longo, então ela não pode ser preenchida. Seções em ordem 1-2-3 / 4-5-6.
 
 ## Rotina semanal da avaliação
 

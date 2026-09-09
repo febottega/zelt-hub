@@ -143,8 +143,15 @@
      empilhar tudo no alto e deixar branco embaixo das assinaturas. So no
      #page1: a pagina 2 tem 22mm de folga e nao aceita o mesmo respiro. */
   #page1 .sec-h{margin-top:5.5mm}
-  #page1 .blu{margin-top:6mm}
-  #page1 .sign-row{margin-top:10mm}
+  /* Com as assinaturas presas no pe, a linha da data fica numa faixa vazia:
+     subir 2mm nao abre branco nenhum e e a folga que separa o "Blumenau, data"
+     do nome do corretor quando o cadastro e muito comprido. */
+  #page1 .blu{margin-top:4mm}
+  /* As linhas de assinatura ficam presas no pe da folha, acima da faixa do
+     rodape (a marca comeca a 6mm da borda e tem 12,5mm). Presas, e nao com
+     margem: assim elas nao andam quando o cadastro e mais comprido, e o texto
+     que cresce em cima nao empurra ninguem para fora da pagina. */
+  #page1 .sign-row{position:absolute;left:20mm;right:14mm;bottom:22mm;margin-top:0}
   table.t .k{font-weight:400;color:#231f20}
   table.t .k b{font-weight:700}
   .v{color:var(--navy-900);font-weight:700}
