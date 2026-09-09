@@ -149,8 +149,10 @@ header.top{background:var(--navy-900);color:#fff;padding:20px 0 0}
   border:1px solid var(--n-300);border-radius:8px;background:#fff;color:var(--navy-700);
 }
 .f-ord .dir:hover{border-color:var(--zelt-orange);color:var(--orange-700)}
-.f-ord .dir:disabled{opacity:.4;cursor:default}
-.f-ord .dir:disabled:hover{border-color:var(--n-300);color:var(--navy-700)}
+/* faixa de valor: os dois campos dividem a celula */
+.f-faixa{display:flex;gap:6px;align-items:center}
+.f-faixa input{min-width:0;font-variant-numeric:tabular-nums}
+.f-faixa span{flex:none;color:var(--n-400);font-size:13px}
 
 /* ---------------- faixa de números ---------------- */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
@@ -176,9 +178,7 @@ thead th{
 thead th:hover{color:var(--orange-300)}
 thead th .ar{opacity:.45;font-size:10px}
 thead th.on .ar{opacity:1;color:var(--zelt-orange)}
-/* segundo critério: mesma seta, mais discreta, com o "2" ao lado */
-thead th.on2 .ar{opacity:1;color:var(--orange-300)}
-thead th .ord-n{font-size:8.5px;font-weight:700;vertical-align:3px;margin-left:1px;color:var(--orange-300)}
+
 thead th.num,tbody td.num{text-align:right}
 tbody tr{border-top:1px solid var(--line);cursor:pointer;transition:background .12s}
 tbody tr:hover{background:var(--orange-50)}
@@ -237,6 +237,14 @@ body.rel-mode.topo-oculto #topo{transform:translateY(-100%)}
 body.rel-mode #tab-rel.on{position:fixed;inset:0;z-index:1}
 .rel-hold{position:relative;flex:1;min-height:0;background:var(--surface-page)}
 #relFrame{display:block;width:100%;height:100%;border:0;background:#fff}
+/* ficha do imóvel por cima do menu de pesquisa: a aba não troca, o relatório
+   vira só o suporte da gaveta e o resto dele fica invisível (ver soFicha) */
+#tab-rel.ficha{display:block;position:fixed;inset:0;z-index:30;background:transparent}
+#tab-rel.ficha .rel-hold{height:100%;background:transparent}
+#tab-rel.ficha #relFrame{background:transparent;visibility:hidden}
+#tab-rel.ficha.pronta #relFrame{visibility:visible}
+#tab-rel.ficha .rel-load{background:rgba(16,14,29,.45);color:#fff}
+body.ficha-aberta{overflow:hidden}
 .rel-load{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:12px;
   background:var(--surface-page);color:var(--n-600);font-size:14px;z-index:2;
@@ -353,6 +361,14 @@ body.rel-mode{overflow:hidden}
       <div class="f-item"><label for="fsui">Suítes</label><select id="fsui"></select></div>
       <div class="f-item"><label for="ftip">Tipo</label><select id="ftip"></select></div>
       <div class="f-item"><label for="fsem">Semana</label><select id="fsem"></select></div>
+      <div class="f-item f-item-2">
+        <label for="fvmin">Valor anunciado</label>
+        <div class="f-faixa">
+          <input id="fvmin" type="text" inputmode="numeric" placeholder="mínimo" autocomplete="off" aria-label="Valor anunciado mínimo">
+          <span>até</span>
+          <input id="fvmax" type="text" inputmode="numeric" placeholder="máximo" autocomplete="off" aria-label="Valor anunciado máximo">
+        </div>
+      </div>
       <div class="f-item f-item-sit">
         <label>Situação do preço <span class="f-dica">— pode marcar mais de uma</span></label>
         <div class="f-sit" id="ffai" role="group" aria-label="Situação do preço"></div>
@@ -361,12 +377,6 @@ body.rel-mode{overflow:hidden}
         <div class="f-ord">
           <select id="ford"></select>
           <button type="button" class="dir" id="fordd" title="Inverter a ordem">▲</button>
-        </div>
-      </div>
-      <div class="f-item"><label for="ford2">Depois por</label>
-        <div class="f-ord">
-          <select id="ford2"></select>
-          <button type="button" class="dir" id="ford2d" title="Inverter a ordem">▲</button>
         </div>
       </div>
       <div class="f-item f-item-acao">
@@ -536,18 +546,29 @@ function marcarFeito(chave, ligado){
 
 function noHub(){ return window.parent !== window; }
 
-function abrirRelatorio(slug, data, codigo){
+/* soFicha: em vez de trocar para a aba do relatório, abre só a ficha do imóvel
+   numa camada por cima do menu de pesquisa. É o caminho do clique na lista. */
+function abrirRelatorio(slug, data, codigo, soFicha){
   if(!slug) return;
   if(!noHub()){
     alert("Abra este painel pelo Hub ZELT para acessar os relatórios semanais.");
     return;
   }
-  REL = {slug:slug, data:data, codigo:codigo||""};
+  soFicha = !!(soFicha && codigo);
+  REL = {slug:slug, data:data, codigo:codigo||"", ficha:soFicha};
   gavetaAberta = false; ultimoY = 0; setTopo(false);
-  marcarAba(slug);
-  mostrar("rel");
+  if(soFicha){
+    var camada = document.getElementById("tab-rel");
+    camada.classList.remove("pronta");   /* o iframe só aparece com a ficha montada */
+    camada.classList.add("ficha");
+    document.body.classList.add("ficha-aberta");
+  } else {
+    fechaFicha();
+    marcarAba(slug);
+    mostrar("rel");
+  }
   if(CACHE[slug]){
-    montarRelatorio(CACHE[slug], codigo);
+    montarRelatorio(CACHE[slug], codigo, soFicha);
   } else {
     document.getElementById("relLoad").classList.remove("hide");
     PEND = REL;
@@ -555,11 +576,28 @@ function abrirRelatorio(slug, data, codigo){
   }
 }
 
-function montarRelatorio(html, codigo){
+function montarRelatorio(html, codigo, soFicha){
   var fr = document.getElementById("relFrame");
   var load = document.getElementById("relLoad");
+  var rel = REL;
   load.classList.remove("hide");
   fr.onload = function(){
+    if(soFicha){
+      /* o véu do "Carregando…" fica de pé até a ficha estar montada: sem isso
+         sobra um vão entre ele sair e a gaveta entrar */
+      abrirFichaImovel(fr, codigo, function(ok){
+        load.classList.add("hide");
+        if(!ok){
+          /* não achou a linha: cai no comportamento antigo, a aba do relatório */
+          fechaFicha();
+          abrirRelatorio(rel.slug, rel.data, codigo);
+          return;
+        }
+        document.getElementById("tab-rel").classList.add("pronta");
+        vigiaFicha(fr);
+      });
+      return;
+    }
     load.classList.add("hide");
     avisarTopo();
     if(codigo){
@@ -569,9 +607,109 @@ function montarRelatorio(html, codigo){
       }, 140);
       /* solta o controle depois que a rolagem suave terminar */
       setTimeout(function(){ ignoraRolagem = false; }, 1400);
+      /* depois do destaque, para o relatório já ter trocado de aba se precisava */
+      setTimeout(function(){ abrirFichaImovel(fr, codigo); }, 300);
     }
   };
-  fr.srcdoc = html;
+  fr.srcdoc = soFicha ? htmlSoFicha(html) : html;
+}
+
+/* ---------------- ficha do imóvel, direto do menu de pesquisa ----------------
+   O relatório da semana tem, em cada linha, um botão que abre a ficha daquele
+   imóvel. O painel clica nesse botão em vez de mandar mensagem: os relatórios
+   arquivados carregam uma versão antiga do rodapé e não entenderiam mensagem
+   nova, mas o DOM deles o painel alcança — são iframes srcdoc, mesma origem.
+   Fechar a ficha deixa o corretor na tabela da semana, com a linha destacada. */
+/* Esconde o relatório e deixa só a gaveta: assim a camada mostra a ficha e,
+   pelo pano de fundo translúcido dela, o menu de pesquisa continua à vista.
+   Só na tela — a impressão precisa do relatório inteiro para montar a folha.
+
+   O estilo entra no TEXTO do HTML, antes de virar srcdoc. Injetar depois, no
+   onload, era o que fazia o relatório piscar: quando o load chega, o navegador
+   já pintou a página. O HTML do cache não é alterado — a cópia com o estilo é
+   usada só nesta abertura. */
+var CSS_SO_FICHA =
+  '<style id="zelt-so-ficha">@media screen{' +
+  'html,body{background:transparent!important}' +
+  'body > *:not(#imovel-overlay){visibility:hidden!important}' +
+  '}</style>';
+function htmlSoFicha(html){
+  var i = html.indexOf("</head>");
+  return i < 0 ? CSS_SO_FICHA + html : html.slice(0, i) + CSS_SO_FICHA + html.slice(i);
+}
+/* Fecha a camada. Chamado quando a gaveta do relatório fecha — pelo X, pelo
+   Esc, pelo clique no fundo — e antes de abrir o relatório inteiro. */
+function fechaFicha(){
+  if(vigia){ clearInterval(vigia); vigia = null; }
+  var camada = document.getElementById("tab-rel");
+  camada.classList.remove("ficha");
+  camada.classList.remove("pronta");
+  document.body.classList.remove("ficha-aberta");
+}
+/* A gaveta pode fechar sem avisar: os relatórios arquivados carregam uma versão
+   antiga do rodapé, e nem todas mandam a mensagem "drawer". Então o painel
+   confere o estado dela de dois em dois décimos, do lado de cá. */
+var vigia = null;
+function vigiaFicha(fr){
+  if(vigia) clearInterval(vigia);
+  var abriu = false, esperas = 0;
+  vigia = setInterval(function(){
+    var doc = null;
+    try { doc = fr.contentDocument; } catch(e){}
+    var ov = doc ? doc.getElementById("imovel-overlay") : null;
+    var aberta = !!(ov && ov.classList.contains("open"));
+    if(aberta){ abriu = true; return; }
+    /* dá um tempo para a gaveta abrir antes de considerar que fechou */
+    if(!abriu && ++esperas < 20) return;
+    fechaFicha();
+  }, 200);
+}
+
+function linhaDoCodigo(doc, codigo){
+  var cels = doc.querySelectorAll("td.code");
+  var alvo = String(codigo).trim().toUpperCase();
+  for(var i=0;i<cels.length;i++){
+    if((cels[i].textContent||"").trim().toUpperCase() === alvo) return cels[i].parentNode;
+  }
+  return null;
+}
+/* as treze semanas usam button.btn-rel, mas casar também pelo texto evita
+   depender da classe se algum relatório futuro mudar de marcação */
+function botaoDaFicha(tr){
+  var cs = tr.querySelectorAll("a,button");
+  for(var i=0;i<cs.length;i++){
+    var cls = String(cs[i].className || "");
+    if(cls.indexOf("btn-rel") >= 0 || /relat/i.test(cs[i].textContent || "")) return cs[i];
+  }
+  return null;
+}
+/* a linha do código sai da aba da tabela: garante que ela está ativa */
+function ativaAbaTabela(doc){
+  var abas = doc.querySelectorAll(".tabbar .tab");
+  if(abas.length && !abas[0].classList.contains("active")){
+    try { abas[0].click(); } catch(e){}
+  }
+}
+/* aoTerminar(ok): ok=true quando a ficha foi aberta, false quando não deu */
+function abrirFichaImovel(fr, codigo, aoTerminar){
+  var tentativas = 0;
+  var fim = function(ok){ if(aoTerminar) aoTerminar(ok); };
+  /* a tabela do relatório é montada pelo script dele, que às vezes termina
+     depois do load: tenta algumas vezes antes de desistir */
+  (function tenta(){
+    var doc = null;
+    try { doc = fr.contentDocument; } catch(e){ fim(false); return; }
+    if(doc) ativaAbaTabela(doc);
+    var tr = doc ? linhaDoCodigo(doc, codigo) : null;
+    var btn = tr ? botaoDaFicha(tr) : null;
+    if(btn){
+      try { btn.click(); } catch(e){ fim(false); return; }
+      fim(true);
+      return;
+    }
+    if(++tentativas < 12) setTimeout(tenta, 130);
+    else fim(false);
+  })();
 }
 
 /* o relatório precisa saber a altura do topo para não ficar por baixo dele */
@@ -617,21 +755,25 @@ window.addEventListener("message", function(e){
     gavetaAberta = !!d.open;
     if(gavetaAberta){ setTopo(true); }
     else { setTopo(false); ultimoY = 0; }
+    /* fechou a ficha estando na camada sobre a busca: a camada sai também.
+       O aviso é instantâneo; a vigia é a rede para os relatórios que não mandam. */
+    if(!gavetaAberta && document.getElementById("tab-rel").classList.contains("ficha")){
+      fechaFicha();
+    }
     return;
   }
   if(d && d.zelt === "tool-html" && d.tool && typeof d.html === "string"){
     CACHE[d.tool] = d.html;
     if(PEND && PEND.slug === d.tool){
       var p = PEND; PEND = null;
-      montarRelatorio(d.html, p.codigo);
+      montarRelatorio(d.html, p.codigo, p.ficha);
     }
   }
 });
 
 /* ---------------- estado ---------------- */
-var F = {cod:"", end:"", cap:"", bai:"", dor:"", sui:"", tip:"", sem:"", fai:[]};
-/* Ordenação em até dois níveis: ORD[0] manda, ORD[1] desempata. */
-var ORD = [{col:"g", dir:1}];
+var F = {cod:"", end:"", cap:"", bai:"", dor:"", sui:"", tip:"", sem:"", fai:[], vmin:null, vmax:null};
+var ORD = {col:"g", dir:1};
 var LISTA = [];
 
 /* ---------------- montagem dos filtros ---------------- */
@@ -644,6 +786,13 @@ function opcoes(sel, itens, rotuloTodos, contagens){
   });
   el.innerHTML = h;
 }
+/* Aceita "600000", "600.000" ou "R$ 600.000": fica só o dígito. Campo vazio
+   (ou sem dígito nenhum) vira null, que é "sem limite". */
+function soNumero(v){
+  var d = String(v == null ? "" : v).replace(/\D/g, "");
+  return d ? Number(d) : null;
+}
+
 /* Situação do preço: três botões que ligam e desligam, em vez de um select de
    escolha única — dá para ver "alinhado + leve ajuste" de uma vez. Nenhum
    marcado significa todas, igual ao "Qualquer situação" de antes. */
@@ -704,9 +853,9 @@ function initFiltros(){
 
   initSituacao();
 
-  ["fcod","fend","fcap","fbai","fdor","fsui","ftip","fsem"].forEach(function(id){
+  ["fcod","fend","fvmin","fvmax","fcap","fbai","fdor","fsui","ftip","fsem"].forEach(function(id){
     var el = document.getElementById(id);
-    var eTexto = (id === "fcod" || id === "fend");
+    var eTexto = (id === "fcod" || id === "fend" || id === "fvmin" || id === "fvmax");
     el.addEventListener(eTexto ? "input" : "change", function(){
       F.cod = document.getElementById("fcod").value.trim().toLowerCase();
       F.end = document.getElementById("fend").value.trim().toLowerCase();
@@ -716,13 +865,15 @@ function initFiltros(){
       F.sui = document.getElementById("fsui").value;
       F.tip = document.getElementById("ftip").value;
       F.sem = document.getElementById("fsem").value;
+      F.vmin = soNumero(document.getElementById("fvmin").value);
+      F.vmax = soNumero(document.getElementById("fvmax").value);
       render();
     });
   });
   document.getElementById("bClear").addEventListener("click", function(){
     /* limpa filtro; a ordenação não é filtro e fica onde está */
-    F = {cod:"", end:"", cap:"", bai:"", dor:"", sui:"", tip:"", sem:"", fai:[]};
-    ["fcod","fend","fcap","fbai","fdor","fsui","ftip","fsem"].forEach(function(id){ document.getElementById(id).value=""; });
+    F = {cod:"", end:"", cap:"", bai:"", dor:"", sui:"", tip:"", sem:"", fai:[], vmin:null, vmax:null};
+    ["fcod","fend","fvmin","fvmax","fcap","fbai","fdor","fsui","ftip","fsem"].forEach(function(id){ document.getElementById(id).value=""; });
     sincronizaSituacao();
     render();
   });
@@ -808,6 +959,8 @@ function filtrar(){
     if(F.tip && r.t !== F.tip) return false;
     if(F.sem && r.w !== F.sem) return false;
     if(F.fai.length && F.fai.indexOf(r.f) < 0) return false;
+    if(F.vmin !== null && !(r.a >= F.vmin)) return false;
+    if(F.vmax !== null && !(r.a <= F.vmax)) return false;
     if(F.dor && String(r.d) !== F.dor) return false;
     if(F.sui === "0"){ if(r.s || !temFicha(r)) return false; }
     else if(F.sui && String(r.s) !== F.sui) return false;
@@ -819,8 +972,8 @@ function filtrar(){
     return true;
   });
 }
-/* Compara duas linhas por uma coluna; 0 quando empatam, e aí o próximo
-   critério decide. O caso de valor vazio não é multiplicado pela direção:
+/* Compara duas linhas por uma coluna. O caso de valor vazio não é
+   multiplicado pela direção:
    vazio fica sempre no fim, subindo ou descendo. */
 function cmpCol(x, y, col, dir){
   var a = x[col], b = y[col];
@@ -840,11 +993,7 @@ function cmpCol(x, y, col, dir){
 }
 function ordenar(LISTA){
   return LISTA.slice().sort(function(x,y){
-    for(var i=0;i<ORD.length;i++){
-      var d = cmpCol(x, y, ORD[i].col, ORD[i].dir);
-      if(d) return d;
-    }
-    return 0;
+    return cmpCol(x, y, ORD.col, ORD.dir);
   });
 }
 
@@ -867,10 +1016,10 @@ function render(){
 
   // chips dos filtros ativos
   var rot = {cod:"Código", end:"Endereço", cap:"Corretor", bai:"Bairro", dor:"Quartos",
-             sui:"Suítes", tip:"Tipo", sem:"Semana", fai:"Situação"};
+             sui:"Suítes", tip:"Tipo", sem:"Semana", fai:"Situação", vmin:"Valor", vmax:"Valor"};
   var ch = "";
   Object.keys(rot).forEach(function(k){
-    if(k === "fai") return;      /* situação é lista: um chip por marcada, abaixo */
+    if(k === "fai" || k === "vmin" || k === "vmax") return;   /* tratados abaixo */
     if(F[k]){
       var v = F[k];
       if(k === "dor") v = F[k] + (Number(F[k])>1 ? " quartos" : " quarto");
@@ -883,10 +1032,23 @@ function render(){
     ch += '<span class="chip-f">' + rot.fai + ': <b>' + esc(v) + '</b>' +
           '<button data-x="fai" data-v="' + esc(v) + '" aria-label="Remover filtro">×</button></span>';
   });
+  /* mínimo e máximo cabem num chip só, mesmo quando só um dos dois está posto */
+  if(F.vmin !== null || F.vmax !== null){
+    var faixa = (F.vmin !== null ? brl(F.vmin) : "sem mínimo") + " a " +
+                (F.vmax !== null ? brl(F.vmax) : "sem máximo");
+    ch += '<span class="chip-f">Valor: <b>' + esc(faixa) + '</b>' +
+          '<button data-x="valor" aria-label="Remover filtro">×</button></span>';
+  }
   document.getElementById("chips").innerHTML = ch;
   document.getElementById("chips").querySelectorAll("button").forEach(function(b){
     b.addEventListener("click", function(){
       var k = b.getAttribute("data-x");
+      if(k === "valor"){
+        F.vmin = F.vmax = null;
+        document.getElementById("fvmin").value = "";
+        document.getElementById("fvmax").value = "";
+        render(); return;
+      }
       if(k === "fai"){
         var i = F.fai.indexOf(b.getAttribute("data-v"));
         if(i >= 0) F.fai.splice(i, 1);
@@ -946,85 +1108,65 @@ function render(){
   tb.querySelectorAll("tr[data-i]").forEach(function(tr){
     tr.addEventListener("click", function(){
       var r = LISTA[+tr.getAttribute("data-i")];
-      abrirRelatorio(SEMANAS_NO_HUB[r.w], r.w, r.c);
+      /* a ficha abre por cima da busca; a aba do relatório fica para as abas de semana */
+      abrirRelatorio(SEMANAS_NO_HUB[r.w], r.w, r.c, true);
     });
   });
 }
 
 
-/* ---------------- ordenação: cabeçalho e os dois selects ---------------- */
-function posOrd(col){
-  for(var i=0;i<ORD.length;i++){ if(ORD[i].col === col) return i; }
-  return -1;
-}
-/* Clique no cabeçalho: a coluna clicada vira a principal e a que estava desce
-   para desempate — assim os dois cliques continuam valendo, que é o que faltava.
-   Clicar na principal inverte; clicar na de desempate troca as duas de lugar. */
+/* ---------------- ordenação: cabeçalho e o select ---------------- */
+/* Clicar na coluna ordena por ela; clicar de novo inverte. O select faz o
+   mesmo e existe porque o <thead> desaparece no celular (max-width 820px),
+   onde não haveria como ordenar. Os dois ficam sempre em sincronia. */
 function aplicaOrd(col){
-  var i = posOrd(col);
-  if(i === 0){ ORD[0].dir = -ORD[0].dir; }
-  else if(i === 1){ ORD = [ORD[1], ORD[0]]; }
-  else { ORD = [{col:col, dir:1}, {col:ORD[0].col, dir:ORD[0].dir}]; }
+  if(ORD.col === col){ ORD.dir = -ORD.dir; } else { ORD.col = col; ORD.dir = 1; }
   sincronizaOrd();
   render();
 }
 function sincronizaOrd(){
   document.querySelectorAll("#tbl thead th[data-s]").forEach(function(th){
-    var i = posOrd(th.getAttribute("data-s"));
-    th.classList.toggle("on", i === 0);
-    th.classList.toggle("on2", i === 1);
-    th.querySelector(".ar").textContent = i < 0 ? "⇅" : (ORD[i].dir === 1 ? "▲" : "▼");
-    var n = th.querySelector(".ord-n");
-    if(n) n.textContent = (i === 1) ? "2" : "";
+    var atual = th.getAttribute("data-s") === ORD.col;
+    th.classList.toggle("on", atual);
+    th.querySelector(".ar").textContent = atual ? (ORD.dir === 1 ? "▲" : "▼") : "⇅";
   });
-  document.getElementById("ford").value = ORD[0].col;
-  document.getElementById("fordd").textContent = ORD[0].dir === 1 ? "▲" : "▼";
-  var s2 = document.getElementById("ford2"), b2 = document.getElementById("ford2d");
-  s2.value = ORD[1] ? ORD[1].col : "";
-  b2.textContent = (ORD[1] && ORD[1].dir === -1) ? "▼" : "▲";
-  b2.disabled = !ORD[1];
+  document.getElementById("ford").value = ORD.col;
+  document.getElementById("fordd").textContent = ORD.dir === 1 ? "▲" : "▼";
 }
 function initOrd(){
-  var ths = document.querySelectorAll("#tbl thead th[data-s]");
-  var h1 = "", h2 = '<option value="">— nenhum —</option>';
-  [].forEach.call(ths, function(th){
+  var h = "";
+  document.querySelectorAll("#tbl thead th[data-s]").forEach(function(th){
     var col = th.getAttribute("data-s");
     /* o rótulo vem do próprio cabeçalho para não existirem duas listas de nomes */
     var rot = ((th.firstChild && th.firstChild.textContent) || col).trim();
-    var op = '<option value="' + esc(col) + '">' + esc(rot) + '</option>';
-    h1 += op; h2 += op;
-    /* o marcador do 2º nível nasce aqui, para não repetir span nos doze <th> */
-    if(!th.querySelector(".ord-n")){
-      var s = document.createElement("span");
-      s.className = "ord-n";
-      th.appendChild(s);
-    }
+    h += '<option value="' + esc(col) + '">' + esc(rot) + '</option>';
     th.addEventListener("click", function(){ aplicaOrd(col); });
   });
-  document.getElementById("ford").innerHTML = h1;
-  document.getElementById("ford2").innerHTML = h2;
+  document.getElementById("ford").innerHTML = h;
   document.getElementById("ford").addEventListener("change", function(){
-    var v = this.value;
-    /* a mesma coluna nos dois níveis não desempata nada */
-    if(ORD[1] && ORD[1].col === v) ORD.splice(1, 1);
-    ORD[0] = {col:v, dir:(ORD[0].col === v ? ORD[0].dir : 1)};
-    sincronizaOrd(); render();
-  });
-  document.getElementById("ford2").addEventListener("change", function(){
-    var v = this.value;
-    if(!v || v === ORD[0].col){ ORD = [ORD[0]]; }
-    else { ORD[1] = {col:v, dir:1}; }
-    sincronizaOrd(); render();
+    /* change só dispara com valor diferente, então aqui é sempre coluna nova */
+    aplicaOrd(this.value);
   });
   document.getElementById("fordd").addEventListener("click", function(){
-    ORD[0].dir = -ORD[0].dir; sincronizaOrd(); render();
-  });
-  document.getElementById("ford2d").addEventListener("click", function(){
-    if(!ORD[1]) return;
-    ORD[1].dir = -ORD[1].dir; sincronizaOrd(); render();
+    ORD.dir = -ORD.dir; sincronizaOrd(); render();
   });
   sincronizaOrd();
 }
+
+/* Esc com a ficha por cima da busca: fecha a camada aqui, e não deixa subir
+   para o hub, que fecharia a ferramenta inteira. */
+document.addEventListener("keydown", function(ev){
+  if(ev.key !== "Escape") return;
+  if(!document.getElementById("tab-rel").classList.contains("ficha")) return;
+  ev.stopPropagation();
+  var fr = document.getElementById("relFrame");
+  try {
+    var doc = fr.contentDocument;
+    var ov = doc && doc.getElementById("imovel-overlay");
+    if(ov) ov.classList.remove("open");
+  } catch(e){}
+  fechaFicha();
+});
 
 /* ---------------- abas: pesquisa + uma por semana + comparativo ---------------- */
 function mostrar(qual){        // "busca" | "cmp" | "rel"

@@ -76,7 +76,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | gerador de documentos | `tools/gerador.html` | 285 KB |
 | simulador SAC / PRICE | `tools/simulador.html` | 106 KB |
 | painel de avaliações (`DADOS`, `KPIS`) | `tools/avaliacoes.html` | 135 KB |
-| relatório da semana atual | `tools/avaliacao.html` | 452 KB |
+| relatório da semana atual | `tools/avaliacao.html` | 468 KB |
 | hero, cards, overlay do hub | `hub.html` | 84 KB (~35 KB de código) |
 
 Nunca leia esses arquivos por inteiro. Use `Grep` para localizar e `Edit` com
@@ -88,7 +88,10 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
 (`uweradloff.github.io/painel-pauta-zelt/`).
 
 - **avaliacoes** — painel: array `DADOS` (imóveis) + `KPIS` (semanais). Filtros por
-  código, endereço, corretor, bairro, quartos, suítes, tipo, semana, faixa.
+  código, endereço, corretor, bairro, quartos, suítes, tipo, semana, faixa de valor
+  anunciado (mínimo/máximo) e situação do preço, que aceita mais de uma marcada.
+  A ordenação é de um critério, pelo cabeçalho ou pelo select "Ordenar por" —
+  que existe porque o `<thead>` desaparece abaixo de 820px.
 - **avaliacao** + 12 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
 - **comparativo** — 59 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos.
@@ -123,6 +126,21 @@ do painel (`html.zelt-aninhado`), onde a volta e pela aba "Menu de Pesquisa".
 `postMessage`: `'zelt-close-tool'`, `{zelt:'get-tool'}` → `{zelt:'tool-html'}`,
 `{zelt:'open-tool', focus}`, `{zelt:'focus', code}`.
 
+O painel de avaliações, porém, abre a ficha do imóvel **mexendo no DOM do
+relatório**, não por mensagem: ele acha a linha do código (`td.code`), clica no
+`button.btn-rel` dela e emenda no **texto do HTML, antes de virar `srcdoc`**, um `<style>`
+que, **só na tela**, esconde tudo do relatório menos `#imovel-overlay` (injetar
+no `onload` era tarde: o navegador já tinha pintado o relatório, e era isso que
+piscava; o iframe também fica `visibility:hidden` até a ficha estar montada,
+senão o relatório anterior aparece enquanto o novo carrega) — assim a ficha aparece por cima do menu de
+pesquisa, sem trocar de aba, e o fundo translúcido dela deixa a lista à vista
+(`#tab-rel.ficha` no painel). A impressão fica de fora do `@media screen` porque
+o `imprimirImovel()` do relatório monta a folha a partir da página inteira. É assim porque os doze relatórios congelados carregam uma
+versão antiga do rodapé e não entenderiam mensagem nova — mas o DOM deles o
+painel alcança, porque iframe `srcdoc` herda a origem. **Mensagem nova para o
+relatório só vale para a semana atual**; o que precisa valer para as treze
+semanas tem de ser feito do lado do painel.
+
 Ao buscar um payload no `index.html`, ancore no início da linha —
 `^<script type="text/plain" data-tool="X">` — porque `data-tool="X"` também casa
 com o card no `hub.html`.
@@ -132,10 +150,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.588.178 bytes):
+Hash de referência (18 payloads, 11.618.310 bytes):
 
 ```
-70229DA9196C8760ECEEC1EE79F2A3A097ACCF8AF2ECA15CDC6D2120A21DFF5C
+8C7A97B47EC26CEAB265F1CE67D4517D78FE2B8974F3C225046C2B4169528597
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -150,6 +168,17 @@ Imóveis DD_MM.html`. Ele passa a ser a semana atual e a anterior é arquivada.
 dele: `CONFIG` (data, `numCorretores`), `DETALHES` (endereço, bairro, dorms, vagas,
 suítes, áreas de cada imóvel), `<tbody id="tbl-body">` (valores, nota, gap, faixa) e
 a tabela "Todas as semanas", que já traz a linha da semana atual pronta para conferir.
+
+**Modelo novo, a partir de 08/09/2026:** o relatório traz também
+`CORRETORES_SEMANA` (quem avaliou na rodada) e `AVALIACOES` (`{codigo: [[nome,
+valor], ...]}`), e a ficha de cada imóvel ganhou o bloco "Ver avaliações", que
+lista o que cada corretor sugeriu. Valor `null` é quem não avaliou e aparece como
+"não avaliou". Isso rende duas conferências novas: `CORRETORES_SEMANA.length`
+tem de ser o `CONFIG.numCorretores`, e a **média das sugestões numéricas de cada
+imóvel, ignorando os `null`, tem de dar o consenso (`k`)** — na rodada de 08/09
+fecha nos 19, com dois imóveis em que alguém não avaliou. O painel não guarda
+esses valores: eles ficam só no relatório, e as semanas congeladas seguem sem o
+bloco, o que não quebra nada.
 
 **Ferramentas nesta máquina:** `node` (v24.19.0) e `npx` existem e rodam direto, tanto
 no bash quanto no PowerShell. `python` **não** existe: o `python` do PATH é o atalho da
