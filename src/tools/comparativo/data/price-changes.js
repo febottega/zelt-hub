@@ -6,7 +6,7 @@ const PRICE_CHANGES = [
     texto: "Apto 1502 aparece reservado na tabela de setembro — restam 24 dos 25 apartamentos disponíveis",
     data: "09/09/2026" },
   { emp: "Kaisergarten", tipoMudanca: "preco", dir: "down",
-    texto: "Cobertura 1301 no quarto mês travada em R$ 3.189.835,99: a cota caiu de 1.012,2479 para 1.009,7997 CUB, ou seja a Castelo absorveu a alta do índice em vez de repassar — o 301 e a vaga extra acompanharam o CUB normalmente",
+    texto: "Cobertura 1301 no quarto mês travada em R$ 3.189.835,99: a cota caiu de 1.012,2479 para 1.009,7997 CUB. É revenda, com preço em reais, então não acompanha o índice — o 301 e a vaga extra, que são da construtora, subiram com o CUB",
     data: "09/09/2026" },
   { emp: "Tulum - Studios", tipoMudanca: "status",
     texto: "Lançamento exclusivo ZELT — primeira tabela do Tulum (tabela 00), com 39 dos 40 studios disponíveis e entrega prevista para dezembro/2030",

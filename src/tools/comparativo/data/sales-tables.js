@@ -356,7 +356,7 @@ const SALES_TABLES = {
         "R$ 50.230,90",
         "R$ 340.247,05",
         "R$ 3.189.835,99",
-        "Disponível"
+        "Revenda"
       ],
       [
         "301",
@@ -366,7 +366,7 @@ const SALES_TABLES = {
         "R$ 40.223,63",
         "R$ 272.461,22",
         "R$ 2.554.339,86",
-        "Revenda"
+        "Disponível"
       ],
       [
         "Vaga extra",
@@ -379,7 +379,7 @@ const SALES_TABLES = {
         "—"
       ]
     ],
-    "note": "Residencial Kaisergarten. Valores atrelados ao CUB (ref. set/2026: R$ 3.158,88). Em CUBs: 1301 = 1.009,7997; 301 = 808,6220; vaga extra = 39,3403. O parcelamento encurtou de 30 para 29 parcelas. Atenção ao 1301: o total em reais está parado em R$ 3.189.835,99 desde junho, e é a contagem de CUBs que vem caindo (1.012,2479 em agosto, 1.009,7997 em setembro) — ou seja, a Castelo está absorvendo a alta do índice nessa unidade, não repassando. O 301 e a vaga extra acompanharam o CUB normalmente. Apartamentos de 3 suítes, 3 a 4 vagas, porcelanato nas áreas sociais e molhadas, laminado nas íntimas. Prédio com 2 elevadores, salão de festas, hall, área de piscina e academia mobiliados, playground. Reservas valem no máximo 7 dias, depois a unidade volta para venda automaticamente. Valor final ao cliente — acrescentar o percentual de corretagem. Obs.: a marcação de Disponível/Revenda por unidade não aparece no PDF de setembro (as duas linhas têm o mesmo fundo e o mesmo preto no texto); mantida a do mês anterior (1301 disponível, 301 revenda) — confirmar com a Castelo. Endereço: Alameda Rio Branco 109, Jardim Blumenau.",
+    "note": "Residencial Kaisergarten. Valores atrelados ao CUB (ref. set/2026: R$ 3.158,88). Em CUBs: 1301 = 1.009,7997; 301 = 808,6220; vaga extra = 39,3403. O parcelamento encurtou de 30 para 29 parcelas. Atenção ao 1301: o total em reais está parado em R$ 3.189.835,99 desde junho, e é a contagem de CUBs que vem caindo (1.012,2479 em agosto, 1.009,7997 em setembro) — ou seja, a Castelo está absorvendo a alta do índice nessa unidade, não repassando. O 301 e a vaga extra acompanharam o CUB normalmente. Apartamentos de 3 suítes, 3 a 4 vagas, porcelanato nas áreas sociais e molhadas, laminado nas íntimas. Prédio com 2 elevadores, salão de festas, hall, área de piscina e academia mobiliados, playground. Reservas valem no máximo 7 dias, depois a unidade volta para venda automaticamente. Valor final ao cliente — acrescentar o percentual de corretagem. Obs.: a marcação de Disponível/Revenda por unidade não aparece no PDF de setembro (as duas linhas têm o mesmo fundo e o mesmo preto no texto); a de setembro veio do Felipe: o 1301 é a revenda e o 301 está disponível (estava invertido nos meses anteriores). Endereço: Alameda Rio Branco 109, Jardim Blumenau.",
     "summary": {
       "bits": [
         {
@@ -3729,7 +3729,7 @@ const SALES_TABLES = {
   "San Blas": {
     "folderId": "1A6LaiIS1Esu5_szcNDY1xmBwN_jus82u",
     "source": "Disponibilidade (O.M.A.)",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
