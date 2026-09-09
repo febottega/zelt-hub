@@ -138,6 +138,13 @@
 
   table.t{width:100%;border-collapse:collapse;table-layout:fixed}
   table.t td{border:1px solid #222;padding:1.1mm 1.6mm;vertical-align:top;height:4.4mm;overflow:hidden;word-break:break-word}
+  table.t.sep{margin-top:1.2mm}
+  /* Pagina 1 da proposta: as tres primeiras secoes ocupam a folha em vez de
+     empilhar tudo no alto e deixar branco embaixo das assinaturas. So no
+     #page1: a pagina 2 tem 22mm de folga e nao aceita o mesmo respiro. */
+  #page1 .sec-h{margin-top:5.5mm}
+  #page1 .blu{margin-top:6mm}
+  #page1 .sign-row{margin-top:10mm}
   table.t .k{font-weight:400;color:#231f20}
   table.t .k b{font-weight:700}
   .v{color:var(--navy-900);font-weight:700}
@@ -544,6 +551,11 @@
             <div class="field"><label>Nacionalidade</label><input id="conjNac" placeholder="Brasileiro(a)"></div>
           </div>
           <div class="grid g3" style="margin-top:10px">
+            <div class="field"><label>E-mail</label><input id="conjEmail" type="email"></div>
+            <div class="field"><label>Telefone</label><input id="conjTelefone" placeholder="(47) 9 0000-0000"></div>
+            <div class="field"><label>Data de nascimento</label><input id="conjDataNasc" type="date"></div>
+          </div>
+          <div class="grid g3" style="margin-top:10px">
             <div class="field"><label>Empresa</label><input id="conjEmpresa"></div>
             <div class="field"><label>Profissão</label><input id="conjProfissao"></div>
             <div class="field"><label>Renda</label><div class="prefix-wrap"><span>R$</span><input id="conjRenda" class="brl" inputmode="decimal" placeholder="0,00"></div></div>
@@ -713,9 +725,17 @@
           <tr><td colspan="2" class="k">E-mail: <span class="v" id="pv_email"></span></td><td class="k">Telefone: <span class="v" id="pv_tel"></span></td></tr>
           <tr><td class="k">Estado Civil: <span class="v" id="pv_ec"></span></td><td class="k">Regime: <span class="v" id="pv_regime"></span></td><td class="k">Data Nascimento: <span class="v" id="pv_dn"></span></td></tr>
           <tr><td class="k">Empresa: <span class="v" id="pv_emp"></span></td><td class="k">Profissão: <span class="v" id="pv_prof"></span></td><td class="k">Renda: <span class="v" id="pv_renda"></span></td></tr>
+        </table>
+        <!-- grades separadas por um fio de espaco: comprador, conjuge, endereco -->
+        <table class="t sep">
+          <colgroup><col style="width:33.3%"><col style="width:33.3%"><col style="width:33.3%"></colgroup>
           <tr><td colspan="3" class="k">Cônjuge: <span class="v" id="pv_conjNome"></span></td></tr>
           <tr><td class="k">CPF: <span class="v" id="pv_conjCpf"></span></td><td class="k">RG: <span class="v" id="pv_conjRg"></span></td><td class="k">Nacionalidade: <span class="v" id="pv_conjNac"></span></td></tr>
+          <tr><td class="k">E-mail: <span class="v" id="pv_conjEmail"></span></td><td class="k">Telefone: <span class="v" id="pv_conjTel"></span></td><td class="k">Data Nascimento: <span class="v" id="pv_conjDn"></span></td></tr>
           <tr><td class="k">Empresa: <span class="v" id="pv_conjEmp"></span></td><td class="k">Profissão: <span class="v" id="pv_conjProf"></span></td><td class="k">Renda: <span class="v" id="pv_conjRenda"></span></td></tr>
+        </table>
+        <table class="t sep">
+          <colgroup><col style="width:33.3%"><col style="width:33.3%"><col style="width:33.3%"></colgroup>
           <tr><td colspan="3" class="k">Endereço Residencial: <span class="v" id="pv_endRes"></span></td></tr>
           <tr><td class="k">Bairro: <span class="v" id="pv_bairro"></span></td><td class="k">Cidade: <span class="v" id="pv_cidade"></span></td><td class="k">CEP: <span class="v" id="pv_cep"></span></td></tr>
         </table>
@@ -739,19 +759,6 @@
           <tr><td colspan="2" class="k total"><b>TOTAL: R$ <span class="v" id="pv_total"></span></b></td></tr>
         </table>
 
-        <div class="sec-h"><span class="n">4.</span> Especificações do Imóvel no Negócio
-          <span class="sub">Preencher somente se houver imóvel como parte de pagamento.</span>
-        </div>
-        <table class="t">
-          <colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup>
-          <tr><td class="k">Tipo: <span class="v" id="pv_inTipo"></span></td><td colspan="3" class="k">Endereço Completo: <span class="v" id="pv_inEndereco"></span></td></tr>
-          <tr><td class="k">Dormitórios: <span class="v" id="pv_inDorm"></span></td><td class="k">sendo Suítes <span class="v" id="pv_inSuites"></span></td><td colspan="2" class="k">Vagas de Garagem: <span class="v" id="pv_inVagas"></span></td></tr>
-          <tr><td colspan="2" class="k">Área Privativa: <span class="v" id="pv_inAreaPriv"></span></td><td class="k">Área Total: <span class="v" id="pv_inAreaTotal"></span></td><td class="k">Área Terreno: <span class="v" id="pv_inAreaTerreno"></span></td></tr>
-          <tr><td colspan="4" class="k">Especificação do condomínio: <span class="v" id="pv_inCondominio"></span></td></tr>
-          <tr><td colspan="2" class="k"><b>VALOR:</b> R$ <span class="v" id="pv_inValor"></span></td><td colspan="2" class="k"><b>COMISSÃO:</b> R$ <span class="v" id="pv_inComissao"></span></td></tr>
-        </table>
-
-        <p class="obs">Obs: Caso haja imóvel como parte de pagamento, a comissão referente ao valor do imóvel é devida pelo PROPONENTE.</p>
         <div class="blu">Blumenau, <span class="v" id="pv_dataProp">____ / ____ / ________</span></div>
         <div class="sign-row">
           <div class="sign"><div class="name" id="pv_corretor"></div><div class="line"></div><div class="role">Corretor</div></div>
@@ -773,6 +780,20 @@
           <span class="doc-imoveis">IMÓVEIS</span>
           <div class="rule"></div>
         </div>
+
+        <div class="sec-h"><span class="n">4.</span> Especificações do Imóvel no Negócio
+          <span class="sub">Preencher somente se houver imóvel como parte de pagamento.</span>
+        </div>
+        <table class="t">
+          <colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup>
+          <tr><td class="k">Tipo: <span class="v" id="pv_inTipo"></span></td><td colspan="3" class="k">Endereço Completo: <span class="v" id="pv_inEndereco"></span></td></tr>
+          <tr><td class="k">Dormitórios: <span class="v" id="pv_inDorm"></span></td><td class="k">sendo Suítes <span class="v" id="pv_inSuites"></span></td><td colspan="2" class="k">Vagas de Garagem: <span class="v" id="pv_inVagas"></span></td></tr>
+          <tr><td colspan="2" class="k">Área Privativa: <span class="v" id="pv_inAreaPriv"></span></td><td class="k">Área Total: <span class="v" id="pv_inAreaTotal"></span></td><td class="k">Área Terreno: <span class="v" id="pv_inAreaTerreno"></span></td></tr>
+          <tr><td colspan="4" class="k">Especificação do condomínio: <span class="v" id="pv_inCondominio"></span></td></tr>
+          <tr><td colspan="2" class="k"><b>VALOR:</b> R$ <span class="v" id="pv_inValor"></span></td><td colspan="2" class="k"><b>COMISSÃO:</b> R$ <span class="v" id="pv_inComissao"></span></td></tr>
+        </table>
+
+        <p class="obs">Obs: Caso haja imóvel como parte de pagamento, a comissão referente ao valor do imóvel é devida pelo PROPONENTE.</p>
 
         <div class="sec-h"><span class="n">5.</span> Confirmação de Aceite da Proposta</div>
         <p class="para">Como proprietário do imóvel descrito no quadro 2, do anverso, ou titular dos direitos existentes sobre o imóvel descrito no quadro 2, do anverso, declaro ter tomado ciência da proposta no quadro 3, do anverso, aceitando o preço e as condições de pagamento lá mencionadas.</p>
@@ -1870,13 +1891,13 @@
   var TEXT = ["nome","cpf","rg","nacionalidade","email","telefone","estadoCivil","regime",
     "empresa","profissao","enderecoResidencial","bairro","cidade","cep",
     "codigoSistema","enderecoImovel","parcelasQtd","parcelaDia","reforcosQtd","corretor",
-    "conjNome","conjCpf","conjRg","conjNac","conjEmpresa","conjProfissao",
+    "conjNome","conjCpf","conjRg","conjNac","conjEmail","conjTelefone","conjEmpresa","conjProfissao",
     "inTipo","inEndereco","inDorm","inSuites","inVagas","inAreaPriv","inAreaTotal","inAreaTerreno","inCondominio",
     "cpParcQtd","cpParcDia","cpRefQtd"];
   var MONEY = ["renda","conjRenda","sinal","entrada","parcelaValor","reforcoValor","financiamento","fgts",
     "inValor","inComissao","totalManual",
     "cpSinal","cpEntrada","cpParcValor","cpRefValor","cpFin","cpFgts","cpImovNeg","cpTotal"];
-  var DATE = ["dataNasc","reforcoData","dataProposta","cpRefData"];
+  var DATE = ["dataNasc","conjDataNasc","reforcoData","dataProposta","cpRefData"];
   var CHECK = ["temConjuge","temImovelNegocio","autoTotal","temContra"];
 
   var ALL = TEXT.concat(MONEY).concat(DATE);
@@ -1886,6 +1907,7 @@
     nome:"pv_nome",cpf:"pv_cpf",rg:"pv_rg",nacionalidade:"pv_nac",email:"pv_email",telefone:"pv_tel",
     estadoCivil:"pv_ec",regime:"pv_regime",dataNasc:"pv_dn",empresa:"pv_emp",profissao:"pv_prof",renda:"pv_renda",
     conjNome:"pv_conjNome",conjCpf:"pv_conjCpf",conjRg:"pv_conjRg",conjNac:"pv_conjNac",
+    conjEmail:"pv_conjEmail",conjTelefone:"pv_conjTel",
     conjEmpresa:"pv_conjEmp",conjProfissao:"pv_conjProf",conjRenda:"pv_conjRenda",
     enderecoResidencial:"pv_endRes",bairro:"pv_bairro",cidade:"pv_cidade",cep:"pv_cep",
     codigoSistema:"pv_codigo",enderecoImovel:"pv_endImovel",
@@ -1912,6 +1934,7 @@
     });
     // dates
     setV("pv_dn", fmtDate($("dataNasc").value));
+    setV("pv_conjDn", fmtDate($("conjDataNasc").value));
     setV("pv_refData", fmtDate($("reforcoData").value));
     setV("pv_cpRefData", fmtDate($("cpRefData").value));
     var dp = fmtDate($("dataProposta").value);
@@ -2083,6 +2106,7 @@
     }
     wireDate("pv_dataProp","dataProposta");
     wireDate("pv_dn","dataNasc");
+    wireDate("pv_conjDn","conjDataNasc");
     wireDate("pv_refData","reforcoData");
     wireDate("pv_cpRefData","cpRefData");
   })();

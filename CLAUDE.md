@@ -73,7 +73,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | logos das construtoras | `tools/comparativo/data/logos.js` | 44 KB |
 | CSS do comparativo | `tools/comparativo/style.css` | 46 KB |
 | HTML/estrutura do comparativo | `tools/comparativo/layout.html` | 75 KB |
-| gerador de documentos | `tools/gerador.html` | 285 KB |
+| gerador de documentos | `tools/gerador.html` | 288 KB |
 | simulador SAC / PRICE | `tools/simulador.html` | 106 KB |
 | painel de avaliações (`DADOS`, `KPIS`) | `tools/avaliacoes.html` | 135 KB |
 | relatório da semana atual | `tools/avaliacao.html` | 468 KB |
@@ -150,14 +150,37 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.622.838 bytes):
+Hash de referência (18 payloads, 11.624.934 bytes):
 
 ```
-EF7868CAF9162548BC4A2ED82C36F718EAC9834269F85456F12D24F118BD6820
+1EF0BE48F2421BF3D5447CC4B3FBB937D5CA71D503F9CEAEB9CC4F3F7FE11678
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
 um rebuild sem mudança de fonte dá a mesma saída, e um hash velho não prova nada.
+
+## Páginas fixas do gerador
+
+Cada documento do gerador tem `.page` de altura fixa (297mm) e, no `@media print`,
+`overflow:hidden` — **o que passa é cortado em silêncio**. A marca e o rodapé são
+`position:absolute` no fim da folha, então o limite real é o topo do `.doc-mark`
+(1053px), não o fim da página.
+
+Para medir se cabe, com a ferramenta aberta: pegue o último filho **estático** da
+`.page`, some `offsetTop + offsetHeight` e compare com o `offsetTop` do
+`.doc-mark`. Meça com campos **cheios e compridos**: com texto curto as células
+ficam na altura mínima e a conta engana. Reduzir `table.t td{height}` quase não
+rende nesse caso, porque as células já passaram do mínimo.
+
+Em 09/09/2026 a proposta ganhou a linha de e-mail/telefone/nascimento do cônjuge e
+a página 1 não tinha espaço — ela já estourava 2mm com valores de tamanho real. A
+solução foi mover a **seção 4 (imóvel no negócio, opcional)** para a página 2, que
+tinha 74mm livres. O branco que sobrou embaixo das assinaturas voltou para as
+seções 1-3 como margem maior, presa ao `#page1` — a `.sec-h` é compartilhada com os
+outros quatro documentos e com a própria página 2, que tem só 22mm de folga.
+Medido no fim: página 1 com 11mm de folga no caso normal e 1,3mm no pior caso que
+consegui construir (dois endereços quebrando em três linhas); seções em ordem
+1-2-3 / 4-5-6.
 
 ## Rotina semanal da avaliação
 
