@@ -107,11 +107,16 @@ header.top{background:var(--navy-900);color:#fff;padding:20px 0 0}
 .btn.solid:hover{background:var(--orange-600);border-color:var(--orange-600);color:#fff}
 /* ação do painel: ocupa as duas colunas vazias da grade e alinha com os selects */
 .f-item-acao{grid-column:span 2;align-self:end}
+.f-item-sit{grid-column:span 3}
+.f-item-2{grid-column:span 2}
 #bResumo{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%}
 #bResumo svg{width:15px;height:15px;flex:none}
 #bResumo.ok{background:var(--success);border-color:var(--success);color:#fff}
 #bResumo.erro{background:var(--danger);border-color:var(--danger);color:#fff}
-@media (max-width:760px){.f-item-acao{grid-column:1/-1}}
+@media (max-width:760px){
+  .f-grid{grid-template-columns:1fr}
+  .f-item-2,.f-item-acao,.f-item-sit{grid-column:auto}
+}
 .chips{display:flex;gap:7px;flex-wrap:wrap}
 .chip-f{
   display:inline-flex;align-items:center;gap:7px;font-size:12px;padding:5px 12px;
@@ -120,6 +125,32 @@ header.top{background:var(--navy-900);color:#fff;padding:20px 0 0}
 .chip-f b{font-weight:700}
 .chip-f button{border:none;background:none;cursor:pointer;color:var(--n-500);font-size:15px;line-height:1;padding:0}
 .chip-f button:hover{color:var(--danger)}
+/* dica dentro do rotulo: o label e uppercase, a dica nao */
+.f-dica{text-transform:none;letter-spacing:0;font-weight:400;color:var(--n-400)}
+/* situacao do preco: da para marcar mais de uma */
+.f-sit{display:flex;gap:6px;flex-wrap:wrap}
+.f-sit button{
+  flex:1 1 auto;font-family:var(--font-display);font-size:10.5px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.06em;padding:9px 8px;cursor:pointer;
+  border:1px solid var(--n-300);border-radius:var(--radius-pill);background:#fff;color:var(--n-600);
+  transition:border-color .15s,background .15s,color .15s;
+}
+.f-sit button:hover{border-color:var(--n-400);color:var(--navy-700)}
+.f-sit button b{font-weight:700;opacity:.55;margin-left:3px}
+.f-sit button.on.r{background:var(--band-r-soft);border-color:#d9a49f;color:#a8302a}
+.f-sit button.on.a{background:var(--band-a-soft);border-color:#e2b684;color:var(--orange-800,#9c560f)}
+.f-sit button.on.b{background:var(--band-b-soft);border-color:#a0b9d9;color:#27568f}
+.f-sit button.on b{opacity:.8}
+/* ordenacao: select + botao de inverter */
+.f-ord{display:flex;gap:6px}
+.f-ord select{min-width:0}
+.f-ord .dir{
+  flex:none;width:42px;font-size:12px;line-height:1;cursor:pointer;
+  border:1px solid var(--n-300);border-radius:8px;background:#fff;color:var(--navy-700);
+}
+.f-ord .dir:hover{border-color:var(--zelt-orange);color:var(--orange-700)}
+.f-ord .dir:disabled{opacity:.4;cursor:default}
+.f-ord .dir:disabled:hover{border-color:var(--n-300);color:var(--navy-700)}
 
 /* ---------------- faixa de números ---------------- */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
@@ -145,6 +176,9 @@ thead th{
 thead th:hover{color:var(--orange-300)}
 thead th .ar{opacity:.45;font-size:10px}
 thead th.on .ar{opacity:1;color:var(--zelt-orange)}
+/* segundo critério: mesma seta, mais discreta, com o "2" ao lado */
+thead th.on2 .ar{opacity:1;color:var(--orange-300)}
+thead th .ord-n{font-size:8.5px;font-weight:700;vertical-align:3px;margin-left:1px;color:var(--orange-300)}
 thead th.num,tbody td.num{text-align:right}
 tbody tr{border-top:1px solid var(--line);cursor:pointer;transition:background .12s}
 tbody tr:hover{background:var(--orange-50)}
@@ -309,7 +343,7 @@ body.rel-mode{overflow:hidden}
         <label for="fcod">Código do imóvel</label>
         <input id="fcod" type="search" placeholder="Ex.: AP8142" autocomplete="off">
       </div>
-      <div class="f-item" style="grid-column:span 2;min-width:220px">
+      <div class="f-item f-item-2" style="min-width:220px">
         <label for="fend">Endereço</label>
         <input id="fend" type="search" placeholder="Rua, avenida, condomínio…" autocomplete="off">
       </div>
@@ -319,7 +353,22 @@ body.rel-mode{overflow:hidden}
       <div class="f-item"><label for="fsui">Suítes</label><select id="fsui"></select></div>
       <div class="f-item"><label for="ftip">Tipo</label><select id="ftip"></select></div>
       <div class="f-item"><label for="fsem">Semana</label><select id="fsem"></select></div>
-      <div class="f-item"><label for="ffai">Situação do preço</label><select id="ffai"></select></div>
+      <div class="f-item f-item-sit">
+        <label>Situação do preço <span class="f-dica">— pode marcar mais de uma</span></label>
+        <div class="f-sit" id="ffai" role="group" aria-label="Situação do preço"></div>
+      </div>
+      <div class="f-item"><label for="ford">Ordenar por</label>
+        <div class="f-ord">
+          <select id="ford"></select>
+          <button type="button" class="dir" id="fordd" title="Inverter a ordem">▲</button>
+        </div>
+      </div>
+      <div class="f-item"><label for="ford2">Depois por</label>
+        <div class="f-ord">
+          <select id="ford2"></select>
+          <button type="button" class="dir" id="ford2d" title="Inverter a ordem">▲</button>
+        </div>
+      </div>
       <div class="f-item f-item-acao">
         <button class="btn solid" id="bResumo" type="button" title="Copia a mensagem pronta para enviar ao proprietário">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
@@ -580,8 +629,9 @@ window.addEventListener("message", function(e){
 });
 
 /* ---------------- estado ---------------- */
-var F = {cod:"", end:"", cap:"", bai:"", dor:"", sui:"", tip:"", sem:"", fai:""};
-var ORD = {col:"g", dir:1};
+var F = {cod:"", end:"", cap:"", bai:"", dor:"", sui:"", tip:"", sem:"", fai:[]};
+/* Ordenação em até dois níveis: ORD[0] manda, ORD[1] desempata. */
+var ORD = [{col:"g", dir:1}];
 var LISTA = [];
 
 /* ---------------- montagem dos filtros ---------------- */
@@ -594,6 +644,34 @@ function opcoes(sel, itens, rotuloTodos, contagens){
   });
   el.innerHTML = h;
 }
+/* Situação do preço: três botões que ligam e desligam, em vez de um select de
+   escolha única — dá para ver "alinhado + leve ajuste" de uma vez. Nenhum
+   marcado significa todas, igual ao "Qualquer situação" de antes. */
+var SITUACOES = ["Revisar","Leve ajuste","Alinhado"];
+function initSituacao(){
+  var cont = contar("f");
+  var box = document.getElementById("ffai");
+  box.innerHTML = SITUACOES.filter(function(k){ return cont[k]; }).map(function(k){
+    return '<button type="button" class="' + classe(k) + '" data-f="' + esc(k) + '" aria-pressed="false">' +
+           esc(k === "Revisar" ? "Revisar preço" : k) + ' <b>' + cont[k] + '</b></button>';
+  }).join("");
+  box.querySelectorAll("button").forEach(function(b){
+    b.addEventListener("click", function(){
+      var v = b.getAttribute("data-f"), i = F.fai.indexOf(v);
+      if(i < 0) F.fai.push(v); else F.fai.splice(i, 1);
+      sincronizaSituacao();
+      render();
+    });
+  });
+}
+function sincronizaSituacao(){
+  document.getElementById("ffai").querySelectorAll("button").forEach(function(b){
+    var on = F.fai.indexOf(b.getAttribute("data-f")) >= 0;
+    b.classList.toggle("on", on);
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+}
+
 /* tem ficha? relatórios antigos (16/06) não trazem specs */
 function temFicha(r){ return !!(r.d || r.m || r.v || r.s); }
 function contar(campo){
@@ -624,10 +702,9 @@ function initFiltros(){
   });
   document.getElementById("fsui").innerHTML = hs;
 
-  var fai = contar("f");
-  opcoes("ffai", ["Revisar","Leve ajuste","Alinhado"].filter(function(k){return fai[k]}), "Qualquer situação", fai);
+  initSituacao();
 
-  ["fcod","fend","fcap","fbai","fdor","fsui","ftip","fsem","ffai"].forEach(function(id){
+  ["fcod","fend","fcap","fbai","fdor","fsui","ftip","fsem"].forEach(function(id){
     var el = document.getElementById(id);
     var eTexto = (id === "fcod" || id === "fend");
     el.addEventListener(eTexto ? "input" : "change", function(){
@@ -639,13 +716,14 @@ function initFiltros(){
       F.sui = document.getElementById("fsui").value;
       F.tip = document.getElementById("ftip").value;
       F.sem = document.getElementById("fsem").value;
-      F.fai = document.getElementById("ffai").value;
       render();
     });
   });
   document.getElementById("bClear").addEventListener("click", function(){
-    F = {cod:"", end:"", cap:"", bai:"", dor:"", sui:"", tip:"", sem:"", fai:""};
-    ["fcod","fend","fcap","fbai","fdor","fsui","ftip","fsem","ffai"].forEach(function(id){ document.getElementById(id).value=""; });
+    /* limpa filtro; a ordenação não é filtro e fica onde está */
+    F = {cod:"", end:"", cap:"", bai:"", dor:"", sui:"", tip:"", sem:"", fai:[]};
+    ["fcod","fend","fcap","fbai","fdor","fsui","ftip","fsem"].forEach(function(id){ document.getElementById(id).value=""; });
+    sincronizaSituacao();
     render();
   });
   document.getElementById("bResumo").addEventListener("click", function(){
@@ -729,7 +807,7 @@ function filtrar(){
     if(F.bai && r.b !== F.bai) return false;
     if(F.tip && r.t !== F.tip) return false;
     if(F.sem && r.w !== F.sem) return false;
-    if(F.fai && r.f !== F.fai) return false;
+    if(F.fai.length && F.fai.indexOf(r.f) < 0) return false;
     if(F.dor && String(r.d) !== F.dor) return false;
     if(F.sui === "0"){ if(r.s || !temFicha(r)) return false; }
     else if(F.sui && String(r.s) !== F.sui) return false;
@@ -741,23 +819,32 @@ function filtrar(){
     return true;
   });
 }
+/* Compara duas linhas por uma coluna; 0 quando empatam, e aí o próximo
+   critério decide. O caso de valor vazio não é multiplicado pela direção:
+   vazio fica sempre no fim, subindo ou descendo. */
+function cmpCol(x, y, col, dir){
+  var a = x[col], b = y[col];
+  if(col === "w"){ a = dataOrd(x.w); b = dataOrd(y.w); }
+  if(col === "f"){ var o={Revisar:0,"Leve ajuste":1,Alinhado:2}; a=o[x.f]; b=o[y.f]; }
+  /* sem suíte vale zero (a coluna mostra 0); só fica vazio quem não tem ficha */
+  if(col === "s"){
+    a = x.s || (temFicha(x) ? 0 : null);
+    b = y.s || (temFicha(y) ? 0 : null);
+  }
+  var an = (a===null||a===undefined||a===""), bn = (b===null||b===undefined||b==="");
+  if(an && bn) return 0;
+  if(an) return 1;          // vazios sempre no fim
+  if(bn) return -1;
+  if(typeof a === "number" && typeof b === "number") return (a-b)*dir;
+  return String(a).localeCompare(String(b), "pt-BR") * dir;
+}
 function ordenar(LISTA){
-  var col = ORD.col, dir = ORD.dir;
   return LISTA.slice().sort(function(x,y){
-    var a = x[col], b = y[col];
-    if(col === "w"){ a = dataOrd(x.w); b = dataOrd(y.w); }
-    if(col === "f"){ var o={Revisar:0,"Leve ajuste":1,Alinhado:2}; a=o[x.f]; b=o[y.f]; }
-    /* sem suíte vale zero (a coluna mostra 0); só fica vazio quem não tem ficha */
-    if(col === "s"){
-      a = x.s || (temFicha(x) ? 0 : null);
-      b = y.s || (temFicha(y) ? 0 : null);
+    for(var i=0;i<ORD.length;i++){
+      var d = cmpCol(x, y, ORD[i].col, ORD[i].dir);
+      if(d) return d;
     }
-    var an = (a===null||a===undefined||a===""), bn = (b===null||b===undefined||b==="");
-    if(an && bn) return 0;
-    if(an) return 1;          // vazios sempre no fim
-    if(bn) return -1;
-    if(typeof a === "number" && typeof b === "number") return (a-b)*dir;
-    return String(a).localeCompare(String(b), "pt-BR") * dir;
+    return 0;
   });
 }
 
@@ -783,6 +870,7 @@ function render(){
              sui:"Suítes", tip:"Tipo", sem:"Semana", fai:"Situação"};
   var ch = "";
   Object.keys(rot).forEach(function(k){
+    if(k === "fai") return;      /* situação é lista: um chip por marcada, abaixo */
     if(F[k]){
       var v = F[k];
       if(k === "dor") v = F[k] + (Number(F[k])>1 ? " quartos" : " quarto");
@@ -791,13 +879,22 @@ function render(){
             '<button data-x="' + k + '" aria-label="Remover filtro">×</button></span>';
     }
   });
+  F.fai.forEach(function(v){
+    ch += '<span class="chip-f">' + rot.fai + ': <b>' + esc(v) + '</b>' +
+          '<button data-x="fai" data-v="' + esc(v) + '" aria-label="Remover filtro">×</button></span>';
+  });
   document.getElementById("chips").innerHTML = ch;
   document.getElementById("chips").querySelectorAll("button").forEach(function(b){
     b.addEventListener("click", function(){
       var k = b.getAttribute("data-x");
+      if(k === "fai"){
+        var i = F.fai.indexOf(b.getAttribute("data-v"));
+        if(i >= 0) F.fai.splice(i, 1);
+        sincronizaSituacao(); render(); return;
+      }
       F[k] = "";
       var mapa = {cod:"fcod",end:"fend",cap:"fcap",bai:"fbai",dor:"fdor",
-                  sui:"fsui",tip:"ftip",sem:"fsem",fai:"ffai"};
+                  sui:"fsui",tip:"ftip",sem:"fsem"};
       document.getElementById(mapa[k]).value = ""; render();
     });
   });
@@ -855,20 +952,79 @@ function render(){
 }
 
 
-/* ---------------- ordenação por cabeçalho ---------------- */
-document.querySelectorAll("thead th[data-s]").forEach(function(th){
-  th.addEventListener("click", function(){
-    var col = th.getAttribute("data-s");
-    if(ORD.col === col){ ORD.dir = -ORD.dir; } else { ORD.col = col; ORD.dir = 1; }
-    document.querySelectorAll("thead th[data-s]").forEach(function(o){
-      o.classList.remove("on");
-      o.querySelector(".ar").textContent = "⇅";
-    });
-    th.classList.add("on");
-    th.querySelector(".ar").textContent = ORD.dir === 1 ? "▲" : "▼";
-    render();
+/* ---------------- ordenação: cabeçalho e os dois selects ---------------- */
+function posOrd(col){
+  for(var i=0;i<ORD.length;i++){ if(ORD[i].col === col) return i; }
+  return -1;
+}
+/* Clique no cabeçalho: a coluna clicada vira a principal e a que estava desce
+   para desempate — assim os dois cliques continuam valendo, que é o que faltava.
+   Clicar na principal inverte; clicar na de desempate troca as duas de lugar. */
+function aplicaOrd(col){
+  var i = posOrd(col);
+  if(i === 0){ ORD[0].dir = -ORD[0].dir; }
+  else if(i === 1){ ORD = [ORD[1], ORD[0]]; }
+  else { ORD = [{col:col, dir:1}, {col:ORD[0].col, dir:ORD[0].dir}]; }
+  sincronizaOrd();
+  render();
+}
+function sincronizaOrd(){
+  document.querySelectorAll("#tbl thead th[data-s]").forEach(function(th){
+    var i = posOrd(th.getAttribute("data-s"));
+    th.classList.toggle("on", i === 0);
+    th.classList.toggle("on2", i === 1);
+    th.querySelector(".ar").textContent = i < 0 ? "⇅" : (ORD[i].dir === 1 ? "▲" : "▼");
+    var n = th.querySelector(".ord-n");
+    if(n) n.textContent = (i === 1) ? "2" : "";
   });
-});
+  document.getElementById("ford").value = ORD[0].col;
+  document.getElementById("fordd").textContent = ORD[0].dir === 1 ? "▲" : "▼";
+  var s2 = document.getElementById("ford2"), b2 = document.getElementById("ford2d");
+  s2.value = ORD[1] ? ORD[1].col : "";
+  b2.textContent = (ORD[1] && ORD[1].dir === -1) ? "▼" : "▲";
+  b2.disabled = !ORD[1];
+}
+function initOrd(){
+  var ths = document.querySelectorAll("#tbl thead th[data-s]");
+  var h1 = "", h2 = '<option value="">— nenhum —</option>';
+  [].forEach.call(ths, function(th){
+    var col = th.getAttribute("data-s");
+    /* o rótulo vem do próprio cabeçalho para não existirem duas listas de nomes */
+    var rot = ((th.firstChild && th.firstChild.textContent) || col).trim();
+    var op = '<option value="' + esc(col) + '">' + esc(rot) + '</option>';
+    h1 += op; h2 += op;
+    /* o marcador do 2º nível nasce aqui, para não repetir span nos doze <th> */
+    if(!th.querySelector(".ord-n")){
+      var s = document.createElement("span");
+      s.className = "ord-n";
+      th.appendChild(s);
+    }
+    th.addEventListener("click", function(){ aplicaOrd(col); });
+  });
+  document.getElementById("ford").innerHTML = h1;
+  document.getElementById("ford2").innerHTML = h2;
+  document.getElementById("ford").addEventListener("change", function(){
+    var v = this.value;
+    /* a mesma coluna nos dois níveis não desempata nada */
+    if(ORD[1] && ORD[1].col === v) ORD.splice(1, 1);
+    ORD[0] = {col:v, dir:(ORD[0].col === v ? ORD[0].dir : 1)};
+    sincronizaOrd(); render();
+  });
+  document.getElementById("ford2").addEventListener("change", function(){
+    var v = this.value;
+    if(!v || v === ORD[0].col){ ORD = [ORD[0]]; }
+    else { ORD[1] = {col:v, dir:1}; }
+    sincronizaOrd(); render();
+  });
+  document.getElementById("fordd").addEventListener("click", function(){
+    ORD[0].dir = -ORD[0].dir; sincronizaOrd(); render();
+  });
+  document.getElementById("ford2d").addEventListener("click", function(){
+    if(!ORD[1]) return;
+    ORD[1].dir = -ORD[1].dir; sincronizaOrd(); render();
+  });
+  sincronizaOrd();
+}
 
 /* ---------------- abas: pesquisa + uma por semana + comparativo ---------------- */
 function mostrar(qual){        // "busca" | "cmp" | "rel"
@@ -991,6 +1147,7 @@ function kpi(valor, rotulo, delta){
   carregarFeito();
   initTabs();
   initFiltros();
+  initOrd();
   initCmp();
   render();
 })();

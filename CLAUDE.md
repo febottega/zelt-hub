@@ -75,7 +75,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | HTML/estrutura do comparativo | `tools/comparativo/layout.html` | 75 KB |
 | gerador de documentos | `tools/gerador.html` | 285 KB |
 | simulador SAC / PRICE | `tools/simulador.html` | 106 KB |
-| painel de avaliações (`DADOS`, `KPIS`) | `tools/avaliacoes.html` | 97 KB |
+| painel de avaliações (`DADOS`, `KPIS`) | `tools/avaliacoes.html` | 135 KB |
 | relatório da semana atual | `tools/avaliacao.html` | 452 KB |
 | hero, cards, overlay do hub | `hub.html` | 84 KB (~35 KB de código) |
 
@@ -132,10 +132,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.578.734 bytes):
+Hash de referência (18 payloads, 11.588.178 bytes):
 
 ```
-7409A8913681948DF21944FC5C3ED25076083302A882B26C144B8A734451F7AE
+70229DA9196C8760ECEEC1EE79F2A3A097ACCF8AF2ECA15CDC6D2120A21DFF5C
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
