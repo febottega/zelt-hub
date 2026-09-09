@@ -66,7 +66,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | Quero mudar | Arquivo | Tamanho |
 |---|---|---|
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **64 KB** |
-| os 59 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
+| os 58 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 48 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 5 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 128 KB |
@@ -93,7 +93,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   A ordenação é de um critério, pelo cabeçalho ou pelo select "Ordenar por" —
   que existe porque o `<thead>` desaparece abaixo de 820px.
 - **avaliacao** + 12 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
-- **comparativo** — 59 empreendimentos. Abas: comparativo, mudanças, melhores preços,
+- **comparativo** — 58 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
   chaves, checklist). Rascunhos em `localStorage` (`zelt_*_v1`); exporta com
@@ -150,10 +150,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.625.690 bytes):
+Hash de referência (18 payloads, 11.628.062 bytes):
 
 ```
-5F43B7AFB3F76E1D6C5D4B1CC02BA33B6BD3E8052F269A444919CA920CECB7AC
+69C1FA40344094A4E262F0484B27CEC84CB0CD5C4F4B830A4E2E8B0B9C34A283
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

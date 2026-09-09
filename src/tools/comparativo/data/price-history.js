@@ -364,38 +364,38 @@ const PRICE_HISTORY = {
     }
   },
   "Villa Toscana": {
-   datas: ["2026-01","2026-04","2026-07","2026-08"],
-   fontes: ["Tabela jan/2026","Tabela abr/2026","Tabela jul/2026 (13/07)","Tabela ago/2026"],
-   obs: "Série pela coluna Parcelado até 30x, a mesma condição usada nos cards. Parcelas corrigidas pela variação do INPC-IBGE acrescida de 0,90% a.m. De jul para ago/2026 as três unidades subiram exatamente 0,95%, tanto no à vista quanto no parcelado — indexação pura, sem nenhuma reprecificação. A unidade 501 saiu da tabela depois de abril.",
+   datas: ["2026-01","2026-04","2026-07","2026-08","2026-09"],
+   fontes: ["Tabela jan/2026","Tabela abr/2026","Tabela jul/2026 (13/07)","Tabela ago/2026","Tabela set/2026"],
+   obs: "Série pela coluna Parcelado até 30x, a mesma condição usada nos cards. Parcelas corrigidas pela variação do INPC-IBGE acrescida de 0,90% a.m. De jul para ago/2026 as três unidades subiram exatamente 0,95% e de ago para set/2026 exatamente 0,24%, tanto no à vista quanto no parcelado — indexação pura, sem nenhuma reprecificação em nenhum dos dois meses. A unidade 501 saiu da tabela depois de abril.",
    unidades: {
-    "1201": [991459.27,1026331.99,1054709.59,1064729.33],
-    "1203": [1072492.06,1086813.35,1116863.24,1127473.44],
-    "1402": [3476344.4,3630932.43,3731326.04,3766773.63]
+    "1201": [991459.27,1026331.99,1054709.59,1064729.33,1067284.69],
+    "1203": [1072492.06,1086813.35,1116863.24,1127473.44,1130179.38],
+    "1402": [3476344.4,3630932.43,3731326.04,3766773.63,3775813.89]
    }
   },
   "Grand Park": {
-   datas: ["2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04","2026-05","2026-06","2026-07","2026-08"],
-   fontes: ["Tabela mar/2025","Tabela abr/2025","Tabela mai/2025","Tabela jun/2025","Tabela jul/2025","Tabela ago/2025","Tabela set/2025","Tabela out/2025","Tabela nov/2025","Tabela dez/2025","Tabela jan/2026","Tabela fev/2026","Tabela mar/2026","Tabela abr/2026","Tabela mai/2026","Tabela jun/2026","Tabela jul/2026","Tabela ago/2026"],
-   obs: "Série pela coluna \"Valor parcelado até 30x\", a mesma condição usada nos cards. Histórico mensal completo de mar/2025 a ago/2026, sem nenhuma falha — 18 pontos, o mais longo da ferramenta. A 1803, apartamento tipo em revenda, fez +15.52% no período. Ressalva importante para uso comercial: a taxa de correção das parcelas subiu de 0,75% para 0,80% ao mês em jun/25 e para 0,90% em out/25, então parte do avanço do parcelado é custo de financiamento, não preço do imóvel — na coluna à vista, que não sofre esse efeito, a 1803 havia feito +14,20% até jul/2026 e ganhou mais 0,95% em agosto. A cobertura 1801 foi VENDIDA em agosto/2026 e saiu da série, seguindo a regra de a aba Investimentos mostrar apenas o que o cliente pode comprar. Ficam registrados os números dela, que eram o destaque do comparativo: entrou em mar/2025 a R$ 2.127.976,78 no parcelado e saiu vendida a R$ 3.029.057,87 em jul/2026, +42.34% em 16 meses (+35,53% na coluna à vista), com saltos de +8,82% em nov/25 e +5,80% em jan/26. A unidade 1704 havia sido vendida entre jun e jul/26. Vagas inalteradas: 1803 com duas, 1801 com três.",
+   datas: ["2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04","2026-05","2026-06","2026-07","2026-08","2026-09"],
+   fontes: ["Tabela mar/2025","Tabela abr/2025","Tabela mai/2025","Tabela jun/2025","Tabela jul/2025","Tabela ago/2025","Tabela set/2025","Tabela out/2025","Tabela nov/2025","Tabela dez/2025","Tabela jan/2026","Tabela fev/2026","Tabela mar/2026","Tabela abr/2026","Tabela mai/2026","Tabela jun/2026","Tabela jul/2026","Tabela ago/2026","Tabela set/2026"],
+   obs: "Série pela coluna \"Valor parcelado até 30x\", a mesma condição usada nos cards. Histórico mensal completo de mar/2025 a set/2026, sem nenhuma falha — 19 pontos, o mais longo da ferramenta. A 1803, apartamento tipo em revenda, fez +15,80% no período. Ressalva importante para uso comercial: a taxa de correção das parcelas subiu de 0,75% para 0,80% ao mês em jun/25 e para 0,90% em out/25, então parte do avanço do parcelado é custo de financiamento, não preço do imóvel — na coluna à vista, que não sofre esse efeito, a 1803 havia feito +14,20% até jul/2026, ganhou 0,95% em agosto e 0,24% em setembro. A cobertura 1801 foi VENDIDA em agosto/2026 e saiu da série, seguindo a regra de a aba Investimentos mostrar apenas o que o cliente pode comprar. Ficam registrados os números dela, que eram o destaque do comparativo: entrou em mar/2025 a R$ 2.127.976,78 no parcelado e saiu vendida a R$ 3.029.057,87 em jul/2026, +42.34% em 16 meses (+35,53% na coluna à vista), com saltos de +8,82% em nov/25 e +5,80% em jan/26. A unidade 1704 havia sido vendida entre jun e jul/26. Vagas inalteradas: 1803 com duas, 1801 com três.",
    unidades: {
-    "1803": [1001120.41,1003923.55,1006433.36,1010257.8,1020966.54,1025254.59,1030380.87,1032544.67,1033783.72,1035747.91,1100087.74,1108008.37,1111332.4,1114777.53,1124476.09,1136283.09,1145600.61,1156483.82]
+    "1803": [1001120.41,1003923.55,1006433.36,1010257.8,1020966.54,1025254.59,1030380.87,1032544.67,1033783.72,1035747.91,1100087.74,1108008.37,1111332.4,1114777.53,1124476.09,1136283.09,1145600.61,1156483.82,1159259.38]
    }
   },
   "Carbono": {
-   datas: ["2026-01","2026-04","2026-07","2026-08"],
-   fontes: ["Tabela jan/2026","Tabela abr/2026","Tabela jul/2026 (13/07)","Tabela ago/2026"],
-   obs: "Tabela de investidores. Série pela coluna Parcelado até 30x, a mesma condição usada nos cards. Parcelas corrigidas pela variação do INPC-IBGE acrescida de 0,90% a.m. A unidade 905 entrou na tabela depois de janeiro, por isso a lacuna; a 909 saiu. De jul para ago/2026 a coluna à vista subiu exatamente 0,95% nas dez unidades — indexação pura, sem reprecificação. No parcelado a variação ficou entre 0,916% e 0,951%, porque a Andraus recalibrou o acréscimo do parcelamento em cinco unidades (509, 1002, 1003, 1006 e 1101) na casa dos centésimos de ponto; é arredondamento da planilha de origem, não decisão de preço. O desconto do à vista sobre o parcelado varia muito por unidade, de 4,62% na 1006 a 8,17% na 509 — vale conferir unidade por unidade em vez de assumir um percentual único.",
+   datas: ["2026-01","2026-04","2026-07","2026-08","2026-09"],
+   fontes: ["Tabela jan/2026","Tabela abr/2026","Tabela jul/2026 (13/07)","Tabela ago/2026","Tabela set/2026"],
+   obs: "Tabela de investidores. Série pela coluna Parcelado até 30x, a mesma condição usada nos cards. Parcelas corrigidas pela variação do INPC-IBGE acrescida de 0,90% a.m. A unidade 905 entrou na tabela depois de janeiro, por isso a lacuna; a 909 saiu. Em set/2026 saíram a 1102, a 903 e a 905 — a série guarda os números delas, mas a aba Investimentos só mostra o que ainda está na tabela de vendas. De jul para ago/2026 a coluna à vista subiu exatamente 0,95% nas dez unidades — indexação pura, sem reprecificação. No parcelado a variação ficou entre 0,916% e 0,951%, porque a Andraus recalibrou o acréscimo do parcelamento em cinco unidades (509, 1002, 1003, 1006 e 1101) na casa dos centésimos de ponto; é arredondamento da planilha de origem, não decisão de preço. De ago para set/2026 o à vista subiu exatamente 0,24% nas sete unidades que ficaram, e o parcelado repetiu o padrão: 0,24% em três delas e entre 0,2314% e 0,2378% na 509, na 1002, na 1003 e na 1101. O desconto do à vista sobre o parcelado varia muito por unidade, de 4,62% na 1006 a 8,17% na 509 — vale conferir unidade por unidade em vez de assumir um percentual único.",
    unidades: {
-    "509": [849259.88,864301.47,887314.22,895439.71],
-    "807": [509570.8,518949.4,533298.11,538364.44],
-    "903": [607929.26,619118.14,636236.47,642280.72],
-    "905": [null,622262.03,639467.29,645542.22],
-    "1002": [721065.64,734207.95,754314.91,761414.4],
-    "1003": [504110.6,513278.27,527304.29,532256.68],
-    "1006": [632755.73,644419.94,662265.5,668566.52],
-    "1101": [828720.26,843751.92,866749.47,874869.59],
-    "1102": [507124.47,516458.04,530737.87,535779.88],
-    "1108": [480800.31,489649.39,503187.97,507968.25]
+    "509": [849259.88,864301.47,887314.22,895439.71,897511.96],
+    "807": [509570.8,518949.4,533298.11,538364.44,539656.52],
+    "903": [607929.26,619118.14,636236.47,642280.72,null],
+    "905": [null,622262.03,639467.29,645542.22,null],
+    "1002": [721065.64,734207.95,754314.91,761414.4,763225],
+    "1003": [504110.6,513278.27,527304.29,532256.68,533519.69],
+    "1006": [632755.73,644419.94,662265.5,668566.52,670173.48],
+    "1101": [828720.26,843751.92,866749.47,874869.59,876940.48],
+    "1102": [507124.47,516458.04,530737.87,535779.88,null],
+    "1108": [480800.31,489649.39,503187.97,507968.25,509187.38]
    }
   },
   "DUO - Torre 1": {"datas": ["2025-12", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08"], "fontes": ["Tabela dez/2025", "Tabela mar/2026", "Tabela abr/2026 (rev. 426.2, 20/04)", "Tabela mai/2026 (13/05)", "Tabela jun/2026 (02/06)", "Tabela jul/2026 (10/07)", "Tabela ago/2026 (04/08)"], "obs": "Série pela coluna de 60 meses, a mesma condição dos cards. Três fases distintas: de dez/25 a mar/26 o preço ficou praticamente parado (+0,65% em três meses, só CUB); em abr/26 a Cetor fez uma reprecificação comercial para baixo, unidade por unidade (a 1702 caiu 4,25% e a 2802 caiu 6,61%, enquanto a 2101 não foi tocada); de abr/26 em diante volta a subir pelo CUB, cerca de 0,9% ao mês. As unidades 2802 e 2902 ganharam uma terceira vaga entre jun e ago/26, entao parte da diferença nessas duas é composição de garagem e não preço. A 2101 trocou de vagas (94/95 para 137/138) mantendo duas. A 1502 voltou à tabela em ago/26 só na condição à vista e por isso não entra na série.", "unidades": {"1702": [1950620.26, 1963333.35, 1879827.47, 1896152.16, 1916047.5, 1931747.17, 1950076.87], "2101": [2659936.72, 2677272.76, 2685467.81, 2708788.8, 2737210.71, 2759638.82, 2785824.1], "2802": [2571272.16, 2588030.33, 2416921.03, 2419851.33, 2445241.57, 2465277.35, 2488669.53], "2902": [2659936.72, 2677272.76, 2595952.22, 2618495.84, 2645970.35, 2667650.86, 2692963.3]}},

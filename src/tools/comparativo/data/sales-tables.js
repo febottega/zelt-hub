@@ -297,40 +297,275 @@ const SALES_TABLES = {
     }
   },
   "Villa Toscana": {
-   source: "Tabela da construtora (Andraus)",
-   ref: "Agosto/2026",
-   unitCol: 0,
-   columns: ["Unidade","Vagas","Área priv.","À vista / financ.","Parcelado até 30x","Entrada (35%)","Anuais (6%, 3x)","Situação"],
-   rows: [["1201","2 vagas","106,24 m²","R$ 985.860,50","R$ 1.064.729,33","R$ 372.655,27","R$ 63.883,76","Disponível"],["1203","3 vagas","106,91 m²","R$ 1.043.956,89","R$ 1.127.473,44","R$ 394.615,70","R$ 67.648,41","Revenda"],["1402","4 vagas","287,93 m²","R$ 3.487.753,36","R$ 3.766.773,63","R$ 1.318.370,77","R$ 226.006,42","Disponível"]],
-   note: "Villa Toscana Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. Aceita automóvel como parte do pagamento. Vaga extra: R$ 70.000,00 (consultar disponibilidade). Apto tipo: 106,91 m² privativos + 66,20 m² de comum = 173,11 m², mais 31,09 m² de duas vagas — total aprox. 204,20 m². Cobertura Duplex 1402: boxes 44/44A/44B/44C, 287,93 m² privativos, área total aprox. 523,92 m² com as quatro vagas.",
-   summary: { bits:[{pre:"Área privativa: ",col:2},{col:1}], situacaoCol:7,
-     principal:{label:"Parcelado até 30x",col:4},
-     parcelas:[{label:"Entrada (35%)",col:5},{label:"Reforços anuais (6%, 3×)",col:6}],
-     alternativas:[{bold:"À vista / financiamento",col:3}] }
+    "source": "Tabela da construtora (Andraus)",
+    "ref": "Setembro/2026",
+    "unitCol": 0,
+    "columns": [
+      "Unidade",
+      "Vagas",
+      "Área priv.",
+      "À vista / financ.",
+      "Parcelado até 30x",
+      "Entrada (35%)",
+      "Anuais (6%, 3x)",
+      "Situação"
+    ],
+    "rows": [
+      [
+        "1201",
+        "2 vagas",
+        "106,24 m²",
+        "R$ 988.226,56",
+        "R$ 1.067.284,69",
+        "R$ 373.549,64",
+        "R$ 64.037,08",
+        "Disponível"
+      ],
+      [
+        "1203",
+        "3 vagas",
+        "106,91 m²",
+        "R$ 1.046.462,38",
+        "R$ 1.130.179,38",
+        "R$ 395.562,78",
+        "R$ 67.810,76",
+        "Revenda"
+      ],
+      [
+        "1402",
+        "4 vagas",
+        "287,93 m²",
+        "R$ 3.496.123,97",
+        "R$ 3.775.813,89",
+        "R$ 1.321.534,86",
+        "R$ 226.548,83",
+        "Disponível"
+      ]
+    ],
+    "note": "Villa Toscana Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. Aceita automóvel como parte do pagamento. Vaga extra: R$ 70.000,00 (consultar disponibilidade). Apto tipo: 106,91 m² privativos + 66,20 m² de comum = 173,11 m², mais 31,09 m² de duas vagas — total aprox. 204,20 m². Cobertura Duplex 1402: boxes 44/44A/44B/44C, 287,93 m² privativos, área total aprox. 523,92 m² com as quatro vagas.",
+    "summary": {
+      "bits": [
+        {
+          "pre": "Área privativa: ",
+          "col": 2
+        },
+        {
+          "col": 1
+        }
+      ],
+      "situacaoCol": 7,
+      "principal": {
+        "label": "Parcelado até 30x",
+        "col": 4
+      },
+      "parcelas": [
+        {
+          "label": "Entrada (35%)",
+          "col": 5
+        },
+        {
+          "label": "Reforços anuais (6%, 3×)",
+          "col": 6
+        }
+      ],
+      "alternativas": [
+        {
+          "bold": "À vista / financiamento",
+          "col": 3
+        }
+      ]
+    }
   },
   "Grand Park": {
-   source: "Tabela da construtora (Andraus)",
-   ref: "Agosto/2026",
-   unitCol: 0,
-   columns: ["Unidade","Vagas","Área priv.","À vista / financ.","Parcelado até 30x","Entrada (35%)","Anuais (6%, 3x)","Situação"],
-   rows: [["1803","2 vagas","111,09 m²","R$ 1.070.818,35","R$ 1.156.483,82","R$ 404.769,34","R$ 69.389,03","Revenda"]],
-   note: "Grand Park Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. A cobertura 1801 foi vendida em agosto/2026 — restou apenas o apto tipo 1803, em revenda. Apto tipo (5º ao 17º pav.): 111,09 m² privativos + 25,82 m² das duas vagas + 67,36 m² de área comum, total aprox. 204,27 m². A cobertura 1801 tinha 222,18 m² privativos e área total aprox. 376,20 m².",
-   summary: { bits:[{pre:"Área privativa: ",col:2},{col:1}], situacaoCol:7,
-     principal:{label:"Parcelado até 30x",col:4},
-     parcelas:[{label:"Entrada (35%)",col:5},{label:"Reforços anuais (6%, 3×)",col:6}],
-     alternativas:[{bold:"À vista / financiamento",col:3}] }
+    "source": "Tabela da construtora (Andraus)",
+    "ref": "Setembro/2026",
+    "unitCol": 0,
+    "columns": [
+      "Unidade",
+      "Vagas",
+      "Área priv.",
+      "À vista / financ.",
+      "Parcelado até 30x",
+      "Entrada (35%)",
+      "Anuais (6%, 3x)",
+      "Situação"
+    ],
+    "rows": [
+      [
+        "1803",
+        "2 vagas",
+        "111,09 m²",
+        "R$ 1.073.388,31",
+        "R$ 1.159.259,38",
+        "R$ 405.740,78",
+        "R$ 69.555,56",
+        "Revenda"
+      ]
+    ],
+    "note": "Grand Park Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. A cobertura 1801 foi vendida em agosto/2026 — restou apenas o apto tipo 1803, em revenda. Apto tipo (5º ao 17º pav.): 111,09 m² privativos + 25,82 m² das duas vagas + 67,36 m² de área comum, total aprox. 204,27 m². A cobertura 1801 tinha 222,18 m² privativos e área total aprox. 376,20 m².",
+    "summary": {
+      "bits": [
+        {
+          "pre": "Área privativa: ",
+          "col": 2
+        },
+        {
+          "col": 1
+        }
+      ],
+      "situacaoCol": 7,
+      "principal": {
+        "label": "Parcelado até 30x",
+        "col": 4
+      },
+      "parcelas": [
+        {
+          "label": "Entrada (35%)",
+          "col": 5
+        },
+        {
+          "label": "Reforços anuais (6%, 3×)",
+          "col": 6
+        }
+      ],
+      "alternativas": [
+        {
+          "bold": "À vista / financiamento",
+          "col": 3
+        }
+      ]
+    }
   },
   "Carbono": {
-   source: "Tabela da construtora (Andraus) · Investidores",
-   ref: "Agosto/2026",
-   unitCol: 0,
-   columns: ["Unidade","Descrição","Vagas","Área priv.","À vista / financ.","Parcelado até 30x","Entrada (35%)","Anuais (6%, 3x)","Situação"],
-   rows: [["509","Double Loft (2 dorm./garden)","1 vaga","121,15 m²","R$ 822.323,53","R$ 895.439,71","R$ 313.403,90","R$ 53.726,38","Disponível"],["807","—","1 vaga","36,05 m²","R$ 512.728,04","R$ 538.364,44","R$ 188.427,56","R$ 32.301,87","Disponível"],["1002","Sacada, home office, dep./dorm.","1 vaga","57,41 m²","R$ 718.489,91","R$ 761.414,40","R$ 266.495,04","R$ 45.684,86","Disponível"],["1003","Dif. sacada","1 vaga","38,18 m²","R$ 501.196,83","R$ 532.256,68","R$ 186.289,84","R$ 31.935,40","Revenda"],["1006","Dif. sacada","1 vaga","49,86 m²","R$ 637.682,40","R$ 668.566,52","R$ 233.998,28","R$ 40.113,99","Disponível"],["1101","Grand Duplex com sacada","1 vaga","68,73 m²","R$ 821.780,56","R$ 874.869,59","R$ 306.204,36","R$ 52.492,18","Disponível"],["1102","Duplex","1 vaga","34,40 m²","R$ 510.266,55","R$ 535.779,88","R$ 187.522,96","R$ 32.146,79","Disponível"],["1108","—","1 vaga","37,54 m²","R$ 483.779,29","R$ 507.968,25","R$ 177.788,89","R$ 30.478,10","Revenda"],["903","100% mobiliado","1 vaga","32,00 m²","R$ 611.695,92","R$ 642.280,72","R$ 224.798,25","R$ 38.536,84","Disponível"],["905","100% mobiliado","1 vaga","34,56 m²","R$ 614.802,12","R$ 645.542,22","R$ 225.939,78","R$ 38.732,53","Disponível"]],
-   note: "Tabela de investidores. Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Cada unidade tem 1 vaga exclusiva. Empreendimento concluído, com convenção preparada para locação por temporada (apps). Registro de incorporação R-2-52.614. As unidades 903 e 905 são vendidas 100% mobiliadas e também constam na lista de locação: 903 e 905 a R$ 3.100,00/mês e a 901 a R$ 3.200,00/mês — sobre o preço à vista isso dá cerca de 0,51% ao mês, aproximadamente 6,2% ao ano de yield bruto, antes de condomínio, IPTU e vacância. Atenção ao ler o arquivo da Andraus: os blocos \"100% mobiliados\" e \"locação\" continuam rotulados como JULHO.2026, mas os valores já são os de agosto — subiram os mesmos 0,95% do resto da tabela; o rótulo é que ficou para trás.",
-   summary: { bits:[{pre:"Área privativa: ",col:3},{col:2},{col:1}], situacaoCol:8,
-     principal:{label:"Parcelado até 30x",col:5},
-     parcelas:[{label:"Entrada (35%)",col:6},{label:"Reforços anuais (6%, 3×)",col:7}],
-     alternativas:[{bold:"À vista / financiamento",col:4}] }
+    "source": "Tabela da construtora (Andraus) · Investidores",
+    "ref": "Setembro/2026",
+    "unitCol": 0,
+    "columns": [
+      "Unidade",
+      "Descrição",
+      "Vagas",
+      "Área priv.",
+      "À vista / financ.",
+      "Parcelado até 30x",
+      "Entrada (35%)",
+      "Anuais (6%, 3x)",
+      "Situação"
+    ],
+    "rows": [
+      [
+        "509",
+        "Double Loft (2 dorm./garden)",
+        "1 vaga",
+        "121,15 m²",
+        "R$ 824.297,11",
+        "R$ 897.511,96",
+        "R$ 314.129,19",
+        "R$ 53.850,72",
+        "Disponível"
+      ],
+      [
+        "807",
+        "—",
+        "1 vaga",
+        "36,05 m²",
+        "R$ 513.958,59",
+        "R$ 539.656,52",
+        "R$ 188.879,78",
+        "R$ 32.379,39",
+        "Disponível"
+      ],
+      [
+        "1002",
+        "Sacada, home office, dep./dorm.",
+        "1 vaga",
+        "57,41 m²",
+        "R$ 720.214,28",
+        "R$ 763.225,00",
+        "R$ 267.128,75",
+        "R$ 45.793,50",
+        "Disponível"
+      ],
+      [
+        "1003",
+        "Dif. sacada",
+        "1 vaga",
+        "38,18 m²",
+        "R$ 502.399,71",
+        "R$ 533.519,69",
+        "R$ 186.731,89",
+        "R$ 32.011,18",
+        "Revenda"
+      ],
+      [
+        "1006",
+        "Dif. sacada",
+        "1 vaga",
+        "49,86 m²",
+        "R$ 639.212,84",
+        "R$ 670.173,48",
+        "R$ 234.560,72",
+        "R$ 40.210,41",
+        "Disponível"
+      ],
+      [
+        "1101",
+        "Grand Duplex com sacada",
+        "1 vaga",
+        "68,73 m²",
+        "R$ 823.752,84",
+        "R$ 876.940,48",
+        "R$ 306.929,17",
+        "R$ 52.616,43",
+        "Disponível"
+      ],
+      [
+        "1108",
+        "—",
+        "1 vaga",
+        "37,54 m²",
+        "R$ 484.940,36",
+        "R$ 509.187,38",
+        "R$ 178.215,58",
+        "R$ 30.551,24",
+        "Revenda"
+      ]
+    ],
+    "note": "Tabela de investidores. Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Cada unidade tem 1 vaga exclusiva. Empreendimento concluído, com convenção preparada para locação por temporada (apps). Registro de incorporação R-2-52.614. Em setembro/2026 a tabela caiu de dez para sete unidades: saíram a 1102 e as duas 100% mobiliadas, a 903 e a 905 — com elas sai também a única referência de aluguel que tínhamos aqui (as mobiliadas eram as que constavam na lista de locação). O desconto do à vista sobre o parcelado varia muito por unidade, de 4,62% na 1006 a 8,16% na 509 — vale conferir unidade por unidade em vez de assumir um percentual único.",
+    "summary": {
+      "bits": [
+        {
+          "pre": "Área privativa: ",
+          "col": 3
+        },
+        {
+          "col": 2
+        },
+        {
+          "col": 1
+        }
+      ],
+      "situacaoCol": 8,
+      "principal": {
+        "label": "Parcelado até 30x",
+        "col": 5
+      },
+      "parcelas": [
+        {
+          "label": "Entrada (35%)",
+          "col": 6
+        },
+        {
+          "label": "Reforços anuais (6%, 3×)",
+          "col": 7
+        }
+      ],
+      "alternativas": [
+        {
+          "bold": "À vista / financiamento",
+          "col": 4
+        }
+      ]
+    }
   },
   "Kaisergarten": {
     "folderId": "13doD3mCsHmjNpZPBnSmuTwj5mtuHQdnA",
