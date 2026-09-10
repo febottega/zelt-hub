@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.676.474 bytes):
+Hash de referência (18 payloads, 11.736.782 bytes):
 
 ```
-4239E8E9BABF5F923435397CD4A6EB497BA10E642475852234C3067E40BAC39F
+E775A85A6DB1848320C69D4CE9F8E3E8E20A7975079088A0D24CC48C3BBE6992
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -218,14 +218,19 @@ esses valores: eles ficam só no relatório.
 
 O Felipe manda as respostas do formulário como HTML exportado do Google Sheets
 (`C:\Users\User\Downloads\Respostas ao formulário DD_MM.html`), e o nome do
-arquivo diz de que semana são os imóveis. Em 10/09/2026 entraram assim as cinco
-semanas de 04/08 a 01/09. **Faltam 28/07, 21/07, 14/07, 07/07, 30/06, 23/06 e
-16/06** — essas seguem sem o bloco, o que não quebra nada.
+arquivo diz de que semana são os imóveis. Em 10/09/2026 entraram assim **as treze
+semanas**, de 16/06 a 08/09 — todas têm o bloco. Numa semana nova, o relatório
+já vem com ele; o roteiro abaixo é para reprocessar ou corrigir uma antiga.
 
 O layout da planilha: coluna A carimbo, B nome, e daí em diante pares de colunas
-`"CÓDIGO - R$ anunciado"` + `"De uma nota ao imóvel acima:"`.
+`"CÓDIGO - R$ anunciado"` + `"De uma nota ao imóvel acima:"`. Variações que já
+apareceram e o leitor tem de aguentar: cabeçalho embrulhado num `<div>` com
+`<svg>` de ícone (coluna formatada como número/moeda), anunciado **sem** o `R$`
+(SA0736 em 28/07), coluna sobrando no meio (`"Coluna 13"` em 14/07 — ela ocupa um
+par inteiro, então os imóveis seguem nos índices pares, mas o cabeçalho tem de
+ser ignorado, não tratado como erro) e linhas de lixo depois das respostas.
 
-Duas armadilhas, com a solução que funcionou:
+Três armadilhas, com a solução que funcionou:
 
 - **O texto vem à mão** e aparece de tudo: `750mil`, `R$ 1000m`, `7.9k`,
   `1.600.000.00`, `R$280.0000,00`, `R$ 8 milhões`, `sem resposta`, `ok`, `N SEI`.
@@ -233,16 +238,46 @@ Duas armadilhas, com a solução que funcionou:
   `R$ 990.000m` querendo 990 mil. Leia o número cru (vírgula = decimal; pontos
   são milhar só quando todo grupo depois do primeiro tem 3 dígitos) e escolha a
   ordem de grandeza pela potência de 10 que mais aproxima do **valor anunciado**.
-- **O formulário pode ter mais respostas do que o `CONFIG.numCorretores`** do
-  relatório, porque gente responde depois de o relatório ter sido gerado (em
-  18/08 sobrou uma, em 25/08 sobraram duas). Não adivinhe quem: **descubra**,
-  testando as combinações do tamanho certo e ficando com a única em que todos os
-  consensos da semana fecham. Nas duas vezes os excluídos foram exatamente os
-  últimos carimbos de data/hora — vale como conferência, não como critério.
+- **O formulário quase sempre tem mais respostas do que o
+  `CONFIG.numCorretores`** do relatório, porque gente responde depois de ele ter
+  sido gerado — aconteceu em 6 das 13 semanas (23/06, 30/06, 07/07, 14/07, 21/07,
+  18/08 e 25/08). Não adivinhe quem: **descubra**, testando as combinações e
+  ficando com a única em que todos os consensos da semana fecham. Em todas as
+  vezes os excluídos foram exatamente os últimos carimbos de data/hora — o
+  relatório sai pela manhã e quem responde depois perde a rodada. Isso vale como
+  conferência, não como critério.
+
+- **O relatório às vezes descartou uma célula.** Em 23/06 a Vanessa escreveu
+  "8.000.000" num terreno de 910 mil e em 07/07 a Marilene escreveu
+  "R$ 1.600.00000"; nos dois casos o consenso só fecha com uma avaliação MENOS,
+  ou seja o número torto foi jogado fora em vez de corrigido. Então, depois de
+  achar a rodada, procure por imóvel a **menor** quantidade de células que,
+  tratadas como "não avaliou", fazem a média dar o `k` exato — e quando houver
+  empate, fique com a célula que o normalizador precisou reescalar. Isso só
+  remove valor, nunca inventa.
 
 Depois disso a leitura fica provada por três caminhos independentes: a média dos
 valores dá o `k` de cada imóvel, a média das notas (coluna que não entrou em
 nada) dá o `n`, e o `nota_media` da semana bate com o KPI.
+
+**16/06 é o relatório que não fecha sozinho, e os dois oráculos concordam
+nisso:** oito dos nove consensos só fecham SEM a linha do Ricardo da Silva
+(média de 6), e o nono, o AP8084, só fecha COM ela
+(`k = 4.120.000/7 = 588.571,43`). A nota, que é coluna independente, aponta
+exatamente os mesmos oito imóveis. Ou seja: aquele relatório contou a resposta
+dele num imóvel e ignorou nos outros oito. O que ficou gravado é o que cada
+corretor escreveu de verdade, com os sete que responderam — então nesses oito
+imóveis a média dos valores mostrados difere do consenso exibido em até 1,4%.
+Não é erro de leitura nem de digitação: é defeito daquele relatório, e mexer no
+consenso mexeria no gap, na nota e nos KPIs da semana.
+
+**Nomes.** Cada um assina como quer e a mesma pessoa aparece de cinco jeitos
+("Ricardo da Silva", "Ricardo Da Silva", "Ricardo silva", "Ricardo SILVA",
+"Rica Silva"). Normalize para uma grafia por pessoa. Cuidado: **são dois
+Ricardos** — Ricardo da Silva e Ricardo Amorim ("Amorim", "RAmorim",
+"RICARDO AMORIM"), que o painel lista como `Ricardo S` e `Ricardo A`. Em 14/07
+aparece um "Ricardo" seco; como o da Silva já está na mesma planilha como
+"Rica Silva", ele foi lido como Amorim — falta o Felipe confirmar.
 
 **Como o bloco entra no congelado.** O relatório **não** é HTML estático: o
 `gerar()` roda no load e reconstrói a página. Então emendar o HTML gerado não
@@ -251,7 +286,7 @@ serve — tem de entrar no gerador. São quatro pontos, e as âncoras são idên
 
 | ponto | âncora | o que fazer |
 |---|---|---|
-| CSS | `.dw-verdict,.dw-vals,…{break-inside:avoid;…}\n  }\n` | emendar o bloco `.av-*` depois dela |
+| CSS | o **primeiro** `</style>` do arquivo | emendar o bloco `.av-*` antes dele |
 | dados + funções | `var corBanda = function corBanda(k)` | emendar antes: `CORRETORES_SEMANA`, `AVALIACOES`, `avalRows`, `avaliacoesHTML`, `avaliaramHTML` |
 | ficha do imóvel | `</div>\n      <div class=\"dw-foot\">").concat(markImg(16)` | virar `</div>", avaliacoesHTML(o.code), "\n      …` |
 | página 1 | `.concat(destaquesBlock, "</div>"` | virar `.concat(avaliaramHTML(), destaquesBlock, "</div>"` |
@@ -264,9 +299,14 @@ chamá-lo. Não mexa em `src/frozen` à mão: decodifique num temporário, apliq
 guarda de "1 ocorrência" por âncora, reencode em **uma linha sem newline** e
 prove que o arquivo novo é o antigo mais as inserções previstas — nada mais.
 
-A página 1 aguenta o bloco novo: o gerador escala a folha, e as seis semanas com
-o bloco fecham todas com os mesmos 33px de folga, de 3 a 10 chips de corretor.
+A página 1 aguenta o bloco novo: o gerador escala a folha, e as treze semanas
+fecham todas com a mesma folga de ~32px no pé, de 3 a 10 chips de corretor.
 No PDF do imóvel e na impressão o bloco fica `display:none`.
+
+Uma advertência de revisão: o `index.html` tem 11 MB e o navegador **guarda em
+cache**. Depois de rebuildar, reabrir a mesma URL pode servir a versão velha e
+dar a impressão de que o patch não funcionou. Recarregue com um parâmetro novo
+(`?cb=2`) ou confira com `fetch(url, {cache:'no-store'})`.
 
 **Ferramentas nesta máquina:** `node` (v24.19.0) e `npx` existem e rodam direto, tanto
 no bash quanto no PowerShell. `python` **não** existe: o `python` do PATH é o atalho da
