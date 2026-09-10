@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.742.646 bytes):
+Hash de referência (18 payloads, 11.742.058 bytes):
 
 ```
-1CD02D65AE6B87939CC891479504083E7EA7B415C90E8AB81D8F5111B80FF91B
+785D803AB6C24001C4E259193DB9C8E9D20AE6749BD294A49D448CA782B07A2B
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -356,6 +356,12 @@ O array aceita duas formas e o painel desenha cada uma de um jeito:
 
 Nas duas, `unidade` serve para o cartão resolver no card certo — sem ela, uma
 mudança sobre a cobertura cai no card de apartamento tipo.
+
+**Um card por evento, nunca um por unidade.** Quando cinco lotes do Imperial
+Park baixaram, o certo é um card sobre os lotes em geral, não cinco quase
+idênticos — o feed é para escanear o mês. Isso empurra para a forma narrativa
+sempre que o evento envolve mais de uma unidade, porque a numérica ignora o
+`texto`.
 
 ### Tabelas da Cetor (DUO, Bothanic, Imperial Park, Terraço Sky)
 
