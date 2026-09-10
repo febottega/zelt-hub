@@ -163,7 +163,8 @@ const PRICE_HISTORY = {
       "2026-05",
       "2026-06",
       "2026-07",
-      "2026-08"
+      "2026-08",
+      "2026-09"
     ],
     "fontes": [
       "Studios dez/2025 (03/12)",
@@ -174,9 +175,10 @@ const PRICE_HISTORY = {
       "2D mai/2026 (08/05)",
       "2D jun/2026 (05/06)",
       "2D jul/2026 (02/07)",
-      "2D e Studios ago/2026 (05/08)"
+      "2D e Studios ago/2026 (05/08)",
+      "2D set/2026 (10/09)"
     ],
-    "obs": "Em abril/2026 as unidades 1201 e 1301 trocaram de vaga e box entre si, e o preço acompanhou a troca — o degrau nesse mês é realocação de garagem, não desvalorização. Em maio voltaram à configuração original. Os 2 dormitórios estão com valor congelado desde junho/2026. O studio 1003 saiu da tabela entre janeiro e julho e voltou em agosto, por isso a lacuna.",
+    "obs": "Em abril/2026 as unidades 1201 e 1301 trocaram de vaga e box entre si, e o preço acompanhou a troca — o degrau nesse mês é realocação de garagem, não desvalorização. Em maio voltaram à configuração original. Os 2 dormitórios ficaram congelados de junho a agosto/2026 e em setembro subiram exatamente 0,2424%, o mesmo índice que a Novo Rumo aplicou no Balsini 195 e no N Studios no mesmo mês; a 1101 saiu da tabela nesse mês. O studio 1003 saiu da tabela entre janeiro e julho e voltou em agosto, por isso a lacuna; em setembro ele não acompanhou o reajuste dos 2 dormitórios e segue no valor de agosto, então a linha reta nesse mês é isso, não falta de dado.",
     "unidades": {
       "1003": [
         332741.16,
@@ -187,6 +189,7 @@ const PRICE_HISTORY = {
         null,
         null,
         null,
+        345213.26,
         345213.26
       ],
       "1101": [
@@ -198,7 +201,8 @@ const PRICE_HISTORY = {
         540189.64,
         545648.22,
         545648.22,
-        545648.22
+        545648.22,
+        null
       ],
       "1201": [
         null,
@@ -209,7 +213,8 @@ const PRICE_HISTORY = {
         553064.97,
         558653.65,
         558653.65,
-        558653.65
+        558653.65,
+        560008.07
       ],
       "1301": [
         null,
@@ -220,7 +225,8 @@ const PRICE_HISTORY = {
         572169.93,
         577951.66,
         577951.66,
-        577951.66
+        577951.66,
+        579352.87
       ]
     }
   },

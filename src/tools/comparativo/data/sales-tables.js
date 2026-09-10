@@ -2,7 +2,7 @@ const SALES_TABLES = {
   "Wissen": {
     "folderId": "1TQxbJtsFgqECLvO2y0Pja2REXij3cGwm",
     "source": "Tabela da construtora",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026 · studio conforme agosto",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -30,43 +30,31 @@ const SALES_TABLES = {
         "—"
       ],
       [
-        "1101",
-        "2 dormitórios · 84x + 7 reforços",
-        "58,49 m²",
-        "23",
-        "R$ 545.648,22",
-        "R$ 109.129,41",
-        "R$ 3.897,49",
-        "R$ 15.589,95",
-        "R$ 480.170,43",
-        "R$ 512.909,33"
-      ],
-      [
         "1201",
         "2 dormitórios · 84x + 7 reforços",
         "58,49 m²",
         "19",
-        "R$ 558.653,65",
-        "R$ 111.731,02",
-        "R$ 3.990,38",
-        "R$ 15.961,53",
-        "R$ 491.615,21",
-        "R$ 525.134,43"
+        "R$ 560.008,07",
+        "R$ 112.001,42",
+        "R$ 4.000,06",
+        "R$ 16.000,23",
+        "R$ 492.807,10",
+        "R$ 526.407,59"
       ],
       [
         "1301",
         "2 dormitórios · 84x + 7 reforços",
         "58,33 m²",
         "09 (Box 04)",
-        "R$ 577.951,66",
-        "R$ 115.590,04",
-        "R$ 4.128,23",
-        "R$ 16.512,90",
-        "R$ 508.597,46",
-        "R$ 543.274,56"
+        "R$ 579.352,87",
+        "R$ 115.870,97",
+        "R$ 4.138,23",
+        "R$ 16.552,94",
+        "R$ 509.830,53",
+        "R$ 544.591,70"
       ]
     ],
-    "note": "Últimas unidades. Tabela única reunindo as duas tipologias: 2 dormitórios (ato + 84 parcelas + 7 reforços anuais) e studio (ato + 60 parcelas + 5 reforços anuais). Descontos: nos 2 dormitórios, 12% à vista ou 6% em até 48 parcelas / financiamento bancário nas chaves; no studio, 10% à vista (não há condição de 48x). Ato em 31/08/2026, primeira parcela em 20/09/2026, primeiro reforço em 20/08/2027. Entrega: outubro/2028. Unidade 0701 saiu da tabela. Tabela gerada em 05/08/2026.",
+    "note": "Últimas unidades. Tabela única reunindo as duas tipologias: 2 dormitórios (ato + 84 parcelas + 7 reforços anuais) e studio (ato + 60 parcelas + 5 reforços anuais). Os 2 dormitórios são da tabela de setembro/2026 — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027 — e subiram exatamente 0,2424% sobre agosto, o mesmo índice que a Novo Rumo aplicou no Balsini 195 e no N Studios no mesmo mês. O studio 1003 não acompanhou o reajuste: o valor é o mesmo e a linha dele segue com os números da tabela de agosto (ato em 31/08/2026). Descontos: nos 2 dormitórios, 12% à vista ou 6% em até 48 parcelas / financiamento bancário nas chaves; no studio, 10% à vista, sem condição de 48x. Entrega: outubro/2028. Saíram da tabela a 0701, antes de agosto, e a 1101 em setembro. Todas as unidades constam como Disponível.",
     "summary": {
       "bits": [
         {
