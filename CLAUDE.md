@@ -76,7 +76,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **71 KB** |
 | os 58 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
-| mudanças de preço | `tools/comparativo/data/price-changes.js` | 7 KB |
+| mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
 | logos das construtoras | `tools/comparativo/data/logos.js` | 44 KB |
 | CSS do comparativo | `tools/comparativo/style.css` | 46 KB |
@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.737.530 bytes):
+Hash de referência (18 payloads, 11.742.646 bytes):
 
 ```
-5F2B73A9D8D296CD2AA6BB2AAE6EFEAC213207D63649DE4E65ABB4B92AEDDD90
+1CD02D65AE6B87939CC891479504083E7EA7B415C90E8AB81D8F5111B80FF91B
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -316,6 +316,75 @@ disponíveis.
 Para ler e validar os dados, `node` é o caminho mais curto — inclusive para dar
 `eval` num `.js` de dados e conferir contagens, ou `node --check` num script. O
 `ConvertFrom-Json` do PowerShell serve igual para as três linhas do `avaliacoes.html`.
+
+### Editar o price-history.js: por cirurgia de texto, não reserializando
+
+Dois detalhes desse arquivo derrubam qualquer abordagem de "ler, mexer no objeto
+e reescrever":
+
+- **Dois formatos convivem.** A maioria dos blocos é indentada (um valor por
+  linha), mas alguns estão numa linha só, no estilo do `json.dumps` do Python
+  (separadores `", "` e `": "`) — DUO Torre 1 e Torre 2, por exemplo.
+- **As chaves de `unidades` são numéricas** e o JavaScript reordena chaves
+  inteiras em ordem crescente. O Terraço Sky guarda `2101` antes de `604`; um
+  round-trip por objeto embaralha isso. São 12 dos 29 blocos.
+
+Então a edição é cirúrgica: ache o bloco pelo nome, ache o fim **casando as
+chaves** (ignorando o que está dentro de string — não procure `"\n  },\n"`, que
+só existe no formato indentado) e, dentro dele, emende o valor novo no fim de
+cada array. Tire o separador e a indentação do próprio array que está sendo
+editado e a mesma função serve para os dois formatos. O que não for tocado sai
+byte a byte igual. Sempre confira antes: abrir os 29 blocos e reescrevê-los sem
+alterar nada tem de devolver o arquivo idêntico.
+
+O mesmo vale para o `sales-tables.js` e o `empreendimentos.js`, com uma
+convenção de float por arquivo (`73.0` num, `0` noutro) e por campo — no
+`empreendimentos.js` só `apriv`, `atotal`, `vmin`, `vmax`, `media`, `rpriv` e
+`rtotal` levam `.0`; `vagasN`, `entregaKey`, `id`, `quartos` e `suites` são
+inteiros de verdade. O card `id 17` (Alameda Giardini) tem `"apriv": 117` sem o
+`.0` e é a exceção que existe no arquivo.
+
+### Duas formas no price-changes.js
+
+O array aceita duas formas e o painel desenha cada uma de um jeito:
+
+- **numérica** — `{ emp, unidade, de, para, data }`: desenha as duas cifras e o
+  selo "↓ Diminuiu R$ X · −Y%". **O campo `texto` é ignorado nessa forma.**
+- **narrativa** — `{ emp, tipoMudanca, dir, texto, data }`: desenha um selo com
+  o rótulo do tipo (`preco` → "Preços", `condicao` → "Condições de pagamento",
+  qualquer outra coisa → "Disponibilidade") e o texto ao lado.
+
+Nas duas, `unidade` serve para o cartão resolver no card certo — sem ela, uma
+mudança sobre a cobertura cai no card de apartamento tipo.
+
+### Tabelas da Cetor (DUO, Bothanic, Imperial Park, Terraço Sky)
+
+Vêm como print de planilha, com linhas vendidas riscadas e resolução ruim. Não
+há identidade interna como nas da Novo Rumo, mas há três amarras que provam a
+leitura:
+
+1. **O índice do mês.** Os valores são contratados em CUB e reajustados pela
+   variação do CUB/SC, então toda linha que não foi reprecificada sobe o mesmo
+   fator. Em setembro/2026 foram +0,2424% em 61 dos 63 pares agosto→setembro das
+   quatro tabelas — e o mesmo 0,2424% apareceu no Balsini 195, no N Studios e no
+   Wissen 2D, da Novo Rumo, que também indexam por CUB. Linha que fugir do fator
+   é justamente a que precisa de atenção.
+2. **A razão entre colunas.** No Bothanic o 60x/36x é constante (1,0591481 nas
+   23 linhas das duas torres, igual em agosto); no Terraço Sky o 60m/36m também;
+   no Imperial Park o 36M é exatamente 1,08 × o de 12 meses e o "especial à
+   vista" é 0,905249 × o de 12 meses. Em agosto o multiplicador de 36M era 1,12 —
+   quando ele muda, é a condição que ficou mais barata, não o preço.
+3. **As gêmeas.** Unidades de mesma área e mesmo andar têm o mesmo preço entre
+   torres: o 803 da torre B do Bothanic é igual ao 201 da torre A, o 1604 é igual
+   ao 1602, e no DUO o 1203 da torre 2 era igual ao 1702 da torre 1.
+
+Cuidado com a **coluna de vagas**: na resolução dos prints ela é o que erra mais.
+Em setembro 40 das 43 células bateram com agosto, o que mostra que a leitura é
+confiável — mas então as três que diferem são mudança de verdade e valem
+conferência, sobretudo quando geram contradição (a vaga 132 apareceu na 603 e na
+703 da torre B ao mesmo tempo). E a coluna de à vista do Terraço Sky sai do print
+com um defeito de formatação: "798.000.000" é R$ 798.000,00 — confirmado porque
+o apto 604 não mudou de valor e o número de agosto é conhecido.
 
 ### Cor de célula em PDF do Excel (tabelas da Castelo)
 

@@ -1051,7 +1051,7 @@ const SALES_TABLES = {
   "Imperial Park": {
     "folderId": "1-LRwkJkBx_HoeBMq93gjetb77mp1d1HS",
     "source": "Tabela da construtora (Cetor)",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Lote",
@@ -1066,44 +1066,44 @@ const SALES_TABLES = {
         "19",
         "14,21 m",
         "316,56 m²",
-        "R$ 422.721,63",
-        "R$ 466.969,30",
-        "R$ 523.005,62"
+        "R$ 406.709,55",
+        "R$ 449.281,18",
+        "R$ 485.223,68"
       ],
       [
         "20",
         "12,41 m",
         "294,27 m²",
-        "R$ 422.721,63",
-        "R$ 466.969,30",
-        "R$ 523.005,62"
+        "R$ 406.709,55",
+        "R$ 449.281,18",
+        "R$ 485.223,68"
       ],
       [
         "21",
         "12,41 m",
         "293,37 m²",
-        "R$ 422.721,63",
-        "R$ 466.969,30",
-        "R$ 523.005,62"
+        "R$ 406.709,55",
+        "R$ 449.281,18",
+        "R$ 485.223,68"
       ],
       [
         "31",
         "12,50 m",
         "285,68 m²",
-        "R$ 489.738,47",
-        "R$ 541.001,02",
-        "R$ 605.921,15"
+        "R$ 482.967,59",
+        "R$ 533.521,41",
+        "R$ 576.203,12"
       ],
       [
         "32",
         "12,50 m",
         "284,76 m²",
-        "R$ 489.738,47",
-        "R$ 541.001,02",
-        "R$ 605.921,15"
+        "R$ 482.967,59",
+        "R$ 533.521,41",
+        "R$ 576.203,12"
       ]
     ],
-    "note": "Loteamento — 5 lotes disponíveis. Condições: à vista, em 12 meses ou em até 36 meses; lotes 22 e 23 saíram da tabela. Todos os lotes baixaram de preço em relação a julho. Atenção: a coluna de à vista está rotulada como \"ESPECIAL\" e a planilha traz \"fim: 31/06/2026\" como validade — data inválida (junho tem 30 dias) e já vencida. Confirmar com a Cetor se o preço especial segue valendo antes de ofertar. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Loteamento — 5 lotes disponíveis, os mesmos de agosto. Todos baixaram de preço outra vez em setembro: os lotes 19, 20 e 21 de R$ 422.721,63 para R$ 406.709,55 à vista (−3,8%) e os 31 e 32 de R$ 489.738,47 para R$ 482.967,59 (−1,4%). E a condição parcelada ficou mais barata junto: o multiplicador de 36 meses caiu de 1,12 para 1,08 sobre o valor de 12 meses, então em 36x a queda é de 7,2% nos três primeiros lotes e de 4,9% nos outros dois. Atenção: a coluna de à vista está rotulada como \"ESPECIAL\" e a planilha continua trazendo \"fim: 31/06/2026\" como validade — data inválida (junho tem 30 dias) e já vencida. Confirmar com a Cetor se o preço especial segue valendo antes de ofertar. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "tipoDefault": "Lote",
       "andar": false,
@@ -1136,7 +1136,7 @@ const SALES_TABLES = {
   "Terraço Sky": {
     "folderId": "1Vt5PunscKc8s8e3NQZM2A-oxvnYJ1_ks",
     "source": "Tabela da construtora (Cetor)",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1151,9 +1151,9 @@ const SALES_TABLES = {
         "2101",
         "301,76 m²",
         "74, 128, 129 D",
-        "R$ 3.038.224,86",
-        "R$ 3.365.799,74",
-        "R$ 3.660.511,88"
+        "R$ 2.999.000,00",
+        "R$ 3.265.122,51",
+        "R$ 3.551.019,27"
       ],
       [
         "604",
@@ -1162,17 +1162,9 @@ const SALES_TABLES = {
         "R$ 798.000,00",
         "R$ 825.000,00",
         "R$ 880.000,00"
-      ],
-      [
-        "704",
-        "91,04 m²",
-        "36 (dupla)",
-        "R$ 818.000,00",
-        "R$ 845.000,00",
-        "R$ 900.000,00"
       ]
     ],
-    "note": "3 unidades disponíveis; apto 804 saiu da tabela. A cobertura 2101 (com piscina) é reajustada pelo CUB; os aptos 604 e 704 mantiveram exatamente o mesmo valor de julho. Vagas avulsas à venda (36x / 48x): vaga 45 R$ 69.917,73 / R$ 76.039,78; vaga 57 R$ 83.901,28 / R$ 91.247,74; vaga 61 dupla R$ 90.892,71 / R$ 98.851,35; vagas 69 e 73 R$ 69.917,73 / R$ 76.039,78; vaga 76 R$ 73.413,62 / R$ 79.841,77; vaga 77 dupla R$ 90.892,71 / R$ 98.851,35. A vaga 74 está reservada para a cobertura. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "2 unidades disponíveis; o apto 704 saiu da tabela em setembro. A cobertura 2101 (com piscina) baixou: o à vista saiu de R$ 3.038.224,86 para R$ 2.999.000,00 — número redondo, de campanha — e as condições parceladas caíram 2,99%. Não é o CUB: no mesmo mês todo o resto da Cetor subiu 0,2424%. O apto 604 segue exatamente no valor de julho e agosto. Vagas avulsas à venda (36x / 48x), conforme a tabela de agosto — o print de setembro não traz esse bloco: vaga 45 R$ 69.917,73 / R$ 76.039,78; vaga 57 R$ 83.901,28 / R$ 91.247,74; vaga 61 dupla R$ 90.892,71 / R$ 98.851,35; vagas 69 e 73 R$ 69.917,73 / R$ 76.039,78; vaga 76 R$ 73.413,62 / R$ 79.841,77; vaga 77 dupla R$ 90.892,71 / R$ 98.851,35. A vaga 74 está reservada para a cobertura. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -1202,7 +1194,7 @@ const SALES_TABLES = {
   "Bothanic - torre A": {
     "folderId": "1IG3ZM4gNMpMW1wkVMov0ruhiPok0mcF3",
     "source": "Tabela da construtora (Cetor) · Torre A",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1218,51 +1210,51 @@ const SALES_TABLES = {
         "156,07 m²",
         "224,65 m²",
         "110, 111",
-        "R$ 1.564.104,76",
-        "R$ 1.656.618,52"
+        "R$ 1.567.896,85",
+        "R$ 1.660.634,90"
       ],
       [
         "1501",
         "156,07 m²",
         "224,65 m²",
         "29, 30",
-        "R$ 1.937.915,97",
-        "R$ 2.052.539,93"
+        "R$ 1.942.614,33",
+        "R$ 2.057.516,19"
       ],
       [
         "1602",
         "140,59 m²",
         "202,37 m²",
         "112, 113",
-        "R$ 1.727.978,47",
-        "R$ 1.830.185,03"
+        "R$ 1.732.167,85",
+        "R$ 1.834.622,21"
       ],
       [
         "1702",
         "140,59 m²",
         "202,37 m²",
         "22 (c/ box 01), 23",
-        "R$ 1.816.592,75",
-        "R$ 1.924.040,68"
+        "R$ 1.820.996,97",
+        "R$ 1.928.705,40"
       ],
       [
         "1802",
         "140,59 m²",
         "202,37 m²",
         "24, 25 (c/ box)",
-        "R$ 1.883.053,46",
-        "R$ 1.994.432,41"
+        "R$ 1.887.618,81",
+        "R$ 1.999.267,80"
       ],
       [
         "1901",
         "327,56 m²",
         "458,07 m²",
         "52 (c/ box 13), 53, 54 (c/ box 15)",
-        "R$ 4.814.033,42",
-        "R$ 5.098.774,13"
+        "R$ 4.825.704,77",
+        "R$ 5.111.135,82"
       ]
     ],
-    "note": "Torre A — entrega prevista 30/09/2028. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC; valores e condições podem mudar sem aviso. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Torre A — entrega prevista 30/09/2028. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC; valores e condições podem mudar sem aviso. Em setembro as seis unidades subiram exatamente 0,2424% nas duas colunas, o índice do mês, e a razão entre 60x e 36x segue a mesma de agosto. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -1293,7 +1285,7 @@ const SALES_TABLES = {
   "Bothanic - torre B": {
     "folderId": "1IG3ZM4gNMpMW1wkVMov0ruhiPok0mcF3",
     "source": "Tabela especial de lançamento (Cetor) · Torre B",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1307,123 +1299,123 @@ const SALES_TABLES = {
         "203",
         "156,07 m²",
         "140, 142",
-        "R$ 1.460.814,83",
-        "R$ 1.547.219,18"
+        "R$ 1.464.356,49",
+        "R$ 1.550.970,33"
       ],
       [
         "204",
         "193,54 m²",
         "56, 57",
-        "R$ 1.736.942,92",
-        "R$ 1.839.679,71"
+        "R$ 1.741.154,03",
+        "R$ 1.844.139,91"
       ],
       [
         "303",
         "156,07 m²",
         "136, 138",
-        "R$ 1.490.326,24",
-        "R$ 1.578.476,14"
+        "R$ 1.493.939,45",
+        "R$ 1.582.303,06"
       ],
       [
         "403",
         "156,07 m²",
         "137, 139",
-        "R$ 1.505.081,94",
-        "R$ 1.594.104,61"
+        "R$ 1.508.730,93",
+        "R$ 1.597.969,43"
       ],
       [
         "503",
         "156,07 m²",
         "134, 135",
-        "R$ 1.519.837,65",
-        "R$ 1.609.733,09"
+        "R$ 1.523.522,41",
+        "R$ 1.613.635,79"
       ],
       [
         "603",
         "156,07 m²",
-        "127, 128",
-        "R$ 1.534.593,35",
-        "R$ 1.625.361,57"
+        "133, 132",
+        "R$ 1.538.313,89",
+        "R$ 1.629.302,16"
       ],
       [
         "703",
         "156,07 m²",
         "131, 132",
-        "R$ 1.549.349,06",
-        "R$ 1.640.990,04"
+        "R$ 1.553.105,37",
+        "R$ 1.644.968,53"
       ],
       [
         "803",
         "156,07 m²",
-        "60, 72",
-        "R$ 1.564.104,76",
-        "R$ 1.656.618,52"
+        "127, 128",
+        "R$ 1.567.896,85",
+        "R$ 1.660.634,90"
       ],
       [
         "1203",
         "156,07 m²",
         "20, 21",
-        "R$ 1.770.684,64",
-        "R$ 1.875.417,19"
+        "R$ 1.774.977,56",
+        "R$ 1.879.964,03"
       ],
       [
         "1303",
         "156,07 m²",
         "18, 19",
-        "R$ 1.770.684,64",
-        "R$ 1.875.417,19"
+        "R$ 1.774.977,56",
+        "R$ 1.879.964,03"
       ],
       [
         "1304",
         "140,59 m²",
         "73, 74",
-        "R$ 1.595.057,05",
-        "R$ 1.689.401,57"
+        "R$ 1.598.924,17",
+        "R$ 1.693.497,43"
       ],
       [
         "1504",
         "140,59 m²",
         "77, 78",
-        "R$ 1.701.394,18",
-        "R$ 1.802.028,34"
+        "R$ 1.705.519,12",
+        "R$ 1.806.397,25"
       ],
       [
         "1603",
         "156,07 m²",
         "129 (dupla), 130",
-        "R$ 1.918.241,69",
-        "R$ 2.031.701,96"
+        "R$ 1.922.892,36",
+        "R$ 2.036.627,70"
       ],
       [
         "1604",
         "140,59 m²",
         "79, 80",
-        "R$ 1.727.978,47",
-        "R$ 1.830.185,03"
+        "R$ 1.732.167,85",
+        "R$ 1.834.622,21"
       ],
       [
         "1704",
         "140,59 m²",
         "89, 90",
-        "R$ 1.794.439,18",
-        "R$ 1.900.576,77"
+        "R$ 1.798.789,69",
+        "R$ 1.905.184,60"
       ],
       [
         "1803",
         "156,07 m²",
         "67 (dupla), 68",
-        "R$ 2.065.798,75",
-        "R$ 2.187.986,72"
+        "R$ 2.070.807,16",
+        "R$ 2.193.291,37"
       ],
       [
         "1804",
         "140,59 m²",
         "87, 93",
-        "R$ 1.860.899,89",
-        "R$ 1.970.968,50"
+        "R$ 1.865.411,53",
+        "R$ 1.975.747,00"
       ]
     ],
-    "note": "Torre B — entrega prevista 30/09/2029. 17 unidades disponíveis; 304 e 404 saíram da tabela. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC. Preços de tabela cheia; a planilha ainda exibe uma coluna promocional \"ABR-MAI-JUN\" com desconto, mas essa janela já venceu e não foi reproduzida aqui — se a Cetor renovar a promoção, atualizo. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Torre B — entrega prevista 30/09/2029. 17 unidades disponíveis, as mesmas de agosto. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC: em setembro todas subiram exatamente 0,2424% nas duas colunas. Preços de tabela cheia; a planilha ainda exibe uma coluna promocional \"ABR-MAI-JUN\" com desconto, mas essa janela já venceu e não foi reproduzida aqui. Duas garagens mudaram de dono: a 803 ficou com as vagas 127 e 128, que eram da 603, e a 603 aparece com a 133 e a 132. Atenção: a 132 aparece também na 703 na tabela de setembro, o que não pode estar certo — confirmar a segunda vaga da 603 com a Cetor antes de prometer. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -1449,7 +1441,7 @@ const SALES_TABLES = {
   "DUO - Torre 1": {
     "folderId": "1P0v-dXRIuTq-nFrR8dFkNO-trR3POrmg",
     "source": "Tabela da construtora (Cetor) · Torre 1",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1457,7 +1449,7 @@ const SALES_TABLES = {
       "Área total",
       "Vagas",
       "60 meses",
-      "À vista (oferta)"
+      "DUO EXTRA (48 meses)"
     ],
     "rows": [
       [
@@ -1473,7 +1465,7 @@ const SALES_TABLES = {
         "159,75 m²",
         "233,04 m²",
         "153, 154",
-        "R$ 1.950.076,87",
+        "R$ 1.954.804,72",
         "—"
       ],
       [
@@ -1481,15 +1473,15 @@ const SALES_TABLES = {
         "159,75 m²",
         "233,04 m²",
         "137, 138",
-        "R$ 2.785.824,10",
+        "R$ 2.792.578,17",
         "—"
       ],
       [
         "2802",
         "159,75 m²",
         "233,04 m²",
-        "73 (c/ dep.), 98, 99",
-        "R$ 2.488.669,53",
+        "74 (c/ dep.), 98, 99",
+        "R$ 2.494.703,17",
         "—"
       ],
       [
@@ -1497,11 +1489,11 @@ const SALES_TABLES = {
         "159,75 m²",
         "233,04 m²",
         "82 (c/ dep.), 83, 84",
-        "R$ 2.692.963,30",
+        "R$ 2.699.492,23",
         "—"
       ]
     ],
-    "note": "Torre 1 — término previsto 30/11/2026. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC. A tabela de agosto traz apenas a coluna de 60 meses; a unidade 1502 aparece em bloco separado (\"DUO EXTRA À VISTA\") com preço só à vista de R$ 1.532.676,14 — provável distrato recolocado à venda, confirmar condição com a Cetor. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Torre 1 — término previsto 30/11/2026. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC: em setembro as quatro unidades com preço em 60 meses subiram exatamente 0,2424%, o índice do mês, sem nenhuma reprecificação. A unidade 1502 continua em bloco separado (\"DUO EXTRA\") e pelo mesmo valor de agosto, mas a condição mudou: era só à vista e agora aparece em 48 meses — mesma quantia, muito mais fácil de vender; confirmar com a Cetor antes de ofertar. A 2802 aparece com a vaga 74 no lugar da 73. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -1523,7 +1515,7 @@ const SALES_TABLES = {
       },
       "alternativas": [
         {
-          "bold": "À vista (oferta)",
+          "bold": "DUO EXTRA (48 meses)",
           "col": 5
         }
       ]
@@ -1532,7 +1524,7 @@ const SALES_TABLES = {
   "DUO - Torre 2": {
     "folderId": "1P0v-dXRIuTq-nFrR8dFkNO-trR3POrmg",
     "source": "Tabela da construtora (Cetor) · Torre 2",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1547,94 +1539,94 @@ const SALES_TABLES = {
         "339,50 m²",
         "454,02 m²",
         "22, 239 D (c/ box)",
-        "R$ 3.184.148,43"
+        "R$ 3.191.868,22"
       ],
       [
         "1203",
         "159,75 m²",
         "233,04 m²",
         "104, 105",
-        "R$ 1.950.076,87"
+        "R$ 1.973.421,91"
       ],
       [
         "1403",
         "159,75 m²",
         "233,04 m²",
         "94, 95",
-        "R$ 2.042.937,67"
+        "R$ 2.047.890,66"
       ],
       [
         "1503",
         "159,75 m²",
         "233,04 m²",
         "100, 101",
-        "R$ 2.191.514,96"
+        "R$ 2.196.828,16"
       ],
       [
         "1903",
         "159,75 m²",
         "233,04 m²",
         "202, 203",
-        "R$ 2.711.535,46"
+        "R$ 2.718.109,42"
       ],
       [
         "2004",
         "159,75 m²",
         "233,04 m²",
         "175, 176",
-        "R$ 2.042.937,67"
+        "R$ 2.047.890,66"
       ],
       [
         "2103",
         "159,75 m²",
         "233,04 m²",
         "173, 174",
-        "R$ 2.600.102,49"
+        "R$ 2.792.578,17"
       ],
       [
         "2703",
         "159,75 m²",
         "233,04 m²",
         "81, 171, 172",
-        "R$ 2.785.824,10"
+        "R$ 2.792.578,17"
       ],
       [
         "2803",
         "159,75 m²",
         "233,04 m²",
         "216, 166 D (c/ box)",
-        "R$ 2.878.684,91"
+        "R$ 2.885.664,11"
       ],
       [
         "2804",
         "159,75 m²",
         "233,04 m²",
         "89, 90, 91",
-        "R$ 2.507.241,69"
+        "R$ 2.513.320,35"
       ],
       [
         "2903",
         "159,75 m²",
         "233,04 m²",
         "233, 232 D",
-        "R$ 3.064.406,51"
+        "R$ 3.071.835,99"
       ],
       [
         "2904",
         "159,75 m²",
         "233,04 m²",
         "78 (c/ dep.), 221, 222",
-        "R$ 2.692.963,30"
+        "R$ 2.699.492,23"
       ],
       [
         "3004",
         "319,50 m²",
         "453,92 m²",
         "18, 240 D (c/ box)",
-        "R$ 5.751.982,34"
+        "R$ 5.765.927,69"
       ]
     ],
-    "note": "Torre 2 — término previsto 30/11/2028. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC. Unidade 1603 saiu da tabela. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Torre 2 — término previsto 30/11/2028. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC. Onze das treze unidades subiram exatamente 0,2424% em setembro, o índice do mês. Duas fugiram dele e valem conferência antes de ofertar: a 1203 subiu 1,20% (pelo índice seria R$ 1.954.804,72) e a 2103 subiu 7,40%, indo parar exatamente no valor da 2703 — em agosto a 1203 tinha o mesmo preço da 1702 da torre 1 e a 2103 era mais barata que a 1903, e as duas coincidências desapareceram de uma vez. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
