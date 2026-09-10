@@ -47,8 +47,16 @@ HUB/
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          12 relatórios históricos em base64 — nunca editar, nunca ler
+   └─ frozen/          12 relatórios históricos em base64 — nunca ler; editar só por script
 ```
+
+**`src/frozen/` não é intocável, é ilegível.** Cada `.b64` é uma linha de 500 a
+700 KB: ler custa contexto à toa e editar à mão é impossível. Quando precisar
+mexer (foi o caso das avaliações por corretor), faça por script: decodifique num
+temporário, aplique cada troca com guarda de "1 ocorrência", reencode em uma
+linha sem newline e **prove que o arquivo novo é o antigo mais as inserções
+previstas**. Cada `.b64` decodifica byte a byte — o round-trip é a primeira
+conferência a fazer.
 
 ## Inclusões: `@@FILE:caminho@@`
 
@@ -65,11 +73,11 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 
 | Quero mudar | Arquivo | Tamanho |
 |---|---|---|
-| lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **64 KB** |
+| lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **71 KB** |
 | os 58 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
-| histórico de preços | `tools/comparativo/data/price-history.js` | 48 KB |
-| mudanças de preço | `tools/comparativo/data/price-changes.js` | 5 KB |
-| tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 128 KB |
+| histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
+| mudanças de preço | `tools/comparativo/data/price-changes.js` | 7 KB |
+| tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
 | logos das construtoras | `tools/comparativo/data/logos.js` | 44 KB |
 | CSS do comparativo | `tools/comparativo/style.css` | 46 KB |
 | HTML/estrutura do comparativo | `tools/comparativo/layout.html` | 75 KB |
@@ -150,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.628.062 bytes):
+Hash de referência (18 payloads, 11.676.474 bytes):
 
 ```
-69C1FA40344094A4E262F0484B27CEC84CB0CD5C4F4B830A4E2E8B0B9C34A283
+4239E8E9BABF5F923435397CD4A6EB497BA10E642475852234C3067E40BAC39F
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -204,8 +212,61 @@ lista o que cada corretor sugeriu. Valor `null` é quem não avaliou e aparece c
 tem de ser o `CONFIG.numCorretores`, e a **média das sugestões numéricas de cada
 imóvel, ignorando os `null`, tem de dar o consenso (`k`)** — na rodada de 08/09
 fecha nos 19, com dois imóveis em que alguém não avaliou. O painel não guarda
-esses valores: eles ficam só no relatório, e as semanas congeladas seguem sem o
-bloco, o que não quebra nada.
+esses valores: eles ficam só no relatório.
+
+### Levar as avaliações por corretor para uma semana antiga
+
+O Felipe manda as respostas do formulário como HTML exportado do Google Sheets
+(`C:\Users\User\Downloads\Respostas ao formulário DD_MM.html`), e o nome do
+arquivo diz de que semana são os imóveis. Em 10/09/2026 entraram assim as cinco
+semanas de 04/08 a 01/09. **Faltam 28/07, 21/07, 14/07, 07/07, 30/06, 23/06 e
+16/06** — essas seguem sem o bloco, o que não quebra nada.
+
+O layout da planilha: coluna A carimbo, B nome, e daí em diante pares de colunas
+`"CÓDIGO - R$ anunciado"` + `"De uma nota ao imóvel acima:"`.
+
+Duas armadilhas, com a solução que funcionou:
+
+- **O texto vem à mão** e aparece de tudo: `750mil`, `R$ 1000m`, `7.9k`,
+  `1.600.000.00`, `R$280.0000,00`, `R$ 8 milhões`, `sem resposta`, `ok`, `N SEI`.
+  **Não** multiplique por mil no sufixo `mil`/`m`/`k` — alguém escreve
+  `R$ 990.000m` querendo 990 mil. Leia o número cru (vírgula = decimal; pontos
+  são milhar só quando todo grupo depois do primeiro tem 3 dígitos) e escolha a
+  ordem de grandeza pela potência de 10 que mais aproxima do **valor anunciado**.
+- **O formulário pode ter mais respostas do que o `CONFIG.numCorretores`** do
+  relatório, porque gente responde depois de o relatório ter sido gerado (em
+  18/08 sobrou uma, em 25/08 sobraram duas). Não adivinhe quem: **descubra**,
+  testando as combinações do tamanho certo e ficando com a única em que todos os
+  consensos da semana fecham. Nas duas vezes os excluídos foram exatamente os
+  últimos carimbos de data/hora — vale como conferência, não como critério.
+
+Depois disso a leitura fica provada por três caminhos independentes: a média dos
+valores dá o `k` de cada imóvel, a média das notas (coluna que não entrou em
+nada) dá o `n`, e o `nota_media` da semana bate com o KPI.
+
+**Como o bloco entra no congelado.** O relatório **não** é HTML estático: o
+`gerar()` roda no load e reconstrói a página. Então emendar o HTML gerado não
+serve — tem de entrar no gerador. São quatro pontos, e as âncoras são idênticas e
+únicas nos treze arquivos:
+
+| ponto | âncora | o que fazer |
+|---|---|---|
+| CSS | `.dw-verdict,.dw-vals,…{break-inside:avoid;…}\n  }\n` | emendar o bloco `.av-*` depois dela |
+| dados + funções | `var corBanda = function corBanda(k)` | emendar antes: `CORRETORES_SEMANA`, `AVALIACOES`, `avalRows`, `avaliacoesHTML`, `avaliaramHTML` |
+| ficha do imóvel | `</div>\n      <div class=\"dw-foot\">").concat(markImg(16)` | virar `</div>", avaliacoesHTML(o.code), "\n      …` |
+| página 1 | `.concat(destaquesBlock, "</div>"` | virar `.concat(avaliaramHTML(), destaquesBlock, "</div>"` |
+
+O CSS e as duas funções devem ser **fatiados do próprio `avaliacao.html`** da
+semana atual, nunca redigitados, para as semanas antigas ficarem com o mesmo
+código. O `head()` do modelo é uma `var` local do `gerar()`, então o
+`avaliaramHTML()` emite o `<div class="sec-head">…</div>` literal em vez de
+chamá-lo. Não mexa em `src/frozen` à mão: decodifique num temporário, aplique com
+guarda de "1 ocorrência" por âncora, reencode em **uma linha sem newline** e
+prove que o arquivo novo é o antigo mais as inserções previstas — nada mais.
+
+A página 1 aguenta o bloco novo: o gerador escala a folha, e as seis semanas com
+o bloco fecham todas com os mesmos 33px de folga, de 3 a 10 chips de corretor.
+No PDF do imóvel e na impressão o bloco fica `display:none`.
 
 **Ferramentas nesta máquina:** `node` (v24.19.0) e `npx` existem e rodam direto, tanto
 no bash quanto no PowerShell. `python` **não** existe: o `python` do PATH é o atalho da

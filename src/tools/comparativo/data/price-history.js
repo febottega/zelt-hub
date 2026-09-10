@@ -58,7 +58,8 @@ const PRICE_HISTORY = {
       "2026-05",
       "2026-06",
       "2026-07",
-      "2026-08"
+      "2026-08",
+      "2026-09"
     ],
     "fontes": [
       "Lançamento jan/2026 (22/01)",
@@ -68,8 +69,10 @@ const PRICE_HISTORY = {
       "Vendas mai/2026 (08/05)",
       "Vendas jun/2026 (05/06)",
       "Vendas jul/2026 (13/07)",
-      "Vendas ago/2026 (05/08)"
+      "Vendas ago/2026 (05/08)",
+      "Vendas set/2026"
     ],
+    "obs": "Série mensal completa de jan a set/2026, nove pontos sem falha. A tabela é indexada, então cada degrau aqui é correção e não decisão de preço: no acumulado de janeiro a setembro as três unidades que restam fizeram exatamente os mesmos +5,08%, e o reajuste de setembro foi de 0,2424% em todas. Em set/2026 saíram a 802, a 1005, a 1205 e a 1301 — a série guarda os números delas, mas a aba Investimentos só mostra o que ainda está na tabela de vendas. A 1501 trocou a vaga 14 pela 45 no mesmo mês, as duas duplas, e o preço não se moveu além do índice.",
     "unidades": {
       "802": [
         499352.62,
@@ -79,7 +82,8 @@ const PRICE_HISTORY = {
         508920.59,
         514063.19,
         518275.31,
-        523458.06
+        523458.06,
+        null
       ],
       "1005": [
         508087.38,
@@ -89,7 +93,8 @@ const PRICE_HISTORY = {
         517822.72,
         523055.28,
         527341.08,
-        532614.49
+        532614.49,
+        null
       ],
       "1205": [
         523444.32,
@@ -99,7 +104,8 @@ const PRICE_HISTORY = {
         533473.91,
         538864.62,
         543279.96,
-        548712.76
+        548712.76,
+        null
       ],
       "1301": [
         571638.97,
@@ -109,7 +115,8 @@ const PRICE_HISTORY = {
         582592.01,
         588479.06,
         593300.93,
-        599233.94
+        599233.94,
+        null
       ],
       "1305": [
         531296.0,
@@ -119,7 +126,8 @@ const PRICE_HISTORY = {
         541476.03,
         546947.6,
         551429.17,
-        556943.46
+        556943.46,
+        558293.74
       ],
       "1401": [
         578682.03,
@@ -129,7 +137,8 @@ const PRICE_HISTORY = {
         589770.01,
         595729.59,
         600610.87,
-        606616.98
+        606616.98,
+        608087.69
       ],
       "1501": [
         586890.74,
@@ -139,7 +148,8 @@ const PRICE_HISTORY = {
         598136.02,
         604180.14,
         609130.66,
-        615221.97
+        615221.97,
+        616713.54
       ]
     }
   },
@@ -219,147 +229,192 @@ const PRICE_HISTORY = {
       "2026-06-18",
       "2026-07-02",
       "2026-07-14",
-      "2026-08-05"
+      "2026-08-05",
+      "2026-09-09"
     ],
     "fontes": [
       "Lançamento jun/2026 (18/06)",
       "Lançamento jul/2026 (02/07)",
       "Lançamento jul/2026 – 2ª revisão (14/07)",
-      "Lançamento ago/2026 (05/08)"
+      "Lançamento ago/2026 (05/08)",
+      "Lançamento set/2026 (09/09)"
     ],
-    "obs": "A Novo Rumo reajustou a tabela em 02/07 (+0,82% em todas as unidades) e depois fez uma revisão em 14/07 que reduziu o preço da maior parte das unidades — algumas voltaram para abaixo do valor de junho. Os valores de agosto são iguais aos dessa 2ª revisão de julho. As unidades 305, 403 e 405 entraram na tabela depois de junho, por isso as lacunas.",
+    "obs": "Leia primeiro: as linhas da 107, da 203 e da 207 caem cerca de 15% em set/2026 e isso NÃO é queda de preço — as três perderam a vaga de garagem (a 03, a 06 e a 09) e passaram a ser um produto diferente. Aplicando o índice do mês no valor de agosto e descontando o de setembro, a diferença é de R$ 60.145,46 nas três, ao centavo: é o preço da vaga nesta tabela. A valorização média do empreendimento fica em −4,08% por causa delas; nas outras doze unidades, que não mudaram de configuração, é −1,13%. Fora isso: a Novo Rumo reajustou a tabela em 02/07 (+0,82% em todas as unidades) e depois fez uma revisão em 14/07 que reduziu o preço da maior parte das unidades — algumas voltaram para abaixo do valor de junho. Os valores de agosto são iguais aos dessa 2ª revisão de julho, e setembro é o primeiro reajuste desde então: +0,2424% em todas. As unidades 305, 403 e 405 entraram na tabela depois de junho, por isso as lacunas; em set/2026 entraram a 602, a 604 e a 802 e saíram 101, 106, 206, 301, 303, 305 e 1003.",
     "unidades": {
       "101": [
         322530.39,
         325173.13,
         310223.04,
-        310223.04
+        310223.04,
+        null
       ],
       "106": [
         325418.75,
         328085.16,
         311913.67,
-        311913.67
+        311913.67,
+        null
       ],
       "107": [
         404987.56,
         408305.94,
         396018.77,
-        396018.77
+        396018.77,
+        336833.43
       ],
       "201": [
         329690.64,
         332392.05,
         317441.27,
-        317441.27
+        317441.27,
+        318210.89
       ],
       "203": [
         412203.74,
         415581.25,
         403075.15,
-        403075.15
+        403075.15,
+        343906.92
       ],
       "204": [
         340948.07,
         343741.72,
         328789.85,
-        328789.85
+        328789.85,
+        329586.98
       ],
       "206": [
         307640.01,
         310160.75,
         295212.1,
-        295212.1
+        295212.1,
+        null
       ],
       "207": [
         394855.94,
         398091.3,
         398091.3,
-        398091.3
+        398091.3,
+        338910.98
       ],
       "301": [
         336997.02,
         339758.3,
         324806.8,
-        324806.8
+        324806.8,
+        null
       ],
       "303": [
         420616.06,
         424062.5,
         424062.5,
-        424062.5
+        424062.5,
+        null
       ],
       "304": [
         348484.18,
         351339.58,
         336386.99,
-        336386.99
+        336386.99,
+        337202.54
       ],
       "305": [
         null,
         303200.78,
         293327.14,
-        293327.14
+        293327.14,
+        null
       ],
       "306": [
         314496.37,
         317073.28,
         302123.98,
-        302123.98
+        302123.98,
+        302856.46
       ],
       "307": [
         402561.41,
         405859.91,
         405859.91,
-        405859.91
+        405859.91,
+        406843.89
       ],
       "401": [
         344452.5,
         347274.87,
         332322.66,
-        332322.66
+        332322.66,
+        333128.36
       ],
       "403": [
         null,
         null,
         324126.91,
-        324126.91
+        324126.91,
+        324912.74
       ],
       "405": [
         null,
         null,
         null,
-        419137.08
+        419137.08,
+        420153.25
       ],
       "501": [
         342402.0,
         345207.57,
         339578.44,
-        339578.44
+        339578.44,
+        340401.73
       ],
       "601": [
         331032.6,
         333745.01,
         341745.01,
-        341745.01
+        341745.01,
+        342573.55
+      ],
+      "602": [
+        null,
+        null,
+        null,
+        null,
+        382124.27
+      ],
+      "604": [
+        null,
+        null,
+        null,
+        null,
+        367930.54
+      ],
+      "802": [
+        null,
+        null,
+        null,
+        null,
+        397562.09
       ],
       "901": [
         424807.63,
         428288.41,
         415071.49,
-        415071.49
+        415071.49,
+        416077.81
       ],
       "1001": [
         609285.37,
         614277.72,
         614277.72,
-        614277.72
+        614277.72,
+        615767.0
       ],
       "1003": [
         589321.99,
         594150.77,
         594150.77,
-        594150.77
+        594150.77,
+        null
       ]
     }
   },
