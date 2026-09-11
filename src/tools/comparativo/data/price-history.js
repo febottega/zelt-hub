@@ -1,18 +1,18 @@
 const PRICE_HISTORY = {
   "San Vito": {
-   datas: ["2025-02","2026-03","2026-04","2026-05","2026-06","2026-07","2026-08"],
-   fontes: ["Tabela válida até 28/02/2025","Tabela válida até 30/03/2026","Tabela válida até 30/04/2026","Tabela válida até 31/05/2026","Tabela válida até 30/06/2026","Tabela válida até 31/07/2026","Tabela vigente em ago/2026"],
+   datas: ["2025-02","2026-03","2026-04","2026-05","2026-06","2026-07","2026-08","2026-09"],
+   fontes: ["Tabela válida até 28/02/2025","Tabela válida até 30/03/2026","Tabela válida até 30/04/2026","Tabela válida até 31/05/2026","Tabela válida até 30/06/2026","Tabela válida até 31/07/2026","Tabela vigente em ago/2026","Tabela vigente em set/2026"],
    obs: "Tabela de preço fechado, sem indexação — cada mudança de valor aqui é decisão da HR Sul, não índice. São sete levantamentos, mas com um vão de 13 meses entre fev/2025 e mar/2026, e é dentro desse vão que todo o movimento de preço aconteceu: de março a agosto de 2026 nenhum dos nove valores mudou um real em seis tabelas seguidas. Ou seja, as datas exatas dos reajustes não são determináveis com o material disponível. E o movimento não foi uniforme — é essa a leitura do empreendimento. O apto 402, o maior tipo do bloco com 125,95 m², subiu 8,20% (R$ 915.000 → R$ 990.000). Já o 403 e o 404 CAÍRAM 5,80% cada, R$ 40.000 a menos (R$ 690.000 → R$ 650.000): são as duas únicas quedas de preço registradas neste empreendimento. As configurações de vaga não mudaram entre as duas épocas — a tabela de fev/2025 já trazia duas vagas no 402 (77-78), três no 1701 e duas no 1704 —, então isso é preço mesmo, não troca de pacote como aconteceu no Ed. Toulouse. O apto 1304 saiu da tabela de mar a jun/2026 e voltou em jul/2026 a R$ 590.000, 2,61% acima dos R$ 575.000 de fev/2025; daí o intervalo em branco na linha dele. O 1404, o 1701 e o 1704 estão com o mesmo preço há 18 meses. O estoque encolheu forte: a tabela de fev/2025 trazia 39 unidades com preço, a de ago/2026 tem 9, mais 6 reservadas. Sobre a entrega: a tabela de fev/2025 informava dez/2027, e as tabelas de 2026 deixaram de trazer essa linha — o card usa jul/2027, que não vem de nenhuma dessas tabelas e precisa ser confirmado com a HR Sul.",
    unidades: {
-    "402": [915000,990000,990000,990000,990000,990000,990000],
-    "403": [690000,650000,650000,650000,650000,650000,650000],
-    "404": [690000,650000,650000,650000,650000,650000,650000],
-    "1204": [566000,585000,585000,585000,585000,585000,585000],
-    "1304": [575000,null,null,null,null,590000,590000],
-    "1404": [595000,595000,595000,595000,595000,595000,595000],
-    "1503": [622000,630000,630000,630000,630000,630000,630000],
-    "1701": [2199000,2199000,2199000,2199000,2199000,2199000,2199000],
-    "1704": [1745000,1745000,1745000,1745000,1745000,1745000,1745000]
+    "402": [915000,990000,990000,990000,990000,990000,990000,990000],
+    "403": [690000,650000,650000,650000,650000,650000,650000,650000],
+    "404": [690000,650000,650000,650000,650000,650000,650000,650000],
+    "1204": [566000,585000,585000,585000,585000,585000,585000,585000],
+    "1304": [575000,null,null,null,null,590000,590000,590000],
+    "1404": [595000,595000,595000,595000,595000,595000,595000,595000],
+    "1503": [622000,630000,630000,630000,630000,630000,630000,630000],
+    "1701": [2199000,2199000,2199000,2199000,2199000,2199000,2199000,2199000],
+    "1704": [1745000,1745000,1745000,1745000,1745000,1745000,1745000,1745000]
    }
   },
   "Ed. Toulouse": {
@@ -803,28 +803,28 @@ const PRICE_HISTORY = {
   "Tulum - Studios": {
    datas: ["2026-09"],
    fontes: ["Tabela set/2026 · tabela 00 (lançamento)"],
-   obs: "Studios de 1 dormitório do Tulum, 7 das 39 disponíveis. Base: o total em 72x, a mesma dos cards e a mesma regra das outras séries (o total da condição principal). Só existe um levantamento até agora — a tabela 00, de lançamento, de setembro/2026 —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a tabela de outubro. A amostra não é a tabela inteira: são unidades escolhidas para cobrir todas as áreas do tipo, os extremos de preço e o maior espalhamento de andares, do jeito que as outras séries longas fazem. Preço de tabela fechada com uma vaga inclusa; o total não é indexado ao CUB, só as parcelas.",
+   obs: "Studios de 1 dormitório do Tulum, 9 das 42 disponíveis. Base: o total em 72x, a mesma dos cards e a mesma regra das outras séries (o total da condição principal). Só existe um levantamento até agora — a tabela 00, de lançamento, de setembro/2026 —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a tabela de outubro. A amostra não é a tabela inteira: são unidades escolhidas para cobrir todas as áreas do tipo, os extremos de preço e o maior espalhamento de andares, do jeito que as outras séries longas fazem. Preço de tabela fechada com uma vaga inclusa; o total não é indexado ao CUB, só as parcelas.",
    unidades: {
     "504": [368501.4],
+    "505": [523307.96],
     "609": [388108.26],
     "709": [391950.91],
     "809": [395793.57],
     "1009": [399636.22],
     "1103": [398146.56],
+    "1302": [518255.84],
     "1408": [415006.85]
    }
   },
   "Tulum - 2 dormitórios": {
    datas: ["2026-09"],
    fontes: ["Tabela set/2026 · tabela 00 (lançamento)"],
-   obs: "Apartamentos de 2 dormitórios do Tulum, 7 dos 17 disponíveis. Base: o total em 72x, a mesma dos cards e a mesma regra das outras séries (o total da condição principal). Só existe um levantamento até agora — a tabela 00, de lançamento, de setembro/2026 —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a tabela de outubro. A amostra não é a tabela inteira: são unidades escolhidas para cobrir todas as áreas do tipo, os extremos de preço e o maior espalhamento de andares, do jeito que as outras séries longas fazem. Preço de tabela fechada com uma vaga inclusa; o total não é indexado ao CUB, só as parcelas.",
+   obs: "Apartamentos de 2 dormitórios do Tulum, 5 dos 14 disponíveis. Base: o total em 72x, a mesma dos cards e a mesma regra das outras séries (o total da condição principal). Só existe um levantamento até agora — a tabela 00, de lançamento, de setembro/2026 —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a tabela de outubro. A amostra não é a tabela inteira: são unidades escolhidas para cobrir todas as áreas do tipo, os extremos de preço e o maior espalhamento de andares, do jeito que as outras séries longas fazem. Preço de tabela fechada com uma vaga inclusa; o total não é indexado ao CUB, só as parcelas.",
    unidades: {
-    "505": [523307.96],
     "507": [630213.8],
     "707": [588758.03],
     "806": [656349.22],
     "1007": [600302.3],
-    "1302": [518255.84],
     "1406": [688210.83]
    }
   }

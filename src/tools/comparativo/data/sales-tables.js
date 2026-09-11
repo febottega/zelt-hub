@@ -102,7 +102,7 @@ const SALES_TABLES = {
   "San Vito": {
     "folderId": "1dI6c3bo7nUM47TfvNrpfgzerssDc4CLp",
     "source": "Tabela da construtora (HR Sul) · Bloco A",
-    "ref": "Agosto/2026",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Apto",
@@ -176,7 +176,7 @@ const SALES_TABLES = {
         "R$ 1.745.000,00"
       ]
     ],
-    "note": "Bloco A (João Pessoa). Mostrando apenas unidades disponíveis; 601, 602, 803, 902, 1004 e 1501 estão reservadas e as demais indisponíveis. Vaga extra de garagem: R$ 65.000,00. Valores vigentes em agosto/2026 — os preços não mudaram em relação ao mês anterior. Obs.: a HR Sul não atualiza os rótulos internos do arquivo, que ainda traz título de maio e \"válida até 31/06/2026\"; desconsiderar. Disponibilidade e número da vaga devem ser confirmados na negociação. Entrega: a única tabela que informa previsão é a de fev/2025, que traz dez/2027; as tabelas de 2026 removeram essa linha — a data do card (jul/2027) não vem dessas tabelas e precisa ser confirmada com a HR Sul.",
+    "note": "Bloco A (João Pessoa). Mostrando apenas unidades disponíveis; 601, 602, 803, 902, 1004 e 1501 estão reservadas e as demais indisponíveis. Vaga extra de garagem: R$ 65.000,00. Valores vigentes em setembro/2026 — a HR Sul emitiu a tabela do mês com os mesmos valores, as mesmas condições e as mesmas unidades de agosto. Obs.: a HR Sul não atualiza os rótulos internos do arquivo, que ainda traz título de maio e \"válida até 31/06/2026\"; desconsiderar. Disponibilidade e número da vaga devem ser confirmados na negociação. Entrega: a única tabela que informa previsão é a de fev/2025, que traz dez/2027; as tabelas de 2026 removeram essa linha — a data do card (jul/2027) não vem dessas tabelas e precisa ser confirmada com a HR Sul.",
     "summary": {"tipos": {"404": "Terraço"}, 
       "bits": [
         {
@@ -1154,17 +1154,9 @@ const SALES_TABLES = {
         "R$ 2.999.000,00",
         "R$ 3.265.122,51",
         "R$ 3.551.019,27"
-      ],
-      [
-        "604",
-        "91,04 m²",
-        "37 (dupla)",
-        "R$ 798.000,00",
-        "R$ 825.000,00",
-        "R$ 880.000,00"
       ]
     ],
-    "note": "2 unidades disponíveis; o apto 704 saiu da tabela em setembro. A cobertura 2101 (com piscina) baixou: o à vista saiu de R$ 3.038.224,86 para R$ 2.999.000,00 — número redondo, de campanha — e as condições parceladas caíram 2,99%. Não é o CUB: no mesmo mês todo o resto da Cetor subiu 0,2424%. O apto 604 segue exatamente no valor de julho e agosto. Vagas avulsas à venda (36x / 48x), conforme a tabela de agosto — o print de setembro não traz esse bloco: vaga 45 R$ 69.917,73 / R$ 76.039,78; vaga 57 R$ 83.901,28 / R$ 91.247,74; vaga 61 dupla R$ 90.892,71 / R$ 98.851,35; vagas 69 e 73 R$ 69.917,73 / R$ 76.039,78; vaga 76 R$ 73.413,62 / R$ 79.841,77; vaga 77 dupla R$ 90.892,71 / R$ 98.851,35. A vaga 74 está reservada para a cobertura. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Resta a cobertura 2101. O apto 704 saiu da tabela em setembro e o 604 foi vendido em 11/09/2026, depois de a tabela do mês ter saído — por isso ele ainda aparece com valor no histórico de setembro. A cobertura 2101 (com piscina) baixou: o à vista saiu de R$ 3.038.224,86 para R$ 2.999.000,00 — número redondo, de campanha — e as condições parceladas caíram 2,99%. Não é o CUB: no mesmo mês todo o resto da Cetor subiu 0,2424%. O apto 604 tinha ficado exatamente no valor de julho e agosto até ser vendido. Vagas avulsas à venda (36x / 48x), conforme a tabela de agosto — o print de setembro não traz esse bloco: vaga 45 R$ 69.917,73 / R$ 76.039,78; vaga 57 R$ 83.901,28 / R$ 91.247,74; vaga 61 dupla R$ 90.892,71 / R$ 98.851,35; vagas 69 e 73 R$ 69.917,73 / R$ 76.039,78; vaga 76 R$ 73.413,62 / R$ 79.841,77; vaga 77 dupla R$ 90.892,71 / R$ 98.851,35. A vaga 74 está reservada para a cobertura. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -4002,6 +3994,16 @@ const SALES_TABLES = {
         "R$ 22.110,08"
       ],
       [
+        "505",
+        "70,66 m²",
+        "R$ 455.050,40",
+        "R$ 491.454,43",
+        "R$ 523.307,96",
+        "R$ 78.496,19",
+        "R$ 3.561,40",
+        "R$ 31.398,48"
+      ],
+      [
         "508",
         "36,32 m²",
         "R$ 334.144,00",
@@ -4272,6 +4274,16 @@ const SALES_TABLES = {
         "R$ 24.439,29"
       ],
       [
+        "1302",
+        "49,55 m²",
+        "R$ 450.657,25",
+        "R$ 486.709,83",
+        "R$ 518.255,84",
+        "R$ 77.738,38",
+        "R$ 3.527,02",
+        "R$ 31.095,35"
+      ],
+      [
         "1303",
         "35,84 m²",
         "R$ 352.808,96",
@@ -4320,6 +4332,16 @@ const SALES_TABLES = {
         "R$ 61.674,63",
         "R$ 2.798,20",
         "R$ 24.669,85"
+      ],
+      [
+        "1402",
+        "49,55 m²",
+        "R$ 454.869,00",
+        "R$ 491.258,52",
+        "R$ 523.099,35",
+        "R$ 78.464,90",
+        "R$ 3.559,98",
+        "R$ 31.385,96"
       ],
       [
         "1403",
@@ -4372,7 +4394,7 @@ const SALES_TABLES = {
         "R$ 24.900,41"
       ]
     ],
-    "note": "Studios de 1 dormitório: 39 das 40 unidades do tipo estão disponíveis (1 reservada pela Hill). Os apartamentos de 2 dormitórios estão na tabela \"Tulum - 2 dormitórios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
+    "note": "Unidades de 1 dormitório: 42 das 43 do tipo estão disponíveis (1 reservada pela Hill). Em 11/09/2026 as unidades 505, 1302 e 1402 vieram da tabela de 2 dormitórios — são de 1 dormitório, e estavam classificadas errado na leitura da tabela 00. O preço delas não mudou; a 505, com 70,66 m², é bem maior que os studios de 34 a 36 m² e puxa a faixa de área desta tabela. Os apartamentos de 2 dormitórios estão na tabela \"Tulum - 2 dormitórios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
     "summary": {
       "tipoDefault": "Studio (1 dormitório)",
       "situacao": "Disponível",
@@ -4447,16 +4469,6 @@ const SALES_TABLES = {
         "R$ 95.584,84",
         "R$ 4.336,72",
         "R$ 38.233,94"
-      ],
-      [
-        "505",
-        "70,66 m²",
-        "R$ 455.050,40",
-        "R$ 491.454,43",
-        "R$ 523.307,96",
-        "R$ 78.496,19",
-        "R$ 3.561,40",
-        "R$ 31.398,48"
       ],
       [
         "507",
@@ -4549,16 +4561,6 @@ const SALES_TABLES = {
         "R$ 36.710,79"
       ],
       [
-        "1302",
-        "49,55 m²",
-        "R$ 450.657,25",
-        "R$ 486.709,83",
-        "R$ 518.255,84",
-        "R$ 77.738,38",
-        "R$ 3.527,02",
-        "R$ 31.095,35"
-      ],
-      [
         "1306",
         "65,19 m²",
         "R$ 592.903,05",
@@ -4579,16 +4581,6 @@ const SALES_TABLES = {
         "R$ 37.057,12"
       ],
       [
-        "1402",
-        "49,55 m²",
-        "R$ 454.869,00",
-        "R$ 491.258,52",
-        "R$ 523.099,35",
-        "R$ 78.464,90",
-        "R$ 3.559,98",
-        "R$ 31.385,96"
-      ],
-      [
         "1406",
         "65,19 m²",
         "R$ 598.444,20",
@@ -4599,7 +4591,7 @@ const SALES_TABLES = {
         "R$ 41.292,65"
       ]
     ],
-    "note": "Apartamentos de 2 dormitórios: 17 das 35 unidades do tipo estão disponíveis (18 reservadas pela Hill). Os studios estão na tabela \"Tulum - Studios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
+    "note": "Apartamentos de 2 dormitórios: 14 das 32 do tipo estão disponíveis (18 reservadas pela Hill). Em 11/09/2026 as unidades 505, 1302 e 1402 saíram daqui para a tabela de 1 dormitório, onde é o lugar delas. Os studios estão na tabela \"Tulum - Studios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
     "summary": {
       "tipoDefault": "Apartamento 2 dormitórios",
       "situacao": "Disponível",
