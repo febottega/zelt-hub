@@ -34,19 +34,19 @@ const PRICE_HISTORY = {
    }
   },
   "Lisbon": {
-   datas: ["2026-04","2026-05","2026-06","2026-07","2026-08"],
-   fontes: ["Tabela abr/2026 · CUB R$ 3.037,72","Tabela mai/2026 · CUB R$ 3.064,10","Tabela jun/2026 – CUB R$ 3.096,25","Tabela jul/2026 – CUB R$ 3.121,62","Tabela ago/2026 – CUB R$ 3.151,24"],
-   obs: "Série de nove unidades em cinco tabelas mensais consecutivas, sem lacuna. Os valores subiram 3,74% de abril a agosto, mas isso é apenas a indexação do CUB (R$ 3.037,72 → R$ 3.151,24): a contagem de CUBs de cada unidade não mudou uma vez em cinco meses, então a Idea Quattro não reprecificou nenhum apartamento no período — todos os 45 pontos da série conferem como CUB inteiro. A disponibilidade também ficou parada: as mesmas 9 unidades à venda e as mesmas 5 vendidas (502, 601, 701, 902 e cobertura 1001) de abril a agosto. A série usa o total da condição de 60x, a mesma base dos cards. Três mudanças reais aconteceram fora do preço em CUB: (1) abril era PRÉ-LANÇAMENTO, com desconto de 12% no 36x e de 20% nos aptos 602 e 901; de maio em diante virou LANÇAMENTO com 10% para todos, ou seja, quem compra em 36x paga mais agora — o 602 e o 901 encareceram cerca de 12,5% nessa condição; (2) o juro pós-chaves subiu de INPC + 0,45% a.m. em abril para INPC + 0,75% a.m. de maio em diante; (3) a entrega prevista era dezembro/2028 nas tabelas de abril a julho e passou para julho/2029 na de agosto. A cobertura 1002 manteve desconto de 5% no 36x em todos os meses.",
+   datas: ["2026-04","2026-05","2026-06","2026-07","2026-08","2026-09"],
+   fontes: ["Tabela abr/2026 · CUB R$ 3.037,72","Tabela mai/2026 · CUB R$ 3.064,10","Tabela jun/2026 – CUB R$ 3.096,25","Tabela jul/2026 – CUB R$ 3.121,62","Tabela ago/2026 – CUB R$ 3.151,24","Tabela set/2026 – CUB R$ 3.158,88"],
+   obs: "Série de nove unidades em seis tabelas mensais consecutivas, sem lacuna. Os valores subiram 3,99% de abril a setembro, mas isso é apenas a indexação do CUB (R$ 3.037,72 → R$ 3.158,88): a contagem de CUBs de cada unidade não mudou uma vez em seis meses, então a Idea Quattro não reprecificou nenhum apartamento no período — todos os 54 pontos da série conferem como CUB inteiro. A disponibilidade também ficou parada: as mesmas 9 unidades à venda e as mesmas 5 vendidas (502, 601, 701, 902 e cobertura 1001) de abril a setembro. A série usa o total da condição de 60x, a mesma base dos cards. Três mudanças reais aconteceram fora do preço em CUB: (1) abril era PRÉ-LANÇAMENTO, com desconto de 12% no 36x e de 20% nos aptos 602 e 901; de maio em diante virou LANÇAMENTO com 10% para todos, ou seja, quem compra em 36x paga mais agora — o 602 e o 901 encareceram cerca de 12,5% nessa condição; (2) o juro pós-chaves subiu de INPC + 0,45% a.m. em abril para INPC + 0,75% a.m. de maio em diante; (3) a entrega prevista era dezembro/2028 nas tabelas de abril a julho e passou para julho/2029 na de agosto. A cobertura 1002 manteve desconto de 5% no 36x em todos os meses.",
    unidades: {
-    "401": [2339044.4,2359357,2384112.5,2403647.4,2426454.8],
-    "402": [2764325.2,2788331,2817587.5,2840674.2,2867628.4],
-    "501": [1807443.4,1823139.5,1842268.75,1857363.9,1874987.8],
-    "602": [1822632,1838460,1857750,1872972,1890744],
-    "702": [1843896.04,1859908.7,1879423.75,1894823.34,1912802.68],
-    "801": [1704160.92,1718960.1,1736996.25,1751228.82,1767845.64],
-    "802": [1685934.6,1700575.5,1718418.75,1732499.1,1748938.2],
-    "901": [1616067.04,1630101.2,1647205,1660701.84,1676459.68],
-    "1002": [2992154.2,3018138.5,3049806.25,3074795.7,3103971.4]
+    "401": [2339044.4,2359357,2384112.5,2403647.4,2426454.8,2432337.6],
+    "402": [2764325.2,2788331,2817587.5,2840674.2,2867628.4,2874580.8],
+    "501": [1807443.4,1823139.5,1842268.75,1857363.9,1874987.8,1879533.6],
+    "602": [1822632,1838460,1857750,1872972,1890744,1895328],
+    "702": [1843896.04,1859908.7,1879423.75,1894823.34,1912802.68,1917440.16],
+    "801": [1704160.92,1718960.1,1736996.25,1751228.82,1767845.64,1772131.68],
+    "802": [1685934.6,1700575.5,1718418.75,1732499.1,1748938.2,1753178.4],
+    "901": [1616067.04,1630101.2,1647205,1660701.84,1676459.68,1680524.16],
+    "1002": [2992154.2,3018138.5,3049806.25,3074795.7,3103971.4,3111496.8]
    }
   },
   "Balsini 195": {

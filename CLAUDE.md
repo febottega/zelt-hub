@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.742.058 bytes):
+Hash de referência (18 payloads, 11.742.166 bytes):
 
 ```
-785D803AB6C24001C4E259193DB9C8E9D20AE6749BD294A49D448CA782B07A2B
+047E7B68F0F88F846D7F52457711311E8648C99E2399B8C5341014EF2E50E972
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -337,12 +337,28 @@ editado e a mesma função serve para os dois formatos. O que não for tocado sa
 byte a byte igual. Sempre confira antes: abrir os 29 blocos e reescrevê-los sem
 alterar nada tem de devolver o arquivo idêntico.
 
-O mesmo vale para o `sales-tables.js` e o `empreendimentos.js`, com uma
-convenção de float por arquivo (`73.0` num, `0` noutro) e por campo — no
-`empreendimentos.js` só `apriv`, `atotal`, `vmin`, `vmax`, `media`, `rpriv` e
-`rtotal` levam `.0`; `vagasN`, `entregaKey`, `id`, `quartos` e `suites` são
-inteiros de verdade. O card `id 17` (Alameda Giardini) tem `"apriv": 117` sem o
-`.0` e é a exceção que existe no arquivo.
+Há ainda um **terceiro formato**, no `sales-tables.js` e no `price-history.js`:
+blocos com as chaves **sem aspas** e 3 espaços de indentação — Lisbon, San Vito,
+Alameda Giardini e Central Park. E a **convenção de inteiro muda de bloco para
+bloco**: uns escrevem `2554730.0`, outros `2359357`. A saída é tirar as duas
+coisas do próprio bloco que está sendo editado: a indentação e o separador vêm do
+array que está sendo emendado, e a convenção de inteiro vem do primeiro número
+inteiro que já esteja dentro de `unidades` — **só ali**, porque as datas
+(`"2026-04"`) e as fontes (`"CUB R$ 3.037,72"`) também têm dígitos e enganam a
+conta se a busca varrer o bloco todo.
+
+No `empreendimentos.js` a convenção é por campo: só `apriv`, `atotal`, `vmin`,
+`vmax`, `media`, `rpriv` e `rtotal` levam `.0`; `vagasN`, `entregaKey`, `id`,
+`quartos` e `suites` são inteiros de verdade. O card `id 17` (Lisbon) tem
+`"apriv": 117` sem o `.0` e é a exceção que existe no arquivo — mais uma razão
+para trocar campo por campo em vez de reserializar o card inteiro.
+
+**O `rpriv` não tem uma fórmula só.** Dos 58 cards, 48 usam `media/apriv` e **9
+usam `media` dividida pela média da faixa de área** (`(apriv+atotal)/2`): Liv,
+Residencial EB, Gardens, San Vito, Lago di Garda, Alphaville, Ed. Edimburgo,
+Lisbon e os dois Tulum. O Central Park usa outra coisa ainda. Antes de recalcular
+um R$/m², descubra qual divisor aquele card já usava — aplicar `media/apriv` num
+dos nove infla o número em cerca de 10%.
 
 ### Duas formas no price-changes.js
 
