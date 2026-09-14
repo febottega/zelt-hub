@@ -123,42 +123,42 @@ const SALES_TABLES = {
         "403",
         "103,94 m²",
         "138,52 m²",
-        "simples",
+        "1 vaga simples",
         "R$ 650.000,00"
       ],
       [
         "404",
         "108,56 m²",
         "143,96 m²",
-        "simples",
+        "1 vaga simples",
         "R$ 650.000,00"
       ],
       [
         "1204",
         "76,29 m²",
         "105,07 m²",
-        "simples",
+        "1 vaga simples",
         "R$ 585.000,00"
       ],
       [
         "1304",
         "76,29 m²",
         "105,07 m²",
-        "simples",
+        "1 vaga simples",
         "R$ 590.000,00"
       ],
       [
         "1404",
         "76,29 m²",
         "105,07 m²",
-        "simples",
+        "1 vaga simples",
         "R$ 595.000,00"
       ],
       [
         "1503",
         "76,94 m²",
         "105,98 m²",
-        "simples",
+        "1 vaga simples",
         "R$ 630.000,00"
       ],
       [
