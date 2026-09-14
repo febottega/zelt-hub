@@ -1,4 +1,7 @@
 const PRICE_CHANGES = [
+  { emp: "Alameda Giardini", tipoMudanca: "condicao", dir: "down",
+    texto: "A tabela de setembro encurtou o parcelamento de 24x para 12x e veio com preço menor: o apto 401 caiu de R$ 2.996.829,24 para R$ 2.937.758,40 (−1,97%) e o 701 de R$ 3.239.474,72 para R$ 3.237.852,00 (−0,05%) — a contagem de CUBs baixou nos dois (951 → 930 e 1.028 → 1.025) enquanto o índice subia 0,2424%. A entrada segue em 25% e os dois reforços em 20% cada, mas os 35% restantes agora se dividem em 12 parcelas, então a parcela quase dobra: de R$ 43.703,76 para R$ 85.684,62 no 401 e de R$ 47.242,34 para R$ 94.437,35 no 701. E estrearam dois descontos: 15% à vista (R$ 2.497.094,64 no 401 e R$ 2.752.174,20 no 701) e 10% no financiamento bancário, com entrada de 35% e o saldo no habite-se",
+    data: "14/09/2026" },
   { emp: "Imperial Park", tipoMudanca: "preco", dir: "down",
     texto: "Os cinco lotes baixaram de novo: 19, 20 e 21 de R$ 422.721,63 para R$ 406.709,55 à vista (−3,8%) e 31 e 32 de R$ 489.738,47 para R$ 482.967,59 (−1,4%). A condição parcelada ficou mais barata junto, porque o multiplicador de 36 meses caiu de 1,12 para 1,08 sobre o valor de 12 meses — somando as duas coisas, em 36x a queda chega a 7,2% nos três primeiros lotes e a 4,9% nos outros dois",
     data: "10/09/2026" },

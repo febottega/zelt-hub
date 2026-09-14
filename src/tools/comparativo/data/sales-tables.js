@@ -2377,14 +2377,15 @@ const SALES_TABLES = {
   "Alameda Giardini": {
    folderId: "1GD2FmQknlfV18Zj7DE49TElJPdaxfpEw",
    source: "Tabela de preço (Idea Quattro)",
-   ref: "Agosto/2026 · CUB R$ 3.151,24",
+   ref: "Setembro/2026 · CUB R$ 3.158,88",
    unitCol: 0,
-   columns: ["Apto","Área priv.","Área total","Vagas","Entrada (25%)","2 reforços (20% cada)","24 parcelas (35%)","Valor total"],
-   rows: [["401","199,15 m²","336,79 m²","1 dupla (V02) + 1 simples (V06) + Box 05","R$ 749.207,31","R$ 599.365,85","R$ 43.703,76","R$ 2.996.829,24"],["701","199,15 m²","336,79 m²","1 dupla (V11) + 1 simples (V07) + Box 01","R$ 809.868,68","R$ 647.894,94","R$ 47.242,34","R$ 3.239.474,72"]],
-   note: "Parcelamento em 24x. Valores atrelados ao CUB (mês vigente agosto/2026, Semana 2, R$ 3.151,24): apto 401 = 951 CUBs; apto 701 = 1.028 CUBs — mesmas contagens de julho, então o reajuste de 0,95% é só a variação do índice. Entrada 25% + 2 reforços de 20% cada + 24 parcelas somando 35%. Parcelas corrigidas mensalmente pela variação positiva do CUB médio até a entrega das chaves; após, INPC positivo + juros de 0,75% a.m. Previsão de entrega: as tabelas de jan a abr/2026 informavam JULHO/2026; a partir de mai/2026 a Idea Quattro removeu o mês e voltou a trazer apenas o ano — julho já passou, então a data precisa ser confirmada com a construtora. O parcelamento encurtou de 60x (até fev/2026) para 24x (desde mar/2026), e o juro pós-chaves subiu de INPC + 0,30% a.m. para 0,45% em abril e 0,75% em maio. Tabela promocional por tempo determinado — valores podem ser alterados pela construtora sem data prevista.",
+   columns: ["Apto","Área priv.","Área total","Vagas","Entrada (25%)","2 reforços (20% cada)","12 parcelas (35%)","Valor total"],
+   rows: [["401","199,15 m²","336,79 m²","1 dupla (V02) + 1 simples (V06) + Box 05","R$ 734.439,60","R$ 587.551,68","R$ 85.684,62","R$ 2.937.758,40"],["701","199,15 m²","336,79 m²","1 dupla (V11) + 1 simples (V07) + Box 01","R$ 809.463,00","R$ 647.570,40","R$ 94.437,35","R$ 3.237.852,00"]],
+   note: "Parcelamento em 12x. Valores atrelados ao CUB (mês vigente setembro/2026, R$ 3.158,88): apto 401 = 930 CUBs; apto 701 = 1.025 CUBs. As duas contagens caíram — o 401 de 951 e o 701 de 1.028 — e é daí que vem a queda de preço, porque o índice subiu 0,2424% no mês, o mesmo de todas as tabelas indexadas por CUB. Entrada 25% + 2 reforços de 20% cada + 12 parcelas somando 35%: as oito células conferem ao centavo nesses percentuais e a soma devolve o total exato. Condições alternativas novas nesta tabela: 15% de desconto à vista e 10% para financiamento bancário, com entrada de 35% e o saldo no habite-se/financiamento. Parcelas corrigidas mensalmente pela variação positiva do CUB médio até a entrega das chaves; após, INPC positivo + juros de 0,75% a.m. Previsão de entrega: as tabelas de jan a abr/2026 informavam JULHO/2026; a partir de mai/2026 a Idea Quattro removeu o mês e voltou a trazer apenas o ano — julho já passou, então a data precisa ser confirmada com a construtora. O parcelamento vem encurtando: 60x até fev/2026, 24x de mar a ago/2026 e 12x desde set/2026; o juro pós-chaves subiu de INPC + 0,30% a.m. para 0,45% em abril e 0,75% em maio. Tabela promocional por tempo determinado — valores podem ser alterados pela construtora sem data prevista.",
    summary: { bits:[{pre:"Área privativa: ",col:1},{pre:"Área total: ",col:2},{col:3}],
      principal:{label:"Condição padrão",col:7},
-     parcelas:[{label:"Entrada (25%)",col:4},{label:"2 reforços (20% cada)",col:5},{label:"24 parcelas",col:6}] }
+     parcelas:[{label:"Entrada (25%)",col:4},{label:"2 reforços (20% cada)",col:5},{label:"12 parcelas",col:6}],
+     alternativas:[{bold:"À vista",nota:"(−15%)",pct:15},{bold:"Financiamento bancário",nota:"(−10%, entrada 35% + saldo no habite-se)",pct:10}] }
   },
   "Lisbon": {
    folderId: "1Nsg_-HBSbC3KQ0k-qdSWfSL2EbAx3iMz",
