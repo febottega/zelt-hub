@@ -2171,15 +2171,6 @@ const SALES_TABLES = {
         "R$ 880.000,00"
       ],
       [
-        "804",
-        "118,95 m²",
-        "—",
-        "R$ 140.000,00",
-        "R$ 25.000,00",
-        "R$ 7.866,67",
-        "R$ 880.000,00"
-      ],
-      [
         "901",
         "118,51 m²",
         "—",
@@ -2333,7 +2324,7 @@ const SALES_TABLES = {
         "R$ 1.155.000,00"
       ]
     ],
-    "note": "Tabela a preço fechado, Rev. 16 de 27/07/2026 — 37 unidades. Condição: entrada (15%) + 6 reforços semestrais nas datas dez/26, jun/27, dez/27, jun/28, dez/28 e jun/29 + 75 parcelas. Parcelas corrigidas pela variação do CUB ponderado, no dia 05 do mês seguinte. Entrega prevista: dezembro/2029. Preço com 01 vaga dupla + 01 vaga simples; para 03 vagas simples acrescentar R$ 25.000,00 no preço final. Vagas sujeitas a disponibilidade; as vagas 51 e 52 ficam no pavimento térreo. Unidade 204 saiu da tabela. As áreas foram mantidas da revisão anterior, porque a tabela de julho/2026 não traz coluna de área — nela a área do apto 1402 consta como 118,51 m², divergindo do padrão dos finais 02 (118,95 m²); confirmar. Unidades sujeitas a conferência no fechamento, há vários corretores negociando.",
+    "note": "Tabela a preço fechado, Rev. 16 de 27/07/2026 — restam 36 unidades. Condição: entrada (15%) + 6 reforços semestrais nas datas dez/26, jun/27, dez/27, jun/28, dez/28 e jun/29 + 75 parcelas. Parcelas corrigidas pela variação do CUB ponderado, no dia 05 do mês seguinte. Entrega prevista: dezembro/2029. Preço com 01 vaga dupla + 01 vaga simples; para 03 vagas simples acrescentar R$ 25.000,00 no preço final. Vagas sujeitas a disponibilidade; as vagas 51 e 52 ficam no pavimento térreo. Unidade 204 saiu da tabela; a 804 foi vendida em 15/09/2026, depois da revisão, e segue no histórico de preços, que vai até abril/2026. As áreas foram mantidas da revisão anterior, porque a tabela de julho/2026 não traz coluna de área — nela a área do apto 1402 consta como 118,51 m², divergindo do padrão dos finais 02 (118,95 m²); confirmar. Unidades sujeitas a conferência no fechamento, há vários corretores negociando.",
     "summary": {
       "bits": [
         {
