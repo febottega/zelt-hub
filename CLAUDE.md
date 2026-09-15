@@ -5,7 +5,7 @@ https://febottega.github.io/zelt-hub/ (repo `febottega/zelt-hub`, Pages no root 
 
 ## REGRA PRINCIPAL: nunca leia nem edite o index.html
 
-`index.html` (11 MB) é **gerado**. Contém as 18 ferramentas em base64 — ilegível
+`index.html` (11 MB) é **gerado**. Contém as 19 ferramentas em base64 — ilegível
 para busca, impossível de editar cirurgicamente. Lê-lo custa cerca de **2,5 milhões
 de tokens** e não cabe em nenhuma janela de contexto.
 
@@ -43,11 +43,11 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 18 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 19 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          12 relatórios históricos em base64 — nunca ler; editar só por script
+   └─ frozen/          13 relatórios históricos em base64 — nunca ler; editar só por script
 ```
 
 **`src/frozen/` não é intocável, é ilegível.** Cada `.b64` é uma linha de 500 a
@@ -100,7 +100,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   anunciado (mínimo/máximo) e situação do preço, que aceita mais de uma marcada.
   A ordenação é de um critério, pelo cabeçalho ou pelo select "Ordenar por" —
   que existe porque o `<thead>` desaparece abaixo de 820px.
-- **avaliacao** + 12 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 13 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
 - **comparativo** — 58 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (18 payloads, 11.745.398 bytes):
+Hash de referência (19 payloads, 12.468.782 bytes):
 
 ```
-5BA2E299A5059BA252323D978F8229FABA6AFD2A76A0B194A5CEC36330E6AB18
+A9BAD4B4D0EF9F81C6883911B920F7503D149C40E7745CFFE77F13FDCC96A59D
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
