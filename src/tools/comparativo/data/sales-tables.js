@@ -1683,15 +1683,6 @@ const SALES_TABLES = {
         "R$ 1.360.000,00"
       ],
       [
-        "601",
-        "156,20 m²",
-        "R$ 200.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 13.714,29",
-        "R$ 1.360.000,00"
-      ],
-      [
         "602",
         "156,20 m²",
         "R$ 200.000,00",
@@ -1818,7 +1809,7 @@ const SALES_TABLES = {
         "R$ 1.694.000,00"
       ]
     ],
-    "note": "Rev. 55 de 22/07/2026 — 18 unidades, todas com 156,20 m² de área privativa. A unidade 402 foi vendida e saiu da tabela. Condição: entrada + 2 reforços (dez/26 e jun/27) + 70 parcelas. Entrega prevista: novembro/2027. Preço dos apartamentos com 01 vaga dupla, 01 vaga simples e 01 box; para 03 vagas simples de garagem e box, acrescentar R$ 30.000,00 no preço final. Depósitos independentes: 21, 22, 23, 24, 25, 26 e 28. Vagas simples sobrando: 89 e 90. Vagas em vermelho na tabela original são para 2 veículos (gaveta); sujeitas a disponibilidade. A área privativa foi mantida da revisão anterior, porque a tabela nova não traz coluna de área.",
+    "note": "Rev. 55 de 22/07/2026 — restam 17 unidades, todas com 156,20 m² de área privativa. A unidade 402 foi vendida e saiu da tabela; a 601 foi vendida em 15/09/2026, depois da revisão, e por isso ainda aparece com valor no histórico de julho. Condição: entrada + 2 reforços (dez/26 e jun/27) + 70 parcelas. Entrega prevista: novembro/2027. Preço dos apartamentos com 01 vaga dupla, 01 vaga simples e 01 box; para 03 vagas simples de garagem e box, acrescentar R$ 30.000,00 no preço final. Depósitos independentes: 21, 22, 23, 24, 25, 26 e 28. Vagas simples sobrando: 89 e 90. Vagas em vermelho na tabela original são para 2 veículos (gaveta); sujeitas a disponibilidade. A área privativa foi mantida da revisão anterior, porque a tabela nova não traz coluna de área.",
     "summary": {
       "bits": [
         {
