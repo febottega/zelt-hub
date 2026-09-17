@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (19 payloads, 12.468.278 bytes):
+Hash de referência (19 payloads, 12.471.642 bytes):
 
 ```
-790EC8242A73CDAFDEF8FE62FAB5ECFD8C0FC26481F582674A9542856B8D54BD
+50DC6D53D03261CB7B2ACE41A2671FA45923BEE789F1CABDAB7C15A0BBDDDA94
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -193,6 +193,32 @@ limite passou a ser "o conteúdo bate nas assinaturas", não "o conteúdo passa 
 página". Medido: cadastro normal deixa 34mm entre a data e as assinaturas, o pior
 caso que consegui construir deixa 5mm — e é essa faixa que absorve um cadastro
 longo, então ela não pode ser preenchida. Seções em ordem 1-2-3 / 4-5-6.
+
+### Campo do PDF que come o texto ao lado
+
+O PDF do gerador é a **imagem** da folha (html2canvas) com **campos de formulário
+do pdf-lib por cima**; o texto digitado é apagado da imagem e vira campo. Para o
+campo ter área de clique, ele se **estica até a direita do container** — ótimo
+quando é a última coisa da linha ("Endereço: ______"), péssimo quando há texto
+**depois** dele: o retângulo opaco do campo cobre esse texto na imagem e ele
+some do PDF. Foi o que aconteceu com o "dias, renováveis" da cláusula 1 da
+locação, onde um campo de 10,5pt virava 108pt.
+
+A regra passou a ser: **se há texto depois do campo no mesmo container, o limite
+é o próprio campo** (`limiteDireita`, que caminha os nós de texto com
+`compareDocumentPosition`). Esses campos ficam marcados como `justo`, e neles a
+largura mínima de 24pt — que existe só para o campo não ficar impossível de
+clicar — cai para 6pt, senão ela mesma invadiria o texto seguinte. São **14 dos
+306 campos** dos cinco documentos; sete deles são da proposta, que já desenha
+tudo transparente.
+
+Como o campo justo não se estica mais, a folga tem de vir do **CSS**: o
+`#Lp_prazoDias` ganhou `min-width:30px` (22,5pt no PDF) para caber três dígitos.
+Medido depois da correção: o campo termina 2,1pt antes de onde começa o "dias".
+
+Para medir isso com a ferramenta aberta, zere o `transform` do `.preview-scaler`
+antes de ler qualquer `getBoundingClientRect` — é o que o próprio gerador faz
+antes de capturar, e sem isso todas as medidas saem na escala da prévia.
 
 ## Rotina semanal da avaliação
 

@@ -376,7 +376,9 @@
 
   /* ===== Contrato de Locação ===== */
   .conds-intro{font-size:8pt;color:var(--navy-700);margin:1.5mm 0 0.5mm}
-  #Lp_prazoDias{min-width:14px;display:inline-block}
+  /* largura suficiente para tres digitos: o campo do PDF nao se estica mais
+     (senao cobriria o "dias, renovaveis"), entao a folga tem de vir daqui */
+  #Lp_prazoDias{min-width:30px;display:inline-block}
   #Lp_prazoDias:empty::before{content:"______";color:var(--navy-300);font-weight:400}
 
   /* ===== Checklist para Contratos ===== */
@@ -2099,6 +2101,25 @@
       prev.addEventListener("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); prev.blur(); } });
       prev.addEventListener("paste", plain);
     });
+    /* O TOTAL do quadro 3 nao entra no laco do PV porque nao ha um input "total":
+       ele e calculado (autoTotal) ou vem do "Total (manual)". Escrever nele passa
+       a valer como preencher o manual -- entao desmarca o calculo automatico, para
+       o valor digitado nao ser sobrescrito no proximo render. Com a classe
+       "editable" ele tambem vira campo preenchivel no PDF, como as outras celulas.
+       O TOTAL da contraproposta ja era editavel: aquele tem input proprio (cpTotal)
+       e esta no PV. */
+    (function(){
+      var prev=$("pv_total"), inp=$("totalManual"), auto=$("autoTotal");
+      if(!prev||!inp||!auto) return;
+      prev.setAttribute("contenteditable","true"); prev.setAttribute("spellcheck","false"); prev.classList.add("editable");
+      prev.addEventListener("input", function(){
+        if(auto.checked){ auto.checked=false; applyToggles(); }
+        inp.value=prev.textContent; render();
+      });
+      prev.addEventListener("blur", function(){ var n=parseBRL(inp.value); inp.value=n?money(n):""; render(); });
+      prev.addEventListener("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); prev.blur(); } });
+      prev.addEventListener("paste", plain);
+    })();
   })();
 
   // ---- datas editáveis direto no documento ----
@@ -2886,10 +2907,27 @@
 <script>
 (function(){
   "use strict";
-  function containerRight(e){
+  /* Ate onde o campo pode se esticar.
+     A esticada existe para dar area de clique quando o campo e a ultima coisa
+     da linha ("Endereco: ______"). Mas quando ha texto DEPOIS dele no mesmo
+     container o retangulo do campo cobre esse texto na imagem do PDF e ele
+     some -- foi o que aconteceu com o "dias, renovaveis" da clausula 1 da
+     locacao, onde o campo de 10,5pt virava 108pt. Nesses casos o limite e o
+     proprio campo. Sao 14 dos 306 campos dos cinco documentos. */
+  function temTextoDepois(e, c){
+    var w=document.createTreeWalker(c, NodeFilter.SHOW_TEXT, null), n;
+    while((n=w.nextNode())){
+      var p=e.compareDocumentPosition(n);
+      /* 4 = vem depois; 16 = esta dentro do proprio campo */
+      if((p & 4) && !(p & 16) && n.nodeValue.replace(/[\s ]+/g,"") !== "") return true;
+    }
+    return false;
+  }
+  function limiteDireita(e){
     var c=e.closest("td, .cell, .uf, .valbox, .prazo, .ablu, .blu, .obs-lines, .conds p, .ckcell, .ckrow");
     if(!c) c=e.parentElement;
-    return c.getBoundingClientRect().right;
+    if(temTextoDepois(e,c)) return {x:e.getBoundingClientRect().right, justo:true};
+    return {x:c.getBoundingClientRect().right, justo:false};
   }
   function parseRGB(str){
     var m=str && str.match(/rgba?\(([^)]+)\)/);
@@ -2979,10 +3017,11 @@
         var info=eds.map(function(e){
           var r=e.getBoundingClientRect();
           var cs=getComputedStyle(e);
-          var rightPx=Math.max(r.right, containerRight(e)-3);
+          var lim=limiteDireita(e);
+          var rightPx=Math.max(r.right, lim.x-3);
           var raw=(e.innerText||"").replace(/\u00a0/g," ").replace(/\s+$/,"");
           var ph=/^[_\s\/.]+$/.test(raw) && raw.indexOf("_")>-1; // placeholder tipo ____ / ____ / ________
-          return {el:e, txt:ph?"":raw, ph:ph,
+          return {el:e, txt:ph?"":raw, ph:ph, justo:lim.justo,
             x:r.left-pr.left, y:r.top-pr.top, w:Math.max(r.width, rightPx-r.left), h:r.height,
             fs:parseFloat(cs.fontSize)||12, multi:e.classList.contains("obs-lines"), bg:docBg(e), linha:(parseFloat(cs.borderBottomWidth)||0)>0};
         });
@@ -3002,7 +3041,9 @@
         var page=pdf.addPage([A4W,A4H]);
         page.drawImage(img,{x:0,y:0,width:A4W,height:A4H});
         info.forEach(function(o){
-          var x=o.x*sx, w=Math.max(24,o.w*sx);
+          /* a largura minima de 24pt e para o campo nao ficar impossivel de
+             clicar; em campo justo ela invadiria o texto que vem depois */
+          var x=o.x*sx, w=Math.max(o.justo?6:24, o.w*sx);
           var h=Math.max(o.multi?36:11, o.h*sy);
           var y=A4H-(o.y*sy)-h;
           // preserva a linha de baixo: campo de 1 linha para 1.8pt acima da base
