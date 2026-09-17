@@ -2120,6 +2120,30 @@
       prev.addEventListener("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); prev.blur(); } });
       prev.addEventListener("paste", plain);
     })();
+    /* "Imovel no Negocio" tambem nao tinha onde escrever: o valor mora na secao 4
+       (inValor) e o campo do quadro 3 e um espelho somente-leitura, que so mostra
+       algo com "Ha imovel como parte do pagamento" marcado. Escrever nele passa a
+       valer como preencher a secao 4 -- e marca esse "ha imovel", senao o proximo
+       render apagaria o que foi digitado e o valor nao entraria no total.
+       Apagar tudo e sair desmarca de volta, para nao deixar a secao 4 no documento
+       por causa de uma tecla errada. */
+    (function(){
+      var prev=$("pv_imovNeg"), inp=$("inValor"), tem=$("temImovelNegocio");
+      if(!prev||!inp||!tem) return;
+      prev.setAttribute("contenteditable","true"); prev.setAttribute("spellcheck","false"); prev.classList.add("editable");
+      prev.addEventListener("input", function(){
+        if(prev.textContent.trim() && !tem.checked){ tem.checked=true; applyToggles(); }
+        inp.value=prev.textContent; render();
+      });
+      prev.addEventListener("blur", function(){
+        var n=parseBRL(inp.value);
+        inp.value=n?money(n):"";
+        if(!n && tem.checked){ tem.checked=false; applyToggles(); }
+        render();
+      });
+      prev.addEventListener("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); prev.blur(); } });
+      prev.addEventListener("paste", plain);
+    })();
   })();
 
   // ---- datas editáveis direto no documento ----
@@ -3046,9 +3070,14 @@
           var x=o.x*sx, w=Math.max(o.justo?6:24, o.w*sx);
           var h=Math.max(o.multi?36:11, o.h*sy);
           var y=A4H-(o.y*sy)-h;
-          // preserva a linha de baixo: campo de 1 linha para 1.8pt acima da base
+          /* O campo de uma linha nao encosta em cima nem embaixo: para 1.8pt
+             acima da base, que e a linha de escrever, e comeca 1.6pt abaixo do
+             topo, que e onde o rotulo termina. Sem essa folga de cima, o realce
+             que o leitor de PDF desenha no campo comecava rente ao pe das
+             letras do rotulo e parecia que as palavras estavam cortadas -- o
+             pe da Oswald fica a menos de 0,5px da borda da caixa do rotulo. */
           var fy=y, fh=h;
-          if(!o.multi){ fy=y+1.8; fh=h-1.8; if(fh<8){ fh=h; fy=y; } }
+          if(!o.multi){ fy=y+1.8; fh=h-1.8-1.6; if(fh<8){ fh=h; fy=y; } }
           var tf=form.createTextField("f"+pi+"_"+(idc++));
           if(o.multi) tf.enableMultiline();
           try{ tf.setText(waSafe(o.txt, o.multi)); }catch(e){ try{ tf.setText(""); }catch(_){} }

@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (19 payloads, 12.471.642 bytes):
+Hash de referência (19 payloads, 12.473.982 bytes):
 
 ```
-50DC6D53D03261CB7B2ACE41A2671FA45923BEE789F1CABDAB7C15A0BBDDDA94
+ADFB86B8F70886698D541C17C925994E03B62EAA957E2F60EEDBCD573FD0FD9A
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -219,6 +219,19 @@ Medido depois da correção: o campo termina 2,1pt antes de onde começa o "dias
 Para medir isso com a ferramenta aberta, zere o `transform` do `.preview-scaler`
 antes de ler qualquer `getBoundingClientRect` — é o que o próprio gerador faz
 antes de capturar, e sem isso todas as medidas saem na escala da prévia.
+
+**O campo também não pode encostar no rótulo de cima.** No `.uf` o rótulo e o
+campo são irmãos numa coluna flex, então a base da caixa do rótulo é exatamente
+o topo do campo — e a Oswald, com `line-height:1.2` em 8,4px, tem caixa de
+conteúdo de 12px contra 10,08px de caixa de linha: o pé das letras fica a menos
+de 0,5px da borda. O realce azul que o leitor de PDF desenha no campo começava
+rente a esse pé e dava a impressão de que as palavras estavam cortadas (relatado
+em 17/09/2026 na locação). A correção foi no campo, não no CSS, para não mexer no
+layout dos cinco documentos: o campo de uma linha agora começa **1,6pt abaixo do
+topo**, além dos 1,8pt que já parava acima da base para preservar a linha de
+escrever. A guarda `fh<8` mantém o comportamento antigo nos campos baixos
+demais. Medido nos 65 campos rotulados da locação: folga de 1,6pt em todos, com
+altura mínima de 12,2pt.
 
 ## Rotina semanal da avaliação
 
