@@ -74,7 +74,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | Quero mudar | Arquivo | Tamanho |
 |---|---|---|
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **71 KB** |
-| os 58 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
+| os 61 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
@@ -101,7 +101,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   A ordenação é de um critério, pelo cabeçalho ou pelo select "Ordenar por" —
   que existe porque o `<thead>` desaparece abaixo de 820px.
 - **avaliacao** + 13 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
-- **comparativo** — 58 empreendimentos. Abas: comparativo, mudanças, melhores preços,
+- **comparativo** — 61 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
   chaves, checklist). Rascunhos em `localStorage` (`zelt_*_v1`); exporta com
@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (19 payloads, 12.473.982 bytes):
+Hash de referência (19 payloads, 12.537.310 bytes):
 
 ```
-ADFB86B8F70886698D541C17C925994E03B62EAA957E2F60EEDBCD573FD0FD9A
+C4C2615A6E392609AA40442B1249C73F8DA1C224D7BCEBECCCAB6C5DB9EB5A62
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -392,7 +392,7 @@ No `empreendimentos.js` a convenção é por campo: só `apriv`, `atotal`, `vmin
 `"apriv": 117` sem o `.0` e é a exceção que existe no arquivo — mais uma razão
 para trocar campo por campo em vez de reserializar o card inteiro.
 
-**O `rpriv` não tem uma fórmula só.** Dos 58 cards, 48 usam `media/apriv` e **9
+**O `rpriv` não tem uma fórmula só.** Dos 61 cards, 51 usam `media/apriv` e **9
 usam `media` dividida pela média da faixa de área** (`(apriv+atotal)/2`): Liv,
 Residencial EB, Gardens, San Vito, Lago di Garda, Alphaville, Ed. Edimburgo,
 Lisbon e os dois Tulum. O Central Park usa outra coisa ainda. Antes de recalcular

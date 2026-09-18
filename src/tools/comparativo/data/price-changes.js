@@ -1,4 +1,10 @@
 const PRICE_CHANGES = [
+  { emp: "Vista 43 - Studios", tipoMudanca: "status",
+    texto: "Chegou a tabela zero dos studios e dos loft duplex: 95 unidades numa tabela só, 92 disponíveis e três reservadas (S1205, S1801 e S3001), em ato + 60 parcelas + 5 reforços anuais e 12% de desconto à vista. São 55 studios de R$ 288.402,51 a R$ 457.167,24, 28 loft duplex de R$ 504.237,73 a R$ 578.659,81 e 12 unidades com terraço — os 10 studios garden do 7º andar e os dois duplex garden de 109,65 m² do 18º —, que ficam só na tabela de vendas. Seguem sendo preços referenciais de lista de espera",
+    data: "18/09/2026" },
+  { emp: "Vista 43 - 2 dormitórios", tipoMudanca: "status",
+    texto: "Entra no comparativo com a tabela zero 09-26: 59 unidades de 2 dormitórios, 58 disponíveis e a L1005 reservada, de R$ 886.988,05 a R$ 1.077.429,58, em ato + 84 parcelas + 7 reforços anuais e 12% de desconto à vista. São preços referenciais de lista de espera — o empreendimento ainda não está disponível para comercialização. Entrega prevista para abril/2031; studios e loft duplex entram quando a tabela deles chegar",
+    data: "18/09/2026" },
   { emp: "Alameda Giardini", tipoMudanca: "condicao", dir: "down",
     texto: "A tabela de setembro encurtou o parcelamento de 24x para 12x e veio com preço menor: o apto 401 caiu de R$ 2.996.829,24 para R$ 2.937.758,40 (−1,97%) e o 701 de R$ 3.239.474,72 para R$ 3.237.852,00 (−0,05%) — a contagem de CUBs baixou nos dois (951 → 930 e 1.028 → 1.025) enquanto o índice subia 0,2424%. A entrada segue em 25% e os dois reforços em 20% cada, mas os 35% restantes agora se dividem em 12 parcelas, então a parcela quase dobra: de R$ 43.703,76 para R$ 85.684,62 no 401 e de R$ 47.242,34 para R$ 94.437,35 no 701. E estrearam dois descontos: 15% à vista (R$ 2.497.094,64 no 401 e R$ 2.752.174,20 no 701) e 10% no financiamento bancário, com entrada de 35% e o saldo no habite-se",
     data: "14/09/2026" },

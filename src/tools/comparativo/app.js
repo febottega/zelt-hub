@@ -800,7 +800,12 @@ function buildResumo(emp, ri){
 
   const b1 = [];
   b1.push(`*${emp.toUpperCase()}* \u2014*${tipo}*`);
-  if(d0.construtora) b1.push(`*Construtora ${d0.construtora}*`);
+  /* a construtora vem do card de mesmo nome; quando uma tabela agrupa mais de
+     uma tipologia (Vista 43: studios e loft duplex juntos) nao ha card com o
+     nome dela, e aí a própria tabela declara — igual ao que ja se fazia com a
+     entrega logo abaixo */
+  const constr = s.construtora || d0.construtora;
+  if(constr) b1.push(`*Construtora ${constr}*`);
   const andar = (s.andar===false) ? null : andarDeUnidade(un);
   b1.push(`*${rotuloUnidade(t)} ${un}*${andar?` \u00b7 ${andar}`:""}`);
   const bits = (s.bits||[]).map(b=>{

@@ -800,6 +800,90 @@ const PRICE_HISTORY = {
   "Ed. Edimburgo": {"datas": ["2025-09", "2025-11", "2025-12", "2026-04-02", "2026-04-10"], "fontes": ["Tabela set/2025 – Rev. 31 (01/09)", "Tabela nov/2025 – Rev. 35 (07/11)", "Tabela dez/2025 – Rev. 36 (03/12)", "Tabela abr/2026 – Rev. 41 (02/04)", "Tabela abr/2026 – Rev. 42 (10/04)"], "obs": "Tabela de preço fechado, não indexada (só as parcelas são corrigidas pelo CUB), então cada mudança aqui é decisão de preço da Speranzini. Este é o reajuste mais precisamente datável de todo o material que temos: o preço ficou parado sete meses, de set/2025 até a Rev. 41 de 02/04/2026, e subiu cerca de 10% na Rev. 42 de 10/04/2026 — uma janela de oito dias. Por isso os dois pontos de abril entram na série com data completa em vez de só o mês; sem eles o salto pareceria diluído entre dezembro e abril, quando na verdade foi de uma vez. O aumento foi praticamente linear em toda a tabela, de +9,85% (702 e 705) a +10,11% (o 102), sem tratamento diferente por unidade ou por andar. E enquanto o total ficava congelado, a condição de pagamento endureceu três vezes: set/2025 era entrada de R$ 80.000 + três reforços de R$ 15.000 + 85x de R$ 3.764,71; nov e dez/2025 passaram a entrada de R$ 85.000 + dois reforços de R$ 20.000 + 80x de R$ 4.000; e abr/2026 encurtou para 75x de R$ 4.266,67. Os três dão o mesmo total de R$ 445.000 no apto 102, mas a parcela mensal subiu 13% e um reforço desapareceu — mesmo preço, mais caixa antecipado, exatamente o padrão que a tabela do Ed. Toulouse já mostrava. O estoque caiu de 16 unidades em set/2025 para 10 em abr/2026: saíram 101, 103, 202, 502, 604 e 706. Hoje a tabela de vendas na base do comparativo tem sete, e os valores dela são idênticos aos da Rev. 42 — ou seja, o preço se manteve nos quatro meses seguintes ao reajuste. Ressalvas: as tabelas do Edimburgo não trazem linha de \"mês de referência\" como as do Sunset, só a data da revisão, e foi dela que derivei as datas da série. Faltam out/2025 e jan a mar/2026, mas isso não prejudica a leitura porque a Rev. 41 prova que o preço não se moveu nesse vão; o que falta de verdade é de mai/2026 em diante. Uma correção para o card: o cadastro em DATA traz condicao \"Entrada + 85x\", que era a condição de set/2025 — a tabela vigente é 75x. A série foi conferida de duas formas: as 49 linhas das cinco tabelas fecham todas em entrada + reforços + N × parcela = total, e a Rev. 42 bate unidade por unidade com a tabela de vendas nas sete unidades que restam.", "unidades": {"101": [445000, 445000, 445000, null, null], "102": [445000, 445000, 445000, 445000, 490000], "103": [445000, null, null, null, null], "202": [489000, null, null, null, null], "205": [489000, 489000, 489000, 489000, 538000], "206": [489000, 489000, 489000, 489000, 538000], "305": [500000, 500000, 500000, 500000, 550000], "502": [511000, 511000, 511000, null, null], "505": [511000, 511000, 511000, 511000, 562000], "604": [523000, 523000, null, null, null], "605": [523000, 523000, 523000, 523000, 575000], "702": [528000, 528000, 528000, 528000, 580000], "705": [528000, 528000, 528000, 528000, 580000], "706": [528000, null, null, null, null], "802": [533000, 533000, 533000, 533000, 586000], "805": [533000, 533000, 533000, 533000, 586000]}},
   "Princess Tower": {"datas": ["2025-08", "2025-10", "2025-11", "2026-02", "2026-04"], "fontes": ["Tabela ago/2025 – Rev. 00 (20/08)", "Tabela out/2025 – Rev. 05 (28/10)", "Tabela nov/2025 – Rev. 07 (25/11)", "Tabela fev/2026 – Rev. 10 (11/02)", "Tabela abr/2026 – Rev. 14 (10/04)"], "obs": "Tabela de preço fechado, não indexada (só as parcelas são corrigidas pelo CUB). A descoberta mais importante aqui só aparece cruzando com o Ed. Edimburgo: a Rev. 14 do Princess Tower é datada de 10/04/2026, exatamente a mesma data da Rev. 42 do Edimburgo, e as duas trazem o mesmo aumento linear de 10%. Não é coincidência de leitura — foi uma reprecificação de carteira da Speranzini naquele dia. No Princess o +10% é exato em praticamente toda a tabela: 1.200.000 para 1.320.000, 860.000 para 946.000, 750.000 para 825.000, 950.000 para 1.045.000, 1.050.000 para 1.155.000. Antes disso, porém, o movimento tinha sido para baixo, e é aí que a leitura fica interessante. De ago para out/2025 quase toda a tabela caiu: os aptos de final 01 e 02 foram de 870.000 para 800.000 (−8,0%), os de final 03 e 04 de 800.000 para 750.000 (−6,3%) e o 703 caiu 9,5%, de 840.000 para 760.000. Ficou tudo parado em nov/2025, houve recuperação parcial em fev/2026 concentrada nos finais 01 e 02 e nos andares acima do oitavo, e então veio o +10% de abril. O resultado líquido de ago/2025 a abr/2026 é muito desigual e vale olhar unidade por unidade: as coberturas 101 e 102 e os aptos 1503 e 1504 fizeram exatamente +10,0%, porque não participaram da queda de outubro; os finais 01 e 02 dos andares 8 a 14 fizeram entre +11,7% e +17,3%; e os finais 03 e 04 dos andares baixos ficaram de lado ou negativos — o 703 está em −0,5%, o 903 em −1,1% e o 1003 em −1,7%. Ou seja, quem comprou em agosto de 2025 um final 03 de andar baixo tem hoje o mesmo preço de tabela ou menos, enquanto quem comprou um final 01 de andar alto acumulou 17%. Três tipologias convivem na mesma tabela: o grosso é de 118 m², e os aptos 101 (183,91 m²) e 102 (177,93 m²) são as unidades com cobertura aberta adicional, o que explica partirem de 1.200.000 enquanto o resto começa entre 750.000 e 950.000. O parcelamento encurtou de 80x para 75x na Rev. 14 e o cronograma de reforços foi antecipado em seis meses: na Rev. 00 os seis reforços iam de jun/2027 a dez/2029, na Rev. 14 vão de dez/2026 a jun/2029. Somado ao +10%, é mais dinheiro e mais cedo. O estoque caiu de 50 unidades em ago/2025 para 38 em abr/2026, e a tabela de vendas atual tem 37 — saiu o 204. O apto 1402 saiu da tabela entre ago e out/2025 e voltou em fev/2026 pelo mesmo preço do 1401, daí o vão na linha dele. Sobre as fontes: foram oito arquivos, sete únicos, porque a Rev. 02 veio duas vezes (arquivos idênticos byte a byte). Descartei a Rev. 02 de 07/10 em favor da Rev. 05 de 28/10 — mesmo mês, valores idênticos, só com unidades vendidas a menos — e a Rev. 10 de 02/02 em favor da Rev. 10 de 11/02, cuja única diferença é a volta do 1402. Faltam set/2025, dez/2025, jan/2026, mar/2026 e tudo de mai/2026 em diante; como a tabela de vendas vigente é idêntica à Rev. 14, o preço não se moveu nos quatro meses seguintes ao reajuste. A série foi conferida de duas formas: as 190 linhas das sete tabelas fecham em entrada + reforços + N × parcela = total, e a coluna de abr/2026 bate 37 de 37 unidades com a tabela de vendas do comparativo.", "unidades": {"101": [1200000, 1200000, 1200000, 1200000, 1320000], "102": [1200000, 1200000, 1200000, 1200000, 1320000], "201": [870000, 800000, 800000, 860000, 946000], "202": [870000, 800000, 800000, 860000, 946000], "203": [800000, 750000, 750000, 750000, 825000], "204": [800000, 750000, 750000, 750000, 825000], "301": [872000, 800000, 800000, 860000, 946000], "302": [872000, 800000, 800000, 860000, 946000], "303": [805000, 760000, 760000, 760000, 836000], "304": [805000, 760000, 760000, 760000, 836000], "401": [875000, 800000, 800000, 860000, 946000], "403": [807000, 760000, 760000, 760000, 836000], "404": [807000, 760000, 760000, 760000, 836000], "501": [877000, 800000, 800000, 860000, 946000], "502": [877000, 800000, 800000, 860000, null], "504": [809000, null, null, null, null], "601": [889000, 800000, 800000, 860000, 946000], "602": [889000, 800000, 800000, null, null], "603": [815000, 760000, 760000, 760000, 836000], "604": [815000, null, null, null, null], "701": [890000, 800000, 800000, 860000, 946000], "702": [890000, null, null, null, null], "703": [840000, 760000, 760000, 760000, 836000], "704": [840000, 760000, null, null, null], "802": [891000, 850000, 850000, 950000, 1045000], "803": [850000, 800000, 800000, 800000, 880000], "804": [850000, 800000, 800000, 800000, 880000], "901": [900000, 850000, 850000, 950000, 1045000], "902": [900000, 850000, 850000, null, null], "903": [890000, 800000, 800000, 800000, 880000], "904": [890000, 800000, null, null, null], "1001": [905000, 850000, 850000, 950000, 1045000], "1002": [905000, null, null, null, null], "1003": [895000, 800000, 800000, 800000, 880000], "1004": [895000, null, null, null, null], "1101": [910000, 910000, 910000, 970000, 1067000], "1103": [905000, 850000, 850000, 850000, 935000], "1104": [905000, 850000, 850000, 850000, null], "1201": [920000, 920000, 920000, 980000, 1078000], "1202": [920000, 920000, 920000, 980000, 1078000], "1203": [910000, 850000, 850000, 850000, 935000], "1301": [950000, 950000, 950000, 990000, 1089000], "1302": [950000, 950000, 950000, 990000, 1089000], "1303": [920000, 850000, 850000, 850000, 935000], "1304": [920000, 850000, 850000, null, null], "1401": [980000, 980000, 980000, 995000, 1095000], "1402": [980000, null, null, 995000, 1095000], "1403": [940000, 950000, 950000, 950000, 1045000], "1503": [1050000, 1050000, 1050000, 1050000, 1155000], "1504": [1050000, 1050000, 1050000, 1050000, 1155000]}},
   "Lago di Garda": {"datas": ["2025-01", "2026-06"], "fontes": ["Lista de lotes jan/2025", "Lista de lotes jun/2026"], "obs": "ATENÇÃO: esta é a única série do comparativo com só dois pontos, e é de propósito. Recebi cinco listas do Lago di Garda (jan/2025, out/2025, mar/2026, abr/2026 e jun/2026) e só consegui validar duas delas; as outras três entrariam com preço errado por lote, então ficaram fora. O que valida jan/2025: a soma dos 97 lotes que extraí dá R$ 58.731.557,00, exatamente o total impresso no próprio documento, sem um centavo de diferença. O que valida jun/2026: ela é a base da tabela de vendas que já está no comparativo, e obedece à regra de preço R$ 1.250,00 por m² com piso de R$ 450.000,00 em 85 dos 86 lotes (a única exceção é o lote 32, que ficou em R$ 449.650 sem o piso). Por que descartei out/2025, mar/2026 e abr/2026: nenhuma das três traz total declarado, logo não há como conferir, e as três têm a coluna de valor desalinhada em relação ao número do lote na extração do PDF. Em abr/2026 dá para ver os valores trocando de lugar comparando com mar/2026 — o lote 20 aparece com R$ 621.200 e o 23 com R$ 706.500, exatamente invertidos entre as duas tabelas — e o lote 1 exibe o texto \"ABR.26\" no lugar do valor. Em out/2025 o lote 64 aparece com R$ 686.800, que é o valor do lote 63 em janeiro, e o lote 86 (1.005,87 m²) sai a R$ 582 por m², um terço do resto da tabela. Usar esses meses seria atribuir a cada lote o preço do vizinho, e num material que vai para cliente isso não é aceitável. Agora o que os dois pontos válidos mostram, que é a informação importante: o preço CAIU cerca de 20% em dezessete meses. Um lote padrão de 350 m² saiu de R$ 565.600 para R$ 450.000, −20,0% na média dos 47 lotes dessa faixa; entre 356 e 420 m² a queda média é de 21,3% em 32 lotes; e acima de 420 m², onde o piso não pega, 21,1% em 7 lotes. O 53, de 480,38 m², foi de R$ 767.600 para R$ 600.475. A mediana do R$/m² caiu de 1.616 para 1.286. E não foi só o número que mudou, foi a lógica de precificação: até mar/2026 as listas traziam valores em faixas por área, com a matrícula de cada lote e coluna \"VALOR TOTAL\" ou \"VALOR LOTE\"; o documento de jun/2026 se chama \"LOTES LAGO Di GARDA\", a coluna virou \"Investimento\", a matrícula desapareceu e o preço passou a ser uma conta única de R$ 1.250 por m². Junto disso o financiamento direto foi de 60x em jan/2025 para até 120x, que é o que o card já registra. Ou seja, a leitura não é reajuste negativo: é liquidação de estoque, com preço menor e prazo dobrado. Para melhorar esta série basta qualquer lista do Lago que traga total declarado, como a de jan/2025 — ou as mesmas de out/2025, mar e abr/2026 em Excel ou CSV em vez de PDF, porque o problema está na extração, não nos dados.", "unidades": {"1": [565600, 450000], "2": [565600, 450000], "3": [565600, 450000], "4": [565600, 450000], "5": [565600, 450000], "6": [565600, 450000], "7": [565600, 450000], "8": [565600, 450000], "9": [565600, 450000], "10": [565600, null], "11": [643370, null], "12": [626200, 480562], "13": [585800, 453812], "14": [565600, 450000], "15": [565600, 450000], "16": [565600, 450000], "17": [565600, 450000], "18": [565600, 450000], "19": [565600, 450000], "20": [656500, 535162], "21": [666600, 515187], "22": [565600, 450000], "23": [565600, 450000], "24": [565600, 450000], "25": [565600, 450000], "26": [565600, 450000], "27": [565600, 450000], "28": [565600, 450000], "29": [545400, 450000], "30": [531502, null], "31": [535300, 450000], "32": [565600, 449650], "33": [565600, 462250], "34": [666600, 516750], "35": [676700, null], "36": [676700, 525000], "37": [676700, 525000], "38": [676700, 525000], "39": [676700, 525000], "40": [656500, 508950], "41": [531260, 450000], "42": [757500, 581625], "43": [565600, 450000], "44": [560000, 450000], "45": [565600, 450000], "46": [565600, 450000], "47": [565600, 450000], "48": [565600, 450000], "49": [565600, 450000], "50": [565600, 450000], "51": [545400, 468000], "52": [595900, 467500], "53": [767600, 600475], "54": [565600, 450000], "55": [565600, 450000], "56": [565600, 450000], "57": [565600, null], "58": [560000, null], "59": [565600, 450000], "60": [565600, 450000], "61": [549440, 450000], "62": [545400, 487500], "63": [686800, 545187], "64": [565600, 450000], "65": [565600, 450000], "66": [565600, 450000], "67": [757500, 612500], "68": [676700, 525000], "69": [565600, null], "70": [727200, 563625], "71": [565600, 450000], "72": [565600, 450000], "73": [560000, null], "74": [565600, 450000], "75": [565600, 450000], "76": [545400, null], "77": [606000, 490000], "78": [600000, null], "79": [606000, 490000], "80": [606000, 490000], "81": [585800, 455000], "82": [585800, 455000], "83": [585800, 455000], "84": [585800, 453075], "85": [686800, 535562], "86": [1625485, null], "87": [535300, 450000], "88": [606000, 470475], "89": [626200, 486150], "90": [626200, 486150], "91": [626200, 486150], "92": [626200, 486150], "93": [626200, 486150], "94": [626200, 486150], "95": [626200, 486150], "96": [626200, 486150], "97": [626200, 486150]}},
+   "Vista 43 - 2 dormitórios": {
+      "datas": [
+        "2026-09"
+      ],
+      "fontes": [
+        "Tabela zero 09-26 (lista de espera)"
+      ],
+      "obs": "Unidades de 2 dormitórios do Vista 43, 8 das 59 da tabela — uma de cada área distinta, para a amostra cobrir a planta inteira (79,02 m², 79,27 m², 79,81 m², 80,06 m², 80,10 m², 86,57 m², 86,80 m², 88,32 m²). Base: o valor total da condição padrão, a mesma dos cards e a mesma regra das outras séries. Só existe um levantamento até agora — a tabela zero de setembro/2026, de lista de espera —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando a próxima tabela chegar. Vale lembrar que são preços referenciais: o empreendimento ainda não está disponível para comercialização.",
+      "unidades": {
+        "L3103": [
+          972081.73
+        ],
+        "L1003": [
+          886988.05
+        ],
+        "L3102": [
+          978886.1
+        ],
+        "L1002": [
+          893163.57
+        ],
+        "L1001": [
+          895123.54
+        ],
+        "L1004": [
+          956845.75
+        ],
+        "L1901": [
+          1028887.97
+        ],
+        "L3404": [
+          1077429.58
+        ]
+      }
+    },
+   "Vista 43 - Studios": {
+      "datas": [
+        "2026-09"
+      ],
+      "fontes": [
+        "Tabela zero 09-26 (lista de espera)"
+      ],
+      "obs": "Studios do Vista 43, 5 dos 55 do tipo — uma unidade de cada área distinta (26,85 m², 27,67 m², 29,53 m², 37,14 m², 40,26 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. Só existe um levantamento até agora — a tabela zero de setembro/2026, de lista de espera —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos.",
+      "unidades": {
+        "S1004": [
+          288402.51
+        ],
+        "S1002": [
+          297210.33
+        ],
+        "S3005": [
+          402312.93
+        ],
+        "S1112": [
+          407467.89
+        ],
+        "S1010": [
+          433729.18
+        ]
+      }
+    },
+   "Vista 43 - Loft Duplex": {
+      "datas": [
+        "2026-09"
+      ],
+      "fontes": [
+        "Tabela zero 09-26 (lista de espera)"
+      ],
+      "obs": "Loft duplex do Vista 43, 4 dos 28 do tipo — uma unidade de cada área distinta (46,84 m², 48,83 m², 50,32 m², 50,64 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. Só existe um levantamento até agora — a tabela zero de setembro/2026, de lista de espera —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos.",
+      "unidades": {
+        "S1804": [
+          504237.73
+        ],
+        "S1802": [
+          523323.62
+        ],
+        "S2208": [
+          547678.05
+        ],
+        "S1801": [
+          541655.49
+        ]
+      }
+    },
   "Tulum - Studios": {
    datas: ["2026-09"],
    fontes: ["Tabela set/2026 · tabela 00 (lançamento)"],
