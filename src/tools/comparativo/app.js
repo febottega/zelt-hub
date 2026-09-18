@@ -13,6 +13,10 @@ DATA.forEach(d=>{ const m=(d.entrega||"").match(/\/(\d{4})/); d.entregaAno = m ?
 
 /* pastas do Google Drive com a tabela de preços por empreendimento (compartilhadas com o domínio ZELT) */
 const DRIVE_LINKS = {
+  /* o Vista 43 tem uma pasta so para as tres tipologias */
+  "Vista 43 - 2 dormitórios": "https://drive.google.com/drive/folders/1jnMvo3u_Frs-RJ2u12mvAzOQKga-SsYK",
+  "Vista 43 - Studios": "https://drive.google.com/drive/folders/1jnMvo3u_Frs-RJ2u12mvAzOQKga-SsYK",
+  "Vista 43 - Loft Duplex": "https://drive.google.com/drive/folders/1jnMvo3u_Frs-RJ2u12mvAzOQKga-SsYK",
   "San Blas": "https://drive.google.com/drive/folders/1A6LaiIS1Esu5_szcNDY1xmBwN_jus82u",
   "Liv": "https://drive.google.com/drive/folders/1X4fsdJA_GFgGb_-2xcW6PhWB7r40BcVK",
   "N Studios": "https://drive.google.com/drive/folders/1hjuaDdLupfXwOHNexAUvI5eeumAYYxzs",
@@ -52,6 +56,10 @@ const DRIVE_LINKS = {
   "Gardens": "https://drive.google.com/drive/folders/1wzX5JlLaVyoLZ-BF78KlzpnBanraSmFO"
 };
 const driveLinkFor = d => DRIVE_LINKS[d.empreendimento] || null;
+/* Em que tabela de vendas o card cai. Quase sempre e a de mesmo nome, mas uma
+   tabela pode reunir mais de uma tipologia -- o Vista 43 poe studios e loft
+   duplex na mesma -- e aí o card diz em qual entrar, no campo "tabela". */
+const tabelaDoCard = d => d.tabela || d.empreendimento;
 
 /* logos das construtoras (Andraus/Castelo embutidas; demais via Drive com fallback) */
 @@FILE:tools/comparativo/data/logos.js@@
@@ -243,8 +251,8 @@ function cardHTML(d){
     </div>
     <div class="deliv-line">Entrega: <b>${d.entrega||'—'}</b></div>
     <div class="actions">
-      ${hasSalesTable(d.empreendimento)
-        ? `<a class="btn-table btn-vertabela" href="#comparativo/tabelas/${salesSlug(d.empreendimento)}" data-sales="${d.empreendimento.replace(/"/g,'&quot;')}">Ver tabela</a>`
+      ${hasSalesTable(tabelaDoCard(d))
+        ? `<a class="btn-table btn-vertabela" href="#comparativo/tabelas/${salesSlug(tabelaDoCard(d))}" data-sales="${tabelaDoCard(d).replace(/"/g,'&quot;')}">Ver tabela</a>`
         : (link
           ? `<a class="btn-table" href="${link}" target="_blank" rel="noopener">Ir à tabela ↗</a>`
           : `<a class="btn-table disabled" title="Tabela ainda não cadastrada">Ir à tabela</a>`)}
@@ -863,7 +871,14 @@ function fallbackCopy(txt, done){
 
 function salesTableHTML(emp, t){
   const special = SPECIAL_UNITS[emp] || {};
-  const d0 = DATA.find(d=>d.empreendimento===emp) || {};
+  /* quando a tabela agrupa mais de uma tipologia nao ha card de mesmo nome (o
+     Vista 43 poe studios e loft duplex na mesma tabela e tem um card para cada
+     um). Sem card, o cabecalho ficava sem construtora, sem bairro e sem logo --
+     entao a propria tabela declara os dois, igual ao que ja se fazia com a
+     entrega e a construtora no resumo do WhatsApp. */
+  const s0 = t.summary || {};
+  const d0 = DATA.find(d=>d.empreendimento===emp)
+    || { construtora: s0.construtora || "", bairro: s0.bairro || "" };
   const hasSum = !!t.summary;
   const head = `<tr>${t.columns.map(c=>`<th>${c}</th>`).join("")}${hasSum?`<th class="th-resumo">Resumo</th>`:""}</tr>`;
   const body = t.rows.map((r,ri)=>`<tr>${r.map((cell,ci)=>{
