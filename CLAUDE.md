@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (20 payloads, 13.303.150 bytes):
+Hash de referência (20 payloads, 13.303.154 bytes):
 
 ```
-6D34F2114E17069D790B695744E8C1F6D28546FBA97161ADB2999A88758E37AD
+22D6E12AC986FD69621C2C640359DBA745F518D043FC35A90D77A542C1A05B3A
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -392,12 +392,22 @@ No `empreendimentos.js` a convenção é por campo: só `apriv`, `atotal`, `vmin
 `"apriv": 117` sem o `.0` e é a exceção que existe no arquivo — mais uma razão
 para trocar campo por campo em vez de reserializar o card inteiro.
 
-**O `rpriv` não tem uma fórmula só.** Dos 61 cards, 51 usam `media/apriv` e **9
+**O `rpriv` não tem uma fórmula só.** Dos 61 cards, 51 usam `media/apriv` e **7
 usam `media` dividida pela média da faixa de área** (`(apriv+atotal)/2`): Liv,
-Residencial EB, Gardens, San Vito, Lago di Garda, Alphaville, Ed. Edimburgo,
-Lisbon e os dois Tulum. O Central Park usa outra coisa ainda. Antes de recalcular
+Residencial EB, Gardens, San Vito, Lago di Garda, Alphaville, Ed. Edimburgo e
+Lisbon. O Central Park usa outra coisa ainda. Antes de recalcular
 um R$/m², descubra qual divisor aquele card já usava — aplicar `media/apriv` num
-dos nove infla o número em cerca de 10%.
+dos sete infla o número em cerca de 10%.
+
+Os **dois Tulum** usavam essa fórmula da faixa e em 23/09/2026 passaram para a
+**média do R$/m² unidade a unidade** da tabela inteira, sobre o total em 72x (a
+mesma base do card), a pedido do Felipe, que conferiu à mão e achou diferente. A
+faixa enganava ali: a 505 dos studios tem 70,66 m² contra 34 a 36 m² das outras
+41, e o meio da faixa de área (52,7 m²) ficava longe da área típica (37,3 m²) —
+o card mostrava R$ 8.453,97 onde a média real é R$ 10.911,61. Pelo mesmo motivo o
+`media` deles deixou de ser o meio da faixa `(vmin+vmax)/2` e passou a ser a
+média real do total em 72x de todas as unidades (studios R$ 404.093,32 em vez
+de 445.904,68). Quando a tabela do Tulum mudar, recalcule os dois do mesmo jeito.
 
 ### Duas formas no price-changes.js
 
