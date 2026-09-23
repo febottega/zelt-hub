@@ -1923,5 +1923,37 @@ const DATA = [
     "terreno": false,
     "sold": false,
     "id": 60
+  },
+  {
+    "tipo": "Apartamento Tipo",
+    "construtora": "Mestra",
+    "empreendimento": "Amani 53",
+    "bairro": "Jardim Blumenau",
+    "unidade": null,
+    "config": "4 suítes",
+    "vagas": "3 ou 4",
+    "vagasN": 3,
+    "apriv": 182.08,
+    "atotal": null,
+    "faixaArea": false,
+    "vmin": 2359710.83,
+    "vmax": 2535419.01,
+    "media": 2426137.88,
+    "rpriv": 13324.57,
+    "rtotal": null,
+    "entrega": "2031",
+    "entregaKey": 24384,
+    "pronto": false,
+    "condicao": "À vista ou financiamento",
+    "correcao": "",
+    "quartos": [
+      4
+    ],
+    "suites": [
+      4
+    ],
+    "terreno": false,
+    "sold": false,
+    "id": 64
   }
 ];

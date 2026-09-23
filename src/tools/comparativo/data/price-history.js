@@ -911,5 +911,20 @@ const PRICE_HISTORY = {
     "1007": [600302.3],
     "1406": [688210.83]
    }
+  },
+  "Amani 53": {
+   datas: ["2026-08"],
+   fontes: ["Planilha de reservas r01 (27/08/2026)"],
+   obs: "Os oito apartamentos disponíveis ou reservados do Amani 53, do 401 ao 1101 — a tabela inteira, porque é pequena. Base: o valor de venda, que é o mesmo à vista ou financiado. Só existe um levantamento até agora — a planilha r01 de 27/08/2026 —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a próxima tabela.",
+   unidades: {
+    "401": [2359710.83],
+    "501": [2379710.83],
+    "601": [2389710.83],
+    "701": [2399710.83],
+    "801": [2409710.83],
+    "901": [2419710.83],
+    "1001": [2515419.01],
+    "1101": [2535419.01]
+   }
   }
 };

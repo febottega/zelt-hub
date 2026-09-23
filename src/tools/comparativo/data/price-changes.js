@@ -1,4 +1,7 @@
 const PRICE_CHANGES = [
+  { emp: "Amani 53", tipoMudanca: "status",
+    texto: "Entra no comparativo com a planilha r01 de 27/08/2026: um apartamento por andar, todos de 4 suítes e 182,08 m², do 401 ao 1101 — oito disponíveis, de R$ 2.359.710,83 a R$ 2.515.419,01 (R$ 12.960 a R$ 13.815 o m²), e o 1101 reservado, a R$ 2.535.419,01. O 301 garden, de 246,48 m², já foi vendido. Pagamento à vista ou financiamento, sem parcelamento direto; o 1001 e o 1101 levam 4 vagas, os demais 3. Entrega prevista para 2031",
+    data: "23/09/2026" },
   { emp: "Vista 43 - Studios", tipoMudanca: "status",
     texto: "Chegou a tabela zero dos studios e dos loft duplex: 95 unidades numa tabela só, 92 disponíveis e três reservadas (S1205, S1801 e S3001), em ato + 60 parcelas + 5 reforços anuais e 12% de desconto à vista. São 55 studios de R$ 288.402,51 a R$ 457.167,24, 28 loft duplex de R$ 504.237,73 a R$ 578.659,81 e 12 unidades com terraço — os 10 studios garden do 7º andar e os dois duplex garden de 109,65 m² do 18º —, que ficam só na tabela de vendas. Seguem sendo preços referenciais de lista de espera",
     data: "18/09/2026" },

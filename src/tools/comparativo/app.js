@@ -8,8 +8,9 @@ const state = {
   view:"cards", sort:"price-asc"
 };
 const picked = new Set();
-/* ano de entrega derivado (a partir de mm/aaaa); sem data => null */
-DATA.forEach(d=>{ const m=(d.entrega||"").match(/\/(\d{4})/); d.entregaAno = m ? +m[1] : null; });
+/* ano de entrega derivado (a partir de mm/aaaa, ou so aaaa quando a construtora
+   nao informa o mes -- Amani 53); sem data => null */
+DATA.forEach(d=>{ const m=(d.entrega||"").match(/(?:^|\/)(\d{4})(?!\d)/); d.entregaAno = m ? +m[1] : null; });
 
 /* pastas do Google Drive com a tabela de preços por empreendimento (compartilhadas com o domínio ZELT) */
 const DRIVE_LINKS = {
@@ -53,7 +54,8 @@ const DRIVE_LINKS = {
   "Alphaville": "https://drive.google.com/drive/folders/1gx3z66POBD-m6sJkYgfRjVJ22X6xCOVI",
   "Flow": "https://drive.google.com/drive/folders/17UH6mGufN3UX2YButpvYbDK108eBIU1Z",
   "Villaggio di Fiori": "https://drive.google.com/drive/folders/1qCUXgmpeqrn8INt6l6PxaHAdHroD_5tN",
-  "Gardens": "https://drive.google.com/drive/folders/1wzX5JlLaVyoLZ-BF78KlzpnBanraSmFO"
+  "Gardens": "https://drive.google.com/drive/folders/1wzX5JlLaVyoLZ-BF78KlzpnBanraSmFO",
+  "Amani 53": "https://drive.google.com/drive/folders/1Wlr-o8sOwZCkUutDvjNwxf1JOiauIIoz"
 };
 const driveLinkFor = d => DRIVE_LINKS[d.empreendimento] || null;
 /* Em que tabela de vendas o card cai. Quase sempre e a de mesmo nome, mas uma

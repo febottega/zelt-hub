@@ -74,7 +74,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | Quero mudar | Arquivo | Tamanho |
 |---|---|---|
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **71 KB** |
-| os 61 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
+| os 62 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
@@ -101,7 +101,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   A ordenação é de um critério, pelo cabeçalho ou pelo select "Ordenar por" —
   que existe porque o `<thead>` desaparece abaixo de 820px.
 - **avaliacao** + 14 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
-- **comparativo** — 61 empreendimentos. Abas: comparativo, mudanças, melhores preços,
+- **comparativo** — 62 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
   chaves, checklist). Rascunhos em `localStorage` (`zelt_*_v1`); exporta com
@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (20 payloads, 13.303.154 bytes):
+Hash de referência (20 payloads, 13.308.926 bytes):
 
 ```
-22D6E12AC986FD69621C2C640359DBA745F518D043FC35A90D77A542C1A05B3A
+146C298F1365383DA12B0660FE94CE4130DFC99494A29E975F7239B92C862EF8
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -392,7 +392,7 @@ No `empreendimentos.js` a convenção é por campo: só `apriv`, `atotal`, `vmin
 `"apriv": 117` sem o `.0` e é a exceção que existe no arquivo — mais uma razão
 para trocar campo por campo em vez de reserializar o card inteiro.
 
-**O `rpriv` não tem uma fórmula só.** Dos 61 cards, 51 usam `media/apriv` e **7
+**O `rpriv` não tem uma fórmula só.** Dos 62 cards, 52 usam `media/apriv` e **7
 usam `media` dividida pela média da faixa de área** (`(apriv+atotal)/2`): Liv,
 Residencial EB, Gardens, San Vito, Lago di Garda, Alphaville, Ed. Edimburgo e
 Lisbon. O Central Park usa outra coisa ainda. Antes de recalcular
@@ -408,6 +408,13 @@ o card mostrava R$ 8.453,97 onde a média real é R$ 10.911,61. Pelo mesmo motiv
 `media` deles deixou de ser o meio da faixa `(vmin+vmax)/2` e passou a ser a
 média real do total em 72x de todas as unidades (studios R$ 404.093,32 em vez
 de 445.904,68). Quando a tabela do Tulum mudar, recalcule os dois do mesmo jeito.
+
+O **Amani 53** (Mestra, entrou em 23/09/2026) tem a entrega só com o ano, `"2031"`,
+porque a construtora não informa o mês. O `entregaAno` do `app.js` antes só
+lia `mm/aaaa`, e o card ficaria fora do filtro de ano; o regex agora aceita o ano
+sozinho. O `entregaKey` dele é dezembro (`2031*12+12 = 24384`), para ordenar
+depois de qualquer entrega com mês em 2031. A Mestra não tem logo em `logos.js` —
+o card funciona sem, até alguém mandar a imagem.
 
 ### Duas formas no price-changes.js
 

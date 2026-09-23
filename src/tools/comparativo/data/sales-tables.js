@@ -6351,5 +6351,17 @@ const SALES_TABLES = {
         }
       ]
     }
+  },
+  "Amani 53": {
+   folderId: "1Wlr-o8sOwZCkUutDvjNwxf1JOiauIIoz",
+   source: "Planilha de reservas (Mestra)",
+   ref: "Agosto/2026 · r01 (27/08/2026)",
+   unitCol: 0,
+   columns: ["Apto","Área priv.","Área total","Vagas","Situação","R$/m² priv.","Valor de venda"],
+   rows: [["401","182,08 m²","332,93 m²","3 (01A, 01B e 16)","Disponível","R$ 12.959,75","R$ 2.359.710,83"],["501","182,08 m²","332,93 m²","3 (09, 10 e 17)","Disponível","R$ 13.069,59","R$ 2.379.710,83"],["601","182,08 m²","332,93 m²","3 (13, 14 e 18)","Disponível","R$ 13.124,51","R$ 2.389.710,83"],["701","182,08 m²","332,93 m²","3 (05A, 05B e 19)","Disponível","R$ 13.179,43","R$ 2.399.710,83"],["801","182,08 m²","332,93 m²","3 (04A, 04B e 20)","Disponível","R$ 13.234,35","R$ 2.409.710,83"],["901","182,08 m²","332,93 m²","3 (03A, 03B e 21)","Disponível","R$ 13.289,27","R$ 2.419.710,83"],["1001","182,08 m²","351,88 m²","4 (02A, 02B, 22 e 25)","Disponível","R$ 13.814,91","R$ 2.515.419,01"],["1101","182,08 m²","351,88 m²","4 (11, 12, 23 e 24)","Reservado","R$ 13.924,75","R$ 2.535.419,01"]],
+   note: "Um apartamento por andar, todos de 4 suítes e 182,08 m² privativos, do 401 ao 1101: oito disponíveis e o 1101 reservado. O 301 garden (246,48 m², 4 vagas, R$ 2.651.632,38) já está vendido e não aparece aqui. Condição: à vista ou financiamento, pelo valor de venda da tabela — a Mestra não publica parcelamento direto. O preço sobe R$ 20 mil do 401 para o 501 e R$ 10 mil por andar até o 901; o 1001 e o 1101 têm 4 vagas e 351,88 m² de área total (contra 3 vagas e 332,93 m² nos de baixo) e custam cerca de R$ 95 mil a mais. As vagas com A e B são duplas (uma atrás da outra); a construtora anota 12,50 m² de área privativa por vaga. Área total = privativa + garagem + área comum. O R$/m² é o da própria tabela, sobre a área privativa, e confere com valor ÷ área em todas as linhas. Entrega prevista: 2031, sem mês informado.",
+   summary: { tipoDefault:"Apartamento tipo (4 suítes)", situacaoCol:4,
+     bits:[{pre:"Área privativa: ",col:1},{pre:"Área total: ",col:2},{pre:"Vagas: ",col:3}],
+     principal:{label:"Valor de venda (à vista ou financiamento)",col:6} }
   }
 };
