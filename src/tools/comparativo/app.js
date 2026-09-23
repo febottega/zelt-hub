@@ -55,7 +55,8 @@ const DRIVE_LINKS = {
   "Flow": "https://drive.google.com/drive/folders/17UH6mGufN3UX2YButpvYbDK108eBIU1Z",
   "Villaggio di Fiori": "https://drive.google.com/drive/folders/1qCUXgmpeqrn8INt6l6PxaHAdHroD_5tN",
   "Gardens": "https://drive.google.com/drive/folders/1wzX5JlLaVyoLZ-BF78KlzpnBanraSmFO",
-  "Amani 53": "https://drive.google.com/drive/folders/1Wlr-o8sOwZCkUutDvjNwxf1JOiauIIoz"
+  "Amani 53": "https://drive.google.com/drive/folders/1Wlr-o8sOwZCkUutDvjNwxf1JOiauIIoz",
+  "Vilaggio Treviso": "https://drive.google.com/drive/folders/1RLOudeck3dBTWh0PMG6tNtRaThBOV6Pd"
 };
 const driveLinkFor = d => DRIVE_LINKS[d.empreendimento] || null;
 /* Em que tabela de vendas o card cai. Quase sempre e a de mesmo nome, mas uma

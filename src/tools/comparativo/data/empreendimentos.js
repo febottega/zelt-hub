@@ -1955,5 +1955,33 @@ const DATA = [
     "terreno": false,
     "sold": false,
     "id": 64
+  },
+  {
+    "tipo": "Terreno",
+    "construtora": "Alfablu",
+    "empreendimento": "Vilaggio Treviso",
+    "bairro": "Vorstadt",
+    "unidade": null,
+    "config": "Terreno",
+    "vagas": "-",
+    "vagasN": null,
+    "apriv": 208.36,
+    "atotal": 369.32,
+    "faixaArea": true,
+    "vmin": 440500.0,
+    "vmax": 837500.0,
+    "media": 544763.16,
+    "rpriv": 2080.48,
+    "rtotal": null,
+    "entrega": "09/2029",
+    "entregaKey": 24357,
+    "pronto": false,
+    "condicao": "Entrada + 36x + 3 aportes",
+    "correcao": "CUB nas parcelas",
+    "quartos": [],
+    "suites": [],
+    "terreno": true,
+    "sold": false,
+    "id": 65
   }
 ];
