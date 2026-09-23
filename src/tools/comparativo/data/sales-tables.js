@@ -1987,7 +1987,7 @@ const SALES_TABLES = {
   "Princess Tower": {
     "folderId": "1GCOItkxK0vCnbI1yKp_ACFwy7XekOJfk",
     "source": "Planilha de valores e condições (Speranzini)",
-    "ref": "Julho/2026 · Rev. 16 (27/07/2026)",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -2234,15 +2234,6 @@ const SALES_TABLES = {
         "R$ 1.078.000,00"
       ],
       [
-        "1202",
-        "118,95 m²",
-        "—",
-        "R$ 150.000,00",
-        "R$ 30.000,00",
-        "R$ 9.973,33",
-        "R$ 1.078.000,00"
-      ],
-      [
         "1203",
         "118,51 m²",
         "—",
@@ -2288,15 +2279,6 @@ const SALES_TABLES = {
         "R$ 1.095.000,00"
       ],
       [
-        "1402",
-        "118,51 m²",
-        "—",
-        "R$ 160.000,00",
-        "R$ 30.000,00",
-        "R$ 10.066,67",
-        "R$ 1.095.000,00"
-      ],
-      [
         "1403",
         "118,51 m²",
         "—",
@@ -2324,7 +2306,7 @@ const SALES_TABLES = {
         "R$ 1.155.000,00"
       ]
     ],
-    "note": "Tabela a preço fechado, Rev. 16 de 27/07/2026 — restam 36 unidades. Condição: entrada (15%) + 6 reforços semestrais nas datas dez/26, jun/27, dez/27, jun/28, dez/28 e jun/29 + 75 parcelas. Parcelas corrigidas pela variação do CUB ponderado, no dia 05 do mês seguinte. Entrega prevista: dezembro/2029. Preço com 01 vaga dupla + 01 vaga simples; para 03 vagas simples acrescentar R$ 25.000,00 no preço final. Vagas sujeitas a disponibilidade; as vagas 51 e 52 ficam no pavimento térreo. Unidade 204 saiu da tabela; a 804 foi vendida em 15/09/2026, depois da revisão, e segue no histórico de preços, que vai até abril/2026. As áreas foram mantidas da revisão anterior, porque a tabela de julho/2026 não traz coluna de área — nela a área do apto 1402 consta como 118,51 m², divergindo do padrão dos finais 02 (118,95 m²); confirmar. Unidades sujeitas a conferência no fechamento, há vários corretores negociando.",
+    "note": "Tabela a preço fechado de setembro/2026 — restam 34 unidades. Em relação à Rev. 16 de 27/07/2026, a única mudança foi a saída das unidades 1202 e 1402; valores e condições seguem iguais. Condição: entrada (15%) + 6 reforços semestrais nas datas dez/26, jun/27, dez/27, jun/28, dez/28 e jun/29 + 75 parcelas. Parcelas corrigidas pela variação do CUB ponderado, no dia 05 do mês seguinte. Entrega prevista: dezembro/2029. Preço com 01 vaga dupla + 01 vaga simples; para 03 vagas simples acrescentar R$ 25.000,00 no preço final. Vagas sujeitas a disponibilidade; as vagas 51 e 52 ficam no pavimento térreo. Unidade 204 saiu da tabela; a 804 foi vendida em 15/09/2026, depois da revisão, e segue no histórico de preços, que vai até abril/2026. As áreas foram mantidas da revisão anterior, porque as tabelas de julho e setembro/2026 não trazem coluna de área. Unidades sujeitas a conferência no fechamento, há vários corretores negociando.",
     "summary": {
       "bits": [
         {
