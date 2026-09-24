@@ -1,5 +1,5 @@
 const PRICE_CHANGES = [
-  { emp: "Vilaggio Treviso", tipoMudanca: "status",
+  { emp: "Villaggio Treviso", tipoMudanca: "status",
     texto: "Entra no comparativo o condomínio fechado de lotes da Alfablu no Vorstadt: 38 lotes disponíveis de 208,36 m² a 369,32 m², de R$ 440.500,00 a R$ 837.500,00 (R$ 1.910 a R$ 2.285 o m²), e o lote 45 em contrato. Condição de 15% de entrada, 36 parcelas corrigidas pelo CUB e 3 aportes anuais de 2%, ou 10% de desconto à vista. Entrega prevista para setembro/2029",
     data: "23/09/2026" },
   { emp: "Amani 53", tipoMudanca: "status",

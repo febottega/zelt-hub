@@ -1959,7 +1959,7 @@ const DATA = [
   {
     "tipo": "Terreno",
     "construtora": "Alfablu",
-    "empreendimento": "Vilaggio Treviso",
+    "empreendimento": "Villaggio Treviso",
     "bairro": "Vorstadt",
     "unidade": null,
     "config": "Terreno",

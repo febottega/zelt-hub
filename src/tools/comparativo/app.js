@@ -56,7 +56,7 @@ const DRIVE_LINKS = {
   "Villaggio di Fiori": "https://drive.google.com/drive/folders/1qCUXgmpeqrn8INt6l6PxaHAdHroD_5tN",
   "Gardens": "https://drive.google.com/drive/folders/1wzX5JlLaVyoLZ-BF78KlzpnBanraSmFO",
   "Amani 53": "https://drive.google.com/drive/folders/1Wlr-o8sOwZCkUutDvjNwxf1JOiauIIoz",
-  "Vilaggio Treviso": "https://drive.google.com/drive/folders/1RLOudeck3dBTWh0PMG6tNtRaThBOV6Pd"
+  "Villaggio Treviso": "https://drive.google.com/drive/folders/1RLOudeck3dBTWh0PMG6tNtRaThBOV6Pd"
 };
 const driveLinkFor = d => DRIVE_LINKS[d.empreendimento] || null;
 /* Em que tabela de vendas o card cai. Quase sempre e a de mesmo nome, mas uma

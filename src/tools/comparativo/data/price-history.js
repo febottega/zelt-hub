@@ -927,10 +927,10 @@ const PRICE_HISTORY = {
     "1101": [2535419.01]
    }
   },
-  "Vilaggio Treviso": {
+  "Villaggio Treviso": {
    datas: ["2026-09"],
    fontes: ["Tabela de lotes set/2026 (site da Alfablu)"],
-   obs: "Os 38 lotes disponíveis do Vilaggio Treviso — a tabela inteira. Base: o valor de tabela, que é o do parcelamento (a mesma regra das outras séries: o total da condição principal). Só existe um levantamento até agora — a tabela de setembro/2026 —, então ainda não há variação para medir: a aba compara o mesmo lote entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a próxima tabela.",
+   obs: "Os 38 lotes disponíveis do Villaggio Treviso — a tabela inteira. Base: o valor de tabela, que é o do parcelamento (a mesma regra das outras séries: o total da condição principal). Só existe um levantamento até agora — a tabela de setembro/2026 —, então ainda não há variação para medir: a aba compara o mesmo lote entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a próxima tabela.",
    unidades: {
     "1": [525000],
     "2": [525000],

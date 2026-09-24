@@ -6364,7 +6364,7 @@ const SALES_TABLES = {
      bits:[{pre:"Área privativa: ",col:1},{pre:"Área total: ",col:2},{pre:"Vagas: ",col:3}],
      principal:{label:"Valor de venda (à vista ou financiamento)",col:6} }
   },
-  "Vilaggio Treviso": {
+  "Villaggio Treviso": {
    folderId: "1RLOudeck3dBTWh0PMG6tNtRaThBOV6Pd",
    source: "Tabela de lotes (Alfablu)",
    ref: "Setembro/2026",

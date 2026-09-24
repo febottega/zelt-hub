@@ -158,10 +158,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (20 payloads, 13.320.294 bytes):
+Hash de referência (20 payloads, 13.320.302 bytes):
 
 ```
-B079C1948C0E835BEF72D9324B7D8DB49428C420A6036B224E5D89F71B0C0357
+DDC3DE66D47126023783A833CFEF5D8ED875BB74EB0476E97E3EEE4E26E84CBC
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -416,9 +416,10 @@ sozinho. O `entregaKey` dele é dezembro (`2031*12+12 = 24384`), para ordenar
 depois de qualquer entrega com mês em 2031. A Mestra não tem logo em `logos.js` —
 o card funciona sem, até alguém mandar a imagem.
 
-O **Vilaggio Treviso** (Alfablu, lotes, entrou em 23/09/2026 — **com um L só**,
-como o Felipe pediu, embora o site da construtora escreva "Villaggio"; não
-confundir com o Villaggio di Fiori, da Sforza, que tem dois) já nasceu com a
+O **Villaggio Treviso** (Alfablu, lotes, entrou em 23/09/2026 — com **dois L**,
+como no site da construtora; passou um dia escrito "Vilaggio" e o Felipe
+confirmou em 24/09 que o certo é com dois; não confundir com o Villaggio di
+Fiori, da Sforza) já nasceu com a
 regra dos Tulum: `media` é a média real dos 38 lotes e `rpriv` a média do R$/m²
 lote a lote. A tabela veio do site da construtora (lotes.alfablu.com.br, o link
 está num Doc da pasta do Drive) e traz só os percentuais da condição — 15% de
