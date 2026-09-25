@@ -113,10 +113,11 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
 - **arquivos** — tabela de PDFs para o cliente; os arquivos ficam em `arquivos/` na
   raiz do repo, fora do payload, e abrem em aba nova.
 
-No topo do hub, entre o logo e o selo "Uso interno", fica a caixa `.hero-links`
+No topo do hub, à direita do logo — no lugar do antigo selo "Uso interno ·
+Equipe de corretores", tirado em 25/09/2026 —, fica a caixa `.hero-links`
 com dois links externos de crédito da SB, que abrem em aba nova: **Simulação e
 Pré Aprovação** (store.bpotech.com.br) e **Calculadora de Poder de Compra**
-(sbcreditoimobiliario.com/parceiros). Abaixo de 1100px a caixa desce para uma
+(sbcreditoimobiliario.com/parceiros). Abaixo de 760px a caixa desce para uma
 linha própria e abaixo de 640px os botões ficam um sobre o outro.
 
 Zero bibliotecas externas em runtime além do que está em `vendor/`. Gráficos são
@@ -164,10 +165,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (20 payloads, 13.304.675 bytes):
+Hash de referência (20 payloads, 13.303.993 bytes):
 
 ```
-4780E4C41317D9EBC1D7FCEFBA7096EE73132BAC7D10615B85A7A3BFF1193B8E
+96AA85D3B25342373AC72C1C3B118728EB522A2AA8252AF39DC6D8CE2A25F8F6
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

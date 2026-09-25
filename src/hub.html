@@ -200,14 +200,7 @@ html.zelt-direto .scroll-hint{opacity:1;animation:none}
   gap:16px;margin-bottom:auto;padding-bottom:56px;
 }
 .hero-logo{height:44px;width:auto;display:block}
-.hero-badge{
-  font-family:var(--font-display);font-weight:500;font-size:12px;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--navy-200);
-  border:1px solid var(--navy-700);border-radius:var(--radius-pill);
-  padding:8px 18px;white-space:nowrap;
-  display:flex;align-items:center;gap:8px;
-}
-/* caixa com os dois links externos de credito, entre o logo e o selo */
+/* caixa com os dois links externos de credito, a direita do logo */
 .hero-links{
   display:flex;gap:6px;padding:5px;
   background:rgba(16,14,29,.55);
@@ -227,19 +220,11 @@ html.zelt-direto .scroll-hint{opacity:1;animation:none}
 .hero-link:hover{background:var(--zelt-orange);color:var(--navy-900)}
 .hero-link:hover .arrow{color:var(--navy-900);transform:translate(2px,-2px)}
 .hero-link:focus-visible{outline:none;box-shadow:var(--focus-ring)}
-@media (max-width:1100px){
-  /* sem espaco para os tres na mesma linha: a caixa desce para baixo do logo */
+@media (max-width:760px){
+  /* sem espaco para logo e caixa na mesma linha: a caixa desce para baixo do logo */
   .hero-top{flex-wrap:wrap}
   .hero-links{order:3;flex-basis:100%;width:100%}
   .hero-link{flex:1;justify-content:center}
-}
-.pulse-dot{
-  width:7px;height:7px;border-radius:50%;background:var(--zelt-orange);
-  animation:pulse 2s ease-in-out infinite;
-}
-@keyframes pulse{
-  0%,100%{box-shadow:0 0 0 0 rgba(255,158,54,.5)}
-  50%{box-shadow:0 0 0 7px rgba(255,158,54,0)}
 }
 .hero-eyebrow{
   font-family:var(--font-display);font-weight:500;font-size:12px;
@@ -518,7 +503,6 @@ body.tool-open{overflow:hidden}
   .hero-inner{padding:24px 20px 88px}
   .hero-top{padding-bottom:40px}
   .hero-logo{height:34px}
-  .hero-badge{display:none}
   .hero-links{flex-direction:column}
   .hero-link{white-space:normal;text-align:center}
   .hero h1{font-size:clamp(38px,11vw,52px)}
@@ -571,7 +555,6 @@ body.tool-open{overflow:hidden}
         <a class="hero-link" href="https://store.bpotech.com.br/26/sb-assessoria-de-credito-imobiliario-1/immobile-financing/intent" target="_blank" rel="noopener">Simulação e Pré Aprovação <span class="arrow" aria-hidden="true">↗</span></a>
         <a class="hero-link" href="https://sbcreditoimobiliario.com/parceiros" target="_blank" rel="noopener">Calculadora de Poder de Compra <span class="arrow" aria-hidden="true">↗</span></a>
       </nav>
-      <span class="hero-badge"><span class="pulse-dot"></span>Uso interno · Equipe de corretores</span>
     </div>
     <div>
       <p class="hero-eyebrow">Ferramentas internas</p>
