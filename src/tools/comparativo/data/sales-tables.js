@@ -3825,7 +3825,7 @@ const SALES_TABLES = {
    "Vista 43 - 2 dormitórios": {
       "folderId": "1jnMvo3u_Frs-RJ2u12mvAzOQKga-SsYK",
       "source": "Tabela de vendas (Novo Rumo)",
-      "ref": "Tabela zero 09-26 · gerada em 18/09/2026 · situação de 24/09/2026",
+      "ref": "Tabela zero 09-26 · gerada em 18/09/2026 · situação de 28/09/2026",
       "unitCol": 0,
       "columns": [
         "Unidade",
@@ -3835,7 +3835,8 @@ const SALES_TABLES = {
         "Ato (1x · 20%)",
         "84 parcelas (60%)",
         "7 reforços anuais (20%)",
-        "Valor total"
+        "Valor total",
+        "À vista (−12%)"
       ],
       "rows": [
         [
@@ -3846,7 +3847,8 @@ const SALES_TABLES = {
           "R$ 179.024,66",
           "R$ 6.393,74",
           "R$ 25.574,96",
-          "R$ 895.123,54"
+          "R$ 895.123,54",
+          "R$ 787.708,72"
         ],
         [
           "L1002",
@@ -3856,7 +3858,8 @@ const SALES_TABLES = {
           "R$ 178.632,69",
           "R$ 6.379,74",
           "R$ 25.518,96",
-          "R$ 893.163,57"
+          "R$ 893.163,57",
+          "R$ 785.983,94"
         ],
         [
           "L1004",
@@ -3866,7 +3869,8 @@ const SALES_TABLES = {
           "R$ 191.369,36",
           "R$ 6.834,61",
           "R$ 27.338,45",
-          "R$ 956.845,75"
+          "R$ 956.845,75",
+          "R$ 842.024,26"
         ],
         [
           "L1101",
@@ -3876,7 +3880,8 @@ const SALES_TABLES = {
           "R$ 180.564,19",
           "R$ 6.448,72",
           "R$ 25.794,88",
-          "R$ 902.820,83"
+          "R$ 902.820,83",
+          "R$ 794.482,33"
         ],
         [
           "L1102",
@@ -3886,7 +3891,8 @@ const SALES_TABLES = {
           "R$ 180.168,62",
           "R$ 6.434,58",
           "R$ 25.738,33",
-          "R$ 900.841,65"
+          "R$ 900.841,65",
+          "R$ 792.740,65"
         ],
         [
           "L1104",
@@ -3896,7 +3902,8 @@ const SALES_TABLES = {
           "R$ 193.029,26",
           "R$ 6.893,92",
           "R$ 27.575,66",
-          "R$ 965.148,16"
+          "R$ 965.148,16",
+          "R$ 849.330,38"
         ],
         [
           "L1301",
@@ -3906,7 +3913,8 @@ const SALES_TABLES = {
           "R$ 183.643,18",
           "R$ 6.558,68",
           "R$ 26.234,73",
-          "R$ 918.215,41"
+          "R$ 918.215,41",
+          "R$ 808.029,56"
         ],
         [
           "L1302",
@@ -3916,7 +3924,8 @@ const SALES_TABLES = {
           "R$ 183.239,56",
           "R$ 6.544,27",
           "R$ 26.177,08",
-          "R$ 916.197,80"
+          "R$ 916.197,80",
+          "R$ 806.254,06"
         ],
         [
           "L1303",
@@ -3926,7 +3935,8 @@ const SALES_TABLES = {
           "R$ 181.968,25",
           "R$ 6.498,86",
           "R$ 25.995,45",
-          "R$ 909.840,64"
+          "R$ 909.840,64",
+          "R$ 800.659,76"
         ],
         [
           "L1304",
@@ -3936,7 +3946,8 @@ const SALES_TABLES = {
           "R$ 196.350,73",
           "R$ 7.012,52",
           "R$ 28.050,08",
-          "R$ 981.752,97"
+          "R$ 981.752,97",
+          "R$ 863.942,61"
         ],
         [
           "L1305",
@@ -3946,7 +3957,8 @@ const SALES_TABLES = {
           "R$ 196.699,42",
           "R$ 7.024,99",
           "R$ 28.099,95",
-          "R$ 983.498,23"
+          "R$ 983.498,23",
+          "R$ 865.478,44"
         ],
         [
           "L1501",
@@ -3956,7 +3968,8 @@ const SALES_TABLES = {
           "R$ 186.722,24",
           "R$ 6.668,64",
           "R$ 26.674,57",
-          "R$ 933.609,99"
+          "R$ 933.609,99",
+          "R$ 821.576,79"
         ],
         [
           "L1502",
@@ -3966,7 +3979,8 @@ const SALES_TABLES = {
           "R$ 186.310,49",
           "R$ 6.653,96",
           "R$ 26.615,83",
-          "R$ 931.553,94"
+          "R$ 931.553,94",
+          "R$ 819.767,47"
         ],
         [
           "L1503",
@@ -3976,7 +3990,8 @@ const SALES_TABLES = {
           "R$ 185.004,81",
           "R$ 6.607,33",
           "R$ 26.429,31",
-          "R$ 925.025,70"
+          "R$ 925.025,70",
+          "R$ 814.022,62"
         ],
         [
           "L1504",
@@ -3986,7 +4001,8 @@ const SALES_TABLES = {
           "R$ 199.671,30",
           "R$ 7.131,13",
           "R$ 28.524,51",
-          "R$ 998.357,79"
+          "R$ 998.357,79",
+          "R$ 878.554,86"
         ],
         [
           "L1701",
@@ -3996,7 +4012,8 @@ const SALES_TABLES = {
           "R$ 189.801,23",
           "R$ 6.778,60",
           "R$ 27.114,42",
-          "R$ 949.004,57"
+          "R$ 949.004,57",
+          "R$ 835.124,02"
         ],
         [
           "L1702",
@@ -4006,7 +4023,8 @@ const SALES_TABLES = {
           "R$ 189.382,34",
           "R$ 6.763,64",
           "R$ 27.054,57",
-          "R$ 946.910,09"
+          "R$ 946.910,09",
+          "R$ 833.280,88"
         ],
         [
           "L1704",
@@ -4016,7 +4034,8 @@ const SALES_TABLES = {
           "R$ 202.992,78",
           "R$ 7.249,73",
           "R$ 28.998,93",
-          "R$ 1.014.962,61"
+          "R$ 1.014.962,61",
+          "R$ 893.167,10"
         ],
         [
           "L1801",
@@ -4026,7 +4045,8 @@ const SALES_TABLES = {
           "R$ 191.319,02",
           "R$ 6.832,81",
           "R$ 27.331,25",
-          "R$ 956.593,81"
+          "R$ 956.593,81",
+          "R$ 841.802,55"
         ],
         [
           "L1802",
@@ -4036,7 +4056,8 @@ const SALES_TABLES = {
           "R$ 190.901,03",
           "R$ 6.817,88",
           "R$ 27.271,54",
-          "R$ 954.503,73"
+          "R$ 954.503,73",
+          "R$ 839.963,28"
         ],
         [
           "L1803",
@@ -4046,7 +4067,8 @@ const SALES_TABLES = {
           "R$ 189.584,03",
           "R$ 6.770,84",
           "R$ 27.083,38",
-          "R$ 947.918,25"
+          "R$ 947.918,25",
+          "R$ 834.168,06"
         ],
         [
           "L1804",
@@ -4056,7 +4078,8 @@ const SALES_TABLES = {
           "R$ 204.482,97",
           "R$ 7.302,95",
           "R$ 29.211,81",
-          "R$ 1.022.413,44"
+          "R$ 1.022.413,44",
+          "R$ 899.723,83"
         ],
         [
           "L1901",
@@ -4066,7 +4089,8 @@ const SALES_TABLES = {
           "R$ 205.777,57",
           "R$ 7.349,20",
           "R$ 29.396,80",
-          "R$ 1.028.887,97"
+          "R$ 1.028.887,97",
+          "R$ 905.421,41"
         ],
         [
           "L1902",
@@ -4076,7 +4100,8 @@ const SALES_TABLES = {
           "R$ 191.317,29",
           "R$ 6.832,76",
           "R$ 27.331,04",
-          "R$ 956.586,41"
+          "R$ 956.586,41",
+          "R$ 841.796,04"
         ],
         [
           "L1903",
@@ -4086,7 +4111,8 @@ const SALES_TABLES = {
           "R$ 189.997,24",
           "R$ 6.785,60",
           "R$ 27.142,41",
-          "R$ 949.984,51"
+          "R$ 949.984,51",
+          "R$ 835.986,37"
         ],
         [
           "L1904",
@@ -4096,17 +4122,19 @@ const SALES_TABLES = {
           "R$ 204.932,98",
           "R$ 7.319,04",
           "R$ 29.276,16",
-          "R$ 1.024.665,46"
+          "R$ 1.024.665,46",
+          "R$ 901.705,60"
         ],
         [
           "L1905",
           "86,57 m²",
           "150, 151 (2 simples)",
-          "Reservada",
+          "Disponível",
           "R$ 205.295,17",
           "R$ 7.331,99",
           "R$ 29.327,94",
-          "R$ 1.026.477,91"
+          "R$ 1.026.477,91",
+          "R$ 903.300,56"
         ],
         [
           "L2201",
@@ -4116,7 +4144,8 @@ const SALES_TABLES = {
           "R$ 192.988,80",
           "R$ 6.892,47",
           "R$ 27.569,87",
-          "R$ 964.945,37"
+          "R$ 964.945,37",
+          "R$ 849.151,93"
         ],
         [
           "L2202",
@@ -4126,7 +4155,8 @@ const SALES_TABLES = {
           "R$ 192.566,76",
           "R$ 6.877,39",
           "R$ 27.509,56",
-          "R$ 962.834,44"
+          "R$ 962.834,44",
+          "R$ 847.294,31"
         ],
         [
           "L2203",
@@ -4136,7 +4166,8 @@ const SALES_TABLES = {
           "R$ 191.236,71",
           "R$ 6.829,88",
           "R$ 27.319,52",
-          "R$ 956.183,27"
+          "R$ 956.183,27",
+          "R$ 841.441,28"
         ],
         [
           "L2204",
@@ -4146,7 +4177,8 @@ const SALES_TABLES = {
           "R$ 206.284,02",
           "R$ 7.367,30",
           "R$ 29.469,19",
-          "R$ 1.031.421,55"
+          "R$ 1.031.421,55",
+          "R$ 907.650,96"
         ],
         [
           "L2301",
@@ -4156,7 +4188,8 @@ const SALES_TABLES = {
           "R$ 207.587,95",
           "R$ 7.413,84",
           "R$ 29.655,37",
-          "R$ 1.037.938,10"
+          "R$ 1.037.938,10",
+          "R$ 913.385,53"
         ],
         [
           "L2302",
@@ -4166,7 +4199,8 @@ const SALES_TABLES = {
           "R$ 192.983,02",
           "R$ 6.892,27",
           "R$ 27.569,06",
-          "R$ 964.917,12"
+          "R$ 964.917,12",
+          "R$ 849.127,07"
         ],
         [
           "L2303",
@@ -4176,7 +4210,8 @@ const SALES_TABLES = {
           "R$ 191.649,85",
           "R$ 6.844,64",
           "R$ 27.378,56",
-          "R$ 958.249,53"
+          "R$ 958.249,53",
+          "R$ 843.259,59"
         ],
         [
           "L2304",
@@ -4186,7 +4221,8 @@ const SALES_TABLES = {
           "R$ 206.734,95",
           "R$ 7.383,38",
           "R$ 29.533,53",
-          "R$ 1.033.673,58"
+          "R$ 1.033.673,58",
+          "R$ 909.632,75"
         ],
         [
           "L2305",
@@ -4196,7 +4232,8 @@ const SALES_TABLES = {
           "R$ 207.100,61",
           "R$ 7.396,46",
           "R$ 29.585,83",
-          "R$ 1.035.504,06"
+          "R$ 1.035.504,06",
+          "R$ 911.243,57"
         ],
         [
           "L2601",
@@ -4206,7 +4243,8 @@ const SALES_TABLES = {
           "R$ 194.659,49",
           "R$ 6.952,12",
           "R$ 27.808,48",
-          "R$ 973.296,93"
+          "R$ 973.296,93",
+          "R$ 856.501,30"
         ],
         [
           "L2602",
@@ -4216,7 +4254,8 @@ const SALES_TABLES = {
           "R$ 194.233,33",
           "R$ 6.936,89",
           "R$ 27.747,58",
-          "R$ 971.165,15"
+          "R$ 971.165,15",
+          "R$ 854.625,33"
         ],
         [
           "L2603",
@@ -4226,7 +4265,8 @@ const SALES_TABLES = {
           "R$ 192.889,32",
           "R$ 6.888,92",
           "R$ 27.555,67",
-          "R$ 964.448,29"
+          "R$ 964.448,29",
+          "R$ 848.714,50"
         ],
         [
           "L2604",
@@ -4236,7 +4276,8 @@ const SALES_TABLES = {
           "R$ 208.085,98",
           "R$ 7.431,64",
           "R$ 29.726,56",
-          "R$ 1.040.429,66"
+          "R$ 1.040.429,66",
+          "R$ 915.578,10"
         ],
         [
           "L2701",
@@ -4246,7 +4287,8 @@ const SALES_TABLES = {
           "R$ 209.397,42",
           "R$ 7.478,49",
           "R$ 29.913,95",
-          "R$ 1.046.988,23"
+          "R$ 1.046.988,23",
+          "R$ 921.349,64"
         ],
         [
           "L2702",
@@ -4256,7 +4298,8 @@ const SALES_TABLES = {
           "R$ 194.649,59",
           "R$ 6.951,77",
           "R$ 27.807,08",
-          "R$ 973.247,83"
+          "R$ 973.247,83",
+          "R$ 856.458,09"
         ],
         [
           "L2703",
@@ -4266,7 +4309,8 @@ const SALES_TABLES = {
           "R$ 193.302,53",
           "R$ 6.903,68",
           "R$ 27.614,70",
-          "R$ 966.514,55"
+          "R$ 966.514,55",
+          "R$ 850.532,80"
         ],
         [
           "L2704",
@@ -4276,7 +4320,8 @@ const SALES_TABLES = {
           "R$ 208.536,00",
           "R$ 7.447,73",
           "R$ 29.790,91",
-          "R$ 1.042.681,69"
+          "R$ 1.042.681,69",
+          "R$ 917.559,89"
         ],
         [
           "L3101",
@@ -4286,7 +4331,8 @@ const SALES_TABLES = {
           "R$ 196.747,17",
           "R$ 7.026,69",
           "R$ 28.106,75",
-          "R$ 983.736,38"
+          "R$ 983.736,38",
+          "R$ 865.688,01"
         ],
         [
           "L3102",
@@ -4296,7 +4342,8 @@ const SALES_TABLES = {
           "R$ 195.777,55",
           "R$ 6.992,04",
           "R$ 27.968,17",
-          "R$ 978.886,10"
+          "R$ 978.886,10",
+          "R$ 861.419,77"
         ],
         [
           "L3103",
@@ -4306,7 +4353,8 @@ const SALES_TABLES = {
           "R$ 194.416,45",
           "R$ 6.943,44",
           "R$ 27.773,76",
-          "R$ 972.081,73"
+          "R$ 972.081,73",
+          "R$ 855.431,92"
         ],
         [
           "L3201",
@@ -4316,7 +4364,8 @@ const SALES_TABLES = {
           "R$ 211.660,34",
           "R$ 7.559,29",
           "R$ 30.237,17",
-          "R$ 1.058.300,89"
+          "R$ 1.058.300,89",
+          "R$ 931.304,78"
         ],
         [
           "L3202",
@@ -4326,7 +4375,8 @@ const SALES_TABLES = {
           "R$ 196.192,79",
           "R$ 7.006,87",
           "R$ 28.027,50",
-          "R$ 980.962,37"
+          "R$ 980.962,37",
+          "R$ 863.246,89"
         ],
         [
           "L3203",
@@ -4336,7 +4386,8 @@ const SALES_TABLES = {
           "R$ 194.828,60",
           "R$ 6.958,15",
           "R$ 27.832,61",
-          "R$ 974.141,47"
+          "R$ 974.141,47",
+          "R$ 857.244,49"
         ],
         [
           "L3404",
@@ -4346,10 +4397,11 @@ const SALES_TABLES = {
           "R$ 215.485,56",
           "R$ 7.695,93",
           "R$ 30.783,70",
-          "R$ 1.077.429,58"
+          "R$ 1.077.429,58",
+          "R$ 948.138,03"
         ]
       ],
-      "note": "Tabela zero 09-26 das unidades de 2 dormitórios — as \"livings\", com L no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 51 unidades, 49 disponíveis e 2 reservadas (L1905 e L3404). Na atualização de situação de 24/09/2026, com os valores sem mudança, saíram oito unidades: L1003, L1005, L1105, L1703, L1805, L2205, L2605, L2705 — a L1005 estava reservada — e a L1905 e a L3404 passaram a reservadas. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A coluna de vagas vem do \"espaço complementar\" da tabela original, onde um número seguido de \"d\" é vaga dupla e dois números são duas vagas simples: 17 unidades têm dupla e 34 têm duas simples. Entrega: abril/2031. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 84 × parcela + 7 × reforço devolve o valor total ao centavo nas 59 linhas, e parcela e reforço batem exatamente com 60% ÷ 84 e 20% ÷ 7 — 177 conferências, nenhuma divergência. A tabela traz só alguns andares (10, 11, 13, 15, 17, 18, 19, 22, 23, 26, 27, 31, 32 e 34) e, dentro deles, nem todas as posições; as demais devem estar nas tabelas dos studios e dos loft duplex, ou ainda não foram liberadas — confirmar com a Novo Rumo. Studios e loft duplex entram em tabela separada, ainda não recebida.",
+      "note": "Tabela zero 09-26 das unidades de 2 dormitórios — as \"livings\", com L no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 51 unidades, 50 disponíveis e a L3404 reservada. Na atualização de situação de 24/09/2026, com os valores sem mudança, saíram oito unidades: L1003, L1005, L1105, L1703, L1805, L2205, L2605, L2705 — a L1005 estava reservada — e a L1905 e a L3404 passaram a reservadas. Na de 28/09/2026 as 51 unidades continuaram as mesmas, com os mesmos valores e vagas, e a L1905 voltou a ficar disponível. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A coluna de vagas vem do \"espaço complementar\" da tabela original, onde um número seguido de \"d\" é vaga dupla e dois números são duas vagas simples: 17 unidades têm dupla e 34 têm duas simples. Entrega: abril/2031. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 84 × parcela + 7 × reforço devolve o valor total ao centavo nas 59 linhas, e parcela e reforço batem exatamente com 60% ÷ 84 e 20% ÷ 7 — 177 conferências, nenhuma divergência. A tabela traz só alguns andares (10, 11, 13, 15, 17, 18, 19, 22, 23, 26, 27, 31, 32 e 34) e, dentro deles, nem todas as posições; as demais devem estar nas tabelas dos studios e dos loft duplex, ou ainda não foram liberadas — confirmar com a Novo Rumo. Studios e loft duplex entram em tabela separada, ainda não recebida.",
       "summary": {
         "bits": [
           {
@@ -4384,7 +4436,7 @@ const SALES_TABLES = {
           {
             "bold": "À vista",
             "nota": "(−12%)",
-            "pct": 12
+            "col": 8
           }
         ]
       }
@@ -4392,7 +4444,7 @@ const SALES_TABLES = {
    "Vista 43 - Studios e Loft Duplex": {
       "folderId": "1jnMvo3u_Frs-RJ2u12mvAzOQKga-SsYK",
       "source": "Tabela de vendas (Novo Rumo)",
-      "ref": "Tabela zero 09-26 · gerada em 18/09/2026 · situação de 24/09/2026",
+      "ref": "Tabela zero 09-26 · gerada em 18/09/2026 · situação de 28/09/2026",
       "unitCol": 0,
       "columns": [
         "Unidade",
@@ -4403,85 +4455,69 @@ const SALES_TABLES = {
         "Ato (1x · 20%)",
         "60 parcelas (60%)",
         "5 reforços anuais (20%)",
-        "Valor total"
+        "Valor total",
+        "À vista (−12%)"
       ],
       "rows": [
         [
-          "S0701",
+          "S0704",
           "Studio garden (terraço)",
-          "50,26 m²",
-          "001",
+          "38,12 m²",
+          "013",
           "Disponível",
-          "R$ 93.600,89",
-          "R$ 4.680,06",
-          "R$ 18.720,22",
-          "R$ 468.005,59"
-        ],
-        [
-          "S0702",
-          "Studio garden (terraço)",
-          "39,13 m²",
-          "002",
-          "Disponível",
-          "R$ 76.375,84",
-          "R$ 3.818,80",
-          "R$ 15.275,19",
-          "R$ 381.879,79"
-        ],
-        [
-          "S0703",
-          "Studio garden (terraço)",
-          "49,35 m²",
-          "003",
-          "Disponível",
-          "R$ 81.855,73",
-          "R$ 4.092,79",
-          "R$ 16.371,16",
-          "R$ 409.278,93"
-        ],
-        [
-          "S0705",
-          "Studio garden (terraço)",
-          "49,35 m²",
-          "102",
-          "Disponível",
-          "R$ 81.855,73",
-          "R$ 4.092,79",
-          "R$ 16.371,16",
-          "R$ 409.278,93"
+          "R$ 74.534,21",
+          "R$ 3.726,71",
+          "R$ 14.906,84",
+          "R$ 372.671,01",
+          "R$ 327.950,49"
         ],
         [
           "S0707",
           "Studio garden (terraço)",
           "49,35 m²",
           "007",
-          "Disponível",
+          "Reservada",
           "R$ 81.855,73",
           "R$ 4.092,79",
           "R$ 16.371,16",
-          "R$ 409.278,93"
+          "R$ 409.278,93",
+          "R$ 360.165,46"
         ],
         [
-          "S0709",
+          "S0710",
           "Studio garden (terraço)",
-          "49,35 m²",
-          "009",
+          "64,21 m²",
+          "010",
           "Disponível",
-          "R$ 81.855,73",
-          "R$ 4.092,79",
-          "R$ 16.371,16",
-          "R$ 409.278,93"
+          "R$ 101.819,15",
+          "R$ 5.090,96",
+          "R$ 20.363,84",
+          "R$ 509.095,95",
+          "R$ 448.004,44"
         ],
         [
-          "S1004",
+          "S1006",
           "Studio",
           "26,85 m²",
           "—",
-          "Reservada",
+          "Disponível",
           "R$ 57.680,21",
           "R$ 2.884,03",
           "R$ 11.536,10",
-          "R$ 288.402,51"
+          "R$ 288.402,51",
+          "R$ 253.794,21"
+        ],
+        [
+          "S1104",
+          "Studio",
+          "26,85 m²",
+          "—",
+          "Disponível",
+          "R$ 58.356,58",
+          "R$ 2.917,82",
+          "R$ 11.671,29",
+          "R$ 291.782,23",
+          "R$ 256.768,36"
         ],
         [
           "S1205",
@@ -4492,51 +4528,44 @@ const SALES_TABLES = {
           "R$ 70.150,51",
           "R$ 3.507,53",
           "R$ 14.030,11",
-          "R$ 350.752,86"
+          "R$ 350.752,86",
+          "R$ 308.662,52"
         ],
         [
           "S1302",
           "Studio",
           "27,67 m²",
           "039",
-          "Disponível",
+          "Reservada",
           "R$ 72.531,88",
           "R$ 3.626,59",
           "R$ 14.506,37",
-          "R$ 362.659,13"
+          "R$ 362.659,13",
+          "R$ 319.140,03"
         ],
         [
-          "S1304",
+          "S1308",
           "Studio",
           "26,85 m²",
-          "041",
+          "051",
           "Disponível",
           "R$ 70.708,11",
           "R$ 3.535,42",
           "R$ 14.141,67",
-          "R$ 353.541,66"
+          "R$ 353.541,66",
+          "R$ 311.116,66"
         ],
         [
-          "S1310",
+          "S1501",
           "Studio",
-          "40,26 m²",
-          "053",
+          "26,85 m²",
+          "068",
           "Reservada",
-          "R$ 88.754,86",
-          "R$ 4.437,74",
-          "R$ 17.750,96",
-          "R$ 443.774,06"
-        ],
-        [
-          "S1312",
-          "Studio",
-          "37,14 m²",
-          "055",
-          "Disponível",
-          "R$ 82.728,82",
-          "R$ 4.136,46",
-          "R$ 16.545,82",
-          "R$ 413.645,52"
+          "R$ 72.182,66",
+          "R$ 3.609,12",
+          "R$ 14.436,49",
+          "R$ 360.912,31",
+          "R$ 317.602,83"
         ],
         [
           "S1502",
@@ -4547,7 +4576,8 @@ const SALES_TABLES = {
           "R$ 73.925,00",
           "R$ 3.696,25",
           "R$ 14.785,00",
-          "R$ 369.625,00"
+          "R$ 369.625,00",
+          "R$ 325.270,00"
         ],
         [
           "S1504",
@@ -4558,7 +4588,8 @@ const SALES_TABLES = {
           "R$ 72.060,29",
           "R$ 3.603,01",
           "R$ 14.412,04",
-          "R$ 360.301,09"
+          "R$ 360.301,09",
+          "R$ 317.064,96"
         ],
         [
           "S1506",
@@ -4569,18 +4600,8 @@ const SALES_TABLES = {
           "R$ 72.060,29",
           "R$ 3.603,01",
           "R$ 14.412,04",
-          "R$ 360.301,09"
-        ],
-        [
-          "S1507",
-          "Studio",
-          "26,85 m²",
-          "074",
-          "Reservada",
-          "R$ 72.182,66",
-          "R$ 3.609,12",
-          "R$ 14.436,49",
-          "R$ 360.912,31"
+          "R$ 360.301,09",
+          "R$ 317.064,96"
         ],
         [
           "S1508",
@@ -4591,40 +4612,20 @@ const SALES_TABLES = {
           "R$ 72.060,29",
           "R$ 3.603,01",
           "R$ 14.412,04",
-          "R$ 360.301,09"
-        ],
-        [
-          "S1701",
-          "Studio",
-          "26,85 m²",
-          "106",
-          "Disponível",
-          "R$ 73.537,22",
-          "R$ 3.676,85",
-          "R$ 14.707,41",
-          "R$ 367.685,27"
-        ],
-        [
-          "S1702",
-          "Studio",
-          "27,67 m²",
-          "367",
-          "Disponível",
-          "R$ 75.318,12",
-          "R$ 3.765,91",
-          "R$ 15.063,63",
-          "R$ 376.590,87"
+          "R$ 360.301,09",
+          "R$ 317.064,96"
         ],
         [
           "S1704",
           "Studio",
           "26,85 m²",
           "109",
-          "Reservada",
+          "Disponível",
           "R$ 73.411,83",
           "R$ 3.670,61",
           "R$ 14.682,42",
-          "R$ 367.060,53"
+          "R$ 367.060,53",
+          "R$ 323.013,27"
         ],
         [
           "S1706",
@@ -4635,7 +4636,8 @@ const SALES_TABLES = {
           "R$ 73.411,83",
           "R$ 3.670,61",
           "R$ 14.682,42",
-          "R$ 367.060,53"
+          "R$ 367.060,53",
+          "R$ 323.013,27"
         ],
         [
           "S1708",
@@ -4646,7 +4648,8 @@ const SALES_TABLES = {
           "R$ 73.411,83",
           "R$ 3.670,61",
           "R$ 14.682,42",
-          "R$ 367.060,53"
+          "R$ 367.060,53",
+          "R$ 323.013,27"
         ],
         [
           "S1801",
@@ -4657,7 +4660,8 @@ const SALES_TABLES = {
           "R$ 108.331,39",
           "R$ 5.416,55",
           "R$ 21.666,22",
-          "R$ 541.655,49"
+          "R$ 541.655,49",
+          "R$ 476.656,83"
         ],
         [
           "S1802",
@@ -4668,7 +4672,8 @@ const SALES_TABLES = {
           "R$ 104.664,52",
           "R$ 5.233,24",
           "R$ 20.932,94",
-          "R$ 523.323,62"
+          "R$ 523.323,62",
+          "R$ 460.524,79"
         ],
         [
           "S1804",
@@ -4679,7 +4684,8 @@ const SALES_TABLES = {
           "R$ 100.847,38",
           "R$ 5.042,38",
           "R$ 20.169,51",
-          "R$ 504.237,73"
+          "R$ 504.237,73",
+          "R$ 443.729,20"
         ],
         [
           "S1806",
@@ -4690,7 +4696,20 @@ const SALES_TABLES = {
           "R$ 100.847,38",
           "R$ 5.042,38",
           "R$ 20.169,51",
-          "R$ 504.237,73"
+          "R$ 504.237,73",
+          "R$ 443.729,20"
+        ],
+        [
+          "S1808",
+          "Loft duplex garden (terraço)",
+          "109,65 m²",
+          "130",
+          "Disponível",
+          "R$ 147.542,29",
+          "R$ 7.377,12",
+          "R$ 29.508,47",
+          "R$ 737.711,84",
+          "R$ 649.186,42"
         ],
         [
           "S2201",
@@ -4701,7 +4720,8 @@ const SALES_TABLES = {
           "R$ 111.133,49",
           "R$ 5.556,66",
           "R$ 22.226,66",
-          "R$ 555.666,39"
+          "R$ 555.666,39",
+          "R$ 488.986,42"
         ],
         [
           "S2202",
@@ -4712,7 +4732,8 @@ const SALES_TABLES = {
           "R$ 106.617,71",
           "R$ 5.330,90",
           "R$ 21.323,58",
-          "R$ 533.089,61"
+          "R$ 533.089,61",
+          "R$ 469.118,86"
         ],
         [
           "S2204",
@@ -4723,7 +4744,8 @@ const SALES_TABLES = {
           "R$ 102.720,97",
           "R$ 5.136,06",
           "R$ 20.544,23",
-          "R$ 513.605,72"
+          "R$ 513.605,72",
+          "R$ 451.973,03"
         ],
         [
           "S2206",
@@ -4734,18 +4756,8 @@ const SALES_TABLES = {
           "R$ 102.720,97",
           "R$ 5.136,06",
           "R$ 20.544,23",
-          "R$ 513.605,72"
-        ],
-        [
-          "S2601",
-          "Loft duplex",
-          "50,64 m²",
-          "254",
-          "Disponível",
-          "R$ 113.176,93",
-          "R$ 5.658,86",
-          "R$ 22.635,43",
-          "R$ 565.885,68"
+          "R$ 513.605,72",
+          "R$ 451.973,03"
         ],
         [
           "S2602",
@@ -4756,18 +4768,8 @@ const SALES_TABLES = {
           "R$ 108.570,90",
           "R$ 5.428,56",
           "R$ 21.714,22",
-          "R$ 542.855,60"
-        ],
-        [
-          "S2603",
-          "Loft duplex",
-          "46,84 m²",
-          "256",
-          "Disponível",
-          "R$ 105.515,57",
-          "R$ 5.275,78",
-          "R$ 21.103,12",
-          "R$ 527.577,97"
+          "R$ 542.855,60",
+          "R$ 477.712,93"
         ],
         [
           "S2604",
@@ -4778,7 +4780,8 @@ const SALES_TABLES = {
           "R$ 104.594,56",
           "R$ 5.229,74",
           "R$ 20.918,95",
-          "R$ 522.973,71"
+          "R$ 522.973,71",
+          "R$ 460.216,86"
         ],
         [
           "S2605",
@@ -4789,7 +4792,8 @@ const SALES_TABLES = {
           "R$ 105.515,57",
           "R$ 5.275,78",
           "R$ 21.103,12",
-          "R$ 527.577,97"
+          "R$ 527.577,97",
+          "R$ 464.268,61"
         ],
         [
           "S2606",
@@ -4800,7 +4804,8 @@ const SALES_TABLES = {
           "R$ 104.594,56",
           "R$ 5.229,74",
           "R$ 20.918,95",
-          "R$ 522.973,71"
+          "R$ 522.973,71",
+          "R$ 460.216,86"
         ],
         [
           "S2607",
@@ -4811,7 +4816,8 @@ const SALES_TABLES = {
           "R$ 105.515,57",
           "R$ 5.275,78",
           "R$ 21.103,12",
-          "R$ 527.577,97"
+          "R$ 527.577,97",
+          "R$ 464.268,61"
         ],
         [
           "S2608",
@@ -4822,7 +4828,8 @@ const SALES_TABLES = {
           "R$ 111.548,44",
           "R$ 5.577,42",
           "R$ 22.309,68",
-          "R$ 557.742,04"
+          "R$ 557.742,04",
+          "R$ 490.813,00"
         ],
         [
           "S3001",
@@ -4833,7 +4840,8 @@ const SALES_TABLES = {
           "R$ 73.649,74",
           "R$ 3.682,50",
           "R$ 14.729,99",
-          "R$ 368.249,69"
+          "R$ 368.249,69",
+          "R$ 324.059,73"
         ],
         [
           "S3101",
@@ -4844,7 +4852,8 @@ const SALES_TABLES = {
           "R$ 115.731,86",
           "R$ 5.786,60",
           "R$ 23.146,39",
-          "R$ 578.659,81"
+          "R$ 578.659,81",
+          "R$ 509.220,63"
         ],
         [
           "S3102",
@@ -4855,18 +4864,20 @@ const SALES_TABLES = {
           "R$ 111.012,69",
           "R$ 5.550,63",
           "R$ 22.202,52",
-          "R$ 555.063,09"
+          "R$ 555.063,09",
+          "R$ 488.455,52"
         ],
         [
           "S3103",
           "Loft duplex",
           "46,84 m²",
           "329",
-          "Disponível",
+          "Reservada",
           "R$ 107.878,44",
           "R$ 5.393,94",
           "R$ 21.575,74",
-          "R$ 539.393,54"
+          "R$ 539.393,54",
+          "R$ 474.666,32"
         ],
         [
           "S3104",
@@ -4877,10 +4888,11 @@ const SALES_TABLES = {
           "R$ 114.064,43",
           "R$ 5.703,22",
           "R$ 22.812,88",
-          "R$ 570.322,03"
+          "R$ 570.322,03",
+          "R$ 501.883,39"
         ]
       ],
-      "note": "Tabela zero 09-26 dos studios e dos loft duplex — os dois na mesma tabela, com S no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 43 unidades, 36 disponíveis e 7 reservadas (S1004, S1205, S1310, S1507, S1704, S1801 e S3001). Na atualização de situação de 24/09/2026, com os valores sem mudança, saíram 52 das 95 unidades da tabela zero — 38 studios, 8 loft duplex, 4 studios garden e os dois loft duplex garden (S1808 e S1809) —, as unidades S1004, S1310, S1507 e S1704 passaram a reservadas e a vaga da S1506 mudou de 073 para 104. Ficaram 17 studios, 20 loft duplex e 6 studios garden. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A tipologia não vem nesta tabela: ela foi deduzida do PDF \"Vista 43 · Pavimentos, Unidades e Vagas\", que descreve a composição andar a andar — 7º são 11 studios garden, todos com terraço privativo; do 8º ao 17º e no 30º são studios; 18º, 20º, 22º, 24º, 26º, 28º, 31º e 33º são os níveis inferiores dos loft duplex (os andares seguintes são o nível de cima, que não se vende separado). Na tabela zero eram 10 studios garden (7º), 55 studios, 28 loft duplex e 2 loft duplex garden — o S1808 e o S1809, de 109,65 m², que o PDF descreve como duplex garden com terraço descoberto de 55,76 m². As unidades com terraço — hoje os 6 studios garden — entram só aqui, fora dos cards do comparativo, como combinado. Uma unidade aparece sem vaga: o PDF registra que 38 studios não terão vaga e que para os demais a vaga é opcional. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 60 × parcela + 5 × reforço devolve o valor total ao centavo nas 95 linhas, e parcela e reforço batem com 60% ÷ 60 e 20% ÷ 5 — 380 conferências, nenhuma divergência. Dois pontos a confirmar com a construtora: o PDF lista 11 studios garden no 7º e a tabela traz 10 (falta o de 87,19 m²), e o S0702 aparece com 39,13 m² onde o quadro do PDF esperava 38,12 m². Entrega: abril/2031.",
+      "note": "Tabela zero 09-26 dos studios e dos loft duplex — os dois na mesma tabela, com S no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 36 unidades, 29 disponíveis e 7 reservadas (S0707, S1205, S1302, S1501, S1801, S3001 e S3103): 14 studios, 18 loft duplex, 3 studios garden e o loft duplex garden S1808. Os valores seguem os da tabela zero; o que mudou desde ela foi só a disponibilidade e a vaga da S1506 (073 na tabela zero, 104 desde 24/09). Na atualização de 28/09/2026 saíram S0701, S0702, S0703, S0705, S0709, S1004, S1304, S1310, S1312, S1507, S1701, S1702, S2601 e S2603; voltaram S0704, S0710, S1006, S1104, S1308, S1501 e S1808, que não constavam na lista de 24/09; S0707, S1302 e S3103 passaram a reservadas e a S1704 voltou a ficar disponível. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A tipologia não vem nesta tabela: ela foi deduzida do PDF \"Vista 43 · Pavimentos, Unidades e Vagas\", que descreve a composição andar a andar — 7º são 11 studios garden, todos com terraço privativo; do 8º ao 17º e no 30º são studios; 18º, 20º, 22º, 24º, 26º, 28º, 31º e 33º são os níveis inferiores dos loft duplex (os andares seguintes são o nível de cima, que não se vende separado). Na tabela zero eram 10 studios garden (7º), 55 studios, 28 loft duplex e 2 loft duplex garden — o S1808 e o S1809, de 109,65 m², que o PDF descreve como duplex garden com terraço descoberto de 55,76 m². As unidades com terraço — hoje os 3 studios garden e o loft duplex garden S1808 — entram só aqui, fora dos cards do comparativo, como combinado. Duas unidades aparecem sem vaga: o PDF registra que 38 studios não terão vaga e que para os demais a vaga é opcional. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 60 × parcela + 5 × reforço devolve o valor total ao centavo nas 95 linhas, e parcela e reforço batem com 60% ÷ 60 e 20% ÷ 5 — 380 conferências, nenhuma divergência. Dois pontos a confirmar com a construtora: o PDF lista 11 studios garden no 7º e a tabela traz 10 (falta o de 87,19 m²), e o S0702 aparece com 39,13 m² onde o quadro do PDF esperava 38,12 m². Entrega: abril/2031.",
       "summary": {
         "construtora": "Novo Rumo",
         "bairro": "Centro",
@@ -4921,7 +4933,7 @@ const SALES_TABLES = {
           {
             "bold": "À vista",
             "nota": "(−12%)",
-            "pct": 12
+            "col": 9
           }
         ]
       }
