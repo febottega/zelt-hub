@@ -5,7 +5,7 @@ https://febottega.github.io/zelt-hub/ (repo `febottega/zelt-hub`, Pages no root 
 
 ## REGRA PRINCIPAL: nunca leia nem edite o index.html
 
-`index.html` (11 MB) é **gerado**. Contém as 20 ferramentas em base64 — ilegível
+`index.html` (11 MB) é **gerado**. Contém as 21 ferramentas em base64 — ilegível
 para busca, impossível de editar cirurgicamente. Lê-lo custa cerca de **2,5 milhões
 de tokens** e não cabe em nenhuma janela de contexto.
 
@@ -43,11 +43,11 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 20 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 21 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          14 relatórios históricos em base64 — nunca ler; editar só por script
+   └─ frozen/          15 relatórios históricos em base64 — nunca ler; editar só por script
 ```
 
 **`src/frozen/` não é intocável, é ilegível.** Cada `.b64` é uma linha de 500 a
@@ -100,7 +100,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   anunciado (mínimo/máximo) e situação do preço, que aceita mais de uma marcada.
   A ordenação é de um critério, pelo cabeçalho ou pelo select "Ordenar por" —
   que existe porque o `<thead>` desaparece abaixo de 820px.
-- **avaliacao** + 14 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 15 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
 - **comparativo** — 63 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
@@ -165,10 +165,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (20 payloads, 13.304.800 bytes):
+Hash de referência (21 payloads, 14.148.340 bytes):
 
 ```
-E68533A2314EEBA0BAA10754A9A74E9DE13625B839DA73A5A21021E081BD626A
+CC8CD9577DB3F2B1FA11E8B7DD71B03669BCBB41771318D419ECB4CC5E9ACCE0
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -555,7 +555,7 @@ Campos de cada imóvel no `DADOS`, nesta ordem:
 | campo | de onde vem |
 |---|---|
 | `c` | código |
-| `t` | prefixo do código: AP=Apartamento, CA=Casa, CO=Cobertura, TE=Terreno, SA=Sala comercial, PR=Prédio, GA=Galpão, CH=Chácara, SI=Sítio, LO=Loja. **Prefixo novo aparece de vez em quando** (o GA estreou em 01/09, o CH em 08/09, o SI em 15/09, o LO em 22/09): confira o trecho do meio do `local`, que costuma nomear o tipo |
+| `t` | prefixo do código: AP=Apartamento, CA=Casa, CO=Cobertura, TE=Terreno, SA=Sala comercial, PR=Prédio, GA=Galpão, CH=Chácara, SI=Sítio, LO=Loja, PT=Ponto comercial. **Prefixo novo aparece de vez em quando** (o GA estreou em 01/09, o CH em 08/09, o SI em 15/09, o LO em 22/09, o PT em 29/09 — lido como ponto comercial, falta o Felipe confirmar): confira o trecho do meio do `local`, que costuma nomear o tipo |
 | `cap` | coluna Captador |
 | `w` | data da semana, `DD/MM/AAAA` |
 | `a`, `k` | Anunciado, Consenso |
