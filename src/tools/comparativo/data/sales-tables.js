@@ -5518,7 +5518,7 @@ const SALES_TABLES = {
   "Tulum - 2 dormitórios": {
     "folderId": "15XiT_Sg4FvhcHBzDcaRLIrsZScNh_rpw",
     "source": "Tabela de vendas (Hill)",
-    "ref": "Setembro/2026 · tabela 00",
+    "ref": "Setembro/2026 · tabela 00 · situação de 30/09/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -5528,7 +5528,8 @@ const SALES_TABLES = {
       "Total em 72x",
       "Entrada (15%)",
       "72 parcelas",
-      "6 reforços"
+      "6 reforços",
+      "Situação"
     ],
     "rows": [
       [
@@ -5539,7 +5540,8 @@ const SALES_TABLES = {
         "R$ 577.213,75",
         "R$ 86.582,06",
         "R$ 3.928,26",
-        "R$ 34.632,83"
+        "R$ 34.632,83",
+        "Disponível"
       ],
       [
         "502",
@@ -5549,7 +5551,19 @@ const SALES_TABLES = {
         "R$ 637.232,25",
         "R$ 95.584,84",
         "R$ 4.336,72",
-        "R$ 38.233,94"
+        "R$ 38.233,94",
+        "Disponível"
+      ],
+      [
+        "506",
+        "91,70 m²",
+        "R$ 608.888,00",
+        "R$ 657.599,04",
+        "R$ 700.221,20",
+        "R$ 105.033,18",
+        "R$ 4.765,39",
+        "R$ 42.013,27",
+        "Disponível"
       ],
       [
         "507",
@@ -5559,7 +5573,19 @@ const SALES_TABLES = {
         "R$ 630.213,80",
         "R$ 94.532,07",
         "R$ 4.288,96",
-        "R$ 37.812,83"
+        "R$ 37.812,83",
+        "Disponível"
+      ],
+      [
+        "602",
+        "65,19 m²",
+        "R$ 546.487,77",
+        "R$ 590.206,79",
+        "R$ 628.460,94",
+        "R$ 94.269,14",
+        "R$ 4.277,03",
+        "R$ 37.707,66",
+        "Disponível"
       ],
       [
         "606",
@@ -5569,7 +5595,30 @@ const SALES_TABLES = {
         "R$ 643.604,57",
         "R$ 96.540,69",
         "R$ 4.380,09",
-        "R$ 38.616,27"
+        "R$ 38.616,27",
+        "Disponível"
+      ],
+      [
+        "607",
+        "59,05 m²",
+        "R$ 495.016,15",
+        "R$ 534.617,44",
+        "R$ 569.268,57",
+        "R$ 85.390,29",
+        "R$ 3.874,19",
+        "R$ 34.156,11",
+        "Disponível"
+      ],
+      [
+        "701",
+        "59,05 m²",
+        "R$ 499.917,30",
+        "R$ 539.910,68",
+        "R$ 574.904,90",
+        "R$ 86.235,73",
+        "R$ 3.912,55",
+        "R$ 34.494,29",
+        "Reservada"
       ],
       [
         "706",
@@ -5579,17 +5628,8 @@ const SALES_TABLES = {
         "R$ 649.976,90",
         "R$ 97.496,53",
         "R$ 4.423,45",
-        "R$ 38.998,61"
-      ],
-      [
-        "707",
-        "59,05 m²",
-        "R$ 511.963,50",
-        "R$ 552.920,58",
-        "R$ 588.758,03",
-        "R$ 88.313,70",
-        "R$ 4.006,83",
-        "R$ 35.325,48"
+        "R$ 38.998,61",
+        "Disponível"
       ],
       [
         "806",
@@ -5599,7 +5639,8 @@ const SALES_TABLES = {
         "R$ 656.349,22",
         "R$ 98.452,38",
         "R$ 4.466,82",
-        "R$ 39.380,95"
+        "R$ 39.380,95",
+        "Disponível"
       ],
       [
         "1007",
@@ -5609,7 +5650,19 @@ const SALES_TABLES = {
         "R$ 600.302,30",
         "R$ 90.045,35",
         "R$ 4.085,39",
-        "R$ 36.018,14"
+        "R$ 36.018,14",
+        "Disponível"
+      ],
+      [
+        "1102",
+        "65,19 m²",
+        "R$ 568.130,85",
+        "R$ 613.581,32",
+        "R$ 653.350,48",
+        "R$ 98.002,57",
+        "R$ 4.446,41",
+        "R$ 39.201,03",
+        "Disponível"
       ],
       [
         "1106",
@@ -5619,7 +5672,8 @@ const SALES_TABLES = {
         "R$ 669.093,86",
         "R$ 100.364,08",
         "R$ 4.553,56",
-        "R$ 40.145,63"
+        "R$ 40.145,63",
+        "Disponível"
       ],
       [
         "1206",
@@ -5629,7 +5683,8 @@ const SALES_TABLES = {
         "R$ 675.466,19",
         "R$ 101.319,93",
         "R$ 4.596,92",
-        "R$ 40.527,97"
+        "R$ 40.527,97",
+        "Disponível"
       ],
       [
         "1207",
@@ -5639,7 +5694,8 @@ const SALES_TABLES = {
         "R$ 611.846,58",
         "R$ 91.776,99",
         "R$ 4.163,96",
-        "R$ 36.710,79"
+        "R$ 36.710,79",
+        "Disponível"
       ],
       [
         "1306",
@@ -5649,7 +5705,8 @@ const SALES_TABLES = {
         "R$ 681.838,51",
         "R$ 102.275,78",
         "R$ 4.640,29",
-        "R$ 40.910,31"
+        "R$ 40.910,31",
+        "Disponível"
       ],
       [
         "1307",
@@ -5659,7 +5716,8 @@ const SALES_TABLES = {
         "R$ 617.618,71",
         "R$ 92.642,81",
         "R$ 4.203,24",
-        "R$ 37.057,12"
+        "R$ 37.057,12",
+        "Disponível"
       ],
       [
         "1406",
@@ -5669,13 +5727,15 @@ const SALES_TABLES = {
         "R$ 688.210,83",
         "R$ 103.231,62",
         "R$ 4.683,66",
-        "R$ 41.292,65"
+        "R$ 41.292,65",
+        "Disponível"
       ]
     ],
-    "note": "Apartamentos de 2 dormitórios: 14 das 32 do tipo estão disponíveis (18 reservadas pela Hill). Em 11/09/2026 as unidades 505, 1302 e 1402 saíram daqui para a tabela de 1 dormitório, onde é o lugar delas. Os studios estão na tabela \"Tulum - Studios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
+    "note": "Apartamentos de 2 dormitórios: 18 na tabela, 17 disponíveis e o 701 reservado (vaga 29, simples). Na atualização de 30/09/2026, com os valores sem mudança, entraram 506, 602, 607, 701 e 1102 e saiu o 707. O à vista e o \"na entrega das chaves\" das que entraram vêm do total em 72x pela mesma regra da tabela (à vista = total ÷ 1,15; entrega = à vista × 1,08), e fecham num R$/m² redondo à vista (602 e 607 a R$ 8.383, 701 a R$ 8.466, 1102 a R$ 8.715). O 506 tem 91,70 m², bem acima dos 59 a 81 m² dos outros, e sai a R$ 6.640/m² à vista — o menor da tabela; confirmar a área com a Hill. Em 11/09/2026 as unidades 505, 1302 e 1402 saíram daqui para a tabela de 1 dormitório, onde é o lugar delas. Os studios estão na tabela \"Tulum - Studios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As demais unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
     "summary": {
       "tipoDefault": "Apartamento 2 dormitórios",
       "situacao": "Disponível",
+      "situacaoCol": 8,
       "bits": [
         {
           "pre": "Área privativa: ",
