@@ -102,7 +102,10 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   que existe porque o `<thead>` desaparece abaixo de 820px.
 - **avaliacao** + 15 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
 - **comparativo** — 63 empreendimentos. Abas: comparativo, mudanças, melhores preços,
-  tabelas de vendas, investimentos.
+  tabelas de vendas, investimentos. **Toda mudança no comparativo atualiza a data em
+  dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
+  `DD/MM/AAAA`) e o chip do card "Empreendimentos" no `hub.html` (`Atualizado em DD/MM`).
+  Pedido do Felipe em 30/09/2026, quando a data tinha ficado parada em 09/09.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
   chaves, checklist). Rascunhos em `localStorage` (`zelt_*_v1`); exporta com
   html2canvas + pdf-lib.
@@ -165,10 +168,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (21 payloads, 14.150.732 bytes):
+Hash de referência (21 payloads, 14.150.912 bytes):
 
 ```
-4FF46AC63886CBB11D8DA02F458CB41C4183A8D23F5BD2DE366CC27AC1342926
+EC4B01CE1FE8E966F1633063475C3E776BEED1AF70DCC497305AC403B994F098
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -414,7 +417,9 @@ faixa enganava ali: a 505 dos studios tem 70,66 m² contra 34 a 36 m² das outra
 o card mostrava R$ 8.453,97 onde a média real é R$ 10.911,61. Pelo mesmo motivo o
 `media` deles deixou de ser o meio da faixa `(vmin+vmax)/2` e passou a ser a
 média real do total em 72x de todas as unidades (studios R$ 404.093,32 em vez
-de 445.904,68). Quando a tabela do Tulum mudar, recalcule os dois do mesmo jeito.
+de 445.904,68). Quando a tabela do Tulum mudar, recalcule os dois do mesmo jeito. O **506** dos 2
+dormitórios (91,70 m², área confirmada) fica **fora do card** — só na tabela —, como
+as unidades fora do padrão dos outros empreendimentos.
 
 O **Amani 53** (Mestra, entrou em 23/09/2026) tem a entrega só com o ano, `"2031"`,
 porque a construtora não informa o mês. O `entregaAno` do `app.js` antes só
