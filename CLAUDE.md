@@ -168,10 +168,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (21 payloads, 14.150.912 bytes):
+Hash de referência (21 payloads, 14.150.904 bytes):
 
 ```
-EC4B01CE1FE8E966F1633063475C3E776BEED1AF70DCC497305AC403B994F098
+31F995332C048A7945CB048AFEF4E4D897602870DD9E0ABA7E3D185FEDAAC395
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -418,8 +418,8 @@ o card mostrava R$ 8.453,97 onde a média real é R$ 10.911,61. Pelo mesmo motiv
 `media` deles deixou de ser o meio da faixa `(vmin+vmax)/2` e passou a ser a
 média real do total em 72x de todas as unidades (studios R$ 404.093,32 em vez
 de 445.904,68). Quando a tabela do Tulum mudar, recalcule os dois do mesmo jeito. O **506** dos 2
-dormitórios (91,70 m², área confirmada) fica **fora do card** — só na tabela —, como
-as unidades fora do padrão dos outros empreendimentos.
+dormitórios (91,70 m², área confirmada) **entra no card** como as demais: ficou fora
+numa publicação de 30/09/2026 e o Felipe pediu para voltar no mesmo dia.
 
 O **Amani 53** (Mestra, entrou em 23/09/2026) tem a entrega só com o ano, `"2031"`,
 porque a construtora não informa o mês. O `entregaAno` do `app.js` antes só
