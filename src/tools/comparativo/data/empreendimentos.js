@@ -196,9 +196,9 @@ const DATA = [
     "empreendimento": "Residencial EB",
     "bairro": "Velha",
     "unidade": null,
-    "config": "2 Quartos",
-    "vagas": "3",
-    "vagasN": 3,
+    "config": "1 quarto",
+    "vagas": "1",
+    "vagasN": 1,
     "apriv": 69.5,
     "atotal": 73.0,
     "faixaArea": true,
@@ -213,7 +213,7 @@ const DATA = [
     "condicao": "Entrada + 12x",
     "correcao": "Somente CUB",
     "quartos": [
-      2
+      1
     ],
     "suites": [],
     "terreno": false,

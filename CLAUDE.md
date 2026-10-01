@@ -171,7 +171,7 @@ Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 Hash de referência (21 payloads, 14.154.608 bytes):
 
 ```
-FE7CBACEC1823F8CA14A20A9384228C91C96B4A4145023D45FE0CAE213DA0476
+CD0387D0DF1D78BF1AAB84733FD52EA823030525B86A4DE20D9A561103682E06
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
