@@ -168,10 +168,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (21 payloads, 14.150.904 bytes):
+Hash de referência (21 payloads, 14.154.608 bytes):
 
 ```
-31F995332C048A7945CB048AFEF4E4D897602870DD9E0ABA7E3D185FEDAAC395
+FE7CBACEC1823F8CA14A20A9384228C91C96B4A4145023D45FE0CAE213DA0476
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -355,7 +355,9 @@ No PDF do imóvel e na impressão o bloco fica `display:none`.
 Uma advertência de revisão: o `index.html` tem 11 MB e o navegador **guarda em
 cache**. Depois de rebuildar, reabrir a mesma URL pode servir a versão velha e
 dar a impressão de que o patch não funcionou. Recarregue com um parâmetro novo
-(`?cb=2`) ou confira com `fetch(url, {cache:'no-store'})`.
+(`?cb=2`) ou confira com `fetch(url, {cache:'no-store'})`. Se o navegador de
+teste recusar `http://localhost:8123` ("navigation denied"), abra por
+`http://127.0.0.1:8123` — em 01/10/2026 foi o que funcionou.
 
 **Ferramentas nesta máquina:** `node` (v24.19.0) e `npx` existem e rodam direto, tanto
 no bash quanto no PowerShell. `python` **não** existe: o `python` do PATH é o atalho da
