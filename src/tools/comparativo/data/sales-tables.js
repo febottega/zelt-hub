@@ -1659,7 +1659,7 @@ const SALES_TABLES = {
   "Sunset Boulevard": {
     "folderId": "1d5VUoalANoJlegsMHvKhcIdP0IILacIP",
     "source": "Tabela da construtora (Speranzini)",
-    "ref": "Julho/2026 · Rev. 55 (22/07/2026)",
+    "ref": "Setembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1667,165 +1667,138 @@ const SALES_TABLES = {
       "Entrada",
       "Reforço dez/26",
       "Reforço jun/27",
-      "70 parcelas",
+      "65 parcelas",
       "Valor total"
     ],
     "rows": [
       [
-        "202",
-        "156,20 m²",
-        "R$ 200.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 11.000,00",
-        "R$ 1.170.000,00"
-      ],
-      [
-        "501",
-        "156,20 m²",
-        "R$ 200.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 13.714,29",
-        "R$ 1.360.000,00"
-      ],
-      [
-        "502",
-        "156,20 m²",
-        "R$ 200.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 13.714,29",
-        "R$ 1.360.000,00"
-      ],
-      [
         "602",
         "156,20 m²",
-        "R$ 200.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 13.714,29",
+        "R$ 14.000,00",
         "R$ 1.360.000,00"
       ],
       [
         "801",
         "156,20 m²",
-        "R$ 200.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 14.571,43",
+        "R$ 14.923,08",
         "R$ 1.420.000,00"
       ],
       [
         "802",
         "156,20 m²",
-        "R$ 200.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 14.571,43",
+        "R$ 14.923,08",
         "R$ 1.420.000,00"
       ],
       [
         "901",
         "156,20 m²",
-        "R$ 200.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 15.185,71",
+        "R$ 15.584,62",
         "R$ 1.463.000,00"
       ],
       [
         "902",
         "156,20 m²",
-        "R$ 200.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 15.185,71",
+        "R$ 15.584,62",
         "R$ 1.463.000,00"
       ],
       [
         "1001",
         "156,20 m²",
-        "R$ 200.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 15.185,71",
+        "R$ 15.584,62",
         "R$ 1.463.000,00"
       ],
       [
         "1101",
         "156,20 m²",
-        "R$ 200.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 15.185,71",
+        "R$ 15.584,62",
         "R$ 1.463.000,00"
       ],
       [
         "1301",
         "156,20 m²",
-        "R$ 220.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 17.257,14",
+        "R$ 18.123,08",
         "R$ 1.628.000,00"
       ],
       [
         "1302",
         "156,20 m²",
-        "R$ 220.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 17.257,14",
+        "R$ 18.123,08",
         "R$ 1.628.000,00"
       ],
       [
         "1401",
         "156,20 m²",
-        "R$ 220.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 17.257,14",
+        "R$ 18.123,08",
         "R$ 1.628.000,00"
       ],
       [
         "1402",
         "156,20 m²",
-        "R$ 220.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 17.257,14",
+        "R$ 18.123,08",
         "R$ 1.628.000,00"
       ],
       [
         "1502",
         "156,20 m²",
-        "R$ 220.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 17.257,14",
+        "R$ 18.123,08",
         "R$ 1.628.000,00"
       ],
       [
         "1601",
         "156,20 m²",
-        "R$ 220.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 17.714,29",
+        "R$ 18.615,38",
         "R$ 1.660.000,00"
       ],
       [
         "1702",
         "156,20 m²",
-        "R$ 220.000,00",
+        "R$ 250.000,00",
         "R$ 100.000,00",
         "R$ 100.000,00",
-        "R$ 18.200,00",
+        "R$ 19.138,46",
         "R$ 1.694.000,00"
       ]
     ],
-    "note": "Rev. 55 de 22/07/2026 — restam 17 unidades, todas com 156,20 m² de área privativa. A unidade 402 foi vendida e saiu da tabela; a 601 foi vendida em 15/09/2026, depois da revisão, e por isso ainda aparece com valor no histórico de julho. Condição: entrada + 2 reforços (dez/26 e jun/27) + 70 parcelas. Entrega prevista: novembro/2027. Preço dos apartamentos com 01 vaga dupla, 01 vaga simples e 01 box; para 03 vagas simples de garagem e box, acrescentar R$ 30.000,00 no preço final. Depósitos independentes: 21, 22, 23, 24, 25, 26 e 28. Vagas simples sobrando: 89 e 90. Vagas em vermelho na tabela original são para 2 veículos (gaveta); sujeitas a disponibilidade. A área privativa foi mantida da revisão anterior, porque a tabela nova não traz coluna de área.",
+    "note": "Tabela de setembro/2026 — restam 14 unidades, todas com 156,20 m² de área privativa. Saíram as unidades 202, 501 e 502, vendidas desde a Rev. 55 de julho. Os preços das 14 que ficaram não mudaram; mudou a condição: a entrada passou a ser R$ 250.000,00 em todas (era R$ 200.000,00 até o 1101 e R$ 220.000,00 do 1301 para cima) e o saldo passou de 70 para 65 parcelas, com os dois reforços de R$ 100.000,00 (dez/26 e jun/27) mantidos — no 602, por exemplo, a parcela foi de R$ 13.714,29 para R$ 14.000,00. Entrada + reforços + 65 parcelas devolvem o total em todas as linhas (diferença máxima de R$ 0,30, arredondamento da parcela). Entrega prevista: novembro/2027. Preço dos apartamentos com 01 vaga dupla, 01 vaga simples e 01 box; para 03 vagas simples de garagem e box, acrescentar R$ 30.000,00 no preço final. Depósitos independentes: 21, 22, 23, 24, 25, 26 e 28. Vagas simples sobrando: 89 e 90. Vagas em vermelho na tabela original são para 2 veículos (gaveta); sujeitas a disponibilidade. A área privativa foi mantida da revisão anterior, porque a tabela nova não traz coluna de área.",
     "summary": {
       "bits": [
         {
@@ -1843,7 +1816,7 @@ const SALES_TABLES = {
           "col": 2
         },
         {
-          "label": "70 parcelas",
+          "label": "65 parcelas",
           "col": 5
         },
         {
