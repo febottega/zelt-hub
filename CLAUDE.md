@@ -168,10 +168,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (21 payloads, 14.154.612 bytes):
+Hash de referência (21 payloads, 14.150.356 bytes):
 
 ```
-91ABD42C12FB655AC27B3EA709F5E9BEF9E4E46A97C35CC7D9F889291776D161
+096CD6FAE569D4CE601C618B9CA346537DE437D81BDB52B44D4F013F0392082E
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -356,8 +356,9 @@ Uma advertência de revisão: o `index.html` tem 11 MB e o navegador **guarda em
 cache**. Depois de rebuildar, reabrir a mesma URL pode servir a versão velha e
 dar a impressão de que o patch não funcionou. Recarregue com um parâmetro novo
 (`?cb=2`) ou confira com `fetch(url, {cache:'no-store'})`. Se o navegador de
-teste recusar `http://localhost:8123` ("navigation denied"), abra por
-`http://127.0.0.1:8123` — em 01/10/2026 foi o que funcionou.
+teste recusar `http://localhost:8123` ("navigation denied"), abra pelo outro
+endereço (`http://127.0.0.1:8123` ou `localhost`), numa aba nova do `preview_start` — a
+recusa vai e volta entre os dois; em 01/10 funcionou o 127.0.0.1, em 02/10 o localhost.
 
 **Ferramentas nesta máquina:** `node` (v24.19.0) e `npx` existem e rodam direto, tanto
 no bash quanto no PowerShell. `python` **não** existe: o `python` do PATH é o atalho da

@@ -802,85 +802,108 @@ const PRICE_HISTORY = {
   "Lago di Garda": {"datas": ["2025-01", "2026-06"], "fontes": ["Lista de lotes jan/2025", "Lista de lotes jun/2026"], "obs": "ATENÇÃO: esta é a única série do comparativo com só dois pontos, e é de propósito. Recebi cinco listas do Lago di Garda (jan/2025, out/2025, mar/2026, abr/2026 e jun/2026) e só consegui validar duas delas; as outras três entrariam com preço errado por lote, então ficaram fora. O que valida jan/2025: a soma dos 97 lotes que extraí dá R$ 58.731.557,00, exatamente o total impresso no próprio documento, sem um centavo de diferença. O que valida jun/2026: ela é a base da tabela de vendas que já está no comparativo, e obedece à regra de preço R$ 1.250,00 por m² com piso de R$ 450.000,00 em 85 dos 86 lotes (a única exceção é o lote 32, que ficou em R$ 449.650 sem o piso). Por que descartei out/2025, mar/2026 e abr/2026: nenhuma das três traz total declarado, logo não há como conferir, e as três têm a coluna de valor desalinhada em relação ao número do lote na extração do PDF. Em abr/2026 dá para ver os valores trocando de lugar comparando com mar/2026 — o lote 20 aparece com R$ 621.200 e o 23 com R$ 706.500, exatamente invertidos entre as duas tabelas — e o lote 1 exibe o texto \"ABR.26\" no lugar do valor. Em out/2025 o lote 64 aparece com R$ 686.800, que é o valor do lote 63 em janeiro, e o lote 86 (1.005,87 m²) sai a R$ 582 por m², um terço do resto da tabela. Usar esses meses seria atribuir a cada lote o preço do vizinho, e num material que vai para cliente isso não é aceitável. Agora o que os dois pontos válidos mostram, que é a informação importante: o preço CAIU cerca de 20% em dezessete meses. Um lote padrão de 350 m² saiu de R$ 565.600 para R$ 450.000, −20,0% na média dos 47 lotes dessa faixa; entre 356 e 420 m² a queda média é de 21,3% em 32 lotes; e acima de 420 m², onde o piso não pega, 21,1% em 7 lotes. O 53, de 480,38 m², foi de R$ 767.600 para R$ 600.475. A mediana do R$/m² caiu de 1.616 para 1.286. E não foi só o número que mudou, foi a lógica de precificação: até mar/2026 as listas traziam valores em faixas por área, com a matrícula de cada lote e coluna \"VALOR TOTAL\" ou \"VALOR LOTE\"; o documento de jun/2026 se chama \"LOTES LAGO Di GARDA\", a coluna virou \"Investimento\", a matrícula desapareceu e o preço passou a ser uma conta única de R$ 1.250 por m². Junto disso o financiamento direto foi de 60x em jan/2025 para até 120x, que é o que o card já registra. Ou seja, a leitura não é reajuste negativo: é liquidação de estoque, com preço menor e prazo dobrado. Para melhorar esta série basta qualquer lista do Lago que traga total declarado, como a de jan/2025 — ou as mesmas de out/2025, mar e abr/2026 em Excel ou CSV em vez de PDF, porque o problema está na extração, não nos dados.", "unidades": {"1": [565600, 450000], "2": [565600, 450000], "3": [565600, 450000], "4": [565600, 450000], "5": [565600, 450000], "6": [565600, 450000], "7": [565600, 450000], "8": [565600, 450000], "9": [565600, 450000], "10": [565600, null], "11": [643370, null], "12": [626200, 480562], "13": [585800, 453812], "14": [565600, 450000], "15": [565600, 450000], "16": [565600, 450000], "17": [565600, 450000], "18": [565600, 450000], "19": [565600, 450000], "20": [656500, 535162], "21": [666600, 515187], "22": [565600, 450000], "23": [565600, 450000], "24": [565600, 450000], "25": [565600, 450000], "26": [565600, 450000], "27": [565600, 450000], "28": [565600, 450000], "29": [545400, 450000], "30": [531502, null], "31": [535300, 450000], "32": [565600, 449650], "33": [565600, 462250], "34": [666600, 516750], "35": [676700, null], "36": [676700, 525000], "37": [676700, 525000], "38": [676700, 525000], "39": [676700, 525000], "40": [656500, 508950], "41": [531260, 450000], "42": [757500, 581625], "43": [565600, 450000], "44": [560000, 450000], "45": [565600, 450000], "46": [565600, 450000], "47": [565600, 450000], "48": [565600, 450000], "49": [565600, 450000], "50": [565600, 450000], "51": [545400, 468000], "52": [595900, 467500], "53": [767600, 600475], "54": [565600, 450000], "55": [565600, 450000], "56": [565600, 450000], "57": [565600, null], "58": [560000, null], "59": [565600, 450000], "60": [565600, 450000], "61": [549440, 450000], "62": [545400, 487500], "63": [686800, 545187], "64": [565600, 450000], "65": [565600, 450000], "66": [565600, 450000], "67": [757500, 612500], "68": [676700, 525000], "69": [565600, null], "70": [727200, 563625], "71": [565600, 450000], "72": [565600, 450000], "73": [560000, null], "74": [565600, 450000], "75": [565600, 450000], "76": [545400, null], "77": [606000, 490000], "78": [600000, null], "79": [606000, 490000], "80": [606000, 490000], "81": [585800, 455000], "82": [585800, 455000], "83": [585800, 455000], "84": [585800, 453075], "85": [686800, 535562], "86": [1625485, null], "87": [535300, 450000], "88": [606000, 470475], "89": [626200, 486150], "90": [626200, 486150], "91": [626200, 486150], "92": [626200, 486150], "93": [626200, 486150], "94": [626200, 486150], "95": [626200, 486150], "96": [626200, 486150], "97": [626200, 486150]}},
    "Vista 43 - 2 dormitórios": {
       "datas": [
-        "2026-09"
+        "2026-09",
+        "2026-10"
       ],
       "fontes": [
-        "Tabela zero 09-26 (lista de espera)"
+        "Tabela zero 09-26 (lista de espera)",
+        "Tabela 09-26 com o CUB de out/2026 (+0,41%)"
       ],
-      "obs": "Unidades de 2 dormitórios do Vista 43, 8 das 59 da tabela — uma de cada área distinta, para a amostra cobrir a planta inteira (79,02 m², 79,27 m², 79,81 m², 80,06 m², 80,10 m², 86,57 m², 86,80 m², 88,32 m²). Base: o valor total da condição padrão, a mesma dos cards e a mesma regra das outras séries. Só existe um levantamento até agora — a tabela zero de setembro/2026, de lista de espera —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando a próxima tabela chegar. Vale lembrar que são preços referenciais: o empreendimento ainda não está disponível para comercialização.",
+      "obs": "Unidades de 2 dormitórios do Vista 43, 8 das 59 da tabela — uma de cada área distinta, para a amostra cobrir a planta inteira (79,02 m², 79,27 m², 79,81 m², 80,06 m², 80,10 m², 86,57 m², 86,80 m², 88,32 m²). Base: o valor total da condição padrão, a mesma dos cards e a mesma regra das outras séries. O segundo ponto, out/2026, é a mesma tabela com o CUB de outubro: todas as unidades subiram exatamente 0,4141%, sem reprecificação. As da amostra que saíram da tabela ficam sem valor nesse mês. Vale lembrar que são preços referenciais: o empreendimento ainda não está disponível para comercialização.",
       "unidades": {
         "L3103": [
-          972081.73
+          972081.73,
+          976106.84
         ],
         "L1003": [
-          886988.05
+          886988.05,
+          890660.81
         ],
         "L3102": [
-          978886.1
+          978886.1,
+          982939.38
         ],
         "L1002": [
-          893163.57
+          893163.57,
+          896861.9
         ],
         "L1001": [
-          895123.54
+          895123.54,
+          898829.99
         ],
         "L1004": [
-          956845.75
+          956845.75,
+          960807.77
         ],
         "L1901": [
-          1028887.97
+          1028887.97,
+          1033148.29
         ],
         "L3404": [
-          1077429.58
+          1077429.58,
+          null
         ]
       }
     },
    "Vista 43 - Studios": {
       "datas": [
-        "2026-09"
+        "2026-09",
+        "2026-10"
       ],
       "fontes": [
-        "Tabela zero 09-26 (lista de espera)"
+        "Tabela zero 09-26 (lista de espera)",
+        "Tabela 09-26 com o CUB de out/2026 (+0,41%)"
       ],
-      "obs": "Studios do Vista 43, 5 dos 55 do tipo — uma unidade de cada área distinta (26,85 m², 27,67 m², 29,53 m², 37,14 m², 40,26 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. Só existe um levantamento até agora — a tabela zero de setembro/2026, de lista de espera —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos.",
+      "obs": "Studios do Vista 43, 5 dos 55 do tipo — uma unidade de cada área distinta (26,85 m², 27,67 m², 29,53 m², 37,14 m², 40,26 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. O segundo ponto, out/2026, é a mesma tabela com o CUB de outubro: todas as unidades subiram exatamente 0,4141%, sem reprecificação. As da amostra que saíram da tabela ficam sem valor nesse mês.",
       "unidades": {
         "S1004": [
-          288402.51
+          288402.51,
+          null
         ],
         "S1002": [
-          297210.33
+          297210.33,
+          298440.99
         ],
         "S3005": [
-          402312.93
+          402312.93,
+          null
         ],
         "S1112": [
-          407467.89
+          407467.89,
+          null
         ],
         "S1010": [
-          433729.18
+          433729.18,
+          null
         ]
       }
     },
    "Vista 43 - Loft Duplex": {
       "datas": [
-        "2026-09"
+        "2026-09",
+        "2026-10"
       ],
       "fontes": [
-        "Tabela zero 09-26 (lista de espera)"
+        "Tabela zero 09-26 (lista de espera)",
+        "Tabela 09-26 com o CUB de out/2026 (+0,41%)"
       ],
-      "obs": "Loft duplex do Vista 43, 4 dos 28 do tipo — uma unidade de cada área distinta (46,84 m², 48,83 m², 50,32 m², 50,64 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. Só existe um levantamento até agora — a tabela zero de setembro/2026, de lista de espera —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos.",
+      "obs": "Loft duplex do Vista 43, 4 dos 28 do tipo — uma unidade de cada área distinta (46,84 m², 48,83 m², 50,32 m², 50,64 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. O segundo ponto, out/2026, é a mesma tabela com o CUB de outubro: todas as unidades subiram exatamente 0,4141%, sem reprecificação. As da amostra que saíram da tabela ficam sem valor nesse mês.",
       "unidades": {
         "S1804": [
-          504237.73
+          504237.73,
+          506325.63
         ],
         "S1802": [
-          523323.62
+          523323.62,
+          525490.55
         ],
         "S2208": [
-          547678.05
+          547678.05,
+          null
         ],
         "S1801": [
-          541655.49
+          541655.49,
+          null
         ]
       }
     },
