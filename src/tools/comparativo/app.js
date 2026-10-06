@@ -21,7 +21,7 @@ const DRIVE_LINKS = {
   "San Blas": "https://drive.google.com/drive/folders/1A6LaiIS1Esu5_szcNDY1xmBwN_jus82u",
   "Liv": "https://drive.google.com/drive/folders/1X4fsdJA_GFgGb_-2xcW6PhWB7r40BcVK",
   "N Studios": "https://drive.google.com/drive/folders/1hjuaDdLupfXwOHNexAUvI5eeumAYYxzs",
-  "Residencial EB": "https://drive.google.com/drive/folders/1Ig1UoYH8Hk6mh2kRocGjoylX9e3L5Auq",
+  "Egon Belz": "https://drive.google.com/drive/folders/1Ig1UoYH8Hk6mh2kRocGjoylX9e3L5Auq",
   "Carbono": "https://drive.google.com/drive/folders/1KIbI6g5eJ3jq_2Kk22BgNi400gqkorIj",
   "Central Park": "https://drive.google.com/drive/folders/1ocdQjOiH2eEiZaFZdBEShSt1GnbLnFJc",
   "Imperial Park": "https://drive.google.com/drive/folders/1-LRwkJkBx_HoeBMq93gjetb77mp1d1HS",

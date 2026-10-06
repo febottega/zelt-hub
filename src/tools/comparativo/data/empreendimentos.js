@@ -193,7 +193,7 @@ const DATA = [
   {
     "tipo": "Apartamento Tipo",
     "construtora": "Castelo",
-    "empreendimento": "Residencial EB",
+    "empreendimento": "Egon Belz",
     "bairro": "Velha",
     "unidade": null,
     "config": "1 quarto",

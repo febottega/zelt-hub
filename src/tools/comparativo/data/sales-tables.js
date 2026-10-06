@@ -964,7 +964,7 @@ const SALES_TABLES = {
       ]
     }
   },
-  "Residencial EB": {
+  "Egon Belz": {
     "folderId": "1Ig1UoYH8Hk6mh2kRocGjoylX9e3L5Auq",
     "source": "Forma de integralização residencial (Castelo)",
     "ref": "Outubro/2026 · CUB R$ 3.171,96",
