@@ -521,6 +521,15 @@ table.sales{width:100%; border-collapse:collapse; font-family:var(--ff-body); fo
 table.sales th{background:var(--navy-900); color:#fff; font-family:var(--ff-display); font-weight:500;
   text-transform:uppercase; letter-spacing:.04em; font-size:11.5px; padding:9px 12px; text-align:left; white-space:nowrap;}
 table.sales td{padding:9px 12px; border-bottom:1px solid var(--navy-100); white-space:nowrap; color:var(--navy-800);}
+/* coluna de valor ordenavel: o cabecalho vira botao (mais barato <-> mais caro) */
+table.sales th.th-sort{padding:0;}
+table.sales .btn-sort{all:unset; box-sizing:border-box; display:flex; align-items:center; gap:6px; width:100%;
+  padding:9px 12px; cursor:pointer; font:inherit; color:inherit; text-transform:inherit; letter-spacing:inherit; white-space:nowrap;}
+table.sales .btn-sort:hover{background:rgba(255,255,255,.08);}
+table.sales .btn-sort:focus-visible{outline:2px solid var(--orange-400, #ffb25e); outline-offset:-2px;}
+table.sales .sort-ic{font-size:13px; line-height:1; opacity:.55;}
+table.sales th.th-sort.on{background:var(--orange-600, #c9701a);}
+table.sales th.th-sort.on .sort-ic{opacity:1;}
 table.sales tr:last-child td{border-bottom:none;}
 table.sales tbody tr:hover{background:var(--navy-50);}
 table.sales .unit-cell{font-family:var(--ff-display); font-weight:600; color:var(--navy-900);}

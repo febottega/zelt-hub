@@ -883,8 +883,31 @@ function salesTableHTML(emp, t){
   const d0 = DATA.find(d=>d.empreendimento===emp)
     || { construtora: s0.construtora || "", bairro: s0.bairro || "" };
   const hasSum = !!t.summary;
-  const head = `<tr>${t.columns.map(c=>`<th>${c}</th>`).join("")}${hasSum?`<th class="th-resumo">Resumo</th>`:""}</tr>`;
-  const body = t.rows.map((r,ri)=>`<tr>${r.map((cell,ci)=>{
+  /* ordenacao por valor (pedido de 06/10/2026, so nas tabelas de SALES_ORDENAVEL):
+     a coluna e a do valor principal do resumo. As linhas mudam de ordem, mas cada
+     uma leva o indice original (ri), que e o que o "Copiar Resumo" usa. */
+  const sortCol = (SALES_ORDENAVEL.has(emp) && s0.principal) ? s0.principal.col : -1;
+  const sortDir = sortCol>=0 ? (salesSort[emp]||"") : "";
+  const ordem = t.rows.map((_,i)=>i);
+  if(sortDir){
+    const val = i => { const v=parseBRL(t.rows[i][sortCol]); return v==null ? null : v; };
+    ordem.sort((a,b)=>{
+      const va=val(a), vb=val(b);
+      if(va==null && vb==null) return a-b;
+      if(va==null) return 1;
+      if(vb==null) return -1;
+      return (sortDir==="asc" ? va-vb : vb-va) || a-b;
+    });
+  }
+  const thSort = c => {
+    const ic = sortDir==="asc" ? "↑" : sortDir==="desc" ? "↓" : "↕";
+    const tit = sortDir==="asc" ? "Do mais barato para o mais caro — clique para inverter"
+              : sortDir==="desc" ? "Do mais caro para o mais barato — clique para voltar à ordem da tabela"
+              : "Ordenar pelo valor: do mais barato para o mais caro";
+    return `<th class="th-sort${sortDir?" on":""}"><button type="button" class="btn-sort" data-emp="${emp.replace(/"/g,'&quot;')}" title="${tit}">${c}<span class="sort-ic">${ic}</span></button></th>`;
+  };
+  const head = `<tr>${t.columns.map((c,ci)=>ci===sortCol?thSort(c):`<th>${c}</th>`).join("")}${hasSum?`<th class="th-resumo">Resumo</th>`:""}</tr>`;
+  const body = ordem.map(ri=>[t.rows[ri],ri]).map(([r,ri])=>`<tr>${r.map((cell,ci)=>{
     let cls="", extra="";
     if(ci===t.unitCol){
       cls="unit-cell";
@@ -928,6 +951,37 @@ function salesTableHTML(emp, t){
 }
 
 const salesState = { q:"", constr:"" };
+/* tabelas com a coluna de valor ordenavel e a ordem escolhida em cada uma
+   ("asc" | "desc"; ausente = ordem da tabela da construtora) */
+const SALES_ORDENAVEL = new Set(["Vista 43 - 2 dormitórios","Vista 43 - Studios e Loft Duplex","Tulum - Studios","Tulum - 2 dormitórios","Central Park"]);
+const salesSort = {};
+function bindSalesSection(root){
+  root.querySelectorAll(".btn-resumo").forEach(b=>{
+    b.addEventListener("click", e=>{ e.stopPropagation(); copiarResumo(b); });
+  });
+  root.querySelectorAll(".stable-head").forEach(h=>{
+    const toggle=()=>h.closest(".stable").classList.toggle("open");
+    h.addEventListener("click",toggle);
+    h.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); toggle(); } });
+  });
+  root.querySelectorAll(".btn-sort").forEach(b=>{
+    b.addEventListener("click", e=>{
+      e.stopPropagation();
+      const emp=b.getAttribute("data-emp");
+      salesSort[emp] = salesSort[emp]==="asc" ? "desc" : salesSort[emp]==="desc" ? "" : "asc";
+      /* redesenha so esta tabela, mantendo-a aberta e a rolagem horizontal onde estava */
+      const sec=b.closest(".stable"), sc=sec.querySelector(".stable-scroll"), x=sc?sc.scrollLeft:0;
+      const tmp=document.createElement("div");
+      tmp.innerHTML=salesTableHTML(emp, SALES_TABLES[emp]);
+      const novo=tmp.firstElementChild;
+      novo.classList.add("open");
+      sec.replaceWith(novo);
+      bindSalesSection(novo);
+      const sc2=novo.querySelector(".stable-scroll"); if(sc2) sc2.scrollLeft=x;
+      const b2=novo.querySelector(".btn-sort"); if(b2) b2.focus();
+    });
+  });
+}
 function buildSalesConstrDropdown(){
   const sel=document.getElementById("sales-constr"); if(!sel) return;
   const cont={};
@@ -958,14 +1012,7 @@ function renderSalesTables(filter, constr){
     box.innerHTML=`<div class="sales-empty">${msg}</div>`; return;
   }
   box.innerHTML = emps.map(emp=>salesTableHTML(emp, SALES_TABLES[emp])).join("");
-  box.querySelectorAll(".btn-resumo").forEach(b=>{
-    b.addEventListener("click", e=>{ e.stopPropagation(); copiarResumo(b); });
-  });
-  box.querySelectorAll(".stable-head").forEach(h=>{
-    const toggle=()=>h.closest(".stable").classList.toggle("open");
-    h.addEventListener("click",toggle);
-    h.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); toggle(); } });
-  });
+  bindSalesSection(box);
 }
 
 function hasSalesTable(emp){ return !!SALES_TABLES[emp]; }

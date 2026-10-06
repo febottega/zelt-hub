@@ -106,6 +106,11 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
   `DD/MM/AAAA`) e o chip do card "Empreendimentos" no `hub.html` (`Atualizado em DD/MM`).
   Pedido do Felipe em 30/09/2026, quando a data tinha ficado parada em 09/09.
+  Na aba tabelas de vendas, as tabelas de `SALES_ORDENAVEL` (`app.js`: os dois Vista 43,
+  os dois Tulum e o Central Park) têm o cabeçalho da coluna de valor principal
+  (`summary.principal.col`) como botão: 1º clique do mais barato ao mais caro, 2º o
+  inverso, 3º volta à ordem da construtora. Cada linha leva o índice original no
+  `data-ri`, que é o que o "Copiar Resumo" usa. Para outra tabela, é só pôr o nome no Set.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
   chaves, checklist). Rascunhos em `localStorage` (`zelt_*_v1`); exporta com
   html2canvas + pdf-lib.
@@ -168,10 +173,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (22 payloads, 14.956.636 bytes):
+Hash de referência (22 payloads, 14.961.076 bytes):
 
 ```
-8197133DD49FE24F6A14E3FC5D6A76C59686B26D6AC14DF1F8B094A773D6F321
+3DED55405D6095CAEFA304538F38373D77FEE72F990B3E5080552F8C8BDBF9BD
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
