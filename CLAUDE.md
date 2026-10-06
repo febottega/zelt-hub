@@ -5,7 +5,7 @@ https://febottega.github.io/zelt-hub/ (repo `febottega/zelt-hub`, Pages no root 
 
 ## REGRA PRINCIPAL: nunca leia nem edite o index.html
 
-`index.html` (11 MB) é **gerado**. Contém as 21 ferramentas em base64 — ilegível
+`index.html` (11 MB) é **gerado**. Contém as 22 ferramentas em base64 — ilegível
 para busca, impossível de editar cirurgicamente. Lê-lo custa cerca de **2,5 milhões
 de tokens** e não cabe em nenhuma janela de contexto.
 
@@ -43,11 +43,11 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 21 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 22 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          15 relatórios históricos em base64 — nunca ler; editar só por script
+   └─ frozen/          16 relatórios históricos em base64 — nunca ler; editar só por script
 ```
 
 **`src/frozen/` não é intocável, é ilegível.** Cada `.b64` é uma linha de 500 a
@@ -100,7 +100,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   anunciado (mínimo/máximo) e situação do preço, que aceita mais de uma marcada.
   A ordenação é de um critério, pelo cabeçalho ou pelo select "Ordenar por" —
   que existe porque o `<thead>` desaparece abaixo de 820px.
-- **avaliacao** + 15 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 16 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
 - **comparativo** — 63 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos. **Toda mudança no comparativo atualiza a data em
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
@@ -168,10 +168,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (21 payloads, 14.150.740 bytes):
+Hash de referência (22 payloads, 14.956.636 bytes):
 
 ```
-C31B2689B600B5FED6ED754E23D61E394224DD2FCE08A5729A84A86931C1CA77
+8197133DD49FE24F6A14E3FC5D6A76C59686B26D6AC14DF1F8B094A773D6F321
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
