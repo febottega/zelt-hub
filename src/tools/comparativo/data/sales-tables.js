@@ -1883,8 +1883,8 @@ const SALES_TABLES = {
     "columns": [
       "Apto",
       "Entrada",
-      "Entrada dez/26",
-      "Entrada jun/27",
+      "Reforço dez/26",
+      "Reforço jun/27",
       "75 parcelas",
       "Valor total"
     ],
@@ -1959,11 +1959,11 @@ const SALES_TABLES = {
           "col": 1
         },
         {
-          "label": "Entrada dez/26",
+          "label": "Reforço dez/26",
           "col": 2
         },
         {
-          "label": "Entrada jun/27",
+          "label": "Reforço jun/27",
           "col": 3
         },
         {
