@@ -798,10 +798,10 @@ const DATA = [
     "apriv": 84.0,
     "atotal": 86.46,
     "faixaArea": true,
-    "vmin": 912783.56,
-    "vmax": 1046284.59,
-    "media": 979534.07,
-    "rpriv": 11661.12,
+    "vmin": 915000.0,
+    "vmax": 1025000.0,
+    "media": 970000.0,
+    "rpriv": 11547.62,
     "rtotal": null,
     "entrega": "ENTREGUE",
     "entregaKey": 0,
@@ -1758,9 +1758,9 @@ const DATA = [
     "apriv": 89.31,
     "atotal": 118.23,
     "vmin": 795000.0,
-    "vmax": 815000.0,
-    "media": 805000.0,
-    "rpriv": 9013.55,
+    "vmax": 795000.0,
+    "media": 795000.0,
+    "rpriv": 8901.58,
     "condicao": "Entrada + 60x",
     "quartos": [
       2
@@ -1831,7 +1831,7 @@ const DATA = [
       1
     ],
     "terreno": false,
-    "sold": false,
+    "sold": true,
     "id": 57
   },
   {

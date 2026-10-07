@@ -2812,7 +2812,7 @@ const SALES_TABLES = {
   "Cipriani Tower": {
     "folderId": "15Vy0NNYnRatgWewAmS5IE1TERxkejUr3",
     "source": "Disponibilidade (O.M.A.)",
-    "ref": "Setembro/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -2821,7 +2821,8 @@ const SALES_TABLES = {
       "Entrada",
       "5 reforços (cada)",
       "84 parcelas",
-      "Valor total"
+      "Valor total",
+      "Situação"
     ],
     "rows": [
       [
@@ -2830,8 +2831,9 @@ const SALES_TABLES = {
         "84,00 m²",
         "R$ 382.000,00",
         "R$ 30.000,00",
-        "R$ 4.533,14",
-        "R$ 912.783,56"
+        "R$ 4.559,52",
+        "R$ 915.000,00",
+        "Disponível"
       ],
       [
         "601",
@@ -2839,8 +2841,9 @@ const SALES_TABLES = {
         "86,46 m²",
         "R$ 382.000,00",
         "R$ 30.000,00",
-        "R$ 4.711,25",
-        "R$ 927.744,88"
+        "R$ 4.678,57",
+        "R$ 925.000,00",
+        "Disponível"
       ],
       [
         "602",
@@ -2848,8 +2851,9 @@ const SALES_TABLES = {
         "86,35 m²",
         "R$ 382.000,00",
         "R$ 30.000,00",
-        "R$ 4.711,25",
-        "R$ 927.744,88"
+        "R$ 4.678,57",
+        "R$ 925.000,00",
+        "Disponível"
       ],
       [
         "604",
@@ -2857,8 +2861,9 @@ const SALES_TABLES = {
         "84,00 m²",
         "R$ 382.000,00",
         "R$ 30.000,00",
-        "R$ 4.683,85",
-        "R$ 925.443,14"
+        "R$ 4.678,57",
+        "R$ 925.000,00",
+        "Reservado"
       ],
       [
         "701",
@@ -2866,8 +2871,9 @@ const SALES_TABLES = {
         "86,46 m²",
         "R$ 384.000,00",
         "R$ 30.000,00",
-        "R$ 4.793,45",
-        "R$ 936.650,11"
+        "R$ 4.773,81",
+        "R$ 935.000,00",
+        "Disponível"
       ],
       [
         "804",
@@ -2875,8 +2881,9 @@ const SALES_TABLES = {
         "84,00 m²",
         "R$ 382.000,00",
         "R$ 30.000,00",
-        "R$ 4.971,56",
-        "R$ 949.611,43"
+        "R$ 4.916,67",
+        "R$ 945.000,00",
+        "Disponível"
       ],
       [
         "902",
@@ -2884,8 +2891,9 @@ const SALES_TABLES = {
         "86,35 m²",
         "R$ 394.000,00",
         "R$ 30.000,00",
-        "R$ 4.957,86",
-        "R$ 960.460,56"
+        "R$ 4.892,86",
+        "R$ 955.000,00",
+        "Disponível"
       ],
       [
         "904",
@@ -2893,8 +2901,9 @@ const SALES_TABLES = {
         "84,00 m²",
         "R$ 382.000,00",
         "R$ 30.000,00",
-        "R$ 5.122,27",
-        "R$ 962.271,01"
+        "R$ 5.035,71",
+        "R$ 955.000,00",
+        "Disponível"
       ],
       [
         "1002",
@@ -2902,8 +2911,9 @@ const SALES_TABLES = {
         "86,35 m²",
         "R$ 398.000,00",
         "R$ 30.000,00",
-        "R$ 5.040,07",
-        "R$ 971.365,78"
+        "R$ 4.964,29",
+        "R$ 965.000,00",
+        "Disponível"
       ],
       [
         "1004",
@@ -2911,8 +2921,9 @@ const SALES_TABLES = {
         "84,00 m²",
         "R$ 382.000,00",
         "R$ 30.000,00",
-        "R$ 5.259,28",
-        "R$ 973.779,72"
+        "R$ 5.154,76",
+        "R$ 965.000,00",
+        "Disponível"
       ],
       [
         "1101",
@@ -2920,44 +2931,9 @@ const SALES_TABLES = {
         "86,46 m²",
         "R$ 403.000,00",
         "R$ 30.000,00",
-        "R$ 5.122,27",
-        "R$ 983.271,01"
-      ],
-      [
-        "1201",
-        "2 suítes",
-        "86,46 m²",
-        "R$ 407.000,00",
-        "R$ 30.000,00",
-        "R$ 5.204,48",
-        "R$ 994.176,24"
-      ],
-      [
-        "1204",
-        "2 suítes",
-        "84,00 m²",
-        "R$ 382.000,00",
-        "R$ 30.000,00",
-        "R$ 5.547,00",
-        "R$ 997.948,01"
-      ],
-      [
-        "1301",
-        "2 suítes",
-        "86,46 m²",
-        "R$ 412.000,00",
-        "R$ 30.000,00",
-        "R$ 5.286,68",
-        "R$ 1.006.081,46"
-      ],
-      [
-        "1304",
-        "2 suítes",
-        "84,00 m²",
-        "R$ 382.000,00",
-        "R$ 30.000,00",
-        "R$ 5.697,71",
-        "R$ 1.010.607,59"
+        "R$ 5.023,81",
+        "R$ 975.000,00",
+        "Disponível"
       ],
       [
         "1404",
@@ -2965,17 +2941,9 @@ const SALES_TABLES = {
         "84,00 m²",
         "R$ 382.000,00",
         "R$ 30.000,00",
-        "R$ 5.834,72",
-        "R$ 1.022.116,30"
-      ],
-      [
-        "1503",
-        "3 dorm · 1 suíte",
-        "104,68 m²",
-        "R$ 390.000,00",
-        "R$ 30.000,00",
-        "R$ 6.666,67",
-        "R$ 1.100.000,00"
+        "R$ 5.630,95",
+        "R$ 1.005.000,00",
+        "Reservado"
       ],
       [
         "1604",
@@ -2983,11 +2951,22 @@ const SALES_TABLES = {
         "84,00 m²",
         "R$ 382.000,00",
         "R$ 30.000,00",
-        "R$ 6.122,44",
-        "R$ 1.046.284,59"
+        "R$ 5.869,05",
+        "R$ 1.025.000,00",
+        "Reservado"
+      ],
+      [
+        "2501",
+        "2 suítes",
+        "150,06 m²",
+        "R$ 500.000,00",
+        "R$ 30.000,00",
+        "R$ 17.261,90",
+        "R$ 2.100.000,00",
+        "Disponível"
       ]
     ],
-    "note": "18 unidades disponíveis. Condição: entrada + 5 reforços de R$ 30.000,00 + 84 parcelas. Quatro tipologias: 2 suítes em três metragens (86,46 m² nos finais 01, 86,35 m² nos finais 02 e 84,00 m² nos finais 04) e a unidade 1503, de 3 dormitórios com 1 suíte e 104,68 m², que entrou nesta tabela. Obs.: a planilha da O.M.A. traz a indicação \"1,00%\" junto ao cabeçalho, sem rótulo — provável correção mensal; confirmar. Os totais listados equivalem à soma nominal de entrada + reforços + parcelas.",
+    "note": "14 unidades na tabela de outubro/2026: 11 disponíveis e 3 reservadas (604, 1404 e 1604). Condição: entrada + 5 reforços de R$ 30.000,00 + 84 parcelas — entrada + reforços + parcelas devolvem o total em todas as linhas (diferença máxima de R$ 0,40, arredondamento da parcela). Tipologias: 2 suítes com 86,46 m² (finais 01), 86,35 m² (finais 02) e 84,00 m² (finais 04), e a 2501, de 2 suítes com 150,06 m², que entrou nesta tabela por R$ 2.100.000,00 — fica só aqui, fora do card dos 2 suítes, por ser bem maior que as outras. Os valores foram arredondados em outubro: todos passaram a fechar em milhares redondos (o 504 foi de R$ 912.783,56 para R$ 915.000,00, o 1604 de R$ 1.046.284,59 para R$ 1.025.000,00), e na prática quase todos baixaram: de −0,05% (604) a −2,03% (1604), mais nos andares altos; só o 504 subiu (+0,24%). Saíram da tabela 1201, 1204, 1301, 1304 e a 1503, a única de 3 dormitórios.",
     "summary": {
       "bits": [
         {
@@ -3015,7 +2994,8 @@ const SALES_TABLES = {
           "label": "5 reforços",
           "col": 4
         }
-      ]
+      ],
+      "situacaoCol": 7
     }
   },
   "Gardens": {
@@ -4758,7 +4738,7 @@ const SALES_TABLES = {
   "San Blas": {
     "folderId": "1A6LaiIS1Esu5_szcNDY1xmBwN_jus82u",
     "source": "Disponibilidade (O.M.A.)",
-    "ref": "Setembro/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -4784,17 +4764,6 @@ const SALES_TABLES = {
         "R$ 2.006.498,04"
       ],
       [
-        "2205",
-        "2 dormitórios (2 suítes) · 60 parcelas",
-        "89,31 m²",
-        "118,23 m²",
-        "Dupla (inclusa)",
-        "R$ 315.000,00",
-        "R$ 42.000,00",
-        "R$ 4.833,33",
-        "R$ 815.000,00"
-      ],
-      [
         "2006",
         "2 dormitórios (2 suítes) · 60 parcelas",
         "89,31 m²",
@@ -4806,7 +4775,7 @@ const SALES_TABLES = {
         "R$ 795.000,00"
       ]
     ],
-    "note": "Residencial San Blas — Rua Hermann Huscher, 790, Vila Formosa. 3 unidades disponíveis. Uma vaga dupla já inclusa no valor do apartamento. Duas tipologias: a diferenciada 1701 (219,25 m², 4 suítes) em 84 parcelas, e as de 2 dormitórios com duas suítes (89,31 m²) em 60 parcelas — em todas, entrada + 5 reforços + parcelas mensais. Em relação à tabela anterior saíram as unidades 1602, 2005 e 2206. Lazer: piscina, quadra esportiva, academia, salão de festas, sala de jogos, espaço pet. Previsão de entrega informada nas tabelas de dez/2023 e fev/2024 (incorporação 4-56859): setembro/2026 — a O.M.A. não repete essa data nas tabelas atuais; confirmar se já houve entrega.",
+    "note": "Residencial San Blas — Rua Hermann Huscher, 790, Vila Formosa. 2 unidades disponíveis na tabela de outubro/2026: a 1701 e a 2006, com os mesmos valores de setembro. Uma vaga dupla já inclusa no valor do apartamento. Duas tipologias: a diferenciada 1701 (219,25 m², 4 suítes) em 84 parcelas, e as de 2 dormitórios com duas suítes (89,31 m²) em 60 parcelas — em todas, entrada + 5 reforços + parcelas mensais. Na tabela de outubro saiu a 2205; antes já tinham saído a 1602, a 2005 e a 2206. Lazer: piscina, quadra esportiva, academia, salão de festas, sala de jogos, espaço pet. Previsão de entrega informada nas tabelas de dez/2023 e fev/2024 (incorporação 4-56859): setembro/2026 — a O.M.A. não repete essa data nas tabelas atuais; confirmar se já houve entrega.",
     "summary": {
       "bits": [
         {
