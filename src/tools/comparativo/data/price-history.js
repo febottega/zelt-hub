@@ -59,7 +59,8 @@ const PRICE_HISTORY = {
       "2026-06",
       "2026-07",
       "2026-08",
-      "2026-09"
+      "2026-09",
+      "2026-10"
     ],
     "fontes": [
       "Lançamento jan/2026 (22/01)",
@@ -70,7 +71,8 @@ const PRICE_HISTORY = {
       "Vendas jun/2026 (05/06)",
       "Vendas jul/2026 (13/07)",
       "Vendas ago/2026 (05/08)",
-      "Vendas set/2026"
+      "Vendas set/2026",
+      "Tabela out/2026"
     ],
     "obs": "Série mensal completa de jan a set/2026, nove pontos sem falha. A tabela é indexada, então cada degrau aqui é correção e não decisão de preço: no acumulado de janeiro a setembro as três unidades que restam fizeram exatamente os mesmos +5,08%, e o reajuste de setembro foi de 0,2424% em todas. Em set/2026 saíram a 802, a 1005, a 1205 e a 1301 — a série guarda os números delas, mas a aba Investimentos só mostra o que ainda está na tabela de vendas. A 1501 trocou a vaga 14 pela 45 no mesmo mês, as duas duplas, e o preço não se moveu além do índice.",
     "unidades": {
@@ -83,6 +85,7 @@ const PRICE_HISTORY = {
         514063.19,
         518275.31,
         523458.06,
+        null,
         null
       ],
       "1005": [
@@ -94,6 +97,7 @@ const PRICE_HISTORY = {
         523055.28,
         527341.08,
         532614.49,
+        null,
         null
       ],
       "1205": [
@@ -105,6 +109,7 @@ const PRICE_HISTORY = {
         538864.62,
         543279.96,
         548712.76,
+        null,
         null
       ],
       "1301": [
@@ -116,6 +121,7 @@ const PRICE_HISTORY = {
         588479.06,
         593300.93,
         599233.94,
+        null,
         null
       ],
       "1305": [
@@ -127,7 +133,8 @@ const PRICE_HISTORY = {
         546947.6,
         551429.17,
         556943.46,
-        558293.74
+        558293.74,
+        563876.68
       ],
       "1401": [
         578682.03,
@@ -138,7 +145,8 @@ const PRICE_HISTORY = {
         595729.59,
         600610.87,
         606616.98,
-        608087.69
+        608087.69,
+        614168.57
       ],
       "1501": [
         586890.74,
@@ -149,7 +157,8 @@ const PRICE_HISTORY = {
         604180.14,
         609130.66,
         615221.97,
-        616713.54
+        616713.54,
+        622880.68
       ]
     }
   },
@@ -164,7 +173,8 @@ const PRICE_HISTORY = {
       "2026-06",
       "2026-07",
       "2026-08",
-      "2026-09"
+      "2026-09",
+      "2026-10"
     ],
     "fontes": [
       "Studios dez/2025 (03/12)",
@@ -176,7 +186,8 @@ const PRICE_HISTORY = {
       "2D jun/2026 (05/06)",
       "2D jul/2026 (02/07)",
       "2D e Studios ago/2026 (05/08)",
-      "2D set/2026 (10/09)"
+      "2D set/2026 (10/09)",
+      "Tabela out/2026"
     ],
     "obs": "Em abril/2026 as unidades 1201 e 1301 trocaram de vaga e box entre si, e o preço acompanhou a troca — o degrau nesse mês é realocação de garagem, não desvalorização. Em maio voltaram à configuração original. Os 2 dormitórios ficaram congelados de junho a agosto/2026 e em setembro subiram exatamente 0,2424%, o mesmo índice que a Novo Rumo aplicou no Balsini 195 e no N Studios no mesmo mês; a 1101 saiu da tabela nesse mês. O studio 1003 saiu da tabela entre janeiro e julho e voltou em agosto, por isso a lacuna; em setembro ele não acompanhou o reajuste dos 2 dormitórios e segue no valor de agosto, então a linha reta nesse mês é isso, não falta de dado.",
     "unidades": {
@@ -190,7 +201,8 @@ const PRICE_HISTORY = {
         null,
         null,
         345213.26,
-        345213.26
+        345213.26,
+        null
       ],
       "1101": [
         null,
@@ -202,6 +214,7 @@ const PRICE_HISTORY = {
         545648.22,
         545648.22,
         545648.22,
+        null,
         null
       ],
       "1201": [
@@ -214,7 +227,8 @@ const PRICE_HISTORY = {
         558653.65,
         558653.65,
         558653.65,
-        560008.07
+        560008.07,
+        562326.9
       ],
       "1301": [
         null,
@@ -226,7 +240,8 @@ const PRICE_HISTORY = {
         577951.66,
         577951.66,
         577951.66,
-        579352.87
+        579352.87,
+        581751.8
       ]
     }
   },
@@ -236,22 +251,25 @@ const PRICE_HISTORY = {
       "2026-07-02",
       "2026-07-14",
       "2026-08-05",
-      "2026-09-09"
+      "2026-09-09",
+      "2026-10"
     ],
     "fontes": [
       "Lançamento jun/2026 (18/06)",
       "Lançamento jul/2026 (02/07)",
       "Lançamento jul/2026 – 2ª revisão (14/07)",
       "Lançamento ago/2026 (05/08)",
-      "Lançamento set/2026 (09/09)"
+      "Lançamento set/2026 (09/09)",
+      "Tabela out/2026"
     ],
-    "obs": "Leia primeiro: as linhas da 107, da 203 e da 207 caem cerca de 15% em set/2026 e isso NÃO é queda de preço — as três perderam a vaga de garagem (a 03, a 06 e a 09) e passaram a ser um produto diferente. Aplicando o índice do mês no valor de agosto e descontando o de setembro, a diferença é de R$ 60.145,46 nas três, ao centavo: é o preço da vaga nesta tabela. A valorização média do empreendimento fica em −4,08% por causa delas; nas outras doze unidades, que não mudaram de configuração, é −1,13%. Fora isso: a Novo Rumo reajustou a tabela em 02/07 (+0,82% em todas as unidades) e depois fez uma revisão em 14/07 que reduziu o preço da maior parte das unidades — algumas voltaram para abaixo do valor de junho. Os valores de agosto são iguais aos dessa 2ª revisão de julho, e setembro é o primeiro reajuste desde então: +0,2424% em todas. As unidades 305, 403 e 405 entraram na tabela depois de junho, por isso as lacunas; em set/2026 entraram a 602, a 604 e a 802 e saíram 101, 106, 206, 301, 303, 305 e 1003.",
+    "obs": "Leia primeiro: as linhas da 107, da 203 e da 207 caem cerca de 15% em set/2026 e isso NÃO é queda de preço — as três perderam a vaga de garagem (a 03, a 06 e a 09) e passaram a ser um produto diferente. Aplicando o índice do mês no valor de agosto e descontando o de setembro, a diferença é de R$ 60.145,46 nas três, ao centavo: é o preço da vaga nesta tabela. A valorização média do empreendimento fica em −4,08% por causa delas; nas outras doze unidades, que não mudaram de configuração, é −1,13%. Fora isso: a Novo Rumo reajustou a tabela em 02/07 (+0,82% em todas as unidades) e depois fez uma revisão em 14/07 que reduziu o preço da maior parte das unidades — algumas voltaram para abaixo do valor de junho. Os valores de agosto são iguais aos dessa 2ª revisão de julho, e setembro é o primeiro reajuste desde então: +0,2424% em todas. As unidades 305, 403 e 405 entraram na tabela depois de junho, por isso as lacunas; em set/2026 entraram a 602, a 604 e a 802 e saíram 101, 106, 206, 301, 303, 305 e 1003. Em out/2026 todas subiram 0,4141% (CUB de outubro) e saíram a 306, a 307 e a 901.",
     "unidades": {
       "101": [
         322530.39,
         325173.13,
         310223.04,
         310223.04,
+        null,
         null
       ],
       "106": [
@@ -259,6 +277,7 @@ const PRICE_HISTORY = {
         328085.16,
         311913.67,
         311913.67,
+        null,
         null
       ],
       "107": [
@@ -266,34 +285,39 @@ const PRICE_HISTORY = {
         408305.94,
         396018.77,
         396018.77,
-        336833.43
+        336833.43,
+        338228.16
       ],
       "201": [
         329690.64,
         332392.05,
         317441.27,
         317441.27,
-        318210.89
+        318210.89,
+        319528.51
       ],
       "203": [
         412203.74,
         415581.25,
         403075.15,
         403075.15,
-        343906.92
+        343906.92,
+        345330.94
       ],
       "204": [
         340948.07,
         343741.72,
         328789.85,
         328789.85,
-        329586.98
+        329586.98,
+        330951.7
       ],
       "206": [
         307640.01,
         310160.75,
         295212.1,
         295212.1,
+        null,
         null
       ],
       "207": [
@@ -301,13 +325,15 @@ const PRICE_HISTORY = {
         398091.3,
         398091.3,
         398091.3,
-        338910.98
+        338910.98,
+        340314.31
       ],
       "301": [
         336997.02,
         339758.3,
         324806.8,
         324806.8,
+        null,
         null
       ],
       "303": [
@@ -315,6 +341,7 @@ const PRICE_HISTORY = {
         424062.5,
         424062.5,
         424062.5,
+        null,
         null
       ],
       "304": [
@@ -322,13 +349,15 @@ const PRICE_HISTORY = {
         351339.58,
         336386.99,
         336386.99,
-        337202.54
+        337202.54,
+        338598.8
       ],
       "305": [
         null,
         303200.78,
         293327.14,
         293327.14,
+        null,
         null
       ],
       "306": [
@@ -336,90 +365,103 @@ const PRICE_HISTORY = {
         317073.28,
         302123.98,
         302123.98,
-        302856.46
+        302856.46,
+        null
       ],
       "307": [
         402561.41,
         405859.91,
         405859.91,
         405859.91,
-        406843.89
+        406843.89,
+        null
       ],
       "401": [
         344452.5,
         347274.87,
         332322.66,
         332322.66,
-        333128.36
+        333128.36,
+        334507.75
       ],
       "403": [
         null,
         null,
         324126.91,
         324126.91,
-        324912.74
+        324912.74,
+        326258.11
       ],
       "405": [
         null,
         null,
         null,
         419137.08,
-        420153.25
+        420153.25,
+        421892.98
       ],
       "501": [
         342402.0,
         345207.57,
         339578.44,
         339578.44,
-        340401.73
+        340401.73,
+        341811.23
       ],
       "601": [
         331032.6,
         333745.01,
         341745.01,
         341745.01,
-        342573.55
+        342573.55,
+        343992.05
       ],
       "602": [
         null,
         null,
         null,
         null,
-        382124.27
+        382124.27,
+        383706.54
       ],
       "604": [
         null,
         null,
         null,
         null,
-        367930.54
+        367930.54,
+        369454.03
       ],
       "802": [
         null,
         null,
         null,
         null,
-        397562.09
+        397562.09,
+        399208.28
       ],
       "901": [
         424807.63,
         428288.41,
         415071.49,
         415071.49,
-        416077.81
+        416077.81,
+        null
       ],
       "1001": [
         609285.37,
         614277.72,
         614277.72,
         614277.72,
-        615767.0
+        615767.0,
+        618316.71
       ],
       "1003": [
         589321.99,
         594150.77,
         594150.77,
         594150.77,
+        null,
         null
       ]
     }

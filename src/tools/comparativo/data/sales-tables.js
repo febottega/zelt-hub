@@ -2,7 +2,7 @@ const SALES_TABLES = {
   "Wissen": {
     "folderId": "1TQxbJtsFgqECLvO2y0Pja2REXij3cGwm",
     "source": "Tabela da construtora",
-    "ref": "Setembro/2026 · studio conforme agosto",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -13,48 +13,36 @@ const SALES_TABLES = {
       "Ato (1x)",
       "Parcelas mensais",
       "Reforços anuais",
-      "À vista",
-      "Até 48x / financ."
+      "À vista (−15%)",
+      "Até 48x / financ. (−6%)"
     ],
     "rows": [
-      [
-        "1003",
-        "Studio · 60x + 5 reforços",
-        "27,88 m²",
-        "1 (WI-VG82)",
-        "R$ 345.213,26",
-        "R$ 69.042,81",
-        "R$ 3.452,13",
-        "R$ 13.808,53",
-        "R$ 310.691,93",
-        "—"
-      ],
       [
         "1201",
         "2 dormitórios · 84x + 7 reforços",
         "58,49 m²",
         "19",
-        "R$ 560.008,07",
-        "R$ 112.001,42",
-        "R$ 4.000,06",
-        "R$ 16.000,23",
-        "R$ 492.807,10",
-        "R$ 526.407,59"
+        "R$ 562.326,90",
+        "R$ 112.465,46",
+        "R$ 4.016,62",
+        "R$ 16.066,48",
+        "R$ 477.977,87",
+        "R$ 528.587,29"
       ],
       [
         "1301",
         "2 dormitórios · 84x + 7 reforços",
         "58,33 m²",
         "09 (Box 04)",
-        "R$ 579.352,87",
-        "R$ 115.870,97",
-        "R$ 4.138,23",
-        "R$ 16.552,94",
-        "R$ 509.830,53",
-        "R$ 544.591,70"
+        "R$ 581.751,80",
+        "R$ 116.350,36",
+        "R$ 4.155,37",
+        "R$ 16.621,48",
+        "R$ 494.489,03",
+        "R$ 546.846,69"
       ]
     ],
-    "note": "Últimas unidades. Tabela única reunindo as duas tipologias: 2 dormitórios (ato + 84 parcelas + 7 reforços anuais) e studio (ato + 60 parcelas + 5 reforços anuais). Os 2 dormitórios são da tabela de setembro/2026 — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027 — e subiram exatamente 0,2424% sobre agosto, o mesmo índice que a Novo Rumo aplicou no Balsini 195 e no N Studios no mesmo mês. O studio 1003 não acompanhou o reajuste: o valor é o mesmo e a linha dele segue com os números da tabela de agosto (ato em 31/08/2026). Descontos: nos 2 dormitórios, 12% à vista ou 6% em até 48 parcelas / financiamento bancário nas chaves; no studio, 10% à vista, sem condição de 48x. Entrega: outubro/2028. Saíram da tabela a 0701, antes de agosto, e a 1101 em setembro. Todas as unidades constam como Disponível.",
+    "note": "Últimas unidades — em outubro/2026 restam dois apartamentos de 2 dormitórios, o 1201 e o 1301, os dois disponíveis; o studio 1003 saiu da tabela. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%). Descontos: 15% à vista (era 12% em setembro) e 6% pagando em até 48 parcelas ou com financiamento bancário nas chaves. Entrega: outubro/2028. Em outubro os dois subiram exatamente 0,4141% sobre setembro — a variação do CUB (R$ 3.158,88 → R$ 3.171,96), o mesmo índice do Balsini, do N Studios e do Vista 43 —, sem reprecificação; ato + parcelas + reforços devolvem o total ao centavo. Saíram da tabela a 0701, antes de agosto, a 1101 em setembro e o studio 1003 em outubro.",
     "summary": {
       "bits": [
         {
@@ -90,10 +78,12 @@ const SALES_TABLES = {
       "alternativas": [
         {
           "bold": "À vista",
+          "nota": "(−15%)",
           "col": 8
         },
         {
-          "bold": "Até 48x ou financiamento",
+          "bold": "Até 48x ou financiamento bancário nas chaves",
+          "nota": "(−6%)",
           "col": 9
         }
       ]
@@ -1672,6 +1662,15 @@ const SALES_TABLES = {
     ],
     "rows": [
       [
+        "502",
+        "156,20 m²",
+        "R$ 250.000,00",
+        "R$ 100.000,00",
+        "R$ 100.000,00",
+        "R$ 14.000,00",
+        "R$ 1.360.000,00"
+      ],
+      [
         "602",
         "156,20 m²",
         "R$ 250.000,00",
@@ -1798,7 +1797,7 @@ const SALES_TABLES = {
         "R$ 1.694.000,00"
       ]
     ],
-    "note": "Tabela de setembro/2026 — restam 14 unidades, todas com 156,20 m² de área privativa. Saíram as unidades 202, 501 e 502, vendidas desde a Rev. 55 de julho. Os preços das 14 que ficaram não mudaram; mudou a condição: a entrada passou a ser R$ 250.000,00 em todas (era R$ 200.000,00 até o 1101 e R$ 220.000,00 do 1301 para cima) e o saldo passou de 70 para 65 parcelas, com os dois reforços de R$ 100.000,00 (dez/26 e jun/27) mantidos — no 602, por exemplo, a parcela foi de R$ 13.714,29 para R$ 14.000,00. Entrada + reforços + 65 parcelas devolvem o total em todas as linhas (diferença máxima de R$ 0,30, arredondamento da parcela). Entrega prevista: novembro/2027. Preço dos apartamentos com 01 vaga dupla, 01 vaga simples e 01 box; para 03 vagas simples de garagem e box, acrescentar R$ 30.000,00 no preço final. Depósitos independentes: 21, 22, 23, 24, 25, 26 e 28. Vagas simples sobrando: 89 e 90. Vagas em vermelho na tabela original são para 2 veículos (gaveta); sujeitas a disponibilidade. A área privativa foi mantida da revisão anterior, porque a tabela nova não traz coluna de área.",
+    "note": "Tabela de setembro/2026 — 15 unidades, todas com 156,20 m² de área privativa. Saíram as unidades 202 e 501, vendidas desde a Rev. 55 de julho; a 502 também tinha saído em setembro e voltou à pauta em 07/10/2026, no mesmo preço (R$ 1.360.000,00) e na mesma condição das demais. Os preços não mudaram desde julho; mudou a condição: a entrada passou a ser R$ 250.000,00 em todas (era R$ 200.000,00 até o 1101 e R$ 220.000,00 do 1301 para cima) e o saldo passou de 70 para 65 parcelas, com os dois reforços de R$ 100.000,00 (dez/26 e jun/27) mantidos — no 602, por exemplo, a parcela foi de R$ 13.714,29 para R$ 14.000,00. Entrada + reforços + 65 parcelas devolvem o total em todas as linhas (diferença máxima de R$ 0,30, arredondamento da parcela). Entrega prevista: novembro/2027. Preço dos apartamentos com 01 vaga dupla, 01 vaga simples e 01 box; para 03 vagas simples de garagem e box, acrescentar R$ 30.000,00 no preço final. Depósitos independentes: 21, 22, 23, 24, 25, 26 e 28. Vagas simples sobrando: 89 e 90. Vagas em vermelho na tabela original são para 2 veículos (gaveta); sujeitas a disponibilidade. A área privativa foi mantida da revisão anterior, porque a tabela nova não traz coluna de área.",
     "summary": {
       "bits": [
         {
@@ -3506,7 +3505,7 @@ const SALES_TABLES = {
   "N Studios": {
     "folderId": "1hjuaDdLupfXwOHNexAUvI5eeumAYYxzs",
     "source": "Tabela de lançamento (Novo Rumo · N Studios by Housi)",
-    "ref": "Setembro/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -3515,173 +3514,178 @@ const SALES_TABLES = {
       "Ato (1x · 20%)",
       "60 parcelas (60%)",
       "5 reforços anuais (20%)",
-      "Valor total"
+      "Valor total",
+      "36x + 3 reforços (−5%)",
+      "À vista (−10%)"
     ],
     "rows": [
       [
         "107",
         "35,40 m²",
         "—",
-        "R$ 67.366,93",
-        "R$ 3.368,33",
-        "R$ 13.473,34",
-        "R$ 336.833,43"
+        "R$ 67.645,71",
+        "R$ 3.382,28",
+        "R$ 13.529,13",
+        "R$ 338.228,16",
+        "R$ 321.316,75",
+        "R$ 304.405,34"
       ],
       [
         "201",
         "30,72 m²",
         "—",
-        "R$ 63.642,09",
-        "R$ 3.182,11",
-        "R$ 12.728,44",
-        "R$ 318.210,89"
+        "R$ 63.905,41",
+        "R$ 3.195,29",
+        "R$ 12.781,14",
+        "R$ 319.528,51",
+        "R$ 303.552,08",
+        "R$ 287.575,66"
       ],
       [
         "203",
         "35,25 m²",
         "—",
-        "R$ 68.781,32",
-        "R$ 3.439,07",
-        "R$ 13.756,28",
-        "R$ 343.906,92"
+        "R$ 69.066,14",
+        "R$ 3.453,31",
+        "R$ 13.813,24",
+        "R$ 345.330,94",
+        "R$ 328.064,39",
+        "R$ 310.797,85"
       ],
       [
         "204",
         "32,21 m²",
         "—",
-        "R$ 65.917,38",
-        "R$ 3.295,87",
-        "R$ 13.183,48",
-        "R$ 329.586,98"
+        "R$ 66.190,15",
+        "R$ 3.309,52",
+        "R$ 13.238,07",
+        "R$ 330.951,70",
+        "R$ 314.404,12",
+        "R$ 297.856,53"
       ],
       [
         "207",
         "34,24 m²",
         "—",
-        "R$ 67.782,18",
-        "R$ 3.389,11",
-        "R$ 13.556,44",
-        "R$ 338.910,98"
+        "R$ 68.063,06",
+        "R$ 3.403,14",
+        "R$ 13.612,57",
+        "R$ 340.314,31",
+        "R$ 323.298,59",
+        "R$ 306.282,88"
       ],
       [
         "304",
         "32,21 m²",
         "—",
-        "R$ 67.440,24",
-        "R$ 3.372,03",
-        "R$ 13.488,10",
-        "R$ 337.202,54"
-      ],
-      [
-        "306",
-        "29,90 m²",
-        "—",
-        "R$ 60.571,56",
-        "R$ 3.028,56",
-        "R$ 12.114,26",
-        "R$ 302.856,46"
-      ],
-      [
-        "307",
-        "34,24 m²",
-        "04",
-        "R$ 81.368,69",
-        "R$ 4.068,44",
-        "R$ 16.273,76",
-        "R$ 406.843,89"
+        "R$ 67.719,65",
+        "R$ 3.385,99",
+        "R$ 13.543,95",
+        "R$ 338.598,80",
+        "R$ 321.668,86",
+        "R$ 304.738,92"
       ],
       [
         "401",
         "30,72 m²",
         "—",
-        "R$ 66.625,91",
-        "R$ 3.331,28",
-        "R$ 13.325,13",
-        "R$ 333.128,36"
+        "R$ 66.901,40",
+        "R$ 3.345,08",
+        "R$ 13.380,31",
+        "R$ 334.507,75",
+        "R$ 317.782,36",
+        "R$ 301.056,98"
       ],
       [
         "403",
         "30,90 m²",
         "—",
-        "R$ 64.982,39",
-        "R$ 3.249,13",
-        "R$ 12.996,51",
-        "R$ 324.912,74"
+        "R$ 65.251,71",
+        "R$ 3.262,58",
+        "R$ 13.050,32",
+        "R$ 326.258,11",
+        "R$ 309.945,20",
+        "R$ 293.632,30"
       ],
       [
         "405",
         "34,24 m²",
         "10",
-        "R$ 84.030,80",
-        "R$ 4.201,53",
-        "R$ 16.806,13",
-        "R$ 420.153,25"
+        "R$ 84.378,58",
+        "R$ 4.218,93",
+        "R$ 16.875,72",
+        "R$ 421.892,98",
+        "R$ 400.798,33",
+        "R$ 379.703,68"
       ],
       [
         "501",
         "30,72 m²",
         "—",
-        "R$ 68.080,18",
-        "R$ 3.404,02",
-        "R$ 13.616,07",
-        "R$ 340.401,73"
+        "R$ 68.362,38",
+        "R$ 3.418,11",
+        "R$ 13.672,45",
+        "R$ 341.811,23",
+        "R$ 324.720,67",
+        "R$ 307.630,11"
       ],
       [
         "601",
         "30,72 m²",
         "—",
-        "R$ 68.514,45",
-        "R$ 3.425,74",
-        "R$ 13.702,94",
-        "R$ 342.573,55"
+        "R$ 68.798,45",
+        "R$ 3.439,92",
+        "R$ 13.759,68",
+        "R$ 343.992,05",
+        "R$ 326.792,45",
+        "R$ 309.592,84"
       ],
       [
         "602",
         "29,94 m²",
         "16",
-        "R$ 76.425,02",
-        "R$ 3.821,24",
-        "R$ 15.284,97",
-        "R$ 382.124,27"
+        "R$ 76.741,04",
+        "R$ 3.837,07",
+        "R$ 15.348,26",
+        "R$ 383.706,54",
+        "R$ 364.521,21",
+        "R$ 345.335,89"
       ],
       [
         "604",
         "29,90 m²",
         "18",
-        "R$ 73.585,84",
-        "R$ 3.679,31",
-        "R$ 14.717,22",
-        "R$ 367.930,54"
+        "R$ 73.890,83",
+        "R$ 3.694,54",
+        "R$ 14.778,16",
+        "R$ 369.454,03",
+        "R$ 350.981,33",
+        "R$ 332.508,63"
       ],
       [
         "802",
         "29,94 m²",
         "38",
-        "R$ 79.512,49",
-        "R$ 3.975,62",
-        "R$ 15.902,48",
-        "R$ 397.562,09"
-      ],
-      [
-        "901",
-        "30,72 m²",
-        "37",
-        "R$ 83.215,46",
-        "R$ 4.160,78",
-        "R$ 16.643,11",
-        "R$ 416.077,81"
+        "R$ 79.841,83",
+        "R$ 3.992,08",
+        "R$ 15.968,33",
+        "R$ 399.208,28",
+        "R$ 379.247,87",
+        "R$ 359.287,45"
       ],
       [
         "1001",
         "56,00 m²",
         "07",
-        "R$ 123.153,40",
-        "R$ 6.157,67",
-        "R$ 24.630,68",
-        "R$ 615.767,00"
+        "R$ 123.663,16",
+        "R$ 6.183,17",
+        "R$ 24.732,67",
+        "R$ 618.316,71",
+        "R$ 587.400,87",
+        "R$ 556.485,04"
       ]
     ],
-    "note": "Tabela de lançamento de setembro/2026 — 18 unidades, gerada em 09/09/2026. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%). Alternativas: 36 parcelas com 3 reforços anuais e 5% de desconto, ou à vista com 10% de desconto. Ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. Entrega: outubro/2029. Entraram as unidades 602, 604 e 802; saíram 101, 106, 206, 301, 303, 305 e 1003. As unidades 107, 203 e 207 ficaram sem vaga — eram a 03, a 06 e a 09 — e por isso aparecem bem mais baratas que em agosto; a vaga vale R$ 60.145,46 nesta tabela, diferença que se repete ao centavo nas três. As outras subiram exatamente 0,2424% sobre agosto. Todas as unidades constam como Disponível.",
+    "note": "Tabela de outubro/2026 — 15 unidades, todas disponíveis. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%). Alternativas, agora em colunas próprias: 36 parcelas com 3 reforços anuais e 5% de desconto, ou à vista com 10% de desconto (os dois sobre o valor total). Entrega: outubro/2029. Em outubro todas as unidades subiram exatamente 0,4141% sobre setembro — a variação do CUB (R$ 3.158,88 → R$ 3.171,96) —, sem reprecificação; saíram a 306, a 307 e a 901. Ato + 60 parcelas + 5 reforços devolvem o total em todas as linhas (diferença máxima de R$ 0,00, arredondamento). As unidades 107, 203 e 207 seguem sem vaga desde setembro (eram a 03, a 06 e a 09).",
     "summary": {
       "bits": [
         {
@@ -3713,14 +3717,14 @@ const SALES_TABLES = {
       ],
       "alternativas": [
         {
-          "bold": "36 parcelas",
+          "bold": "36 parcelas + 3 reforços anuais",
           "nota": "(−5%)",
-          "pct": 5
+          "col": 7
         },
         {
           "bold": "À vista",
           "nota": "(−10%)",
-          "pct": 10
+          "col": 8
         }
       ]
     }
@@ -3728,7 +3732,7 @@ const SALES_TABLES = {
   "Balsini 195": {
     "folderId": "1lc4I6Okb2hVvpt6og6nl1yOd7iC_yoBa",
     "source": "Tabela de vendas (Novo Rumo)",
-    "ref": "Setembro/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -3738,41 +3742,41 @@ const SALES_TABLES = {
       "84 parcelas (60%)",
       "7 reforços anuais (20%)",
       "Valor total",
-      "À vista (−10%)"
+      "À vista (−12%)"
     ],
     "rows": [
       [
         "1305",
         "60,51 m²",
         "03 (simples)",
-        "R$ 111.658,95",
-        "R$ 3.987,81",
-        "R$ 15.951,25",
-        "R$ 558.293,74",
-        "R$ 502.464,37"
+        "R$ 112.775,40",
+        "R$ 4.027,69",
+        "R$ 16.110,76",
+        "R$ 563.876,68",
+        "R$ 496.211,48"
       ],
       [
         "1401",
         "61,86 m²",
         "21 (dupla)",
-        "R$ 121.617,86",
-        "R$ 4.343,48",
-        "R$ 17.373,93",
-        "R$ 608.087,69",
-        "R$ 547.278,92"
+        "R$ 122.833,60",
+        "R$ 4.386,92",
+        "R$ 17.547,67",
+        "R$ 614.168,57",
+        "R$ 540.468,34"
       ],
       [
         "1501",
         "61,86 m²",
         "45 (dupla)",
-        "R$ 123.342,41",
-        "R$ 4.405,10",
-        "R$ 17.620,39",
-        "R$ 616.713,54",
-        "R$ 555.042,19"
+        "R$ 124.575,95",
+        "R$ 4.449,15",
+        "R$ 17.796,59",
+        "R$ 622.880,68",
+        "R$ 548.135,00"
       ]
     ],
-    "note": "Tabela de vendas de setembro/2026 — três unidades. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%). À vista: 10% de desconto sobre o valor total. Ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. Localização das vagas: hall (3º pavimento) vagas 01 a 21; garagem -1 (2º pavimento) vagas 22 a 37; garagem -2 (1º pavimento) vagas 38 a 57. Entrega: outubro/2029. Saíram da tabela as unidades 802, 1005, 1205 e 1301. A 1501 trocou a vaga 14 pela 45, as duas duplas, e o valor não mudou por causa disso: subiu o mesmo índice das outras. As três unidades subiram exatamente 0,2424% sobre agosto: é indexação, não reprecificação. Todas constam como Disponível.",
+    "note": "Tabela de vendas de outubro/2026 — as mesmas três unidades de setembro, todas disponíveis. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%). À vista: 12% de desconto sobre o valor total (era 10% em setembro). Localização das vagas: hall (3º pavimento) vagas 01 a 21; garagem -1 (2º pavimento) vagas 22 a 37; garagem -2 (1º pavimento) vagas 38 a 57. Entrega: outubro/2029. Em outubro as três subiram exatamente 1,00% sobre setembro — acima do CUB do mês (0,41%), então desta vez houve reajuste de preço, e não só indexação. Ato + 84 parcelas + 7 reforços devolvem o total em todas as linhas.",
     "summary": {
       "bits": [
         {
@@ -3805,7 +3809,7 @@ const SALES_TABLES = {
       "alternativas": [
         {
           "bold": "À vista",
-          "nota": "(−10%)",
+          "nota": "(−12%)",
           "col": 7
         }
       ]
