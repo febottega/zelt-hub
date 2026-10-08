@@ -501,39 +501,44 @@ const PRICE_HISTORY = {
     "1108": [480800.31,489649.39,503187.97,507968.25,509187.38]
    }
   },
-  "DUO - Torre 1": {"datas": ["2025-12", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"], "fontes": ["Tabela dez/2025", "Tabela mar/2026", "Tabela abr/2026 (rev. 426.2, 20/04)", "Tabela mai/2026 (13/05)", "Tabela jun/2026 (02/06)", "Tabela jul/2026 (10/07)", "Tabela ago/2026 (04/08)", "Tabela set/2026"], "obs": "Série pela coluna de 60 meses, a mesma condição dos cards. Três fases distintas: de dez/25 a mar/26 o preço ficou praticamente parado (+0,65% em três meses, só CUB); em abr/26 a Cetor fez uma reprecificação comercial para baixo, unidade por unidade (a 1702 caiu 4,25% e a 2802 caiu 6,61%, enquanto a 2101 não foi tocada); de abr/26 em diante volta a subir pelo CUB, cerca de 0,9% ao mês. As unidades 2802 e 2902 ganharam uma terceira vaga entre jun e ago/26, entao parte da diferença nessas duas é composição de garagem e não preço. A 2101 trocou de vagas (94/95 para 137/138) mantendo duas. A 1502 voltou à tabela em ago/26 só na condição à vista e por isso não entra na série.", "unidades": {"1702": [1950620.26, 1963333.35, 1879827.47, 1896152.16, 1916047.5, 1931747.17, 1950076.87, 1954804.72], "2101": [2659936.72, 2677272.76, 2685467.81, 2708788.8, 2737210.71, 2759638.82, 2785824.1, 2792578.17], "2802": [2571272.16, 2588030.33, 2416921.03, 2419851.33, 2445241.57, 2465277.35, 2488669.53, 2494703.17], "2902": [2659936.72, 2677272.76, 2595952.22, 2618495.84, 2645970.35, 2667650.86, 2692963.3, 2699492.23]}},
-  "DUO - Torre 2": {"datas": ["2025-12", "2026-03", "2026-04", "2026-06", "2026-07", "2026-08", "2026-09"], "fontes": ["Tabela dez/2025", "Tabela mar/2026", "Tabela abr/2026 (rev. 426.2, 20/04)", "Tabela jun/2026 (02/06)", "Tabela jul/2026 (10/07)", "Tabela ago/2026 (04/08)", "Tabela set/2026"], "obs": "Série pela coluna de 60 meses, a mesma condição dos cards. Mesmo movimento da Torre 1: parada de dez/25 a mar/26 (+0,65%, só CUB), reprecificação comercial para baixo em abr/26 (a 1203 caiu 9,21% e a 1503 caiu 8,95%) e alta pelo CUB de abr/26 em diante. Três unidades escaparam do corte e subiram direto do início ao fim: 304, 1903 e 3004, todas +4,73% em oito meses. Maio/26 foi excluído da série: naquela tabela a coluna da Torre 2 traz todos os valores multiplicados por um fator constante de 0,8057, o que é troca de base e não movimento de preço - abril e junho fecham entre si sem ela. As unidades 2703 e 2804 ganharam uma terceira vaga entre jun e ago/26, entao parte da diferença nessas duas é garagem e não preço.", "unidades": {"304": [3040261.35, 3060076.14, 3069442.94, 3128584.17, 3154219.11, 3184148.43, 3191868.22], "1203": [2057017.73, 2070424.26, 1879827.47, 1916047.5, 1931747.17, 1950076.87, 1973421.91], "1403": [2163415.2, 2177515.18, 1969343.06, 2007287.85, 2023735.13, 2042937.67, 2047890.66], "1503": [2305278.49, 2320303.06, 2112568.01, 2153272.42, 2170915.87, 2191514.96, 2196828.16], "1903": [2589005.07, 2605878.82, 2613855.34, 2664218.42, 2686048.45, 2711535.46, 2718109.42], "2004": [2092483.55, 2106121.24, 1969343.06, 2007287.85, 2023735.13, 2042937.67, 2047890.66], "2103": [2659936.72, 2677272.76, 2506436.63, 2554730.0, 2575662.9, 2600102.49, 2792578.17], "2703": [2872731.66, 2891454.58, 2685467.81, 2737210.71, 2759638.82, 2785824.1, 2792578.17], "2803": [2943663.3, 2962848.52, 2774983.41, 2828451.07, 2851626.78, 2878684.91, 2885664.11], "2804": [2571272.16, 2588030.33, 2416921.03, 2463489.64, 2483674.94, 2507241.69, 2513320.35], "2903": [3014594.95, 3034242.46, 2954014.59, 3010931.78, 3035602.7, 3064406.51, 3071835.99], "2904": [2659936.72, 2677272.76, 2595952.22, 2645970.35, 2667650.86, 2692963.3, 2699492.23], "3004": [5492058.54, 5527852.82, 5544773.42, 5651608.68, 5697916.73, 5751982.34, 5765927.69]}},
+  "DUO - Torre 1": {"datas": ["2025-12", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09", "2026-10"], "fontes": ["Tabela dez/2025", "Tabela mar/2026", "Tabela abr/2026 (rev. 426.2, 20/04)", "Tabela mai/2026 (13/05)", "Tabela jun/2026 (02/06)", "Tabela jul/2026 (10/07)", "Tabela ago/2026 (04/08)", "Tabela set/2026", "Tabela out/2026"], "obs": "Série pela coluna de 60 meses, a mesma condição dos cards. Três fases distintas: de dez/25 a mar/26 o preço ficou praticamente parado (+0,65% em três meses, só CUB); em abr/26 a Cetor fez uma reprecificação comercial para baixo, unidade por unidade (a 1702 caiu 4,25% e a 2802 caiu 6,61%, enquanto a 2101 não foi tocada); de abr/26 em diante volta a subir pelo CUB, cerca de 0,9% ao mês. As unidades 2802 e 2902 ganharam uma terceira vaga entre jun e ago/26, entao parte da diferença nessas duas é composição de garagem e não preço. A 2101 trocou de vagas (94/95 para 137/138) mantendo duas. A 1502 voltou à tabela em ago/26 só na condição à vista e por isso não entra na série. Em out/2026 todas subiram 0,4141% (CUB do mês).", "unidades": {"1702": [1950620.26, 1963333.35, 1879827.47, 1896152.16, 1916047.5, 1931747.17, 1950076.87, 1954804.72, 1962899], "2101": [2659936.72, 2677272.76, 2685467.81, 2708788.8, 2737210.71, 2759638.82, 2785824.1, 2792578.17, 2804141.42], "2802": [2571272.16, 2588030.33, 2416921.03, 2419851.33, 2445241.57, 2465277.35, 2488669.53, 2494703.17, 2505033], "2902": [2659936.72, 2677272.76, 2595952.22, 2618495.84, 2645970.35, 2667650.86, 2692963.3, 2699492.23, 2710670.04]}},
+  "DUO - Torre 2": {"datas": ["2025-12", "2026-03", "2026-04", "2026-06", "2026-07", "2026-08", "2026-09", "2026-10"], "fontes": ["Tabela dez/2025", "Tabela mar/2026", "Tabela abr/2026 (rev. 426.2, 20/04)", "Tabela jun/2026 (02/06)", "Tabela jul/2026 (10/07)", "Tabela ago/2026 (04/08)", "Tabela set/2026", "Tabela out/2026"], "obs": "Série pela coluna de 60 meses, a mesma condição dos cards. Mesmo movimento da Torre 1: parada de dez/25 a mar/26 (+0,65%, só CUB), reprecificação comercial para baixo em abr/26 (a 1203 caiu 9,21% e a 1503 caiu 8,95%) e alta pelo CUB de abr/26 em diante. Três unidades escaparam do corte e subiram direto do início ao fim: 304, 1903 e 3004, todas +4,73% em oito meses. Maio/26 foi excluído da série: naquela tabela a coluna da Torre 2 traz todos os valores multiplicados por um fator constante de 0,8057, o que é troca de base e não movimento de preço - abril e junho fecham entre si sem ela. As unidades 2703 e 2804 ganharam uma terceira vaga entre jun e ago/26, entao parte da diferença nessas duas é garagem e não preço. Em out/2026 doze unidades subiram 0,4141% (CUB) e a 2804 baixou 0,33%, para o mesmo valor da 2802 da torre 1.", "unidades": {"304": [3040261.35, 3060076.14, 3069442.94, 3128584.17, 3154219.11, 3184148.43, 3191868.22, 3205084.81], "1203": [2057017.73, 2070424.26, 1879827.47, 1916047.5, 1931747.17, 1950076.87, 1973421.91, 1981593.27], "1403": [2163415.2, 2177515.18, 1969343.06, 2007287.85, 2023735.13, 2042937.67, 2047890.66, 2056370.38], "1503": [2305278.49, 2320303.06, 2112568.01, 2153272.42, 2170915.87, 2191514.96, 2196828.16, 2205924.59], "1903": [2589005.07, 2605878.82, 2613855.34, 2664218.42, 2686048.45, 2711535.46, 2718109.42, 2729364.32], "2004": [2092483.55, 2106121.24, 1969343.06, 2007287.85, 2023735.13, 2042937.67, 2047890.66, 2056370.38], "2103": [2659936.72, 2677272.76, 2506436.63, 2554730.0, 2575662.9, 2600102.49, 2792578.17, 2804141.42], "2703": [2872731.66, 2891454.58, 2685467.81, 2737210.71, 2759638.82, 2785824.1, 2792578.17, 2804141.42], "2803": [2943663.3, 2962848.52, 2774983.41, 2828451.07, 2851626.78, 2878684.91, 2885664.11, 2897612.8], "2804": [2571272.16, 2588030.33, 2416921.03, 2463489.64, 2483674.94, 2507241.69, 2513320.35, 2505033], "2903": [3014594.95, 3034242.46, 2954014.59, 3010931.78, 3035602.7, 3064406.51, 3071835.99, 3084555.57], "2904": [2659936.72, 2677272.76, 2595952.22, 2645970.35, 2667650.86, 2692963.3, 2699492.23, 2710670.04], "3004": [5492058.54, 5527852.82, 5544773.42, 5651608.68, 5697916.73, 5751982.34, 5765927.69, 5789802.72]}},
   "Terraço Sky": {
     "datas": [
       "2026-01",
       "2026-07",
       "2026-08",
-      "2026-09"
+      "2026-09",
+      "2026-10"
     ],
     "fontes": [
       "Tabela jan/2026",
       "Tabela jul/2026 (10/07)",
       "Tabela ago/2026 (04/08)",
-      "Tabela set/2026"
+      "Tabela set/2026",
+      "Tabela out/2026"
     ],
-    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. A cobertura 2101 é reajustada pelo CUB; os aptos 604 e 704 têm preço fechado em reais e não subiram. Em janeiro só a cobertura estava na tabela, por isso os aptos começam em julho.",
+    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. A cobertura 2101 é reajustada pelo CUB; os aptos 604 e 704 têm preço fechado em reais e não subiram. Em janeiro só a cobertura estava na tabela, por isso os aptos começam em julho. Em out/2026 o à vista da 2101 ficou parado em R$ 2.999.000,00 e as condições parceladas subiram 0,4141% (CUB).",
     "unidades": {
       "2101": [
         3499512.74,
         3626104.99,
         3660511.88,
-        3551019.27
+        3551019.27,
+        3565723.01
       ],
       "604": [
         null,
         880000.0,
         880000.0,
-        880000.0
+        880000.0,
+        null
       ],
       "704": [
         null,
         900000.0,
         900000.0,
+        null,
         null
       ]
     }
@@ -588,58 +593,66 @@ const PRICE_HISTORY = {
       "2026-03",
       "2026-07",
       "2026-08",
-      "2026-09"
+      "2026-09",
+      "2026-10"
     ],
     "fontes": [
       "Tabela nov/2025",
       "Tabela mar/2026",
       "Tabela jul/2026 (10/07)",
       "Tabela ago/2026 (04/08)",
-      "Tabela set/2026"
+      "Tabela set/2026",
+      "Tabela out/2026"
     ],
-    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC — a evolução acompanha o índice, sem reprecificação comercial. As vagas do apto 1602 mudaram de 96 e 97 para 112 e 113 entre março e julho, sem efeito no preço.",
+    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC — a evolução acompanha o índice, sem reprecificação comercial. As vagas do apto 1602 mudaram de 96 e 97 para 112 e 113 entre março e julho, sem efeito no preço. Em out/2026 todas subiram 0,4141% (CUB do mês).",
     "unidades": {
       "201": [
         1578698.72,
         1592067.36,
         1641047.18,
         1656618.52,
-        1660634.9
+        1660634.9,
+        1667511.1
       ],
       "1501": [
         1955997.78,
         1972561.45,
         2033247.13,
         2052539.93,
-        2057516.19
+        2057516.19,
+        2066035.77
       ],
       "1602": [
         1744101.45,
         1758870.75,
         1812982.26,
         1830185.03,
-        1834622.21
+        1834622.21,
+        1842218.85
       ],
       "1702": [
         1833542.55,
         1849069.25,
         1905955.71,
         1924040.68,
-        1928705.4
+        1928705.4,
+        1936691.61
       ],
       "1802": [
         1900623.38,
         1916718.13,
         1975685.79,
         1994432.41,
-        1999267.8
+        1999267.8,
+        2007546.18
       ],
       "1901": [
         4858950.98,
         4900097.27,
         5050848.34,
         5098774.13,
-        5111135.82
+        5111135.82,
+        5132299.54
       ]
     }
   },
@@ -648,117 +661,136 @@ const PRICE_HISTORY = {
       "2026-03",
       "2026-07",
       "2026-08",
-      "2026-09"
+      "2026-09",
+      "2026-10"
     ],
     "fontes": [
       "Tabela mar/2026",
       "Tabela jul/2026 (10/07)",
       "Tabela ago/2026 (04/08)",
-      "Tabela set/2026"
+      "Tabela set/2026",
+      "Tabela out/2026"
     ],
-    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC — a evolução acompanha o índice, sem reprecificação comercial. Usada a coluna de preço cheio; as colunas promocionais da planilha original (JAN-FEV-MAR e ABR-MAI-JUN) já venceram e não entram na série.",
+    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC — a evolução acompanha o índice, sem reprecificação comercial. Usada a coluna de preço cheio; as colunas promocionais da planilha original (JAN-FEV-MAR e ABR-MAI-JUN) já venceram e não entram na série. Em out/2026 todas subiram 0,4141% (CUB do mês).",
     "unidades": {
       "203": [
         1486930.84,
         1532676.14,
         1547219.18,
-        1550970.33
+        1550970.33,
+        1557392.44
       ],
       "204": [
         1767995.46,
         1822387.69,
         1839679.71,
-        1844139.91
+        1844139.91,
+        1851775.95
       ],
       "303": [
         1516969.85,
         1563639.29,
         1578476.14,
-        1582303.06
+        1582303.06,
+        1588854.92
       ],
       "403": [
         1531989.35,
         1579120.87,
         1594104.61,
-        1597969.43
+        1597969.43,
+        1604586.15
       ],
       "503": [
         1547008.85,
         1594602.44,
         1609733.09,
-        1613635.79
+        1613635.79,
+        1620317.39
       ],
       "603": [
         1562028.36,
         1610084.02,
         1625361.57,
-        1629302.16
+        1629302.16,
+        1636048.63
       ],
       "703": [
         1577047.86,
         1625565.6,
         1640990.04,
-        1644968.53
+        1644968.53,
+        1651779.86
       ],
       "803": [
         1592067.36,
         1641047.18,
         1656618.52,
-        1660634.9
+        1660634.9,
+        1667511.1
       ],
       "1203": [
         1802340.41,
         1857789.26,
         1875417.19,
-        1879964.03
+        1879964.03,
+        1887748.42
       ],
       "1303": [
         1802340.41,
         1857789.26,
         1875417.19,
-        1879964.03
+        1879964.03,
+        1887748.42
       ],
       "1304": [
         1623573.0,
         1673522.08,
         1689401.57,
-        1693497.43
+        1693497.43,
+        1700509.71
       ],
       "1504": [
         1731811.2,
         1785090.22,
         1802028.34,
-        1806397.25
+        1806397.25,
+        1813877.02
       ],
       "1603": [
         1952535.44,
         2012605.03,
         2031701.96,
-        2036627.7
+        2036627.7,
+        2045060.78
       ],
       "1604": [
         1758870.75,
         1812982.26,
         1830185.03,
-        1834622.21
+        1834622.21,
+        1842218.85
       ],
       "1704": [
         1826519.63,
         1882712.34,
         1900576.77,
-        1905184.6
+        1905184.6,
+        1913073.42
       ],
       "1803": [
         2102730.48,
         2167420.8,
         2187986.72,
-        2193291.37
+        2193291.37,
+        2202373.15
       ],
       "1804": [
         1894168.5,
         1952442.43,
         1970968.5,
-        1975747.0
+        1975747.0,
+        1983927.99
       ]
     }
   },
@@ -771,7 +803,8 @@ const PRICE_HISTORY = {
       "2026-06",
       "2026-07",
       "2026-08",
-      "2026-09"
+      "2026-09",
+      "2026-10"
     ],
     "fontes": [
       "Tabela out/2025",
@@ -781,9 +814,10 @@ const PRICE_HISTORY = {
       "Tabela jun/2026 (02/06)",
       "Tabela jul/2026 (10/07)",
       "Tabela ago/2026 (04/08)",
-      "Tabela set/2026"
+      "Tabela set/2026",
+      "Tabela out/2026"
     ],
-    "obs": "Série pela coluna à vista, a mesma usada nos cards. O preço ficou praticamente parado entre outubro/2025 e abril/2026, subiu levemente em junho e julho, e caiu forte em agosto, quando a Cetor passou a rotular a coluna como \"ESPECIAL\". A queda leva os lotes 19, 20 e 21 para abaixo do valor de outubro/2025 — não é devolução de valorização acumulada, é redução real. A planilha traz \"fim: 31/06/2026\" como validade dessa condição, data inválida e já vencida: confirmar com a construtora se o preço reduzido segue valendo. Os lotes 7, 12, 22, 23 e 28 saíram da tabela ao longo do período.",
+    "obs": "Série pela coluna à vista, a mesma usada nos cards. O preço ficou praticamente parado entre outubro/2025 e abril/2026, subiu levemente em junho e julho, e caiu forte em agosto, quando a Cetor passou a rotular a coluna como \"ESPECIAL\". A queda leva os lotes 19, 20 e 21 para abaixo do valor de outubro/2025 — não é devolução de valorização acumulada, é redução real. A planilha traz \"fim: 31/06/2026\" como validade dessa condição, data inválida e já vencida: confirmar com a construtora se o preço reduzido segue valendo. Os lotes 7, 12, 22, 23 e 28 saíram da tabela ao longo do período. Em out/2026 todas subiram 0,4141% (CUB do mês).",
     "unidades": {
       "19": [
         500780.83,
@@ -793,7 +827,8 @@ const PRICE_HISTORY = {
         509050.91,
         513221.96,
         422721.63,
-        406709.55
+        406709.55,
+        408393.61
       ],
       "20": [
         500780.83,
@@ -803,7 +838,8 @@ const PRICE_HISTORY = {
         509050.91,
         513221.96,
         422721.63,
-        406709.55
+        406709.55,
+        408393.61
       ],
       "21": [
         500780.83,
@@ -813,7 +849,8 @@ const PRICE_HISTORY = {
         499428.06,
         499428.06,
         422721.63,
-        406709.55
+        406709.55,
+        408393.61
       ],
       "31": [
         500780.83,
@@ -823,7 +860,8 @@ const PRICE_HISTORY = {
         509050.91,
         513221.96,
         489738.47,
-        482967.59
+        482967.59,
+        484967.41
       ],
       "32": [
         500780.83,
@@ -833,7 +871,8 @@ const PRICE_HISTORY = {
         509050.91,
         513221.96,
         489738.47,
-        482967.59
+        482967.59,
+        484967.41
       ]
     }
   },
