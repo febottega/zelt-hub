@@ -56,6 +56,8 @@ const DRIVE_LINKS = {
   "Villaggio di Fiori": "https://drive.google.com/drive/folders/1qCUXgmpeqrn8INt6l6PxaHAdHroD_5tN",
   "Gardens": "https://drive.google.com/drive/folders/1wzX5JlLaVyoLZ-BF78KlzpnBanraSmFO",
   "Amani 53": "https://drive.google.com/drive/folders/1Wlr-o8sOwZCkUutDvjNwxf1JOiauIIoz",
+  "Criatto - 2 suítes": "https://drive.google.com/drive/folders/1qKxpNV7_yDqGaXE6bz_Uk7USM_JxDM2F",
+  "Criatto - 3 suítes": "https://drive.google.com/drive/folders/1qKxpNV7_yDqGaXE6bz_Uk7USM_JxDM2F",
   "Villaggio Treviso": "https://drive.google.com/drive/folders/1RLOudeck3dBTWh0PMG6tNtRaThBOV6Pd"
 };
 const driveLinkFor = d => DRIVE_LINKS[d.empreendimento] || null;

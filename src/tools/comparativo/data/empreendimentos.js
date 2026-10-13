@@ -1983,5 +1983,71 @@ const DATA = [
     "terreno": true,
     "sold": false,
     "id": 65
+  },
+  {
+    "tipo": "Apartamento Tipo",
+    "construtora": "Torresani",
+    "empreendimento": "Criatto - 2 suítes",
+    "tabela": "Criatto",
+    "bairro": "Centro",
+    "unidade": null,
+    "config": "2 suítes",
+    "vagas": "-",
+    "vagasN": null,
+    "apriv": 97.9,
+    "atotal": 98.3,
+    "faixaArea": true,
+    "vmin": 1030414.91,
+    "vmax": 1331828.79,
+    "media": 1149497.72,
+    "rpriv": 11697.76,
+    "rtotal": null,
+    "entrega": "06/2029",
+    "entregaKey": 24354,
+    "pronto": false,
+    "condicao": "Entrada + 84x",
+    "correcao": "",
+    "quartos": [
+      2
+    ],
+    "suites": [
+      2
+    ],
+    "terreno": false,
+    "sold": false,
+    "id": 66
+  },
+  {
+    "tipo": "Apartamento Tipo",
+    "construtora": "Torresani",
+    "empreendimento": "Criatto - 3 suítes",
+    "tabela": "Criatto",
+    "bairro": "Centro",
+    "unidade": null,
+    "config": "3 suítes",
+    "vagas": "-",
+    "vagasN": null,
+    "apriv": 128.54,
+    "atotal": 128.54,
+    "faixaArea": true,
+    "vmin": 1386006.04,
+    "vmax": 1397094.09,
+    "media": 1391550.07,
+    "rpriv": 10825.81,
+    "rtotal": null,
+    "entrega": "06/2029",
+    "entregaKey": 24354,
+    "pronto": false,
+    "condicao": "Entrada + 84x",
+    "correcao": "",
+    "quartos": [
+      3
+    ],
+    "suites": [
+      3
+    ],
+    "terreno": false,
+    "sold": false,
+    "id": 67
   }
 ];

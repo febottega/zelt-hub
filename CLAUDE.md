@@ -74,7 +74,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | Quero mudar | Arquivo | Tamanho |
 |---|---|---|
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **71 KB** |
-| os 63 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
+| os 65 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
@@ -101,7 +101,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   A ordenação é de um critério, pelo cabeçalho ou pelo select "Ordenar por" —
   que existe porque o `<thead>` desaparece abaixo de 820px.
 - **avaliacao** + 17 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
-- **comparativo** — 63 empreendimentos. Abas: comparativo, mudanças, melhores preços,
+- **comparativo** — 65 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos. **Toda mudança no comparativo atualiza a data em
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
   `DD/MM/AAAA`) e o chip do card "Empreendimentos" no `hub.html` (`Atualizado em DD/MM`).
@@ -175,10 +175,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (23 payloads, 15.624.880 bytes):
+Hash de referência (23 payloads, 15.651.096 bytes):
 
 ```
-DEB363C966807573195B90BE8F7E482ADD15F4B9638605B1590A6F3B2AAA0076
+B09908F809FF7AC7CF175F623B59990A5C433FDCB3B1E54AADACBB5827FC5977
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -412,7 +412,7 @@ No `empreendimentos.js` a convenção é por campo: só `apriv`, `atotal`, `vmin
 `"apriv": 117` sem o `.0` e é a exceção que existe no arquivo — mais uma razão
 para trocar campo por campo em vez de reserializar o card inteiro.
 
-**O `rpriv` não tem uma fórmula só.** Dos 63 cards, 52 usam `media/apriv` e **7
+**O `rpriv` não tem uma fórmula só.** Dos 65 cards, 52 usam `media/apriv` e **7
 usam `media` dividida pela média da faixa de área** (`(apriv+atotal)/2`): Liv,
 Egon Belz, Gardens, San Vito, Lago di Garda, Alphaville, Ed. Edimburgo e
 Lisbon. O Central Park usa outra coisa ainda. Antes de recalcular
@@ -447,6 +447,15 @@ lote a lote. A tabela veio do site da construtora (lotes.alfablu.com.br, o link
 está num Doc da pasta do Drive) e traz só os percentuais da condição — 15% de
 entrada, 3 aportes anuais de 2% e 36 parcelas —, então as 36 parcelas são os 79%
 restantes divididos por 36; a nota da tabela diz isso.
+
+O **Criatto** (Torresani, Centro, entrou em 13/10/2026) segue o modelo do Vista 43: uma
+tabela "Criatto" e dois cards, "Criatto - 2 suítes" (97,90 e 98,30 m²) e "Criatto - 3
+suítes" (128,54 m²), os dois com `"tabela": "Criatto"`; a tabela declara construtora,
+bairro e entrega no `summary` porque nenhum card tem o nome dela. O duplex 701 fica só na
+tabela, fora dos cards, a pedido do Felipe. Base dos cards: o valor "até as chaves"; o
+"total financiado" (soma nominal do plano de 84 meses) vai como alternativa. `media` e
+`rpriv` pela regra dos Tulum (média real e R$/m² unidade a unidade). A Torresani não tem
+logo cadastrado; a pasta do Drive (1qKxpNV7…) está no `folderId` da tabela e no `DRIVE_LINKS`.
 
 ### Duas formas no price-changes.js
 

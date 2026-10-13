@@ -1075,5 +1075,147 @@ const PRICE_HISTORY = {
     "59": [454000],
     "60": [488500]
    }
+  },
+  "Criatto - 2 suítes": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela de vendas out/2026"
+    ],
+    "obs": "Apartamentos de 2 suítes do Criatto, todas as unidades da tabela de outubro/2026. Base: o valor até as chaves, a mesma dos cards. Só existe um levantamento até agora, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a próxima tabela.",
+    "unidades": {
+      "501": [
+        1068108.43
+      ],
+      "503": [
+        1030414.91
+      ],
+      "504": [
+        1051443.78
+      ],
+      "603": [
+        1038658.23
+      ],
+      "703": [
+        1046967.49
+      ],
+      "704": [
+        1068334.18
+      ],
+      "803": [
+        1055343.23
+      ],
+      "804": [
+        1076880.85
+      ],
+      "903": [
+        1063785.98
+      ],
+      "1104": [
+        1102933.3
+      ],
+      "1203": [
+        1089521.63
+      ],
+      "1204": [
+        1111756.77
+      ],
+      "1303": [
+        1098237.81
+      ],
+      "1304": [
+        1120650.82
+      ],
+      "1403": [
+        1107023.71
+      ],
+      "1404": [
+        1129616.03
+      ],
+      "1503": [
+        1115879.9
+      ],
+      "1504": [
+        1138652.96
+      ],
+      "1603": [
+        1124806.94
+      ],
+      "1604": [
+        1147762.18
+      ],
+      "1704": [
+        1156944.28
+      ],
+      "1803": [
+        1142875.84
+      ],
+      "1804": [
+        1166199.83
+      ],
+      "1903": [
+        1152018.84
+      ],
+      "1904": [
+        1175529.43
+      ],
+      "2004": [
+        1184933.67
+      ],
+      "2103": [
+        1170524.87
+      ],
+      "2104": [
+        1194413.14
+      ],
+      "2203": [
+        1191636.29
+      ],
+      "2204": [
+        1191636.29
+      ],
+      "2303": [
+        1219674.79
+      ],
+      "2304": [
+        1219674.79
+      ],
+      "2401": [
+        1256598.15
+      ],
+      "2403": [
+        1261732.54
+      ],
+      "2404": [
+        1219674.79
+      ],
+      "2501": [
+        1326409.16
+      ],
+      "2503": [
+        1331828.79
+      ],
+      "2504": [
+        1331828.79
+      ]
+    }
+  },
+  "Criatto - 3 suítes": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela de vendas out/2026"
+    ],
+    "obs": "Apartamentos de 3 suítes do Criatto, todas as unidades da tabela de outubro/2026. Base: o valor até as chaves, a mesma dos cards. Só existe um levantamento até agora, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a próxima tabela.",
+    "unidades": {
+      "602": [
+        1386006.04
+      ],
+      "702": [
+        1397094.09
+      ]
+    }
   }
 };
