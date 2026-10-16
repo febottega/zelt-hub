@@ -636,7 +636,7 @@ const DATA = [
     "empreendimento": "Wissen",
     "bairro": "Itoupava Seca",
     "unidade": null,
-    "config": "2 quartos (1 suíte)",
+    "config": "1 e 2 quartos (1 suíte)",
     "vagas": "1",
     "vagasN": 1,
     "apriv": 58.33,
@@ -653,6 +653,7 @@ const DATA = [
     "condicao": "Entrada + 84x",
     "correcao": "Somente CUB",
     "quartos": [
+      1,
       2
     ],
     "suites": [

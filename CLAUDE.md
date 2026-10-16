@@ -176,10 +176,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (23 payloads, 15.652.804 bytes):
+Hash de referência (23 payloads, 15.652.820 bytes):
 
 ```
-AE6BBED31767EE92C779868AF8D7D1CAFEE861E94850524FF2EE0221DCEDF39F
+77ED2FB08649E270D88A8D64C3B218E226A525B83980FF2E44E0B77CD6245BAD
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -412,6 +412,12 @@ No `empreendimentos.js` a convenção é por campo: só `apriv`, `atotal`, `vmin
 `quartos` e `suites` são inteiros de verdade. O card `id 17` (Lisbon) tem
 `"apriv": 117` sem o `.0` e é a exceção que existe no arquivo — mais uma razão
 para trocar campo por campo em vez de reserializar o card inteiro.
+
+**Dormitórios do card são os do projeto, não os do estoque.** `config`, `quartos` e
+`suites` descrevem o empreendimento como foi lançado: quando uma tipologia esgota (o studio
+do Wissen saiu da tabela em out/2026), o card continua com ela — preço e área seguem a
+tabela, a configuração não. Pedido do Felipe em 16/10/2026; o Wissen voltou para "1 e 2
+quartos (1 suíte)". Só mude a configuração quando ele pedir (como no Egon Belz, 1 quarto).
 
 **O `rpriv` não tem uma fórmula só.** Dos 65 cards, 52 usam `media/apriv` e **7
 usam `media` dividida pela média da faixa de área** (`(apriv+atotal)/2`): Liv,
