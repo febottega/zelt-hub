@@ -828,8 +828,12 @@ function contar(campo){
   DADOS.forEach(function(r){ var v=r[campo]; if(v!==null&&v!==undefined&&v!=="") c[v]=(c[v]||0)+1; });
   return c;
 }
+/* imóvel captado em dupla ("Marilene / Thais") conta para cada um dos corretores */
+function capsDe(r){ return r.cap ? String(r.cap).split("/").map(function(n){return n.trim();}).filter(Boolean) : []; }
 function initFiltros(){
-  var caps = contar("cap"), bais = contar("b"), tips = contar("t"), sems = contar("w");
+  var caps = {};
+  DADOS.forEach(function(r){ capsDe(r).forEach(function(n){ caps[n]=(caps[n]||0)+1; }); });
+  var bais = contar("b"), tips = contar("t"), sems = contar("w");
   opcoes("fcap", Object.keys(caps).sort(function(a,b){return a.localeCompare(b,"pt-BR")}), "Todos os corretores", caps);
   opcoes("fbai", Object.keys(bais).sort(function(a,b){return a.localeCompare(b,"pt-BR")}), "Todos os bairros", bais);
   opcoes("ftip", Object.keys(tips).sort(function(a,b){return a.localeCompare(b,"pt-BR")}), "Todos os tipos", tips);
@@ -954,7 +958,7 @@ function avisoBotao(btn, texto, classe){
 /* ---------------- filtro + ordenação ---------------- */
 function filtrar(){
   return DADOS.filter(function(r){
-    if(F.cap && r.cap !== F.cap) return false;
+    if(F.cap && capsDe(r).indexOf(F.cap) < 0) return false;
     if(F.bai && r.b !== F.bai) return false;
     if(F.tip && r.t !== F.tip) return false;
     if(F.sem && r.w !== F.sem) return false;

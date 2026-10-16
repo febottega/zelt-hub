@@ -96,7 +96,8 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
 (`uweradloff.github.io/painel-pauta-zelt/`).
 
 - **avaliacoes** — painel: array `DADOS` (imóveis) + `KPIS` (semanais). Filtros por
-  código, endereço, corretor, bairro, quartos, suítes, tipo, semana, faixa de valor
+  código, endereço, corretor (imóvel captado em dupla, como "Marilene / Thais", aparece
+  no filtro de cada um, não como opção própria), bairro, quartos, suítes, tipo, semana, faixa de valor
   anunciado (mínimo/máximo) e situação do preço, que aceita mais de uma marcada.
   A ordenação é de um critério, pelo cabeçalho ou pelo select "Ordenar por" —
   que existe porque o `<thead>` desaparece abaixo de 820px.
@@ -175,10 +176,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (23 payloads, 15.652.396 bytes):
+Hash de referência (23 payloads, 15.652.804 bytes):
 
 ```
-277695F3F1E585AFA24CBD494617F74B595F98843EAA8D84BEAA33B3A79CE22B
+AE6BBED31767EE92C779868AF8D7D1CAFEE861E94850524FF2EE0221DCEDF39F
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
