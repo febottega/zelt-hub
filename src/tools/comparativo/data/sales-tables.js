@@ -1888,7 +1888,7 @@ const SALES_TABLES = {
   "Ed. Edimburgo": {
     "folderId": "1ll9B4L6TwYt_wp5xkMYB0nSEqAbOOgHH",
     "source": "Tabela de vendas (Speranzini)",
-    "ref": "Rev. 44 · 12/05/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Apto",
@@ -1932,14 +1932,6 @@ const SALES_TABLES = {
         "R$ 575.000,00"
       ],
       [
-        "702",
-        "R$ 85.000,00",
-        "R$ 20.000,00",
-        "R$ 20.000,00",
-        "R$ 6.066,67",
-        "R$ 580.000,00"
-      ],
-      [
         "705",
         "R$ 85.000,00",
         "R$ 20.000,00",
@@ -1956,7 +1948,7 @@ const SALES_TABLES = {
         "R$ 586.000,00"
       ]
     ],
-    "note": "Rev. 44 (12/05/2026). Entrega prevista: agosto/2027. Preço a valor fechado; parcelas corrigidas pelo CUB (dia 05 do mês seguinte). Preço com 1 vaga dupla; para 2 vagas individuais, acrescentar R$ 25.000,00. Vagas sobrando: 02 e 21 (duplas), sujeitas a disponibilidade. Aptos 205 e 206 nas mesmas condições. Conferir disponibilidade no fechamento (vários corretores atuando).",
+    "note": "Tabela de outubro/2026: a única mudança desde a Rev. 44 (12/05/2026) foi a saída do apto 702; as outras seis unidades seguem com o mesmo preço e as mesmas condições. Entrega prevista: agosto/2027. Preço a valor fechado; parcelas corrigidas pelo CUB (dia 05 do mês seguinte). Preço com 1 vaga dupla; para 2 vagas individuais, acrescentar R$ 25.000,00. Vagas sobrando: 02 e 21 (duplas), sujeitas a disponibilidade. Aptos 205 e 206 nas mesmas condições. Conferir disponibilidade no fechamento (vários corretores atuando).",
     "summary": {
       "bits": [],
       "principal": {
@@ -3828,7 +3820,7 @@ const SALES_TABLES = {
    "Vista 43 - 2 dormitórios": {
       "folderId": "1jnMvo3u_Frs-RJ2u12mvAzOQKga-SsYK",
       "source": "Tabela de vendas (Novo Rumo)",
-      "ref": "Tabela zero 09-26 · reajuste do CUB de outubro/2026 (+0,41%) · situação de 02/10/2026",
+      "ref": "Tabela zero 09-26 · reajuste do CUB de outubro/2026 (+0,41%) · situação de 19/10/2026",
       "unitCol": 0,
       "columns": [
         "Unidade",
@@ -3920,17 +3912,6 @@ const SALES_TABLES = {
           "R$ 852.847,21"
         ],
         [
-          "L1105",
-          "86,57 m²",
-          "168 (dupla)",
-          "Disponível",
-          "R$ 194.172,77",
-          "R$ 6.934,74",
-          "R$ 27.738,96",
-          "R$ 970.863,65",
-          "R$ 854.360,01"
-        ],
-        [
           "L1301",
           "80,10 m²",
           "243 (dupla)",
@@ -3973,17 +3954,6 @@ const SALES_TABLES = {
           "R$ 28.166,23",
           "R$ 985.818,12",
           "R$ 867.519,95"
-        ],
-        [
-          "L1305",
-          "86,57 m²",
-          "247 (dupla)",
-          "Disponível",
-          "R$ 197.513,79",
-          "R$ 7.054,08",
-          "R$ 28.216,30",
-          "R$ 987.570,61",
-          "R$ 869.062,14"
         ],
         [
           "L1501",
@@ -4050,6 +4020,17 @@ const SALES_TABLES = {
           "R$ 27.166,60",
           "R$ 950.830,97",
           "R$ 836.731,25"
+        ],
+        [
+          "L1703",
+          "79,27 m²",
+          "233, 234 (2 simples)",
+          "Disponível",
+          "R$ 188.840,54",
+          "R$ 6.744,32",
+          "R$ 26.977,27",
+          "R$ 944.204,31",
+          "R$ 830.899,79"
         ],
         [
           "L1704",
@@ -4151,17 +4132,6 @@ const SALES_TABLES = {
           "R$ 905.439,30"
         ],
         [
-          "L1905",
-          "86,57 m²",
-          "150, 151 (2 simples)",
-          "Reservada",
-          "R$ 206.146,04",
-          "R$ 7.362,34",
-          "R$ 29.449,38",
-          "R$ 1.030.728,26",
-          "R$ 907.040,87"
-        ],
-        [
           "L2201",
           "80,10 m²",
           "196, 197 (2 simples)",
@@ -4197,7 +4167,7 @@ const SALES_TABLES = {
         [
           "L2204",
           "86,57 m²",
-          "202, 203 (2 simples)",
+          "150, 151 (2 simples)",
           "Disponível",
           "R$ 207.138,70",
           "R$ 7.397,80",
@@ -4286,7 +4256,7 @@ const SALES_TABLES = {
           "L2704",
           "86,57 m²",
           "279, 280 (2 simples)",
-          "Reservada",
+          "Disponível",
           "R$ 209.399,43",
           "R$ 7.478,57",
           "R$ 29.914,26",
@@ -4360,7 +4330,7 @@ const SALES_TABLES = {
           "R$ 860.794,10"
         ]
       ],
-      "note": "Tabela zero 09-26 das unidades de 2 dormitórios — as \"livings\", com L no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 47 unidades, 45 disponíveis e 2 reservadas (L1905 e L2704). Em 02/10/2026 todos os valores subiram exatamente 0,4141% sobre a tabela zero — a variação do CUB de setembro para outubro (R$ 3.158,88 → R$ 3.171,96) —, sem nenhuma unidade reprecificada; o à vista acompanha (12% sobre o total novo). Na mesma atualização saíram L2301, L2302, L2303, L2304, L2305 e L3404 (que estava reservada); voltaram L1003 e L1105, que tinham saído em 24/09; e L1905 e L2704 passaram a reservadas. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A coluna de vagas vem do \"espaço complementar\" da tabela original, onde um número seguido de \"d\" é vaga dupla e dois números são duas vagas simples: 19 unidades têm dupla e 28 têm duas simples. Entrega: abril/2031. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 84 × parcela + 7 × reforço devolve o valor total ao centavo nas 59 linhas, e parcela e reforço batem exatamente com 60% ÷ 84 e 20% ÷ 7 — 177 conferências, nenhuma divergência. A tabela traz só alguns andares (10, 11, 13, 15, 17, 18, 19, 22, 23, 26, 27, 31, 32 e 34) e, dentro deles, nem todas as posições; as demais devem estar nas tabelas dos studios e dos loft duplex, ou ainda não foram liberadas — confirmar com a Novo Rumo. Studios e loft duplex entram em tabela separada, ainda não recebida.",
+      "note": "Tabela zero 09-26 das unidades de 2 dormitórios — as \"livings\", com L no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 45 unidades, todas disponíveis. Na situação de 19/10/2026, sem nenhuma mudança de preço: saíram L1105, L1305 e L1905 (que estava reservada); voltou a L1703, pelo valor da tabela zero com o CUB de outubro, agora com as vagas 233 e 234 (na tabela zero eram 095 e 096); a L2704 voltou a ficar disponível; e a L2204 trocou as vagas 202 e 203 pelas 150 e 151. Em 02/10/2026 todos os valores subiram exatamente 0,4141% sobre a tabela zero — a variação do CUB de setembro para outubro (R$ 3.158,88 → R$ 3.171,96) —, sem nenhuma unidade reprecificada; o à vista acompanha (12% sobre o total novo). Na mesma atualização saíram L2301, L2302, L2303, L2304, L2305 e L3404 (que estava reservada); voltaram L1003 e L1105, que tinham saído em 24/09; e L1905 e L2704 passaram a reservadas. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A coluna de vagas vem do \"espaço complementar\" da tabela original, onde um número seguido de \"d\" é vaga dupla e dois números são duas vagas simples: 17 unidades têm dupla e 28 têm duas simples. Entrega: abril/2031. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 84 × parcela + 7 × reforço devolve o valor total ao centavo nas 59 linhas, e parcela e reforço batem exatamente com 60% ÷ 84 e 20% ÷ 7 — 177 conferências, nenhuma divergência. A tabela traz só alguns andares (10, 11, 13, 15, 17, 18, 19, 22, 23, 26, 27, 31, 32 e 34) e, dentro deles, nem todas as posições; as demais devem estar nas tabelas dos studios e dos loft duplex, ou ainda não foram liberadas — confirmar com a Novo Rumo. Studios e loft duplex entram em tabela separada, ainda não recebida.",
       "summary": {
         "bits": [
           {
@@ -4403,7 +4373,7 @@ const SALES_TABLES = {
    "Vista 43 - Studios e Loft Duplex": {
       "folderId": "1jnMvo3u_Frs-RJ2u12mvAzOQKga-SsYK",
       "source": "Tabela de vendas (Novo Rumo)",
-      "ref": "Tabela zero 09-26 · reajuste do CUB de outubro/2026 (+0,41%) · situação de 02/10/2026",
+      "ref": "Tabela zero 09-26 · reajuste do CUB de outubro/2026 (+0,41%) · situação de 19/10/2026",
       "unitCol": 0,
       "columns": [
         "Unidade",
@@ -4431,42 +4401,6 @@ const SALES_TABLES = {
           "R$ 361.656,79"
         ],
         [
-          "S1002",
-          "Studio",
-          "27,67 m²",
-          "—",
-          "Reservada",
-          "R$ 59.688,19",
-          "R$ 2.984,41",
-          "R$ 11.937,64",
-          "R$ 298.440,99",
-          "R$ 262.628,07"
-        ],
-        [
-          "S1005",
-          "Studio",
-          "26,85 m²",
-          "—",
-          "Reservada",
-          "R$ 58.035,57",
-          "R$ 2.901,76",
-          "R$ 11.607,06",
-          "R$ 290.176,47",
-          "R$ 255.355,29"
-        ],
-        [
-          "S1102",
-          "Studio",
-          "27,67 m²",
-          "033",
-          "Reservada",
-          "R$ 60.387,90",
-          "R$ 3.019,38",
-          "R$ 12.077,53",
-          "R$ 301.938,35",
-          "R$ 265.705,75"
-        ],
-        [
           "S1205",
           "Studio",
           "26,85 m²",
@@ -4477,6 +4411,18 @@ const SALES_TABLES = {
           "R$ 14.088,21",
           "R$ 352.205,23",
           "R$ 309.940,60"
+        ],
+        [
+          "S1311",
+          "Studio",
+          "40,26 m²",
+          "054",
+          "Reservada",
+          "R$ 89.278,70",
+          "R$ 4.463,93",
+          "R$ 17.855,73",
+          "R$ 446.393,15",
+          "R$ 392.825,97"
         ],
         [
           "S1501",
@@ -4491,28 +4437,16 @@ const SALES_TABLES = {
           "R$ 318.917,93"
         ],
         [
-          "S1506",
+          "S1507",
           "Studio",
           "26,85 m²",
-          "104",
+          "074",
           "Reservada",
-          "R$ 72.358,59",
-          "R$ 3.617,93",
-          "R$ 14.471,72",
-          "R$ 361.792,99",
-          "R$ 318.377,83"
-        ],
-        [
-          "S1508",
-          "Studio",
-          "26,85 m²",
-          "075",
-          "Reservada",
-          "R$ 72.358,59",
-          "R$ 3.617,93",
-          "R$ 14.471,72",
-          "R$ 361.792,99",
-          "R$ 318.377,83"
+          "R$ 72.481,19",
+          "R$ 3.624,07",
+          "R$ 14.496,27",
+          "R$ 362.406,74",
+          "R$ 318.917,93"
         ],
         [
           "S1704",
@@ -4575,6 +4509,18 @@ const SALES_TABLES = {
           "R$ 651.874,51"
         ],
         [
+          "S1809",
+          "Loft duplex garden (terraço)",
+          "109,65 m²",
+          "131",
+          "Disponível",
+          "R$ 149.466,72",
+          "R$ 7.473,34",
+          "R$ 29.893,36",
+          "R$ 747.333,92",
+          "R$ 657.653,85"
+        ],
+        [
           "S2202",
           "Loft duplex",
           "48,83 m²",
@@ -4599,6 +4545,18 @@ const SALES_TABLES = {
           "R$ 453.844,52"
         ],
         [
+          "S2205",
+          "Loft duplex",
+          "46,84 m²",
+          "191",
+          "Disponível",
+          "R$ 104.054,13",
+          "R$ 5.202,71",
+          "R$ 20.810,84",
+          "R$ 520.270,93",
+          "R$ 457.838,42"
+        ],
+        [
           "S2206",
           "Loft duplex",
           "46,84 m²",
@@ -4621,6 +4579,18 @@ const SALES_TABLES = {
           "R$ 21.804,14",
           "R$ 545.103,41",
           "R$ 479.691,00"
+        ],
+        [
+          "S2603",
+          "Loft duplex",
+          "46,84 m²",
+          "256",
+          "Disponível",
+          "R$ 105.952,22",
+          "R$ 5.297,63",
+          "R$ 21.190,50",
+          "R$ 529.762,52",
+          "R$ 466.191,02"
         ],
         [
           "S2604",
@@ -4671,18 +4641,6 @@ const SALES_TABLES = {
           "R$ 325.401,56"
         ],
         [
-          "S3101",
-          "Loft duplex",
-          "50,64 m²",
-          "327",
-          "Reservada",
-          "R$ 116.211,12",
-          "R$ 5.810,56",
-          "R$ 23.242,23",
-          "R$ 581.055,87",
-          "R$ 511.329,17"
-        ],
-        [
           "S3102",
           "Loft duplex",
           "48,83 m²",
@@ -4699,7 +4657,7 @@ const SALES_TABLES = {
           "Loft duplex",
           "46,84 m²",
           "329",
-          "Reservada",
+          "Disponível",
           "R$ 108.325,41",
           "R$ 5.416,27",
           "R$ 21.665,08",
@@ -4719,7 +4677,7 @@ const SALES_TABLES = {
           "R$ 503.961,54"
         ]
       ],
-      "note": "Tabela zero 09-26 dos studios e dos loft duplex — os dois na mesma tabela, com S no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 25 unidades, 14 disponíveis e 11 reservadas (S0705, S1002, S1005, S1102, S1205, S1501, S1506, S1508, S3001, S3101 e S3103): 9 studios, 14 loft duplex, 1 studio garden e o loft duplex garden S1808. Em 02/10/2026 todos os valores subiram exatamente 0,4141% sobre a tabela zero — a variação do CUB de setembro para outubro (R$ 3.158,88 → R$ 3.171,96), a mesma das tabelas da Castelo —, sem nenhuma unidade reprecificada; o à vista acompanha (12% sobre o total novo). Na mesma atualização saíram S0704, S0707, S0710, S1006, S1104, S1302, S1308, S1502, S1504, S1706, S1708, S1801, S2201, S2605 e S2607; entraram S0705, S1002, S1005 e S1102, todas já reservadas; e S1506, S1508 e S3101 passaram a reservadas. A S1102 passou a ter a vaga 033 — na tabela zero ela estava sem vaga. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A tipologia não vem nesta tabela: ela foi deduzida do PDF \"Vista 43 · Pavimentos, Unidades e Vagas\", que descreve a composição andar a andar — 7º são 11 studios garden, todos com terraço privativo; do 8º ao 17º e no 30º são studios; 18º, 20º, 22º, 24º, 26º, 28º, 31º e 33º são os níveis inferiores dos loft duplex (os andares seguintes são o nível de cima, que não se vende separado). Na tabela zero eram 10 studios garden (7º), 55 studios, 28 loft duplex e 2 loft duplex garden — o S1808 e o S1809, de 109,65 m², que o PDF descreve como duplex garden com terraço descoberto de 55,76 m². As unidades com terraço — hoje o studio garden S0705 e o loft duplex garden S1808 — entram só aqui, fora dos cards do comparativo, como combinado. Duas unidades aparecem sem vaga: o PDF registra que 38 studios não terão vaga e que para os demais a vaga é opcional. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 60 × parcela + 5 × reforço devolve o valor total ao centavo nas 95 linhas, e parcela e reforço batem com 60% ÷ 60 e 20% ÷ 5 — 380 conferências, nenhuma divergência. Dois pontos a confirmar com a construtora: o PDF lista 11 studios garden no 7º e a tabela traz 10 (falta o de 87,19 m²), e o S0702 aparece com 39,13 m² onde o quadro do PDF esperava 38,12 m². Entrega: abril/2031.",
+      "note": "Tabela zero 09-26 dos studios e dos loft duplex — os dois na mesma tabela, com S no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 24 unidades, 18 disponíveis e 6 reservadas (S0705, S1205, S1311, S1501, S1507 e S3001): 6 studios, 15 loft duplex, 1 studio garden e os dois loft duplex garden, S1808 e S1809. Na situação de 19/10/2026, sem nenhuma mudança de preço: saíram S1002, S1005, S1102, S1506, S1508 e S3101, todas reservadas; voltaram S1311 e S1507, já reservadas, e S1809, S2205 e S2603, disponíveis, pelo valor da tabela zero com o CUB de outubro (+0,4141%); e a S3103 voltou a ficar disponível. Em 02/10/2026 todos os valores subiram exatamente 0,4141% sobre a tabela zero — a variação do CUB de setembro para outubro (R$ 3.158,88 → R$ 3.171,96), a mesma das tabelas da Castelo —, sem nenhuma unidade reprecificada; o à vista acompanha (12% sobre o total novo). Na mesma atualização saíram S0704, S0707, S0710, S1006, S1104, S1302, S1308, S1502, S1504, S1706, S1708, S1801, S2201, S2605 e S2607; entraram S0705, S1002, S1005 e S1102, todas já reservadas; e S1506, S1508 e S3101 passaram a reservadas. A S1102 passou a ter a vaga 033 — na tabela zero ela estava sem vaga. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A tipologia não vem nesta tabela: ela foi deduzida do PDF \"Vista 43 · Pavimentos, Unidades e Vagas\", que descreve a composição andar a andar — 7º são 11 studios garden, todos com terraço privativo; do 8º ao 17º e no 30º são studios; 18º, 20º, 22º, 24º, 26º, 28º, 31º e 33º são os níveis inferiores dos loft duplex (os andares seguintes são o nível de cima, que não se vende separado). Na tabela zero eram 10 studios garden (7º), 55 studios, 28 loft duplex e 2 loft duplex garden — o S1808 e o S1809, de 109,65 m², que o PDF descreve como duplex garden com terraço descoberto de 55,76 m². As unidades com terraço — hoje o studio garden S0705 e os loft duplex garden S1808 e S1809 — entram só aqui, fora dos cards do comparativo, como combinado. O PDF registra que 38 studios não terão vaga e que para os demais a vaga é opcional; hoje todas as unidades desta tabela têm vaga. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 60 × parcela + 5 × reforço devolve o valor total ao centavo nas 95 linhas, e parcela e reforço batem com 60% ÷ 60 e 20% ÷ 5 — 380 conferências, nenhuma divergência. Dois pontos a confirmar com a construtora: o PDF lista 11 studios garden no 7º e a tabela traz 10 (falta o de 87,19 m²), e o S0702 aparece com 39,13 m² onde o quadro do PDF esperava 38,12 m². Entrega: abril/2031.",
       "summary": {
         "construtora": "Novo Rumo",
         "bairro": "Centro",
@@ -5334,7 +5292,7 @@ const SALES_TABLES = {
   "Tulum - 2 dormitórios": {
     "folderId": "15XiT_Sg4FvhcHBzDcaRLIrsZScNh_rpw",
     "source": "Tabela de vendas (Hill)",
-    "ref": "Setembro/2026 · tabela 00 · situação de 30/09/2026",
+    "ref": "Outubro/2026 · situação de 19/10/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -5357,7 +5315,7 @@ const SALES_TABLES = {
         "R$ 86.582,06",
         "R$ 3.928,26",
         "R$ 34.632,83",
-        "Disponível"
+        "Reservada"
       ],
       [
         "502",
@@ -5373,12 +5331,12 @@ const SALES_TABLES = {
       [
         "506",
         "91,70 m²",
-        "R$ 608.888,00",
-        "R$ 657.599,04",
-        "R$ 700.221,20",
-        "R$ 105.033,18",
-        "R$ 4.765,39",
-        "R$ 42.013,27",
+        "R$ 674.912,00",
+        "R$ 728.904,96",
+        "R$ 776.148,80",
+        "R$ 116.422,32",
+        "R$ 5.282,12",
+        "R$ 46.568,93",
         "Disponível"
       ],
       [
@@ -5395,12 +5353,12 @@ const SALES_TABLES = {
       [
         "602",
         "65,19 m²",
-        "R$ 546.487,77",
-        "R$ 590.206,79",
-        "R$ 628.460,94",
-        "R$ 94.269,14",
-        "R$ 4.277,03",
-        "R$ 37.707,66",
+        "R$ 605.745,48",
+        "R$ 654.205,12",
+        "R$ 696.607,30",
+        "R$ 104.491,10",
+        "R$ 4.740,80",
+        "R$ 41.796,44",
         "Disponível"
       ],
       [
@@ -5417,12 +5375,12 @@ const SALES_TABLES = {
       [
         "607",
         "59,05 m²",
-        "R$ 495.016,15",
-        "R$ 534.617,44",
-        "R$ 569.268,57",
-        "R$ 85.390,29",
-        "R$ 3.874,19",
-        "R$ 34.156,11",
+        "R$ 506.944,25",
+        "R$ 547.499,79",
+        "R$ 582.985,89",
+        "R$ 87.447,88",
+        "R$ 3.967,54",
+        "R$ 34.979,15",
         "Disponível"
       ],
       [
@@ -5434,7 +5392,7 @@ const SALES_TABLES = {
         "R$ 86.235,73",
         "R$ 3.912,55",
         "R$ 34.494,29",
-        "Reservada"
+        "Disponível"
       ],
       [
         "706",
@@ -5478,7 +5436,7 @@ const SALES_TABLES = {
         "R$ 98.002,57",
         "R$ 4.446,41",
         "R$ 39.201,03",
-        "Disponível"
+        "Reservada (vaga 29, simples)"
       ],
       [
         "1106",
@@ -5536,6 +5494,17 @@ const SALES_TABLES = {
         "Disponível"
       ],
       [
+        "1401",
+        "59,05 m²",
+        "R$ 586.720,80",
+        "R$ 633.658,46",
+        "R$ 674.728,92",
+        "R$ 101.209,34",
+        "R$ 4.591,91",
+        "R$ 40.483,74",
+        "Disponível"
+      ],
+      [
         "1406",
         "65,19 m²",
         "R$ 598.444,20",
@@ -5547,7 +5516,7 @@ const SALES_TABLES = {
         "Disponível"
       ]
     ],
-    "note": "Apartamentos de 2 dormitórios: 18 na tabela, 17 disponíveis e o 701 reservado (vaga 29, simples). Na atualização de 30/09/2026, com os valores sem mudança, entraram 506, 602, 607, 701 e 1102 e saiu o 707. O à vista e o \"na entrega das chaves\" das que entraram vêm do total em 72x pela mesma regra da tabela (à vista = total ÷ 1,15; entrega = à vista × 1,08), e fecham num R$/m² redondo à vista (602 e 607 a R$ 8.383, 701 a R$ 8.466, 1102 a R$ 8.715). O 506 tem 91,70 m² (área confirmada pelo Felipe em 30/09/2026), bem acima dos 59 a 81 m² dos outros, e sai a R$ 6.640/m² à vista — o menor da tabela. Ela entra no card como as demais — é ela que leva a faixa de área até 91,70 m² e o valor até R$ 700.221,20. Em 11/09/2026 as unidades 505, 1302 e 1402 saíram daqui para a tabela de 1 dormitório, onde é o lugar delas. Os studios estão na tabela \"Tulum - Studios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As demais unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
+    "note": "Apartamentos de 2 dormitórios: 19 na tabela, 17 disponíveis e 2 reservados — 501 e 1102 (vaga 29, simples); o 701, que estava reservado, voltou a ficar disponível. Na atualização de 19/10/2026 entrou a 1401 (59,05 m², R$ 674.728,92 no total em 72x, R$ 9.936/m² à vista) e três unidades subiram de preço: 506 e 602 +10,84% (à vista de R$ 6.640 para R$ 7.360/m² e de R$ 8.383 para R$ 9.292/m²) e 607 +2,41% (de R$ 8.383 para R$ 8.585/m²); as outras 15 ficaram iguais. O à vista e o \"na entrega das chaves\" das que mudaram ou entraram seguem a regra da tabela (à vista = total ÷ 1,15; entrega = à vista × 1,08) e fecham num R$/m² redondo à vista. Na atualização de 30/09/2026, com os valores sem mudança, entraram 506, 602, 607, 701 e 1102 e saiu o 707. O à vista e o \"na entrega das chaves\" das que entraram vêm do total em 72x pela mesma regra da tabela (à vista = total ÷ 1,15; entrega = à vista × 1,08), e fecham num R$/m² redondo à vista (602 e 607 a R$ 8.383, 701 a R$ 8.466, 1102 a R$ 8.715). O 506 tem 91,70 m² (área confirmada pelo Felipe em 30/09/2026), bem acima dos 59 a 81 m² dos outros, e sai a R$ 6.640/m² à vista — o menor da tabela. Ela entra no card como as demais — é ela que leva a faixa de área até 91,70 m² e o valor até R$ 776.148,80. Em 11/09/2026 as unidades 505, 1302 e 1402 saíram daqui para a tabela de 1 dormitório, onde é o lugar delas. Os studios estão na tabela \"Tulum - Studios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As demais unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
     "summary": {
       "tipoDefault": "Apartamento 2 dormitórios",
       "situacao": "Disponível",
