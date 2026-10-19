@@ -1,18 +1,18 @@
 const PRICE_HISTORY = {
   "San Vito": {
-   datas: ["2025-02","2026-03","2026-04","2026-05","2026-06","2026-07","2026-08","2026-09"],
-   fontes: ["Tabela válida até 28/02/2025","Tabela válida até 30/03/2026","Tabela válida até 30/04/2026","Tabela válida até 31/05/2026","Tabela válida até 30/06/2026","Tabela válida até 31/07/2026","Tabela vigente em ago/2026","Tabela vigente em set/2026"],
-   obs: "Tabela de preço fechado, sem indexação — cada mudança de valor aqui é decisão da HR Sul, não índice. São sete levantamentos, mas com um vão de 13 meses entre fev/2025 e mar/2026, e é dentro desse vão que todo o movimento de preço aconteceu: de março a agosto de 2026 nenhum dos nove valores mudou um real em seis tabelas seguidas. Ou seja, as datas exatas dos reajustes não são determináveis com o material disponível. E o movimento não foi uniforme — é essa a leitura do empreendimento. O apto 402, o maior tipo do bloco com 125,95 m², subiu 8,20% (R$ 915.000 → R$ 990.000). Já o 403 e o 404 CAÍRAM 5,80% cada, R$ 40.000 a menos (R$ 690.000 → R$ 650.000): são as duas únicas quedas de preço registradas neste empreendimento. As configurações de vaga não mudaram entre as duas épocas — a tabela de fev/2025 já trazia duas vagas no 402 (77-78), três no 1701 e duas no 1704 —, então isso é preço mesmo, não troca de pacote como aconteceu no Ed. Toulouse. O apto 1304 saiu da tabela de mar a jun/2026 e voltou em jul/2026 a R$ 590.000, 2,61% acima dos R$ 575.000 de fev/2025; daí o intervalo em branco na linha dele. O 1404, o 1701 e o 1704 estão com o mesmo preço há 18 meses. O estoque encolheu forte: a tabela de fev/2025 trazia 39 unidades com preço, a de ago/2026 tem 9, mais 6 reservadas. Sobre a entrega: a tabela de fev/2025 informava dez/2027, e as tabelas de 2026 deixaram de trazer essa linha — o card usa jul/2027, que não vem de nenhuma dessas tabelas e precisa ser confirmado com a HR Sul.",
+   datas: ["2025-02","2026-03","2026-04","2026-05","2026-06","2026-07","2026-08","2026-09","2026-10"],
+   fontes: ["Tabela válida até 28/02/2025","Tabela válida até 30/03/2026","Tabela válida até 30/04/2026","Tabela válida até 31/05/2026","Tabela válida até 30/06/2026","Tabela válida até 31/07/2026","Tabela vigente em ago/2026","Tabela vigente em set/2026","Tabela vigente em out/2026"],
+   obs: "Tabela de preço fechado, sem indexação — cada mudança de valor aqui é decisão da HR Sul, não índice. São sete levantamentos, mas com um vão de 13 meses entre fev/2025 e mar/2026, e é dentro desse vão que todo o movimento de preço aconteceu: de março a agosto de 2026 nenhum dos nove valores mudou um real em seis tabelas seguidas. Ou seja, as datas exatas dos reajustes não são determináveis com o material disponível. E o movimento não foi uniforme — é essa a leitura do empreendimento. O apto 402, o maior tipo do bloco com 125,95 m², subiu 8,20% (R$ 915.000 → R$ 990.000). Já o 403 e o 404 CAÍRAM 5,80% cada, R$ 40.000 a menos (R$ 690.000 → R$ 650.000): são as duas únicas quedas de preço registradas neste empreendimento. As configurações de vaga não mudaram entre as duas épocas — a tabela de fev/2025 já trazia duas vagas no 402 (77-78), três no 1701 e duas no 1704 —, então isso é preço mesmo, não troca de pacote como aconteceu no Ed. Toulouse. O apto 1304 saiu da tabela de mar a jun/2026 e voltou em jul/2026 a R$ 590.000, 2,61% acima dos R$ 575.000 de fev/2025; daí o intervalo em branco na linha dele. O 1404, o 1701 e o 1704 estão com o mesmo preço há 18 meses. O estoque encolheu forte: a tabela de fev/2025 trazia 39 unidades com preço, a de ago/2026 tem 9, mais 6 reservadas. Sobre a entrega: a tabela de fev/2025 informava dez/2027, e as tabelas de 2026 deixaram de trazer essa linha — o card usa jul/2027, que não vem de nenhuma dessas tabelas e precisa ser confirmado com a HR Sul. Em out/2026 seis unidades subiram (402 +0,91%; 403 e 404 +1,54%; 1204 +0,85%; 1304 +0,85%; 1404 +0,67%) e 1503, 1701 e 1704 ficaram iguais.",
    unidades: {
-    "402": [915000,990000,990000,990000,990000,990000,990000,990000],
-    "403": [690000,650000,650000,650000,650000,650000,650000,650000],
-    "404": [690000,650000,650000,650000,650000,650000,650000,650000],
-    "1204": [566000,585000,585000,585000,585000,585000,585000,585000],
-    "1304": [575000,null,null,null,null,590000,590000,590000],
-    "1404": [595000,595000,595000,595000,595000,595000,595000,595000],
-    "1503": [622000,630000,630000,630000,630000,630000,630000,630000],
-    "1701": [2199000,2199000,2199000,2199000,2199000,2199000,2199000,2199000],
-    "1704": [1745000,1745000,1745000,1745000,1745000,1745000,1745000,1745000]
+    "402": [915000,990000,990000,990000,990000,990000,990000,990000,999000],
+    "403": [690000,650000,650000,650000,650000,650000,650000,650000,660000],
+    "404": [690000,650000,650000,650000,650000,650000,650000,650000,660000],
+    "1204": [566000,585000,585000,585000,585000,585000,585000,585000,590000],
+    "1304": [575000,null,null,null,null,590000,590000,590000,595000],
+    "1404": [595000,595000,595000,595000,595000,595000,595000,595000,599000],
+    "1503": [622000,630000,630000,630000,630000,630000,630000,630000,630000],
+    "1701": [2199000,2199000,2199000,2199000,2199000,2199000,2199000,2199000,2199000],
+    "1704": [1745000,1745000,1745000,1745000,1745000,1745000,1745000,1745000,1745000]
    }
   },
   "Ed. Toulouse": {

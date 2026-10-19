@@ -92,13 +92,15 @@ const SALES_TABLES = {
   "San Vito": {
     "folderId": "1dI6c3bo7nUM47TfvNrpfgzerssDc4CLp",
     "source": "Tabela da construtora (HR Sul) · Bloco A",
-    "ref": "Setembro/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Apto",
       "Área priv.",
       "Área total",
       "Vaga",
+      "Área priv. com vaga",
+      "Área total com vaga",
       "Valor de venda"
     ],
     "rows": [
@@ -107,48 +109,62 @@ const SALES_TABLES = {
         "125,95 m²",
         "169,73 m²",
         "2 vagas",
-        "R$ 990.000,00"
+        "136,99 m²",
+        "183,00 m²",
+        "R$ 999.000,00"
       ],
       [
         "403",
         "103,94 m²",
         "138,52 m²",
         "1 vaga simples",
-        "R$ 650.000,00"
+        "114,98 m²",
+        "151,78 m²",
+        "R$ 660.000,00"
       ],
       [
         "404",
         "108,56 m²",
         "143,96 m²",
         "1 vaga simples",
-        "R$ 650.000,00"
+        "119,60 m²",
+        "157,23 m²",
+        "R$ 660.000,00"
       ],
       [
         "1204",
         "76,29 m²",
         "105,07 m²",
         "1 vaga simples",
-        "R$ 585.000,00"
+        "87,33 m²",
+        "118,33 m²",
+        "R$ 590.000,00"
       ],
       [
         "1304",
         "76,29 m²",
         "105,07 m²",
         "1 vaga simples",
-        "R$ 590.000,00"
+        "87,33 m²",
+        "118,33 m²",
+        "R$ 595.000,00"
       ],
       [
         "1404",
         "76,29 m²",
         "105,07 m²",
         "1 vaga simples",
-        "R$ 595.000,00"
+        "87,33 m²",
+        "118,33 m²",
+        "R$ 599.000,00"
       ],
       [
         "1503",
         "76,94 m²",
         "105,98 m²",
         "1 vaga simples",
+        "87,98 m²",
+        "119,25 m²",
         "R$ 630.000,00"
       ],
       [
@@ -156,6 +172,8 @@ const SALES_TABLES = {
         "188,47 m²",
         "224,25 m²",
         "3 vagas",
+        "210,55 m²",
+        "250,78 m²",
         "R$ 2.199.000,00"
       ],
       [
@@ -163,10 +181,12 @@ const SALES_TABLES = {
         "147,55 m²",
         "253,09 m²",
         "2 vagas",
+        "169,63 m²",
+        "279,63 m²",
         "R$ 1.745.000,00"
       ]
     ],
-    "note": "Bloco A (João Pessoa). Mostrando apenas unidades disponíveis; 601, 602, 803, 902, 1004 e 1501 estão reservadas e as demais indisponíveis. Vaga extra de garagem: R$ 65.000,00. Valores vigentes em setembro/2026 — a HR Sul emitiu a tabela do mês com os mesmos valores, as mesmas condições e as mesmas unidades de agosto. Obs.: a HR Sul não atualiza os rótulos internos do arquivo, que ainda traz título de maio e \"válida até 31/06/2026\"; desconsiderar. Disponibilidade e número da vaga devem ser confirmados na negociação. Entrega: a única tabela que informa previsão é a de fev/2025, que traz dez/2027; as tabelas de 2026 removeram essa linha — a data do card (jul/2027) não vem dessas tabelas e precisa ser confirmada com a HR Sul.",
+    "note": "Bloco A (João Pessoa). Mostrando apenas unidades disponíveis; 601, 602, 803, 902, 1004 e 1501 estão reservadas e as demais indisponíveis. Vaga extra de garagem: R$ 65.000,00. Valores vigentes em outubro/2026: as mesmas nove unidades de setembro; subiram 402 (R$ 990 mil → R$ 999 mil), 403 e 404 (R$ 650 mil → R$ 660 mil), 1204 (R$ 585 mil → R$ 590 mil), 1304 (R$ 590 mil → R$ 595 mil) e 1404 (R$ 595 mil → R$ 599 mil); 1503, 1701 e 1704 ficaram iguais. A tabela de outubro passou a trazer também a área do apartamento somada à da vaga, nas colunas \"com vaga\". Obs.: a HR Sul não atualiza os rótulos internos do arquivo, que ainda traz título de maio e \"válida até 31/06/2026\"; desconsiderar. Disponibilidade e número da vaga devem ser confirmados na negociação. Entrega: a única tabela que informa previsão é a de fev/2025, que traz dez/2027; as tabelas de 2026 removeram essa linha — a data do card (jul/2027) não vem dessas tabelas e precisa ser confirmada com a HR Sul.",
     "summary": {"tipos": {"404": "Terraço"}, 
       "bits": [
         {
@@ -183,7 +203,7 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Valor de venda",
-        "col": 4
+        "col": 6
       }
     }
   },
