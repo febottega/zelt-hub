@@ -276,7 +276,7 @@ const SALES_TABLES = {
   },
   "Villa Toscana": {
     "source": "Tabela da construtora (Andraus)",
-    "ref": "Setembro/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -293,34 +293,34 @@ const SALES_TABLES = {
         "1201",
         "2 vagas",
         "106,24 m²",
-        "R$ 988.226,56",
-        "R$ 1.067.284,69",
-        "R$ 373.549,64",
-        "R$ 64.037,08",
+        "R$ 992.278,89",
+        "R$ 1.071.660,55",
+        "R$ 375.081,19",
+        "R$ 64.299,63",
         "Disponível"
       ],
       [
         "1203",
         "3 vagas",
         "106,91 m²",
-        "R$ 1.046.462,38",
-        "R$ 1.130.179,38",
-        "R$ 395.562,78",
-        "R$ 67.810,76",
+        "R$ 1.050.752,88",
+        "R$ 1.134.813,11",
+        "R$ 397.184,59",
+        "R$ 68.088,79",
         "Revenda"
       ],
       [
         "1402",
         "4 vagas",
         "287,93 m²",
-        "R$ 3.496.123,97",
-        "R$ 3.775.813,89",
-        "R$ 1.321.534,86",
-        "R$ 226.548,83",
+        "R$ 3.510.458,08",
+        "R$ 3.791.294,73",
+        "R$ 1.326.953,15",
+        "R$ 227.477,68",
         "Disponível"
       ]
     ],
-    "note": "Villa Toscana Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. Aceita automóvel como parte do pagamento. Vaga extra: R$ 70.000,00 (consultar disponibilidade). Apto tipo: 106,91 m² privativos + 66,20 m² de comum = 173,11 m², mais 31,09 m² de duas vagas — total aprox. 204,20 m². Cobertura Duplex 1402: boxes 44/44A/44B/44C, 287,93 m² privativos, área total aprox. 523,92 m² com as quatro vagas.",
+    "note": "Villa Toscana Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. Aceita automóvel como parte do pagamento. Vaga extra: R$ 70.000,00 (consultar disponibilidade). Apto tipo: 106,91 m² privativos + 66,20 m² de comum = 173,11 m², mais 31,09 m² de duas vagas — total aprox. 204,20 m². Cobertura Duplex 1402: boxes 44/44A/44B/44C, 287,93 m² privativos, área total aprox. 523,92 m² com as quatro vagas. Em outubro/2026 as mesmas unidades, com todos os valores 0,41% acima de setembro e entrada (35%) e anuais (6%) fechando ao centavo sobre o parcelado.",
     "summary": {
       "bits": [
         {
@@ -356,7 +356,7 @@ const SALES_TABLES = {
   },
   "Grand Park": {
     "source": "Tabela da construtora (Andraus)",
-    "ref": "Setembro/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -373,14 +373,14 @@ const SALES_TABLES = {
         "1803",
         "2 vagas",
         "111,09 m²",
-        "R$ 1.073.388,31",
-        "R$ 1.159.259,38",
-        "R$ 405.740,78",
-        "R$ 69.555,56",
+        "R$ 1.077.789,21",
+        "R$ 1.164.012,34",
+        "R$ 407.404,32",
+        "R$ 69.840,74",
         "Revenda"
       ]
     ],
-    "note": "Grand Park Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. A cobertura 1801 foi vendida em agosto/2026 — restou apenas o apto tipo 1803, em revenda. Apto tipo (5º ao 17º pav.): 111,09 m² privativos + 25,82 m² das duas vagas + 67,36 m² de área comum, total aprox. 204,27 m². A cobertura 1801 tinha 222,18 m² privativos e área total aprox. 376,20 m².",
+    "note": "Grand Park Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. A cobertura 1801 foi vendida em agosto/2026 — restou apenas o apto tipo 1803, em revenda. Apto tipo (5º ao 17º pav.): 111,09 m² privativos + 25,82 m² das duas vagas + 67,36 m² de área comum, total aprox. 204,27 m². A cobertura 1801 tinha 222,18 m² privativos e área total aprox. 376,20 m². Em outubro/2026 a mesma unidade, com todos os valores 0,41% acima de setembro e entrada (35%) e anuais (6%) fechando ao centavo sobre o parcelado.",
     "summary": {
       "bits": [
         {
@@ -416,7 +416,7 @@ const SALES_TABLES = {
   },
   "Carbono": {
     "source": "Tabela da construtora (Andraus) · Investidores",
-    "ref": "Setembro/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -435,10 +435,10 @@ const SALES_TABLES = {
         "Double Loft (2 dorm./garden)",
         "1 vaga",
         "121,15 m²",
-        "R$ 824.297,11",
-        "R$ 897.511,96",
-        "R$ 314.129,19",
-        "R$ 53.850,72",
+        "R$ 827.676,72",
+        "R$ 901.060,56",
+        "R$ 315.371,20",
+        "R$ 54.063,63",
         "Disponível"
       ],
       [
@@ -446,10 +446,10 @@ const SALES_TABLES = {
         "—",
         "1 vaga",
         "36,05 m²",
-        "R$ 513.958,59",
-        "R$ 539.656,52",
-        "R$ 188.879,78",
-        "R$ 32.379,39",
+        "R$ 516.065,82",
+        "R$ 541.869,11",
+        "R$ 189.654,19",
+        "R$ 32.512,15",
         "Disponível"
       ],
       [
@@ -457,10 +457,10 @@ const SALES_TABLES = {
         "Sacada, home office, dep./dorm.",
         "1 vaga",
         "57,41 m²",
-        "R$ 720.214,28",
-        "R$ 763.225,00",
-        "R$ 267.128,75",
-        "R$ 45.793,50",
+        "R$ 723.167,16",
+        "R$ 766.325,52",
+        "R$ 268.213,93",
+        "R$ 45.979,53",
         "Disponível"
       ],
       [
@@ -468,10 +468,10 @@ const SALES_TABLES = {
         "Dif. sacada",
         "1 vaga",
         "38,18 m²",
-        "R$ 502.399,71",
-        "R$ 533.519,69",
-        "R$ 186.731,89",
-        "R$ 32.011,18",
+        "R$ 504.459,55",
+        "R$ 535.682,52",
+        "R$ 187.488,88",
+        "R$ 32.140,95",
         "Revenda"
       ],
       [
@@ -479,10 +479,10 @@ const SALES_TABLES = {
         "Dif. sacada",
         "1 vaga",
         "49,86 m²",
-        "R$ 639.212,84",
-        "R$ 670.173,48",
-        "R$ 234.560,72",
-        "R$ 40.210,41",
+        "R$ 641.833,61",
+        "R$ 672.925,29",
+        "R$ 235.523,85",
+        "R$ 40.375,52",
         "Disponível"
       ],
       [
@@ -490,10 +490,10 @@ const SALES_TABLES = {
         "Grand Duplex com sacada",
         "1 vaga",
         "68,73 m²",
-        "R$ 823.752,84",
-        "R$ 876.940,48",
-        "R$ 306.929,17",
-        "R$ 52.616,43",
+        "R$ 827.130,22",
+        "R$ 880.486,74",
+        "R$ 308.170,36",
+        "R$ 52.829,20",
         "Disponível"
       ],
       [
@@ -501,14 +501,14 @@ const SALES_TABLES = {
         "—",
         "1 vaga",
         "37,54 m²",
-        "R$ 484.940,36",
-        "R$ 509.187,38",
-        "R$ 178.215,58",
-        "R$ 30.551,24",
+        "R$ 486.928,61",
+        "R$ 511.275,04",
+        "R$ 178.946,27",
+        "R$ 30.676,50",
         "Revenda"
       ]
     ],
-    "note": "Tabela de investidores. Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Cada unidade tem 1 vaga exclusiva. Empreendimento concluído, com convenção preparada para locação por temporada (apps). Registro de incorporação R-2-52.614. Em setembro/2026 a tabela caiu de dez para sete unidades: saíram a 1102 e as duas 100% mobiliadas, a 903 e a 905 — com elas sai também a única referência de aluguel que tínhamos aqui (as mobiliadas eram as que constavam na lista de locação). O desconto do à vista sobre o parcelado varia muito por unidade, de 4,62% na 1006 a 8,16% na 509 — vale conferir unidade por unidade em vez de assumir um percentual único.",
+    "note": "Tabela de investidores. Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Cada unidade tem 1 vaga exclusiva. Empreendimento concluído, com convenção preparada para locação por temporada (apps). Registro de incorporação R-2-52.614. Em setembro/2026 a tabela caiu de dez para sete unidades: saíram a 1102 e as duas 100% mobiliadas, a 903 e a 905 — com elas sai também a única referência de aluguel que tínhamos aqui (as mobiliadas eram as que constavam na lista de locação). O desconto do à vista sobre o parcelado varia muito por unidade, de 4,62% na 1006 a 8,16% na 509 — vale conferir unidade por unidade em vez de assumir um percentual único. Em outubro/2026 as mesmas sete unidades: o à vista subiu exatamente 0,41% em todas sobre setembro; o parcelado subiu entre 0,40% e 0,41%, e entrada (35%) e anuais (6%) seguem o parcelado ao centavo.",
     "summary": {
       "bits": [
         {
