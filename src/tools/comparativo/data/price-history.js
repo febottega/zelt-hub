@@ -547,29 +547,58 @@ const PRICE_HISTORY = {
     "datas": [
       "2026-01",
       "2026-05",
-      "2026-06"
+      "2026-06",
+      "2026-10"
     ],
     "fontes": [
       "Tabela de preços jan/2026 (06/01)",
       "Planilha de vendas mai/2026",
-      "Planilha de vendas jun/2026 (23/06)"
+      "Planilha de vendas jun/2026 (23/06)",
+      "Tabela out/2026 (Hill: só a 1201; demais pela Torresani)"
     ],
-    "obs": "Série pela coluna Em 60x com vaga, a mesma condição usada nos cards. A Hill não emite tabela nova desde junho/2026, então o último ponto é o valor ainda vigente. As unidades 908 e 1103 constavam como vendidas em janeiro e voltaram à tabela por distrato, por isso começam a série em maio.",
+    "obs": "Série pela coluna Em 60x com vaga, a mesma condição usada nos cards. A Hill não emite tabela nova desde junho/2026, então o último ponto é o valor ainda vigente. As unidades 908 e 1103 constavam como vendidas em janeiro e voltaram à tabela por distrato, por isso começam a série em maio. Em out/2026 908 e 1103 saíram (vendidas) e entraram 302, 406, 1203 e 1204, comercializadas pela Torresani (entrada de 25% + 60x, total sem reforços); a 1201 continua no valor de junho.",
     "unidades": {
+      "302": [
+        null,
+        null,
+        null,
+        704799.36
+      ],
+      "406": [
+        null,
+        null,
+        null,
+        675643.43
+      ],
       "908": [
         null,
         553705.68,
-        563773.06
+        563773.06,
+        null
       ],
       "1103": [
         null,
         758757.12,
-        758757.12
+        758757.12,
+        null
       ],
       "1201": [
         1610749.8,
         1610749.8,
+        1610749.8,
         1610749.8
+      ],
+      "1203": [
+        null,
+        null,
+        null,
+        1581412.7
+      ],
+      "1204": [
+        null,
+        null,
+        null,
+        1438255.2
       ]
     }
   },

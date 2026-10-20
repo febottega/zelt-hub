@@ -197,10 +197,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (25 payloads, 16.189.688 bytes):
+Hash de referência (25 payloads, 16.191.992 bytes):
 
 ```
-A96D84CFE6F155B6A5375015901A3B8BC2B22B600840B08DDC03DB3EB6A3FF2A
+D967F057A2BCA33CBCA790DE595D8D0D366A30912D7B54143D642E78D47F1622
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -484,6 +484,12 @@ tabela, fora dos cards, a pedido do Felipe. Base dos cards: o valor "até as cha
 "total financiado" (soma nominal do plano de 84 meses) vai como alternativa. `media` e
 `rpriv` pela regra dos Tulum (média real e R$/m² unidade a unidade). A Torresani não tem
 logo cadastrado; a pasta do Drive (1qKxpNV7…) está no `folderId` da tabela e no `DRIVE_LINKS`.
+
+O **Malta** (out/2026): da Hill sobrou só a cobertura 1201; 302, 406, 1203 e 1204 são de um
+investidor e vendidas pela **Torresani** (25% + 60x ou −3% à vista). Na tabela elas levam a
+etiqueta verde "Torresani" — campo `etiquetas: {unidade: texto}` da tabela, desenhado como
+`.utag-etq` pelo `app.js`; serve para qualquer outra tabela. O card de apto tipo (id 14) usa a
+302 e a 406; 1203 e 1204 (151 e 143 m², 12º andar) ficaram fora dos cards.
 
 ### Duas formas no price-changes.js
 

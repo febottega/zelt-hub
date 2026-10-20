@@ -706,3 +706,5 @@ table.sales .price-cell{font-family:var(--ff-display); font-weight:600; color:va
 
 .utag-rev{background:var(--navy-100,#e6e6ef) !important; color:var(--navy-700,#3a3a52) !important;
   border:1px solid var(--navy-200,#c9c9d6);}
+.utag-etq{background:var(--success-soft,#d8f0e4) !important; color:#1b7a50 !important;
+  border:1px solid #a9dcc2;}

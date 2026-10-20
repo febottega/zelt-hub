@@ -917,6 +917,9 @@ function salesTableHTML(emp, t){
       if(tp) extra=`<span class="utag ${tipoClass(tp)}">${tp}</span>`;
       const isit=t.columns.findIndex(c=>c.toLowerCase()==="situação");
       if(isit>=0 && /revenda/i.test(String(r[isit]))) extra+=`<span class="utag utag-rev">Revenda</span>`;
+      /* etiqueta por unidade, ex.: quem comercializa quando nao e a construtora (Malta/Torresani) */
+      const etq=(t.etiquetas||{})[String(cell)];
+      if(etq) extra+=`<span class="utag utag-etq">${etq}</span>`;
     }
     if(/^R\$/.test(cell)) cls="price-cell";
     return `<td class="${cls}">${cell}${extra}</td>`;

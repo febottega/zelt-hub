@@ -210,88 +210,121 @@ const SALES_TABLES = {
   "Malta": {
     "folderId": "1ErfyF-eshDwhz04n-qrxwZ4tDuH60GHl",
     "source": "Tabela da construtora (Hill)",
-    "ref": "Junho/2026 · disponibilidade confirmada em 04/08/2026",
+    "ref": "Outubro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
       "Área priv.",
-      "À vista (c/ vaga)",
-      "Nas chaves (c/ vaga)",
-      "Em 60x (c/ vaga)",
+      "Vaga",
+      "À vista",
+      "Nas chaves",
+      "Em 60x (valor total)",
       "Entrada",
       "Parcelas",
       "Reforços"
     ],
     "rows": [
       [
-        "908",
-        "66,32 m²",
-        "R$ 490.237,44",
-        "R$ 529.456,44",
-        "R$ 563.773,06",
-        "R$ 84.565,96",
-        "R$ 5.167,92",
-        "R$ 33.826,38"
+        "302",
+        "90,88 m²",
+        "Vaga 12",
+        "R$ 683.655,38",
+        "—",
+        "R$ 704.799,36",
+        "R$ 176.199,84",
+        "R$ 8.809,99",
+        "—"
       ],
       [
-        "1103",
-        "90,88 m²",
-        "R$ 659.788,80",
-        "R$ 712.571,90",
-        "R$ 758.757,12",
-        "R$ 113.813,57",
-        "R$ 6.955,27",
-        "R$ 45.525,43"
+        "406",
+        "86,26 m²",
+        "Vaga 15",
+        "R$ 655.374,13",
+        "—",
+        "R$ 675.643,43",
+        "R$ 168.910,86",
+        "R$ 8.445,54",
+        "—"
       ],
       [
         "1201",
         "157,20 m²",
+        "3 vagas",
         "R$ 1.400.652,00",
         "R$ 1.512.704,16",
         "R$ 1.610.749,80",
         "R$ 241.612,47",
         "R$ 14.765,21",
         "R$ 96.644,99"
+      ],
+      [
+        "1203",
+        "151,05 m²",
+        "Vagas 56 e 88",
+        "R$ 1.533.970,32",
+        "—",
+        "R$ 1.581.412,70",
+        "R$ 395.353,18",
+        "R$ 19.767,66",
+        "—"
+      ],
+      [
+        "1204",
+        "142,66 m²",
+        "Vagas 55 e 89",
+        "R$ 1.395.107,54",
+        "—",
+        "R$ 1.438.255,20",
+        "R$ 359.563,80",
+        "R$ 17.978,19",
+        "—"
       ]
     ],
-    "note": "Restam apenas as unidades 908, 1103 e a cobertura 1201 — disponibilidade confirmada em 04/08/2026. A Hill não emitiu tabela nova desde junho/2026, portanto os valores acima são os últimos confirmados e devem ser revalidados antes de fechar proposta. Entrega jul/2027. Pagamento durante a obra com a construtora (tabela 09: 15% de entrada + 60 parcelas + reforços). Valores já incluem vaga. Aptos de 2 quartos: 1 vaga (~11 m²); 3 quartos: vaga dupla (~22 m²); cobertura 1201: 3 vagas.",
+    "note": "Outubro/2026: da Hill sobrou só a cobertura 1201 — 908 e 1103 foram vendidas. As outras quatro unidades (302, 406, 1203 e 1204, com a etiqueta verde) foram vendidas pela construtora a um investidor e estão sendo comercializadas pela Torresani, com condição própria: entrada de 25% e saldo em 60 parcelas, ou 3% de desconto à vista; não há reforços nem valor nas chaves. As 12 células da Torresani conferem ao centavo (entrada = 25%, parcela = 75% ÷ 60, à vista = total × 0,97). A cobertura 1201 segue a tabela da Hill de junho/2026 (15% de entrada + 60 parcelas + reforços), sem tabela nova desde então — revalidar antes de fechar proposta; tem 3 vagas e os valores incluem as vagas. Entrega jul/2027.",
     "summary": {
       "bits": [
         {
           "pre": "Área privativa: ",
           "col": 1
+        },
+        {
+          "col": 2
         }
       ],
       "principal": {
-        "label": "Em 60x (c/ vaga)",
-        "col": 4
+        "label": "Em 60x (valor total)",
+        "col": 5
       },
       "parcelas": [
         {
           "label": "Entrada",
-          "col": 5
-        },
-        {
-          "label": "Parcelas",
           "col": 6
         },
         {
-          "label": "Reforços",
+          "label": "Parcelas",
           "col": 7
+        },
+        {
+          "label": "Reforços",
+          "col": 8
         }
       ],
       "alternativas": [
         {
           "bold": "À vista",
-          "nota": "(c/ vaga)",
-          "col": 2
+          "col": 3
         },
         {
           "bold": "Nas chaves",
-          "nota": "(c/ vaga)",
-          "col": 3
+          "col": 4
         }
       ]
+    },
+    "etiquetas": {
+      "302": "Torresani",
+      "406": "Torresani",
+      "1203": "Torresani",
+      "1204": "Torresani"
     }
   },
   "Villa Toscana": {
