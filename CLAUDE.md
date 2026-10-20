@@ -105,6 +105,14 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   `#avaliacoes/relatorio/20-10-2026` abre direto o relatório daquela semana e
   `#avaliacoes/comparativo` a aba de comparativo (`aplicaRota` / `avisaRota`). A rota usa a
   data, não o slug, então o link continua valendo depois que a semana é arquivada.
+  **Comparativo** (20/10/2026): a aba fica logo depois do Menu de pesquisa e não é mais
+  por semana. Mostra a visão geral do período (imóveis, média por semana, corretores que
+  votam — este do `KPIS` —, gap e nota médios, situação e tipos) e uma tabela **por
+  corretor** (imóveis, semanas ativas, média/semana, % alinhado, situação, gap, nota, tipos),
+  ordenável, com o detalhe semana a semana e o botão que leva o corretor ao filtro da busca.
+  Período: tudo, últimas 8 ou últimas 4 semanas (`CV.n`). Dupla conta para os dois (`capsDe`).
+  ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
+  imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 18 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
 - **comparativo** — 65 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos. **Toda mudança no comparativo atualiza a data em
@@ -180,10 +188,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (24 payloads, 16.123.928 bytes):
+Hash de referência (24 payloads, 16.140.648 bytes):
 
 ```
-E243E6C27E5F1ABBB26503175EA758B61CF0028337E135594C4677CDF2F0F6EB
+6BEB828A81F1893713169F352ED50FE78B787F07FDA58F2744AD84280BA395D5
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

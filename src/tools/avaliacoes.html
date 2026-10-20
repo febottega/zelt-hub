@@ -168,7 +168,6 @@ header.top{background:var(--navy-900);color:#fff;padding:20px 0 0}
 .tbl-wrap{background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-sm);
   overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
 #tbl{min-width:1120px}
-#cmpTbl{min-width:820px}
 table{width:100%;border-collapse:collapse}
 thead th{
   background:var(--navy-900);color:#fff;font-family:var(--font-display);font-size:11px;font-weight:500;
@@ -258,22 +257,68 @@ body.ficha-aberta{overflow:hidden}
 
 /* ---------------- comparativo ---------------- */
 .cmp-note{font-size:13.5px;color:var(--n-600);max-width:80ch;margin:0 0 18px}
-.wkcard{background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-sm);
-  padding:18px 20px;margin-bottom:14px}
-.wkcard.cur{border-top:3px solid var(--zelt-orange)}
-.wkcard h3{font-family:var(--font-display);font-weight:600;font-size:17px;text-transform:uppercase;
-  letter-spacing:var(--ls-wide);color:var(--navy-900);margin:0 0 14px;display:flex;align-items:center;gap:10px}
-.wkcard h3 .tag{font-size:9.5px;background:var(--zelt-orange);color:var(--navy-900);padding:3px 9px;border-radius:var(--radius-pill)}
-.wkcard h3{flex-wrap:wrap}
-.wkcard h3 .abrir{font-family:var(--font-display);font-size:10px;font-weight:600;text-transform:uppercase;
-  letter-spacing:var(--ls-wide);background:none;border:1px solid var(--n-300);color:var(--navy-700);
-  border-radius:var(--radius-pill);padding:4px 12px;cursor:pointer;margin-left:auto}
-.wkcard h3 .abrir:hover{border-color:var(--zelt-orange);color:var(--orange-700);background:var(--orange-50)}
-.wk-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:14px}
-.wk-kpi .n{font-family:var(--font-display);font-weight:600;font-size:26px;color:var(--navy-900);line-height:1.05;font-variant-numeric:tabular-nums}
-.wk-kpi .l{font-family:var(--font-display);font-size:10px;text-transform:uppercase;letter-spacing:var(--ls-overline);color:var(--n-500);margin-top:3px}
-.dl{font-size:11.5px;font-weight:700;margin-top:4px}
-.dl.up{color:var(--success)}.dl.down{color:var(--danger)}.dl.flat{color:var(--n-500)}
+.cv-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.cv-head .cmp-note{margin:0}
+.cv-per{display:flex;gap:6px;flex-wrap:wrap}
+.cv-per button{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.06em;padding:8px 14px;cursor:pointer;border:1px solid var(--n-300);
+  border-radius:var(--radius-pill);background:#fff;color:var(--n-600)}
+.cv-per button:hover{border-color:var(--zelt-orange);color:var(--orange-700)}
+.cv-per button.on{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
+.cv-h{font-family:var(--font-display);font-weight:600;font-size:19px;text-transform:uppercase;
+  letter-spacing:var(--ls-wide);color:var(--navy-900);margin:26px 0 12px}
+.cv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.cv-card{background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-sm);padding:18px 20px}
+.cv-card h3{font-family:var(--font-display);font-weight:600;font-size:13px;text-transform:uppercase;
+  letter-spacing:var(--ls-overline);color:var(--n-500);margin:0 0 12px}
+/* barra empilhada revisar / leve ajuste / alinhado */
+.cv-stack{display:flex;height:12px;border-radius:99px;overflow:hidden;background:var(--n-100);margin-bottom:12px}
+.cv-stack i{display:block;height:100%}
+.cv-stack .r{background:var(--band-r)}.cv-stack .a{background:var(--band-a)}.cv-stack .b{background:var(--band-b)}
+.cv-stack.mini{height:8px;margin:0;min-width:110px}
+.cv-tipos{display:flex;flex-direction:column;gap:8px}
+.cv-tipo{display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr) 44px;align-items:center;gap:10px;font-size:13.5px}
+.cv-tipo .nm{color:var(--text-strong);font-weight:700}
+.cv-tipo .br{height:8px;border-radius:99px;background:var(--n-100);overflow:hidden}
+.cv-tipo .br i{display:block;height:100%;background:var(--navy-500);border-radius:99px}
+.cv-tipo .ct{font-family:var(--font-display);font-weight:600;color:var(--navy-900);text-align:right;font-variant-numeric:tabular-nums}
+#cvTbl{min-width:1040px}
+#cvTb tr.cv-row.aberto{background:var(--orange-50)}
+#cvTb tr.cv-row .go-cell{transition:transform .15s}
+#cvTb tr.cv-row.aberto .go-cell{transform:rotate(90deg);color:var(--zelt-orange)}
+.cv-nome{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--navy-900);letter-spacing:.02em}
+.cv-pb{font-family:var(--font-display);font-weight:600;font-size:15px;color:#2c5f9e;font-variant-numeric:tabular-nums}
+.cv-sit{display:flex;flex-direction:column;gap:4px}
+.cv-sit small{font-size:11px;color:var(--n-600);white-space:nowrap}
+.cv-tp{font-size:12.5px;color:var(--n-600)}
+#cvTbl td .cv-tp{display:inline-block;min-width:170px}
+.cv-pouco{font-size:10.5px;color:var(--n-500);display:block;font-family:var(--font-body)}
+#cvTb tr.det{cursor:default;background:var(--n-50)}
+#cvTb tr.det:hover{background:var(--n-50)}
+.cv-det{padding:16px 18px 18px;display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:18px}
+.cv-det h4{font-family:var(--font-display);font-weight:600;font-size:11.5px;text-transform:uppercase;
+  letter-spacing:var(--ls-overline);color:var(--n-500);margin:0 0 10px}
+/* captações por semana: uma coluna por semana, empilhada por situação */
+.cv-sem{display:flex;align-items:flex-end;gap:5px;height:118px;overflow-x:auto;padding-bottom:2px}
+.cv-sem .col{flex:1 0 26px;display:flex;flex-direction:column;align-items:center;gap:3px;height:100%;justify-content:flex-end}
+.cv-sem .pil{width:100%;max-width:30px;display:flex;flex-direction:column-reverse;border-radius:4px 4px 0 0;overflow:hidden;background:var(--n-100)}
+.cv-sem .pil i{display:block;width:100%}
+.cv-sem .pil .r{background:var(--band-r)}.cv-sem .pil .a{background:var(--band-a)}.cv-sem .pil .b{background:var(--band-b)}
+.cv-sem .q{font-family:var(--font-display);font-size:11px;font-weight:600;color:var(--navy-800);line-height:1}
+.cv-sem .d{font-size:9.5px;color:var(--n-500);white-space:nowrap;line-height:1}
+.cv-leg{display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--n-600);margin-top:8px}
+.cv-leg i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.cv-leg .r{background:var(--band-r)}.cv-leg .a{background:var(--band-a)}.cv-leg .b{background:var(--band-b)}
+.cv-det .btn{margin-top:14px}
+@media (max-width:820px){
+  .cv-grid,.cv-det{grid-template-columns:1fr}
+  #cvTbl{min-width:0}
+  #cvTb td.c-cvnome{margin-bottom:6px}
+  #cvTb tr.cv-row td{margin-top:3px}
+  .cv-sit{display:inline-flex;vertical-align:middle;width:calc(100% - 100px);max-width:280px}
+  .cv-stack.mini{min-width:0}
+  .cv-tipo{grid-template-columns:minmax(100px,130px) minmax(0,1fr) 40px}
+}
 .bands{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
 .bnd{padding:11px 14px;border-radius:8px}
 .bnd.r{background:var(--band-r-soft)}.bnd.a{background:var(--band-a-soft)}.bnd.b{background:var(--band-b-soft)}
@@ -301,7 +346,6 @@ body.rel-mode{overflow:hidden}
   .brand .ttl{font-size:16px}
   thead{display:none}
   #tbl{min-width:0}
-  #cmpTbl{min-width:0}
   .tbl-wrap{overflow-x:visible}
   tbody tr{display:block;padding:14px 15px;border-top:1px solid var(--line);position:relative}
   tbody tr.det{padding:0}
@@ -440,19 +484,49 @@ body.rel-mode{overflow:hidden}
 
 <!-- ============ COMPARATIVO ============ -->
 <main id="tab-cmp" class="wrap hidden" style="padding-top:22px">
-  <p class="cmp-note">Comparativo de todas as semanas. Cada bloco traz os números da rodada e a variação em relação à semana anterior; a tabela ao final resume tudo lado a lado.</p>
-  <div id="cmpCards"></div>
-  <div class="tbl-wrap" style="margin-top:22px">
-    <table id="cmpTbl">
+  <div class="cv-head">
+    <p class="cmp-note" id="cvNota"></p>
+    <div class="cv-per" id="cvPer" role="group" aria-label="Período">
+      <button type="button" data-n="0" class="on">Todo o período</button>
+      <button type="button" data-n="8">Últimas 8 semanas</button>
+      <button type="button" data-n="4">Últimas 4 semanas</button>
+    </div>
+  </div>
+
+  <h2 class="cv-h">Visão geral</h2>
+  <div class="kpis" id="cvKpis"></div>
+  <div class="cv-grid">
+    <section class="cv-card">
+      <h3>Situação do preço</h3>
+      <div class="cv-stack" id="cvStack"></div>
+      <div class="bands" id="cvBandas"></div>
+    </section>
+    <section class="cv-card">
+      <h3>Tipos captados</h3>
+      <div class="cv-tipos" id="cvTipos"></div>
+    </section>
+  </div>
+
+  <h2 class="cv-h">Por corretor</h2>
+  <p class="cmp-note">Clique no cabeçalho para ordenar e num corretor para ver as captações dele semana a semana. Imóvel captado em dupla conta para os dois.</p>
+  <div class="tbl-wrap">
+    <table id="cvTbl">
       <thead><tr>
-        <th>Semana</th><th class="num">Imóveis</th><th class="num">Corretores</th>
-        <th class="num">Gap médio</th><th class="num">Nota média</th>
-        <th class="num">Revisar</th><th class="num">Leve ajuste</th><th class="num">Alinhado</th>
+        <th data-s="nome">Corretor <span class="ar">⇅</span></th>
+        <th data-s="qtd" class="num on">Imóveis <span class="ar">▼</span></th>
+        <th data-s="ativas" class="num" title="Em quantas semanas do período o corretor captou ao menos um imóvel">Semanas ativas <span class="ar">⇅</span></th>
+        <th data-s="porSem" class="num">Média por semana <span class="ar">⇅</span></th>
+        <th data-s="pB" class="num">Dentro do preço <span class="ar">⇅</span></th>
+        <th data-s="pR">Situação <span class="ar">⇅</span></th>
+        <th data-s="gap" class="num">Gap médio <span class="ar">⇅</span></th>
+        <th data-s="nota" class="num">Nota média <span class="ar">⇅</span></th>
+        <th>Tipos</th>
+        <th aria-label="Abrir"></th>
       </tr></thead>
-      <tbody id="cmpTb"></tbody>
+      <tbody id="cvTb"></tbody>
     </table>
   </div>
-  <p class="foot"><b>ZELT Imóveis</b> · Dinâmica Semanal · Consenso = média das sugestões dos corretores</p>
+  <p class="foot"><b>ZELT Imóveis</b> · Dinâmica Semanal · Gap = (consenso − anunciado) ÷ anunciado · quanto mais perto de zero, mais dentro do preço</p>
 </main>
 
 
@@ -1210,7 +1284,8 @@ function marcarAba(chave){
 }
 
 function initTabs(){
-  var h = '<button class="tab active" data-tab="busca" role="tab">Menu de pesquisa<span class="cnt" id="cTodos"></span></button>';
+  var h = '<button class="tab active" data-tab="busca" role="tab">Menu de pesquisa<span class="cnt" id="cTodos"></span></button>' +
+          '<button class="tab" data-tab="cmp" role="tab">Comparativo</button>';
   KPIS.forEach(function(k){
     var slug = SEMANAS_NO_HUB[k.data];
     if(!slug) return;
@@ -1220,7 +1295,6 @@ function initTabs(){
          esc(k.data.slice(0,5)) + (k.atual ? " · atual" : "") +
          '<span class="go">↗</span></button>';
   });
-  h += '<button class="tab" data-tab="cmp" role="tab">Comparativo</button>';
   var bar = document.getElementById("tabbar");
   bar.innerHTML = h;
   bar.querySelectorAll("[data-wk]").forEach(function(b){
@@ -1236,68 +1310,199 @@ function initTabs(){
     });
   });
 }
-/* ---------------- comparativo ---------------- */
-function dclass(txt){
-  if(!txt) return "flat";
-  if(txt.indexOf("▲") > -1) return "up";
-  if(txt.indexOf("▼") > -1) return "down";
-  return "flat";
+/* ---------------- comparativo: visão geral + por corretor ----------------
+   Tudo sai do DADOS (um registro por imóvel avaliado) e do KPIS (um por semana).
+   O período corta as semanas mais recentes do KPIS; a média de corretores que
+   votaram vem do KPIS porque quem vota não fica no DADOS. Imóvel captado em
+   dupla conta para cada corretor (capsDe), igual ao filtro do menu de pesquisa. */
+var CV = {n:0, col:"qtd", dir:-1, aberto:""};
+/* fora da tabela por corretor, a pedido do Felipe (20/10/2026): a ZELT não é corretor e a
+   Maria Helena (MH) tem poucas captações. Os imóveis deles seguem na visão geral e na busca. */
+var CV_FORA = {"ZELT":1, "Maria Helena":1};
+var PLURAL = {"Apartamento":"Apartamentos","Casa":"Casas","Terreno":"Terrenos","Cobertura":"Coberturas",
+  "Sala comercial":"Salas comerciais","Prédio":"Prédios","Galpão":"Galpões","Chácara":"Chácaras",
+  "Sítio":"Sítios","Loja":"Lojas","Ponto comercial":"Pontos comerciais"};
+function nomeTipo(t, n){ return n === 1 ? t : (PLURAL[t] || t + "s"); }
+function media(arr){ return arr.length ? arr.reduce(function(a,b){ return a+b; }, 0) / arr.length : null; }
+function bandaDoGap(g){ return g === null ? "b" : (g <= -12 ? "r" : (g < -5 ? "a" : "b")); }
+function cvSemanas(){
+  var ks = KPIS.slice().sort(function(a,b){ return dataOrd(b.data).localeCompare(dataOrd(a.data)); });
+  return CV.n ? ks.slice(0, CV.n) : ks;
 }
-function initCmp(){
+function contaSit(rs){
+  var c = {r:0, a:0, b:0};
+  rs.forEach(function(r){ c[classe(r.f)]++; });
+  return c;
+}
+function barraSit(c, tot, mini){
+  if(!tot) return '<div class="cv-stack' + (mini ? " mini" : "") + '"></div>';
+  return '<div class="cv-stack' + (mini ? " mini" : "") + '" title="Revisar ' + c.r + ' · Leve ajuste ' + c.a + ' · Alinhado ' + c.b + '">' +
+    ["r","a","b"].map(function(k){ return c[k] ? '<i class="' + k + '" style="width:' + (c[k]/tot*100) + '%"></i>' : ""; }).join("") +
+    '</div>';
+}
+function tiposTxt(rs, curto){
+  var t = {};
+  rs.forEach(function(r){ t[r.t] = (t[r.t]||0) + 1; });
+  return Object.keys(t).sort(function(a,b){ return t[b]-t[a] || a.localeCompare(b,"pt-BR"); })
+    .map(function(k){ return t[k] + " " + (curto ? nomeTipo(k, t[k]).toLowerCase() : nomeTipo(k, t[k])); });
+}
+
+function cvTiposCurto(rs){
+  var l = tiposTxt(rs, true);
+  return l.slice(0, 2).join(" · ") + (l.length > 2 ? " · +" + (l.length - 2) : "");
+}
+function cvCorretores(rs, nSem){
+  var por = {};
+  rs.forEach(function(r){
+    capsDe(r).forEach(function(n){ if(!CV_FORA[n]) (por[n] = por[n] || []).push(r); });
+  });
+  return Object.keys(por).map(function(nome){
+    var lista = por[nome], c = contaSit(lista), sem = {};
+    lista.forEach(function(r){ sem[r.w] = 1; });
+    return {
+      nome: nome, lista: lista, qtd: lista.length, sit: c,
+      ativas: Object.keys(sem).length,
+      porSem: lista.length / nSem,
+      pB: c.b / lista.length * 100, pR: c.r / lista.length * 100,
+      gap: media(lista.map(function(r){ return r.g; })),
+      nota: media(lista.map(function(r){ return r.n; }))
+    };
+  });
+}
+
+function renderCmp(){
+  var semanas = cvSemanas(), datas = {};
+  semanas.forEach(function(k){ datas[k.data] = 1; });
+  var rs = DADOS.filter(function(r){ return datas[r.w]; });
+  var nSem = semanas.length, tot = rs.length;
+  var mais = semanas[semanas.length-1], menos = semanas[0];
+  document.getElementById("cvNota").innerHTML = "Visão consolidada de <b>" + nSem + " semanas</b>" +
+    (nSem ? " — de " + esc(mais.data) + " a " + esc(menos.data) : "") + ".";
+
+  /* números gerais */
+  var gap = media(rs.map(function(r){ return r.g; })), nota = media(rs.map(function(r){ return r.n; }));
+  var vot = media(semanas.map(function(k){ return k.corretores; }));
+  document.getElementById("cvKpis").innerHTML =
+    '<div class="kpi"><div class="num">' + tot + '</div><div class="lbl">Imóveis captados</div></div>' +
+    '<div class="kpi"><div class="num">' + dec1(nSem ? tot/nSem : null) + '</div><div class="lbl">Imóveis por semana</div></div>' +
+    '<div class="kpi"><div class="num">' + dec1(vot) + '</div><div class="lbl">Corretores que votam / semana</div></div>' +
+    '<div class="kpi"><div class="num">' + (gap === null ? "—" : pct(gap)) + '</div><div class="lbl">Gap médio</div></div>' +
+    '<div class="kpi"><div class="num">' + dec1(nota) + '<span class="suf"> /10</span></div><div class="lbl">Nota média</div></div>';
+
+  /* situação */
+  var c = contaSit(rs);
+  document.getElementById("cvStack").innerHTML = barraSit(c, tot).replace(/^<div class="cv-stack"[^>]*>|<\/div>$/g, "");
+  document.getElementById("cvBandas").innerHTML = [["r","Revisar preço","gap ≤ −12%"],["a","Leve ajuste","−12% a −5%"],["b","Alinhado","−5% a +5%"]]
+    .map(function(x){
+      return '<div class="bnd ' + x[0] + '"><div class="nm">' + x[1] + '</div><div class="ct">' + c[x[0]] +
+        '</div><div class="rg">' + (tot ? pct(c[x[0]]/tot*100, 0) : "—") + ' dos imóveis · ' + x[2] + '</div></div>';
+    }).join("");
+
+  /* tipos */
+  var t = {};
+  rs.forEach(function(r){ t[r.t] = (t[r.t]||0) + 1; });
+  var maior = Math.max.apply(null, Object.keys(t).map(function(k){ return t[k]; }).concat([1]));
+  document.getElementById("cvTipos").innerHTML = Object.keys(t)
+    .sort(function(a,b){ return t[b]-t[a] || a.localeCompare(b,"pt-BR"); })
+    .map(function(k){
+      return '<div class="cv-tipo"><span class="nm">' + esc(nomeTipo(k, t[k])) + '</span>' +
+        '<span class="br"><i style="width:' + (t[k]/maior*100) + '%"></i></span>' +
+        '<span class="ct">' + t[k] + '</span></div>';
+    }).join("") || '<span class="sub">Nenhum imóvel no período.</span>';
+
+  /* por corretor */
+  var lin = cvCorretores(rs, nSem || 1);
+  lin.sort(function(x, y){
+    var a = x[CV.col], b = y[CV.col];
+    if(CV.col === "nome") return a.localeCompare(b, "pt-BR") * (CV.dir > 0 ? 1 : -1);
+    if(a === null && b !== null) return 1;
+    if(b === null && a !== null) return -1;
+    return ((a - b) * (CV.dir > 0 ? 1 : -1)) || (y.qtd - x.qtd) || x.nome.localeCompare(y.nome, "pt-BR");
+  });
   var h = "";
-  KPIS.forEach(function(k){
-    var slug = SEMANAS_NO_HUB[k.data];
-    h += '<div class="wkcard' + (k.atual ? " cur" : "") + '">' +
-      '<h3>Relatório ' + esc(k.data) +
-        (k.atual ? '<span class="tag">Atual</span>' : "") +
-        (slug ? '<button class="abrir" data-wk="' + esc(slug) + '" data-data="' + esc(k.data) + '">Abrir relatório</button>' : "") +
-      '</h3>' +
-      '<div class="wk-kpis">' +
-        kpi(k.imoveis, "Imóveis captados", k.imoveis_delta) +
-        kpi(k.corretores, "Corretores que votaram", k.corretores_delta) +
-        kpi(pct(k.gap_medio), "Gap médio", k.gap_delta) +
-        kpi(dec1(k.nota_media), "Nota média / 10", k.nota_delta) +
-      '</div><div class="bands">';
-    k.bandas.forEach(function(b){
-      var cl = b.nome.indexOf("Revisar") > -1 ? "r" : (b.nome.indexOf("Leve") > -1 ? "a" : "b");
-      h += '<div class="bnd ' + cl + '"><div class="nm">' + esc(b.nome) + '</div>' +
-           '<div class="ct">' + b.qtd + '</div>' +
-           '<div class="rg">' + esc(b.faixa) + ' · de ' + k.imoveis + ' imóveis</div>' +
-           '<div class="dl ' + dclass(b.delta) + '">' + esc(b.delta || "") + '</div></div>';
-    });
-    h += '</div></div>';
+  lin.forEach(function(p){
+    var ab = CV.aberto === p.nome;
+    h += '<tr class="cv-row' + (ab ? " aberto" : "") + '" data-nome="' + esc(p.nome) + '">' +
+      '<td class="c-cvnome"><span class="cv-nome">' + esc(p.nome) + '</span>' +
+        (p.qtd < 5 ? '<span class="cv-pouco">poucos imóveis — leia com cautela</span>' : "") + '</td>' +
+      '<td class="num" data-l="Imóveis"><span class="nota">' + p.qtd + '</span></td>' +
+      '<td class="num" data-l="Semanas c/ capt.">' + p.ativas + ' de ' + nSem + '</td>' +
+      '<td class="num" data-l="Média/semana">' + dec1(p.porSem) + '</td>' +
+      '<td class="num" data-l="Dentro do preço"><span class="cv-pb">' + pct(p.pB, 0) + '</span></td>' +
+      '<td data-l="Situação"><div class="cv-sit">' + barraSit(p.sit, p.qtd, true) +
+        '<small>' + p.sit.r + ' revisar · ' + p.sit.a + ' leve · ' + p.sit.b + ' alinhado</small></div></td>' +
+      '<td class="num" data-l="Gap médio"><span class="gap ' + bandaDoGap(p.gap) + '">' + pct(p.gap) + '</span></td>' +
+      '<td class="num" data-l="Nota média"><span class="nota">' + dec1(p.nota) + '</span></td>' +
+      '<td data-l="Tipos"><span class="cv-tp">' + esc(cvTiposCurto(p.lista)) + '</span></td>' +
+      '<td class="go-cell" aria-hidden="true">›</td></tr>';
+    if(ab) h += '<tr class="det"><td colspan="10">' + cvDetalhe(p, semanas) + '</td></tr>';
   });
-  var elc = document.getElementById("cmpCards");
-  elc.innerHTML = h;
-  elc.querySelectorAll("[data-wk]").forEach(function(b){
-    b.addEventListener("click", function(){
-      abrirRelatorio(b.getAttribute("data-wk"), b.getAttribute("data-data"));
-    });
-  });
+  document.getElementById("cvTb").innerHTML = h ||
+    '<tr><td colspan="10" class="empty">Nenhum imóvel no período.</td></tr>';
 
-  var t = "";
-  KPIS.forEach(function(k){
-    var b = {};
-    k.bandas.forEach(function(x){
-      b[x.nome.indexOf("Revisar")>-1 ? "r" : (x.nome.indexOf("Leve")>-1 ? "a" : "b")] = x.qtd;
-    });
-    t += '<tr>' +
-      '<td><span class="wk">' + esc(k.data) + (k.atual ? " · atual" : "") + '</span></td>' +
-      '<td class="num" data-l="Imóveis">' + k.imoveis + '</td>' +
-      '<td class="num" data-l="Corretores">' + k.corretores + '</td>' +
-      '<td class="num" data-l="Gap médio">' + pct(k.gap_medio) + '</td>' +
-      '<td class="num" data-l="Nota">' + dec1(k.nota_media) + '</td>' +
-      '<td class="num" data-l="Revisar">' + (b.r||0) + '</td>' +
-      '<td class="num" data-l="Leve ajuste">' + (b.a||0) + '</td>' +
-      '<td class="num" data-l="Alinhado">' + (b.b||0) + '</td>' +
-      '</tr>';
+  document.querySelectorAll("#cvTbl thead th[data-s]").forEach(function(th){
+    var on = th.getAttribute("data-s") === CV.col;
+    th.classList.toggle("on", on);
+    th.querySelector(".ar").textContent = on ? (CV.dir > 0 ? "▲" : "▼") : "⇅";
   });
-  document.getElementById("cmpTb").innerHTML = t;
 }
 
-function kpi(valor, rotulo, delta){
-  return '<div class="wk-kpi"><div class="n">' + esc(valor) + '</div><div class="l">' + esc(rotulo) + '</div>' +
-         (delta ? '<div class="dl ' + dclass(delta) + '">' + esc(delta) + '</div>' : "") + '</div>';
+function cvDetalhe(p, semanas){
+  /* uma coluna por semana do período, da mais antiga para a mais recente */
+  var porSem = {};
+  p.lista.forEach(function(r){ (porSem[r.w] = porSem[r.w] || []).push(r); });
+  var maior = 1;
+  semanas.forEach(function(k){ maior = Math.max(maior, (porSem[k.data] || []).length); });
+  var cols = semanas.slice().reverse().map(function(k){
+    var l = porSem[k.data] || [], c = contaSit(l);
+    var alt = l.length / maior * 92;
+    return '<div class="col" title="' + esc(k.data) + ': ' + l.length + (l.length === 1 ? " imóvel" : " imóveis") + '">' +
+      '<span class="q">' + (l.length || "") + '</span>' +
+      '<div class="pil" style="height:' + (l.length ? alt : 2) + 'px">' +
+        ["b","a","r"].map(function(x){ return c[x] ? '<i class="' + x + '" style="height:' + (c[x]/l.length*100) + '%"></i>' : ""; }).join("") +
+      '</div><span class="d">' + esc(k.data.slice(0,5)) + '</span></div>';
+  }).join("");
+  return '<div class="cv-det">' +
+    '<div><h4>Captações por semana</h4><div class="cv-sem">' + cols + '</div>' +
+      '<div class="cv-leg"><span><i class="r"></i>Revisar</span><span><i class="a"></i>Leve ajuste</span><span><i class="b"></i>Alinhado</span></div></div>' +
+    '<div><h4>Tipos captados</h4><div class="cv-tp">' + esc(tiposTxt(p.lista).join(" · ")) + '</div>' +
+      '<button class="btn" type="button" data-ver="' + esc(p.nome) + '">Ver os imóveis no menu de pesquisa</button></div>' +
+    '</div>';
+}
+
+function initCmp(){
+  document.querySelectorAll("#cvPer button").forEach(function(b){
+    b.addEventListener("click", function(){
+      CV.n = Number(b.getAttribute("data-n"));
+      document.querySelectorAll("#cvPer button").forEach(function(o){ o.classList.toggle("on", o === b); });
+      renderCmp();
+    });
+  });
+  document.querySelectorAll("#cvTbl thead th[data-s]").forEach(function(th){
+    th.addEventListener("click", function(){
+      var col = th.getAttribute("data-s");
+      if(CV.col === col) CV.dir = -CV.dir;
+      else { CV.col = col; CV.dir = (col === "nome" || col === "pR") ? 1 : -1; }
+      renderCmp();
+    });
+  });
+  document.getElementById("cvTb").addEventListener("click", function(ev){
+    var ver = ev.target.closest("[data-ver]");
+    if(ver){
+      /* leva o corretor para o filtro do menu de pesquisa */
+      var nome = ver.getAttribute("data-ver");
+      document.getElementById("fcap").value = nome;
+      document.getElementById("fcap").dispatchEvent(new Event("change"));
+      marcarAba("busca"); mostrar("busca"); avisaRota("");
+      return;
+    }
+    var tr = ev.target.closest("tr.cv-row");
+    if(!tr) return;
+    var nome2 = tr.getAttribute("data-nome");
+    CV.aberto = CV.aberto === nome2 ? "" : nome2;
+    renderCmp();
+  });
+  renderCmp();
 }
 
 /* ---------------- início ---------------- */
