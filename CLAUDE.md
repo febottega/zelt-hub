@@ -5,7 +5,7 @@ https://febottega.github.io/zelt-hub/ (repo `febottega/zelt-hub`, Pages no root 
 
 ## REGRA PRINCIPAL: nunca leia nem edite o index.html
 
-`index.html` (11 MB) é **gerado**. Contém as 24 ferramentas em base64 — ilegível
+`index.html` (11 MB) é **gerado**. Contém as 25 ferramentas em base64 — ilegível
 para busca, impossível de editar cirurgicamente. Lê-lo custa cerca de **2,5 milhões
 de tokens** e não cabe em nenhuma janela de contexto.
 
@@ -43,7 +43,7 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 24 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 25 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
@@ -134,7 +134,16 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   a parcela é fixa na PMT e a amortização é o que sobra dela. A amortização extra
   abate do saldo nos dois casos, encurtando o prazo.
 - **arquivos** — tabela de PDFs para o cliente; os arquivos ficam em `arquivos/` na
-  raiz do repo, fora do payload, e abrem em aba nova.
+  raiz do repo, fora do payload, e abrem em aba nova. Desde 20/10/2026 não tem card: abre pela
+  caixinha de correspondência (`.hero-mail`, `data-tool="arquivos"`) no topo do hub, à esquerda
+  de "Simulação e Pré Aprovação"; abaixo de 640px a caixinha mostra o nome ao lado do ícone.
+- **captacoes** — Captações × Angariações (entrou em 20/10/2026 no lugar do card de
+  arquivos): ranking por corretor de angariações vendidas, carteira, tempo de cadastro,
+  qualidade, leads por imóvel e % sem procura. É o HTML que o Felipe manda, inteiro, mais o
+  bloco de voltar ao hub (`SELETOR = "header img"`); os dados ficam no `const D` do próprio
+  arquivo. O cabeçalho, as fontes (Oswald + Atkinson) e o logo de 30px foram padronizados com
+  o painel de avaliações por script (`cxa-padroniza.js`, no scratchpad da sessão de 20/10):
+  numa versão nova, refaça essa padronização e reemende o bloco do fim.
 
 No topo do hub, à direita do logo — no lugar do antigo selo "Uso interno ·
 Equipe de corretores", tirado em 25/09/2026 —, fica a caixa `.hero-links`
@@ -188,10 +197,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (24 payloads, 16.140.648 bytes):
+Hash de referência (25 payloads, 16.189.688 bytes):
 
 ```
-6BEB828A81F1893713169F352ED50FE78B787F07FDA58F2744AD84280BA395D5
+A96D84CFE6F155B6A5375015901A3B8BC2B22B600840B08DDC03DB3EB6A3FF2A
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
