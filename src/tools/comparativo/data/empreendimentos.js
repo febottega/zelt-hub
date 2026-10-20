@@ -2050,5 +2050,69 @@ const DATA = [
     "terreno": false,
     "sold": false,
     "id": 67
+  },
+  {
+    "tipo": "Cobertura",
+    "construtora": "Hill",
+    "empreendimento": "Malta",
+    "bairro": "Velha",
+    "unidade": "1203",
+    "config": "3 suítes",
+    "vagas": "2",
+    "vagasN": 2,
+    "apriv": 151.05,
+    "atotal": null,
+    "faixaArea": false,
+    "vmin": 1581412.7,
+    "vmax": 1581412.7,
+    "media": 1581412.7,
+    "rpriv": 10469.47,
+    "rtotal": null,
+    "entrega": "07/2027",
+    "entregaKey": 24331,
+    "pronto": false,
+    "condicao": "Entrada + 60x",
+    "correcao": "",
+    "quartos": [
+      3
+    ],
+    "suites": [
+      3
+    ],
+    "terreno": false,
+    "sold": false,
+    "id": 68
+  },
+  {
+    "tipo": "Cobertura",
+    "construtora": "Hill",
+    "empreendimento": "Malta",
+    "bairro": "Velha",
+    "unidade": "1204",
+    "config": "3 suítes",
+    "vagas": "2",
+    "vagasN": 2,
+    "apriv": 142.66,
+    "atotal": null,
+    "faixaArea": false,
+    "vmin": 1438255.2,
+    "vmax": 1438255.2,
+    "media": 1438255.2,
+    "rpriv": 10081.7,
+    "rtotal": null,
+    "entrega": "07/2027",
+    "entregaKey": 24331,
+    "pronto": false,
+    "condicao": "Entrada + 60x",
+    "correcao": "",
+    "quartos": [
+      3
+    ],
+    "suites": [
+      3
+    ],
+    "terreno": false,
+    "sold": false,
+    "id": 69
   }
 ];

@@ -74,7 +74,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | Quero mudar | Arquivo | Tamanho |
 |---|---|---|
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **71 KB** |
-| os 65 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
+| os 67 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
@@ -114,7 +114,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 18 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
-- **comparativo** — 65 empreendimentos. Abas: comparativo, mudanças, melhores preços,
+- **comparativo** — 67 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos. **Toda mudança no comparativo atualiza a data em
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
   `DD/MM/AAAA`) e o chip do card "Empreendimentos" no `hub.html` (`Atualizado em DD/MM`).
@@ -197,10 +197,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (25 payloads, 16.191.992 bytes):
+Hash de referência (25 payloads, 16.193.644 bytes):
 
 ```
-D967F057A2BCA33CBCA790DE595D8D0D366A30912D7B54143D642E78D47F1622
+30018E51D093143FEF5728190C15A47C6340FEC7044943C80F3D99FB19C6108E
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -440,7 +440,7 @@ do Wissen saiu da tabela em out/2026), o card continua com ela — preço e áre
 tabela, a configuração não. Pedido do Felipe em 16/10/2026; o Wissen voltou para "1 e 2
 quartos (1 suíte)". Só mude a configuração quando ele pedir (como no Egon Belz, 1 quarto).
 
-**O `rpriv` não tem uma fórmula só.** Dos 65 cards, 52 usam `media/apriv` e **7
+**O `rpriv` não tem uma fórmula só.** Dos 67 cards, 54 usam `media/apriv` e **7
 usam `media` dividida pela média da faixa de área** (`(apriv+atotal)/2`): Liv,
 Egon Belz, Gardens, San Vito, Lago di Garda, Alphaville, Ed. Edimburgo e
 Lisbon. O Central Park usa outra coisa ainda. Antes de recalcular
@@ -489,7 +489,8 @@ O **Malta** (out/2026): da Hill sobrou só a cobertura 1201; 302, 406, 1203 e 12
 investidor e vendidas pela **Torresani** (25% + 60x ou −3% à vista). Na tabela elas levam a
 etiqueta verde "Torresani" — campo `etiquetas: {unidade: texto}` da tabela, desenhado como
 `.utag-etq` pelo `app.js`; serve para qualquer outra tabela. O card de apto tipo (id 14) usa a
-302 e a 406; 1203 e 1204 (151 e 143 m², 12º andar) ficaram fora dos cards.
+302 e a 406; 1203 e 1204 (151 e 143 m², 12º andar) ganharam cards de cobertura próprios
+(ids 68 e 69, como o da 1201), a pedido do Felipe em 20/10/2026, com 3 suítes copiadas da 1201.
 
 ### Duas formas no price-changes.js
 
