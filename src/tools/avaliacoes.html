@@ -601,6 +601,8 @@ function pct(v,dec){
   if(v===null||v===undefined) return "—";
   return v.toFixed(dec===undefined?1:dec).replace(".",",") + "%";
 }
+/* gap médio sem o sinal: o gap é sempre abaixo do anunciado, então o número basta (pedido de 21/10/2026) */
+function pctAbs(v,dec){ return (v===null||v===undefined) ? "—" : pct(Math.abs(v),dec); }
 function dec1(v){ return (v===null||v===undefined) ? "—" : v.toFixed(1).replace(".",","); }
 function classe(faixa){
   return faixa==="Revisar" ? "r" : (faixa==="Leve ajuste" ? "a" : "b");
@@ -1138,7 +1140,7 @@ function render(){
   var notas = LISTA.filter(function(r){return r.n!==null&&r.n!==undefined}).map(function(r){return r.n});
   var med = function(v){ return v.length ? v.reduce(function(a,b){return a+b},0)/v.length : null; };
   document.getElementById("kQtd").textContent = LISTA.length;
-  document.getElementById("kGap").textContent = gaps.length ? pct(med(gaps)) : "—";
+  document.getElementById("kGap").textContent = gaps.length ? pctAbs(med(gaps)) : "—";
   document.getElementById("kNota").textContent = notas.length ? dec1(med(notas)) : "—";
   ["Revisar","Leve ajuste","Alinhado"].forEach(function(f,i){
     document.getElementById(["kR","kA","kB"][i]).textContent =
@@ -1438,7 +1440,7 @@ function renderCmp(){
     '<div class="kpi"><div class="num">' + tot + '</div><div class="lbl">Imóveis captados</div></div>' +
     '<div class="kpi"><div class="num">' + dec1(nSem ? tot/nSem : null) + '</div><div class="lbl">Imóveis por semana</div></div>' +
     '<div class="kpi"><div class="num">' + dec1(vot) + '</div><div class="lbl">Corretores que votam / semana</div></div>' +
-    '<div class="kpi"><div class="num">' + (gap === null ? "—" : pct(gap)) + '</div><div class="lbl">Gap médio</div></div>' +
+    '<div class="kpi"><div class="num">' + pctAbs(gap) + '</div><div class="lbl">Gap médio</div></div>' +
     '<div class="kpi"><div class="num">' + dec1(nota) + '<span class="suf"> /10</span></div><div class="lbl">Nota média</div></div>';
 
   /* situação */
@@ -1466,6 +1468,8 @@ function renderCmp(){
   var lin = cvCorretores(rsC, nSem || 1);
   lin.sort(function(x, y){
     var a = x[CV.col], b = y[CV.col];
+    /* gap aparece sem sinal: ordena pelo tamanho dele */
+    if(CV.col === "gap"){ a = a === null ? null : Math.abs(a); b = b === null ? null : Math.abs(b); }
     if(CV.col === "nome") return a.localeCompare(b, "pt-BR") * (CV.dir > 0 ? 1 : -1);
     if(a === null && b !== null) return 1;
     if(b === null && a !== null) return -1;
@@ -1483,7 +1487,7 @@ function renderCmp(){
       '<td class="num" data-l="Dentro do preço"><span class="cv-pb">' + pct(p.pB, 0) + '</span></td>' +
       '<td data-l="Situação"><div class="cv-sit">' + barraSit(p.sit, p.qtd, true) +
         '<small>' + p.sit.r + ' revisar · ' + p.sit.a + ' leve · ' + p.sit.b + ' alinhado</small></div></td>' +
-      '<td class="num" data-l="Gap médio"><span class="gap ' + bandaDoGap(p.gap) + '">' + pct(p.gap) + '</span></td>' +
+      '<td class="num" data-l="Gap médio"><span class="gap ' + bandaDoGap(p.gap) + '">' + pctAbs(p.gap) + '</span></td>' +
       '<td class="num" data-l="Nota média"><span class="nota">' + dec1(p.nota) + '</span></td>' +
       '<td data-l="Tipos"><span class="cv-tp">' + esc(cvTiposCurto(p.lista)) + '</span></td>' +
       '<td class="go-cell" aria-hidden="true">›</td></tr>';

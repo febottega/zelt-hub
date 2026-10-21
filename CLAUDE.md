@@ -113,7 +113,9 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   Período: tudo, últimas 8 ou últimas 4 semanas (`CV.n`). Dupla conta para os dois (`capsDe`).
   Filtros de tipo (`CV.tipo`) e de faixa de valor anunciado (`CV_FAIXAS`, 21/10/2026) ficam
   logo acima da tabela por corretor e filtram só ela (a visão geral segue o período); o botão
-  "Ver os imóveis" leva corretor, tipo e faixa para a busca.
+  "Ver os imóveis" leva corretor, tipo e faixa para a busca. O **gap médio** aparece sem o
+  sinal de menos (`pctAbs`) no menu de pesquisa, na visão geral e na tabela por corretor, e
+  esta ordena pelo tamanho do gap; o gap de cada imóvel continua com sinal.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 18 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
@@ -205,10 +207,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (25 payloads, 16.207.528 bytes):
+Hash de referência (25 payloads, 16.207.992 bytes):
 
 ```
-15B4AE35F7CB9104F07A39B92147B03FF23698AFA29C52692C175FD51CF6E157
+66E78C5998B11F86F7ABE0DB0C05E1BE986300DBE7F2EB14E31F62F673FA6393
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
