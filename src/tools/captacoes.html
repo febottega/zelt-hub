@@ -262,6 +262,15 @@ render();
 
 <!-- ZELT: voltar ao hub pelo logo -->
 <style>
+/* sinal de voltar: bolinha laranja com seta no canto superior esquerdo do logo,
+   para deixar claro que o logo leva de volta ao inicio do hub */
+.zelt-volta{position:relative;display:inline-flex;flex:none;vertical-align:middle}
+.zelt-volta-ic{position:absolute;top:-7px;left:-9px;width:17px;height:17px;border-radius:50%;
+  background:#ff9e36;box-shadow:0 0 0 2px #1e1b35;display:flex;align-items:center;justify-content:center;
+  pointer-events:none;transition:transform .15s ease}
+.zelt-volta-ic svg{width:11px;height:11px;fill:none;stroke:#1e1b35;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;margin-left:-1px}
+.zelt-volta:hover .zelt-volta-ic{transform:translateX(-2px)}
+@media print{.zelt-volta-ic{display:none}}
 /* O logo da ZELT no topo e o caminho de volta ao hub. Saiu daqui o botao
    fixo no canto inferior esquerdo: ficava por cima do conteudo em toda
    tela e em toda ferramenta. */
@@ -273,6 +282,21 @@ header img:focus-visible{outline:2px solid #ff9e36;outline-offset:4px;border-rad
 (function(){
   /* Unica linha que muda de ferramenta para ferramenta. */
   var SELETOR = 'header img';
+
+  /* embrulha o logo e poe o sinal de voltar no canto superior esquerdo */
+  function marcaVolta(el){
+    var p = el.parentNode;
+    if(!p || (p.classList && p.classList.contains('zelt-volta'))) return;
+    var w = document.createElement('span');
+    w.className = 'zelt-volta';
+    p.insertBefore(w, el);
+    w.appendChild(el);
+    var b = document.createElement('span');
+    b.className = 'zelt-volta-ic';
+    b.setAttribute('aria-hidden', 'true');
+    b.innerHTML = '<svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>';
+    w.appendChild(b);
+  }
 
   function volta(ev){
     if(ev){ ev.preventDefault(); ev.stopPropagation(); }
@@ -301,6 +325,7 @@ header img:focus-visible{outline:2px solid #ff9e36;outline-offset:4px;border-rad
       el.setAttribute('tabindex','0');
       el.setAttribute('title','Voltar ao Hub ZELT');
       el.setAttribute('aria-label','Voltar ao Hub ZELT');
+      marcaVolta(el);
       return;
     }
     if(++n < 12) setTimeout(rotula, 250);

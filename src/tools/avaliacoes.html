@@ -339,6 +339,15 @@ body.ficha-aberta{overflow:hidden}
 header.top .brand img{cursor:pointer;transition:opacity .15s ease}
 header.top .brand img:hover{opacity:.68}
 header.top .brand img:focus-visible{outline:2px solid #ff9e36;outline-offset:4px;border-radius:3px}
+/* sinal de voltar: bolinha laranja com seta no canto superior esquerdo do logo,
+   para deixar claro que o logo leva de volta ao inicio do hub */
+.zelt-volta{position:relative;display:inline-flex;flex:none;vertical-align:middle}
+.zelt-volta-ic{position:absolute;top:-7px;left:-9px;width:17px;height:17px;border-radius:50%;
+  background:#ff9e36;box-shadow:0 0 0 2px #1e1b35;display:flex;align-items:center;justify-content:center;
+  pointer-events:none;transition:transform .15s ease}
+.zelt-volta-ic svg{width:11px;height:11px;fill:none;stroke:#1e1b35;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;margin-left:-1px}
+.zelt-volta:hover .zelt-volta-ic{transform:translateX(-2px)}
+@media print{.zelt-volta-ic{display:none}}
 
 .hidden{display:none!important}
 body.rel-mode{overflow:hidden}
@@ -497,11 +506,6 @@ body.rel-mode{overflow:hidden}
       <button type="button" data-n="4">Últimas 4 semanas</button>
     </div>
   </div>
-  <div class="cv-filtros">
-    <div class="f-item"><label for="cvTipo">Tipo de imóvel</label><select id="cvTipo"></select></div>
-    <div class="f-item"><label for="cvFaixa">Valor anunciado</label><select id="cvFaixa"></select></div>
-    <button type="button" class="btn" id="cvLimpa">Limpar filtros</button>
-  </div>
 
   <h2 class="cv-h">Visão geral</h2>
   <div class="kpis" id="cvKpis"></div>
@@ -519,6 +523,11 @@ body.rel-mode{overflow:hidden}
 
   <h2 class="cv-h">Por corretor</h2>
   <p class="cmp-note">Clique no cabeçalho para ordenar e num corretor para ver as captações dele semana a semana. Imóvel captado em dupla conta para os dois.</p>
+  <div class="cv-filtros" style="margin:0 0 12px">
+    <div class="f-item"><label for="cvTipo">Tipo de imóvel</label><select id="cvTipo"></select></div>
+    <div class="f-item"><label for="cvFaixa">Valor anunciado</label><select id="cvFaixa"></select></div>
+    <button type="button" class="btn" id="cvLimpa">Limpar filtros</button>
+  </div>
   <div class="tbl-wrap">
     <table id="cvTbl">
       <thead><tr>
@@ -554,8 +563,23 @@ document.addEventListener("click", function(ev){
   else { history.back(); }
 });
 (function(){
+  /* embrulha o logo e poe o sinal de voltar no canto superior esquerdo */
+  function marcaVolta(el){
+    var p = el.parentNode;
+    if(!p || (p.classList && p.classList.contains('zelt-volta'))) return;
+    var w = document.createElement('span');
+    w.className = 'zelt-volta';
+    p.insertBefore(w, el);
+    w.appendChild(el);
+    var b = document.createElement('span');
+    b.className = 'zelt-volta-ic';
+    b.setAttribute('aria-hidden', 'true');
+    b.innerHTML = '<svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>';
+    w.appendChild(b);
+  }
   var el = document.querySelector(ZELT_LOGO);
   if(!el) return;
+  marcaVolta(el);
   el.setAttribute("role","button");
   el.setAttribute("tabindex","0");
   el.setAttribute("title","Voltar ao Hub ZELT");
@@ -1392,18 +1416,17 @@ function renderCmp(){
   var semanas = cvSemanas(), datas = {};
   semanas.forEach(function(k){ datas[k.data] = 1; });
   var fx = CV_FAIXAS[CV.faixa] || null;
-  var rs = DADOS.filter(function(r){
-    if(!datas[r.w]) return false;
+  var rs = DADOS.filter(function(r){ return datas[r.w]; });
+  /* tipo e faixa de valor filtram só a tabela por corretor */
+  var rsC = rs.filter(function(r){
     if(CV.tipo && r.t !== CV.tipo) return false;
     if(fx && !(r.a >= fx[1] && r.a < fx[2])) return false;
     return true;
   });
   var nSem = semanas.length, tot = rs.length;
   var mais = semanas[semanas.length-1], menos = semanas[0];
-  var filtro = [CV.tipo ? esc(nomeTipo(CV.tipo, 2)) : "", fx ? "valor anunciado " + esc(fx[0].charAt(0).toLowerCase() + fx[0].slice(1)) : ""].filter(Boolean).join(", ");
   document.getElementById("cvNota").innerHTML = "Visão consolidada de <b>" + nSem + " semanas</b>" +
-    (nSem ? " — de " + esc(mais.data) + " a " + esc(menos.data) : "") +
-    (filtro ? " · só <b>" + filtro + "</b>" : "") + ".";
+    (nSem ? " — de " + esc(mais.data) + " a " + esc(menos.data) : "") + ".";
   document.getElementById("cvTipo").parentNode.classList.toggle("on", !!CV.tipo);
   document.getElementById("cvFaixa").parentNode.classList.toggle("on", !!fx);
   document.getElementById("cvLimpa").classList.toggle("hidden", !CV.tipo && !fx);
@@ -1440,7 +1463,7 @@ function renderCmp(){
     }).join("") || '<span class="sub">Nenhum imóvel no período.</span>';
 
   /* por corretor */
-  var lin = cvCorretores(rs, nSem || 1);
+  var lin = cvCorretores(rsC, nSem || 1);
   lin.sort(function(x, y){
     var a = x[CV.col], b = y[CV.col];
     if(CV.col === "nome") return a.localeCompare(b, "pt-BR") * (CV.dir > 0 ? 1 : -1);
