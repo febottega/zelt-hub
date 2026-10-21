@@ -111,6 +111,8 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   corretor** (imóveis, semanas ativas, média/semana, % alinhado, situação, gap, nota, tipos),
   ordenável, com o detalhe semana a semana e o botão que leva o corretor ao filtro da busca.
   Período: tudo, últimas 8 ou últimas 4 semanas (`CV.n`). Dupla conta para os dois (`capsDe`).
+  Filtros de tipo (`CV.tipo`) e de faixa de valor anunciado (`CV_FAIXAS`, 21/10/2026) valem
+  para a aba inteira; o botão "Ver os imóveis" leva corretor, tipo e faixa para a busca.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 18 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
@@ -197,10 +199,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (25 payloads, 16.194.344 bytes):
+Hash de referência (25 payloads, 16.198.932 bytes):
 
 ```
-BE6557003A23317A1AFBC99A5A71EE5D2016CEC3AC275FEB4F5D197C653FE69F
+6247534CAAF4E0F7B54B25F5C1ABC9E75022582EB8D015B9F3B56BBC05DB4865
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

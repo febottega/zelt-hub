@@ -265,6 +265,11 @@ body.ficha-aberta{overflow:hidden}
   border-radius:var(--radius-pill);background:#fff;color:var(--n-600)}
 .cv-per button:hover{border-color:var(--zelt-orange);color:var(--orange-700)}
 .cv-per button.on{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
+.cv-filtros{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-top:12px;
+  background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-sm);padding:14px 18px}
+.cv-filtros .f-item{min-width:210px}
+.cv-filtros .f-item.on select{border-color:var(--zelt-orange);background:var(--orange-50)}
+@media (max-width:760px){ .cv-filtros .f-item{min-width:0;flex:1 1 100%} }
 .cv-h{font-family:var(--font-display);font-weight:600;font-size:19px;text-transform:uppercase;
   letter-spacing:var(--ls-wide);color:var(--navy-900);margin:26px 0 12px}
 .cv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
@@ -491,6 +496,11 @@ body.rel-mode{overflow:hidden}
       <button type="button" data-n="8">Últimas 8 semanas</button>
       <button type="button" data-n="4">Últimas 4 semanas</button>
     </div>
+  </div>
+  <div class="cv-filtros">
+    <div class="f-item"><label for="cvTipo">Tipo de imóvel</label><select id="cvTipo"></select></div>
+    <div class="f-item"><label for="cvFaixa">Valor anunciado</label><select id="cvFaixa"></select></div>
+    <button type="button" class="btn" id="cvLimpa">Limpar filtros</button>
   </div>
 
   <h2 class="cv-h">Visão geral</h2>
@@ -1315,7 +1325,15 @@ function initTabs(){
    O período corta as semanas mais recentes do KPIS; a média de corretores que
    votaram vem do KPIS porque quem vota não fica no DADOS. Imóvel captado em
    dupla conta para cada corretor (capsDe), igual ao filtro do menu de pesquisa. */
-var CV = {n:0, col:"qtd", dir:-1, aberto:""};
+var CV = {n:0, col:"qtd", dir:-1, aberto:"", tipo:"", faixa:""};
+/* filtro de valor do comparativo, pelo valor anunciado: [rótulo, de (inclusive), até (exclusive)] */
+var CV_FAIXAS = {
+  "ate500":  ["Até R$ 500 mil", 0, 500000],
+  "500a1m":  ["De R$ 500 mil a R$ 1 milhão", 500000, 1000000],
+  "1a2m":    ["De R$ 1 a R$ 2 milhões", 1000000, 2000000],
+  "2a5m":    ["De R$ 2 a R$ 5 milhões", 2000000, 5000000],
+  "acima5m": ["Acima de R$ 5 milhões", 5000000, Infinity]
+};
 /* fora da tabela por corretor, a pedido do Felipe (20/10/2026): a ZELT não é corretor e a
    Maria Helena (MH) tem poucas captações. Os imóveis deles seguem na visão geral e na busca. */
 var CV_FORA = {"ZELT":1, "Maria Helena":1};
@@ -1373,11 +1391,22 @@ function cvCorretores(rs, nSem){
 function renderCmp(){
   var semanas = cvSemanas(), datas = {};
   semanas.forEach(function(k){ datas[k.data] = 1; });
-  var rs = DADOS.filter(function(r){ return datas[r.w]; });
+  var fx = CV_FAIXAS[CV.faixa] || null;
+  var rs = DADOS.filter(function(r){
+    if(!datas[r.w]) return false;
+    if(CV.tipo && r.t !== CV.tipo) return false;
+    if(fx && !(r.a >= fx[1] && r.a < fx[2])) return false;
+    return true;
+  });
   var nSem = semanas.length, tot = rs.length;
   var mais = semanas[semanas.length-1], menos = semanas[0];
+  var filtro = [CV.tipo ? esc(nomeTipo(CV.tipo, 2)) : "", fx ? "valor anunciado " + esc(fx[0].charAt(0).toLowerCase() + fx[0].slice(1)) : ""].filter(Boolean).join(", ");
   document.getElementById("cvNota").innerHTML = "Visão consolidada de <b>" + nSem + " semanas</b>" +
-    (nSem ? " — de " + esc(mais.data) + " a " + esc(menos.data) : "") + ".";
+    (nSem ? " — de " + esc(mais.data) + " a " + esc(menos.data) : "") +
+    (filtro ? " · só <b>" + filtro + "</b>" : "") + ".";
+  document.getElementById("cvTipo").parentNode.classList.toggle("on", !!CV.tipo);
+  document.getElementById("cvFaixa").parentNode.classList.toggle("on", !!fx);
+  document.getElementById("cvLimpa").classList.toggle("hidden", !CV.tipo && !fx);
 
   /* números gerais */
   var gap = media(rs.map(function(r){ return r.g; })), nota = media(rs.map(function(r){ return r.n; }));
@@ -1471,6 +1500,24 @@ function cvDetalhe(p, semanas){
 }
 
 function initCmp(){
+  /* tipo (com a contagem de todo o período) e faixa de valor anunciado */
+  var t = {};
+  DADOS.forEach(function(r){ t[r.t] = (t[r.t]||0) + 1; });
+  document.getElementById("cvTipo").innerHTML = '<option value="">Todos os tipos</option>' +
+    Object.keys(t).sort(function(a,b){ return t[b]-t[a] || a.localeCompare(b,"pt-BR"); })
+      .map(function(k){ return '<option value="' + esc(k) + '">' + esc(nomeTipo(k, 2)) + ' (' + t[k] + ')</option>'; }).join("");
+  document.getElementById("cvFaixa").innerHTML = '<option value="">Qualquer valor</option>' +
+    Object.keys(CV_FAIXAS).map(function(k){
+      var n = DADOS.filter(function(r){ return r.a >= CV_FAIXAS[k][1] && r.a < CV_FAIXAS[k][2]; }).length;
+      return '<option value="' + k + '">' + esc(CV_FAIXAS[k][0]) + ' (' + n + ')</option>';
+    }).join("");
+  document.getElementById("cvTipo").addEventListener("change", function(){ CV.tipo = this.value; CV.aberto = ""; renderCmp(); });
+  document.getElementById("cvFaixa").addEventListener("change", function(){ CV.faixa = this.value; CV.aberto = ""; renderCmp(); });
+  document.getElementById("cvLimpa").addEventListener("click", function(){
+    CV.tipo = ""; CV.faixa = "";
+    document.getElementById("cvTipo").value = ""; document.getElementById("cvFaixa").value = "";
+    renderCmp();
+  });
   document.querySelectorAll("#cvPer button").forEach(function(b){
     b.addEventListener("click", function(){
       CV.n = Number(b.getAttribute("data-n"));
@@ -1492,6 +1539,11 @@ function initCmp(){
       /* leva o corretor para o filtro do menu de pesquisa */
       var nome = ver.getAttribute("data-ver");
       document.getElementById("fcap").value = nome;
+      /* leva junto o tipo e a faixa de valor escolhidos aqui */
+      var fx = CV_FAIXAS[CV.faixa];
+      document.getElementById("ftip").value = CV.tipo;
+      document.getElementById("fvmin").value = fx && fx[1] ? String(fx[1]) : "";
+      document.getElementById("fvmax").value = fx && isFinite(fx[2]) ? String(fx[2] - 1) : "";
       document.getElementById("fcap").dispatchEvent(new Event("change"));
       marcarAba("busca"); mostrar("busca"); avisaRota("");
       return;
