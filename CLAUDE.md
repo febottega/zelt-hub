@@ -116,7 +116,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   "Ver os imóveis" leva corretor, tipo e faixa para a busca.
   O gap médio mostra o sinal de menos (ficou sem por um dia e o Felipe pediu de volta).
   No menu de pesquisa a etiqueta de tipo tem cor (`tipoCor`): terreno verde, casa azul,
-  cobertura amarela, apartamento vermelho; os demais tipos no cinza padrão. Em "Tipos
+  apartamento amarelo, cobertura vermelha (trocadas a pedido em 21/10); os demais tipos no cinza padrão. Em "Tipos
   captados" do comparativo, só apartamento, casa, terreno, cobertura e sala comercial ficam
   sozinhos; o resto soma numa linha "Outros" que abre (`<details>`) para mostrar cada um.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
@@ -213,7 +213,7 @@ Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 Hash de referência (25 payloads, 16.210.288 bytes):
 
 ```
-B554461A3E8B3823E9AB6CA161CB1EC180B4E2F1146C4FDB018F2073507D1904
+095714146D026DE77267EFA74BC67E1C8CD431692515E11BD3F0478047D504A8
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
