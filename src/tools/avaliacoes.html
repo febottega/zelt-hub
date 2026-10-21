@@ -185,6 +185,10 @@ tbody td{padding:11px 10px;font-size:14px;vertical-align:middle}
 .cod{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--navy-900);letter-spacing:.02em}
 .tp{display:inline-block;font-family:var(--font-display);font-size:9.5px;font-weight:500;text-transform:uppercase;
   letter-spacing:.1em;color:var(--n-600);background:var(--n-100);border-radius:4px;padding:2px 6px;margin-left:6px;vertical-align:1px}
+.tp.tp-ter{background:#d8f0e4;color:#1b7a50}
+.tp.tp-casa{background:#dde9f7;color:#27568f}
+.tp.tp-cob{background:#fdf0c2;color:#8a6500}
+.tp.tp-ap{background:#fbe0de;color:#a8302a}
 .end{color:var(--text-strong);font-weight:700;font-size:13.5px}
 .sub{color:var(--n-600);font-size:12.5px}
 .money{font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -287,6 +291,15 @@ body.ficha-aberta{overflow:hidden}
 .cv-tipo .br{height:8px;border-radius:99px;background:var(--n-100);overflow:hidden}
 .cv-tipo .br i{display:block;height:100%;background:var(--navy-500);border-radius:99px}
 .cv-tipo .ct{font-family:var(--font-display);font-weight:600;color:var(--navy-900);text-align:right;font-variant-numeric:tabular-nums}
+.cv-outros summary{list-style:none;cursor:pointer}
+.cv-outros summary::-webkit-details-marker{display:none}
+.cv-outros summary:hover .nm{color:var(--orange-700)}
+.cv-seta{display:inline-block;color:var(--zelt-orange);margin-left:4px;transition:transform .15s}
+.cv-outros[open] .cv-seta{transform:rotate(90deg)}
+.cv-outros-lista{display:flex;flex-direction:column;gap:6px;margin:8px 0 2px;padding-left:14px;border-left:2px solid var(--n-200)}
+.cv-tipo.sub{font-size:12.5px}
+.cv-tipo.sub .nm{font-weight:400;color:var(--n-700)}
+.cv-tipo.sub .br i{background:var(--navy-300)}
 #cvTbl{min-width:1040px}
 #cvTb tr.cv-row.aberto{background:var(--orange-50)}
 #cvTb tr.cv-row .go-cell{transition:transform .15s}
@@ -601,8 +614,6 @@ function pct(v,dec){
   if(v===null||v===undefined) return "—";
   return v.toFixed(dec===undefined?1:dec).replace(".",",") + "%";
 }
-/* gap médio sem o sinal: o gap é sempre abaixo do anunciado, então o número basta (pedido de 21/10/2026) */
-function pctAbs(v,dec){ return (v===null||v===undefined) ? "—" : pct(Math.abs(v),dec); }
 function dec1(v){ return (v===null||v===undefined) ? "—" : v.toFixed(1).replace(".",","); }
 function classe(faixa){
   return faixa==="Revisar" ? "r" : (faixa==="Leve ajuste" ? "a" : "b");
@@ -611,6 +622,10 @@ function esc(s){
   return String(s==null?"":s).replace(/[&<>"]/g, function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];
   });
+}
+/* cor da etiqueta de tipo no menu de pesquisa; os demais tipos ficam no cinza padrão */
+function tipoCor(t){
+  return ({"Terreno":" tp-ter","Casa":" tp-casa","Cobertura":" tp-cob","Apartamento":" tp-ap"})[t] || "";
 }
 function dataOrd(d){ var p=String(d).split("/"); return p[2]+p[1]+p[0]; }
 
@@ -1140,7 +1155,7 @@ function render(){
   var notas = LISTA.filter(function(r){return r.n!==null&&r.n!==undefined}).map(function(r){return r.n});
   var med = function(v){ return v.length ? v.reduce(function(a,b){return a+b},0)/v.length : null; };
   document.getElementById("kQtd").textContent = LISTA.length;
-  document.getElementById("kGap").textContent = gaps.length ? pctAbs(med(gaps)) : "—";
+  document.getElementById("kGap").textContent = gaps.length ? pct(med(gaps)) : "—";
   document.getElementById("kNota").textContent = notas.length ? dec1(med(notas)) : "—";
   ["Revisar","Leve ajuste","Alinhado"].forEach(function(f,i){
     document.getElementById(["kR","kA","kB"][i]).textContent =
@@ -1202,7 +1217,7 @@ function render(){
     var cl = classe(r.f);
     var loc = [r.e, r.cm].filter(Boolean).join(" · ");
     h += '<tr data-i="' + i + '" title="Abrir no relatório de ' + esc(r.w) + '">' +
-      '<td class="c-cod"><span class="cod">' + esc(r.c) + '</span><span class="tp">' + esc(r.t) + '</span></td>' +
+      '<td class="c-cod"><span class="cod">' + esc(r.c) + '</span><span class="tp' + tipoCor(r.t) + '">' + esc(r.t) + '</span></td>' +
       '<td class="c-end">' + (loc ? '<span class="end">' + esc(loc) + '</span><br>' : '') +
         '<span class="sub">' + esc(r.b || "bairro não informado") + '</span></td>' +
       '<td class="c-cap" data-l="Corretor">' + esc(r.cap || "—") + '</td>' +
@@ -1440,7 +1455,7 @@ function renderCmp(){
     '<div class="kpi"><div class="num">' + tot + '</div><div class="lbl">Imóveis captados</div></div>' +
     '<div class="kpi"><div class="num">' + dec1(nSem ? tot/nSem : null) + '</div><div class="lbl">Imóveis por semana</div></div>' +
     '<div class="kpi"><div class="num">' + dec1(vot) + '</div><div class="lbl">Corretores que votam / semana</div></div>' +
-    '<div class="kpi"><div class="num">' + pctAbs(gap) + '</div><div class="lbl">Gap médio</div></div>' +
+    '<div class="kpi"><div class="num">' + (gap === null ? "—" : pct(gap)) + '</div><div class="lbl">Gap médio</div></div>' +
     '<div class="kpi"><div class="num">' + dec1(nota) + '<span class="suf"> /10</span></div><div class="lbl">Nota média</div></div>';
 
   /* situação */
@@ -1455,21 +1470,34 @@ function renderCmp(){
   /* tipos */
   var t = {};
   rs.forEach(function(r){ t[r.t] = (t[r.t]||0) + 1; });
-  var maior = Math.max.apply(null, Object.keys(t).map(function(k){ return t[k]; }).concat([1]));
-  document.getElementById("cvTipos").innerHTML = Object.keys(t)
-    .sort(function(a,b){ return t[b]-t[a] || a.localeCompare(b,"pt-BR"); })
-    .map(function(k){
-      return '<div class="cv-tipo"><span class="nm">' + esc(nomeTipo(k, t[k])) + '</span>' +
-        '<span class="br"><i style="width:' + (t[k]/maior*100) + '%"></i></span>' +
-        '<span class="ct">' + t[k] + '</span></div>';
-    }).join("") || '<span class="sub">Nenhum imóvel no período.</span>';
+  /* os cinco tipos principais aparecem sozinhos; o resto (lojas, galpões, chácaras…) soma
+     numa linha "Outros" que abre para mostrar cada um */
+  var PRINCIPAIS = ["Apartamento","Casa","Terreno","Cobertura","Sala comercial"];
+  var ord = function(a,b){ return t[b]-t[a] || a.localeCompare(b,"pt-BR"); };
+  var princ = Object.keys(t).filter(function(k){ return PRINCIPAIS.indexOf(k) >= 0; }).sort(ord);
+  var outros = Object.keys(t).filter(function(k){ return PRINCIPAIS.indexOf(k) < 0; }).sort(ord);
+  var nOutros = outros.reduce(function(s,k){ return s + t[k]; }, 0);
+  var maior = Math.max.apply(null, princ.map(function(k){ return t[k]; }).concat([nOutros, 1]));
+  var linha = function(nome, n, cls){
+    return '<div class="cv-tipo' + (cls||"") + '"><span class="nm">' + nome + '</span>' +
+      '<span class="br"><i style="width:' + (n/maior*100) + '%"></i></span>' +
+      '<span class="ct">' + n + '</span></div>';
+  };
+  var h = princ.map(function(k){ return linha(esc(nomeTipo(k, t[k])), t[k]); }).join("");
+  if(nOutros){
+    h += '<details class="cv-outros"' + (CV.outrosAberto ? " open" : "") + '><summary>' +
+      linha('Outros <span class="cv-seta" aria-hidden="true">▸</span>', nOutros) + '</summary>' +
+      '<div class="cv-outros-lista">' + outros.map(function(k){ return linha(esc(nomeTipo(k, t[k])), t[k], " sub"); }).join("") +
+      '</div></details>';
+  }
+  document.getElementById("cvTipos").innerHTML = h || '<span class="sub">Nenhum imóvel no período.</span>';
+  var det = document.querySelector("#cvTipos details");
+  if(det) det.addEventListener("toggle", function(){ CV.outrosAberto = det.open; });
 
   /* por corretor */
   var lin = cvCorretores(rsC, nSem || 1);
   lin.sort(function(x, y){
     var a = x[CV.col], b = y[CV.col];
-    /* gap aparece sem sinal: ordena pelo tamanho dele */
-    if(CV.col === "gap"){ a = a === null ? null : Math.abs(a); b = b === null ? null : Math.abs(b); }
     if(CV.col === "nome") return a.localeCompare(b, "pt-BR") * (CV.dir > 0 ? 1 : -1);
     if(a === null && b !== null) return 1;
     if(b === null && a !== null) return -1;
@@ -1487,7 +1515,7 @@ function renderCmp(){
       '<td class="num" data-l="Dentro do preço"><span class="cv-pb">' + pct(p.pB, 0) + '</span></td>' +
       '<td data-l="Situação"><div class="cv-sit">' + barraSit(p.sit, p.qtd, true) +
         '<small>' + p.sit.r + ' revisar · ' + p.sit.a + ' leve · ' + p.sit.b + ' alinhado</small></div></td>' +
-      '<td class="num" data-l="Gap médio"><span class="gap ' + bandaDoGap(p.gap) + '">' + pctAbs(p.gap) + '</span></td>' +
+      '<td class="num" data-l="Gap médio"><span class="gap ' + bandaDoGap(p.gap) + '">' + pct(p.gap) + '</span></td>' +
       '<td class="num" data-l="Nota média"><span class="nota">' + dec1(p.nota) + '</span></td>' +
       '<td data-l="Tipos"><span class="cv-tp">' + esc(cvTiposCurto(p.lista)) + '</span></td>' +
       '<td class="go-cell" aria-hidden="true">›</td></tr>';

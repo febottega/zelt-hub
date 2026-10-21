@@ -113,9 +113,12 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   Período: tudo, últimas 8 ou últimas 4 semanas (`CV.n`). Dupla conta para os dois (`capsDe`).
   Filtros de tipo (`CV.tipo`) e de faixa de valor anunciado (`CV_FAIXAS`, 21/10/2026) ficam
   logo acima da tabela por corretor e filtram só ela (a visão geral segue o período); o botão
-  "Ver os imóveis" leva corretor, tipo e faixa para a busca. O **gap médio** aparece sem o
-  sinal de menos (`pctAbs`) no menu de pesquisa, na visão geral e na tabela por corretor, e
-  esta ordena pelo tamanho do gap; o gap de cada imóvel continua com sinal.
+  "Ver os imóveis" leva corretor, tipo e faixa para a busca.
+  O gap médio mostra o sinal de menos (ficou sem por um dia e o Felipe pediu de volta).
+  No menu de pesquisa a etiqueta de tipo tem cor (`tipoCor`): terreno verde, casa azul,
+  cobertura amarela, apartamento vermelho; os demais tipos no cinza padrão. Em "Tipos
+  captados" do comparativo, só apartamento, casa, terreno, cobertura e sala comercial ficam
+  sozinhos; o resto soma numa linha "Outros" que abre (`<details>`) para mostrar cada um.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 18 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
@@ -207,10 +210,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (25 payloads, 16.207.992 bytes):
+Hash de referência (25 payloads, 16.210.288 bytes):
 
 ```
-66E78C5998B11F86F7ABE0DB0C05E1BE986300DBE7F2EB14E31F62F673FA6393
+B554461A3E8B3823E9AB6CA161CB1EC180B4E2F1146C4FDB018F2073507D1904
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
