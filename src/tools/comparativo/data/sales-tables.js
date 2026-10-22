@@ -3912,7 +3912,7 @@ const SALES_TABLES = {
    "Vista 43 - 2 dormitórios": {
       "folderId": "1jnMvo3u_Frs-RJ2u12mvAzOQKga-SsYK",
       "source": "Tabela de vendas (Novo Rumo)",
-      "ref": "Tabela zero 09-26 · reajuste do CUB de outubro/2026 (+0,41%) · situação de 19/10/2026",
+      "ref": "Tabela zero 09-26 · reajuste do CUB de outubro/2026 (+0,41%) · situação de 22/10/2026",
       "unitCol": 0,
       "columns": [
         "Unidade",
@@ -4268,6 +4268,61 @@ const SALES_TABLES = {
           "R$ 911.409,29"
         ],
         [
+          "L2301",
+          "86,80 m²",
+          "206, 207 (2 simples)",
+          "Disponível",
+          "R$ 208.447,35",
+          "R$ 7.444,54",
+          "R$ 29.778,17",
+          "R$ 1.042.235,90",
+          "R$ 917.167,59"
+        ],
+        [
+          "L2302",
+          "80,06 m²",
+          "208, 209 (2 simples)",
+          "Disponível",
+          "R$ 193.782,82",
+          "R$ 6.920,80",
+          "R$ 27.683,22",
+          "R$ 968.912,56",
+          "R$ 852.643,05"
+        ],
+        [
+          "L2303",
+          "79,27 m²",
+          "210, 211 (2 simples)",
+          "Disponível",
+          "R$ 192.443,60",
+          "R$ 6.872,98",
+          "R$ 27.491,92",
+          "R$ 962.217,36",
+          "R$ 846.751,28"
+        ],
+        [
+          "L2304",
+          "86,57 m²",
+          "212, 213 (2 simples)",
+          "Disponível",
+          "R$ 207.590,34",
+          "R$ 7.413,96",
+          "R$ 29.655,82",
+          "R$ 1.037.953,72",
+          "R$ 913.399,27"
+        ],
+        [
+          "L2305",
+          "86,57 m²",
+          "214, 215 (2 simples)",
+          "Disponível",
+          "R$ 207.958,68",
+          "R$ 7.427,08",
+          "R$ 29.708,34",
+          "R$ 1.039.791,78",
+          "R$ 915.016,77"
+        ],
+        [
           "L2601",
           "80,10 m²",
           "263, 264 (2 simples)",
@@ -4356,6 +4411,39 @@ const SALES_TABLES = {
           "R$ 921.359,23"
         ],
         [
+          "L3001",
+          "80,10 m²",
+          "319, 320 (2 simples)",
+          "Disponível",
+          "R$ 197.142,56",
+          "R$ 7.040,81",
+          "R$ 28.163,23",
+          "R$ 985.713,21",
+          "R$ 867.427,62"
+        ],
+        [
+          "L3002",
+          "79,81 m²",
+          "321, 322 (2 simples)",
+          "Disponível",
+          "R$ 196.171,26",
+          "R$ 7.006,10",
+          "R$ 28.024,42",
+          "R$ 980.854,60",
+          "R$ 863.152,05"
+        ],
+        [
+          "L3003",
+          "79,02 m²",
+          "323, 324 (2 simples)",
+          "Disponível",
+          "R$ 194.807,60",
+          "R$ 6.957,42",
+          "R$ 27.829,67",
+          "R$ 974.038,57",
+          "R$ 857.153,94"
+        ],
+        [
           "L3101",
           "80,10 m²",
           "332, 333 (2 simples)",
@@ -4422,7 +4510,7 @@ const SALES_TABLES = {
           "R$ 860.794,10"
         ]
       ],
-      "note": "Tabela zero 09-26 das unidades de 2 dormitórios — as \"livings\", com L no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 45 unidades, todas disponíveis. Na situação de 19/10/2026, sem nenhuma mudança de preço: saíram L1105, L1305 e L1905 (que estava reservada); voltou a L1703, pelo valor da tabela zero com o CUB de outubro, agora com as vagas 233 e 234 (na tabela zero eram 095 e 096); a L2704 voltou a ficar disponível; e a L2204 trocou as vagas 202 e 203 pelas 150 e 151. Em 02/10/2026 todos os valores subiram exatamente 0,4141% sobre a tabela zero — a variação do CUB de setembro para outubro (R$ 3.158,88 → R$ 3.171,96) —, sem nenhuma unidade reprecificada; o à vista acompanha (12% sobre o total novo). Na mesma atualização saíram L2301, L2302, L2303, L2304, L2305 e L3404 (que estava reservada); voltaram L1003 e L1105, que tinham saído em 24/09; e L1905 e L2704 passaram a reservadas. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A coluna de vagas vem do \"espaço complementar\" da tabela original, onde um número seguido de \"d\" é vaga dupla e dois números são duas vagas simples: 17 unidades têm dupla e 28 têm duas simples. Entrega: abril/2031. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 84 × parcela + 7 × reforço devolve o valor total ao centavo nas 59 linhas, e parcela e reforço batem exatamente com 60% ÷ 84 e 20% ÷ 7 — 177 conferências, nenhuma divergência. A tabela traz só alguns andares (10, 11, 13, 15, 17, 18, 19, 22, 23, 26, 27, 31, 32 e 34) e, dentro deles, nem todas as posições; as demais devem estar nas tabelas dos studios e dos loft duplex, ou ainda não foram liberadas — confirmar com a Novo Rumo. Studios e loft duplex entram em tabela separada, ainda não recebida.",
+      "note": "Tabela zero 09-26 das unidades de 2 dormitórios — as \"livings\", com L no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 53 unidades, todas disponíveis. Na situação de 22/10/2026, sem nenhuma mudança de preço nas que já estavam: voltaram L2301, L2302, L2303, L2304 e L2305, que tinham saído em 02/10, pelo valor da tabela zero com o CUB de outubro; e entraram L3001, L3002 e L3003, do 30º andar, que não estavam na tabela zero — mesmas áreas das L3101 a L3103, uns R$ 2 mil abaixo delas, e as três fecham a identidade ato + 84 parcelas + 7 reforços ao centavo. Na situação de 19/10/2026, sem nenhuma mudança de preço: saíram L1105, L1305 e L1905 (que estava reservada); voltou a L1703, pelo valor da tabela zero com o CUB de outubro, agora com as vagas 233 e 234 (na tabela zero eram 095 e 096); a L2704 voltou a ficar disponível; e a L2204 trocou as vagas 202 e 203 pelas 150 e 151. Em 02/10/2026 todos os valores subiram exatamente 0,4141% sobre a tabela zero — a variação do CUB de setembro para outubro (R$ 3.158,88 → R$ 3.171,96) —, sem nenhuma unidade reprecificada; o à vista acompanha (12% sobre o total novo). Na mesma atualização saíram L2301, L2302, L2303, L2304, L2305 e L3404 (que estava reservada); voltaram L1003 e L1105, que tinham saído em 24/09; e L1905 e L2704 passaram a reservadas. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A coluna de vagas vem do \"espaço complementar\" da tabela original, onde um número seguido de \"d\" é vaga dupla e dois números são duas vagas simples: 17 unidades têm dupla e 36 têm duas simples. Entrega: abril/2031. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 84 × parcela + 7 × reforço devolve o valor total ao centavo nas 59 linhas, e parcela e reforço batem exatamente com 60% ÷ 84 e 20% ÷ 7 — 177 conferências, nenhuma divergência. A tabela traz só alguns andares (10, 11, 13, 15, 17, 18, 19, 22, 23, 26, 27, 31, 32 e 34) e, dentro deles, nem todas as posições; as demais devem estar nas tabelas dos studios e dos loft duplex, ou ainda não foram liberadas — confirmar com a Novo Rumo. Studios e loft duplex entram em tabela separada, ainda não recebida.",
       "summary": {
         "bits": [
           {
@@ -4465,7 +4553,7 @@ const SALES_TABLES = {
    "Vista 43 - Studios e Loft Duplex": {
       "folderId": "1jnMvo3u_Frs-RJ2u12mvAzOQKga-SsYK",
       "source": "Tabela de vendas (Novo Rumo)",
-      "ref": "Tabela zero 09-26 · reajuste do CUB de outubro/2026 (+0,41%) · situação de 19/10/2026",
+      "ref": "Tabela zero 09-26 · reajuste do CUB de outubro/2026 (+0,41%) · situação de 22/10/2026",
       "unitCol": 0,
       "columns": [
         "Unidade",
@@ -4481,16 +4569,16 @@ const SALES_TABLES = {
       ],
       "rows": [
         [
-          "S0705",
-          "Studio garden (terraço)",
-          "49,35 m²",
-          "102",
+          "S1104",
+          "Studio",
+          "26,85 m²",
+          "—",
           "Reservada",
-          "R$ 82.194,48",
-          "R$ 4.109,74",
-          "R$ 16.438,95",
-          "R$ 410.973,63",
-          "R$ 361.656,79"
+          "R$ 58.598,32",
+          "R$ 2.929,90",
+          "R$ 11.719,62",
+          "R$ 292.990,42",
+          "R$ 257.831,57"
         ],
         [
           "S1205",
@@ -4517,18 +4605,6 @@ const SALES_TABLES = {
           "R$ 392.825,97"
         ],
         [
-          "S1501",
-          "Studio",
-          "26,85 m²",
-          "068",
-          "Reservada",
-          "R$ 72.481,19",
-          "R$ 3.624,07",
-          "R$ 14.496,27",
-          "R$ 362.406,74",
-          "R$ 318.917,93"
-        ],
-        [
           "S1507",
           "Studio",
           "26,85 m²",
@@ -4545,7 +4621,7 @@ const SALES_TABLES = {
           "Studio",
           "26,85 m²",
           "109",
-          "Disponível",
+          "Reservada",
           "R$ 73.716,32",
           "R$ 3.685,80",
           "R$ 14.743,22",
@@ -4613,6 +4689,18 @@ const SALES_TABLES = {
           "R$ 657.653,85"
         ],
         [
+          "S2201",
+          "Loft duplex",
+          "50,64 m²",
+          "163",
+          "Disponível",
+          "R$ 111.593,59",
+          "R$ 5.579,67",
+          "R$ 22.318,69",
+          "R$ 557.967,24",
+          "R$ 491.011,17"
+        ],
+        [
           "S2202",
           "Loft duplex",
           "48,83 m²",
@@ -4635,18 +4723,6 @@ const SALES_TABLES = {
           "R$ 20.629,30",
           "R$ 515.732,41",
           "R$ 453.844,52"
-        ],
-        [
-          "S2205",
-          "Loft duplex",
-          "46,84 m²",
-          "191",
-          "Disponível",
-          "R$ 104.054,13",
-          "R$ 5.202,71",
-          "R$ 20.810,84",
-          "R$ 520.270,93",
-          "R$ 457.838,42"
         ],
         [
           "S2206",
@@ -4709,6 +4785,18 @@ const SALES_TABLES = {
           "R$ 462.122,49"
         ],
         [
+          "S2607",
+          "Loft duplex",
+          "46,84 m²",
+          "260",
+          "Disponível",
+          "R$ 105.952,22",
+          "R$ 5.297,63",
+          "R$ 21.190,50",
+          "R$ 529.762,52",
+          "R$ 466.191,02"
+        ],
+        [
           "S2608",
           "Loft duplex",
           "50,32 m²",
@@ -4731,6 +4819,18 @@ const SALES_TABLES = {
           "R$ 14.790,98",
           "R$ 369.774,50",
           "R$ 325.401,56"
+        ],
+        [
+          "S3101",
+          "Loft duplex",
+          "50,64 m²",
+          "327",
+          "Disponível",
+          "R$ 116.211,12",
+          "R$ 5.810,56",
+          "R$ 23.242,23",
+          "R$ 581.055,87",
+          "R$ 511.329,17"
         ],
         [
           "S3102",
@@ -4769,7 +4869,7 @@ const SALES_TABLES = {
           "R$ 503.961,54"
         ]
       ],
-      "note": "Tabela zero 09-26 dos studios e dos loft duplex — os dois na mesma tabela, com S no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 24 unidades, 18 disponíveis e 6 reservadas (S0705, S1205, S1311, S1501, S1507 e S3001): 6 studios, 15 loft duplex, 1 studio garden e os dois loft duplex garden, S1808 e S1809. Na situação de 19/10/2026, sem nenhuma mudança de preço: saíram S1002, S1005, S1102, S1506, S1508 e S3101, todas reservadas; voltaram S1311 e S1507, já reservadas, e S1809, S2205 e S2603, disponíveis, pelo valor da tabela zero com o CUB de outubro (+0,4141%); e a S3103 voltou a ficar disponível. Em 02/10/2026 todos os valores subiram exatamente 0,4141% sobre a tabela zero — a variação do CUB de setembro para outubro (R$ 3.158,88 → R$ 3.171,96), a mesma das tabelas da Castelo —, sem nenhuma unidade reprecificada; o à vista acompanha (12% sobre o total novo). Na mesma atualização saíram S0704, S0707, S0710, S1006, S1104, S1302, S1308, S1502, S1504, S1706, S1708, S1801, S2201, S2605 e S2607; entraram S0705, S1002, S1005 e S1102, todas já reservadas; e S1506, S1508 e S3101 passaram a reservadas. A S1102 passou a ter a vaga 033 — na tabela zero ela estava sem vaga. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A tipologia não vem nesta tabela: ela foi deduzida do PDF \"Vista 43 · Pavimentos, Unidades e Vagas\", que descreve a composição andar a andar — 7º são 11 studios garden, todos com terraço privativo; do 8º ao 17º e no 30º são studios; 18º, 20º, 22º, 24º, 26º, 28º, 31º e 33º são os níveis inferiores dos loft duplex (os andares seguintes são o nível de cima, que não se vende separado). Na tabela zero eram 10 studios garden (7º), 55 studios, 28 loft duplex e 2 loft duplex garden — o S1808 e o S1809, de 109,65 m², que o PDF descreve como duplex garden com terraço descoberto de 55,76 m². As unidades com terraço — hoje o studio garden S0705 e os loft duplex garden S1808 e S1809 — entram só aqui, fora dos cards do comparativo, como combinado. O PDF registra que 38 studios não terão vaga e que para os demais a vaga é opcional; hoje todas as unidades desta tabela têm vaga. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 60 × parcela + 5 × reforço devolve o valor total ao centavo nas 95 linhas, e parcela e reforço batem com 60% ÷ 60 e 20% ÷ 5 — 380 conferências, nenhuma divergência. Dois pontos a confirmar com a construtora: o PDF lista 11 studios garden no 7º e a tabela traz 10 (falta o de 87,19 m²), e o S0702 aparece com 39,13 m² onde o quadro do PDF esperava 38,12 m². Entrega: abril/2031.",
+      "note": "Tabela zero 09-26 dos studios e dos loft duplex — os dois na mesma tabela, com S no código. ATENÇÃO: são preços referenciais exclusivos para lista de espera; o empreendimento ainda não está disponível para comercialização. 25 unidades, 19 disponíveis e 6 reservadas (S1104, S1205, S1311, S1507, S1704 e S3001): 6 studios, 17 loft duplex e os dois loft duplex garden, S1808 e S1809. Na situação de 22/10/2026, sem nenhuma mudança de preço: saíram o studio garden S0705 e a S1501, que estavam reservadas, e a S2205; voltaram S1104 (studio sem vaga, já reservada), S2201, S2607 e S3101, pelo valor da tabela zero com o CUB de outubro (+0,4141%); e a S1704 passou a reservada. Na situação de 19/10/2026, sem nenhuma mudança de preço: saíram S1002, S1005, S1102, S1506, S1508 e S3101, todas reservadas; voltaram S1311 e S1507, já reservadas, e S1809, S2205 e S2603, disponíveis, pelo valor da tabela zero com o CUB de outubro (+0,4141%); e a S3103 voltou a ficar disponível. Em 02/10/2026 todos os valores subiram exatamente 0,4141% sobre a tabela zero — a variação do CUB de setembro para outubro (R$ 3.158,88 → R$ 3.171,96), a mesma das tabelas da Castelo —, sem nenhuma unidade reprecificada; o à vista acompanha (12% sobre o total novo). Na mesma atualização saíram S0704, S0707, S0710, S1006, S1104, S1302, S1308, S1502, S1504, S1706, S1708, S1801, S2201, S2605 e S2607; entraram S0705, S1002, S1005 e S1102, todas já reservadas; e S1506, S1508 e S3101 passaram a reservadas. A S1102 passou a ter a vaga 033 — na tabela zero ela estava sem vaga. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%) — ato em 30/09/2026, primeira parcela em 20/10/2026, primeiro reforço em 20/09/2027. À vista: 12% de desconto sobre o valor total. A tipologia não vem nesta tabela: ela foi deduzida do PDF \"Vista 43 · Pavimentos, Unidades e Vagas\", que descreve a composição andar a andar — 7º são 11 studios garden, todos com terraço privativo; do 8º ao 17º e no 30º são studios; 18º, 20º, 22º, 24º, 26º, 28º, 31º e 33º são os níveis inferiores dos loft duplex (os andares seguintes são o nível de cima, que não se vende separado). Na tabela zero eram 10 studios garden (7º), 55 studios, 28 loft duplex e 2 loft duplex garden — o S1808 e o S1809, de 109,65 m², que o PDF descreve como duplex garden com terraço descoberto de 55,76 m². As unidades com terraço — hoje os loft duplex garden S1808 e S1809 (o studio garden S0705 saiu em 22/10/2026) — entram só aqui, fora dos cards do comparativo, como combinado. O PDF registra que 38 studios não terão vaga e que para os demais a vaga é opcional; hoje só a S1104 está sem vaga. A leitura da tabela zero foi conferida linha a linha pela identidade da Novo Rumo: ato + 60 × parcela + 5 × reforço devolve o valor total ao centavo nas 95 linhas, e parcela e reforço batem com 60% ÷ 60 e 20% ÷ 5 — 380 conferências, nenhuma divergência. Dois pontos a confirmar com a construtora: o PDF lista 11 studios garden no 7º e a tabela traz 10 (falta o de 87,19 m²), e o S0702 aparece com 39,13 m² onde o quadro do PDF esperava 38,12 m². Entrega: abril/2031.",
       "summary": {
         "construtora": "Novo Rumo",
         "bairro": "Centro",
