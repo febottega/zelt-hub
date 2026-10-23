@@ -1991,17 +1991,9 @@ const SALES_TABLES = {
         "R$ 20.000,00",
         "R$ 6.066,67",
         "R$ 580.000,00"
-      ],
-      [
-        "805",
-        "R$ 85.000,00",
-        "R$ 20.000,00",
-        "R$ 20.000,00",
-        "R$ 6.146,67",
-        "R$ 586.000,00"
       ]
     ],
-    "note": "Tabela de outubro/2026: a única mudança desde a Rev. 44 (12/05/2026) foi a saída do apto 702; as outras seis unidades seguem com o mesmo preço e as mesmas condições. Entrega prevista: agosto/2027. Preço a valor fechado; parcelas corrigidas pelo CUB (dia 05 do mês seguinte). Preço com 1 vaga dupla; para 2 vagas individuais, acrescentar R$ 25.000,00. Vagas sobrando: 02 e 21 (duplas), sujeitas a disponibilidade. Aptos 205 e 206 nas mesmas condições. Conferir disponibilidade no fechamento (vários corretores atuando).",
+    "note": "Tabela de outubro/2026: desde a Rev. 44 (12/05/2026) saíram o apto 702 e, em 23/10/2026, o 805 (vendido); as outras cinco unidades seguem com o mesmo preço e as mesmas condições. Entrega prevista: agosto/2027. Preço a valor fechado; parcelas corrigidas pelo CUB (dia 05 do mês seguinte). Preço com 1 vaga dupla; para 2 vagas individuais, acrescentar R$ 25.000,00. Vagas sobrando: 02 e 21 (duplas), sujeitas a disponibilidade. Aptos 205 e 206 nas mesmas condições. Conferir disponibilidade no fechamento (vários corretores atuando).",
     "summary": {
       "bits": [],
       "principal": {
