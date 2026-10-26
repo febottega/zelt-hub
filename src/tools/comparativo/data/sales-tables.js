@@ -6426,7 +6426,6 @@ const SALES_TABLES = {
     "unitCol": 0,
     "columns": [
       "Apto",
-      "Final",
       "Modelo",
       "Sacada",
       "Área priv.",
@@ -6435,14 +6434,11 @@ const SALES_TABLES = {
       "Tabela Marini",
       "Entrada / sinal",
       "60 parcelas mensais (CUB)",
-      "5 reforços anuais (CUB)",
-      "Total pago à construtora",
-      "Financiamento na planta (CEF)"
+      "5 reforços anuais (CUB)"
     ],
     "rows": [
       [
         "203",
-        "Final 03",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6451,13 +6447,10 @@ const SALES_TABLES = {
         "R$ 432.000,00",
         "R$ 10.000,00",
         "R$ 1.500,00",
-        "R$ 5.000,00",
-        "R$ 125.000,00",
-        "R$ 307.000,00"
+        "R$ 5.000,00"
       ],
       [
         "208",
-        "Final 08",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6466,13 +6459,10 @@ const SALES_TABLES = {
         "R$ 432.000,00",
         "R$ 10.000,00",
         "R$ 1.500,00",
-        "R$ 5.000,00",
-        "R$ 125.000,00",
-        "R$ 307.000,00"
+        "R$ 5.000,00"
       ],
       [
         "304",
-        "Final 04",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6481,13 +6471,10 @@ const SALES_TABLES = {
         "R$ 435.000,00",
         "R$ 10.000,00",
         "R$ 1.500,00",
-        "R$ 5.000,00",
-        "R$ 125.000,00",
-        "R$ 310.000,00"
+        "R$ 5.000,00"
       ],
       [
         "403",
-        "Final 03",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6496,13 +6483,10 @@ const SALES_TABLES = {
         "R$ 441.000,00",
         "R$ 10.000,00",
         "R$ 1.500,00",
-        "R$ 5.000,00",
-        "R$ 125.000,00",
-        "R$ 316.000,00"
+        "R$ 5.000,00"
       ],
       [
         "404",
-        "Final 04",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6511,13 +6495,10 @@ const SALES_TABLES = {
         "R$ 441.000,00",
         "R$ 10.000,00",
         "R$ 1.500,00",
-        "R$ 5.000,00",
-        "R$ 125.000,00",
-        "R$ 316.000,00"
+        "R$ 5.000,00"
       ],
       [
         "407",
-        "Final 07",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6526,13 +6507,10 @@ const SALES_TABLES = {
         "R$ 441.000,00",
         "R$ 10.000,00",
         "R$ 1.500,00",
-        "R$ 5.000,00",
-        "R$ 125.000,00",
-        "R$ 316.000,00"
+        "R$ 5.000,00"
       ],
       [
         "508",
-        "Final 08",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6541,13 +6519,10 @@ const SALES_TABLES = {
         "R$ 445.000,00",
         "R$ 10.000,00",
         "R$ 1.550,00",
-        "R$ 5.000,00",
-        "R$ 128.000,00",
-        "R$ 317.000,00"
+        "R$ 5.000,00"
       ],
       [
         "607",
-        "Final 07",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6556,13 +6531,10 @@ const SALES_TABLES = {
         "R$ 450.000,00",
         "R$ 10.000,00",
         "R$ 1.550,00",
-        "R$ 5.000,00",
-        "R$ 128.000,00",
-        "R$ 322.000,00"
+        "R$ 5.000,00"
       ],
       [
         "701",
-        "Final 01",
         "3 dormitórios e lavabo",
         "Aberta",
         "72,16 m²",
@@ -6571,13 +6543,10 @@ const SALES_TABLES = {
         "R$ 617.000,00",
         "R$ 60.000,00",
         "R$ 1.950,00",
-        "R$ 5.000,00",
-        "R$ 202.000,00",
-        "R$ 415.000,00"
+        "R$ 5.000,00"
       ],
       [
         "703",
-        "Final 03",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6586,13 +6555,10 @@ const SALES_TABLES = {
         "R$ 457.000,00",
         "R$ 10.000,00",
         "R$ 1.600,00",
-        "R$ 5.000,00",
-        "R$ 131.000,00",
-        "R$ 326.000,00"
+        "R$ 5.000,00"
       ],
       [
         "704",
-        "Final 04",
         "2 dormitórios",
         "Integrada",
         "49,89 m²",
@@ -6601,13 +6567,10 @@ const SALES_TABLES = {
         "R$ 457.000,00",
         "R$ 10.000,00",
         "R$ 1.600,00",
-        "R$ 5.000,00",
-        "R$ 131.000,00",
-        "R$ 326.000,00"
+        "R$ 5.000,00"
       ],
       [
         "705",
-        "Final 05",
         "2 demi-suítes e lavabo",
         "Aberta",
         "58,86 m²",
@@ -6616,13 +6579,10 @@ const SALES_TABLES = {
         "R$ 577.000,00",
         "R$ 45.000,00",
         "R$ 1.700,00",
-        "R$ 5.000,00",
-        "R$ 172.000,00",
-        "R$ 405.000,00"
+        "R$ 5.000,00"
       ],
       [
         "706",
-        "Final 06",
         "2 demi-suítes e lavabo",
         "Aberta",
         "58,86 m²",
@@ -6631,54 +6591,44 @@ const SALES_TABLES = {
         "R$ 577.000,00",
         "R$ 45.000,00",
         "R$ 1.700,00",
-        "R$ 5.000,00",
-        "R$ 172.000,00",
-        "R$ 405.000,00"
+        "R$ 5.000,00"
       ]
     ],
-    "note": "Estanislau Park, da Marini Construtora, na Água Verde — tabela de outubro/2026 da Torre B, válida até 31/10/2026 ou até a construtora enviar tabela nova. 13 unidades: 10 de 2 dormitórios com 49,89 m² e sacada integrada, 2 de 2 demi-suítes e lavabo com 58,86 m² e sacada aberta (705 e 706) e 1 de 3 dormitórios e lavabo com 72,16 m² e sacada aberta (701). Todas com 1 vaga, descoberta até o 6º andar e coberta no 7º. Condição: entrada/sinal + 60 parcelas mensais + 5 reforços anuais de R$ 5.000,00 pagos à construtora, corrigidos pelo CUB, e o saldo pelo financiamento na planta da Caixa (corrigido pelo CUB até a assinatura). As duas partes fecham ao centavo: entrada + 60 parcelas + 5 reforços = total pago à construtora, e total pago à construtora + financiamento = valor da tabela, nas 13 linhas. Entrega prevista: 36 meses após a contratação com a CEF (outubro/2029).",
+    "note": "Estanislau Park, da Marini Construtora, na Água Verde — tabela de outubro/2026 da Torre B, válida até 31/10/2026 ou até a construtora enviar tabela nova. 13 unidades: 10 de 2 dormitórios com 49,89 m² e sacada integrada, 2 de 2 demi-suítes e lavabo com 58,86 m² e sacada aberta (705 e 706) e 1 de 3 dormitórios e lavabo com 72,16 m² e sacada aberta (701). Todas com 1 vaga, descoberta até o 6º andar e coberta no 7º. Condição: entrada/sinal + 60 parcelas mensais + 5 reforços anuais de R$ 5.000,00 pagos à construtora, corrigidos pelo CUB, e o saldo pelo financiamento na planta da Caixa (corrigido pelo CUB até a assinatura). A parte paga à construtora (entrada + 60 parcelas + 5 reforços) mais o financiamento da Caixa fecha o valor da tabela ao centavo nas 13 linhas. Entrega prevista: 36 meses após a contratação com a CEF (outubro/2029).",
     "summary": {
       "tipoDefault": "Apartamento",
       "bits": [
         {
-          "col": 2
+          "col": 1
         },
         {
           "pre": "Área privativa: ",
-          "col": 4
+          "col": 3
         },
         {
           "pre": "Vaga ",
-          "col": 5
+          "col": 4
         },
         {
-          "col": 6
+          "col": 5
         }
       ],
       "principal": {
         "label": "Valor de tabela",
-        "col": 7
+        "col": 6
       },
       "parcelas": [
         {
           "label": "Entrada / sinal",
-          "col": 8
+          "col": 7
         },
         {
           "label": "60 parcelas mensais",
-          "col": 9
+          "col": 8
         },
         {
           "label": "5 reforços anuais",
-          "col": 10
-        },
-        {
-          "label": "Total pago à construtora",
-          "col": 11
-        },
-        {
-          "label": "Financiamento na planta (CEF)",
-          "col": 12
+          "col": 9
         }
       ]
     }
@@ -6700,9 +6650,7 @@ const SALES_TABLES = {
       "Tabela Marini",
       "Sinal",
       "60 parcelas mensais (CUB)",
-      "5 reforços anuais (CUB)",
-      "Total pago à construtora",
-      "Financiamento Caixa"
+      "5 reforços anuais (CUB)"
     ],
     "rows": [
       [
@@ -6717,9 +6665,7 @@ const SALES_TABLES = {
         "R$ 450.000,00",
         "R$ 15.000,00",
         "R$ 1.579,16",
-        "R$ 5.000,00",
-        "R$ 134.749,60",
-        "R$ 315.250,40"
+        "R$ 5.000,00"
       ],
       [
         "1403",
@@ -6733,9 +6679,7 @@ const SALES_TABLES = {
         "R$ 450.000,00",
         "R$ 15.000,00",
         "R$ 1.579,16",
-        "R$ 5.000,00",
-        "R$ 134.749,60",
-        "R$ 315.250,40"
+        "R$ 5.000,00"
       ],
       [
         "1406",
@@ -6749,9 +6693,7 @@ const SALES_TABLES = {
         "R$ 448.000,00",
         "R$ 15.000,00",
         "R$ 1.054,16",
-        "R$ 5.000,00",
-        "R$ 103.249,60",
-        "R$ 344.750,40"
+        "R$ 5.000,00"
       ],
       [
         "1408",
@@ -6765,9 +6707,7 @@ const SALES_TABLES = {
         "R$ 579.000,00",
         "R$ 30.000,00",
         "R$ 1.666,66",
-        "R$ 10.000,00",
-        "R$ 179.999,60",
-        "R$ 399.000,40"
+        "R$ 10.000,00"
       ],
       [
         "1503",
@@ -6781,9 +6721,7 @@ const SALES_TABLES = {
         "R$ 453.000,00",
         "R$ 15.000,00",
         "R$ 1.641,66",
-        "R$ 5.000,00",
-        "R$ 138.499,60",
-        "R$ 314.500,40"
+        "R$ 5.000,00"
       ],
       [
         "1507",
@@ -6797,12 +6735,10 @@ const SALES_TABLES = {
         "R$ 454.000,00",
         "R$ 15.000,00",
         "R$ 1.606,25",
-        "R$ 10.000,00",
-        "R$ 161.375,00",
-        "R$ 292.625,00"
+        "R$ 10.000,00"
       ]
     ],
-    "note": "Residencial Hannover, da Marini Construtora, na Água Verde — tabela de outubro/2026, com a obra em 70% de medição. 6 unidades: 5 de 2 dormitórios (51,84 e 52,14 m²) e a 1408 de 3 dormitórios (69,76 m²), que está reservada. Todas com 1 vaga; a coluna de área da vaga traz a metragem dela. Condição: sinal + 60 parcelas mensais + 5 reforços anuais pagos à construtora, corrigidos pelo CUB, e o saldo pelo financiamento da Caixa. As duas partes fecham ao centavo nas 6 linhas: sinal + 60 parcelas + 5 reforços = total pago à construtora, e total pago à construtora + financiamento = valor da tabela. A coluna \"Avaliação Caixa\" é o valor da engenharia da Caixa, abaixo do valor de tabela; a coluna de FGTS da tabela original veio vazia em todas as linhas e ficou de fora. Entrega prevista: agosto/2027.",
+    "note": "Residencial Hannover, da Marini Construtora, na Água Verde — tabela de outubro/2026, com a obra em 70% de medição. 6 unidades: 5 de 2 dormitórios (51,84 e 52,14 m²) e a 1408 de 3 dormitórios (69,76 m²), que está reservada. Todas com 1 vaga; a coluna de área da vaga traz a metragem dela. Condição: sinal + 60 parcelas mensais + 5 reforços anuais pagos à construtora, corrigidos pelo CUB, e o saldo pelo financiamento da Caixa. A parte paga à construtora (sinal + 60 parcelas + 5 reforços) mais o financiamento da Caixa fecha o valor da tabela ao centavo nas 6 linhas. A coluna \"Avaliação Caixa\" é o valor da engenharia da Caixa, abaixo do valor de tabela; a coluna de FGTS da tabela original veio vazia em todas as linhas e ficou de fora. Entrega prevista: agosto/2027.",
     "summary": {
       "tipoDefault": "Apartamento",
       "situacaoCol": 3,
@@ -6838,14 +6774,6 @@ const SALES_TABLES = {
         {
           "label": "5 reforços anuais",
           "col": 11
-        },
-        {
-          "label": "Total pago à construtora",
-          "col": 12
-        },
-        {
-          "label": "Financiamento Caixa",
-          "col": 13
         }
       ],
       "alternativas": [
