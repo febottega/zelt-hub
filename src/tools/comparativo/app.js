@@ -58,6 +58,8 @@ const DRIVE_LINKS = {
   "Amani 53": "https://drive.google.com/drive/folders/1Wlr-o8sOwZCkUutDvjNwxf1JOiauIIoz",
   "Criatto - 2 suítes": "https://drive.google.com/drive/folders/1qKxpNV7_yDqGaXE6bz_Uk7USM_JxDM2F",
   "Criatto - 3 suítes": "https://drive.google.com/drive/folders/1qKxpNV7_yDqGaXE6bz_Uk7USM_JxDM2F",
+  "Estanislau Park": "https://drive.google.com/drive/folders/13wXdT8pZ3al3NZim1LgrTlWtC6TXD715",
+  "Hannover": "https://drive.google.com/drive/folders/1g1PCfoEJVbgMDw3PUDJo7KnO5v-Hh9_k",
   "Villaggio Treviso": "https://drive.google.com/drive/folders/1RLOudeck3dBTWh0PMG6tNtRaThBOV6Pd"
 };
 const driveLinkFor = d => DRIVE_LINKS[d.empreendimento] || null;

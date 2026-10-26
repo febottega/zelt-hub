@@ -74,7 +74,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | Quero mudar | Arquivo | Tamanho |
 |---|---|---|
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **71 KB** |
-| os 67 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
+| os 69 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
@@ -122,7 +122,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 18 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
-- **comparativo** — 67 empreendimentos. Abas: comparativo, mudanças, melhores preços,
+- **comparativo** — 69 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos. **Toda mudança no comparativo atualiza a data em
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
   `DD/MM/AAAA`) e o chip do card "Empreendimentos" no `hub.html` (`Atualizado em DD/MM`).
@@ -210,10 +210,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (25 payloads, 16.214.228 bytes):
+Hash de referência (25 payloads, 16.232.404 bytes):
 
 ```
-70068B678784118CA0C6AA66FDFA06A07C0FEF62A5A159D1D31A9142A0D190BA
+FDE636794F7CD243188805E8692E110B3718C7DD5AF5889AA83A5F0E327CD55E
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -453,7 +453,7 @@ do Wissen saiu da tabela em out/2026), o card continua com ela — preço e áre
 tabela, a configuração não. Pedido do Felipe em 16/10/2026; o Wissen voltou para "1 e 2
 quartos (1 suíte)". Só mude a configuração quando ele pedir (como no Egon Belz, 1 quarto).
 
-**O `rpriv` não tem uma fórmula só.** Dos 67 cards, 54 usam `media/apriv` e **7
+**O `rpriv` não tem uma fórmula só.** Dos 69 cards, 54 usam `media/apriv` e **7
 usam `media` dividida pela média da faixa de área** (`(apriv+atotal)/2`): Liv,
 Egon Belz, Gardens, San Vito, Lago di Garda, Alphaville, Ed. Edimburgo e
 Lisbon. O Central Park usa outra coisa ainda. Antes de recalcular
@@ -504,6 +504,16 @@ etiqueta verde "Torresani" — campo `etiquetas: {unidade: texto}` da tabela, de
 `.utag-etq` pelo `app.js`; serve para qualquer outra tabela. O card de apto tipo (id 14) usa a
 302 e a 406; 1203 e 1204 (151 e 143 m², 12º andar) ganharam cards de cobertura próprios
 (ids 68 e 69, como o da 1201), a pedido do Felipe em 20/10/2026, com 3 suítes copiadas da 1201.
+
+O **Estanislau Park** (Marini, Água Verde, entrou em 26/10/2026): uma tabela e um card só
+para 2 e 3 dormitórios, a pedido do Felipe (49,89 a 72,16 m²; a 701 é a de 3 dormitórios e as
+705/706 têm 2 demi-suítes). Card pela regra dos Tulum (média real e R$/m² unidade a unidade),
+porque a faixa de área é larga. A condição tem duas partes que fecham ao centavo: entrada + 60
+parcelas + 5 reforços = total pago à construtora; esse total + financiamento CEF = tabela.
+O **Hannover** (Marini, Água Verde, entrega 08/2027, mesmo dia) segue o mesmo modelo: um card
+para 2 e 3 dormitórios, sem suíte (confirmado pelo Felipe nos dois), regra dos Tulum, mesma
+condição em duas partes; a tabela traz ainda a avaliação da engenharia da Caixa, que vai como
+alternativa no resumo. A Marini não tem logo cadastrado.
 
 ### Duas formas no price-changes.js
 

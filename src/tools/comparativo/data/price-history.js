@@ -1250,5 +1250,84 @@ const PRICE_HISTORY = {
         1397094.09
       ]
     }
+  },
+  "Estanislau Park": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela Marini out/2026 · Torre B"
+    ],
+    "obs": "As 13 unidades da Torre B do Estanislau Park na tabela de outubro/2026. Base: o valor de tabela, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos.",
+    "unidades": {
+      "203": [
+        432000
+      ],
+      "208": [
+        432000
+      ],
+      "304": [
+        435000
+      ],
+      "403": [
+        441000
+      ],
+      "404": [
+        441000
+      ],
+      "407": [
+        441000
+      ],
+      "508": [
+        445000
+      ],
+      "607": [
+        450000
+      ],
+      "701": [
+        617000
+      ],
+      "703": [
+        457000
+      ],
+      "704": [
+        457000
+      ],
+      "705": [
+        577000
+      ],
+      "706": [
+        577000
+      ]
+    }
+  },
+  "Hannover": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela Marini out/2026"
+    ],
+    "obs": "As 6 unidades do Residencial Hannover na tabela de outubro/2026. Base: o valor de tabela, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos.",
+    "unidades": {
+      "1402": [
+        450000
+      ],
+      "1403": [
+        450000
+      ],
+      "1406": [
+        448000
+      ],
+      "1408": [
+        579000
+      ],
+      "1503": [
+        453000
+      ],
+      "1507": [
+        454000
+      ]
+    }
   }
 };

@@ -6418,5 +6418,442 @@ const SALES_TABLES = {
       "bairro": "Centro",
       "entrega": "06/2029"
     }
+  },
+  "Estanislau Park": {
+    "folderId": "13wXdT8pZ3al3NZim1LgrTlWtC6TXD715",
+    "source": "Tabela de vendas (Marini Construtora) · Torre B",
+    "ref": "Outubro/2026",
+    "unitCol": 0,
+    "columns": [
+      "Apto",
+      "Final",
+      "Modelo",
+      "Sacada",
+      "Área priv.",
+      "Vaga",
+      "Tipo de vaga",
+      "Tabela Marini",
+      "Entrada / sinal",
+      "60 parcelas mensais (CUB)",
+      "5 reforços anuais (CUB)",
+      "Total pago à construtora",
+      "Financiamento na planta (CEF)"
+    ],
+    "rows": [
+      [
+        "203",
+        "Final 03",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "32",
+        "Descoberta",
+        "R$ 432.000,00",
+        "R$ 10.000,00",
+        "R$ 1.500,00",
+        "R$ 5.000,00",
+        "R$ 125.000,00",
+        "R$ 307.000,00"
+      ],
+      [
+        "208",
+        "Final 08",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "29",
+        "Descoberta",
+        "R$ 432.000,00",
+        "R$ 10.000,00",
+        "R$ 1.500,00",
+        "R$ 5.000,00",
+        "R$ 125.000,00",
+        "R$ 307.000,00"
+      ],
+      [
+        "304",
+        "Final 04",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "35",
+        "Descoberta",
+        "R$ 435.000,00",
+        "R$ 10.000,00",
+        "R$ 1.500,00",
+        "R$ 5.000,00",
+        "R$ 125.000,00",
+        "R$ 310.000,00"
+      ],
+      [
+        "403",
+        "Final 03",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "101",
+        "Descoberta",
+        "R$ 441.000,00",
+        "R$ 10.000,00",
+        "R$ 1.500,00",
+        "R$ 5.000,00",
+        "R$ 125.000,00",
+        "R$ 316.000,00"
+      ],
+      [
+        "404",
+        "Final 04",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "77",
+        "Descoberta",
+        "R$ 441.000,00",
+        "R$ 10.000,00",
+        "R$ 1.500,00",
+        "R$ 5.000,00",
+        "R$ 125.000,00",
+        "R$ 316.000,00"
+      ],
+      [
+        "407",
+        "Final 07",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "78",
+        "Descoberta",
+        "R$ 441.000,00",
+        "R$ 10.000,00",
+        "R$ 1.500,00",
+        "R$ 5.000,00",
+        "R$ 125.000,00",
+        "R$ 316.000,00"
+      ],
+      [
+        "508",
+        "Final 08",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "100",
+        "Descoberta",
+        "R$ 445.000,00",
+        "R$ 10.000,00",
+        "R$ 1.550,00",
+        "R$ 5.000,00",
+        "R$ 128.000,00",
+        "R$ 317.000,00"
+      ],
+      [
+        "607",
+        "Final 07",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "96",
+        "Descoberta",
+        "R$ 450.000,00",
+        "R$ 10.000,00",
+        "R$ 1.550,00",
+        "R$ 5.000,00",
+        "R$ 128.000,00",
+        "R$ 322.000,00"
+      ],
+      [
+        "701",
+        "Final 01",
+        "3 dormitórios e lavabo",
+        "Aberta",
+        "72,16 m²",
+        "74",
+        "Coberta",
+        "R$ 617.000,00",
+        "R$ 60.000,00",
+        "R$ 1.950,00",
+        "R$ 5.000,00",
+        "R$ 202.000,00",
+        "R$ 415.000,00"
+      ],
+      [
+        "703",
+        "Final 03",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "91",
+        "Coberta",
+        "R$ 457.000,00",
+        "R$ 10.000,00",
+        "R$ 1.600,00",
+        "R$ 5.000,00",
+        "R$ 131.000,00",
+        "R$ 326.000,00"
+      ],
+      [
+        "704",
+        "Final 04",
+        "2 dormitórios",
+        "Integrada",
+        "49,89 m²",
+        "92",
+        "Coberta",
+        "R$ 457.000,00",
+        "R$ 10.000,00",
+        "R$ 1.600,00",
+        "R$ 5.000,00",
+        "R$ 131.000,00",
+        "R$ 326.000,00"
+      ],
+      [
+        "705",
+        "Final 05",
+        "2 demi-suítes e lavabo",
+        "Aberta",
+        "58,86 m²",
+        "79",
+        "Coberta",
+        "R$ 577.000,00",
+        "R$ 45.000,00",
+        "R$ 1.700,00",
+        "R$ 5.000,00",
+        "R$ 172.000,00",
+        "R$ 405.000,00"
+      ],
+      [
+        "706",
+        "Final 06",
+        "2 demi-suítes e lavabo",
+        "Aberta",
+        "58,86 m²",
+        "80",
+        "Coberta",
+        "R$ 577.000,00",
+        "R$ 45.000,00",
+        "R$ 1.700,00",
+        "R$ 5.000,00",
+        "R$ 172.000,00",
+        "R$ 405.000,00"
+      ]
+    ],
+    "note": "Estanislau Park, da Marini Construtora, na Água Verde — tabela de outubro/2026 da Torre B, válida até 31/10/2026 ou até a construtora enviar tabela nova. 13 unidades: 10 de 2 dormitórios com 49,89 m² e sacada integrada, 2 de 2 demi-suítes e lavabo com 58,86 m² e sacada aberta (705 e 706) e 1 de 3 dormitórios e lavabo com 72,16 m² e sacada aberta (701). Todas com 1 vaga, descoberta até o 6º andar e coberta no 7º. Condição: entrada/sinal + 60 parcelas mensais + 5 reforços anuais de R$ 5.000,00 pagos à construtora, corrigidos pelo CUB, e o saldo pelo financiamento na planta da Caixa (corrigido pelo CUB até a assinatura). As duas partes fecham ao centavo: entrada + 60 parcelas + 5 reforços = total pago à construtora, e total pago à construtora + financiamento = valor da tabela, nas 13 linhas. Entrega prevista: 36 meses após a contratação com a CEF (outubro/2029).",
+    "summary": {
+      "tipoDefault": "Apartamento",
+      "bits": [
+        {
+          "col": 2
+        },
+        {
+          "pre": "Área privativa: ",
+          "col": 4
+        },
+        {
+          "pre": "Vaga ",
+          "col": 5
+        },
+        {
+          "col": 6
+        }
+      ],
+      "principal": {
+        "label": "Valor de tabela",
+        "col": 7
+      },
+      "parcelas": [
+        {
+          "label": "Entrada / sinal",
+          "col": 8
+        },
+        {
+          "label": "60 parcelas mensais",
+          "col": 9
+        },
+        {
+          "label": "5 reforços anuais",
+          "col": 10
+        },
+        {
+          "label": "Total pago à construtora",
+          "col": 11
+        },
+        {
+          "label": "Financiamento na planta (CEF)",
+          "col": 12
+        }
+      ]
+    }
+  },
+  "Hannover": {
+    "folderId": "1g1PCfoEJVbgMDw3PUDJo7KnO5v-Hh9_k",
+    "source": "Tabela de vendas (Marini Construtora)",
+    "ref": "Outubro/2026",
+    "unitCol": 0,
+    "columns": [
+      "Unidade",
+      "Área priv.",
+      "Tipo",
+      "Situação",
+      "Área da vaga",
+      "Vaga",
+      "Tipo de vaga",
+      "Avaliação Caixa (engenharia)",
+      "Tabela Marini",
+      "Sinal",
+      "60 parcelas mensais (CUB)",
+      "5 reforços anuais (CUB)",
+      "Total pago à construtora",
+      "Financiamento Caixa"
+    ],
+    "rows": [
+      [
+        "1402",
+        "52,14 m²",
+        "2 dormitórios",
+        "Disponível",
+        "11,05 m²",
+        "41",
+        "Coberta",
+        "R$ 405.000,00",
+        "R$ 450.000,00",
+        "R$ 15.000,00",
+        "R$ 1.579,16",
+        "R$ 5.000,00",
+        "R$ 134.749,60",
+        "R$ 315.250,40"
+      ],
+      [
+        "1403",
+        "51,84 m²",
+        "2 dormitórios",
+        "Disponível",
+        "11,04 m²",
+        "77",
+        "Coberta",
+        "R$ 403.000,00",
+        "R$ 450.000,00",
+        "R$ 15.000,00",
+        "R$ 1.579,16",
+        "R$ 5.000,00",
+        "R$ 134.749,60",
+        "R$ 315.250,40"
+      ],
+      [
+        "1406",
+        "51,84 m²",
+        "2 dormitórios",
+        "Disponível",
+        "21,84 m²",
+        "114",
+        "Descoberta",
+        "R$ 403.000,00",
+        "R$ 448.000,00",
+        "R$ 15.000,00",
+        "R$ 1.054,16",
+        "R$ 5.000,00",
+        "R$ 103.249,60",
+        "R$ 344.750,40"
+      ],
+      [
+        "1408",
+        "69,76 m²",
+        "3 dormitórios",
+        "Reservada",
+        "17,28 m²",
+        "44",
+        "Coberta",
+        "R$ 500.000,00",
+        "R$ 579.000,00",
+        "R$ 30.000,00",
+        "R$ 1.666,66",
+        "R$ 10.000,00",
+        "R$ 179.999,60",
+        "R$ 399.000,40"
+      ],
+      [
+        "1503",
+        "51,84 m²",
+        "2 dormitórios",
+        "Disponível",
+        "11,04 m²",
+        "82",
+        "Coberta",
+        "R$ 403.000,00",
+        "R$ 453.000,00",
+        "R$ 15.000,00",
+        "R$ 1.641,66",
+        "R$ 5.000,00",
+        "R$ 138.499,60",
+        "R$ 314.500,40"
+      ],
+      [
+        "1507",
+        "52,14 m²",
+        "2 dormitórios",
+        "Disponível",
+        "19,32 m²",
+        "116",
+        "Descoberta",
+        "R$ 405.000,00",
+        "R$ 454.000,00",
+        "R$ 15.000,00",
+        "R$ 1.606,25",
+        "R$ 10.000,00",
+        "R$ 161.375,00",
+        "R$ 292.625,00"
+      ]
+    ],
+    "note": "Residencial Hannover, da Marini Construtora, na Água Verde — tabela de outubro/2026, com a obra em 70% de medição. 6 unidades: 5 de 2 dormitórios (51,84 e 52,14 m²) e a 1408 de 3 dormitórios (69,76 m²), que está reservada. Todas com 1 vaga; a coluna de área da vaga traz a metragem dela. Condição: sinal + 60 parcelas mensais + 5 reforços anuais pagos à construtora, corrigidos pelo CUB, e o saldo pelo financiamento da Caixa. As duas partes fecham ao centavo nas 6 linhas: sinal + 60 parcelas + 5 reforços = total pago à construtora, e total pago à construtora + financiamento = valor da tabela. A coluna \"Avaliação Caixa\" é o valor da engenharia da Caixa, abaixo do valor de tabela; a coluna de FGTS da tabela original veio vazia em todas as linhas e ficou de fora. Entrega prevista: agosto/2027.",
+    "summary": {
+      "tipoDefault": "Apartamento",
+      "situacaoCol": 3,
+      "bits": [
+        {
+          "col": 2
+        },
+        {
+          "pre": "Área privativa: ",
+          "col": 1
+        },
+        {
+          "pre": "Vaga ",
+          "col": 5
+        },
+        {
+          "col": 6
+        }
+      ],
+      "principal": {
+        "label": "Valor de tabela",
+        "col": 8
+      },
+      "parcelas": [
+        {
+          "label": "Sinal",
+          "col": 9
+        },
+        {
+          "label": "60 parcelas mensais",
+          "col": 10
+        },
+        {
+          "label": "5 reforços anuais",
+          "col": 11
+        },
+        {
+          "label": "Total pago à construtora",
+          "col": 12
+        },
+        {
+          "label": "Financiamento Caixa",
+          "col": 13
+        }
+      ],
+      "alternativas": [
+        {
+          "bold": "Avaliação da Caixa (engenharia)",
+          "col": 7
+        }
+      ]
+    }
   }
 };
