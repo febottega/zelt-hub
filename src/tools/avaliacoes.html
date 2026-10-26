@@ -737,7 +737,7 @@ function montarRelatorio(html, codigo, soFicha){
       setTimeout(function(){ abrirFichaImovel(fr, codigo); }, 300);
     }
   };
-  fr.srcdoc = soFicha ? htmlSoFicha(html) : html;
+  fr.srcdoc = semComparativo(soFicha ? htmlSoFicha(html) : html);
 }
 
 /* ---------------- ficha do imóvel, direto do menu de pesquisa ----------------
@@ -759,6 +759,20 @@ var CSS_SO_FICHA =
   'html,body{background:transparent!important}' +
   'body > *:not(#imovel-overlay){visibility:hidden!important}' +
   '}</style>';
+/* Cada relatório semanal tinha as abas "Relatório / Comparativo" (radios #rad-rel /
+   #rad-cmp). O comparativo agora é o geral, na aba do painel, então as duas abas e o
+   comparativo da semana saem — em todas as semanas, inclusive as arquivadas, porque
+   entra no texto do HTML na hora de abrir, como o CSS_SO_FICHA (pedido de 26/10/2026). */
+var CSS_SEM_CMP =
+  '<style id="zelt-sem-cmp">' +
+  '.tabbar{display:none!important}' +
+  '#tab-comparativo{display:none!important}' +
+  '#tab-relatorio{display:block!important}' +
+  '</style>';
+function semComparativo(html){
+  var i = html.indexOf("</head>");
+  return i < 0 ? CSS_SEM_CMP + html : html.slice(0, i) + CSS_SEM_CMP + html.slice(i);
+}
 function htmlSoFicha(html){
   var i = html.indexOf("</head>");
   return i < 0 ? CSS_SO_FICHA + html : html.slice(0, i) + CSS_SO_FICHA + html.slice(i);

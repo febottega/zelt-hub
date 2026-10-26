@@ -122,6 +122,9 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 18 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+  Desde 26/10/2026 as abas "Relatório / Comparativo" de cada relatório (`.tabbar`, radios
+  `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
+  `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
 - **comparativo** — 69 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos. **Toda mudança no comparativo atualiza a data em
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
@@ -210,10 +213,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (25 payloads, 16.230.032 bytes):
+Hash de referência (25 payloads, 16.230.988 bytes):
 
 ```
-FD562AFBE2AE5A5FC902195D58290F6EF083C5BB99B23A77D8AA34FC26DD49E6
+1FF3D164874292A9E45023CE93E34D40B7A61A57DCB4D345CD453B1F7E31C7FA
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
