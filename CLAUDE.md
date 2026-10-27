@@ -5,7 +5,7 @@ https://febottega.github.io/zelt-hub/ (repo `febottega/zelt-hub`, Pages no root 
 
 ## REGRA PRINCIPAL: nunca leia nem edite o index.html
 
-`index.html` (11 MB) é **gerado**. Contém as 25 ferramentas em base64 — ilegível
+`index.html` (11 MB) é **gerado**. Contém as 26 ferramentas em base64 — ilegível
 para busca, impossível de editar cirurgicamente. Lê-lo custa cerca de **2,5 milhões
 de tokens** e não cabe em nenhuma janela de contexto.
 
@@ -43,11 +43,11 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 25 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 26 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          18 relatórios históricos em base64 — nunca ler; editar só por script
+   └─ frozen/          19 relatórios históricos em base64 — nunca ler; editar só por script
 ```
 
 **`src/frozen/` não é intocável, é ilegível.** Cada `.b64` é uma linha de 500 a
@@ -121,7 +121,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   sozinhos; o resto soma numa linha "Outros" que abre (`<details>`) para mostrar cada um.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
-- **avaliacao** + 18 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 19 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
   Desde 26/10/2026 as abas "Relatório / Comparativo" de cada relatório (`.tabbar`, radios
   `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
   `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
@@ -213,10 +213,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (25 payloads, 16.230.988 bytes):
+Hash de referência (26 payloads, 16.735.772 bytes):
 
 ```
-1FF3D164874292A9E45023CE93E34D40B7A61A57DCB4D345CD453B1F7E31C7FA
+1330459F7E9CC0BC6A818AFC1575571108F3007E595E63D9A7C74DD36E459996
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -646,7 +646,7 @@ Campos de cada imóvel no `DADOS`, nesta ordem:
 | `a`, `k` | Anunciado, Consenso |
 | `g` | Gap em pontos percentuais (`-19.8`) |
 | `n` | Nota |
-| `f` | Leitura: `Revisar` / `Leve ajuste` / `Alinhado` |
+| `f` | Leitura: `Revisar` / `Leve ajuste` / `Alinhado` — **copie da tabela do relatório**, não recalcule: o gap de exatamente −5,0% conta como Leve ajuste (AP8475 em 27/10), mas −4,97%, que também aparece como "−5,0%", é Alinhado (AP8340 em 15/09). As bandas do KPI saem da mesma leitura |
 | `e`, `cm`, `b` | `DETALHES[cod].local` partido por ` · `: primeiro trecho, miolo, último |
 | `d`, `v`, `s` | dorms, vagas, suítes — **omita** o campo quando o imóvel não tem |
 | `m` + `ml` | `areaUtil`→`m² úteis`, `areaConstr`→`m² constr.`, `areaTotal`→`m² total` |
