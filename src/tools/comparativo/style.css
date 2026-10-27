@@ -521,6 +521,11 @@ table.sales{width:100%; border-collapse:collapse; font-family:var(--ff-body); fo
 table.sales th{background:var(--navy-900); color:#fff; font-family:var(--ff-display); font-weight:500;
   text-transform:uppercase; letter-spacing:.04em; font-size:11.5px; padding:9px 12px; text-align:left; white-space:nowrap;}
 table.sales td{padding:9px 12px; border-bottom:1px solid var(--navy-100); white-space:nowrap; color:var(--navy-800);}
+/* cabecalho de bloco quando a tabela e dividida em partes (t.grupos) */
+table.sales tr.grp-row td{background:var(--orange-50,#fff7ec); border-top:2px solid var(--orange-400,#ffb25e); border-bottom:1px solid var(--navy-100); padding:10px 12px; white-space:normal; color:var(--navy-900);}
+table.sales tr.grp-row b{font-family:var(--ff-display); font-weight:600; text-transform:uppercase; letter-spacing:.06em; font-size:13px;}
+table.sales tr.grp-row span{display:block; font-size:12px; color:var(--navy-500); margin-top:2px;}
+table.sales tr.grp-row .grp-in{position:sticky; left:12px; max-width:min(760px, calc(100vw - 80px));}
 /* coluna de valor ordenavel: o cabecalho vira botao (mais barato <-> mais caro) */
 table.sales th.th-sort{padding:0;}
 table.sales .btn-sort{all:unset; box-sizing:border-box; display:flex; align-items:center; gap:6px; width:100%;

@@ -1329,5 +1329,356 @@ const PRICE_HISTORY = {
         454000
       ]
     }
+  },
+  "Scire Fortaleza": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela Scire out/2026"
+    ],
+    "obs": "As 11 unidades do Scire Fortaleza (Blocos A e B) na tabela de outubro/2026; a chave de cada série é o apto seguido do bloco (1506A, 1506B). Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos.",
+    "unidades": {
+      "1405B": [
+        449000
+      ],
+      "1506B": [
+        520000
+      ],
+      "1508B": [
+        429000
+      ],
+      "1301A": [
+        557000
+      ],
+      "1401A": [
+        560000
+      ],
+      "1501A": [
+        563000
+      ],
+      "1505A": [
+        466000
+      ],
+      "1506A": [
+        520000
+      ],
+      "1606A": [
+        520000
+      ],
+      "1706A": [
+        474000
+      ],
+      "1708A": [
+        439000
+      ]
+    }
+  },
+  "Scire Norden": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela Scire out/2026"
+    ],
+    "obs": "As 14 unidades do Scire Norden (Blocos B e C) na tabela de outubro/2026; a chave de cada série é o apto seguido do bloco (602B, 602C). Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "unidades": {
+      "602B": [
+        459000
+      ],
+      "702B": [
+        514000
+      ],
+      "706B": [
+        513000
+      ],
+      "102C": [
+        439000
+      ],
+      "202C": [
+        443000
+      ],
+      "302C": [
+        500000
+      ],
+      "402C": [
+        503000
+      ],
+      "502C": [
+        506000
+      ],
+      "503C": [
+        497000
+      ],
+      "602C": [
+        509000
+      ],
+      "603C": [
+        500000
+      ],
+      "702C": [
+        512000
+      ],
+      "703C": [
+        503000
+      ],
+      "803C": [
+        527000
+      ]
+    }
+  },
+  "Scire Solare - 1 dormitório": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela Scire out/2026"
+    ],
+    "obs": "Unidades de 1 dormitório do Scire Solare na tabela de outubro/2026, inclusive as reservadas. Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "unidades": {
+      "407": [
+        299000
+      ],
+      "705": [
+        338000
+      ],
+      "707": [
+        340000
+      ],
+      "805": [
+        343000
+      ],
+      "807": [
+        343000
+      ],
+      "905": [
+        349000
+      ],
+      "907": [
+        349000
+      ],
+      "1005": [
+        354000
+      ],
+      "1105": [
+        360000
+      ],
+      "1107": [
+        360000
+      ],
+      "1205": [
+        365000
+      ],
+      "1207": [
+        365000
+      ]
+    }
+  },
+  "Scire Solare - 2 dormitórios": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela Scire out/2026"
+    ],
+    "obs": "Unidades de 2 dormitórios do Scire Solare na tabela de outubro/2026, inclusive as reservadas. Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "unidades": {
+      "101": [
+        458000
+      ],
+      "201": [
+        463000
+      ],
+      "202": [
+        463000
+      ],
+      "211": [
+        463000
+      ],
+      "212": [
+        463000
+      ],
+      "412": [
+        500000
+      ],
+      "501": [
+        504000
+      ],
+      "502": [
+        504000
+      ],
+      "508": [
+        429000
+      ],
+      "601": [
+        507000
+      ],
+      "602": [
+        507000
+      ],
+      "608": [
+        439000
+      ],
+      "611": [
+        507000
+      ],
+      "612": [
+        507000
+      ],
+      "701": [
+        510000
+      ],
+      "702": [
+        510000
+      ],
+      "706": [
+        457000
+      ],
+      "708": [
+        457000
+      ],
+      "709": [
+        396000
+      ],
+      "712": [
+        510000
+      ],
+      "803": [
+        399000
+      ],
+      "804": [
+        432000
+      ],
+      "806": [
+        462000
+      ],
+      "809": [
+        416000
+      ],
+      "1203": [
+        451000
+      ],
+      "1204": [
+        457000
+      ],
+      "1206": [
+        482000
+      ],
+      "1208": [
+        482000
+      ],
+      "1209": [
+        452000
+      ]
+    }
+  },
+  "Scire Terrasse - 1 dormitório": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela Scire out/2026"
+    ],
+    "obs": "Unidades de 1 dormitório do Scire Terrasse na tabela de outubro/2026. Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "unidades": {
+      "1408": [
+        359000
+      ]
+    }
+  },
+  "Scire Terrasse - 2 dormitórios": {
+    "datas": [
+      "2026-10"
+    ],
+    "fontes": [
+      "Tabela Scire out/2026"
+    ],
+    "obs": "Unidades de 2 dormitórios do Scire Terrasse na tabela de outubro/2026. Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "unidades": {
+      "104": [
+        419000
+      ],
+      "506": [
+        439000
+      ],
+      "606": [
+        538000
+      ],
+      "806": [
+        544000
+      ],
+      "1002": [
+        520000
+      ],
+      "1004": [
+        530000
+      ],
+      "1006": [
+        548000
+      ],
+      "1010": [
+        548000
+      ],
+      "1101": [
+        550000
+      ],
+      "1102": [
+        536000
+      ],
+      "1104": [
+        536000
+      ],
+      "1110": [
+        550000
+      ],
+      "1202": [
+        541000
+      ],
+      "1204": [
+        541000
+      ],
+      "1205": [
+        561000
+      ],
+      "1304": [
+        544000
+      ],
+      "1305": [
+        564000
+      ],
+      "1306": [
+        564000
+      ],
+      "1405": [
+        567000
+      ],
+      "1406": [
+        567000
+      ],
+      "1410": [
+        567000
+      ],
+      "1502": [
+        560000
+      ],
+      "1504": [
+        562000
+      ],
+      "1505": [
+        572000
+      ],
+      "1506": [
+        572000
+      ],
+      "1510": [
+        572000
+      ],
+      "1602": [
+        566000
+      ],
+      "1610": [
+        575000
+      ]
+    }
   }
 };

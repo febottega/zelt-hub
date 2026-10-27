@@ -74,7 +74,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | Quero mudar | Arquivo | Tamanho |
 |---|---|---|
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **71 KB** |
-| os 69 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
+| os 75 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
@@ -125,7 +125,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   Desde 26/10/2026 as abas "Relatório / Comparativo" de cada relatório (`.tabbar`, radios
   `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
   `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
-- **comparativo** — 69 empreendimentos. Abas: comparativo, mudanças, melhores preços,
+- **comparativo** — 75 empreendimentos. Abas: comparativo, mudanças, melhores preços,
   tabelas de vendas, investimentos. **Toda mudança no comparativo atualiza a data em
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
   `DD/MM/AAAA`) e o chip do card "Empreendimentos" no `hub.html` (`Atualizado em DD/MM`).
@@ -213,10 +213,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.735.772 bytes):
+Hash de referência (26 payloads, 16.808.880 bytes):
 
 ```
-1330459F7E9CC0BC6A818AFC1575571108F3007E595E63D9A7C74DD36E459996
+CAF6AA469DDA232B1594B738835623312425CD97D88BCCE3729AD47DDB1F2ED2
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -517,6 +517,39 @@ O **Hannover** (Marini, Água Verde, entrega 08/2027, mesmo dia) segue o mesmo m
 para 2 e 3 dormitórios, sem suíte (confirmado pelo Felipe nos dois), regra dos Tulum, mesma
 condição em duas partes; a tabela traz ainda a avaliação da engenharia da Caixa, que vai como
 alternativa no resumo. A Marini não tem logo cadastrado.
+
+**Empreendimento com mais de um bloco: um card só, tabela em partes** (regra do Felipe em
+27/10/2026, para todos os que vierem). O card cobre todos os blocos e não fala em bloco; a
+tabela de vendas leva `grupos: [{ini, titulo, sub, rotulo, entrega}]`, onde `ini` é o índice
+da primeira linha do bloco. O `app.js` desenha um `tr.grp-row` antes dessa linha (só na ordem
+original; ordenada por valor a tabela sai sem divisões), com o `sub` (a condição do bloco)
+preso à largura da tela por `.grp-in` sticky. No "Copiar Resumo", o `rotulo` vai depois do
+número da unidade e o `entrega` do grupo substitui o da tabela (`"ENTREGUE"` vira "pronto
+para morar"). Quando a entrega difere entre blocos, o card usa a do bloco ainda em obra.
+
+O **Scire Fortaleza** (Scire, Fortaleza, entrou em 27/10/2026) foi o primeiro: Bloco B (Fase I)
+entregue e Bloco A com entrega 12/2026 (o card usa 12/2026). 11 unidades de 2 dormitórios,
+regra dos Tulum sobre o "Valor (com desconto)". A condição fecha ao centavo nas duas partes:
+ato + chaves + pós-chaves + financiamento (80%) = valor com desconto, e tabela − desconto =
+valor. O financiamento fica só na nota, como nas tabelas da Marini. Na série de preços a
+chave é apto + bloco (`1506A`, `1506B`), porque o mesmo número existe nos dois blocos. A
+Scire não tem logo cadastrado.
+
+O **Scire Norden** (Itoupava Norte, entrega 12/2026, mesmo dia) segue o mesmo modelo: 14
+unidades de 2 dormitórios com 1 suíte, 3 no Bloco B (Fase I: ato 4% + 80x pós-chaves 16% +
+financiamento 80% em 31/10) e 11 no Bloco C (Fase II: ato 2,5% + chaves 1,5% + 80x 16% +
+financiamento 80% em 30/11). O empreendimento tem 3 blocos, mas o A não tem unidade na tabela.
+O **Scire Solare** (Escola Agrícola, torre única, entrega 03/2029, mesmo dia) segue o modelo
+do Criatto: uma tabela "Scire Solare", dividida por `grupos` em 1 e 2 dormitórios, e dois cards
+("- 1 dormitório" e "- 2 dormitórios") com `"tabela": "Scire Solare"`. A tabela de 2D veio
+só em parte (29 unidades), e a nota avisa. Os cards seguem a regra dos Tulum só sobre as
+disponíveis: as reservadas 709 e 803 ficam na tabela e na série, fora do card. Condição única:
+ato + 29 mensais + 2 anuais (1,5% cada) + chaves (1%) + 24x pós-chaves (5%) + financiamento
+(79%), que fecham ao centavo nas 41 linhas.
+O **Scire Terrasse** (com dois R, como na tabela; Vorstadt, torre única, entrega 06/2028) segue
+o mesmo modelo do Solare: tabela "Scire Terrasse" em 1 e 2 dormitórios e dois cards; o de 1
+dormitório tem uma unidade só (a 1408). Condição: ato + 20 mensais (11%) + 3 semestrais (2%
+cada) + 36x pós-chaves (10%) + financiamento — 69% nas de 2D (ato 4%) e 68% na de 1D (ato 5%).
 
 ### Duas formas no price-changes.js
 

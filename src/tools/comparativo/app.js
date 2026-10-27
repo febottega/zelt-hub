@@ -60,6 +60,12 @@ const DRIVE_LINKS = {
   "Criatto - 3 suítes": "https://drive.google.com/drive/folders/1qKxpNV7_yDqGaXE6bz_Uk7USM_JxDM2F",
   "Estanislau Park": "https://drive.google.com/drive/folders/13wXdT8pZ3al3NZim1LgrTlWtC6TXD715",
   "Hannover": "https://drive.google.com/drive/folders/1g1PCfoEJVbgMDw3PUDJo7KnO5v-Hh9_k",
+  "Scire Fortaleza": "https://drive.google.com/drive/folders/1TRv1-dHxtjzqmfc5PD5o7LgkeHRIcndx",
+  "Scire Norden": "https://drive.google.com/drive/folders/1Oq1vDNl5wDiPQ5nPY9eCD75Mzih5o44l",
+  "Scire Solare - 1 dormitório": "https://drive.google.com/drive/folders/16yno_V1JkX71-lwFL350Ecs1Ajn9KRZg",
+  "Scire Solare - 2 dormitórios": "https://drive.google.com/drive/folders/16yno_V1JkX71-lwFL350Ecs1Ajn9KRZg",
+  "Scire Terrasse - 1 dormitório": "https://drive.google.com/drive/folders/1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
+  "Scire Terrasse - 2 dormitórios": "https://drive.google.com/drive/folders/1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
   "Villaggio Treviso": "https://drive.google.com/drive/folders/1RLOudeck3dBTWh0PMG6tNtRaThBOV6Pd"
 };
 const driveLinkFor = d => DRIVE_LINKS[d.empreendimento] || null;
@@ -804,6 +810,14 @@ function entregaTexto(e){
   if(!m) return e;
   return `${MESES[parseInt(m[1],10)]}/${m[2]}`;
 }
+/* tabela dividida em partes (empreendimento com mais de um bloco): t.grupos =
+   [{ini, titulo, sub, rotulo, entrega}], na ordem das linhas; ini e o indice da 1a linha
+   do grupo. O card continua um so; a divisao aparece so aqui (pedido de 27/10/2026). */
+function grupoDe(t, ri){
+  let g = null;
+  (t.grupos||[]).forEach(x=>{ if(ri >= x.ini) g = x; });
+  return g;
+}
 function buildResumo(emp, ri){
   const t = SALES_TABLES[emp]; if(!t || !t.summary) return "";
   const s = t.summary, r = t.rows[ri];
@@ -822,7 +836,8 @@ function buildResumo(emp, ri){
   const constr = s.construtora || d0.construtora;
   if(constr) b1.push(`*Construtora ${constr}*`);
   const andar = (s.andar===false) ? null : andarDeUnidade(un);
-  b1.push(`*${rotuloUnidade(t)} ${un}*${andar?` \u00b7 ${andar}`:""}`);
+  const grp = grupoDe(t, ri);
+  b1.push(`*${rotuloUnidade(t)} ${un}*${grp&&grp.rotulo?` \u00b7 ${grp.rotulo}`:""}${andar?` \u00b7 ${andar}`:""}`);
   const bits = (s.bits||[]).map(b=>{
     const v = r[b.col];
     if(vazio(v)) return null;
@@ -852,7 +867,7 @@ function buildResumo(emp, ri){
   });
 
   const b4 = [];
-  const ent = entregaTexto(s.entrega || d0.entrega);
+  const ent = entregaTexto((grp && grp.entrega) || s.entrega || d0.entrega);
   if(ent) b4.push(`Entrega: ${ent}`);
   b4.push("ZELT Im\u00f3veis \u00b7 vendas@zelt.com.br");
 
@@ -911,7 +926,11 @@ function salesTableHTML(emp, t){
     return `<th class="th-sort${sortDir?" on":""}"><button type="button" class="btn-sort" data-emp="${emp.replace(/"/g,'&quot;')}" title="${tit}">${c}<span class="sort-ic">${ic}</span></button></th>`;
   };
   const head = `<tr>${t.columns.map((c,ci)=>ci===sortCol?thSort(c):`<th>${c}</th>`).join("")}${hasSum?`<th class="th-resumo">Resumo</th>`:""}</tr>`;
-  const body = ordem.map(ri=>[t.rows[ri],ri]).map(([r,ri])=>`<tr>${r.map((cell,ci)=>{
+  /* cabecalho de cada bloco, so na ordem da construtora (ordenado por valor, os blocos se misturam) */
+  const nCols = t.columns.length + (hasSum?1:0);
+  const inicios = sortDir ? {} : Object.fromEntries((t.grupos||[]).map(g=>[g.ini,g]));
+  const linhaGrupo = g => `<tr class="grp-row"><td colspan="${nCols}"><div class="grp-in"><b>${g.titulo}</b>${g.sub?`<span>${g.sub}</span>`:""}</div></td></tr>`;
+  const body = ordem.map(ri=>[t.rows[ri],ri]).map(([r,ri])=>(inicios[ri]?linhaGrupo(inicios[ri]):"")+`<tr>${r.map((cell,ci)=>{
     let cls="", extra="";
     if(ci===t.unitCol){
       cls="unit-cell";
