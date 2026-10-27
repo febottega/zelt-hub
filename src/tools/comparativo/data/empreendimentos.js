@@ -2212,7 +2212,7 @@ const DATA = [
   {
     "tipo": "Apartamento Tipo",
     "construtora": "Scire",
-    "empreendimento": "Scire Norden",
+    "empreendimento": "Norden",
     "bairro": "Itoupava Norte",
     "unidade": null,
     "config": "2 quartos (1 suíte)",
@@ -2244,8 +2244,7 @@ const DATA = [
   {
     "tipo": "Apartamento Tipo",
     "construtora": "Scire",
-    "empreendimento": "Scire Solare - 1 dormitório",
-    "tabela": "Scire Solare",
+    "empreendimento": "Solare - 1 dormitório",
     "bairro": "Escola Agrícola",
     "unidade": null,
     "config": "1 quarto",
@@ -2275,8 +2274,7 @@ const DATA = [
   {
     "tipo": "Apartamento Tipo",
     "construtora": "Scire",
-    "empreendimento": "Scire Solare - 2 dormitórios",
-    "tabela": "Scire Solare",
+    "empreendimento": "Solare - 2 dormitórios",
     "bairro": "Escola Agrícola",
     "unidade": null,
     "config": "2 quartos (1 suíte)",
@@ -2308,8 +2306,7 @@ const DATA = [
   {
     "tipo": "Apartamento Tipo",
     "construtora": "Scire",
-    "empreendimento": "Scire Terrasse - 1 dormitório",
-    "tabela": "Scire Terrasse",
+    "empreendimento": "Terrasse - 1 dormitório",
     "bairro": "Vorstadt",
     "unidade": null,
     "config": "1 quarto",
@@ -2339,8 +2336,7 @@ const DATA = [
   {
     "tipo": "Apartamento Tipo",
     "construtora": "Scire",
-    "empreendimento": "Scire Terrasse - 2 dormitórios",
-    "tabela": "Scire Terrasse",
+    "empreendimento": "Terrasse - 2 dormitórios",
     "bairro": "Vorstadt",
     "unidade": null,
     "config": "2 quartos (1 suíte)",

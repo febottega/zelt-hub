@@ -213,10 +213,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.808.880 bytes):
+Hash de referência (26 payloads, 16.813.412 bytes):
 
 ```
-CAF6AA469DDA232B1594B738835623312425CD97D88BCCE3729AD47DDB1F2ED2
+87B82B07E41E3BB54ABBCE3083FFA9057ED416BADC370455F1E2191B353EF7B6
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -535,19 +535,25 @@ valor. O financiamento fica só na nota, como nas tabelas da Marini. Na série d
 chave é apto + bloco (`1506A`, `1506B`), porque o mesmo número existe nos dois blocos. A
 Scire não tem logo cadastrado.
 
-O **Scire Norden** (Itoupava Norte, entrega 12/2026, mesmo dia) segue o mesmo modelo: 14
+Só o **Scire Fortaleza** leva "Scire" no nome (pedido do Felipe em 27/10/2026): Norden, Solare e
+Terrasse ficam sem o prefixo nos cards, nas tabelas, nas séries e no `DRIVE_LINKS`.
+
+O **Norden** (Itoupava Norte, entrega 12/2026, mesmo dia) segue o mesmo modelo: 14
 unidades de 2 dormitórios com 1 suíte, 3 no Bloco B (Fase I: ato 4% + 80x pós-chaves 16% +
 financiamento 80% em 31/10) e 11 no Bloco C (Fase II: ato 2,5% + chaves 1,5% + 80x 16% +
 financiamento 80% em 30/11). O empreendimento tem 3 blocos, mas o A não tem unidade na tabela.
-O **Scire Solare** (Escola Agrícola, torre única, entrega 03/2029, mesmo dia) segue o modelo
-do Criatto: uma tabela "Scire Solare", dividida por `grupos` em 1 e 2 dormitórios, e dois cards
-("- 1 dormitório" e "- 2 dormitórios") com `"tabela": "Scire Solare"`. A tabela de 2D veio
+**`grupos` é só para blocos.** Tipologias diferentes (1 e 2 dormitórios) viram **tabelas
+separadas**, uma por card, com o mesmo nome do card, como nos Tulum (pedido do Felipe em
+27/10/2026, depois de o Solare e o Terrasse terem saído numa tabela só dividida por tipologia).
+
+O **Solare** (Escola Agrícola, torre única, entrega 03/2029, mesmo dia): duas tabelas e dois
+cards, "Solare - 1 dormitório" e "Solare - 2 dormitórios". A tabela de 2D veio
 só em parte (29 unidades), e a nota avisa. Os cards seguem a regra dos Tulum só sobre as
 disponíveis: as reservadas 709 e 803 ficam na tabela e na série, fora do card. Condição única:
 ato + 29 mensais + 2 anuais (1,5% cada) + chaves (1%) + 24x pós-chaves (5%) + financiamento
 (79%), que fecham ao centavo nas 41 linhas.
-O **Scire Terrasse** (com dois R, como na tabela; Vorstadt, torre única, entrega 06/2028) segue
-o mesmo modelo do Solare: tabela "Scire Terrasse" em 1 e 2 dormitórios e dois cards; o de 1
+O **Terrasse** (com dois R, como na tabela; Vorstadt, torre única, entrega 06/2028) segue
+o mesmo modelo do Solare: tabelas e cards "Terrasse - 1 dormitório" e "- 2 dormitórios"; o de 1
 dormitório tem uma unidade só (a 1408). Condição: ato + 20 mensais (11%) + 3 semestrais (2%
 cada) + 36x pós-chaves (10%) + financiamento — 69% nas de 2D (ato 4%) e 68% na de 1D (ato 5%).
 

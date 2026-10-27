@@ -7034,7 +7034,7 @@ const SALES_TABLES = {
       ]
     }
   },
-  "Scire Norden": {
+  "Norden": {
     "folderId": "1Oq1vDNl5wDiPQ5nPY9eCD75Mzih5o44l",
     "source": "Tabela de vendas (Scire Empreendimentos)",
     "ref": "Outubro/2026",
@@ -7280,7 +7280,7 @@ const SALES_TABLES = {
         "sub": "Ato (1x) em 10/10/2026 + parcela de chaves (1x) em 10/11/2026 + 80 parcelas mensais pós-chaves a partir de 10/12/2026 + financiamento (1x) em 30/11/2026."
       }
     ],
-    "note": "Scire Norden, da Scire Empreendimentos, na Itoupava Norte — tabela de outubro/2026: 14 unidades, todas disponíveis, 3 no Bloco B (Fase I) e 11 no Bloco C (Fase II); o Bloco A não tem unidade na tabela. Entrega 12/2026. Todas de 2 dormitórios com 1 suíte, de 57,00 ou 58,60 m², com 1 vaga (as do Bloco B cobertas; a 102 do Bloco C descoberta). O valor de referência é o \"Valor (com desconto)\": em onze unidades ele é igual ao da tabela, e nas outras três a construtora já aplica o desconto da coluna. Em todas, ato + chaves + parcelas pós-chaves + financiamento (80% do valor, 1x em 31/10/2026 no Bloco B e em 30/11/2026 no Bloco C) fecham o valor ao centavo; no Bloco B o ato é 4% e o pós-chaves 16%, no Bloco C o ato é 2,5%, as chaves 1,5% e o pós-chaves 16%. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "note": "Norden, da Scire Empreendimentos, na Itoupava Norte — tabela de outubro/2026: 14 unidades, todas disponíveis, 3 no Bloco B (Fase I) e 11 no Bloco C (Fase II); o Bloco A não tem unidade na tabela. Entrega 12/2026. Todas de 2 dormitórios com 1 suíte, de 57,00 ou 58,60 m², com 1 vaga (as do Bloco B cobertas; a 102 do Bloco C descoberta). O valor de referência é o \"Valor (com desconto)\": em onze unidades ele é igual ao da tabela, e nas outras três a construtora já aplica o desconto da coluna. Em todas, ato + chaves + parcelas pós-chaves + financiamento (80% do valor, 1x em 31/10/2026 no Bloco B e em 30/11/2026 no Bloco C) fecham o valor ao centavo; no Bloco B o ato é 4% e o pós-chaves 16%, no Bloco C o ato é 2,5%, as chaves 1,5% e o pós-chaves 16%. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
     "summary": {
       "tipoDefault": "Apartamento",
       "situacaoCol": 12,
@@ -7328,7 +7328,7 @@ const SALES_TABLES = {
       ]
     }
   },
-  "Scire Solare": {
+  "Solare - 1 dormitório": {
     "folderId": "16yno_V1JkX71-lwFL350Ecs1Ajn9KRZg",
     "source": "Tabela de vendas (Scire Empreendimentos)",
     "ref": "Outubro/2026",
@@ -7541,7 +7541,86 @@ const SALES_TABLES = {
         "R$ 760,42",
         "R$ 370.000,00",
         "Disponível"
+      ]
+    ],
+    "note": "Solare, da Scire Empreendimentos, na Escola Agrícola — tabela de 1 dormitório de outubro/2026, torre única, entrega 03/2029: 12 unidades de 29,91 ou 29,96 m², todas disponíveis e com vaga descoberta. Condição igual para todas: ato (1x) em 10/10/2026 + 29 parcelas mensais a partir de 10/11/2026 + 2 parcelas anuais a partir de 10/12/2027 + parcela de chaves (1x) em 10/03/2029 + 24 parcelas mensais pós-chaves a partir de 10/04/2029 + financiamento (1x, 79% do valor) em 31/03/2029. As anuais somam 3%, as chaves 1% e o pós-chaves 5%; o ato e as 29 mensais completam o resto, e as partes fecham o valor ao centavo. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "summary": {
+      "tipoDefault": "Apartamento",
+      "situacaoCol": 13,
+      "bits": [
+        {
+          "col": 3
+        },
+        {
+          "pre": "Área privativa: ",
+          "col": 1
+        },
+        {
+          "pre": "Vaga ",
+          "col": 2
+        }
       ],
+      "principal": {
+        "label": "Valor",
+        "col": 6
+      },
+      "parcelas": [
+        {
+          "label": "Ato",
+          "col": 7
+        },
+        {
+          "label": "29 parcelas mensais",
+          "col": 8
+        },
+        {
+          "label": "2 parcelas anuais",
+          "col": 9
+        },
+        {
+          "label": "Parcela de chaves",
+          "col": 10
+        },
+        {
+          "label": "24 parcelas pós-chaves",
+          "col": 11
+        }
+      ],
+      "alternativas": [
+        {
+          "bold": "Valor de tabela",
+          "nota": "(sem desconto)",
+          "col": 4
+        },
+        {
+          "bold": "Avaliação",
+          "col": 12
+        }
+      ]
+    }
+  },
+  "Solare - 2 dormitórios": {
+    "folderId": "16yno_V1JkX71-lwFL350Ecs1Ajn9KRZg",
+    "source": "Tabela de vendas (Scire Empreendimentos)",
+    "ref": "Outubro/2026",
+    "unitCol": 0,
+    "columns": [
+      "Apto",
+      "Área priv.",
+      "Vaga",
+      "Tipologia",
+      "Tabela",
+      "Desconto",
+      "Valor (com desconto)",
+      "Ato",
+      "29 parcelas mensais",
+      "2 parcelas anuais",
+      "Parcela de chaves",
+      "24 parcelas pós-chaves",
+      "Avaliação",
+      "Situação"
+    ],
+    "rows": [
       [
         "101",
         "55,56 m²",
@@ -8007,19 +8086,7 @@ const SALES_TABLES = {
         "Disponível"
       ]
     ],
-    "grupos": [
-      {
-        "ini": 0,
-        "titulo": "1 dormitório",
-        "sub": "Tabela 1D: 12 unidades, todas de 29,91 ou 29,96 m² com vaga descoberta."
-      },
-      {
-        "ini": 12,
-        "titulo": "2 dormitórios",
-        "sub": "Tabela 2D: parte das unidades da tabela, de 46,79 a 55,69 m²; as de 50,95 m² ou mais têm suíte."
-      }
-    ],
-    "note": "Scire Solare, da Scire Empreendimentos, na Escola Agrícola — tabela de outubro/2026, torre única, entrega 03/2029. A tabela de 1 dormitório vem inteira (12 unidades); a de 2 dormitórios aparece só em parte (29 unidades), e as demais estão na tabela original no Drive. Condição igual para todas: ato (1x) em 10/10/2026 + 29 parcelas mensais a partir de 10/11/2026 + 2 parcelas anuais a partir de 10/12/2027 + parcela de chaves (1x) em 10/03/2029 + 24 parcelas mensais pós-chaves a partir de 10/04/2029 + financiamento (1x, 79% do valor) em 31/03/2029. As anuais somam 3%, as chaves 1% e o pós-chaves 5%; o ato e as 29 mensais completam o resto. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "note": "Solare, da Scire Empreendimentos, na Escola Agrícola — tabela de 2 dormitórios de outubro/2026, torre única, entrega 03/2029. Aqui aparece só parte das unidades (29, de 46,79 a 55,69 m²; as de 50,95 m² ou mais têm suíte), e as demais estão na tabela original no Drive. Condição igual para todas: ato (1x) em 10/10/2026 + 29 parcelas mensais a partir de 10/11/2026 + 2 parcelas anuais a partir de 10/12/2027 + parcela de chaves (1x) em 10/03/2029 + 24 parcelas mensais pós-chaves a partir de 10/04/2029 + financiamento (1x, 79% do valor) em 31/03/2029. As anuais somam 3%, as chaves 1% e o pós-chaves 5%; o ato e as 29 mensais completam o resto, e as partes fecham o valor ao centavo. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
     "summary": {
       "tipoDefault": "Apartamento",
       "situacaoCol": 13,
@@ -8072,13 +8139,10 @@ const SALES_TABLES = {
           "bold": "Avaliação",
           "col": 12
         }
-      ],
-      "construtora": "Scire",
-      "bairro": "Escola Agrícola",
-      "entrega": "03/2029"
+      ]
     }
   },
-  "Scire Terrasse": {
+  "Terrasse - 1 dormitório": {
     "folderId": "1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
     "source": "Tabela de vendas (Scire Empreendimentos)",
     "ref": "Outubro/2026",
@@ -8113,7 +8177,81 @@ const SALES_TABLES = {
         "R$ 997,22",
         "R$ 315.000,00",
         "Disponível"
+      ]
+    ],
+    "note": "Terrasse, da Scire Empreendimentos, no Vorstadt — tabela de outubro/2026, torre única, conclusão da obra prevista para junho/2028: 1 unidade de 1 dormitório, de 31,39 m² com vaga descoberta, disponível. Condição: ato (1x) em 10/10/2026 + 20 parcelas mensais a partir de 10/11/2026 + 3 parcelas semestrais a partir de 10/06/2027 + 36 parcelas mensais pós-chaves a partir de 10/07/2028 + financiamento (1x) em 28/06/2028. Ato 5%, 20 mensais 11%, semestrais 6% (2% cada), pós-chaves 10% e financiamento 68%; as partes fecham o valor ao centavo. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "summary": {
+      "tipoDefault": "Apartamento",
+      "situacaoCol": 12,
+      "bits": [
+        {
+          "col": 3
+        },
+        {
+          "pre": "Área privativa: ",
+          "col": 1
+        },
+        {
+          "pre": "Vaga ",
+          "col": 2
+        }
       ],
+      "principal": {
+        "label": "Valor",
+        "col": 6
+      },
+      "parcelas": [
+        {
+          "label": "Ato",
+          "col": 7
+        },
+        {
+          "label": "20 parcelas mensais",
+          "col": 8
+        },
+        {
+          "label": "3 parcelas semestrais",
+          "col": 9
+        },
+        {
+          "label": "36 parcelas pós-chaves",
+          "col": 10
+        }
+      ],
+      "alternativas": [
+        {
+          "bold": "Valor de tabela",
+          "nota": "(sem desconto)",
+          "col": 4
+        },
+        {
+          "bold": "Avaliação",
+          "col": 11
+        }
+      ]
+    }
+  },
+  "Terrasse - 2 dormitórios": {
+    "folderId": "1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
+    "source": "Tabela de vendas (Scire Empreendimentos)",
+    "ref": "Outubro/2026",
+    "unitCol": 0,
+    "columns": [
+      "Apto",
+      "Área priv.",
+      "Vaga",
+      "Tipologia",
+      "Tabela",
+      "Desconto",
+      "Valor (com desconto)",
+      "Ato",
+      "20 parcelas mensais",
+      "3 parcelas semestrais",
+      "36 parcelas pós-chaves",
+      "Avaliação",
+      "Situação"
+    ],
+    "rows": [
       [
         "104",
         "52,40 m²",
@@ -8535,19 +8673,7 @@ const SALES_TABLES = {
         "Disponível"
       ]
     ],
-    "grupos": [
-      {
-        "ini": 0,
-        "titulo": "1 dormitório",
-        "sub": "1 unidade, de 31,39 m² com vaga descoberta."
-      },
-      {
-        "ini": 1,
-        "titulo": "2 dormitórios (1 suíte)",
-        "sub": "28 unidades, de 52,02 a 55,82 m²."
-      }
-    ],
-    "note": "Scire Terrasse, da Scire Empreendimentos, no Vorstadt — tabela de outubro/2026, torre única, conclusão da obra prevista para junho/2028: 29 unidades, todas disponíveis (1 de 1 dormitório e 28 de 2 dormitórios com suíte). Condição: ato (1x) em 10/10/2026 + 20 parcelas mensais a partir de 10/11/2026 + 3 parcelas semestrais a partir de 10/06/2027 + 36 parcelas mensais pós-chaves a partir de 10/07/2028 + financiamento (1x) em 28/06/2028. As semestrais somam 6%, as 20 mensais 11% e o pós-chaves 10%; o financiamento é 69% nas de 2 dormitórios e 68% na de 1 dormitório, e o ato completa o resto (4% e 5%). Em todas as linhas as partes fecham o valor ao centavo. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "note": "Terrasse, da Scire Empreendimentos, no Vorstadt — tabela de outubro/2026, torre única, conclusão da obra prevista para junho/2028: 28 unidades de 2 dormitórios com suíte, de 52,02 a 55,82 m², todas disponíveis. Condição: ato (1x) em 10/10/2026 + 20 parcelas mensais a partir de 10/11/2026 + 3 parcelas semestrais a partir de 10/06/2027 + 36 parcelas mensais pós-chaves a partir de 10/07/2028 + financiamento (1x) em 28/06/2028. Ato 4%, 20 mensais 11%, semestrais 6% (2% cada), pós-chaves 10% e financiamento 69%; as partes fecham o valor ao centavo. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
     "summary": {
       "tipoDefault": "Apartamento",
       "situacaoCol": 12,
@@ -8596,10 +8722,7 @@ const SALES_TABLES = {
           "bold": "Avaliação",
           "col": 11
         }
-      ],
-      "construtora": "Scire",
-      "bairro": "Vorstadt",
-      "entrega": "06/2028"
+      ]
     }
   }
 };

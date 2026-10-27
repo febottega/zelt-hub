@@ -61,11 +61,11 @@ const DRIVE_LINKS = {
   "Estanislau Park": "https://drive.google.com/drive/folders/13wXdT8pZ3al3NZim1LgrTlWtC6TXD715",
   "Hannover": "https://drive.google.com/drive/folders/1g1PCfoEJVbgMDw3PUDJo7KnO5v-Hh9_k",
   "Scire Fortaleza": "https://drive.google.com/drive/folders/1TRv1-dHxtjzqmfc5PD5o7LgkeHRIcndx",
-  "Scire Norden": "https://drive.google.com/drive/folders/1Oq1vDNl5wDiPQ5nPY9eCD75Mzih5o44l",
-  "Scire Solare - 1 dormitório": "https://drive.google.com/drive/folders/16yno_V1JkX71-lwFL350Ecs1Ajn9KRZg",
-  "Scire Solare - 2 dormitórios": "https://drive.google.com/drive/folders/16yno_V1JkX71-lwFL350Ecs1Ajn9KRZg",
-  "Scire Terrasse - 1 dormitório": "https://drive.google.com/drive/folders/1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
-  "Scire Terrasse - 2 dormitórios": "https://drive.google.com/drive/folders/1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
+  "Norden": "https://drive.google.com/drive/folders/1Oq1vDNl5wDiPQ5nPY9eCD75Mzih5o44l",
+  "Solare - 1 dormitório": "https://drive.google.com/drive/folders/16yno_V1JkX71-lwFL350Ecs1Ajn9KRZg",
+  "Solare - 2 dormitórios": "https://drive.google.com/drive/folders/16yno_V1JkX71-lwFL350Ecs1Ajn9KRZg",
+  "Terrasse - 1 dormitório": "https://drive.google.com/drive/folders/1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
+  "Terrasse - 2 dormitórios": "https://drive.google.com/drive/folders/1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
   "Villaggio Treviso": "https://drive.google.com/drive/folders/1RLOudeck3dBTWh0PMG6tNtRaThBOV6Pd"
 };
 const driveLinkFor = d => DRIVE_LINKS[d.empreendimento] || null;
