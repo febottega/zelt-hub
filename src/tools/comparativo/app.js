@@ -839,8 +839,10 @@ function buildResumo(emp, ri){
   const grp = grupoDe(t, ri);
   b1.push(`*${rotuloUnidade(t)} ${un}*${grp&&grp.rotulo?` \u00b7 ${grp.rotulo}`:""}${andar?` \u00b7 ${andar}`:""}`);
   const bits = (s.bits||[]).map(b=>{
-    const v = r[b.col];
+    let v = r[b.col];
     if(vazio(v)) return null;
+    /* troca: abreviação da tabela por extenso no resumo (Solare: "144 D" -> "144 (descoberta)") */
+    if(b.troca) Object.entries(b.troca).forEach(([de,para])=>{ v=String(v).replace(de,para); });
     return `${b.pre||""}${v}${b.pos||""}`;
   }).filter(Boolean);
   if(bits.length) b1.push(bits.join(" \u00b7 "));

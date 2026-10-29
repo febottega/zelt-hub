@@ -213,10 +213,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.796.144 bytes):
+Hash de referência (26 payloads, 16.801.648 bytes):
 
 ```
-0F4D2B1AF77441B7D376282F1B695551D7A6B76842E01FC573FB2494D4B31695
+F648AD9AE8922EFA9462F10366306B7FC5F645614A28CAD26D5C415ABF437086
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -558,7 +558,7 @@ dormitório tem uma unidade só (a 1408). Condição: ato + 20 mensais (11%) + 3
 cada) + 36x pós-chaves (10%) + financiamento — 69% nas de 2D (ato 4%) e 68% na de 1D (ato 5%).
 
 **Colunas das tabelas da Scire** (pedido do Felipe em 29/10/2026, nas seis): sem Desconto,
-sem "Valor (com desconto)", sem Avaliação, sem Situação e sem financiamento. A coluna
+sem "Valor (com desconto)", sem Avaliação e sem Situação. A coluna
 **Tabela** mostra o **valor final**: nas unidades com desconto, é o valor já com desconto
 (o Felipe corrigiu no mesmo dia, quando ela tinha ficado com o preço cheio). É a mesma base
 dos cards e das séries, e as parcelas da construtora fecham com ela. O número de parcelas
@@ -567,6 +567,15 @@ Bloco B e 80x no A, o cabeçalho é "(76x / 80x)" e cada grupo traz `parcelaRotu
 "Copiar Resumo" dizer o número certo do bloco. Sem coluna de situação, as reservadas do Solare
 2D (709, 803) levam a etiqueta "Reservada" (`etiquetas`) e o `summary.situacaoPor`, que o
 `buildResumo` usa na linha "Situação".
+
+**A conta tem de fechar na tabela e no resumo** (Felipe, 29/10/2026). O financiamento é
+coluna e é a última parcela do `summary.parcelas`, nas seis tabelas da Scire e nas duas da
+Marini (Estanislau Park e Hannover, que tinham ficado sem ela em 26/10): sem ele, ato +
+parcelas não dá o valor. Conferido nas 114 linhas, na tabela e no "Copiar Resumo": cada
+parcela vezes o número do rótulo ("29 parcelas", "(24x)", "5 reforços"), mais o
+financiamento, dá o valor ao centavo. Num cadastro novo, faça a mesma conta antes de publicar.
+No Solare a vaga é abreviada ("144 D", "86 C") para a tabela caber; o bit da vaga tem
+`troca`, que o `buildResumo` usa para escrever "(descoberta)"/"(coberta)" por extenso.
 
 ### Duas formas no price-changes.js
 
