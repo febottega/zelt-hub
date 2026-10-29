@@ -1,14 +1,16 @@
 /* Padrão de acabamento e lazer de cada empreendimento, para a nota de custo-benefício. Chave = nome do card
    sem o sufixo " - ..." (DUO, Bothanic, Vista 43, Tulum, Criatto, Solare, Terrasse cobrem todos os cards).
    Padrão julgado pelo produto, nunca pelo preço: pesquisa de 29/10/2026 (sites das construtoras e anúncios)
-   revisada pelo Felipe (Egon Belz Médio e Villa Toscana Alto, também por ele). lazer: null = não achamos a lista (não é "sem lazer"); o modelo usa a média do padrão.
+   revisada pelo Felipe (Egon Belz Médio e Villa Toscana Alto, também por ele). Lazer de Kaisergarten,
+   Flow, Vista 43 e Amani 53 tirado dos materiais do Drive da ZELT (tabela da Castelo, folder e memorial
+   do Flow, apresentação do Vista 43 e do Amani). lazer: null = não achamos a lista (não é "sem lazer"); o modelo usa a média do padrão.
    portaria_24h é registrada mas não conta como item de lazer. */
 const PADRAO_LAZER = {
   "Villa Toscana": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "playground", "sauna_spa", "pet_place", "cinema_jogos", "portaria_24h"] },
   "Grand Park": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "sauna_spa", "pet_place", "cinema_jogos"] },
   "Carbono": { padrao: "Médio", lazer: ["piscina", "academia", "rooftop", "coworking", "cinema_jogos", "lavanderia"] },
   "Liv": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "coworking", "bicicletario", "lavanderia", "mercado_autonomo"] },
-  "Kaisergarten": { padrao: "Altíssimo", lazer: null },
+  "Kaisergarten": { padrao: "Altíssimo", lazer: ["piscina", "academia", "salao_festas", "playground"] },
   "Gard": { padrao: "Alto", lazer: null },
   "Egon Belz": { padrao: "Médio", lazer: ["piscina", "salao_festas", "rooftop", "coworking"] },
   "DUO": { padrao: "Altíssimo", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "rooftop", "pet_place", "cinema_jogos"] },
@@ -25,7 +27,7 @@ const PADRAO_LAZER = {
   "Balsini 195": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground", "rooftop"] },
   "Wissen": { padrao: "Médio", lazer: ["piscina", "academia", "espaco_gourmet", "coworking", "mercado_autonomo"] },
   "N Studios": { padrao: "Médio", lazer: ["piscina", "academia", "espaco_gourmet", "coworking", "mercado_autonomo"] },
-  "Vista 43": { padrao: "Médio", lazer: null },
+  "Vista 43": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "coworking", "pet_place"] },
   "Cipriani Tower": { padrao: "Alto", lazer: ["piscina", "piscina_aquecida", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "pet_place", "cinema_jogos"] },
   "San Blas": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "playground", "quadra", "pet_place", "cinema_jogos"] },
   "Valverde": { padrao: "Médio", lazer: ["academia", "salao_festas", "playground", "coworking"] },
@@ -36,10 +38,10 @@ const PADRAO_LAZER = {
   "Princess Tower": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground"] },
   "Ed. Toulouse": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground"] },
   "Ed. Edimburgo": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground"] },
-  "Flow": { padrao: "Alto", lazer: null },
+  "Flow": { padrao: "Alto", lazer: ["piscina", "academia", "espaco_gourmet", "playground", "rooftop", "coworking"] },
   "Central Park": { padrao: "Alto", lazer: ["piscina", "academia", "espaco_gourmet", "quadra", "sauna_spa"] },
   "Tulum": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground", "coworking", "pet_place"] },
-  "Amani 53": { padrao: "Altíssimo", lazer: null },
+  "Amani 53": { padrao: "Altíssimo", lazer: ["academia", "espaco_gourmet"] },
   "Villaggio Treviso": { padrao: "Alto", lazer: ["piscina", "piscina_aquecida", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra"] },
   "Criatto": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "playground", "quadra", "coworking", "pet_place", "cinema_jogos"] },
   "Estanislau Park": { padrao: "Econômico", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "coworking", "pet_place", "cinema_jogos", "bicicletario"] },

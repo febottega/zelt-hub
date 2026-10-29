@@ -478,16 +478,16 @@ const DATA = [
     "empreendimento": "San Vito",
     "bairro": "Velha",
     "unidade": null,
-    "config": "2 e 3 suítes",
+    "config": "2 suítes",
     "vagas": "1",
     "vagasN": 1,
     "apriv": 76.29,
-    "atotal": 105.91,
+    "atotal": 76.94,
     "faixaArea": true,
     "vmin": 590000.0,
     "vmax": 630000.0,
-    "media": 610000.0,
-    "rpriv": 6695.94,
+    "media": 603500.0,
+    "rpriv": 7893.16,
     "rtotal": null,
     "entrega": "07/2027",
     "entregaKey": 24331,
@@ -495,12 +495,10 @@ const DATA = [
     "condicao": "Entrada + 84x",
     "correcao": "Somente CUB",
     "quartos": [
-      2,
-      3
+      2
     ],
     "suites": [
-      2,
-      3
+      2
     ],
     "terreno": false,
     "sold": false,

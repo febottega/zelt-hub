@@ -151,7 +151,10 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   entre padrões do CUB × a obra ser ~metade do preço): medido solto, o econômico saía 10% mais caro que o
   médio, porque os seis são de duas construtoras em bairros de índice baixo. O lazer é contado sem a
   portaria 24h e é medido (+2%/item em 29/10); `lazer: null` é "não achamos", não "não tem", e recebe a
-  média do mesmo padrão (Kaisergarten, Gard, Vista 43, Flow, Amani 53). Card de empreendimento novo:
+  média do mesmo padrão (só o Gard, desde 29/10: o book dele no Drive é imagem e a tabela da Castelo
+  não lista lazer). O lazer de Kaisergarten, Flow, Vista 43 e Amani 53 veio das pastas do Drive da ZELT.
+  A aba tem **filtro por padrão** (`pstate.padrao`, `padraoDe(d)`); os terrenos estão como Alto no
+  `PADRAO_LAZER` e aparecem nesse filtro, embora o padrão não entre na nota deles. Card de empreendimento novo:
   ponha o nome no `PADRAO_LAZER`, senão ele fica fora do ranking. Terrenos não usam padrão nem lazer.
   O **Grand Park** (Andraus) fica na **Vila Nova** (Rua Almirante Barroso, 739); até 29/10/2026 o
   card dizia Velha.
@@ -166,7 +169,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   de valor total da unidade ficam por último, ao lado do Resumo, do mais parcelado para o mais
   curto e com o **à vista sempre na ponta** (ex.: "Em 60x → Nas chaves → À vista"). O
   cabeçalho delas ficou laranja por um dia e voltou ao azul a pedido do Felipe; o destaque
-  agora é o botão "Copiar Resumo", amarelo (`#ffd23f`). Isso é só desenho: o `SALES_VALORES` do `app.js`
+  agora é o botão "Copiar Resumo" e o topo da coluna Resumo, os dois amarelos (`#ffd23f`). Isso é só desenho: o `SALES_VALORES` do `app.js`
   lista, **por nome de coluna**, as colunas de valor de cada tabela e o `salesTableHTML`
   reordena na hora; os dados continuam na ordem da construtora, e o resumo, a ordenação e o
   `data-ri` seguem pelo índice original.
@@ -253,10 +256,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.830.228 bytes):
+Hash de referência (26 payloads, 16.831.820 bytes):
 
 ```
-29D88E4B82CB6C2658630854350B5B9D6ED31C406C598F5D13DC4021C29B2230
+2764186240A51D87D797C1950FBBE733E5A26481C71714B0014A3E5F005E002D
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -498,10 +501,16 @@ quartos (1 suíte)". Só mude a configuração quando ele pedir (como no Egon Be
 
 **O `rpriv` não tem uma fórmula só.** Dos 69 cards, 54 usam `media/apriv` e **7
 usam `media` dividida pela média da faixa de área** (`(apriv+atotal)/2`): Liv,
-Egon Belz, Gardens, San Vito, Lago di Garda, Alphaville, Ed. Edimburgo e
+Egon Belz, Gardens, Lago di Garda, Alphaville, Ed. Edimburgo e
 Lisbon. O Central Park usa outra coisa ainda. Antes de recalcular
 um R$/m², descubra qual divisor aquele card já usava — aplicar `media/apriv` num
 dos sete infla o número em cerca de 10%.
+
+O **San Vito** apto tipo (id 15) era "2 e 3 suítes" e dividia pela faixa 76,29–105,91, onde o 105,91
+era área **total**, não privativa. Desde 29/10/2026 é **"2 suítes"** (pedido do Felipe: 3 suítes só nas
+coberturas 1701/1704 e no terraço 402, que têm card próprio) e segue a regra dos Tulum sobre as quatro
+unidades tipo da tabela — 1204, 1304, 1404 e 1503 (76,29 a 76,94 m²): `media` 603.500 e `rpriv`
+7.893,16. Os terraços 403 e 404 (2 suítes) ficam fora dele; o 403 tem card de terraço.
 
 Os **dois Tulum** usavam essa fórmula da faixa e em 23/09/2026 passaram para a
 **média do R$/m² unidade a unidade** da tabela inteira, sobre o total em 72x (a

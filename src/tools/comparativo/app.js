@@ -90,6 +90,8 @@ const isSold = d => !!d.sold;
 const uniq = (arr) => [...new Set(arr)];
 const NUM_KEYS = ["vagas","quartos","suites","ano"];
 const SPECIAL = new Set(["terreno","adef"]);   /* valores não-numéricos em filtros numéricos */
+/* padrão de acabamento do card (data/padrao.js), usado no filtro da aba Custo-benefício */
+const padraoDe = d => { const p=PADRAO_LAZER[d.empreendimento.replace(/ - .*/,"")]; return p ? p.padrao : null; };
 const OPTS = {
   bairro: uniq(DATA.map(d=>d.bairro)).sort((a,b)=>a.localeCompare(b,"pt-BR")),
   tipo: ["Apartamento Tipo","Terraço","Loft Duplex","Cobertura","Terreno"].filter(t=>DATA.some(d=>d.tipo===t)),
@@ -99,6 +101,7 @@ const OPTS = {
             .map(n=>({val:n,label:n+(n>1?" quartos":" quarto")})),
   suites: [1,2,3,4,5].filter(n=>DATA.some(d=>d.suites.includes(n)))
             .map(n=>({val:n,label:n+(n>1?" suítes":" suíte")})),
+  padrao: ["Altíssimo","Alto","Médio","Econômico"].filter(p=>DATA.some(d=>padraoDe(d)===p)),
   ano: uniq(DATA.map(d=>d.entregaAno).filter(y=>y!=null)).sort((a,b)=>a-b).map(y=>({val:y,label:String(y)}))
             .concat(DATA.some(d=>d.entregaAno==null && !d.pronto)?[{val:"adef",label:"A definir"}]:[])
 };
@@ -114,6 +117,7 @@ function matchValue(d,key,val){
   if(key==="vagas") return d.vagasN===val;
   if(key==="quartos") return val==="terreno" ? d.terreno : d.quartos.includes(val);
   if(key==="suites") return d.suites.includes(val);
+  if(key==="padrao") return padraoDe(d)===val;
   if(key==="ano") return val==="adef" ? (d.entregaAno==null && !d.pronto) : d.entregaAno===val;
   return true;
 }
@@ -325,7 +329,7 @@ function render(){
 }
 
 /* ---- barra de filtros ativos ---- */
-const CAT_LABEL={bairro:"Bairro",quartos:"Quartos",suites:"Suítes",tipo:"Tipo",construtora:"Construtora",vagas:"Vagas",ano:"Entrega"};
+const CAT_LABEL={bairro:"Bairro",quartos:"Quartos",suites:"Suítes",tipo:"Tipo",construtora:"Construtora",vagas:"Vagas",ano:"Entrega",padrao:"Padrão"};
 function chipText(key,v){
   if(key==="quartos") return v==="terreno"?"Terreno":`${v} quarto${v>1?"s":""}`;
   if(key==="suites") return `${v} suíte${v>1?"s":""}`;
@@ -495,8 +499,8 @@ document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeCompare();closeCardPopup();}});
 
 /* ===================== CUSTO-BENEFÍCIO ===================== */
-const pstate = { bairro:new Set(), quartos:new Set(), suites:new Set(), tipo:new Set(), vagas:new Set(), areaMin:null, areaMax:null };
-const PKEYS = ["bairro","quartos","suites","tipo","vagas"];
+const pstate = { bairro:new Set(), quartos:new Set(), suites:new Set(), tipo:new Set(), vagas:new Set(), padrao:new Set(), areaMin:null, areaMax:null };
+const PKEYS = ["bairro","quartos","suites","tipo","vagas","padrao"];
 
 function pMatchExcept(d,skip){
   for(const key of PKEYS){
@@ -505,6 +509,7 @@ function pMatchExcept(d,skip){
     if(key==="bairro" && !sel.has(d.bairro)) return false;
     if(key==="tipo" && !sel.has(d.tipo)) return false;
     if(key==="vagas" && !sel.has(d.vagasN)) return false;
+    if(key==="padrao" && !sel.has(padraoDe(d))) return false;
     if(key==="quartos"){ if(![...sel].some(v=> v==="terreno"?d.terreno:d.quartos.includes(v))) return false; }
     if(key==="suites"){ if(![...sel].some(v=> d.suites.includes(v))) return false; }
   }
@@ -557,7 +562,7 @@ function updatePriceChrome(){
   document.querySelectorAll("#view-precos .dd").forEach(dd=>{
     const key=dd.dataset.key, sel=pstate[key];
     const btn=dd.querySelector(".dd-btn"), text=dd.querySelector(".dd-text");
-    const defaults={bairro:"Todos",quartos:"Todos",suites:"Todas",tipo:"Todos",vagas:"Todas"};
+    const defaults={bairro:"Todos",quartos:"Todos",suites:"Todas",tipo:"Todos",vagas:"Todas",padrao:"Todos"};
     btn.querySelector(".count")?.remove();
     if(sel.size===0){ dd.classList.remove("active"); text.textContent=defaults[key]; }
     else{

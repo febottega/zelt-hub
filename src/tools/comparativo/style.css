@@ -624,6 +624,7 @@ table.sales .price-cell{font-family:var(--ff-display); font-weight:600; color:va
 
 
     .th-resumo{ text-align:center; white-space:nowrap; }
+    table.sales th.th-resumo{ background:#ffd23f; color:#1e1b35; }
     .td-resumo{ text-align:center; white-space:nowrap; }
     .btn-resumo{
       font-family:'Oswald',"Arial Narrow",sans-serif; font-size:12px; font-weight:500;
