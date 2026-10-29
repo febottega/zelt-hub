@@ -78,6 +78,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
 | R$/m² por bairro (custo-benefício) | `tools/comparativo/data/bairros.js` | 1 KB |
+| padrão e lazer por empreendimento | `tools/comparativo/data/padrao.js` | 6 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
 | logos das construtoras | `tools/comparativo/data/logos.js` | 44 KB |
 | CSS do comparativo | `tools/comparativo/style.css` | 46 KB |
@@ -134,14 +135,26 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   A aba **Custo-benefício** (era "Melhores preços" até 29/10/2026; a rota segue `#comparativo/precos`)
   ranqueia por nota de 0 a 10, não por preço: o preço esperado de cada card é o R$/m² do bairro
   (`M2_BAIRRO`, em `data/bairros.js`: mediana de anúncios do A Corrida dos Bairros, out/2026) vezes
-  os efeitos de área, proporção de suítes, vagas e tipo (cobertura, terraço, loft), medidos por
-  regressão nos próprios cards **no carregamento** (`CB`, no `app.js`) — card novo entra sozinho, desde
+  os efeitos de área, proporção de suítes, vagas, tipo (cobertura, terraço, loft) e nº de itens de lazer,
+  medidos por regressão nos próprios cards **no carregamento** (`CB`, no `app.js`) — card novo entra sozinho, desde
   que o bairro dele esteja no `M2_BAIRRO` (senão fica fora e o quadro "Como a nota é calculada" avisa).
   Nota 5 = preço esperado; cada ponto ≈ 6% (`CB_ESCALA = 0.30`). Terrenos têm modelo próprio (bairro e
   área) e só se comparam entre si. Esgotados ficam no fim, sem posição. O preço é o `media` do card e a
   área, a que corresponde a ele (`cbArea`: meio da faixa onde o `rpriv` foi `media/apriv`, senão
   `media/rpriv`). Ao ajustar, a elasticidade livre da localização deu 1,12 — por isso o índice entra
-  com peso 1. O modelo não vê padrão, lazer, vista nem condição de pagamento; o quadro diz isso.
+  com peso 1. O modelo não vê vista, andar nem condição de pagamento; o quadro diz isso.
+  **Padrão e lazer** (29/10/2026): `PADRAO_LAZER` em `data/padrao.js`, chave = nome do card sem o " - ..."
+  (os 44 empreendimentos). Veio de uma pesquisa na web (planilha "Pesquisa padrao e lazer.csv" em
+  Downloads) revisada pelo Felipe, que decidiu: Vista 43 Médio, Amani 53 Altíssimo, Flow Alto, DUO e
+  Bothanic Altíssimo, Egon Belz Médio, Villa Toscana Alto, e **os de Minha Casa Minha Vida — Scire e Marini — Econômico**. O padrão é do
+  produto, nunca do preço. Ele entra com **peso fixo** (`CB_PADRAO`: −8% / 0 / +10% / +20%, da proporção
+  entre padrões do CUB × a obra ser ~metade do preço): medido solto, o econômico saía 10% mais caro que o
+  médio, porque os seis são de duas construtoras em bairros de índice baixo. O lazer é contado sem a
+  portaria 24h e é medido (+2%/item em 29/10); `lazer: null` é "não achamos", não "não tem", e recebe a
+  média do mesmo padrão (Kaisergarten, Gard, Vista 43, Flow, Amani 53). Card de empreendimento novo:
+  ponha o nome no `PADRAO_LAZER`, senão ele fica fora do ranking. Terrenos não usam padrão nem lazer.
+  O **Grand Park** (Andraus) fica na **Vila Nova** (Rua Almirante Barroso, 739); até 29/10/2026 o
+  card dizia Velha.
   O **Egon Belz** (Castelo) se chamava "Residencial EB" até 06/10/2026; o nome mudou em
   todos os arquivos de dados e no `DRIVE_LINKS` — a âncora da tabela agora é `#tab-egon-belz`.
   Na aba tabelas de vendas, as tabelas de `SALES_ORDENAVEL` (`app.js`: os dois Vista 43,
@@ -240,10 +253,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.818.292 bytes):
+Hash de referência (26 payloads, 16.830.228 bytes):
 
 ```
-016A28579B26A03105EE07D656AD75212DD211FD4965AF476C670512AB795C38
+29D88E4B82CB6C2658630854350B5B9D6ED31C406C598F5D13DC4021C29B2230
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

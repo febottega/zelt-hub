@@ -617,10 +617,27 @@ function gradeColor(t){ return t<0.5 ? lerpHex("#1f9d63","#e2851f",t/0.5) : lerp
 /* ---------- Custo-benefício ----------
    Preço esperado de cada card = R$/m² do bairro (M2_BAIRRO) × efeitos do que ele oferece, com os
    efeitos medidos nos próprios cards por regressão (log do R$/m² relativo ao bairro sobre log da área,
-   proporção de suítes, vagas e tipo da unidade). Recalcula sozinho a cada card novo. Terrenos têm
-   modelo próprio (só área) e só se comparam entre si. Nota = 5 no preço esperado, ±1 ponto a cada 6%. */
+   proporção de suítes, vagas, tipo da unidade e itens de lazer). O padrão de acabamento (PADRAO_LAZER)
+   entra com peso fixo, CB_PADRAO, porque na amostra ele se confunde com o bairro: os econômicos são todos
+   de duas construtoras em bairros baratos, e medido solto ele saía mais caro que o médio. Recalcula sozinho
+   a cada card novo. Terrenos têm modelo próprio (só área) e só se comparam entre si.
+   Nota = 5 no preço esperado, ±1 ponto a cada 6%. */
 const CB_ESCALA = 0.30;
+/* CUB (NBR 12721): baixo ~15% abaixo do normal e alto ~20-25% acima; a obra é ~metade do preço de venda,
+   então o efeito no preço é cerca de metade. Altíssimo vai além do R8-A, que é o teto do CUB. */
+const CB_PADRAO = { "Econômico":-0.08, "Médio":0, "Alto":0.10, "Altíssimo":0.20 };
 const cbMx = a => a && a.length ? Math.max(...a) : 0;
+const cbPL = d => PADRAO_LAZER[d.empreendimento.replace(/ - .*/,"")] || null;
+/* portaria 24h é segurança, não lazer; lista não encontrada (null) recebe a média do mesmo padrão */
+const cbLazerN = d => { const l=cbPL(d)&&cbPL(d).lazer; return l ? l.filter(x=>x!=="portaria_24h").length : null; };
+const CB_LAZER_MEDIO = (()=>{
+  const m={};
+  Object.keys(CB_PADRAO).forEach(p=>{
+    const v=DATA.filter(d=>!d.terreno && cbPL(d) && cbPL(d).padrao===p && cbLazerN(d)!=null).map(cbLazerN);
+    m[p]=v.length ? v.reduce((a,b)=>a+b,0)/v.length : 0;
+  });
+  return m;
+})();
 function cbArea(d){
   /* área que corresponde ao "media" do card: quem fez media/apriv numa faixa de áreas usa o meio da
      faixa; os demais (meio da faixa, Tulum) já trazem a área implícita em media/rpriv */
@@ -631,9 +648,11 @@ function cbVars(d){
   const q=cbMx(d.quartos), s=cbMx(d.suites);
   return { lnArea:Math.log(cbArea(d)), suites:q?s/q:0,
     vagas: d.vagasN!=null ? d.vagasN : (q>=3?2:1),
-    cob: d.tipo==="Cobertura"?1:0, ter: d.tipo==="Terraço"?1:0, loft: d.tipo==="Loft Duplex"?1:0 };
+    cob: d.tipo==="Cobertura"?1:0, ter: d.tipo==="Terraço"?1:0, loft: d.tipo==="Loft Duplex"?1:0,
+    lazer: cbLazerN(d)!=null ? cbLazerN(d) : CB_LAZER_MEDIO[cbPL(d).padrao],
+    lnPadrao: d.terreno ? 0 : Math.log(1+CB_PADRAO[cbPL(d).padrao]) };
 }
-const CB_X = { ap: v=>[1,v.lnArea,v.suites,v.vagas,v.cob,v.ter,v.loft], te: v=>[1,v.lnArea] };
+const CB_X = { ap: v=>[1,v.lnArea,v.suites,v.vagas,v.cob,v.ter,v.loft,v.lazer], te: v=>[1,v.lnArea] };
 function cbOLS(X,y){
   const k=X[0].length, A=Array.from({length:k},()=>Array(k+1).fill(0));
   X.forEach((r,i)=>{ for(let a=0;a<k;a++){ for(let b=0;b<k;b++) A[a][b]+=r[a]*r[b]; A[a][k]+=r[a]*y[i]; } });
@@ -646,17 +665,17 @@ function cbOLS(X,y){
 }
 const CB = (()=>{
   const out={ por:{}, coef:{}, fora:[] };
-  const ok = d => d.media && d.rpriv && M2_BAIRRO.bairros[d.bairro];
+  const ok = d => d.media && d.rpriv && M2_BAIRRO.bairros[d.bairro] && (d.terreno || cbPL(d));
   DATA.filter(d=>!ok(d)).forEach(d=>out.fora.push(d));
   for(const g of ["ap","te"]){
     const grupo = DATA.filter(d=>ok(d) && (g==="te") === !!d.terreno);
     if(grupo.length < CB_X[g](cbVars(grupo[0]||DATA[0])).length+2) continue;
     const loc = d => M2_BAIRRO.bairros[d.bairro];
-    const y = grupo.map(d => Math.log(d.media/cbArea(d)) - Math.log(loc(d)));
+    const y = grupo.map(d => Math.log(d.media/cbArea(d)) - Math.log(loc(d)) - cbVars(d).lnPadrao);
     const b = cbOLS(grupo.map(d=>CB_X[g](cbVars(d))), y);
     out.coef[g]=b;
     grupo.forEach(d=>{
-      const lnM2 = CB_X[g](cbVars(d)).reduce((s,v,j)=>s+v*b[j],0) + Math.log(loc(d));
+      const lnM2 = CB_X[g](cbVars(d)).reduce((s,v,j)=>s+v*b[j],0) + Math.log(loc(d)) + cbVars(d).lnPadrao;
       const esperado = Math.exp(lnM2)*cbArea(d);
       const r = Math.log(esperado/d.media);
       out.por[d.id] = { esperado, dif: d.media/esperado-1,
@@ -685,6 +704,7 @@ function buildChart(list){
       <span class="pbar-info">
         <span class="pbar-name"><span class="nm">${d.empreendimento}${d.unidade?` <span class="u">${d.unidade}</span>`:''}</span><span class="ptag ${tipoClass(d.tipo)}">${d.tipo}</span></span>
         <span class="pbar-sub">${d.construtora} · ${d.bairro} · ${d.config}${d.terreno?'':` · ${cbVagas(d)}`}</span>
+        ${d.terreno||!cbPL(d)?'':`<span class="pbar-pl"><b class="pad pad-${cbPL(d).padrao.normalize("NFD").replace(/[^a-zA-Z]/g,"").toLowerCase()}">${cbPL(d).padrao}</b>${cbLazerN(d)==null?"lazer não informado":cbLazerN(d)+(cbLazerN(d)===1?" item":" itens")+" de lazer"}</span>`}
       </span>
       <span class="pbar-track"><span class="pbar-fill"></span><span class="pbar-val">${cbNota(cb.nota)}<small>${cbFaixa(cb.nota)}</small></span></span>
       <span class="pbar-px">
@@ -709,11 +729,13 @@ function buildCbMetodo(){
     ["Cada vaga a mais", pct(b[3]), ""],
     ["Cobertura", pct(b[4]), "contra apartamento tipo"],
     ["Terraço / garden", pct(b[5]), "a área do terraço pesa menos que a coberta"],
-    ["Loft duplex", pct(b[6]), ""]] : [];
+    ["Loft duplex", pct(b[6]), ""],
+    ["Cada item de lazer", pct(b[7]), "piscina, academia, salão, rooftop… (lista não encontrada usa a média do padrão)"],
+    ...Object.entries(CB_PADRAO).filter(([p])=>p!=="Médio").map(([p,v])=>[`Padrão ${p.toLowerCase()}`, pct(Math.log(1+v)), "contra o médio — peso fixo, pela tabela do CUB"])] : [];
   el.querySelector(".cb-efeitos").innerHTML = efeitos.map(([k,v,n])=>`<li><b>${k}</b><span class="v">${v}</span>${n?`<span class="n">${n}</span>`:""}</li>`).join("");
   el.querySelector(".cb-bairros").innerHTML = bairros.map(([n,v])=>`<li><span>${n}</span><b>${BRL(v)}</b></li>`).join("");
   el.querySelector(".cb-fonte").innerHTML = `Índice de bairro: mediana do R$/m² de apartamentos à venda, <a href="${M2_BAIRRO.url}" target="_blank" rel="noopener">${M2_BAIRRO.fonte}</a>, ${M2_BAIRRO.ref} (mediana da cidade: ${BRL(M2_BAIRRO.cidade)}/m²). Efeitos medidos nos ${Object.keys(CB.por).length} cards do comparativo.`
-    + (CB.fora.length ? ` Fora do ranking por falta de bairro no índice ou de preço: ${CB.fora.map(d=>d.empreendimento+(d.unidade?" "+d.unidade:"")).join(", ")}.` : "");
+    + (CB.fora.length ? ` Fora do ranking por falta de bairro no índice, de padrão ou de preço: ${CB.fora.map(d=>d.empreendimento+(d.unidade?" "+d.unidade:"")).join(", ")}.` : "");
 }
 
 function renderPrices(){

@@ -35,7 +35,7 @@ const DATA = [
     "tipo": "Apartamento Tipo",
     "construtora": "Andraus",
     "empreendimento": "Grand Park",
-    "bairro": "Velha",
+    "bairro": "Vila nova",
     "unidade": null,
     "config": "3 suítes",
     "vagas": "2",
