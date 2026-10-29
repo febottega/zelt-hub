@@ -844,7 +844,7 @@ function buildResumo(emp, ri){
     return `${b.pre||""}${v}${b.pos||""}`;
   }).filter(Boolean);
   if(bits.length) b1.push(bits.join(" \u00b7 "));
-  const sit = (s.situacaoCol!=null && !vazio(r[s.situacaoCol])) ? r[s.situacaoCol] : (s.situacao || "Disponível");
+  const sit = (s.situacaoCol!=null && !vazio(r[s.situacaoCol])) ? r[s.situacaoCol] : ((s.situacaoPor && s.situacaoPor[un]) || s.situacao || "Disponível");
   b1.push(`Situação: ${sit}`);
 
   const b2 = [];
@@ -855,7 +855,7 @@ function buildResumo(emp, ri){
   }
   (s.parcelas||[]).forEach(p=>{
     const v = parseBRL(r[p.col]);
-    if(v!=null) b2.push(`* ${p.label}: ${fmtBRL(v)}`);
+    if(v!=null) b2.push(`* ${(grp && grp.parcelaRotulos && grp.parcelaRotulos[p.label]) || p.label}: ${fmtBRL(v)}`);
   });
 
   const b3 = [];

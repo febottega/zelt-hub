@@ -6646,7 +6646,6 @@ const SALES_TABLES = {
       "Área da vaga",
       "Vaga",
       "Tipo de vaga",
-      "Avaliação Caixa (engenharia)",
       "Tabela Marini",
       "Sinal",
       "60 parcelas mensais (CUB)",
@@ -6661,7 +6660,6 @@ const SALES_TABLES = {
         "11,05 m²",
         "41",
         "Coberta",
-        "R$ 405.000,00",
         "R$ 450.000,00",
         "R$ 15.000,00",
         "R$ 1.579,16",
@@ -6675,7 +6673,6 @@ const SALES_TABLES = {
         "11,04 m²",
         "77",
         "Coberta",
-        "R$ 403.000,00",
         "R$ 450.000,00",
         "R$ 15.000,00",
         "R$ 1.579,16",
@@ -6689,7 +6686,6 @@ const SALES_TABLES = {
         "21,84 m²",
         "114",
         "Descoberta",
-        "R$ 403.000,00",
         "R$ 448.000,00",
         "R$ 15.000,00",
         "R$ 1.054,16",
@@ -6703,7 +6699,6 @@ const SALES_TABLES = {
         "17,28 m²",
         "44",
         "Coberta",
-        "R$ 500.000,00",
         "R$ 579.000,00",
         "R$ 30.000,00",
         "R$ 1.666,66",
@@ -6717,7 +6712,6 @@ const SALES_TABLES = {
         "11,04 m²",
         "82",
         "Coberta",
-        "R$ 403.000,00",
         "R$ 453.000,00",
         "R$ 15.000,00",
         "R$ 1.641,66",
@@ -6731,14 +6725,13 @@ const SALES_TABLES = {
         "19,32 m²",
         "116",
         "Descoberta",
-        "R$ 405.000,00",
         "R$ 454.000,00",
         "R$ 15.000,00",
         "R$ 1.606,25",
         "R$ 10.000,00"
       ]
     ],
-    "note": "Residencial Hannover, da Marini Construtora, na Água Verde — tabela de outubro/2026, com a obra em 70% de medição. 6 unidades: 5 de 2 dormitórios (51,84 e 52,14 m²) e a 1408 de 3 dormitórios (69,76 m²), que está reservada. Todas com 1 vaga; a coluna de área da vaga traz a metragem dela. Condição: sinal + 60 parcelas mensais + 5 reforços anuais pagos à construtora, corrigidos pelo CUB, e o saldo pelo financiamento da Caixa. A parte paga à construtora (sinal + 60 parcelas + 5 reforços) mais o financiamento da Caixa fecha o valor da tabela ao centavo nas 6 linhas. A coluna \"Avaliação Caixa\" é o valor da engenharia da Caixa, abaixo do valor de tabela; a coluna de FGTS da tabela original veio vazia em todas as linhas e ficou de fora. Entrega prevista: agosto/2027.",
+    "note": "Residencial Hannover, da Marini Construtora, na Água Verde — tabela de outubro/2026, com a obra em 70% de medição. 6 unidades: 5 de 2 dormitórios (51,84 e 52,14 m²) e a 1408 de 3 dormitórios (69,76 m²), que está reservada. Todas com 1 vaga; a coluna de área da vaga traz a metragem dela. Condição: sinal + 60 parcelas mensais + 5 reforços anuais pagos à construtora, corrigidos pelo CUB, e o saldo pelo financiamento da Caixa. A parte paga à construtora (sinal + 60 parcelas + 5 reforços) mais o financiamento da Caixa fecha o valor da tabela ao centavo nas 6 linhas. A coluna de FGTS da tabela original veio vazia em todas as linhas e ficou de fora. Entrega prevista: agosto/2027.",
     "summary": {
       "tipoDefault": "Apartamento",
       "situacaoCol": 3,
@@ -6760,26 +6753,20 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Valor de tabela",
-        "col": 8
+        "col": 7
       },
       "parcelas": [
         {
           "label": "Sinal",
-          "col": 9
+          "col": 8
         },
         {
           "label": "60 parcelas mensais",
-          "col": 10
+          "col": 9
         },
         {
           "label": "5 reforços anuais",
-          "col": 11
-        }
-      ],
-      "alternativas": [
-        {
-          "bold": "Avaliação da Caixa (engenharia)",
-          "col": 7
+          "col": 10
         }
       ]
     }
@@ -6795,14 +6782,9 @@ const SALES_TABLES = {
       "Vaga",
       "Tipologia",
       "Tabela",
-      "Desconto",
-      "Valor (com desconto)",
       "Ato",
       "Parcela de chaves",
-      "Nº de parcelas pós-chaves",
-      "Parcela pós-chaves (mensal)",
-      "Avaliação",
-      "Situação"
+      "Parcela pós-chaves (76x / 80x)"
     ],
     "rows": [
       [
@@ -6810,15 +6792,10 @@ const SALES_TABLES = {
         "55,86 m²",
         "181",
         "2 dormitórios (demi-suíte)",
-        "R$ 507.000,00",
-        "R$ 58.000,00",
         "R$ 449.000,00",
         "R$ 22.450,32",
         "—",
-        "76",
-        "R$ 886,18",
-        "R$ 507.000,00",
-        "Disponível"
+        "R$ 886,18"
       ],
       [
         "1506",
@@ -6826,29 +6803,19 @@ const SALES_TABLES = {
         "153",
         "2 dormitórios (demi-suíte)",
         "R$ 520.000,00",
-        "—",
-        "R$ 520.000,00",
         "R$ 25.999,68",
         "—",
-        "76",
-        "R$ 1.026,32",
-        "R$ 513.000,00",
-        "Disponível"
+        "R$ 1.026,32"
       ],
       [
         "1508",
         "58,05 m²",
         "152",
         "2 dormitórios",
-        "R$ 470.000,00",
-        "R$ 41.000,00",
         "R$ 429.000,00",
         "R$ 21.450,04",
         "—",
-        "76",
-        "R$ 846,71",
-        "R$ 458.000,00",
-        "Disponível"
+        "R$ 846,71"
       ],
       [
         "1301",
@@ -6856,14 +6823,9 @@ const SALES_TABLES = {
         "60",
         "2 dormitórios (1 suíte)",
         "R$ 557.000,00",
-        "—",
-        "R$ 557.000,00",
         "R$ 13.925,00",
         "R$ 8.355,00",
-        "80",
-        "R$ 1.114,00",
-        "R$ 526.000,00",
-        "Disponível"
+        "R$ 1.114,00"
       ],
       [
         "1401",
@@ -6871,14 +6833,9 @@ const SALES_TABLES = {
         "58",
         "2 dormitórios (1 suíte)",
         "R$ 560.000,00",
-        "—",
-        "R$ 560.000,00",
         "R$ 14.000,00",
         "R$ 8.400,00",
-        "80",
-        "R$ 1.120,00",
-        "R$ 526.000,00",
-        "Disponível"
+        "R$ 1.120,00"
       ],
       [
         "1501",
@@ -6886,29 +6843,19 @@ const SALES_TABLES = {
         "51",
         "2 dormitórios (1 suíte)",
         "R$ 563.000,00",
-        "—",
-        "R$ 563.000,00",
         "R$ 14.075,00",
         "R$ 8.445,00",
-        "80",
-        "R$ 1.126,00",
-        "R$ 526.000,00",
-        "Disponível"
+        "R$ 1.126,00"
       ],
       [
         "1505",
         "55,86 m²",
         "43",
         "2 dormitórios (demi-suíte)",
-        "R$ 514.000,00",
-        "R$ 48.000,00",
         "R$ 466.000,00",
         "R$ 11.650,00",
         "R$ 6.990,00",
-        "80",
-        "R$ 932,00",
-        "R$ 507.000,00",
-        "Disponível"
+        "R$ 932,00"
       ],
       [
         "1506",
@@ -6916,14 +6863,9 @@ const SALES_TABLES = {
         "44",
         "2 dormitórios (demi-suíte)",
         "R$ 520.000,00",
-        "—",
-        "R$ 520.000,00",
         "R$ 13.000,00",
         "R$ 7.800,00",
-        "80",
-        "R$ 1.040,00",
-        "R$ 513.000,00",
-        "Disponível"
+        "R$ 1.040,00"
       ],
       [
         "1606",
@@ -6931,44 +6873,29 @@ const SALES_TABLES = {
         "55",
         "2 dormitórios (demi-suíte)",
         "R$ 520.000,00",
-        "—",
-        "R$ 520.000,00",
         "R$ 13.000,00",
         "R$ 7.800,00",
-        "80",
-        "R$ 1.040,00",
-        "R$ 513.000,00",
-        "Disponível"
+        "R$ 1.040,00"
       ],
       [
         "1706",
         "57,45 m²",
         "46",
         "2 dormitórios (demi-suíte)",
-        "R$ 510.000,00",
-        "R$ 36.000,00",
         "R$ 474.000,00",
         "R$ 11.850,00",
         "R$ 7.110,00",
-        "80",
-        "R$ 948,00",
-        "R$ 513.000,00",
-        "Disponível"
+        "R$ 948,00"
       ],
       [
         "1708",
         "58,05 m²",
         "47",
         "2 dormitórios",
-        "R$ 490.000,00",
-        "R$ 51.000,00",
         "R$ 439.000,00",
         "R$ 10.975,00",
         "R$ 6.585,00",
-        "80",
-        "R$ 878,00",
-        "R$ 458.000,00",
-        "Disponível"
+        "R$ 878,00"
       ]
     ],
     "grupos": [
@@ -6977,19 +6904,24 @@ const SALES_TABLES = {
         "titulo": "Bloco B (Fase I) — obra concluída e entregue",
         "rotulo": "Bloco B (entregue)",
         "entrega": "ENTREGUE",
-        "sub": "Ato (1x) em 10/10/2026 + 76 parcelas mensais pós-chaves a partir de 10/11/2026 + financiamento (1x) em 30/11/2026. À vista: 3% de desconto. O pós-chaves pode ser de até 20% do valor, em até 76 parcelas."
+        "sub": "Ato (1x) em 10/10/2026 + 76 parcelas mensais pós-chaves a partir de 10/11/2026 + financiamento (1x) em 30/11/2026. À vista: 3% de desconto. O pós-chaves pode ser de até 20% do valor, em até 76 parcelas.",
+        "parcelaRotulos": {
+          "Parcela pós-chaves (76x / 80x)": "Parcela pós-chaves (76x)"
+        }
       },
       {
         "ini": 3,
         "titulo": "Bloco A — conclusão da obra prevista para novembro/2026",
         "rotulo": "Bloco A",
-        "sub": "Ato (1x) em 10/10/2026 + parcela de chaves (1x) em 10/11/2026 + 80 parcelas mensais pós-chaves a partir de 10/12/2026 + financiamento (1x) em 30/11/2026."
+        "sub": "Ato (1x) em 10/10/2026 + parcela de chaves (1x) em 10/11/2026 + 80 parcelas mensais pós-chaves a partir de 10/12/2026 + financiamento (1x) em 30/11/2026.",
+        "parcelaRotulos": {
+          "Parcela pós-chaves (76x / 80x)": "Parcela pós-chaves (80x)"
+        }
       }
     ],
-    "note": "Scire Fortaleza, da Scire Empreendimentos, no bairro Fortaleza — tabela de outubro/2026: 11 unidades, todas disponíveis, 3 no Bloco B (Fase I, já entregue) e 8 no Bloco A (conclusão prevista para novembro/2026; entrega 12/2026). Todas de 2 dormitórios, de 55,86 a 60,72 m², com 1 vaga; as 1301, 1401 e 1501 do Bloco A têm suíte, as de 55,86 e 57,45 m² têm demi-suíte e as de 58,05 m² não têm. O valor de referência é o \"Valor (com desconto)\": em sete unidades ele é igual ao da tabela, e nas outras quatro a construtora já aplica o desconto da coluna. Em todas, ato + chaves + parcelas pós-chaves + financiamento (80% do valor, 1x em 30/11/2026) fecham o valor ao centavo; no Bloco B o ato é 5% e o pós-chaves 15%, no Bloco A o ato é 2,5%, as chaves 1,5% e o pós-chaves 16%. A coluna \"Avaliação\" é o valor de avaliação informado na tabela. Empreendimento registrado sob o R-1 da matrícula 49.230 do Cartório de Registro de Imóveis de Blumenau.",
+    "note": "Scire Fortaleza, da Scire Empreendimentos, no bairro Fortaleza — tabela de outubro/2026: 11 unidades, 3 no Bloco B (Fase I, já entregue) e 8 no Bloco A (conclusão prevista para novembro/2026; entrega 12/2026). Todas de 2 dormitórios, de 55,86 a 60,72 m², com 1 vaga; as 1301, 1401 e 1501 do Bloco A têm suíte, as de 55,86 e 57,45 m² têm demi-suíte e as de 58,05 m² não têm. O pós-chaves é de 76 parcelas no Bloco B e de 80 no Bloco A, e o financiamento é pago em 1x em 30/11/2026. Empreendimento registrado sob o R-1 da matrícula 49.230 do Cartório de Registro de Imóveis de Blumenau.",
     "summary": {
       "tipoDefault": "Apartamento",
-      "situacaoCol": 12,
       "bits": [
         {
           "col": 3
@@ -7005,31 +6937,20 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Valor",
-        "col": 6
+        "col": 4
       },
       "parcelas": [
         {
           "label": "Ato",
-          "col": 7
+          "col": 5
         },
         {
           "label": "Parcela de chaves",
-          "col": 8
+          "col": 6
         },
         {
-          "label": "Parcela pós-chaves (mensal)",
-          "col": 10
-        }
-      ],
-      "alternativas": [
-        {
-          "bold": "Valor de tabela",
-          "nota": "(sem desconto)",
-          "col": 4
-        },
-        {
-          "bold": "Avaliação",
-          "col": 11
+          "label": "Parcela pós-chaves (76x / 80x)",
+          "col": 7
         }
       ]
     }
@@ -7045,14 +6966,9 @@ const SALES_TABLES = {
       "Vaga",
       "Tipologia",
       "Tabela",
-      "Desconto",
-      "Valor (com desconto)",
       "Ato",
       "Parcela de chaves",
-      "Nº de parcelas pós-chaves",
-      "Parcela pós-chaves (mensal)",
-      "Avaliação",
-      "Situação"
+      "Parcela pós-chaves (80x)"
     ],
     "rows": [
       [
@@ -7060,15 +6976,10 @@ const SALES_TABLES = {
         "58,60 m²",
         "82 (coberta)",
         "2 dormitórios (1 suíte)",
-        "R$ 503.000,00",
-        "R$ 44.000,00",
         "R$ 459.000,00",
         "R$ 18.360,00",
         "—",
-        "80",
-        "R$ 918,00",
-        "R$ 550.000,00",
-        "Disponível"
+        "R$ 918,00"
       ],
       [
         "702",
@@ -7076,14 +6987,9 @@ const SALES_TABLES = {
         "94 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 514.000,00",
-        "—",
-        "R$ 514.000,00",
         "R$ 20.560,00",
         "—",
-        "80",
-        "R$ 1.028,00",
-        "R$ 530.000,00",
-        "Disponível"
+        "R$ 1.028,00"
       ],
       [
         "706",
@@ -7091,44 +6997,29 @@ const SALES_TABLES = {
         "84 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 513.000,00",
-        "—",
-        "R$ 513.000,00",
         "R$ 20.520,00",
         "—",
-        "80",
-        "R$ 1.026,00",
-        "R$ 550.000,00",
-        "Disponível"
+        "R$ 1.026,00"
       ],
       [
         "102",
         "58,60 m²",
         "162 (descoberta)",
         "2 dormitórios (1 suíte)",
-        "R$ 453.000,00",
-        "R$ 14.000,00",
         "R$ 439.000,00",
         "R$ 10.975,00",
         "R$ 6.585,00",
-        "80",
-        "R$ 878,00",
-        "R$ 475.000,00",
-        "Disponível"
+        "R$ 878,00"
       ],
       [
         "202",
         "58,60 m²",
         "129",
         "2 dormitórios (1 suíte)",
-        "R$ 463.000,00",
-        "R$ 20.000,00",
         "R$ 443.000,00",
         "R$ 11.075,00",
         "R$ 6.645,00",
-        "80",
-        "R$ 886,00",
-        "R$ 530.000,00",
-        "Disponível"
+        "R$ 886,00"
       ],
       [
         "302",
@@ -7136,14 +7027,9 @@ const SALES_TABLES = {
         "135",
         "2 dormitórios (1 suíte)",
         "R$ 500.000,00",
-        "—",
-        "R$ 500.000,00",
         "R$ 12.500,00",
         "R$ 7.500,00",
-        "80",
-        "R$ 1.000,00",
-        "R$ 530.000,00",
-        "Disponível"
+        "R$ 1.000,00"
       ],
       [
         "402",
@@ -7151,14 +7037,9 @@ const SALES_TABLES = {
         "139",
         "2 dormitórios (1 suíte)",
         "R$ 503.000,00",
-        "—",
-        "R$ 503.000,00",
         "R$ 12.575,00",
         "R$ 7.545,00",
-        "80",
-        "R$ 1.006,00",
-        "R$ 535.000,00",
-        "Disponível"
+        "R$ 1.006,00"
       ],
       [
         "502",
@@ -7166,14 +7047,9 @@ const SALES_TABLES = {
         "142",
         "2 dormitórios (1 suíte)",
         "R$ 506.000,00",
-        "—",
-        "R$ 506.000,00",
         "R$ 12.650,00",
         "R$ 7.590,00",
-        "80",
-        "R$ 1.012,00",
-        "R$ 535.000,00",
-        "Disponível"
+        "R$ 1.012,00"
       ],
       [
         "503",
@@ -7181,14 +7057,9 @@ const SALES_TABLES = {
         "143",
         "2 dormitórios (1 suíte)",
         "R$ 497.000,00",
-        "—",
-        "R$ 497.000,00",
         "R$ 12.425,00",
         "R$ 7.455,00",
-        "80",
-        "R$ 994,00",
-        "R$ 535.000,00",
-        "Disponível"
+        "R$ 994,00"
       ],
       [
         "602",
@@ -7196,14 +7067,9 @@ const SALES_TABLES = {
         "144",
         "2 dormitórios (1 suíte)",
         "R$ 509.000,00",
-        "—",
-        "R$ 509.000,00",
         "R$ 12.725,00",
         "R$ 7.635,00",
-        "80",
-        "R$ 1.018,00",
-        "R$ 540.000,00",
-        "Disponível"
+        "R$ 1.018,00"
       ],
       [
         "603",
@@ -7211,14 +7077,9 @@ const SALES_TABLES = {
         "145",
         "2 dormitórios (1 suíte)",
         "R$ 500.000,00",
-        "—",
-        "R$ 500.000,00",
         "R$ 12.500,00",
         "R$ 7.500,00",
-        "80",
-        "R$ 1.000,00",
-        "R$ 540.000,00",
-        "Disponível"
+        "R$ 1.000,00"
       ],
       [
         "702",
@@ -7226,14 +7087,9 @@ const SALES_TABLES = {
         "152",
         "2 dormitórios (1 suíte)",
         "R$ 512.000,00",
-        "—",
-        "R$ 512.000,00",
         "R$ 12.800,00",
         "R$ 7.680,00",
-        "80",
-        "R$ 1.024,00",
-        "R$ 560.000,00",
-        "Disponível"
+        "R$ 1.024,00"
       ],
       [
         "703",
@@ -7241,14 +7097,9 @@ const SALES_TABLES = {
         "153",
         "2 dormitórios (1 suíte)",
         "R$ 503.000,00",
-        "—",
-        "R$ 503.000,00",
         "R$ 12.575,00",
         "R$ 7.545,00",
-        "80",
-        "R$ 1.006,00",
-        "R$ 560.000,00",
-        "Disponível"
+        "R$ 1.006,00"
       ],
       [
         "803",
@@ -7256,14 +7107,9 @@ const SALES_TABLES = {
         "154",
         "2 dormitórios (1 suíte)",
         "R$ 527.000,00",
-        "—",
-        "R$ 527.000,00",
         "R$ 13.175,00",
         "R$ 7.905,00",
-        "80",
-        "R$ 1.054,00",
-        "R$ 545.000,00",
-        "Disponível"
+        "R$ 1.054,00"
       ]
     ],
     "grupos": [
@@ -7280,10 +7126,9 @@ const SALES_TABLES = {
         "sub": "Ato (1x) em 10/10/2026 + parcela de chaves (1x) em 10/11/2026 + 80 parcelas mensais pós-chaves a partir de 10/12/2026 + financiamento (1x) em 30/11/2026."
       }
     ],
-    "note": "Norden, da Scire Empreendimentos, na Itoupava Norte — tabela de outubro/2026: 14 unidades, todas disponíveis, 3 no Bloco B (Fase I) e 11 no Bloco C (Fase II); o Bloco A não tem unidade na tabela. Entrega 12/2026. Todas de 2 dormitórios com 1 suíte, de 57,00 ou 58,60 m², com 1 vaga (as do Bloco B cobertas; a 102 do Bloco C descoberta). O valor de referência é o \"Valor (com desconto)\": em onze unidades ele é igual ao da tabela, e nas outras três a construtora já aplica o desconto da coluna. Em todas, ato + chaves + parcelas pós-chaves + financiamento (80% do valor, 1x em 31/10/2026 no Bloco B e em 30/11/2026 no Bloco C) fecham o valor ao centavo; no Bloco B o ato é 4% e o pós-chaves 16%, no Bloco C o ato é 2,5%, as chaves 1,5% e o pós-chaves 16%. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "note": "Norden, da Scire Empreendimentos, na Itoupava Norte — tabela de outubro/2026: 14 unidades, 3 no Bloco B (Fase I) e 11 no Bloco C (Fase II); o Bloco A não tem unidade na tabela. Entrega 12/2026. Todas de 2 dormitórios com 1 suíte, de 57,00 ou 58,60 m², com 1 vaga (as do Bloco B cobertas; a 102 do Bloco C descoberta). O financiamento é pago em 1x: em 31/10/2026 no Bloco B e em 30/11/2026 no Bloco C.",
     "summary": {
       "tipoDefault": "Apartamento",
-      "situacaoCol": 12,
       "bits": [
         {
           "col": 3
@@ -7299,31 +7144,20 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Valor",
-        "col": 6
+        "col": 4
       },
       "parcelas": [
         {
           "label": "Ato",
-          "col": 7
+          "col": 5
         },
         {
           "label": "Parcela de chaves",
-          "col": 8
+          "col": 6
         },
         {
-          "label": "Parcela pós-chaves (mensal)",
-          "col": 10
-        }
-      ],
-      "alternativas": [
-        {
-          "bold": "Valor de tabela",
-          "nota": "(sem desconto)",
-          "col": 4
-        },
-        {
-          "bold": "Avaliação",
-          "col": 11
+          "label": "Parcela pós-chaves (80x)",
+          "col": 7
         }
       ]
     }
@@ -7339,15 +7173,11 @@ const SALES_TABLES = {
       "Vaga",
       "Tipologia",
       "Tabela",
-      "Desconto",
-      "Valor (com desconto)",
       "Ato",
       "29 parcelas mensais",
       "2 parcelas anuais",
       "Parcela de chaves",
-      "24 parcelas pós-chaves",
-      "Avaliação",
-      "Situação"
+      "Parcela pós-chaves (24x)"
     ],
     "rows": [
       [
@@ -7355,16 +7185,12 @@ const SALES_TABLES = {
         "29,91 m²",
         "10 (descoberta)",
         "1 dormitório",
-        "R$ 316.000,00",
-        "R$ 17.000,00",
         "R$ 299.000,00",
         "R$ 11.959,85",
         "R$ 824,83",
         "R$ 4.485,00",
         "R$ 2.990,00",
-        "R$ 622,92",
-        "R$ 346.000,00",
-        "Disponível"
+        "R$ 622,92"
       ],
       [
         "705",
@@ -7372,15 +7198,11 @@ const SALES_TABLES = {
         "15 (descoberta)",
         "1 dormitório",
         "R$ 338.000,00",
-        "—",
-        "R$ 338.000,00",
         "R$ 13.520,03",
         "R$ 932,41",
         "R$ 5.070,00",
         "R$ 3.380,00",
-        "R$ 704,17",
-        "R$ 355.000,00",
-        "Disponível"
+        "R$ 704,17"
       ],
       [
         "707",
@@ -7388,15 +7210,11 @@ const SALES_TABLES = {
         "16 (descoberta)",
         "1 dormitório",
         "R$ 340.000,00",
-        "—",
-        "R$ 340.000,00",
         "R$ 13.600,11",
         "R$ 937,93",
         "R$ 5.100,00",
         "R$ 3.400,00",
-        "R$ 708,33",
-        "R$ 355.000,00",
-        "Disponível"
+        "R$ 708,33"
       ],
       [
         "805",
@@ -7404,15 +7222,11 @@ const SALES_TABLES = {
         "17 (descoberta)",
         "1 dormitório",
         "R$ 343.000,00",
-        "—",
-        "R$ 343.000,00",
         "R$ 13.719,99",
         "R$ 946,21",
         "R$ 5.145,00",
         "R$ 3.430,00",
-        "R$ 714,58",
-        "R$ 358.000,00",
-        "Disponível"
+        "R$ 714,58"
       ],
       [
         "807",
@@ -7420,15 +7234,11 @@ const SALES_TABLES = {
         "18 (descoberta)",
         "1 dormitório",
         "R$ 343.000,00",
-        "—",
-        "R$ 343.000,00",
         "R$ 13.719,99",
         "R$ 946,21",
         "R$ 5.145,00",
         "R$ 3.430,00",
-        "R$ 714,58",
-        "R$ 358.000,00",
-        "Disponível"
+        "R$ 714,58"
       ],
       [
         "905",
@@ -7436,15 +7246,11 @@ const SALES_TABLES = {
         "19 (descoberta)",
         "1 dormitório",
         "R$ 349.000,00",
-        "—",
-        "R$ 349.000,00",
         "R$ 13.960,04",
         "R$ 962,76",
         "R$ 5.235,00",
         "R$ 3.490,00",
-        "R$ 727,08",
-        "R$ 361.000,00",
-        "Disponível"
+        "R$ 727,08"
       ],
       [
         "907",
@@ -7452,15 +7258,11 @@ const SALES_TABLES = {
         "20 (descoberta)",
         "1 dormitório",
         "R$ 349.000,00",
-        "—",
-        "R$ 349.000,00",
         "R$ 13.960,04",
         "R$ 962,76",
         "R$ 5.235,00",
         "R$ 3.490,00",
-        "R$ 727,08",
-        "R$ 361.000,00",
-        "Disponível"
+        "R$ 727,08"
       ],
       [
         "1005",
@@ -7468,15 +7270,11 @@ const SALES_TABLES = {
         "21 (descoberta)",
         "1 dormitório",
         "R$ 354.000,00",
-        "—",
-        "R$ 354.000,00",
         "R$ 14.160,05",
         "R$ 976,55",
         "R$ 5.310,00",
         "R$ 3.540,00",
-        "R$ 737,50",
-        "R$ 364.000,00",
-        "Disponível"
+        "R$ 737,50"
       ],
       [
         "1105",
@@ -7484,15 +7282,11 @@ const SALES_TABLES = {
         "23 (descoberta)",
         "1 dormitório",
         "R$ 360.000,00",
-        "—",
-        "R$ 360.000,00",
         "R$ 14.400,10",
         "R$ 993,10",
         "R$ 5.400,00",
         "R$ 3.600,00",
-        "R$ 750,00",
-        "R$ 367.000,00",
-        "Disponível"
+        "R$ 750,00"
       ],
       [
         "1107",
@@ -7500,15 +7294,11 @@ const SALES_TABLES = {
         "24 (descoberta)",
         "1 dormitório",
         "R$ 360.000,00",
-        "—",
-        "R$ 360.000,00",
         "R$ 14.400,10",
         "R$ 993,10",
         "R$ 5.400,00",
         "R$ 3.600,00",
-        "R$ 750,00",
-        "R$ 367.000,00",
-        "Disponível"
+        "R$ 750,00"
       ],
       [
         "1205",
@@ -7516,15 +7306,11 @@ const SALES_TABLES = {
         "25 (descoberta)",
         "1 dormitório",
         "R$ 365.000,00",
-        "—",
-        "R$ 365.000,00",
         "R$ 14.599,82",
         "R$ 1.006,90",
         "R$ 5.475,00",
         "R$ 3.650,00",
-        "R$ 760,42",
-        "R$ 370.000,00",
-        "Disponível"
+        "R$ 760,42"
       ],
       [
         "1207",
@@ -7532,21 +7318,16 @@ const SALES_TABLES = {
         "26 (descoberta)",
         "1 dormitório",
         "R$ 365.000,00",
-        "—",
-        "R$ 365.000,00",
         "R$ 14.599,82",
         "R$ 1.006,90",
         "R$ 5.475,00",
         "R$ 3.650,00",
-        "R$ 760,42",
-        "R$ 370.000,00",
-        "Disponível"
+        "R$ 760,42"
       ]
     ],
-    "note": "Solare, da Scire Empreendimentos, na Escola Agrícola — tabela de 1 dormitório de outubro/2026, torre única, entrega 03/2029: 12 unidades de 29,91 ou 29,96 m², todas disponíveis e com vaga descoberta. Condição igual para todas: ato (1x) em 10/10/2026 + 29 parcelas mensais a partir de 10/11/2026 + 2 parcelas anuais a partir de 10/12/2027 + parcela de chaves (1x) em 10/03/2029 + 24 parcelas mensais pós-chaves a partir de 10/04/2029 + financiamento (1x, 79% do valor) em 31/03/2029. As anuais somam 3%, as chaves 1% e o pós-chaves 5%; o ato e as 29 mensais completam o resto, e as partes fecham o valor ao centavo. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "note": "Solare, da Scire Empreendimentos, na Escola Agrícola — tabela de 1 dormitório de outubro/2026, torre única, entrega 03/2029: 12 unidades de 29,91 ou 29,96 m², com vaga descoberta. Condição: ato (1x) em 10/10/2026 + 29 parcelas mensais a partir de 10/11/2026 + 2 parcelas anuais a partir de 10/12/2027 + parcela de chaves (1x) em 10/03/2029 + 24 parcelas mensais pós-chaves a partir de 10/04/2029 + financiamento (1x) em 31/03/2029.",
     "summary": {
       "tipoDefault": "Apartamento",
-      "situacaoCol": 13,
       "bits": [
         {
           "col": 3
@@ -7562,39 +7343,28 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Valor",
-        "col": 6
+        "col": 4
       },
       "parcelas": [
         {
           "label": "Ato",
-          "col": 7
+          "col": 5
         },
         {
           "label": "29 parcelas mensais",
-          "col": 8
+          "col": 6
         },
         {
           "label": "2 parcelas anuais",
-          "col": 9
+          "col": 7
         },
         {
           "label": "Parcela de chaves",
-          "col": 10
+          "col": 8
         },
         {
-          "label": "24 parcelas pós-chaves",
-          "col": 11
-        }
-      ],
-      "alternativas": [
-        {
-          "bold": "Valor de tabela",
-          "nota": "(sem desconto)",
-          "col": 4
-        },
-        {
-          "bold": "Avaliação",
-          "col": 12
+          "label": "Parcela pós-chaves (24x)",
+          "col": 9
         }
       ]
     }
@@ -7610,15 +7380,11 @@ const SALES_TABLES = {
       "Vaga",
       "Tipologia",
       "Tabela",
-      "Desconto",
-      "Valor (com desconto)",
       "Ato",
       "29 parcelas mensais",
       "2 parcelas anuais",
       "Parcela de chaves",
-      "24 parcelas pós-chaves",
-      "Avaliação",
-      "Situação"
+      "Parcela pós-chaves (24x)"
     ],
     "rows": [
       [
@@ -7627,15 +7393,11 @@ const SALES_TABLES = {
         "144 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 458.000,00",
-        "—",
-        "R$ 458.000,00",
         "R$ 18.319,87",
         "R$ 1.263,45",
         "R$ 6.870,00",
         "R$ 4.580,00",
-        "R$ 954,17",
-        "R$ 440.000,00",
-        "Disponível"
+        "R$ 954,17"
       ],
       [
         "201",
@@ -7643,15 +7405,11 @@ const SALES_TABLES = {
         "133 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 463.000,00",
-        "—",
-        "R$ 463.000,00",
         "R$ 18.520,12",
         "R$ 1.277,24",
         "R$ 6.945,00",
         "R$ 4.630,00",
-        "R$ 964,58",
-        "R$ 440.000,00",
-        "Disponível"
+        "R$ 964,58"
       ],
       [
         "202",
@@ -7659,15 +7417,11 @@ const SALES_TABLES = {
         "134 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 463.000,00",
-        "—",
-        "R$ 463.000,00",
         "R$ 18.520,12",
         "R$ 1.277,24",
         "R$ 6.945,00",
         "R$ 4.630,00",
-        "R$ 964,58",
-        "R$ 445.000,00",
-        "Disponível"
+        "R$ 964,58"
       ],
       [
         "211",
@@ -7675,15 +7429,11 @@ const SALES_TABLES = {
         "135 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 463.000,00",
-        "—",
-        "R$ 463.000,00",
         "R$ 18.520,12",
         "R$ 1.277,24",
         "R$ 6.945,00",
         "R$ 4.630,00",
-        "R$ 964,58",
-        "R$ 445.000,00",
-        "Disponível"
+        "R$ 964,58"
       ],
       [
         "212",
@@ -7691,15 +7441,11 @@ const SALES_TABLES = {
         "136 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 463.000,00",
-        "—",
-        "R$ 463.000,00",
         "R$ 18.520,12",
         "R$ 1.277,24",
         "R$ 6.945,00",
         "R$ 4.630,00",
-        "R$ 964,58",
-        "R$ 445.000,00",
-        "Disponível"
+        "R$ 964,58"
       ],
       [
         "412",
@@ -7707,15 +7453,11 @@ const SALES_TABLES = {
         "86 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 500.000,00",
-        "—",
-        "R$ 500.000,00",
         "R$ 19.999,93",
         "R$ 1.379,31",
         "R$ 7.500,00",
         "R$ 5.000,00",
-        "R$ 1.041,67",
-        "R$ 498.000,00",
-        "Disponível"
+        "R$ 1.041,67"
       ],
       [
         "501",
@@ -7723,15 +7465,11 @@ const SALES_TABLES = {
         "100 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 504.000,00",
-        "—",
-        "R$ 504.000,00",
         "R$ 20.160,14",
         "R$ 1.390,34",
         "R$ 7.560,00",
         "R$ 5.040,00",
-        "R$ 1.050,00",
-        "R$ 501.000,00",
-        "Disponível"
+        "R$ 1.050,00"
       ],
       [
         "502",
@@ -7739,31 +7477,23 @@ const SALES_TABLES = {
         "123 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 504.000,00",
-        "—",
-        "R$ 504.000,00",
         "R$ 20.160,14",
         "R$ 1.390,34",
         "R$ 7.560,00",
         "R$ 5.040,00",
-        "R$ 1.050,00",
-        "R$ 501.000,00",
-        "Disponível"
+        "R$ 1.050,00"
       ],
       [
         "508",
         "50,95 m²",
         "75 (descoberta)",
         "2 dormitórios (1 suíte)",
-        "R$ 455.000,00",
-        "R$ 26.000,00",
         "R$ 429.000,00",
         "R$ 17.159,95",
         "R$ 1.183,45",
         "R$ 6.435,00",
         "R$ 4.290,00",
-        "R$ 893,75",
-        "R$ 469.000,00",
-        "Disponível"
+        "R$ 893,75"
       ],
       [
         "601",
@@ -7771,15 +7501,11 @@ const SALES_TABLES = {
         "110 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 507.000,00",
-        "—",
-        "R$ 507.000,00",
         "R$ 20.280,02",
         "R$ 1.398,62",
         "R$ 7.605,00",
         "R$ 5.070,00",
-        "R$ 1.056,25",
-        "R$ 504.000,00",
-        "Disponível"
+        "R$ 1.056,25"
       ],
       [
         "602",
@@ -7787,31 +7513,23 @@ const SALES_TABLES = {
         "87 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 507.000,00",
-        "—",
-        "R$ 507.000,00",
         "R$ 20.280,02",
         "R$ 1.398,62",
         "R$ 7.605,00",
         "R$ 5.070,00",
-        "R$ 1.056,25",
-        "R$ 504.000,00",
-        "Disponível"
+        "R$ 1.056,25"
       ],
       [
         "608",
         "50,95 m²",
         "58 (descoberta)",
         "2 dormitórios (1 suíte)",
-        "R$ 457.000,00",
-        "R$ 18.000,00",
         "R$ 439.000,00",
         "R$ 17.560,21",
         "R$ 1.211,03",
         "R$ 6.585,00",
         "R$ 4.390,00",
-        "R$ 914,58",
-        "R$ 472.000,00",
-        "Disponível"
+        "R$ 914,58"
       ],
       [
         "611",
@@ -7819,15 +7537,11 @@ const SALES_TABLES = {
         "111 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 507.000,00",
-        "—",
-        "R$ 507.000,00",
         "R$ 20.280,02",
         "R$ 1.398,62",
         "R$ 7.605,00",
         "R$ 5.070,00",
-        "R$ 1.056,25",
-        "R$ 504.000,00",
-        "Disponível"
+        "R$ 1.056,25"
       ],
       [
         "612",
@@ -7835,15 +7549,11 @@ const SALES_TABLES = {
         "88 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 507.000,00",
-        "—",
-        "R$ 507.000,00",
         "R$ 20.280,02",
         "R$ 1.398,62",
         "R$ 7.605,00",
         "R$ 5.070,00",
-        "R$ 1.056,25",
-        "R$ 504.000,00",
-        "Disponível"
+        "R$ 1.056,25"
       ],
       [
         "701",
@@ -7851,15 +7561,11 @@ const SALES_TABLES = {
         "121 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 510.000,00",
-        "—",
-        "R$ 510.000,00",
         "R$ 20.399,90",
         "R$ 1.406,90",
         "R$ 7.650,00",
         "R$ 5.100,00",
-        "R$ 1.062,50",
-        "R$ 507.000,00",
-        "Disponível"
+        "R$ 1.062,50"
       ],
       [
         "702",
@@ -7867,15 +7573,11 @@ const SALES_TABLES = {
         "98 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 510.000,00",
-        "—",
-        "R$ 510.000,00",
         "R$ 20.399,90",
         "R$ 1.406,90",
         "R$ 7.650,00",
         "R$ 5.100,00",
-        "R$ 1.062,50",
-        "R$ 507.000,00",
-        "Disponível"
+        "R$ 1.062,50"
       ],
       [
         "706",
@@ -7883,15 +7585,11 @@ const SALES_TABLES = {
         "59 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 457.000,00",
-        "—",
-        "R$ 457.000,00",
         "R$ 18.280,07",
         "R$ 1.260,69",
         "R$ 6.855,00",
         "R$ 4.570,00",
-        "R$ 952,08",
-        "R$ 475.000,00",
-        "Disponível"
+        "R$ 952,08"
       ],
       [
         "708",
@@ -7899,31 +7597,23 @@ const SALES_TABLES = {
         "60 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 457.000,00",
-        "—",
-        "R$ 457.000,00",
         "R$ 18.280,07",
         "R$ 1.260,69",
         "R$ 6.855,00",
         "R$ 4.570,00",
-        "R$ 952,08",
-        "R$ 475.000,00",
-        "Disponível"
+        "R$ 952,08"
       ],
       [
         "709",
         "46,91 m²",
         "52 (descoberta)",
         "2 dormitórios",
-        "R$ 400.000,00",
-        "R$ 4.000,00",
         "R$ 396.000,00",
         "R$ 15.840,11",
         "R$ 1.092,41",
         "R$ 5.940,00",
         "R$ 3.960,00",
-        "R$ 825,00",
-        "R$ 435.000,00",
-        "Reservada"
+        "R$ 825,00"
       ],
       [
         "712",
@@ -7931,31 +7621,23 @@ const SALES_TABLES = {
         "112 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 510.000,00",
-        "—",
-        "R$ 510.000,00",
         "R$ 20.399,90",
         "R$ 1.406,90",
         "R$ 7.650,00",
         "R$ 5.100,00",
-        "R$ 1.062,50",
-        "R$ 507.000,00",
-        "Disponível"
+        "R$ 1.062,50"
       ],
       [
         "803",
         "46,91 m²",
         "126 (descoberta)",
         "2 dormitórios",
-        "R$ 405.000,00",
-        "R$ 6.000,00",
         "R$ 399.000,00",
         "R$ 15.959,99",
         "R$ 1.100,69",
         "R$ 5.985,00",
         "R$ 3.990,00",
-        "R$ 831,25",
-        "R$ 438.000,00",
-        "Reservada"
+        "R$ 831,25"
       ],
       [
         "804",
@@ -7963,15 +7645,11 @@ const SALES_TABLES = {
         "127 (descoberta)",
         "2 dormitórios",
         "R$ 432.000,00",
-        "—",
-        "R$ 432.000,00",
         "R$ 17.280,12",
         "R$ 1.191,72",
         "R$ 6.480,00",
         "R$ 4.320,00",
-        "R$ 900,00",
-        "R$ 438.000,00",
-        "Disponível"
+        "R$ 900,00"
       ],
       [
         "806",
@@ -7979,15 +7657,11 @@ const SALES_TABLES = {
         "74 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 462.000,00",
-        "—",
-        "R$ 462.000,00",
         "R$ 18.480,08",
         "R$ 1.274,48",
         "R$ 6.930,00",
         "R$ 4.620,00",
-        "R$ 962,50",
-        "R$ 478.000,00",
-        "Disponível"
+        "R$ 962,50"
       ],
       [
         "809",
@@ -7995,15 +7669,11 @@ const SALES_TABLES = {
         "82 (descoberta)",
         "2 dormitórios",
         "R$ 416.000,00",
-        "—",
-        "R$ 416.000,00",
         "R$ 16.639,81",
         "R$ 1.147,59",
         "R$ 6.240,00",
         "R$ 4.160,00",
-        "R$ 866,67",
-        "R$ 438.000,00",
-        "Disponível"
+        "R$ 866,67"
       ],
       [
         "1203",
@@ -8011,15 +7681,11 @@ const SALES_TABLES = {
         "107 (descoberta)",
         "2 dormitórios",
         "R$ 451.000,00",
-        "—",
-        "R$ 451.000,00",
         "R$ 18.040,02",
         "R$ 1.244,14",
         "R$ 6.765,00",
         "R$ 4.510,00",
-        "R$ 939,58",
-        "R$ 449.485,12",
-        "Disponível"
+        "R$ 939,58"
       ],
       [
         "1204",
@@ -8027,15 +7693,11 @@ const SALES_TABLES = {
         "84 (descoberta)",
         "2 dormitórios",
         "R$ 457.000,00",
-        "—",
-        "R$ 457.000,00",
         "R$ 18.280,07",
         "R$ 1.260,69",
         "R$ 6.855,00",
         "R$ 4.570,00",
-        "R$ 952,08",
-        "R$ 449.482,12",
-        "Disponível"
+        "R$ 952,08"
       ],
       [
         "1206",
@@ -8043,15 +7705,11 @@ const SALES_TABLES = {
         "130 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 482.000,00",
-        "—",
-        "R$ 482.000,00",
         "R$ 19.279,78",
         "R$ 1.329,66",
         "R$ 7.230,00",
         "R$ 4.820,00",
-        "R$ 1.004,17",
-        "R$ 490.000,00",
-        "Disponível"
+        "R$ 1.004,17"
       ],
       [
         "1208",
@@ -8059,15 +7717,11 @@ const SALES_TABLES = {
         "131 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 482.000,00",
-        "—",
-        "R$ 482.000,00",
         "R$ 19.279,78",
         "R$ 1.329,66",
         "R$ 7.230,00",
         "R$ 4.820,00",
-        "R$ 1.004,17",
-        "R$ 490.000,00",
-        "Disponível"
+        "R$ 1.004,17"
       ],
       [
         "1209",
@@ -8075,21 +7729,20 @@ const SALES_TABLES = {
         "85 (descoberta)",
         "2 dormitórios",
         "R$ 452.000,00",
-        "—",
-        "R$ 452.000,00",
         "R$ 18.079,82",
         "R$ 1.246,90",
         "R$ 6.780,00",
         "R$ 4.520,00",
-        "R$ 941,67",
-        "R$ 449.485,12",
-        "Disponível"
+        "R$ 941,67"
       ]
     ],
-    "note": "Solare, da Scire Empreendimentos, na Escola Agrícola — tabela de 2 dormitórios de outubro/2026, torre única, entrega 03/2029. Aqui aparece só parte das unidades (29, de 46,79 a 55,69 m²; as de 50,95 m² ou mais têm suíte), e as demais estão na tabela original no Drive. Condição igual para todas: ato (1x) em 10/10/2026 + 29 parcelas mensais a partir de 10/11/2026 + 2 parcelas anuais a partir de 10/12/2027 + parcela de chaves (1x) em 10/03/2029 + 24 parcelas mensais pós-chaves a partir de 10/04/2029 + financiamento (1x, 79% do valor) em 31/03/2029. As anuais somam 3%, as chaves 1% e o pós-chaves 5%; o ato e as 29 mensais completam o resto, e as partes fecham o valor ao centavo. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "etiquetas": {
+      "709": "Reservada",
+      "803": "Reservada"
+    },
+    "note": "Solare, da Scire Empreendimentos, na Escola Agrícola — tabela de 2 dormitórios de outubro/2026, torre única, entrega 03/2029. Aqui aparece só parte das unidades (29, de 46,79 a 55,69 m²; as de 50,95 m² ou mais têm suíte), e as demais estão na tabela original no Drive. As 709 e 803 estão reservadas. Condição: ato (1x) em 10/10/2026 + 29 parcelas mensais a partir de 10/11/2026 + 2 parcelas anuais a partir de 10/12/2027 + parcela de chaves (1x) em 10/03/2029 + 24 parcelas mensais pós-chaves a partir de 10/04/2029 + financiamento (1x) em 31/03/2029.",
     "summary": {
       "tipoDefault": "Apartamento",
-      "situacaoCol": 13,
       "bits": [
         {
           "col": 3
@@ -8105,41 +7758,34 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Valor",
-        "col": 6
+        "col": 4
       },
       "parcelas": [
         {
           "label": "Ato",
-          "col": 7
+          "col": 5
         },
         {
           "label": "29 parcelas mensais",
-          "col": 8
+          "col": 6
         },
         {
           "label": "2 parcelas anuais",
-          "col": 9
+          "col": 7
         },
         {
           "label": "Parcela de chaves",
-          "col": 10
+          "col": 8
         },
         {
-          "label": "24 parcelas pós-chaves",
-          "col": 11
+          "label": "Parcela pós-chaves (24x)",
+          "col": 9
         }
       ],
-      "alternativas": [
-        {
-          "bold": "Valor de tabela",
-          "nota": "(sem desconto)",
-          "col": 4
-        },
-        {
-          "bold": "Avaliação",
-          "col": 12
-        }
-      ]
+      "situacaoPor": {
+        "709": "Reservada",
+        "803": "Reservada"
+      }
     }
   },
   "Terrasse - 1 dormitório": {
@@ -8153,14 +7799,10 @@ const SALES_TABLES = {
       "Vaga",
       "Tipologia",
       "Tabela",
-      "Desconto",
-      "Valor (com desconto)",
       "Ato",
       "20 parcelas mensais",
       "3 parcelas semestrais",
-      "36 parcelas pós-chaves",
-      "Avaliação",
-      "Situação"
+      "Parcela pós-chaves (36x)"
     ],
     "rows": [
       [
@@ -8168,21 +7810,16 @@ const SALES_TABLES = {
         "31,39 m²",
         "84 (descoberta)",
         "1 dormitório",
-        "R$ 373.000,00",
-        "R$ 14.000,00",
         "R$ 359.000,00",
         "R$ 17.950,08",
         "R$ 1.974,50",
         "R$ 7.180,00",
-        "R$ 997,22",
-        "R$ 315.000,00",
-        "Disponível"
+        "R$ 997,22"
       ]
     ],
-    "note": "Terrasse, da Scire Empreendimentos, no Vorstadt — tabela de outubro/2026, torre única, conclusão da obra prevista para junho/2028: 1 unidade de 1 dormitório, de 31,39 m² com vaga descoberta, disponível. Condição: ato (1x) em 10/10/2026 + 20 parcelas mensais a partir de 10/11/2026 + 3 parcelas semestrais a partir de 10/06/2027 + 36 parcelas mensais pós-chaves a partir de 10/07/2028 + financiamento (1x) em 28/06/2028. Ato 5%, 20 mensais 11%, semestrais 6% (2% cada), pós-chaves 10% e financiamento 68%; as partes fecham o valor ao centavo. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "note": "Terrasse, da Scire Empreendimentos, no Vorstadt — tabela de outubro/2026, torre única, conclusão da obra prevista para junho/2028: 1 unidade de 1 dormitório, de 31,39 m² com vaga descoberta. Condição: ato (1x) em 10/10/2026 + 20 parcelas mensais a partir de 10/11/2026 + 3 parcelas semestrais a partir de 10/06/2027 + 36 parcelas mensais pós-chaves a partir de 10/07/2028 + financiamento (1x) em 28/06/2028.",
     "summary": {
       "tipoDefault": "Apartamento",
-      "situacaoCol": 12,
       "bits": [
         {
           "col": 3
@@ -8198,35 +7835,24 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Valor",
-        "col": 6
+        "col": 4
       },
       "parcelas": [
         {
           "label": "Ato",
-          "col": 7
+          "col": 5
         },
         {
           "label": "20 parcelas mensais",
-          "col": 8
+          "col": 6
         },
         {
           "label": "3 parcelas semestrais",
-          "col": 9
+          "col": 7
         },
         {
-          "label": "36 parcelas pós-chaves",
-          "col": 10
-        }
-      ],
-      "alternativas": [
-        {
-          "bold": "Valor de tabela",
-          "nota": "(sem desconto)",
-          "col": 4
-        },
-        {
-          "bold": "Avaliação",
-          "col": 11
+          "label": "Parcela pós-chaves (36x)",
+          "col": 8
         }
       ]
     }
@@ -8242,14 +7868,10 @@ const SALES_TABLES = {
       "Vaga",
       "Tipologia",
       "Tabela",
-      "Desconto",
-      "Valor (com desconto)",
       "Ato",
       "20 parcelas mensais",
       "3 parcelas semestrais",
-      "36 parcelas pós-chaves",
-      "Avaliação",
-      "Situação"
+      "Parcela pós-chaves (36x)"
     ],
     "rows": [
       [
@@ -8257,30 +7879,22 @@ const SALES_TABLES = {
         "52,40 m²",
         "13 (descoberta)",
         "2 dormitórios (1 suíte)",
-        "R$ 459.000,00",
-        "R$ 40.000,00",
         "R$ 419.000,00",
         "R$ 16.759,96",
         "R$ 2.304,50",
         "R$ 8.380,00",
-        "R$ 1.163,89",
-        "R$ 422.000,00",
-        "Disponível"
+        "R$ 1.163,89"
       ],
       [
         "506",
         "55,82 m²",
         "36 (descoberta)",
         "2 dormitórios (1 suíte)",
-        "R$ 492.000,00",
-        "R$ 53.000,00",
         "R$ 439.000,00",
         "R$ 17.560,16",
         "R$ 2.414,50",
         "R$ 8.780,00",
-        "R$ 1.219,44",
-        "R$ 451.000,00",
-        "Disponível"
+        "R$ 1.219,44"
       ],
       [
         "606",
@@ -8288,14 +7902,10 @@ const SALES_TABLES = {
         "19 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 538.000,00",
-        "—",
-        "R$ 538.000,00",
         "R$ 21.520,16",
         "R$ 2.959,00",
         "R$ 10.760,00",
-        "R$ 1.494,44",
-        "R$ 454.000,00",
-        "Disponível"
+        "R$ 1.494,44"
       ],
       [
         "806",
@@ -8303,14 +7913,10 @@ const SALES_TABLES = {
         "22 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 544.000,00",
-        "—",
-        "R$ 544.000,00",
         "R$ 21.760,04",
         "R$ 2.992,00",
         "R$ 10.880,00",
-        "R$ 1.511,11",
-        "R$ 460.000,00",
-        "Disponível"
+        "R$ 1.511,11"
       ],
       [
         "1002",
@@ -8318,14 +7924,10 @@ const SALES_TABLES = {
         "132 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 520.000,00",
-        "—",
-        "R$ 520.000,00",
         "R$ 20.800,16",
         "R$ 2.860,00",
         "R$ 10.400,00",
-        "R$ 1.444,44",
-        "R$ 449.000,00",
-        "Disponível"
+        "R$ 1.444,44"
       ],
       [
         "1004",
@@ -8333,14 +7935,10 @@ const SALES_TABLES = {
         "133 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 530.000,00",
-        "—",
-        "R$ 530.000,00",
         "R$ 21.200,08",
         "R$ 2.915,00",
         "R$ 10.600,00",
-        "R$ 1.472,22",
-        "R$ 449.000,00",
-        "Disponível"
+        "R$ 1.472,22"
       ],
       [
         "1006",
@@ -8348,14 +7946,10 @@ const SALES_TABLES = {
         "136 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 548.000,00",
-        "—",
-        "R$ 548.000,00",
         "R$ 21.920,08",
         "R$ 3.014,00",
         "R$ 10.960,00",
-        "R$ 1.522,22",
-        "R$ 466.000,00",
-        "Disponível"
+        "R$ 1.522,22"
       ],
       [
         "1010",
@@ -8363,14 +7957,10 @@ const SALES_TABLES = {
         "143 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 548.000,00",
-        "—",
-        "R$ 548.000,00",
         "R$ 21.920,08",
         "R$ 3.014,00",
         "R$ 10.960,00",
-        "R$ 1.522,22",
-        "R$ 466.000,00",
-        "Disponível"
+        "R$ 1.522,22"
       ],
       [
         "1101",
@@ -8378,14 +7968,10 @@ const SALES_TABLES = {
         "141 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 550.000,00",
-        "—",
-        "R$ 550.000,00",
         "R$ 21.999,92",
         "R$ 3.025,00",
         "R$ 11.000,00",
-        "R$ 1.527,78",
-        "R$ 469.000,00",
-        "Disponível"
+        "R$ 1.527,78"
       ],
       [
         "1102",
@@ -8393,14 +7979,10 @@ const SALES_TABLES = {
         "148 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 536.000,00",
-        "—",
-        "R$ 536.000,00",
         "R$ 21.439,96",
         "R$ 2.948,00",
         "R$ 10.720,00",
-        "R$ 1.488,89",
-        "R$ 452.000,00",
-        "Disponível"
+        "R$ 1.488,89"
       ],
       [
         "1104",
@@ -8408,14 +7990,10 @@ const SALES_TABLES = {
         "147 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 536.000,00",
-        "—",
-        "R$ 536.000,00",
         "R$ 21.439,96",
         "R$ 2.948,00",
         "R$ 10.720,00",
-        "R$ 1.488,89",
-        "R$ 452.000,00",
-        "Disponível"
+        "R$ 1.488,89"
       ],
       [
         "1110",
@@ -8423,14 +8001,10 @@ const SALES_TABLES = {
         "140 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 550.000,00",
-        "—",
-        "R$ 550.000,00",
         "R$ 21.999,92",
         "R$ 3.025,00",
         "R$ 11.000,00",
-        "R$ 1.527,78",
-        "R$ 469.000,00",
-        "Disponível"
+        "R$ 1.527,78"
       ],
       [
         "1202",
@@ -8438,14 +8012,10 @@ const SALES_TABLES = {
         "142 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 541.000,00",
-        "—",
-        "R$ 541.000,00",
         "R$ 21.639,92",
         "R$ 2.975,50",
         "R$ 10.820,00",
-        "R$ 1.502,78",
-        "R$ 455.000,00",
-        "Disponível"
+        "R$ 1.502,78"
       ],
       [
         "1204",
@@ -8453,14 +8023,10 @@ const SALES_TABLES = {
         "134 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 541.000,00",
-        "—",
-        "R$ 541.000,00",
         "R$ 21.639,92",
         "R$ 2.975,50",
         "R$ 10.820,00",
-        "R$ 1.502,78",
-        "R$ 455.000,00",
-        "Disponível"
+        "R$ 1.502,78"
       ],
       [
         "1205",
@@ -8468,14 +8034,10 @@ const SALES_TABLES = {
         "107 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 561.000,00",
-        "—",
-        "R$ 561.000,00",
         "R$ 22.440,12",
         "R$ 3.085,50",
         "R$ 11.220,00",
-        "R$ 1.558,33",
-        "R$ 482.000,00",
-        "Disponível"
+        "R$ 1.558,33"
       ],
       [
         "1304",
@@ -8483,14 +8045,10 @@ const SALES_TABLES = {
         "144 (descoberta)",
         "2 dormitórios (1 suíte)",
         "R$ 544.000,00",
-        "—",
-        "R$ 544.000,00",
         "R$ 21.760,04",
         "R$ 2.992,00",
         "R$ 10.880,00",
-        "R$ 1.511,11",
-        "R$ 458.000,00",
-        "Disponível"
+        "R$ 1.511,11"
       ],
       [
         "1305",
@@ -8498,14 +8056,10 @@ const SALES_TABLES = {
         "98 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 564.000,00",
-        "—",
-        "R$ 564.000,00",
         "R$ 22.559,88",
         "R$ 3.102,00",
         "R$ 11.280,00",
-        "R$ 1.566,67",
-        "R$ 485.000,00",
-        "Disponível"
+        "R$ 1.566,67"
       ],
       [
         "1306",
@@ -8513,14 +8067,10 @@ const SALES_TABLES = {
         "63 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 564.000,00",
-        "—",
-        "R$ 564.000,00",
         "R$ 22.559,88",
         "R$ 3.102,00",
         "R$ 11.280,00",
-        "R$ 1.566,67",
-        "R$ 485.000,00",
-        "Disponível"
+        "R$ 1.566,67"
       ],
       [
         "1405",
@@ -8528,14 +8078,10 @@ const SALES_TABLES = {
         "104 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 567.000,00",
-        "—",
-        "R$ 567.000,00",
         "R$ 22.680,00",
         "R$ 3.118,50",
         "R$ 11.340,00",
-        "R$ 1.575,00",
-        "R$ 488.000,00",
-        "Disponível"
+        "R$ 1.575,00"
       ],
       [
         "1406",
@@ -8543,14 +8089,10 @@ const SALES_TABLES = {
         "69 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 567.000,00",
-        "—",
-        "R$ 567.000,00",
         "R$ 22.680,00",
         "R$ 3.118,50",
         "R$ 11.340,00",
-        "R$ 1.575,00",
-        "R$ 488.000,00",
-        "Disponível"
+        "R$ 1.575,00"
       ],
       [
         "1410",
@@ -8558,14 +8100,10 @@ const SALES_TABLES = {
         "103 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 567.000,00",
-        "—",
-        "R$ 567.000,00",
         "R$ 22.680,00",
         "R$ 3.118,50",
         "R$ 11.340,00",
-        "R$ 1.575,00",
-        "R$ 488.000,00",
-        "Disponível"
+        "R$ 1.575,00"
       ],
       [
         "1502",
@@ -8573,14 +8111,10 @@ const SALES_TABLES = {
         "106 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 560.000,00",
-        "—",
-        "R$ 560.000,00",
         "R$ 22.399,84",
         "R$ 3.080,00",
         "R$ 11.200,00",
-        "R$ 1.555,56",
-        "R$ 474.000,00",
-        "Disponível"
+        "R$ 1.555,56"
       ],
       [
         "1504",
@@ -8588,14 +8122,10 @@ const SALES_TABLES = {
         "105 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 562.000,00",
-        "—",
-        "R$ 562.000,00",
         "R$ 22.480,04",
         "R$ 3.091,00",
         "R$ 11.240,00",
-        "R$ 1.561,11",
-        "R$ 474.000,00",
-        "Disponível"
+        "R$ 1.561,11"
       ],
       [
         "1505",
@@ -8603,14 +8133,10 @@ const SALES_TABLES = {
         "65 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 572.000,00",
-        "—",
-        "R$ 572.000,00",
         "R$ 22.879,96",
         "R$ 3.146,00",
         "R$ 11.440,00",
-        "R$ 1.588,89",
-        "R$ 491.000,00",
-        "Disponível"
+        "R$ 1.588,89"
       ],
       [
         "1506",
@@ -8618,14 +8144,10 @@ const SALES_TABLES = {
         "100 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 572.000,00",
-        "—",
-        "R$ 572.000,00",
         "R$ 22.879,96",
         "R$ 3.146,00",
         "R$ 11.440,00",
-        "R$ 1.588,89",
-        "R$ 491.000,00",
-        "Disponível"
+        "R$ 1.588,89"
       ],
       [
         "1510",
@@ -8633,14 +8155,10 @@ const SALES_TABLES = {
         "67 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 572.000,00",
-        "—",
-        "R$ 572.000,00",
         "R$ 22.879,96",
         "R$ 3.146,00",
         "R$ 11.440,00",
-        "R$ 1.588,89",
-        "R$ 491.000,00",
-        "Disponível"
+        "R$ 1.588,89"
       ],
       [
         "1602",
@@ -8648,14 +8166,10 @@ const SALES_TABLES = {
         "102 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 566.000,00",
-        "—",
-        "R$ 566.000,00",
         "R$ 22.640,08",
         "R$ 3.113,00",
         "R$ 11.320,00",
-        "R$ 1.572,22",
-        "R$ 477.000,00",
-        "Disponível"
+        "R$ 1.572,22"
       ],
       [
         "1610",
@@ -8663,20 +8177,15 @@ const SALES_TABLES = {
         "66 (coberta)",
         "2 dormitórios (1 suíte)",
         "R$ 575.000,00",
-        "—",
-        "R$ 575.000,00",
         "R$ 23.000,08",
         "R$ 3.162,50",
         "R$ 11.500,00",
-        "R$ 1.597,22",
-        "R$ 494.000,00",
-        "Disponível"
+        "R$ 1.597,22"
       ]
     ],
-    "note": "Terrasse, da Scire Empreendimentos, no Vorstadt — tabela de outubro/2026, torre única, conclusão da obra prevista para junho/2028: 28 unidades de 2 dormitórios com suíte, de 52,02 a 55,82 m², todas disponíveis. Condição: ato (1x) em 10/10/2026 + 20 parcelas mensais a partir de 10/11/2026 + 3 parcelas semestrais a partir de 10/06/2027 + 36 parcelas mensais pós-chaves a partir de 10/07/2028 + financiamento (1x) em 28/06/2028. Ato 4%, 20 mensais 11%, semestrais 6% (2% cada), pós-chaves 10% e financiamento 69%; as partes fecham o valor ao centavo. O valor de referência é o \"Valor (com desconto)\": a construtora já aplica o desconto da coluna. A coluna \"Avaliação\" é o valor de avaliação informado na tabela.",
+    "note": "Terrasse, da Scire Empreendimentos, no Vorstadt — tabela de outubro/2026, torre única, conclusão da obra prevista para junho/2028: 28 unidades de 2 dormitórios com suíte, de 52,02 a 55,82 m². Condição: ato (1x) em 10/10/2026 + 20 parcelas mensais a partir de 10/11/2026 + 3 parcelas semestrais a partir de 10/06/2027 + 36 parcelas mensais pós-chaves a partir de 10/07/2028 + financiamento (1x) em 28/06/2028.",
     "summary": {
       "tipoDefault": "Apartamento",
-      "situacaoCol": 12,
       "bits": [
         {
           "col": 3
@@ -8692,35 +8201,24 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Valor",
-        "col": 6
+        "col": 4
       },
       "parcelas": [
         {
           "label": "Ato",
-          "col": 7
+          "col": 5
         },
         {
           "label": "20 parcelas mensais",
-          "col": 8
+          "col": 6
         },
         {
           "label": "3 parcelas semestrais",
-          "col": 9
+          "col": 7
         },
         {
-          "label": "36 parcelas pós-chaves",
-          "col": 10
-        }
-      ],
-      "alternativas": [
-        {
-          "bold": "Valor de tabela",
-          "nota": "(sem desconto)",
-          "col": 4
-        },
-        {
-          "bold": "Avaliação",
-          "col": 11
+          "label": "Parcela pós-chaves (36x)",
+          "col": 8
         }
       ]
     }

@@ -213,10 +213,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.813.412 bytes):
+Hash de referência (26 payloads, 16.796.144 bytes):
 
 ```
-87B82B07E41E3BB54ABBCE3083FFA9057ED416BADC370455F1E2191B353EF7B6
+0F4D2B1AF77441B7D376282F1B695551D7A6B76842E01FC573FB2494D4B31695
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -515,8 +515,8 @@ porque a faixa de área é larga. A condição tem duas partes que fecham ao cen
 parcelas + 5 reforços = total pago à construtora; esse total + financiamento CEF = tabela.
 O **Hannover** (Marini, Água Verde, entrega 08/2027, mesmo dia) segue o mesmo modelo: um card
 para 2 e 3 dormitórios, sem suíte (confirmado pelo Felipe nos dois), regra dos Tulum, mesma
-condição em duas partes; a tabela traz ainda a avaliação da engenharia da Caixa, que vai como
-alternativa no resumo. A Marini não tem logo cadastrado.
+condição em duas partes. A coluna da avaliação da engenharia da Caixa saiu da tabela e do
+resumo a pedido do Felipe em 29/10/2026. A Marini não tem logo cadastrado.
 
 **Empreendimento com mais de um bloco: um card só, tabela em partes** (regra do Felipe em
 27/10/2026, para todos os que vierem). O card cobre todos os blocos e não fala em bloco; a
@@ -529,9 +529,9 @@ para morar"). Quando a entrega difere entre blocos, o card usa a do bloco ainda 
 
 O **Scire Fortaleza** (Scire, Fortaleza, entrou em 27/10/2026) foi o primeiro: Bloco B (Fase I)
 entregue e Bloco A com entrega 12/2026 (o card usa 12/2026). 11 unidades de 2 dormitórios,
-regra dos Tulum sobre o "Valor (com desconto)". A condição fecha ao centavo nas duas partes:
+regra dos Tulum. A condição fecha ao centavo nas duas partes:
 ato + chaves + pós-chaves + financiamento (80%) = valor com desconto, e tabela − desconto =
-valor. O financiamento fica só na nota, como nas tabelas da Marini. Na série de preços a
+valor. Na série de preços a
 chave é apto + bloco (`1506A`, `1506B`), porque o mesmo número existe nos dois blocos. A
 Scire não tem logo cadastrado.
 
@@ -556,6 +556,17 @@ O **Terrasse** (com dois R, como na tabela; Vorstadt, torre única, entrega 06/2
 o mesmo modelo do Solare: tabelas e cards "Terrasse - 1 dormitório" e "- 2 dormitórios"; o de 1
 dormitório tem uma unidade só (a 1408). Condição: ato + 20 mensais (11%) + 3 semestrais (2%
 cada) + 36x pós-chaves (10%) + financiamento — 69% nas de 2D (ato 4%) e 68% na de 1D (ato 5%).
+
+**Colunas das tabelas da Scire** (pedido do Felipe em 29/10/2026, nas seis): sem Desconto,
+sem "Valor (com desconto)", sem Avaliação, sem Situação e sem financiamento. A coluna
+**Tabela** mostra o **valor final**: nas unidades com desconto, é o valor já com desconto
+(o Felipe corrigiu no mesmo dia, quando ela tinha ficado com o preço cheio). É a mesma base
+dos cards e das séries, e as parcelas da construtora fecham com ela. O número de parcelas
+pós-chaves vai no cabeçalho, "Parcela pós-chaves (80x)"; no Scire Fortaleza, que tem 76x no
+Bloco B e 80x no A, o cabeçalho é "(76x / 80x)" e cada grupo traz `parcelaRotulos` para o
+"Copiar Resumo" dizer o número certo do bloco. Sem coluna de situação, as reservadas do Solare
+2D (709, 803) levam a etiqueta "Reservada" (`etiquetas`) e o `summary.situacaoPor`, que o
+`buildResumo` usa na linha "Situação".
 
 ### Duas formas no price-changes.js
 

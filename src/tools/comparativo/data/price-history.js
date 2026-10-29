@@ -1337,7 +1337,7 @@ const PRICE_HISTORY = {
     "fontes": [
       "Tabela Scire out/2026"
     ],
-    "obs": "As 11 unidades do Scire Fortaleza (Blocos A e B) na tabela de outubro/2026; a chave de cada série é o apto seguido do bloco (1506A, 1506B). Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos.",
+    "obs": "As 11 unidades do Scire Fortaleza (Blocos A e B) na tabela de outubro/2026; a chave de cada série é o apto seguido do bloco (1506A, 1506B). Base: o valor de tabela, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos.",
     "unidades": {
       "1405B": [
         449000
@@ -1381,7 +1381,7 @@ const PRICE_HISTORY = {
     "fontes": [
       "Tabela Scire out/2026"
     ],
-    "obs": "As 14 unidades do Norden (Blocos B e C) na tabela de outubro/2026; a chave de cada série é o apto seguido do bloco (602B, 602C). Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "obs": "As 14 unidades do Norden (Blocos B e C) na tabela de outubro/2026; a chave de cada série é o apto seguido do bloco (602B, 602C). Base: o valor de tabela, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
     "unidades": {
       "602B": [
         459000
@@ -1434,7 +1434,7 @@ const PRICE_HISTORY = {
     "fontes": [
       "Tabela Scire out/2026"
     ],
-    "obs": "Unidades de 1 dormitório do Solare na tabela de outubro/2026, inclusive as reservadas. Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "obs": "Unidades de 1 dormitório do Solare na tabela de outubro/2026, inclusive as reservadas. Base: o valor de tabela, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
     "unidades": {
       "407": [
         299000
@@ -1481,7 +1481,7 @@ const PRICE_HISTORY = {
     "fontes": [
       "Tabela Scire out/2026"
     ],
-    "obs": "Unidades de 2 dormitórios do Solare na tabela de outubro/2026, inclusive as reservadas. Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "obs": "Unidades de 2 dormitórios do Solare na tabela de outubro/2026, inclusive as reservadas. Base: o valor de tabela, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
     "unidades": {
       "101": [
         458000
@@ -1579,7 +1579,7 @@ const PRICE_HISTORY = {
     "fontes": [
       "Tabela Scire out/2026"
     ],
-    "obs": "Unidades de 1 dormitório do Terrasse na tabela de outubro/2026. Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "obs": "Unidades de 1 dormitório do Terrasse na tabela de outubro/2026. Base: o valor de tabela, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
     "unidades": {
       "1408": [
         359000
@@ -1593,7 +1593,7 @@ const PRICE_HISTORY = {
     "fontes": [
       "Tabela Scire out/2026"
     ],
-    "obs": "Unidades de 2 dormitórios do Terrasse na tabela de outubro/2026. Base: o valor com desconto, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
+    "obs": "Unidades de 2 dormitórios do Terrasse na tabela de outubro/2026. Base: o valor de tabela, o mesmo do card. Só existe um levantamento até agora, então ainda não há variação para medir.",
     "unidades": {
       "104": [
         419000
