@@ -519,8 +519,9 @@ table.cmp .rm:hover{border-color:var(--danger); color:var(--danger);}
 .stable-scroll{overflow-x:auto;}
 table.sales{width:100%; border-collapse:collapse; font-family:var(--ff-body); font-size:13.5px;}
 table.sales th{background:var(--navy-900); color:#fff; font-family:var(--ff-display); font-weight:500;
-  text-transform:uppercase; letter-spacing:.04em; font-size:11.5px; padding:9px 12px; text-align:left; white-space:nowrap;}
-table.sales td{padding:9px 12px; border-bottom:1px solid var(--navy-100); white-space:nowrap; color:var(--navy-800);}
+  text-transform:uppercase; letter-spacing:.04em; font-size:11.5px; padding:9px 9px; text-align:left; white-space:normal; vertical-align:bottom; line-height:1.25;}
+/* cabeçalho quebra linha (29/10/2026): os longos, como "Entrada do financiamento (35%)", alargavam a coluna e criavam a rolagem lateral */
+table.sales td{padding:9px 9px; border-bottom:1px solid var(--navy-100); white-space:nowrap; color:var(--navy-800);}
 /* cabecalho de bloco quando a tabela e dividida em partes (t.grupos) */
 table.sales tr.grp-row td{background:var(--orange-50,#fff7ec); border-top:2px solid var(--orange-400,#ffb25e); border-bottom:1px solid var(--navy-100); padding:10px 12px; white-space:normal; color:var(--navy-900);}
 table.sales tr.grp-row b{font-family:var(--ff-display); font-weight:600; text-transform:uppercase; letter-spacing:.06em; font-size:13px;}
@@ -533,10 +534,9 @@ table.sales .btn-sort{all:unset; box-sizing:border-box; display:flex; align-item
 table.sales .btn-sort:hover{background:rgba(255,255,255,.08);}
 table.sales .btn-sort:focus-visible{outline:2px solid var(--orange-400, #ffb25e); outline-offset:-2px;}
 table.sales .sort-ic{font-size:13px; line-height:1; opacity:.55;}
-/* colunas de valor total da unidade (SALES_VALORES no app.js): cabeçalho laranja, para achar o preço de relance */
-table.sales th.th-valor{background:var(--orange-700, #c1701a);}
-table.sales th.th-sort.on{background:var(--orange-900, #7a4108);}
+table.sales th.th-sort.on{background:var(--orange-600, #c9701a);}
 table.sales th.th-sort.on .sort-ic{opacity:1;}
+table.sales td.txt-cell{white-space:normal; min-width:110px;}
 table.sales tr:last-child td{border-bottom:none;}
 table.sales tbody tr:hover{background:var(--navy-50);}
 table.sales .unit-cell{font-family:var(--ff-display); font-weight:600; color:var(--navy-900);}
@@ -588,13 +588,13 @@ table.sales .price-cell{font-family:var(--ff-display); font-weight:600; color:va
     .td-resumo{ text-align:center; white-space:nowrap; }
     .btn-resumo{
       font-family:'Oswald',"Arial Narrow",sans-serif; font-size:12px; font-weight:500;
-      text-transform:uppercase; letter-spacing:.08em;
-      background:var(--orange-500,#ff9e36); color:#1e1b35;
-      border:0; border-radius:999px; padding:6px 14px; cursor:pointer;
+      text-transform:uppercase; letter-spacing:.04em;
+      background:#ffd23f; color:#1e1b35;
+      border:0; border-radius:999px; padding:6px 11px; cursor:pointer;
       transition:filter .15s ease, background .15s ease;
     }
     .btn-resumo:hover{ filter:brightness(1.07); }
-    .btn-resumo:focus-visible{ outline:0; box-shadow:0 0 0 3px rgba(255,158,54,.45); }
+    .btn-resumo:focus-visible{ outline:0; box-shadow:0 0 0 3px rgba(255,210,63,.55); }
     .btn-resumo.ok{ background:var(--success,#25a06b); color:#fff; }
 
 /* ===== Investimentos ===== */

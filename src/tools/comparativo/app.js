@@ -1009,6 +1009,8 @@ function salesTableHTML(emp, t){
       if(etq) extra+=`<span class="utag utag-etq">${etq}</span>`;
     }
     if(/^R\$/.test(cell)) cls="price-cell";
+    /* texto longo (vagas, tipologia) pode quebrar linha quando falta largura, para a tabela não rolar de lado */
+    else if(!cls && String(cell).length>16) cls="txt-cell";
     return `<td class="${cls}">${cell}${extra}</td>`;
   }).join("")}${hasSum?`<td class="td-resumo"><button type="button" class="btn-resumo" data-emp="${emp.replace(/"/g,'&quot;')}" data-ri="${ri}">Copiar Resumo</button></td>`:""}</tr>`).join("");
   /* O folderId da propria tabela e a fonte preferida. Quando ele falta -- e tres

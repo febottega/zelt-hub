@@ -139,11 +139,18 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   `data-ri`, que é o que o "Copiar Resumo" usa. Para outra tabela, é só pôr o nome no Set.
   **Colunas de valor sempre na direita** (29/10/2026): em toda tabela de vendas, as colunas
   de valor total da unidade ficam por último, ao lado do Resumo, do mais parcelado para o mais
-  curto e com o **à vista sempre na ponta** (ex.: "Em 60x → Nas chaves → À vista"), com o
-  cabeçalho em laranja (`th.th-valor`). Isso é só desenho: o `SALES_VALORES` do `app.js`
+  curto e com o **à vista sempre na ponta** (ex.: "Em 60x → Nas chaves → À vista"). O
+  cabeçalho delas ficou laranja por um dia e voltou ao azul a pedido do Felipe; o destaque
+  agora é o botão "Copiar Resumo", amarelo (`#ffd23f`). Isso é só desenho: o `SALES_VALORES` do `app.js`
   lista, **por nome de coluna**, as colunas de valor de cada tabela e o `salesTableHTML`
   reordena na hora; os dados continuam na ordem da construtora, e o resumo, a ordenação e o
-  `data-ri` seguem pelo índice original. **Tabela nova: ponha o nome dela no `SALES_VALORES`**
+  `data-ri` seguem pelo índice original.
+  **Sem rolagem lateral** (29/10/2026): o cabeçalho quebra linha, o padding das células é 9px,
+  texto com mais de 16 caracteres que não é preço (vagas, tipologia) vira `td.txt-cell` e
+  pode quebrar, e as vagas do Alameda Giardini e do Lisbon foram encurtadas para "V02 dupla +
+  V06 + Box 05" (o resumo diz "Vagas: …"). Medido em janela de 1366px: as 44 tabelas cabem,
+  e a mais larga é a do Alameda (1248px de mínimo para 1270 disponíveis). Abaixo de ~1280px
+  o Alameda, o Central Park e o Criatto voltam a rolar um pouco. **Tabela nova: ponha o nome dela no `SALES_VALORES`**
   (sem isso ele cai no principal + alternativas do `summary`, com o à vista por último).
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
   chaves, checklist). Rascunhos em `localStorage` (`zelt_*_v1`); exporta com
@@ -221,10 +228,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.806.196 bytes):
+Hash de referência (26 payloads, 16.806.288 bytes):
 
 ```
-9FC84D3F76C8D67851C0C795FADB74B6862A04D8ABA01107167937CDFBEB0184
+2DF5793CB2B2CFD274FAB5EF68BDFA0298039C9D10564F95F543160D97D0C4BA
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
