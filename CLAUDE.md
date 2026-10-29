@@ -132,7 +132,8 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
   `DD/MM/AAAA`) e o chip do card "Empreendimentos" no `hub.html` (`Atualizado em DD/MM`).
   Pedido do Felipe em 30/09/2026, quando a data tinha ficado parada em 09/09.
-  A aba **Custo-benefício** (era "Melhores preços" até 29/10/2026; a rota segue `#comparativo/precos`)
+  A aba **Custo-benefício** (era "Melhores preços" até 29/10/2026; a URL é `#comparativo/custo-beneficio`, via `ROTA_DA_ABA` —
+  a chave interna continua `precos` e o link antigo `#comparativo/precos` ainda abre a aba)
   ranqueia por nota de 0 a 10, não por preço: o preço esperado de cada card é o R$/m² do bairro
   (`M2_BAIRRO`, em `data/bairros.js`: mediana de anúncios do A Corrida dos Bairros, out/2026) vezes
   os efeitos de área, proporção de suítes, vagas, tipo (cobertura, terraço, loft) e nº de itens de lazer,
@@ -261,10 +262,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.835.776 bytes):
+Hash de referência (26 payloads, 16.836.184 bytes):
 
 ```
-C4993086B90C255A3DC304B67CDB19259E10FB1383677AC107685A5DC0AA3F6C
+920043B7F9A4E6D69929E9A052BD364DC0F0AEED277FEA9B605BF7F2D559CBD5
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

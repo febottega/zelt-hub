@@ -1271,6 +1271,8 @@ function avisaRota(rota){
   try { window.parent.postMessage({zelt:"rota-mudou", rota:rota}, "*"); } catch(_){}
 }
 
+/* nome da aba na URL quando difere da chave interna: a "precos" virou Custo-benefício em 29/10/2026 */
+const ROTA_DA_ABA = { precos:"custo-beneficio" };
 function switchTab(tab){
   document.querySelectorAll("#tabs .tab").forEach(b=>b.classList.toggle("on",b.dataset.tab===tab));
   document.getElementById("view-comparativo").hidden = tab!=="comparativo";
@@ -1279,7 +1281,7 @@ function switchTab(tab){
   document.getElementById("view-tabelas").hidden = tab!=="tabelas";
   document.getElementById("view-investimentos").hidden = tab!=="investimentos";
   document.body.classList.toggle("on-precos", tab==="precos");
-  avisaRota(tab);
+  avisaRota(ROTA_DA_ABA[tab] || tab);
 }
 
 document.getElementById("tabs").addEventListener("click",e=>{
@@ -1296,7 +1298,8 @@ const ABAS_VALIDAS = ["comparativo","precos","tabelas","investimentos","mudancas
 function aplicaRota(rota){
   const partes = String(rota||"").split("/").filter(Boolean);
   if(!partes.length) return;
-  const aba = partes[0];
+  /* "precos" continua aceito para os links antigos */
+  const aba = Object.keys(ROTA_DA_ABA).find(k => ROTA_DA_ABA[k] === partes[0]) || partes[0];
   if(ABAS_VALIDAS.indexOf(aba) < 0) return;
   avisandoRota = false;
   if(aba === "tabelas" && partes[1]){
