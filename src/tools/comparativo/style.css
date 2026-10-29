@@ -640,17 +640,16 @@ table.sales .price-cell{font-family:var(--ff-display); font-weight:600; color:va
 
 
     .th-resumo{ text-align:center; white-space:nowrap; }
-    table.sales th.th-resumo{ background:#ffd23f; color:#1e1b35; }
     .td-resumo{ text-align:center; white-space:nowrap; }
     .btn-resumo{
       font-family:'Oswald',"Arial Narrow",sans-serif; font-size:12px; font-weight:500;
       text-transform:uppercase; letter-spacing:.04em;
-      background:#ffd23f; color:#1e1b35;
+      background:var(--orange-500); color:#fff;
       border:0; border-radius:999px; padding:6px 11px; cursor:pointer;
       transition:filter .15s ease, background .15s ease;
     }
-    .btn-resumo:hover{ filter:brightness(1.07); }
-    .btn-resumo:focus-visible{ outline:0; box-shadow:0 0 0 3px rgba(255,210,63,.55); }
+    .btn-resumo:hover{ background:var(--orange-600, #e07f12); }
+    .btn-resumo:focus-visible{ outline:0; box-shadow:0 0 0 3px rgba(255,158,54,.35); }
     .btn-resumo.ok{ background:var(--success,#25a06b); color:#fff; }
 
 /* ===== Investimentos ===== */

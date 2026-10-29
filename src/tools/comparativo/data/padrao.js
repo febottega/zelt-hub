@@ -1,14 +1,15 @@
 /* Padrão de acabamento e lazer de cada empreendimento, para a nota de custo-benefício. Chave = nome do card
    sem o sufixo " - ..." (DUO, Bothanic, Vista 43, Tulum, Criatto, Solare, Terrasse cobrem todos os cards).
    Padrão julgado pelo produto, nunca pelo preço: pesquisa de 29/10/2026 (sites das construtoras e anúncios)
-   revisada pelo Felipe (Egon Belz Médio e Villa Toscana Alto, também por ele). Lazer de Kaisergarten,
+   revisada pelo Felipe (Egon Belz, Flow, Grand Park, San Vito e Villa Toscana Médio e Valverde
+   Econômico, também por ele). Lazer de Kaisergarten,
    Flow, Vista 43 e Amani 53 tirado dos materiais do Drive da ZELT (tabela da Castelo, folder e memorial
    do Flow, apresentação do Vista 43 e do Amani). Gard: só a quantidade, 6 itens, informada pelo Felipe.
    lazer: null = não achamos a lista (não é "sem lazer"); o modelo usa a média do padrão.
    portaria_24h é registrada mas não conta como item de lazer. */
 const PADRAO_LAZER = {
-  "Villa Toscana": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "playground", "sauna_spa", "pet_place", "cinema_jogos", "portaria_24h"] },
-  "Grand Park": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "sauna_spa", "pet_place", "cinema_jogos"] },
+  "Villa Toscana": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground", "sauna_spa", "pet_place", "cinema_jogos", "portaria_24h"] },
+  "Grand Park": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "sauna_spa", "pet_place", "cinema_jogos"] },
   "Carbono": { padrao: "Médio", lazer: ["piscina", "academia", "rooftop", "coworking", "cinema_jogos", "lavanderia"] },
   "Liv": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "coworking", "bicicletario", "lavanderia", "mercado_autonomo"] },
   "Kaisergarten": { padrao: "Altíssimo", lazer: ["piscina", "academia", "salao_festas", "playground"] },
@@ -20,7 +21,7 @@ const PADRAO_LAZER = {
   "Terraço Sky": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "playground", "rooftop", "bicicletario"] },
   "Gardens": { padrao: "Médio", lazer: ["piscina", "academia", "espaco_gourmet", "playground", "rooftop", "coworking", "pet_place", "portaria_24h"] },
   "Malta": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground"] },
-  "San Vito": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "coworking", "pet_place", "mercado_autonomo"] },
+  "San Vito": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "coworking", "pet_place", "mercado_autonomo"] },
   "Maldivas": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "pet_place", "cinema_jogos", "bicicletario"] },
   "Alameda Giardini": { padrao: "Altíssimo", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground"] },
   "Lisbon": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas"] },
@@ -31,7 +32,7 @@ const PADRAO_LAZER = {
   "Vista 43": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "coworking", "pet_place"] },
   "Cipriani Tower": { padrao: "Alto", lazer: ["piscina", "piscina_aquecida", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "pet_place", "cinema_jogos"] },
   "San Blas": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "playground", "quadra", "pet_place", "cinema_jogos"] },
-  "Valverde": { padrao: "Médio", lazer: ["academia", "salao_festas", "playground", "coworking"] },
+  "Valverde": { padrao: "Econômico", lazer: ["academia", "salao_festas", "playground", "coworking"] },
   "Pablo Neruda": { padrao: "Altíssimo", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "cinema_jogos"] },
   "Alphaville": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground", "pet_place"] },
   "Villaggio di Fiori": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "cinema_jogos", "portaria_24h"] },
@@ -39,7 +40,7 @@ const PADRAO_LAZER = {
   "Princess Tower": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground"] },
   "Ed. Toulouse": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground"] },
   "Ed. Edimburgo": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground"] },
-  "Flow": { padrao: "Alto", lazer: ["piscina", "academia", "espaco_gourmet", "playground", "rooftop", "coworking"] },
+  "Flow": { padrao: "Médio", lazer: ["piscina", "academia", "espaco_gourmet", "playground", "rooftop", "coworking"] },
   "Central Park": { padrao: "Alto", lazer: ["piscina", "academia", "espaco_gourmet", "quadra", "sauna_spa"] },
   "Tulum": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground", "coworking", "pet_place"] },
   "Amani 53": { padrao: "Altíssimo", lazer: ["academia", "espaco_gourmet"] },

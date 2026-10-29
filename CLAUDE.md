@@ -146,7 +146,8 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   **Padrão e lazer** (29/10/2026): `PADRAO_LAZER` em `data/padrao.js`, chave = nome do card sem o " - ..."
   (os 44 empreendimentos). Veio de uma pesquisa na web (planilha "Pesquisa padrao e lazer.csv" em
   Downloads) revisada pelo Felipe, que decidiu: Vista 43 Médio, Amani 53 Altíssimo, Flow Alto, DUO e
-  Bothanic Altíssimo, Egon Belz Médio, Villa Toscana Alto, e **os de Minha Casa Minha Vida — Scire e Marini — Econômico**. O padrão é do
+  Bothanic Altíssimo, Egon Belz, Flow, Grand Park, San Vito e Villa Toscana Médio, Valverde
+  Econômico, e **os de Minha Casa Minha Vida — Scire e Marini — Econômico**. O padrão é do
   produto, nunca do preço. Ele entra com **peso fixo** (`CB_PADRAO`: −8% / 0 / +10% / +20%, da proporção
   entre padrões do CUB × a obra ser ~metade do preço): medido solto, o econômico saía 10% mais caro que o
   médio, porque os seis são de duas construtoras em bairros de índice baixo. O lazer é contado sem a
@@ -172,7 +173,8 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   de valor total da unidade ficam por último, ao lado do Resumo, do mais parcelado para o mais
   curto e com o **à vista sempre na ponta** (ex.: "Em 60x → Nas chaves → À vista"). O
   cabeçalho delas ficou laranja por um dia e voltou ao azul a pedido do Felipe; o destaque
-  agora é o botão "Copiar Resumo" e o topo da coluna Resumo, os dois amarelos (`#ffd23f`). Isso é só desenho: o `SALES_VALORES` do `app.js`
+  agora é o botão "Copiar Resumo", na mesma cor laranja do "Ir à tabela original" (`--orange-500`,
+  texto branco). O topo da coluna Resumo ficou amarelo por um dia e voltou ao azul a pedido do Felipe. Isso é só desenho: o `SALES_VALORES` do `app.js`
   lista, **por nome de coluna**, as colunas de valor de cada tabela e o `salesTableHTML`
   reordena na hora; os dados continuam na ordem da construtora, e o resumo, a ordenação e o
   `data-ri` seguem pelo índice original.
@@ -259,10 +261,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.835.756 bytes):
+Hash de referência (26 payloads, 16.835.776 bytes):
 
 ```
-1430C21CF58642D062196580D8F30CAE31EF1B8C904000121322D5FADD8376FE
+C4993086B90C255A3DC304B67CDB19259E10FB1383677AC107685A5DC0AA3F6C
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
