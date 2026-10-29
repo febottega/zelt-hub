@@ -137,6 +137,14 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   (`summary.principal.col`) como botão: 1º clique do mais barato ao mais caro, 2º o
   inverso, 3º volta à ordem da construtora. Cada linha leva o índice original no
   `data-ri`, que é o que o "Copiar Resumo" usa. Para outra tabela, é só pôr o nome no Set.
+  **Colunas de valor sempre na direita** (29/10/2026): em toda tabela de vendas, as colunas
+  de valor total da unidade ficam por último, ao lado do Resumo, do mais parcelado para o mais
+  curto e com o **à vista sempre na ponta** (ex.: "Em 60x → Nas chaves → À vista"), com o
+  cabeçalho em laranja (`th.th-valor`). Isso é só desenho: o `SALES_VALORES` do `app.js`
+  lista, **por nome de coluna**, as colunas de valor de cada tabela e o `salesTableHTML`
+  reordena na hora; os dados continuam na ordem da construtora, e o resumo, a ordenação e o
+  `data-ri` seguem pelo índice original. **Tabela nova: ponha o nome dela no `SALES_VALORES`**
+  (sem isso ele cai no principal + alternativas do `summary`, com o à vista por último).
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
   chaves, checklist). Rascunhos em `localStorage` (`zelt_*_v1`); exporta com
   html2canvas + pdf-lib.
@@ -213,10 +221,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.801.648 bytes):
+Hash de referência (26 payloads, 16.806.196 bytes):
 
 ```
-F648AD9AE8922EFA9462F10366306B7FC5F645614A28CAD26D5C415ABF437086
+9FC84D3F76C8D67851C0C795FADB74B6862A04D8ABA01107167937CDFBEB0184
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -575,7 +583,10 @@ parcelas não dá o valor. Conferido nas 114 linhas, na tabela e no "Copiar Resu
 parcela vezes o número do rótulo ("29 parcelas", "(24x)", "5 reforços"), mais o
 financiamento, dá o valor ao centavo. Num cadastro novo, faça a mesma conta antes de publicar.
 No Solare a vaga é abreviada ("144 D", "86 C") para a tabela caber; o bit da vaga tem
-`troca`, que o `buildResumo` usa para escrever "(descoberta)"/"(coberta)" por extenso.
+`troca`, que o `buildResumo` usa para escrever "(descoberta)"/"(coberta)" por extenso. No Solare 2D
+a coluna é "Dormitórios" com "2 (1 suíte)" ou "2", e o bit dela tem `mapa` (valor inteiro da
+célula -> texto), que devolve "2 dormitórios (1 suíte)" no resumo. O mesmo vale para o Estanislau
+Park ("2", "3 + lavabo", "2 (2 demi-suítes) + lavabo") e o Hannover ("2", "3").
 
 ### Duas formas no price-changes.js
 

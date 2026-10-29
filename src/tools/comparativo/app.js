@@ -843,6 +843,8 @@ function buildResumo(emp, ri){
     if(vazio(v)) return null;
     /* troca: abreviação da tabela por extenso no resumo (Solare: "144 D" -> "144 (descoberta)") */
     if(b.troca) Object.entries(b.troca).forEach(([de,para])=>{ v=String(v).replace(de,para); });
+    /* mapa: valor inteiro da célula -> texto do resumo (Solare 2D: "2 (1 suíte)" -> "2 dormitórios (1 suíte)") */
+    if(b.mapa && b.mapa[v]!=null) v=b.mapa[v];
     return `${b.pre||""}${v}${b.pos||""}`;
   }).filter(Boolean);
   if(bits.length) b1.push(bits.join(" \u00b7 "));
@@ -893,8 +895,68 @@ function fallbackCopy(txt, done){
   document.body.removeChild(ta);
 }
 
+/* colunas de valor total da unidade (pedido de 29/10/2026): ficam sempre na direita,
+   ao lado do Resumo, do mais parcelado para o mais curto e com o à vista por último. Vale
+   só para o desenho: os dados guardam a ordem da construtora e o resumo lê pelo índice.
+   Por nome de coluna; tabela fora do mapa usa o principal + alternativas do summary. */
+const SALES_VALORES = {
+  "Wissen": ["Valor total","Até 48x / financ. (−6%)","À vista (−15%)"],
+  "San Vito": ["Valor de venda"],
+  "Malta": ["Em 60x (valor total)","Nas chaves","À vista"],
+  "Villa Toscana": ["Parcelado até 30x","À vista / financ."],
+  "Grand Park": ["Parcelado até 30x","À vista / financ."],
+  "Carbono": ["Parcelado até 30x","À vista / financ."],
+  "Kaisergarten": ["Valor total"],
+  "Gard": ["Valor total"],
+  "Egon Belz": ["Valor total"],
+  "Imperial Park": ["Em 36 meses","Em 12 meses","À vista (especial)"],
+  "Terraço Sky": ["60 meses","36 meses / financ.","À vista"],
+  "Bothanic - torre A": ["60 meses","36 meses"],
+  "Bothanic - torre B": ["Preço cheio 60x","Preço cheio 36x"],
+  "DUO - Torre 1": ["60 meses","DUO EXTRA (48 meses)","Em 6 meses (desconto de outubro)"],
+  "DUO - Torre 2": ["Valor (60 meses)"],
+  "Sunset Boulevard": ["Valor total"],
+  "Ed. Toulouse": ["Valor total"],
+  "Ed. Edimburgo": ["Valor total"],
+  "Princess Tower": ["Valor total"],
+  "Alameda Giardini": ["Valor total","Financiamento bancário (−10%)","À vista (−15%)"],
+  "Lisbon": ["Valor total","Valor total 36x"],
+  "Lago di Garda": ["Investimento"],
+  "Cipriani Tower": ["Valor total"],
+  "Gardens": ["Valor de venda"],
+  "Villaggio di Fiori": ["Valor"],
+  "N Studios": ["Valor total","36x + 3 reforços (−5%)","À vista (−10%)"],
+  "Balsini 195": ["Valor total","À vista (−12%)"],
+  "Vista 43 - 2 dormitórios": ["Valor total","À vista (−12%)"],
+  "Vista 43 - Studios e Loft Duplex": ["Valor total","À vista (−12%)"],
+  "San Blas": ["Valor total"],
+  "Central Park": ["Lançamento","Investidor","Pré-venda"],
+  "Tulum - Studios": ["Total em 72x","Na entrega das chaves","À vista"],
+  "Tulum - 2 dormitórios": ["Total em 72x","Na entrega das chaves","À vista"],
+  "Amani 53": ["Valor de venda"],
+  "Villaggio Treviso": ["Valor de tabela","À vista (−10%)"],
+  "Criatto": ["Total financiado (até 84 meses)","Até as chaves"],
+  "Estanislau Park": ["Tabela Marini"],
+  "Hannover": ["Tabela Marini"],
+  "Scire Fortaleza": ["Tabela"],
+  "Norden": ["Tabela"],
+  "Solare - 1 dormitório": ["Tabela"],
+  "Solare - 2 dormitórios": ["Tabela"],
+  "Terrasse - 1 dormitório": ["Tabela"],
+  "Terrasse - 2 dormitórios": ["Tabela"]
+};
+function valorCols(emp, t){
+  const nomes = SALES_VALORES[emp];
+  if(nomes) return nomes.map(n=>t.columns.indexOf(n)).filter(i=>i>=0);
+  const s = t.summary || {};
+  const idx = [s.principal && s.principal.col, ...(s.alternativas||[]).map(a=>a.col)].filter(i=>i!=null);
+  return idx.sort((a,b)=>(/vista/i.test(t.columns[a])?1:0)-(/vista/i.test(t.columns[b])?1:0));
+}
+
 function salesTableHTML(emp, t){
   const special = SPECIAL_UNITS[emp] || {};
+  const vcols = valorCols(emp, t);
+  const cols = t.columns.map((_,i)=>i).filter(i=>!vcols.includes(i)).concat(vcols);
   /* quando a tabela agrupa mais de uma tipologia nao ha card de mesmo nome (o
      Vista 43 poe studios e loft duplex na mesma tabela e tem um card para cada
      um). Sem card, o cabecalho ficava sem construtora, sem bairro e sem logo --
@@ -925,14 +987,16 @@ function salesTableHTML(emp, t){
     const tit = sortDir==="asc" ? "Do mais barato para o mais caro — clique para inverter"
               : sortDir==="desc" ? "Do mais caro para o mais barato — clique para voltar à ordem da tabela"
               : "Ordenar pelo valor: do mais barato para o mais caro";
-    return `<th class="th-sort${sortDir?" on":""}"><button type="button" class="btn-sort" data-emp="${emp.replace(/"/g,'&quot;')}" title="${tit}">${c}<span class="sort-ic">${ic}</span></button></th>`;
+    return `<th class="th-sort th-valor${sortDir?" on":""}"><button type="button" class="btn-sort" data-emp="${emp.replace(/"/g,'&quot;')}" title="${tit}">${c}<span class="sort-ic">${ic}</span></button></th>`;
   };
-  const head = `<tr>${t.columns.map((c,ci)=>ci===sortCol?thSort(c):`<th>${c}</th>`).join("")}${hasSum?`<th class="th-resumo">Resumo</th>`:""}</tr>`;
+  const head = `<tr>${cols.map(ci=>{ const c=t.columns[ci];
+    return ci===sortCol?thSort(c):`<th${vcols.includes(ci)?' class="th-valor"':""}>${c}</th>`; }).join("")}${hasSum?`<th class="th-resumo">Resumo</th>`:""}</tr>`;
   /* cabecalho de cada bloco, so na ordem da construtora (ordenado por valor, os blocos se misturam) */
   const nCols = t.columns.length + (hasSum?1:0);
   const inicios = sortDir ? {} : Object.fromEntries((t.grupos||[]).map(g=>[g.ini,g]));
   const linhaGrupo = g => `<tr class="grp-row"><td colspan="${nCols}"><div class="grp-in"><b>${g.titulo}</b>${g.sub?`<span>${g.sub}</span>`:""}</div></td></tr>`;
-  const body = ordem.map(ri=>[t.rows[ri],ri]).map(([r,ri])=>(inicios[ri]?linhaGrupo(inicios[ri]):"")+`<tr>${r.map((cell,ci)=>{
+  const body = ordem.map(ri=>[t.rows[ri],ri]).map(([r,ri])=>(inicios[ri]?linhaGrupo(inicios[ri]):"")+`<tr>${cols.map(ci=>{
+    const cell=r[ci];
     let cls="", extra="";
     if(ci===t.unitCol){
       cls="unit-cell";
