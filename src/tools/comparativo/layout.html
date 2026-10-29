@@ -9,7 +9,7 @@
     </div>
     <nav class="tabs" id="tabs">
       <a class="tab on" href="#comparativo/comparativo" data-tab="comparativo">Comparativo de <b>Construtoras</b></a>
-      <a class="tab" href="#comparativo/precos" data-tab="precos">Melhores <b>Preços</b></a>
+      <a class="tab" href="#comparativo/precos" data-tab="precos">Custo-<b>Benefício</b></a>
       <a class="tab" href="#comparativo/tabelas" data-tab="tabelas">Tabelas de <b>Vendas</b></a>
       <a class="tab" href="#comparativo/investimentos" data-tab="investimentos"><b>Investimentos</b></a>
       <a class="tab" href="#comparativo/mudancas" data-tab="mudancas">Mudanças</a>
@@ -128,13 +128,13 @@
 </div>
 </div><!-- /view-comparativo -->
 
-<!-- ===================== VIEW: MELHORES PREÇOS ===================== -->
+<!-- ===================== VIEW: CUSTO-BENEFÍCIO ===================== -->
 <div id="view-precos" class="tabview" hidden>
   <div class="wrap">
     <div class="filters">
       <div class="filters-head">
-        <span class="eyebrow">Compare semelhantes</span>
-        <p class="tagline">Filtre por tipo, dormitórios, suítes, bairro e vagas — e veja, lado a lado, quais empreendimentos estão caros ou baratos.</p>
+        <span class="eyebrow">Custo-benefício</span>
+        <p class="tagline">Não basta ser barato: a nota compara o preço de cada empreendimento com o que ele oferece — bairro, metragem, suítes, vagas e tipo de unidade.</p>
       </div>
       <div class="filter-grid">
         <div class="dd" data-key="bairro">
@@ -178,15 +178,22 @@
 
     <div class="results-head">
       <div class="count-big"><span id="p-result-count">0</span></div>
-      <div class="count-lbl">empreendimentos<br>no gráfico</div>
-      <div class="spacer"></div>
-      <div class="seg" id="metric-seg">
-        <button data-metric="media" class="on">Preço médio</button>
-        <button data-metric="rpriv">R$/m² médio</button>
-      </div>
+      <div class="count-lbl">empreendimentos<br>no ranking</div>
     </div>
 
-    <div class="chart-hint">Clique em qualquer barra para abrir o card do empreendimento. As cores vão do <b style="color:#1f9d63">mais barato</b> ao <b style="color:#dc3b33">mais caro</b> dentro do filtro atual.</div>
+    <div class="chart-hint">Nota de 0 a 10: <b>5 é o preço esperado</b> para aquele bairro e aquela configuração; cada ponto acima é cerca de 6% mais barato do que o esperado, cada ponto abaixo, 6% mais caro. Clique em qualquer linha para abrir o card do empreendimento.</div>
+    <details class="cb-metodo" id="cb-metodo">
+      <summary>Como a nota é calculada</summary>
+      <div class="cb-metodo-body">
+        <p>Para cada empreendimento, montamos o <b>preço esperado</b>: o R$/m² do bairro, ajustado pelo que a unidade oferece, vezes a área. A nota mede a distância entre o preço real e esse esperado. O peso de cada característica é medido nos próprios empreendimentos do comparativo e é recalculado sozinho quando entra um novo. Terrenos são comparados só entre si, pelo bairro e pela área do lote.</p>
+        <div class="cb-cols">
+          <div><h4>Quanto cada característica pesa no R$/m²</h4><ul class="cb-efeitos"></ul></div>
+          <div><h4>R$/m² de referência do bairro</h4><ul class="cb-bairros"></ul></div>
+        </div>
+        <p class="cb-obs">O modelo não enxerga padrão de acabamento, lazer do condomínio, vista nem andar: um empreendimento de alto padrão tende a ficar com nota baixa justamente por cobrar por isso. O preço é o do card, que em muitas construtoras é o valor parcelado; à vista costuma sair mais barato.</p>
+        <p class="cb-fonte"></p>
+      </div>
+    </details>
     <div id="price-chart" class="price-chart"></div>
   </div>
 </div><!-- /view-precos -->
@@ -267,7 +274,7 @@
   </div>
 </div>
 
-<!-- Popup do card (Melhores Preços) -->
+<!-- Popup do card (Custo-benefício) -->
 <div class="card-modal" id="card-modal">
   <div class="card-modal-box">
     <button class="card-modal-close" id="card-modal-close" aria-label="Fechar">×</button>

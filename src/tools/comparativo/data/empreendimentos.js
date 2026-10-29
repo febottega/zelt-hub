@@ -1679,7 +1679,7 @@ const DATA = [
     "tipo": "Cobertura",
     "construtora": "Idea Quattro",
     "empreendimento": "Lisbon",
-    "bairro": "Alameda",
+    "bairro": "Jardim Blumenau",
     "unidade": "1002",
     "config": "3 suítes",
     "vagas": "3 + box",

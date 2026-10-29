@@ -494,8 +494,8 @@ document.getElementById("btn-print").addEventListener("click",()=>window.print()
 document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeCompare();});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeCompare();closeCardPopup();}});
 
-/* ===================== MELHORES PREÇOS ===================== */
-const pstate = { bairro:new Set(), quartos:new Set(), suites:new Set(), tipo:new Set(), vagas:new Set(), areaMin:null, areaMax:null, metric:"media" };
+/* ===================== CUSTO-BENEFÍCIO ===================== */
+const pstate = { bairro:new Set(), quartos:new Set(), suites:new Set(), tipo:new Set(), vagas:new Set(), areaMin:null, areaMax:null };
 const PKEYS = ["bairro","quartos","suites","tipo","vagas"];
 
 function pMatchExcept(d,skip){
@@ -614,34 +614,113 @@ function lerpHex(a,b,t){
 }
 function gradeColor(t){ return t<0.5 ? lerpHex("#1f9d63","#e2851f",t/0.5) : lerpHex("#e2851f","#dc3b33",(t-0.5)/0.5); }
 
-function buildChart(list, valOf, metric){
+/* ---------- Custo-benefício ----------
+   Preço esperado de cada card = R$/m² do bairro (M2_BAIRRO) × efeitos do que ele oferece, com os
+   efeitos medidos nos próprios cards por regressão (log do R$/m² relativo ao bairro sobre log da área,
+   proporção de suítes, vagas e tipo da unidade). Recalcula sozinho a cada card novo. Terrenos têm
+   modelo próprio (só área) e só se comparam entre si. Nota = 5 no preço esperado, ±1 ponto a cada 6%. */
+const CB_ESCALA = 0.30;
+const cbMx = a => a && a.length ? Math.max(...a) : 0;
+function cbArea(d){
+  /* área que corresponde ao "media" do card: quem fez media/apriv numa faixa de áreas usa o meio da
+     faixa; os demais (meio da faixa, Tulum) já trazem a área implícita em media/rpriv */
+  const peloMenor = Math.abs(d.media/d.rpriv - d.apriv)/d.apriv < 0.01;
+  return (peloMenor && d.faixaArea && d.atotal && d.atotal!==d.apriv) ? (d.apriv+d.atotal)/2 : d.media/d.rpriv;
+}
+function cbVars(d){
+  const q=cbMx(d.quartos), s=cbMx(d.suites);
+  return { lnArea:Math.log(cbArea(d)), suites:q?s/q:0,
+    vagas: d.vagasN!=null ? d.vagasN : (q>=3?2:1),
+    cob: d.tipo==="Cobertura"?1:0, ter: d.tipo==="Terraço"?1:0, loft: d.tipo==="Loft Duplex"?1:0 };
+}
+const CB_X = { ap: v=>[1,v.lnArea,v.suites,v.vagas,v.cob,v.ter,v.loft], te: v=>[1,v.lnArea] };
+function cbOLS(X,y){
+  const k=X[0].length, A=Array.from({length:k},()=>Array(k+1).fill(0));
+  X.forEach((r,i)=>{ for(let a=0;a<k;a++){ for(let b=0;b<k;b++) A[a][b]+=r[a]*r[b]; A[a][k]+=r[a]*y[i]; } });
+  for(let i=0;i<k;i++){
+    let p=i; for(let j=i+1;j<k;j++) if(Math.abs(A[j][i])>Math.abs(A[p][i])) p=j;
+    [A[i],A[p]]=[A[p],A[i]];
+    for(let j=0;j<k;j++) if(j!==i){ const f=A[j][i]/A[i][i]; for(let l=i;l<=k;l++) A[j][l]-=f*A[i][l]; }
+  }
+  return A.map((r,i)=>r[k]/r[i]);
+}
+const CB = (()=>{
+  const out={ por:{}, coef:{}, fora:[] };
+  const ok = d => d.media && d.rpriv && M2_BAIRRO.bairros[d.bairro];
+  DATA.filter(d=>!ok(d)).forEach(d=>out.fora.push(d));
+  for(const g of ["ap","te"]){
+    const grupo = DATA.filter(d=>ok(d) && (g==="te") === !!d.terreno);
+    if(grupo.length < CB_X[g](cbVars(grupo[0]||DATA[0])).length+2) continue;
+    const loc = d => M2_BAIRRO.bairros[d.bairro];
+    const y = grupo.map(d => Math.log(d.media/cbArea(d)) - Math.log(loc(d)));
+    const b = cbOLS(grupo.map(d=>CB_X[g](cbVars(d))), y);
+    out.coef[g]=b;
+    grupo.forEach(d=>{
+      const lnM2 = CB_X[g](cbVars(d)).reduce((s,v,j)=>s+v*b[j],0) + Math.log(loc(d));
+      const esperado = Math.exp(lnM2)*cbArea(d);
+      const r = Math.log(esperado/d.media);
+      out.por[d.id] = { esperado, dif: d.media/esperado-1,
+        nota: Math.max(0,Math.min(10, 5 + 5*r/CB_ESCALA)) };
+    });
+  }
+  return out;
+})();
+const cbVagas = d => d.vagas==="-" ? "vaga não informada" : /^\d+$/.test(d.vagas) ? d.vagas+(d.vagas==="1"?" vaga":" vagas") : "vagas: "+d.vagas;
+const cbNota = n => n.toFixed(1).replace(".",",");
+function cbFaixa(n){
+  return n>=7.5 ? "Ótimo" : n>=6 ? "Bom" : n>=4 ? "Preço justo" : n>=2.5 ? "Acima do esperado" : "Caro";
+}
+
+function buildChart(list){
   const box=document.getElementById("price-chart");
   if(!list.length){ box.innerHTML='<div class="empty">Nenhum empreendimento com os filtros atuais.<br>Tente afrouxar um pouco os filtros acima.</div>'; return; }
-  const vals=list.map(valOf);
-  const min=Math.min(...vals), max=Math.max(...vals);
-  const fmt = metric==="rpriv" ? (v=>BRL(v)+"/m²") : (v=>BRLk(v));
+  let pos=0;
   const rows=list.map(d=>{
-    const v=valOf(d);
-    const t = max>min ? (v-min)/(max-min) : 0;
-    const pct = max>0 ? Math.max(8,(v/max)*100) : 8;
-    return `<button class="pbar ${isSold(d)?'sold':''}" data-id="${d.id}" style="--pct:${pct}%;--c:${gradeColor(t)}">
+    const cb=CB.por[d.id];
+    const pct=Math.max(4,cb.nota*10);
+    const dif=Math.round(cb.dif*100);
+    const difTxt = dif===0 ? "igual" : `${Math.abs(dif)}% ${dif<0?"abaixo":"acima"}`;
+    return `<button class="pbar ${isSold(d)?'sold':''}" data-id="${d.id}" style="--pct:${pct}%;--c:${gradeColor(1-cb.nota/10)}">
+      <span class="pbar-rank">${isSold(d)?"—":++pos+"º"}</span>
       <span class="pbar-info">
         <span class="pbar-name"><span class="nm">${d.empreendimento}${d.unidade?` <span class="u">${d.unidade}</span>`:''}</span><span class="ptag ${tipoClass(d.tipo)}">${d.tipo}</span></span>
-        <span class="pbar-sub">${d.construtora} · ${d.bairro} · ${d.config}</span>
+        <span class="pbar-sub">${d.construtora} · ${d.bairro} · ${d.config}${d.terreno?'':` · ${cbVagas(d)}`}</span>
       </span>
-      <span class="pbar-track"><span class="pbar-fill"></span><span class="pbar-val">${fmt(v)}</span></span>
+      <span class="pbar-track"><span class="pbar-fill"></span><span class="pbar-val">${cbNota(cb.nota)}<small>${cbFaixa(cb.nota)}</small></span></span>
+      <span class="pbar-px">
+        <span class="px-real">${BRLk(d.media)} <small>· ${BRL(d.media/cbArea(d))}/m²</small></span>
+        <span class="px-esp ${dif<0?'abaixo':dif>0?'acima':''}">esperado ${BRLk(cb.esperado)} · ${difTxt}</span>
+      </span>
     </button>`;
   }).join("");
-  box.innerHTML = `<div class="chart-legend"><span class="lg lg-low">● mais barato</span><span class="lg lg-high">mais caro ●</span></div><div class="pbars">${rows}</div>`;
+  box.innerHTML = `<div class="chart-legend"><span class="lg lg-low">● melhor custo-benefício</span><span class="lg lg-high">pior custo-benefício ●</span></div><div class="pbars">${rows}</div>`;
   box.querySelectorAll(".pbar").forEach(b=>b.addEventListener("click",()=>showCardPopup(+b.dataset.id)));
 }
 
+/* quadro "como a nota é calculada": efeitos medidos e índice de cada bairro, sempre os do modelo atual */
+function buildCbMetodo(){
+  const el=document.getElementById("cb-metodo"); if(!el) return;
+  const b=CB.coef.ap, pct=x=>{ const v=Math.round((Math.exp(x)-1)*100); return (v>0?"+":v<0?"−":"")+Math.abs(v)+"%"; };
+  const usados=[...new Set(DATA.filter(d=>CB.por[d.id]).map(d=>d.bairro))];
+  const bairros=Object.entries(M2_BAIRRO.bairros).filter(([n])=>usados.includes(n)).sort((x,y)=>y[1]-x[1]);
+  const efeitos = b ? [
+    ["Área 2× maior", pct(b[1]*Math.log(2)), "no R$/m² — unidade grande custa menos por m²"],
+    ["Todos os dormitórios suíte", pct(b[2]), "contra nenhuma suíte"],
+    ["Cada vaga a mais", pct(b[3]), ""],
+    ["Cobertura", pct(b[4]), "contra apartamento tipo"],
+    ["Terraço / garden", pct(b[5]), "a área do terraço pesa menos que a coberta"],
+    ["Loft duplex", pct(b[6]), ""]] : [];
+  el.querySelector(".cb-efeitos").innerHTML = efeitos.map(([k,v,n])=>`<li><b>${k}</b><span class="v">${v}</span>${n?`<span class="n">${n}</span>`:""}</li>`).join("");
+  el.querySelector(".cb-bairros").innerHTML = bairros.map(([n,v])=>`<li><span>${n}</span><b>${BRL(v)}</b></li>`).join("");
+  el.querySelector(".cb-fonte").innerHTML = `Índice de bairro: mediana do R$/m² de apartamentos à venda, <a href="${M2_BAIRRO.url}" target="_blank" rel="noopener">${M2_BAIRRO.fonte}</a>, ${M2_BAIRRO.ref} (mediana da cidade: ${BRL(M2_BAIRRO.cidade)}/m²). Efeitos medidos nos ${Object.keys(CB.por).length} cards do comparativo.`
+    + (CB.fora.length ? ` Fora do ranking por falta de bairro no índice ou de preço: ${CB.fora.map(d=>d.empreendimento+(d.unidade?" "+d.unidade:"")).join(", ")}.` : "");
+}
+
 function renderPrices(){
-  const metric=pstate.metric;
-  const valOf = d => metric==="rpriv" ? d.rpriv : d.media;
-  const list = DATA.filter(pMatches).filter(d=>valOf(d)!=null).sort((a,b)=>valOf(a)-valOf(b));
+  /* esgotado fica no fim, sem posição: serve de referência de preço, não de oferta */
+  const list = DATA.filter(pMatches).filter(d=>CB.por[d.id]).sort((a,b)=>isSold(a)-isSold(b) || CB.por[a.id].dif-CB.por[b.id].dif);
   document.getElementById("p-result-count").textContent=list.length;
-  buildChart(list, valOf, metric);
+  buildChart(list);
   renderPChips();
   updatePriceChrome();
 }
@@ -1181,18 +1260,13 @@ window.addEventListener("message", e => {
   if(d && d.zelt === "rota" && typeof d.rota === "string") aplicaRota(d.rota);
 });
 
-document.getElementById("metric-seg").addEventListener("click",e=>{
-  const b=e.target.closest("button"); if(!b) return;
-  pstate.metric=b.dataset.metric;
-  document.querySelectorAll("#metric-seg button").forEach(x=>x.classList.toggle("on",x===b));
-  renderPrices();
-});
 document.getElementById("card-modal-close").addEventListener("click",closeCardPopup);
 document.getElementById("card-modal").addEventListener("click",e=>{if(e.target.id==="card-modal")closeCardPopup();});
 document.getElementById("p-area-min").addEventListener("input",e=>{pstate.areaMin=e.target.value?+e.target.value:null;renderPrices();});
 document.getElementById("p-area-max").addEventListener("input",e=>{pstate.areaMax=e.target.value?+e.target.value:null;renderPrices();});
 
 buildPriceDropdowns();
+buildCbMetodo();
 renderPrices();
 buildChConstrDropdown();
 renderChanges();

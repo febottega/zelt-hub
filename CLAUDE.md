@@ -77,6 +77,7 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | os 75 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
 | mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
+| R$/m² por bairro (custo-benefício) | `tools/comparativo/data/bairros.js` | 1 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
 | logos das construtoras | `tools/comparativo/data/logos.js` | 44 KB |
 | CSS do comparativo | `tools/comparativo/style.css` | 46 KB |
@@ -125,11 +126,22 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   Desde 26/10/2026 as abas "Relatório / Comparativo" de cada relatório (`.tabbar`, radios
   `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
   `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
-- **comparativo** — 75 empreendimentos. Abas: comparativo, mudanças, melhores preços,
-  tabelas de vendas, investimentos. **Toda mudança no comparativo atualiza a data em
+- **comparativo** — 75 empreendimentos. Abas: comparativo, custo-benefício, tabelas de vendas,
+  investimentos, mudanças. **Toda mudança no comparativo atualiza a data em
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
   `DD/MM/AAAA`) e o chip do card "Empreendimentos" no `hub.html` (`Atualizado em DD/MM`).
   Pedido do Felipe em 30/09/2026, quando a data tinha ficado parada em 09/09.
+  A aba **Custo-benefício** (era "Melhores preços" até 29/10/2026; a rota segue `#comparativo/precos`)
+  ranqueia por nota de 0 a 10, não por preço: o preço esperado de cada card é o R$/m² do bairro
+  (`M2_BAIRRO`, em `data/bairros.js`: mediana de anúncios do A Corrida dos Bairros, out/2026) vezes
+  os efeitos de área, proporção de suítes, vagas e tipo (cobertura, terraço, loft), medidos por
+  regressão nos próprios cards **no carregamento** (`CB`, no `app.js`) — card novo entra sozinho, desde
+  que o bairro dele esteja no `M2_BAIRRO` (senão fica fora e o quadro "Como a nota é calculada" avisa).
+  Nota 5 = preço esperado; cada ponto ≈ 6% (`CB_ESCALA = 0.30`). Terrenos têm modelo próprio (bairro e
+  área) e só se comparam entre si. Esgotados ficam no fim, sem posição. O preço é o `media` do card e a
+  área, a que corresponde a ele (`cbArea`: meio da faixa onde o `rpriv` foi `media/apriv`, senão
+  `media/rpriv`). Ao ajustar, a elasticidade livre da localização deu 1,12 — por isso o índice entra
+  com peso 1. O modelo não vê padrão, lazer, vista nem condição de pagamento; o quadro diz isso.
   O **Egon Belz** (Castelo) se chamava "Residencial EB" até 06/10/2026; o nome mudou em
   todos os arquivos de dados e no `DRIVE_LINKS` — a âncora da tabela agora é `#tab-egon-belz`.
   Na aba tabelas de vendas, as tabelas de `SALES_ORDENAVEL` (`app.js`: os dois Vista 43,
@@ -228,10 +240,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.806.288 bytes):
+Hash de referência (26 payloads, 16.818.292 bytes):
 
 ```
-2DF5793CB2B2CFD274FAB5EF68BDFA0298039C9D10564F95F543160D97D0C4BA
+016A28579B26A03105EE07D656AD75212DD211FD4965AF476C670512AB795C38
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
