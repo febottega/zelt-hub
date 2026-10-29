@@ -499,7 +499,7 @@ document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeCompare();closeCardPopup();}});
 
 /* ===================== CUSTO-BENEFÍCIO ===================== */
-const pstate = { bairro:new Set(), quartos:new Set(), suites:new Set(), tipo:new Set(), vagas:new Set(), padrao:new Set(), areaMin:null, areaMax:null };
+const pstate = { bairro:new Set(), quartos:new Set(), suites:new Set(), tipo:new Set(), vagas:new Set(), padrao:new Set(), areaMin:null, areaMax:null, search:"" };
 const PKEYS = ["bairro","quartos","suites","tipo","vagas","padrao"];
 
 function pMatchExcept(d,skip){
@@ -517,6 +517,10 @@ function pMatchExcept(d,skip){
 }
 function pMatches(d){
   if(!pMatchExcept(d,null)) return false;
+  if(pstate.search){
+    const q=pstate.search.toLowerCase();
+    if(!(d.empreendimento.toLowerCase().includes(q) || d.construtora.toLowerCase().includes(q))) return false;
+  }
   const aLo=d.apriv, aHi=(d.faixaArea && d.atotal!=null) ? d.atotal : d.apriv;
   if(pstate.areaMin!=null && (aHi==null || aHi<pstate.areaMin)) return false;
   if(pstate.areaMax!=null && (aLo==null || aLo>pstate.areaMax)) return false;
@@ -580,14 +584,15 @@ function updatePriceChrome(){
 
 function pClearAll(){
   PKEYS.forEach(k=>pstate[k].clear());
-  pstate.areaMin=pstate.areaMax=null;
+  pstate.areaMin=pstate.areaMax=null; pstate.search="";
   document.querySelectorAll("#view-precos .dd-panel input").forEach(i=>i.checked=false);
-  ["p-area-min","p-area-max"].forEach(id=>{const el=document.getElementById(id); if(el) el.value="";});
+  ["p-area-min","p-area-max","p-search"].forEach(id=>{const el=document.getElementById(id); if(el) el.value="";});
   renderPrices();
 }
 function pRemoveFilter(kind,v){
   if(kind==="areaMin"){ pstate.areaMin=null; document.getElementById("p-area-min").value=""; }
   else if(kind==="areaMax"){ pstate.areaMax=null; document.getElementById("p-area-max").value=""; }
+  else if(kind==="search"){ pstate.search=""; document.getElementById("p-search").value=""; }
   else{
     pstate[kind].delete(v);
     const sv=String(v);
@@ -595,10 +600,26 @@ function pRemoveFilter(kind,v){
   }
   renderPrices();
 }
+/* padrão: quatro botões que ligam e desligam, no lugar de dropdown; o estado é o mesmo pstate.padrao */
+function buildPadraoBtns(){
+  const box=document.getElementById("p-padrao"); if(!box) return;
+  box.innerHTML = OPTS.padrao.map(p=>`<button type="button" class="pad-btn pad-${p.normalize("NFD").replace(/[^a-zA-Z]/g,"").toLowerCase()}" data-v="${p}">${p}<span class="c"></span></button>`).join("");
+  box.querySelectorAll(".pad-btn").forEach(b=>b.addEventListener("click",()=>{
+    const v=b.dataset.v; if(pstate.padrao.has(v)) pstate.padrao.delete(v); else pstate.padrao.add(v);
+    renderPrices();
+  }));
+}
+function updatePadraoBtns(){
+  document.querySelectorAll("#p-padrao .pad-btn").forEach(b=>{
+    b.classList.toggle("on", pstate.padrao.has(b.dataset.v));
+    b.querySelector(".c").textContent = pCountFor("padrao", b.dataset.v);
+  });
+}
 function renderPChips(){
   const box=document.getElementById("p-active-chips");
   const chips=[];
   for(const key of PKEYS){ [...pstate[key]].forEach(v=>chips.push({kind:key,v,cat:CAT_LABEL[key],text:chipText(key,v)})); }
+  if(pstate.search) chips.push({kind:"search",cat:"Busca",text:`“${pstate.search}”`});
   if(pstate.areaMin!=null) chips.push({kind:"areaMin",cat:"Área",text:"≥ "+pstate.areaMin+" m²"});
   if(pstate.areaMax!=null) chips.push({kind:"areaMax",cat:"Área",text:"≤ "+pstate.areaMax+" m²"});
   if(chips.length===0){ box.innerHTML=""; return; }
@@ -634,7 +655,8 @@ const CB_PADRAO = { "Econômico":-0.08, "Médio":0, "Alto":0.10, "Altíssimo":0.
 const cbMx = a => a && a.length ? Math.max(...a) : 0;
 const cbPL = d => PADRAO_LAZER[d.empreendimento.replace(/ - .*/,"")] || null;
 /* portaria 24h é segurança, não lazer; lista não encontrada (null) recebe a média do mesmo padrão */
-const cbLazerN = d => { const l=cbPL(d)&&cbPL(d).lazer; return l ? l.filter(x=>x!=="portaria_24h").length : null; };
+/* lazer é a lista de itens ou, quando só sabemos quantos são (Gard), o número */
+const cbLazerN = d => { const l=cbPL(d)&&cbPL(d).lazer; return typeof l==="number" ? l : l ? l.filter(x=>x!=="portaria_24h").length : null; };
 const CB_LAZER_MEDIO = (()=>{
   const m={};
   Object.keys(CB_PADRAO).forEach(p=>{
@@ -689,6 +711,7 @@ const CB = (()=>{
   }
   return out;
 })();
+const cbArea2 = d => d.apriv==null ? "" : (d.faixaArea && d.atotal!=null && d.atotal!==d.apriv) ? M2(d.apriv).replace(" m²","")+" a "+M2(d.atotal) : M2(d.apriv);
 const cbVagas = d => d.vagas==="-" ? "vaga não informada" : /^\d+$/.test(d.vagas) ? d.vagas+(d.vagas==="1"?" vaga":" vagas") : "vagas: "+d.vagas;
 const cbNota = n => n.toFixed(1).replace(".",",");
 function cbFaixa(n){
@@ -709,6 +732,7 @@ function buildChart(list){
       <span class="pbar-info">
         <span class="pbar-name"><span class="nm">${d.empreendimento}${d.unidade?` <span class="u">${d.unidade}</span>`:''}</span><span class="ptag ${tipoClass(d.tipo)}">${d.tipo}</span></span>
         <span class="pbar-sub">${d.construtora} · ${d.bairro} · ${d.config}${d.terreno?'':` · ${cbVagas(d)}`}</span>
+        <span class="pbar-area">Área: ${cbArea2(d)}</span>
         ${d.terreno||!cbPL(d)?'':`<span class="pbar-pl"><b class="pad pad-${cbPL(d).padrao.normalize("NFD").replace(/[^a-zA-Z]/g,"").toLowerCase()}">${cbPL(d).padrao}</b>${cbLazerN(d)==null?"lazer não informado":cbLazerN(d)+(cbLazerN(d)===1?" item":" itens")+" de lazer"}</span>`}
       </span>
       <span class="pbar-track"><span class="pbar-fill"></span><span class="pbar-val">${cbNota(cb.nota)}<small>${cbFaixa(cb.nota)}</small></span></span>
@@ -750,6 +774,7 @@ function renderPrices(){
   buildChart(list);
   renderPChips();
   updatePriceChrome();
+  updatePadraoBtns();
 }
 
 function showCardPopup(id){
@@ -1289,10 +1314,12 @@ window.addEventListener("message", e => {
 
 document.getElementById("card-modal-close").addEventListener("click",closeCardPopup);
 document.getElementById("card-modal").addEventListener("click",e=>{if(e.target.id==="card-modal")closeCardPopup();});
+document.getElementById("p-search").addEventListener("input",e=>{pstate.search=e.target.value.trim();renderPrices();});
 document.getElementById("p-area-min").addEventListener("input",e=>{pstate.areaMin=e.target.value?+e.target.value:null;renderPrices();});
 document.getElementById("p-area-max").addEventListener("input",e=>{pstate.areaMax=e.target.value?+e.target.value:null;renderPrices();});
 
 buildPriceDropdowns();
+buildPadraoBtns();
 buildCbMetodo();
 renderPrices();
 buildChConstrDropdown();

@@ -151,9 +151,12 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   entre padrões do CUB × a obra ser ~metade do preço): medido solto, o econômico saía 10% mais caro que o
   médio, porque os seis são de duas construtoras em bairros de índice baixo. O lazer é contado sem a
   portaria 24h e é medido (+2%/item em 29/10); `lazer: null` é "não achamos", não "não tem", e recebe a
-  média do mesmo padrão (só o Gard, desde 29/10: o book dele no Drive é imagem e a tabela da Castelo
-  não lista lazer). O lazer de Kaisergarten, Flow, Vista 43 e Amani 53 veio das pastas do Drive da ZELT.
-  A aba tem **filtro por padrão** (`pstate.padrao`, `padraoDe(d)`); os terrenos estão como Alto no
+  média do mesmo padrão (nenhum card hoje). O Gard tem só a quantidade, `lazer: 6` (o Felipe informou;
+  o book no Drive é imagem e a tabela da Castelo não lista o lazer) — `cbLazerN` aceita número ou lista. O lazer de Kaisergarten, Flow, Vista 43 e Amani 53 veio das pastas do Drive da ZELT.
+  A aba tem **filtro por padrão**: quatro botões (Altíssimo, Alto, Médio, Econômico) ao lado da área
+  privativa, não dropdown, a pedido do Felipe (`buildPadraoBtns`, `pstate.padrao`, `padraoDe(d)`). Cada
+  linha do ranking mostra a área mínima e máxima do card (`cbArea2`). Entre a área e os botões fica a busca
+  por empreendimento ou construtora (`#p-search`, `pstate.search`, mesma regra da busca do comparativo); os terrenos estão como Alto no
   `PADRAO_LAZER` e aparecem nesse filtro, embora o padrão não entre na nota deles. Card de empreendimento novo:
   ponha o nome no `PADRAO_LAZER`, senão ele fica fora do ranking. Terrenos não usam padrão nem lazer.
   O **Grand Park** (Andraus) fica na **Vila Nova** (Rua Almirante Barroso, 739); até 29/10/2026 o
@@ -256,10 +259,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.831.820 bytes):
+Hash de referência (26 payloads, 16.835.756 bytes):
 
 ```
-2764186240A51D87D797C1950FBBE733E5A26481C71714B0014A3E5F005E002D
+1430C21CF58642D062196580D8F30CAE31EF1B8C904000121322D5FADD8376FE
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

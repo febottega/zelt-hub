@@ -3,7 +3,8 @@
    Padrão julgado pelo produto, nunca pelo preço: pesquisa de 29/10/2026 (sites das construtoras e anúncios)
    revisada pelo Felipe (Egon Belz Médio e Villa Toscana Alto, também por ele). Lazer de Kaisergarten,
    Flow, Vista 43 e Amani 53 tirado dos materiais do Drive da ZELT (tabela da Castelo, folder e memorial
-   do Flow, apresentação do Vista 43 e do Amani). lazer: null = não achamos a lista (não é "sem lazer"); o modelo usa a média do padrão.
+   do Flow, apresentação do Vista 43 e do Amani). Gard: só a quantidade, 6 itens, informada pelo Felipe.
+   lazer: null = não achamos a lista (não é "sem lazer"); o modelo usa a média do padrão.
    portaria_24h é registrada mas não conta como item de lazer. */
 const PADRAO_LAZER = {
   "Villa Toscana": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "playground", "sauna_spa", "pet_place", "cinema_jogos", "portaria_24h"] },
@@ -11,7 +12,7 @@ const PADRAO_LAZER = {
   "Carbono": { padrao: "Médio", lazer: ["piscina", "academia", "rooftop", "coworking", "cinema_jogos", "lavanderia"] },
   "Liv": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "coworking", "bicicletario", "lavanderia", "mercado_autonomo"] },
   "Kaisergarten": { padrao: "Altíssimo", lazer: ["piscina", "academia", "salao_festas", "playground"] },
-  "Gard": { padrao: "Alto", lazer: null },
+  "Gard": { padrao: "Alto", lazer: 6 },
   "Egon Belz": { padrao: "Médio", lazer: ["piscina", "salao_festas", "rooftop", "coworking"] },
   "DUO": { padrao: "Altíssimo", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "rooftop", "pet_place", "cinema_jogos"] },
   "Bothanic": { padrao: "Altíssimo", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "pet_place"] },
