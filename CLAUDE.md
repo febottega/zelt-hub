@@ -136,7 +136,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   a chave interna continua `precos` e o link antigo `#comparativo/precos` ainda abre a aba)
   ranqueia por nota de 0 a 10, não por preço: o preço esperado de cada card é o R$/m² do bairro
   (`M2_BAIRRO`, em `data/bairros.js`: mediana de anúncios do A Corrida dos Bairros, out/2026) vezes
-  os efeitos de área, proporção de suítes, vagas, tipo (cobertura, terraço, loft) e pontos de lazer,
+  os efeitos de área, proporção de suítes, vagas, tipo (cobertura, terraço, loft), pontos de lazer e aptos por andar,
   medidos por regressão nos próprios cards **no carregamento** (`CB`, no `app.js`) — card novo entra sozinho, desde
   que o bairro dele esteja no `M2_BAIRRO` (senão fica fora e o quadro "Como a nota é calculada" avisa).
   Nota 5 = preço esperado; cada ponto ≈ 6% (`CB_ESCALA = 0.30`). Terrenos têm modelo próprio (bairro e
@@ -165,6 +165,12 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   por empreendimento ou construtora (`#p-search`, `pstate.search`, mesma regra da busca do comparativo); os terrenos estão como Alto no
   `PADRAO_LAZER` e aparecem nesse filtro, embora o padrão não entre na nota deles. Card de empreendimento novo:
   ponha o nome no `PADRAO_LAZER`, senão ele fica fora do ranking. Terrenos não usam padrão nem lazer.
+  **Aptos por andar** (30/10/2026, pedido do Felipe): `andar` em cada linha do `PADRAO_LAZER`, da pesquisa ou do
+  maior final de unidade nas tabelas (ver o comentário do `padrao.js`; Terraço Sky, Wissen e Valverde informados pelo Felipe); entra medido como log, **além do padrão**
+  (1 por andar +9%, 2 +5%, 8 −4% contra 4 por andar na primeira medida; com o San Blas no Garcia e os três
+  números do Felipe, caiu para +3%, +2% e −2% no mesmo dia — o efeito é pequeno e sensível à amostra). Sem dado: mediana. Medido sem o padrão fixo
+  daria +16% para 1 vs 4 — a diferença é o que o padrão já paga. Um corte "até 2 por andar" (+15%) ajustava
+  um pouco melhor, mas não diferencia 4 de 12, e o Felipe pediu que menos unidades valesse mais em geral.
   **Terraço**: medido, −10% no R$/m² da área total, porque a área descoberta entra na privativa e vale
   ~2/3 do m² coberto (as tabelas dão San Vito ~25%, Princess Tower ~60%, Lisbon ~95%) — a unidade com terraço
   continua valendo mais que a sem. Em 30/10/2026 ficou algumas horas sem esse desconto e voltou, a pedido do
@@ -172,6 +178,8 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   medido solto nos cards o prazo não pesava nada (−0,2%/ano). No histórico de 2026 a unidade na planta subiu
   ~6,7%/ano contra ~4,4% das prontas (sem o Imperial Park) — ~2 pontos por ano de espera. Foi −3% (CUB sobre
   metade do preço) por algumas horas em 30/10/2026; revisto, o CUB acompanha a inflação e não é custo real.
+  O **San Blas** (Oma) fica no **Garcia** e está **entregue** (Felipe, 30/10/2026): os dois cards eram "Vila
+  Formosa" e "A definir". O Garcia entrou no `M2_BAIRRO` (R$ 5.260, mesma fonte) e a Vila Formosa saiu, sem card.
   O **Grand Park** (Andraus) fica na **Vila Nova** (Rua Almirante Barroso, 739); até 29/10/2026 o
   card dizia Velha.
   O **Egon Belz** (Castelo) se chamava "Residencial EB" até 06/10/2026; o nome mudou em
@@ -273,10 +281,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.840.360 bytes):
+Hash de referência (26 payloads, 16.842.476 bytes):
 
 ```
-BC263732C237A643BE05DA3CD8D02AFA1D3F0263C38E499948B412A0B0C3029C
+3703EF1F846E059D88637D9245C38FCDC506548BD72AC6B93A9D8F1BE4447F1D
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

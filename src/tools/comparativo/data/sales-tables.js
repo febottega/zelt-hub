@@ -4947,7 +4947,7 @@ const SALES_TABLES = {
         "R$ 795.000,00"
       ]
     ],
-    "note": "Residencial San Blas — Rua Hermann Huscher, 790, Vila Formosa. 2 unidades disponíveis na tabela de outubro/2026: a 1701 e a 2006, com os mesmos valores de setembro. Uma vaga dupla já inclusa no valor do apartamento. Duas tipologias: a diferenciada 1701 (219,25 m², 4 suítes) em 84 parcelas, e as de 2 dormitórios com duas suítes (89,31 m²) em 60 parcelas — em todas, entrada + 5 reforços + parcelas mensais. Na tabela de outubro saiu a 2205; antes já tinham saído a 1602, a 2005 e a 2206. Lazer: piscina, quadra esportiva, academia, salão de festas, sala de jogos, espaço pet. Previsão de entrega informada nas tabelas de dez/2023 e fev/2024 (incorporação 4-56859): setembro/2026 — a O.M.A. não repete essa data nas tabelas atuais; confirmar se já houve entrega.",
+    "note": "Residencial San Blas — Rua Hermann Huscher, 790, Garcia. 2 unidades disponíveis na tabela de outubro/2026: a 1701 e a 2006, com os mesmos valores de setembro. Uma vaga dupla já inclusa no valor do apartamento. Duas tipologias: a diferenciada 1701 (219,25 m², 4 suítes) em 84 parcelas, e as de 2 dormitórios com duas suítes (89,31 m²) em 60 parcelas — em todas, entrada + 5 reforços + parcelas mensais. Na tabela de outubro saiu a 2205; antes já tinham saído a 1602, a 2005 e a 2206. Lazer: piscina, quadra esportiva, academia, salão de festas, sala de jogos, espaço pet. Empreendimento entregue (confirmado pelo Felipe em 30/10/2026; a previsão das tabelas de dez/2023 e fev/2024 era setembro/2026).",
     "summary": {
       "bits": [
         {

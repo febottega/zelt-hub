@@ -643,7 +643,7 @@ function gradeColor(t){ return t<0.5 ? lerpHex("#1f9d63","#e2851f",t/0.5) : lerp
 /* ---------- Custo-benefício ----------
    Preço esperado de cada card = R$/m² do bairro (M2_BAIRRO) × efeitos do que ele oferece, com os
    efeitos medidos nos próprios cards por regressão (log do R$/m² relativo ao bairro sobre log da área,
-   proporção de suítes, vagas, cobertura, terraço, loft e pontos de lazer). O terraço sai negativo no
+   proporção de suítes, vagas, cobertura, terraço, loft, pontos de lazer e log de aptos por andar). O terraço sai negativo no
    R$/m² porque a área descoberta entra na privativa e vale menos que a coberta (~2/3, o que bate com as
    tabelas: San Vito ~25%, Princess Tower ~60%, Lisbon ~95% do m² coberto); a unidade com terraço continua
    valendo mais que a sem. Ficou um dia sem esse desconto e voltou (Felipe, 30/10/2026).
@@ -685,6 +685,12 @@ const CB_PESO_MEDIO = (()=>{
 })();
 const cbLazerPts = d => { const l=cbPL(d)&&cbPL(d).lazer;
   return typeof l==="number" ? l*CB_PESO_MEDIO : l ? l.reduce((a,x)=>a+(CB_LAZER_PESO[x]||0),0) : null; };
+/* aptos por andar (PADRAO_LAZER.andar); sem dado recebe a mediana dos que têm */
+const CB_ANDAR_MEDIANA = (()=>{
+  const v=Object.values(PADRAO_LAZER).map(p=>p.andar).filter(x=>x>0).sort((a,b)=>a-b);
+  return v.length ? v[Math.floor(v.length/2)] : 4;
+})();
+const cbAndar = d => { const p=cbPL(d); return p && p.andar>0 ? p.andar : null; };
 const CB_LAZER_MEDIO = (()=>{
   const m={};
   Object.keys(CB_PADRAO).forEach(p=>{
@@ -705,10 +711,11 @@ function cbVars(d){
     vagas: d.vagasN!=null ? d.vagasN : (q>=3?2:1),
     cob: d.tipo==="Cobertura"?1:0, ter: d.tipo==="Terraço"?1:0, loft: d.tipo==="Loft Duplex"?1:0,
     lazer: cbLazerPts(d)!=null ? cbLazerPts(d) : CB_LAZER_MEDIO[cbPL(d).padrao],
+    lnAndar: Math.log(cbAndar(d) || CB_ANDAR_MEDIANA),
     /* parte com peso fixo: padrão e prazo até a entrega */
     fixo: d.terreno ? 0 : Math.log(1+CB_PADRAO[cbPL(d).padrao]) + cbAnos(d)*Math.log(1+CB_ANO) };
 }
-const CB_X = { ap: v=>[1,v.lnArea,v.suites,v.vagas,v.cob,v.ter,v.loft,v.lazer], te: v=>[1,v.lnArea] };
+const CB_X = { ap: v=>[1,v.lnArea,v.suites,v.vagas,v.cob,v.ter,v.loft,v.lazer,v.lnAndar], te: v=>[1,v.lnArea] };
 function cbOLS(X,y){
   const k=X[0].length, A=Array.from({length:k},()=>Array(k+1).fill(0));
   X.forEach((r,i)=>{ for(let a=0;a<k;a++){ for(let b=0;b<k;b++) A[a][b]+=r[a]*r[b]; A[a][k]+=r[a]*y[i]; } });
@@ -763,7 +770,7 @@ function buildChart(list){
         <span class="pbar-name"><span class="nm">${d.empreendimento}${d.unidade?` <span class="u">${d.unidade}</span>`:''}</span><span class="ptag ${tipoClass(d.tipo)}">${d.tipo}</span></span>
         <span class="pbar-sub">${d.construtora} · ${d.bairro} · ${d.config}${d.terreno?'':` · ${cbVagas(d)}`}</span>
         <span class="pbar-area">Área: ${cbArea2(d)} · ${cbEntrega(d)}</span>
-        ${d.terreno||!cbPL(d)?'':`<span class="pbar-pl"><b class="pad pad-${cbPL(d).padrao.normalize("NFD").replace(/[^a-zA-Z]/g,"").toLowerCase()}">${cbPL(d).padrao}</b>${cbLazerN(d)==null?"lazer não informado":cbLazerN(d)+(cbLazerN(d)===1?" item":" itens")+" de lazer"}</span>`}
+        ${d.terreno||!cbPL(d)?'':`<span class="pbar-pl"><b class="pad pad-${cbPL(d).padrao.normalize("NFD").replace(/[^a-zA-Z]/g,"").toLowerCase()}">${cbPL(d).padrao}</b>${cbLazerN(d)==null?"lazer não informado":cbLazerN(d)+(cbLazerN(d)===1?" item":" itens")+" de lazer"}${cbAndar(d)?` · ${cbAndar(d)} por andar`:""}</span>`}
       </span>
       <span class="pbar-track"><span class="pbar-fill"></span><span class="pbar-val">${cbNota(cb.nota)}<small>${cbFaixa(cb.nota)}</small></span></span>
       <span class="pbar-px">
@@ -790,6 +797,7 @@ function buildCbMetodo(){
     ["Terraço / garden", pct(b[5]), "no R$/m² da área total: o m² descoberto vale cerca de 2/3 do coberto — a unidade com terraço vale mais, mas o terraço não conta como área cheia"],
     ["Loft duplex", pct(b[6]), ""],
     ["Lazer: cada ponto", pct(b[7]), "piscina, academia e rooftop valem 1 ponto; salão e gourmet 0,7; playground, quadra, sauna e piscina aquecida 0,5; coworking e jogos 0,4; pet place 0,3; bicicletário, lavanderia e mercado 0,2"],
+    ["Aptos por andar", `1 por andar ${pct(b[8]*Math.log(1/4))} · 2 ${pct(b[8]*Math.log(2/4))} · 8 ${pct(b[8]*Math.log(8/4))}`, "contra 4 por andar, medido além do padrão: quanto menos vizinhos no andar, mais vale"],
     ["Cada ano até a entrega", pct(Math.log(1+CB_ANO)), "peso fixo: a unidade na planta costuma valorizar cerca de 2% ao ano a mais que a pronta até a entrega; pronto não desconta, até 5 anos"],
     ...Object.entries(CB_PADRAO).filter(([p])=>p!=="Médio").map(([p,v])=>[`Padrão ${p.toLowerCase()}`, pct(Math.log(1+v)), "contra o médio — peso fixo, pela tabela do CUB"])] : [];
   el.querySelector(".cb-efeitos").innerHTML = efeitos.map(([k,v,n])=>`<li><b>${k}</b><span class="v">${v}</span>${n?`<span class="n">${n}</span>`:""}</li>`).join("");

@@ -13,7 +13,6 @@ const M2_BAIRRO = {
     "Itoupava Seca": 7854,
     "Bom retiro": 7736,
     "Ponta Aguda": 7735,
-    "Vila Formosa": 7647,
     "Vorstadt": 7301,
     "Vila nova": 7246,
     "Velha": 7116,
@@ -23,6 +22,7 @@ const M2_BAIRRO = {
     "Ribeirão Fresco": 5744,
     "Água Verde": 5700,
     "Tribess": 5692,
-    "Itoupava Central": 5645
+    "Itoupava Central": 5645,
+    "Garcia": 5260
   }
 };
