@@ -136,11 +136,12 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   a chave interna continua `precos` e o link antigo `#comparativo/precos` ainda abre a aba)
   ranqueia por nota de 0 a 10, não por preço: o preço esperado de cada card é o R$/m² do bairro
   (`M2_BAIRRO`, em `data/bairros.js`: mediana de anúncios do A Corrida dos Bairros, out/2026) vezes
-  os efeitos de área, proporção de suítes, vagas, tipo (cobertura, terraço, loft) e nº de itens de lazer,
+  os efeitos de área, proporção de suítes, vagas, tipo (cobertura, terraço, loft) e pontos de lazer,
   medidos por regressão nos próprios cards **no carregamento** (`CB`, no `app.js`) — card novo entra sozinho, desde
   que o bairro dele esteja no `M2_BAIRRO` (senão fica fora e o quadro "Como a nota é calculada" avisa).
   Nota 5 = preço esperado; cada ponto ≈ 6% (`CB_ESCALA = 0.30`). Terrenos têm modelo próprio (bairro e
-  área) e só se comparam entre si. Esgotados ficam no fim, sem posição. O preço é o `media` do card e a
+  área) e só se comparam entre si. **Esgotados não aparecem** (desde 30/10/2026), mas seguem no cálculo como
+  referência de preço. O preço é o `media` do card e a
   área, a que corresponde a ele (`cbArea`: meio da faixa onde o `rpriv` foi `media/apriv`, senão
   `media/rpriv`). Ao ajustar, a elasticidade livre da localização deu 1,12 — por isso o índice entra
   com peso 1. O modelo não vê vista, andar nem condição de pagamento; o quadro diz isso.
@@ -152,7 +153,9 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   produto, nunca do preço. Ele entra com **peso fixo** (`CB_PADRAO`: −8% / 0 / +10% / +20%, da proporção
   entre padrões do CUB × a obra ser ~metade do preço): medido solto, o econômico saía 10% mais caro que o
   médio, porque os seis são de duas construtoras em bairros de índice baixo. O lazer é contado sem a
-  portaria 24h e é medido (+2%/item em 29/10); `lazer: null` é "não achamos", não "não tem", e recebe a
+  portaria 24h e **ponderado** (`CB_LAZER_PESO`, 30/10/2026): piscina, academia e rooftop 1; salão e gourmet
+  0,7; playground, quadra, sauna e piscina aquecida 0,5; coworking e jogos 0,4; pet place 0,3; bicicletário,
+  lavanderia e mercado 0,2. O efeito do ponto é medido (+5% em 30/10); `lazer: null` é "não achamos", não "não tem", e recebe a
   média do mesmo padrão (nenhum card hoje). O Gard tem só a quantidade, `lazer: 6` (o Felipe informou;
   o book no Drive é imagem e a tabela da Castelo não lista o lazer) — `cbLazerN` aceita número ou lista. O lazer de Kaisergarten, Flow, Vista 43 e Amani 53 veio das pastas do Drive da ZELT.
   A aba tem **filtro por padrão**: quatro botões (Altíssimo, Alto, Médio, Econômico) ao lado da área
@@ -161,6 +164,12 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   por empreendimento ou construtora (`#p-search`, `pstate.search`, mesma regra da busca do comparativo); os terrenos estão como Alto no
   `PADRAO_LAZER` e aparecem nesse filtro, embora o padrão não entre na nota deles. Card de empreendimento novo:
   ponha o nome no `PADRAO_LAZER`, senão ele fica fora do ranking. Terrenos não usam padrão nem lazer.
+  **Terraço**: medido, −10% no R$/m² da área total, porque a área descoberta entra na privativa e vale
+  ~2/3 do m² coberto (as tabelas dão San Vito ~25%, Princess Tower ~60%, Lisbon ~95%) — a unidade com terraço
+  continua valendo mais que a sem. Em 30/10/2026 ficou algumas horas sem esse desconto e voltou, a pedido do
+  Felipe, depois da comparação com as tabelas; o quadro explica o número. **Prazo de entrega com peso fixo** (`CB_ANO = −3%` por ano, até 5; "a definir" = 3 anos):
+  medido solto o prazo não pesava nada (−0,2%/ano), porque o preço do card na planta é o parcelado, que já
+  embute a correção do CUB; os 3% são o CUB/SC de 12 meses (5,75%) sobre a metade do preço paga na obra.
   O **Grand Park** (Andraus) fica na **Vila Nova** (Rua Almirante Barroso, 739); até 29/10/2026 o
   card dizia Velha.
   O **Egon Belz** (Castelo) se chamava "Residencial EB" até 06/10/2026; o nome mudou em
@@ -262,10 +271,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.836.184 bytes):
+Hash de referência (26 payloads, 16.839.988 bytes):
 
 ```
-920043B7F9A4E6D69929E9A052BD364DC0F0AEED277FEA9B605BF7F2D559CBD5
+1FA724E932736651C7EAADF4DC7C52A51428103E26F5A1FAC993AF44FCB51093
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
