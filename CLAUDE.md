@@ -160,16 +160,18 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   o book no Drive é imagem e a tabela da Castelo não lista o lazer) — `cbLazerN` aceita número ou lista. O lazer de Kaisergarten, Flow, Vista 43 e Amani 53 veio das pastas do Drive da ZELT.
   A aba tem **filtro por padrão**: quatro botões (Altíssimo, Alto, Médio, Econômico) ao lado da área
   privativa, não dropdown, a pedido do Felipe (`buildPadraoBtns`, `pstate.padrao`, `padraoDe(d)`). Cada
-  linha do ranking mostra a área mínima e máxima do card (`cbArea2`). Entre a área e os botões fica a busca
+  linha do ranking mostra a área mínima e máxima do card (`cbArea2`) e a entrega (`cbEntrega`: "Pronto para morar"
+  quando entregue). Entre a área e os botões fica a busca
   por empreendimento ou construtora (`#p-search`, `pstate.search`, mesma regra da busca do comparativo); os terrenos estão como Alto no
   `PADRAO_LAZER` e aparecem nesse filtro, embora o padrão não entre na nota deles. Card de empreendimento novo:
   ponha o nome no `PADRAO_LAZER`, senão ele fica fora do ranking. Terrenos não usam padrão nem lazer.
   **Terraço**: medido, −10% no R$/m² da área total, porque a área descoberta entra na privativa e vale
   ~2/3 do m² coberto (as tabelas dão San Vito ~25%, Princess Tower ~60%, Lisbon ~95%) — a unidade com terraço
   continua valendo mais que a sem. Em 30/10/2026 ficou algumas horas sem esse desconto e voltou, a pedido do
-  Felipe, depois da comparação com as tabelas; o quadro explica o número. **Prazo de entrega com peso fixo** (`CB_ANO = −3%` por ano, até 5; "a definir" = 3 anos):
-  medido solto o prazo não pesava nada (−0,2%/ano), porque o preço do card na planta é o parcelado, que já
-  embute a correção do CUB; os 3% são o CUB/SC de 12 meses (5,75%) sobre a metade do preço paga na obra.
+  Felipe, depois da comparação com as tabelas; o quadro explica o número. **Prazo de entrega com peso fixo** (`CB_ANO = −2%` por ano, até 5; "a definir" = 3 anos):
+  medido solto nos cards o prazo não pesava nada (−0,2%/ano). No histórico de 2026 a unidade na planta subiu
+  ~6,7%/ano contra ~4,4% das prontas (sem o Imperial Park) — ~2 pontos por ano de espera. Foi −3% (CUB sobre
+  metade do preço) por algumas horas em 30/10/2026; revisto, o CUB acompanha a inflação e não é custo real.
   O **Grand Park** (Andraus) fica na **Vila Nova** (Rua Almirante Barroso, 739); até 29/10/2026 o
   card dizia Velha.
   O **Egon Belz** (Castelo) se chamava "Residencial EB" até 06/10/2026; o nome mudou em
@@ -271,10 +273,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.839.988 bytes):
+Hash de referência (26 payloads, 16.840.360 bytes):
 
 ```
-1FA724E932736651C7EAADF4DC7C52A51428103E26F5A1FAC993AF44FCB51093
+BC263732C237A643BE05DA3CD8D02AFA1D3F0263C38E499948B412A0B0C3029C
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

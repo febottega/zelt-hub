@@ -650,17 +650,19 @@ function gradeColor(t){ return t<0.5 ? lerpHex("#1f9d63","#e2851f",t/0.5) : lerp
    Duas coisas entram com peso fixo, porque medidas soltas nos cards dão resultado que não é o do mercado:
    - padrão (CB_PADRAO): os econômicos são todos de duas construtoras em bairros baratos, e medido solto
      ele saía mais caro que o médio;
-   - entrega (CB_ANO): o preço do card na planta é o parcelado, que embute a correção do CUB, então medido
-     solto o prazo não pesa nada; cada ano até a entrega desconta CB_ANO do preço esperado.
+   - entrega (CB_ANO): medido solto nos cards o prazo não pesa nada; cada ano até a entrega desconta
+     CB_ANO do preço esperado.
    Recalcula sozinho a cada card novo. Terrenos têm modelo próprio (só área) e só se comparam entre si.
    Nota = 5 no preço esperado, ±1 ponto a cada 6%. */
 const CB_ESCALA = 0.30;
 /* CUB (NBR 12721): baixo ~15% abaixo do normal e alto ~20-25% acima; a obra é ~metade do preço de venda,
    então o efeito no preço é cerca de metade. Altíssimo vai além do R8-A, que é o teto do CUB. */
 const CB_PADRAO = { "Econômico":-0.08, "Médio":0, "Alto":0.10, "Altíssimo":0.20 };
-/* CUB/SC subiu 5,75% em 12 meses (out/2026) e o comprador na planta paga, em média, metade do preço
-   durante a obra: ~3% por ano de espera. Entrega "a definir" conta 3 anos; o desconto para em 5 anos. */
-const CB_ANO = -0.03, CB_ANO_MAX = 5, CB_HOJE = 2026*12+10;
+/* no histórico de 2026, unidade na planta subiu ~6,7% ao ano contra ~4,4% das prontas (sem o Imperial
+   Park): ~2 pontos por ano de espera, que é o que o comprador na planta deixa de pagar pelo prazo e pelo
+   risco da obra. Era 3% (CUB sobre metade do preço) até 30/10/2026; o Felipe aprovou baixar para 2%.
+   Entrega "a definir" conta 3 anos; o desconto para em 5 anos. */
+const CB_ANO = -0.02, CB_ANO_MAX = 5, CB_HOJE = 2026*12+10;
 const cbAnos = d => d.terreno || d.pronto || !d.entregaKey ? 0
   : Math.min(CB_ANO_MAX, d.entregaKey>=99999 ? 3 : Math.max(0,(d.entregaKey-CB_HOJE)/12));
 /* peso de cada item de lazer (piscina = 1): o que pesa na decisão de compra vale mais que conveniência */
@@ -738,6 +740,7 @@ const CB = (()=>{
   }
   return out;
 })();
+const cbEntrega = d => d.pronto || /^entregue$/i.test(d.entrega||"") ? "Pronto para morar" : "Entrega: "+(d.entrega||"a definir").replace(/ - .*/,"");
 const cbArea2 = d => d.apriv==null ? "" : (d.faixaArea && d.atotal!=null && d.atotal!==d.apriv) ? M2(d.apriv).replace(" m²","")+" a "+M2(d.atotal) : M2(d.apriv);
 const cbVagas = d => d.vagas==="-" ? "vaga não informada" : /^\d+$/.test(d.vagas) ? d.vagas+(d.vagas==="1"?" vaga":" vagas") : "vagas: "+d.vagas;
 const cbNota = n => n.toFixed(1).replace(".",",");
@@ -759,7 +762,7 @@ function buildChart(list){
       <span class="pbar-info">
         <span class="pbar-name"><span class="nm">${d.empreendimento}${d.unidade?` <span class="u">${d.unidade}</span>`:''}</span><span class="ptag ${tipoClass(d.tipo)}">${d.tipo}</span></span>
         <span class="pbar-sub">${d.construtora} · ${d.bairro} · ${d.config}${d.terreno?'':` · ${cbVagas(d)}`}</span>
-        <span class="pbar-area">Área: ${cbArea2(d)}</span>
+        <span class="pbar-area">Área: ${cbArea2(d)} · ${cbEntrega(d)}</span>
         ${d.terreno||!cbPL(d)?'':`<span class="pbar-pl"><b class="pad pad-${cbPL(d).padrao.normalize("NFD").replace(/[^a-zA-Z]/g,"").toLowerCase()}">${cbPL(d).padrao}</b>${cbLazerN(d)==null?"lazer não informado":cbLazerN(d)+(cbLazerN(d)===1?" item":" itens")+" de lazer"}</span>`}
       </span>
       <span class="pbar-track"><span class="pbar-fill"></span><span class="pbar-val">${cbNota(cb.nota)}<small>${cbFaixa(cb.nota)}</small></span></span>
@@ -787,7 +790,7 @@ function buildCbMetodo(){
     ["Terraço / garden", pct(b[5]), "no R$/m² da área total: o m² descoberto vale cerca de 2/3 do coberto — a unidade com terraço vale mais, mas o terraço não conta como área cheia"],
     ["Loft duplex", pct(b[6]), ""],
     ["Lazer: cada ponto", pct(b[7]), "piscina, academia e rooftop valem 1 ponto; salão e gourmet 0,7; playground, quadra, sauna e piscina aquecida 0,5; coworking e jogos 0,4; pet place 0,3; bicicletário, lavanderia e mercado 0,2"],
-    ["Cada ano até a entrega", pct(Math.log(1+CB_ANO)), "peso fixo: correção do CUB (5,75% em 12 meses) sobre a metade do preço paga durante a obra; pronto não desconta, até 5 anos"],
+    ["Cada ano até a entrega", pct(Math.log(1+CB_ANO)), "peso fixo: a unidade na planta costuma valorizar cerca de 2% ao ano a mais que a pronta até a entrega; pronto não desconta, até 5 anos"],
     ...Object.entries(CB_PADRAO).filter(([p])=>p!=="Médio").map(([p,v])=>[`Padrão ${p.toLowerCase()}`, pct(Math.log(1+v)), "contra o médio — peso fixo, pela tabela do CUB"])] : [];
   el.querySelector(".cb-efeitos").innerHTML = efeitos.map(([k,v,n])=>`<li><b>${k}</b><span class="v">${v}</span>${n?`<span class="n">${n}</span>`:""}</li>`).join("");
   el.querySelector(".cb-bairros").innerHTML = bairros.map(([n,v])=>`<li><span>${n}</span><b>${BRL(v)}</b></li>`).join("");
