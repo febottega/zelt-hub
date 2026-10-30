@@ -147,7 +147,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   com peso 1. O modelo não vê vista, andar nem condição de pagamento; o quadro diz isso.
   **Padrão e lazer** (29/10/2026): `PADRAO_LAZER` em `data/padrao.js`, chave = nome do card sem o " - ..."
   (os 44 empreendimentos). Veio de uma pesquisa na web (planilha "Pesquisa padrao e lazer.csv" em
-  Downloads) revisada pelo Felipe, que decidiu: Vista 43 Médio, Amani 53 Altíssimo, Flow Alto, DUO e
+  Downloads) revisada pelo Felipe, que decidiu: Vista 43 Alto (era Médio até 30/10), Amani 53 Altíssimo, Flow Alto, DUO e
   Bothanic Altíssimo, Egon Belz, Flow, Grand Park, San Vito e Villa Toscana Médio, Valverde
   Econômico, e **os de Minha Casa Minha Vida — Scire e Marini — Econômico**. O padrão é do
   produto, nunca do preço. Ele entra com **peso fixo** (`CB_PADRAO`: −8% / 0 / +10% / +20%, da proporção
@@ -281,10 +281,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.842.476 bytes):
+Hash de referência (26 payloads, 16.842.484 bytes):
 
 ```
-3703EF1F846E059D88637D9245C38FCDC506548BD72AC6B93A9D8F1BE4447F1D
+01878F6E68DD41A4A35C7D386211C814EA3760047A7A16D12969E0EA5D4D4DFB
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -573,7 +573,7 @@ bairro e entrega no `summary` porque nenhum card tem o nome dela. O duplex 701 f
 tabela, fora dos cards, a pedido do Felipe. Base dos cards: o valor "até as chaves"; o
 "total financiado" (soma nominal do plano de 84 meses) vai como alternativa. `media` e
 `rpriv` pela regra dos Tulum (média real e R$/m² unidade a unidade). A Torresani não tem
-logo cadastrado; a pasta do Drive (1qKxpNV7…) está no `folderId` da tabela e no `DRIVE_LINKS`.
+logo cadastrado; os dois cards têm **2 vagas** (o Felipe confirmou em 30/10/2026; estavam "-"); a pasta do Drive (1qKxpNV7…) está no `folderId` da tabela e no `DRIVE_LINKS`.
 
 O **Malta** (out/2026): da Hill sobrou só a cobertura 1201; 302, 406, 1203 e 1204 são de um
 investidor e vendidas pela **Torresani** (25% + 60x ou −3% à vista). Na tabela elas levam a

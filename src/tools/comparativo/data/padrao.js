@@ -1,7 +1,7 @@
 /* Padrão de acabamento e lazer de cada empreendimento, para a nota de custo-benefício. Chave = nome do card
    sem o sufixo " - ..." (DUO, Bothanic, Vista 43, Tulum, Criatto, Solare, Terrasse cobrem todos os cards).
    Padrão julgado pelo produto, nunca pelo preço: pesquisa de 29/10/2026 (sites das construtoras e anúncios)
-   revisada pelo Felipe (Egon Belz, Flow, Grand Park, San Vito e Villa Toscana Médio e Valverde
+   revisada pelo Felipe (Vista 43 Alto; Egon Belz, Flow, Grand Park, San Vito e Villa Toscana Médio; Valverde
    Econômico, também por ele). Lazer de Kaisergarten,
    Flow, Vista 43 e Amani 53 tirado dos materiais do Drive da ZELT (tabela da Castelo, folder e memorial
    do Flow, apresentação do Vista 43 e do Amani). Gard: só a quantidade, 6 itens, informada pelo Felipe.
@@ -35,7 +35,7 @@ const PADRAO_LAZER = {
   "Balsini 195": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "playground", "rooftop"], andar: 5 },
   "Wissen": { padrao: "Médio", lazer: ["piscina", "academia", "espaco_gourmet", "coworking", "mercado_autonomo"], andar: 11 },
   "N Studios": { padrao: "Médio", lazer: ["piscina", "academia", "espaco_gourmet", "coworking", "mercado_autonomo"], andar: 7 },
-  "Vista 43": { padrao: "Médio", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "coworking", "pet_place"], andar: 17 },
+  "Vista 43": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "coworking", "pet_place"], andar: 17 },
   "Cipriani Tower": { padrao: "Alto", lazer: ["piscina", "piscina_aquecida", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "pet_place", "cinema_jogos"], andar: 4 },
   "San Blas": { padrao: "Alto", lazer: ["piscina", "academia", "salao_festas", "playground", "quadra", "pet_place", "cinema_jogos"], andar: 6 },
   "Valverde": { padrao: "Econômico", lazer: ["academia", "salao_festas", "playground", "coworking"], andar: 4 },
