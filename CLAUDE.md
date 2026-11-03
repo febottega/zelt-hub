@@ -112,7 +112,9 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   votam — este do `KPIS` —, gap e nota médios, situação e tipos) e uma tabela **por
   corretor** (imóveis, semanas ativas, média/semana, % alinhado, situação, gap, nota, tipos),
   ordenável, com o detalhe semana a semana e o botão que leva o corretor ao filtro da busca.
-  Período: tudo, últimas 8 ou últimas 4 semanas (`CV.n`). Dupla conta para os dois (`capsDe`).
+  Período: tudo, últimas 8 ou últimas 4 semanas (`CV.n`), ou **personalizado** (03/11/2026): o botão abre dois
+  calendários, De → Até (`input type=date` do navegador, limitados à primeira e à última semana), e entram as
+  semanas cuja data cai no intervalo (`CV.n = -1`, `CV.de`/`CV.ate` em AAAAMMDD); o botão passa a mostrar as datas. Dupla conta para os dois (`capsDe`).
   Filtros de tipo (`CV.tipo`) e de faixa de valor anunciado (`CV_FAIXAS`, 21/10/2026) ficam
   logo acima da tabela por corretor e filtram só ela (a visão geral segue o período); o botão
   "Ver os imóveis" leva corretor, tipo e faixa para a busca.
@@ -285,10 +287,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (27 payloads, 17.432.840 bytes):
+Hash de referência (27 payloads, 17.438.424 bytes):
 
 ```
-F66B1ED3766F327DC6E452B919BE4D4FEA6BBC46020A5C83B25FB68C50969B41
+F03FA29DB27298A2FA2F8377FFACC225B2DF841AF16D3459A520C3E113FC8EB7
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

@@ -269,6 +269,22 @@ body.ficha-aberta{overflow:hidden}
   border-radius:var(--radius-pill);background:#fff;color:var(--n-600)}
 .cv-per button:hover{border-color:var(--zelt-orange);color:var(--orange-700)}
 .cv-per button.on{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
+.cv-pers{position:relative}
+.cv-pop{position:absolute;right:0;top:calc(100% + 8px);z-index:30;display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;
+  background:#fff;border:1px solid var(--n-300);border-radius:var(--radius-card);box-shadow:var(--shadow-sm);
+  padding:14px 16px;width:max-content;max-width:calc(100vw - 32px)}
+.cv-pop.hidden{display:none}
+.cv-pop-f{display:flex;flex-direction:column;gap:4px;font-size:11px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--n-600)}
+.cv-pop-f input{font:inherit;font-size:14px;font-weight:500;text-transform:none;letter-spacing:0;color:var(--navy-900);
+  border:1px solid var(--n-300);border-radius:8px;padding:7px 9px;background:#fff}
+.cv-pop-f input:focus{outline:none;border-color:var(--zelt-orange)}
+.cv-pop-seta{color:var(--n-600);padding-bottom:9px}
+.cv-per .cv-pop .cv-pop-ok{background:var(--zelt-orange);border-color:var(--zelt-orange);color:#fff}
+.cv-per .cv-pop .cv-pop-ok:hover{filter:brightness(.95);color:#fff}
+.cv-pop-msg{flex-basis:100%;margin:0;font-size:12px;color:var(--n-600)}
+.cv-pop-msg:empty{display:none}
+@media (max-width:640px){ .cv-pop{right:auto;left:0} }
 .cv-filtros{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-top:12px;
   background:var(--surface-card);border-radius:var(--radius-card);box-shadow:var(--shadow-sm);padding:14px 18px}
 .cv-filtros .f-item{min-width:210px}
@@ -517,6 +533,16 @@ body.rel-mode{overflow:hidden}
       <button type="button" data-n="0" class="on">Todo o período</button>
       <button type="button" data-n="8">Últimas 8 semanas</button>
       <button type="button" data-n="4">Últimas 4 semanas</button>
+      <div class="cv-pers">
+        <button type="button" id="cvPersBtn" aria-haspopup="true" aria-expanded="false">Personalizado</button>
+        <div class="cv-pop hidden" id="cvPop" role="dialog" aria-label="Período personalizado">
+          <label class="cv-pop-f"><span>De</span><input type="date" id="cvDe"></label>
+          <span class="cv-pop-seta" aria-hidden="true">→</span>
+          <label class="cv-pop-f"><span>Até</span><input type="date" id="cvAte"></label>
+          <button type="button" class="cv-pop-ok" id="cvAplica">Aplicar</button>
+          <p class="cv-pop-msg" id="cvPopMsg"></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1380,7 +1406,7 @@ function initTabs(){
    O período corta as semanas mais recentes do KPIS; a média de corretores que
    votaram vem do KPIS porque quem vota não fica no DADOS. Imóvel captado em
    dupla conta para cada corretor (capsDe), igual ao filtro do menu de pesquisa. */
-var CV = {n:0, col:"qtd", dir:-1, aberto:"", tipo:"", faixa:""};
+var CV = {n:0, de:"", ate:"", col:"qtd", dir:-1, aberto:"", tipo:"", faixa:""};
 /* filtro de valor do comparativo, pelo valor anunciado: [rótulo, de (inclusive), até (exclusive)] */
 var CV_FAIXAS = {
   "ate500":  ["Até R$ 500 mil", 0, 500000],
@@ -1400,6 +1426,8 @@ function media(arr){ return arr.length ? arr.reduce(function(a,b){ return a+b; }
 function bandaDoGap(g){ return g === null ? "b" : (g <= -12 ? "r" : (g < -5 ? "a" : "b")); }
 function cvSemanas(){
   var ks = KPIS.slice().sort(function(a,b){ return dataOrd(b.data).localeCompare(dataOrd(a.data)); });
+  /* n = -1: período personalizado, de/até em AAAAMMDD, comparado com a data da semana */
+  if(CV.n === -1) return ks.filter(function(k){ var d = dataOrd(k.data); return d >= CV.de && d <= CV.ate; });
   return CV.n ? ks.slice(0, CV.n) : ks;
 }
 function contaSit(rs){
@@ -1456,8 +1484,10 @@ function renderCmp(){
   });
   var nSem = semanas.length, tot = rs.length;
   var mais = semanas[semanas.length-1], menos = semanas[0];
-  document.getElementById("cvNota").innerHTML = "Visão consolidada de <b>" + nSem + " semanas</b>" +
-    (nSem ? " — de " + esc(mais.data) + " a " + esc(menos.data) : "") + ".";
+  document.getElementById("cvNota").innerHTML = nSem
+    ? "Visão consolidada de <b>" + nSem + (nSem === 1 ? " semana" : " semanas") + "</b>" +
+      (nSem === 1 ? " — " + esc(menos.data) : " — de " + esc(mais.data) + " a " + esc(menos.data)) + "."
+    : "Nenhuma semana avaliada no período escolhido.";
   document.getElementById("cvTipo").parentNode.classList.toggle("on", !!CV.tipo);
   document.getElementById("cvFaixa").parentNode.classList.toggle("on", !!fx);
   document.getElementById("cvLimpa").classList.toggle("hidden", !CV.tipo && !fx);
@@ -1587,12 +1617,44 @@ function initCmp(){
     document.getElementById("cvTipo").value = ""; document.getElementById("cvFaixa").value = "";
     renderCmp();
   });
-  document.querySelectorAll("#cvPer button").forEach(function(b){
+  var persBtn = document.getElementById("cvPersBtn"), pop = document.getElementById("cvPop");
+  var deIn = document.getElementById("cvDe"), ateIn = document.getElementById("cvAte"), popMsg = document.getElementById("cvPopMsg");
+  function marcaPer(alvo){ document.querySelectorAll("#cvPer button[data-n], #cvPersBtn").forEach(function(o){ o.classList.toggle("on", o === alvo); }); }
+  function abrePop(abre){ pop.classList.toggle("hidden", !abre); persBtn.setAttribute("aria-expanded", abre ? "true" : "false"); }
+  document.querySelectorAll("#cvPer button[data-n]").forEach(function(b){
     b.addEventListener("click", function(){
       CV.n = Number(b.getAttribute("data-n"));
-      document.querySelectorAll("#cvPer button").forEach(function(o){ o.classList.toggle("on", o === b); });
+      marcaPer(b); abrePop(false);
+      persBtn.textContent = "Personalizado";
       renderCmp();
     });
+  });
+  persBtn.addEventListener("click", function(e){
+    e.stopPropagation();
+    if(!pop.classList.contains("hidden")){ abrePop(false); return; }
+    /* limites = primeira e última semana avaliadas; sem escolha anterior, abre nas últimas 8 */
+    var ks = KPIS.map(function(k){ return dataOrd(k.data); }).sort();
+    var min = ks[0], max = ks[ks.length-1], pad = ks[Math.max(0, ks.length-8)];
+    var iso = function(o){ return o.slice(0,4) + "-" + o.slice(4,6) + "-" + o.slice(6,8); };
+    deIn.min = ateIn.min = iso(min); deIn.max = ateIn.max = iso(max);
+    deIn.value = CV.n === -1 ? iso(CV.de) : iso(pad);
+    ateIn.value = CV.n === -1 ? iso(CV.ate) : iso(max);
+    popMsg.textContent = "";
+    abrePop(true);
+    deIn.focus();
+  });
+  pop.addEventListener("click", function(e){ e.stopPropagation(); });
+  document.addEventListener("click", function(){ abrePop(false); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") abrePop(false); });
+  document.getElementById("cvAplica").addEventListener("click", function(){
+    if(!deIn.value || !ateIn.value){ popMsg.textContent = "Escolha as duas datas."; return; }
+    var de = deIn.value.replace(/-/g,""), ate = ateIn.value.replace(/-/g,"");
+    if(de > ate){ var x = de; de = ate; ate = x; }
+    CV.n = -1; CV.de = de; CV.ate = ate; CV.aberto = "";
+    var curta = function(o){ return o.slice(6,8) + "/" + o.slice(4,6) + "/" + o.slice(2,4); };
+    persBtn.textContent = curta(de) + " → " + curta(ate);
+    marcaPer(persBtn); abrePop(false);
+    renderCmp();
   });
   document.querySelectorAll("#cvTbl thead th[data-s]").forEach(function(th){
     th.addEventListener("click", function(){
