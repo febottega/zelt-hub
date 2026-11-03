@@ -287,10 +287,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (27 payloads, 17.438.424 bytes):
+Hash de referência (27 payloads, 17.438.984 bytes):
 
 ```
-F03FA29DB27298A2FA2F8377FFACC225B2DF841AF16D3459A520C3E113FC8EB7
+D281FB0551F91E1A14E3E835BF58C906FABDF1D4229A92470BA1FF982770BE49
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
