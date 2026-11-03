@@ -43,11 +43,11 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 26 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 27 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          19 relatórios históricos em base64 — nunca ler; editar só por script
+   └─ frozen/          20 relatórios históricos em base64 — nunca ler; editar só por script
 ```
 
 **`src/frozen/` não é intocável, é ilegível.** Cada `.b64` é uma linha de 500 a
@@ -123,7 +123,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   sozinhos; o resto soma numa linha "Outros" que abre (`<details>`) para mostrar cada um.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
-- **avaliacao** + 19 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 20 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
   Desde 26/10/2026 as abas "Relatório / Comparativo" de cada relatório (`.tabbar`, radios
   `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
   `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
@@ -281,10 +281,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (26 payloads, 16.842.484 bytes):
+Hash de referência (27 payloads, 17.434.196 bytes):
 
 ```
-01878F6E68DD41A4A35C7D386211C814EA3760047A7A16D12969E0EA5D4D4DFB
+E4120086681618E649DAF479CC998A4AF692325C4B4C2E7B9CBC29987D414A95
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
