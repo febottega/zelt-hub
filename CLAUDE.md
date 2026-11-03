@@ -121,10 +121,10 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   apartamento amarelo, cobertura vermelha (trocadas a pedido em 21/10); os demais tipos no cinza padrão. Em "Tipos
   captados" do comparativo, só apartamento, casa, terreno, cobertura e sala comercial ficam
   sozinhos; o resto soma numa linha "Outros" que abre (`<details>`) para mostrar cada um.
-  **Imóvel reavaliado fica só com o card mais novo** (Felipe, 03/11/2026): o AP8437 saiu da pauta e voltou;
-  o registro de 13/10 saiu do `DADOS` e ficou o de 03/11. O KPI e o relatório congelado de 13/10 continuam
-  contando os 19 imóveis daquela rodada. Em 03/11 ainda havia três repetidos que não foram mexidos:
-  AP8435 (06/10 e 13/10), TE1029 (04/08 e 11/08) e AP8100 (16/06 e 07/07).
+  **Imóvel reavaliado fica só com o card mais novo** (Felipe, 03/11/2026): saíram do `DADOS` os registros
+  antigos do AP8437 (13/10), AP8435 (06/10), TE1029 (04/08) e AP8100 (16/06); ficou o da semana mais recente
+  de cada um. Os KPIs e os relatórios congelados daquelas semanas continuam contando o imóvel, porque ele foi
+  avaliado naquela rodada. Numa semana nova, procure código repetido antes de emendar o `DADOS`.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 20 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
@@ -285,10 +285,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (27 payloads, 17.433.796 bytes):
+Hash de referência (27 payloads, 17.432.840 bytes):
 
 ```
-74FB54DD706F8D802E53E83EAD4E8B2BCD99914E1B1488E80177F3666E55DA9A
+F66B1ED3766F327DC6E452B919BE4D4FEA6BBC46020A5C83B25FB68C50969B41
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
