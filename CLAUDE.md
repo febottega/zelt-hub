@@ -290,10 +290,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (27 payloads, 17.444.164 bytes):
+Hash de referência (27 payloads, 17.444.220 bytes):
 
 ```
-965CB7E6BCF2A4E320F8CF800EE55B6F261634DEDCB254875AE57CB00384F7E9
+73321DB2693C89D811C4DF0BE4D673DA89A09F4EE8110A4C8B6963AB2745CC6C
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -722,9 +722,9 @@ Y do retângulo com o Y da linha de texto. No Gard de set/2026 o verde `#92c09e`
 o retângulo do rótulo "Unidade Reservada" da legenda, e só a linha da 1502 está
 verde. No Kaisergarten e no EB não há cor por unidade: todas as linhas têm o mesmo
 fundo e o mesmo preto no texto, então ali a situação continua vindo do mês anterior.
-No **Kaisergarten 1301** o total da lista da Castelo fica R$ 100 mil acima da cota × CUB e da soma
-de entrada + parcelas + reforços (out e nov/2026). Em outubro usamos a cota × CUB; desde novembro
-**use o total da lista** (R$ 3.563.535,95), a pedido do Felipe em 04/11/2026.
+No **Kaisergarten 1301** a lista da Castelo já veio duas vezes com o total novo e a cota, a entrada e
+as parcelas antigas (out/2026: usamos a cota × CUB; nov/2026: a Castelo corrigiu no mesmo dia, cota
+1.119,5702 e total R$ 3.563.535,97). Se o total não bater com cota × CUB, pergunte ao Felipe antes.
 O **Egon Belz** fica na **Vila Nova** (`"Vila nova"` no card, como no `M2_BAIRRO`); até 04/11/2026 o card dizia Velha.
 
 Para **editar** as linhas gigantes use `perl` lendo o texto novo de um arquivo, nunca

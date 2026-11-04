@@ -618,10 +618,10 @@ const SALES_TABLES = {
         "1301",
         "295,00 m²",
         "3",
-        "R$ 1.142.966,87",
-        "R$ 58.580,96",
-        "R$ 369.441,53",
-        "R$ 3.563.535,95",
+        "R$ 1.175.966,87",
+        "R$ 60.272,33",
+        "R$ 380.108,13",
+        "R$ 3.563.535,97",
         "Revenda"
       ],
       [
@@ -635,7 +635,7 @@ const SALES_TABLES = {
         "Reservado"
       ]
     ],
-    "note": "Residencial Kaisergarten. Valores atrelados ao CUB (ref. nov/2026: R$ 3.182,95, +0,35% sobre outubro). Em CUBs: 1301 = 1.088,1528; 301 = 808,6220. Dois apartamentos na tabela de novembro: o 301, agora reservado, e o 1301 em revenda. O 1201 (309 m²), que entrou em outubro já reservado, saiu da tabela. As duas cotas se repetiram e o total subiu só o índice. O total do 1301 é o da lista, R$ 3.563.535,95 (pedido do Felipe em 04/11/2026): ele fica R$ 100 mil acima da cota × CUB e da soma de entrada + parcelas + reforços, que dão R$ 3.463.535,95. O parcelamento encurtou de 28 para 27 parcelas: 33% de entrada, 45,67% nas parcelas e 21,33% em 2 reforços. Apartamentos de 3 suítes, 3 a 4 vagas, porcelanato nas áreas sociais e molhadas, laminado nas íntimas. Prédio com 2 elevadores, salão de festas, hall, área de piscina e academia mobiliados, playground. Reservas valem no máximo 7 dias, depois a unidade volta para venda automaticamente. Valor final ao cliente — acrescentar o percentual de corretagem. Endereço: Alameda Rio Branco 109, Jardim Blumenau.",
+    "note": "Residencial Kaisergarten. Valores atrelados ao CUB (ref. nov/2026: R$ 3.182,95, +0,35% sobre outubro). Em CUBs: 1301 = 1.119,5702; 301 = 808,6220. Dois apartamentos na tabela de novembro: o 301, agora reservado, e o 1301 em revenda. O 1201 (309 m²), que entrou em outubro já reservado, saiu da tabela. O 301 seguiu só o índice. O 1301 foi reprecificado: a cota subiu de 1.088,1528 para 1.119,5702 e o total foi a R$ 3.563.535,97 (+3,25% sobre outubro); a primeira lista de novembro trazia esse total com a cota, a entrada e as parcelas antigas, e a Castelo mandou a tabela corrigida no mesmo dia. O parcelamento encurtou de 28 para 27 parcelas: 33% de entrada, 45,67% nas parcelas e 21,33% em 2 reforços. Apartamentos de 3 suítes, 3 a 4 vagas, porcelanato nas áreas sociais e molhadas, laminado nas íntimas. Prédio com 2 elevadores, salão de festas, hall, área de piscina e academia mobiliados, playground. Reservas valem no máximo 7 dias, depois a unidade volta para venda automaticamente. Valor final ao cliente — acrescentar o percentual de corretagem. Endereço: Alameda Rio Branco 109, Jardim Blumenau.",
     "summary": {
       "bits": [
         {
