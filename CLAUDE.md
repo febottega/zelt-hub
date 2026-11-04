@@ -217,7 +217,10 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
 - **simulador** — financiamento SAC ou PRICE, escolhido no `#sisToggle`. O mesmo
   `simular(sis,...)` atende os dois: em SAC a amortização é fixa em `P/n`, em PRICE
   a parcela é fixa na PMT e a amortização é o que sobra dela. A amortização extra
-  abate do saldo nos dois casos, encurtando o prazo.
+  abate do saldo nos dois casos, encurtando o prazo. A frequência da extra (`#freqToggle`) é mensal, anual
+  ou **personalizada** (04/11/2026): `ext = {cada, qtd}` — a cada N meses (`#inCada`) e, na anual e na
+  personalizada, a **quantidade** de amortizações (`#inQtd`, vazio = até quitar). Os textos saem de
+  `extTxt`/`extSuf`; os dois campos ficam salvos no `zelt_simulador_v1` fora do "tudo ou nada".
 - **arquivos** — tabela de PDFs para o cliente; os arquivos ficam em `arquivos/` na
   raiz do repo, fora do payload, e abrem em aba nova. Desde 20/10/2026 não tem card: abre pela
   caixinha de correspondência (`.hero-mail`, `data-tool="arquivos"`) no topo do hub, à esquerda
@@ -287,10 +290,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (27 payloads, 17.439.740 bytes):
+Hash de referência (27 payloads, 17.444.164 bytes):
 
 ```
-1C5717BFFFB8455F9F614833E50EE68511D066A0B345F0E67AC4585E8E0CEBC5
+965CB7E6BCF2A4E320F8CF800EE55B6F261634DEDCB254875AE57CB00384F7E9
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

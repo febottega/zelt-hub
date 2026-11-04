@@ -58,6 +58,17 @@ header h1 .hl{color:var(--zelt-orange)}
 .freq-btn{flex:1;border:1.5px solid var(--navy-200);background:var(--white);color:var(--navy-700);border-radius:var(--r-pill);padding:6px 0;font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;transition:all .15s}
 .freq-btn:hover{border-color:var(--zelt-orange);color:var(--orange-700)}
 .freq-btn.active{background:var(--zelt-navy);border-color:var(--zelt-navy);color:var(--white)}
+/* três botões numa coluna estreita: a Personalizada leva mais largura e todos perdem um pouco do espaçamento */
+.freq-toggle .freq-btn{flex:1 1 auto;padding:6px 4px;font-size:12px;letter-spacing:.03em}
+.freq-btn[data-freq="pers"]{flex-grow:1.6}
+.freq-opts{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.freq-opts[hidden]{display:none}
+.field .freq-opt{display:flex;align-items:center;gap:8px;margin:0;font-size:11px;letter-spacing:.1em}
+.freq-opt>span:first-child{flex:1;min-width:0}
+.freq-opt .money-input{width:128px;flex:none}
+.freq-opt .money-input input{font-size:16px;padding:6px 8px}
+.freq-opt .money-input input::placeholder{font-family:inherit;font-size:13px;font-weight:400;color:var(--gray-400)}
+.freq-opt .money-input .sufix{font-size:12px;padding-right:8px}
 .sis-row{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:24px;padding-bottom:22px;border-bottom:1px solid var(--gray-200)}
 .sis-label{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:11.5px;font-weight:500;color:var(--gray-600);margin-bottom:9px}
 .sis-toggle{display:flex;gap:8px}
@@ -245,8 +256,15 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
         <div class="freq-toggle" id="freqToggle">
           <button type="button" class="freq-btn active" data-freq="mensal">Mensal</button>
           <button type="button" class="freq-btn" data-freq="anual">Anual</button>
+          <button type="button" class="freq-btn" data-freq="pers">Personalizada</button>
         </div>
-        <div class="hint">2ª parcela · opcional (deixe 0)</div>
+        <div class="freq-opts" id="freqOpts" hidden>
+          <label class="freq-opt" id="optCada"><span>A cada</span>
+            <span class="money-input"><input class="no-prefix" id="inCada" inputmode="numeric" value="6"><span class="sufix">meses</span></span></label>
+          <label class="freq-opt"><span>Quantidade</span>
+            <span class="money-input"><input class="no-prefix" id="inQtd" inputmode="numeric" placeholder="até quitar"><span class="sufix">vezes</span></span></label>
+        </div>
+        <div class="hint" id="hintExtra">2ª parcela · opcional (deixe 0)</div>
       </div>
     </div>
   </div>
@@ -379,18 +397,21 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
     return (b && b.dataset.sis==='price') ? 'price' : 'sac';
   }
 
-  function simular(sis,P,iMensal,prazo,extra,freq){
+  /* ext = {cada: intervalo em meses, qtd: quantas amortizações (0 = até quitar)}.
+     Mensal é cada 1, anual é cada 12; a personalizada escolhe o intervalo. */
+  function simular(sis,P,iMensal,prazo,extra,ext){
     /* PMT da tabela Price; com juros zero a fórmula degenera, então cai no P/n */
     var pmt = iMensal>0 ? P*iMensal/(1-Math.pow(1+iMensal,-prazo)) : P/prazo;
     var price = sis==='price';
-    var amort=P/prazo, saldo=P, rows=[], tj=0, tp2=0, m=0;
+    var amort=P/prazo, saldo=P, rows=[], tj=0, tp2=0, m=0, feitas=0;
     while(saldo>0.005 && m<prazo){
       m++;
       var j=saldo*iMensal;
       /* o Math.min segura a última parcela: amortiza só o que ainda resta */
       var a=Math.min(price?Math.max(0,pmt-j):amort, saldo);
-      var aplica=(freq!=='anual')||(m%12===0);
+      var aplica=(m%ext.cada===0)&&(!ext.qtd||feitas<ext.qtd);
       var e=aplica?Math.max(0,Math.min(extra,saldo-a)):0;
+      if(e>0) feitas++;
       var p1=j+a;
       saldo=Math.max(0,saldo-a-e);
       tj+=j; tp2+=e;
@@ -479,23 +500,45 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
     } else {
       erro=setErr('fPrazo','Entre 1 e 600 meses')||erro;
     }
+    var freq=document.querySelector('.freq-btn.active').dataset.freq;
+    var ext={freq:freq, cada:freq==='anual'?12:freq==='pers'?intVal('inCada'):1,
+             qtd:freq==='mensal'?0:intVal('inQtd')};
+    document.getElementById('freqOpts').hidden=(freq==='mensal');
+    document.getElementById('optCada').style.display=(freq==='pers')?'':'none';
+    var hintExtra=document.getElementById('hintExtra');
+    if(freq==='pers' && (ext.cada<1 || (prazo>0 && ext.cada>prazo))){
+      erro=setErr('fExtra','Intervalo entre 1 e '+(prazo||600)+' meses')||erro;
+    } else {
+      document.getElementById('fExtra').classList.remove('err');
+      hintExtra.innerHTML=extra>0&&freq!=='mensal'
+        ? '<b>'+extTxt(ext)+'</b>'+(ext.qtd?' · '+ext.qtd+(ext.qtd>1?' vezes':' vez'):' · até quitar')
+        : '2ª parcela · opcional (deixe 0)';
+    }
     if(erro) return;
 
     var P=valor-entrada;
     var iMensal=Math.pow(1+taxa/100,1/12)-1;
     var temExtra=extra>0;
-    var freq=document.querySelector('.freq-btn.active').dataset.freq;
     var sis=sistemaAtivo();
 
-    var orig=simular(sis,P,iMensal,prazo,0,'mensal');
-    var sim=temExtra?simular(sis,P,iMensal,prazo,extra,freq):orig;
+    var orig=simular(sis,P,iMensal,prazo,0,{cada:1,qtd:0});
+    var sim=temExtra?simular(sis,P,iMensal,prazo,extra,ext):orig;
 
     aplicaTextos(sis);
-    renderStats(P,valor,orig,sim,temExtra,freq);
-    renderCmp(orig,sim,extra,temExtra,freq);
+    renderStats(P,valor,orig,sim,temExtra,ext);
+    renderCmp(orig,sim,extra,temExtra,ext);
     renderChart(P,prazo,orig,sim,temExtra);
-    renderFlow(sim,temExtra,freq);
+    renderFlow(sim,temExtra,ext);
     salvarSimulacao(freq,sis);
+  }
+
+  /* frequência da 2ª parcela por extenso: 'mensal', 'anual', 'a cada 6 meses' */
+  function extTxt(ext){
+    return ext.cada===1?'mensal':ext.cada===12?'anual':'a cada '+ext.cada+' meses';
+  }
+  function extSuf(ext){
+    var s=ext.cada===1?'/mês':ext.cada===12?'/ano':' a cada '+ext.cada+' meses';
+    return ext.qtd?s+' · '+ext.qtd+'x':s;
   }
 
   // ===== ultima simulacao, no navegador deste computador =====
@@ -506,11 +549,14 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
   var SIM_CHAVE = 'zelt_simulador_v1';
   var SIM_CAMPOS = ['inValor','inEntrada','inTaxa','inPrazo','inExtra'];
   var SIM_MASCARADOS = {inValor:1, inEntrada:1, inExtra:1};
+  /* intervalo e quantidade da amortização extra: opcionais, ficam fora do
+     "tudo ou nada" porque registros antigos não os têm */
+  var SIM_OPCIONAIS = ['inCada','inQtd'];
 
   function salvarSimulacao(freq,sis){
     try{
       var o = {freq:freq, sis:sis};
-      SIM_CAMPOS.forEach(function(id){ o[id] = document.getElementById(id).value; });
+      SIM_CAMPOS.concat(SIM_OPCIONAIS).forEach(function(id){ o[id] = document.getElementById(id).value; });
       localStorage.setItem(SIM_CHAVE, JSON.stringify(o));
     }catch(e){ /* modo privado ou storage bloqueado: segue sem historico */ }
   }
@@ -531,8 +577,11 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
       document.getElementById(id).value = o[id];
       if(SIM_MASCARADOS[id]) fmtMoney(id);
     });
+    SIM_OPCIONAIS.forEach(function(id){
+      if(typeof o[id] === 'string') document.getElementById(id).value = o[id].replace(/\D/g,'');
+    });
     /* compara com a lista fechada em vez de interpolar o valor num seletor */
-    if(o.freq === 'mensal' || o.freq === 'anual'){
+    if(o.freq === 'mensal' || o.freq === 'anual' || o.freq === 'pers'){
       document.querySelectorAll('.freq-btn').forEach(function(x){
         x.classList.toggle('active', x.dataset.freq === o.freq);
       });
@@ -546,7 +595,7 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
   }
 
   // ===== Stats =====
-  function renderStats(P,valor,orig,sim,temExtra,freq){
+  function renderStats(P,valor,orig,sim,temExtra,ext){
     document.getElementById('stFinanciado').textContent=compact(P);
     document.getElementById('stFinCmp').innerHTML='de '+compact(valor)+' · '+SISTEMAS[sim.sis].parcelaTxt+' <b>'+brl(sim.const_)+'</b>/mês';
     if(temExtra){
@@ -559,7 +608,7 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
       if(fx){
         document.getElementById('stP1Lbl').textContent='Desembolso no mês '+fx.m;
         document.getElementById('stP1').textContent=compact(fx.tot);
-        document.getElementById('stP1Cmp').innerHTML='parcela 1: <b>'+brl(fx.p1)+'</b> + extra'+(freq==='anual'?' anual':'');
+        document.getElementById('stP1Cmp').innerHTML='parcela 1: <b>'+brl(fx.p1)+'</b> + extra'+(ext.cada>1?' '+extTxt(ext):'');
       } else {
         document.getElementById('stP1Lbl').textContent='Primeira parcela';
         document.getElementById('stP1').textContent=compact(sim.rows[0].p1);
@@ -577,12 +626,11 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
   }
 
   // ===== Comparativo =====
-  function renderCmp(orig,sim,extra,temExtra,freq){
+  function renderCmp(orig,sim,extra,temExtra,ext){
     var sec=document.getElementById('secCmp');
     sec.style.display=temExtra?'':'none';
     if(!temExtra) return;
-    var anual=freq==='anual';
-    document.getElementById('cmpColHead').textContent='Com 2ª parcela de '+compact(extra)+(anual?'/ano':'/mês');
+    document.getElementById('cmpColHead').textContent='Com 2ª parcela de '+compact(extra)+extSuf(ext);
     var eco=orig.juros-sim.juros, ecoT=orig.total-sim.total, ecoM=orig.meses-sim.meses;
     var fx=null;
     for(var k=0;k<sim.rows.length;k++){if(sim.rows[k].p2>0){fx=sim.rows[k];break;}}
@@ -591,7 +639,7 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
       ['Prazo até a quitação', prazoTxt(orig.meses), prazoTxt(sim.meses), '<span class="delta">−'+ecoM+' meses</span>'],
       ['Juros totais', brl(orig.juros), brl(sim.juros), '<span class="delta">−'+brl(eco)+'</span>'],
       ['Total pago ao banco', brl(orig.total), brl(sim.total), '<span class="delta">−'+brl(ecoT)+'</span>'],
-      ['Desembolso no mês '+(fx?fx.m:1)+(anual?' (com extra anual)':''), brl(orig.rows[(fx?fx.m:1)-1].p1), fx?brl(fx.tot):'—', fx?'<span class="delta neg">+'+brl(fx.tot-orig.rows[fx.m-1].p1)+(anual?'/ano':'/mês')+'</span>':''],
+      ['Desembolso no mês '+(fx?fx.m:1)+(ext.cada>1?' (com extra '+extTxt(ext)+')':''), brl(orig.rows[(fx?fx.m:1)-1].p1), fx?brl(fx.tot):'—', fx?'<span class="delta neg">+'+brl(fx.tot-orig.rows[fx.m-1].p1)+(ext.cada===1?'/mês':ext.cada===12?'/ano':' a cada '+ext.cada+' meses')+'</span>':''],
       ['Último pagamento', brl(lo.p1)+' <small style="color:var(--gray-500)">(mês '+lo.m+')</small>', brl(l.tot)+' <small style="color:var(--gray-500)">(mês '+l.m+')</small>', '']
     ];
     document.getElementById('cmpBody').innerHTML=linhas.map(function(x){
@@ -674,7 +722,7 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
   }
 
   // ===== Tabela de fluxo =====
-  var lastSim=null, lastExtra=false, lastFreq='mensal';
+  var lastSim=null, lastExtra=false, lastFreq={cada:1,qtd:0};
   function rowHtml(r,quit,temExtra){
     return '<tr>'+
       '<td class="mes">'+r.m+'</td>'+
@@ -686,11 +734,10 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
       '<td class="saldo">'+brl(r.saldo)+(quit?'<span class="badge-quit">QUITADO</span>':'')+'</td>'+
     '</tr>';
   }
-  function renderFlow(sim,temExtra,freq){
-    lastSim=sim; lastExtra=temExtra; lastFreq=freq;
-    var anual=freq==='anual';
+  function renderFlow(sim,temExtra,ext){
+    lastSim=sim; lastExtra=temExtra; lastFreq=ext;
     document.getElementById('thP2').style.display=temExtra?'':'none';
-    document.getElementById('thP2').innerHTML='Parcela 2<span class="sub">amortização extra '+(anual?'anual':'mensal')+'</span>';
+    document.getElementById('thP2').innerHTML='Parcela 2<span class="sub">amortização extra '+extTxt(ext)+'</span>';
     document.getElementById('flowTitle').textContent=temExtra?'As duas parcelas de cada mês':'Parcelas mês a mês';
     /* monta a frase em pedacos: sistema, ter ou nao 2a parcela e a frequencia
        dela sao tres eixos independentes, e escrever as seis combinacoes na mao
@@ -701,7 +748,9 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
       : rot+' = amortização contratual constante + juros sobre o saldo devedor do mês.';
     if(temExtra){
       txt+=' Parcela 2 = amortização extraordinária'
-        +(anual?' aplicada uma vez por ano (meses 12, 24, 36...)':'')
+        +(ext.cada===12?' aplicada uma vez por ano (meses 12, 24, 36...)'
+          :ext.cada>1?' aplicada a cada '+ext.cada+' meses (meses '+ext.cada+', '+2*ext.cada+', '+3*ext.cada+'...)':'')
+        +(ext.qtd?', '+ext.qtd+(ext.qtd>1?' vezes':' vez')+' no total':'')
         +', abatida integralmente do saldo devedor'
         +(sim.sis==='price'?' — a parcela segue igual e o prazo encurta':'')+'.';
     }
@@ -734,7 +783,7 @@ footer{background:var(--zelt-navy);color:var(--navy-300);padding:34px 0;margin-t
   ['inValor','inEntrada','inExtra'].forEach(function(id){
     document.getElementById(id).addEventListener('input',function(){fmtMoney(id);update();});
   });
-  ['inTaxa','inPrazo'].forEach(function(id){
+  ['inTaxa','inPrazo','inCada','inQtd'].forEach(function(id){
     document.getElementById(id).addEventListener('input',update);
   });
   document.getElementById('freqToggle').addEventListener('click',function(ev){
