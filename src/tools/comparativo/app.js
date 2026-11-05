@@ -835,91 +835,8 @@ function showCardPopup(id){
 }
 function closeCardPopup(){ document.getElementById("card-modal").classList.remove("show"); }
 
-/* ===================== MUDANÇAS DE PREÇOS ===================== */
-/* Cada mudança: { emp, unidade?, de, para, data? } para preço,
-   ou { emp, unidade?, tipoMudanca:"condicao"|"status", texto, data? } para outras mudanças. */
+/* ===================== HISTÓRICO DE PREÇOS ===================== */
 @@FILE:tools/comparativo/data/price-history.js@@
-
-@@FILE:tools/comparativo/data/price-changes.js@@
-
-function resolveChange(ch){
-  let d = DATA.find(x=>x.empreendimento===ch.emp && ch.unidade!=null && String(x.unidade)===String(ch.unidade));
-  if(!d) d = DATA.find(x=>x.empreendimento===ch.emp && x.unidade==null);
-  if(!d) d = DATA.find(x=>x.empreendimento===ch.emp);
-  return d || null;
-}
-
-const chState = { q:"", constr:"" };
-function chConstrutora(ch){
-  const d=resolveChange(ch);
-  return (d && d.construtora) || constructoraOf(ch.emp) || "—";
-}
-function buildChConstrDropdown(){
-  const sel=document.getElementById("ch-constr"); if(!sel) return;
-  const cont={};
-  PRICE_CHANGES.forEach(ch=>{ const c=chConstrutora(ch); cont[c]=(cont[c]||0)+1; });
-  const nomes=Object.keys(cont).sort((a,b)=>a.localeCompare(b,'pt-BR'));
-  sel.innerHTML = `<option value="">Todas as construtoras (${PRICE_CHANGES.length})</option>` +
-    nomes.map(c=>`<option value="${c}">${c} (${cont[c]})</option>`).join("");
-}
-function renderChanges(filter, constr){
-  if(filter!==undefined && filter!==null) chState.q=String(filter);
-  if(constr!==undefined && constr!==null) chState.constr=String(constr);
-  const box=document.getElementById("changes-list");
-  const f=chState.q.trim().toLowerCase(), c=chState.constr;
-  const lista=PRICE_CHANGES.filter(ch=>{
-    if(c && chConstrutora(ch)!==c) return false;
-    if(!f) return true;
-    return ch.emp.toLowerCase().includes(f) || chConstrutora(ch).toLowerCase().includes(f);
-  });
-  document.getElementById("ch-count").textContent=lista.length;
-  if(!lista.length){
-    const msg = (f||c) ? 'Nenhuma mudança encontrada para esse filtro.' : 'Nenhuma mudança registrada ainda.';
-    box.innerHTML=`<div class="empty">${msg}</div>`; return;
-  }
-  box.innerHTML = lista.map((ch,i)=>{
-    const d=resolveChange(ch);
-    const numeric = (ch.de!=null && ch.para!=null);
-    const kind = numeric ? "preco" : (ch.tipoMudanca||"status");
-    const logo = d ? constLogo(d,"ch-logo") : "";
-    const tipo = d ? `<span class="ptag ${tipoClass(d.tipo)}">${d.tipo}</span>` : "";
-    const sub = d ? `${d.construtora}${d.bairro?` · ${d.bairro}`:""}${d.config?` · ${d.config}`:""}` : ch.emp;
-    const dataTxt = ch.data ? ` · ${ch.data}` : "";
-    let body="", cls="";
-    if(numeric){
-      const up = ch.para>=ch.de;
-      const diff=Math.abs(ch.para-ch.de);
-      const pct = ch.de? (Math.abs(ch.para-ch.de)/ch.de*100) : 0;
-      const pctTxt = pct.toLocaleString("pt-BR",{minimumFractionDigits:0,maximumFractionDigits:1});
-      cls = up?'up':'down';
-      body = `<span class="ch-prices">
-          <span class="ch-from">${BRLk(ch.de)}</span>
-          <span class="ch-arrow">→</span>
-          <span class="ch-to">${BRLk(ch.para)}</span>
-          <span class="ch-badge ${cls}">${up?'↑ Aumentou':'↓ Diminuiu'} ${BRLk(diff)} · ${up?'+':'−'}${pctTxt}%</span>
-        </span>`;
-    }else{
-      const lbl = kind==="condicao" ? "Condições de pagamento" : kind==="preco" ? "Preços" : "Disponibilidade";
-      cls = ch.dir==="down" ? "down" : ch.dir==="up" ? "up" : "info";
-      const arrow = ch.dir==="down" ? "↓ " : ch.dir==="up" ? "↑ " : "";
-      body = `<span class="ch-prices">
-          <span class="ch-badge ${cls}">${arrow}${lbl}</span>
-          <span class="ch-text">${ch.texto||""}</span>
-        </span>`;
-    }
-    return `<button class="change-card ${cls}" data-idx="${i}"${d?` data-id="${d.id}"`:""}>
-      <span class="ch-main">
-        <span class="ch-title"><span class="ch-emp">${ch.emp}</span>${ch.unidade?`<span class="u">${ch.unidade}</span>`:""}${tipo}</span>
-        ${body}
-        <span class="ch-sub">${sub}${dataTxt}</span>
-      </span>
-      <span class="ch-logo-wrap">${logo}</span>
-    </button>`;
-  }).join("");
-  box.querySelectorAll(".change-card").forEach(b=>b.addEventListener("click",()=>{
-    if(b.dataset.id!=null) showCardPopup(+b.dataset.id);
-  }));
-}
 
 /* ===================== TABELAS DE VENDAS ===================== */
 /* Recriação das tabelas oficiais (só unidades disponíveis). Cada tabela segue o
@@ -1316,7 +1233,6 @@ function switchTab(tab){
   document.querySelectorAll("#tabs .tab").forEach(b=>b.classList.toggle("on",b.dataset.tab===tab));
   document.getElementById("view-comparativo").hidden = tab!=="comparativo";
   document.getElementById("view-precos").hidden = tab!=="precos";
-  document.getElementById("view-mudancas").hidden = tab!=="mudancas";
   document.getElementById("view-tabelas").hidden = tab!=="tabelas";
   document.getElementById("view-investimentos").hidden = tab!=="investimentos";
   document.body.classList.toggle("on-precos", tab==="precos");
@@ -1333,7 +1249,7 @@ document.getElementById("tabs").addEventListener("click",e=>{
      "investimentos"                        -> abre a aba
      "tabelas/villaggio-di-fiori"           -> abre a aba e a tabela do empreendimento
    Nao avisa a rota de volta: ela ja e a que esta na URL. */
-const ABAS_VALIDAS = ["comparativo","precos","tabelas","investimentos","mudancas"];
+const ABAS_VALIDAS = ["comparativo","precos","tabelas","investimentos"];
 function aplicaRota(rota){
   const partes = String(rota||"").split("/").filter(Boolean);
   if(!partes.length) return;
@@ -1364,10 +1280,6 @@ buildPriceDropdowns();
 buildPadraoBtns();
 buildCbMetodo();
 renderPrices();
-buildChConstrDropdown();
-renderChanges();
-document.getElementById("ch-search").addEventListener("input",e=>renderChanges(e.target.value,null));
-document.getElementById("ch-constr").addEventListener("change",e=>renderChanges(null,e.target.value));
 buildSalesConstrDropdown();
 renderSalesTables("","");
 document.getElementById("sales-search").addEventListener("input",e=>renderSalesTables(e.target.value,null));

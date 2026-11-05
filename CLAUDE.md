@@ -76,7 +76,6 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | lógica/filtros/gráficos do comparativo | `tools/comparativo/app.js` | **71 KB** |
 | os 75 empreendimentos (preço, entrega…) | `tools/comparativo/data/empreendimentos.js` | 37 KB |
 | histórico de preços | `tools/comparativo/data/price-history.js` | 76 KB |
-| mudanças de preço | `tools/comparativo/data/price-changes.js` | 9 KB |
 | R$/m² por bairro (custo-benefício) | `tools/comparativo/data/bairros.js` | 1 KB |
 | padrão e lazer por empreendimento | `tools/comparativo/data/padrao.js` | 6 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
@@ -134,7 +133,8 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
   `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
 - **comparativo** — 75 empreendimentos. Abas: comparativo, custo-benefício, tabelas de vendas,
-  investimentos, mudanças. **Toda mudança no comparativo atualiza a data em
+  investimentos (a aba **Mudanças** e o `price-changes.js` foram excluídos em 05/11/2026, a pedido
+  do Felipe: ninguém usava; o link antigo `#comparativo/mudancas` abre o comparativo). **Toda mudança no comparativo atualiza a data em
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
   `DD/MM/AAAA`) e o chip do card "Empreendimentos" no `hub.html` (`Atualizado em DD/MM`).
   Pedido do Felipe em 30/09/2026, quando a data tinha ficado parada em 09/09.
@@ -290,10 +290,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (27 payloads, 17.446.016 bytes):
+Hash de referência (27 payloads, 17.420.712 bytes):
 
 ```
-5BD98075AA01BC9BE7057CAC8D1EFAC7086454C49D4CE7EB8F33885FD1DCD15E
+7DAFDCF02BDA7E93729D30CC082BC43A6A0AA7DB7CD71ADF4CCE217E92A7E3E3
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -662,25 +662,6 @@ No Solare a vaga é abreviada ("144 D", "86 C") para a tabela caber; o bit da va
 a coluna é "Dormitórios" com "2 (1 suíte)" ou "2", e o bit dela tem `mapa` (valor inteiro da
 célula -> texto), que devolve "2 dormitórios (1 suíte)" no resumo. O mesmo vale para o Estanislau
 Park ("2", "3 + lavabo", "2 (2 demi-suítes) + lavabo") e o Hannover ("2", "3").
-
-### Duas formas no price-changes.js
-
-O array aceita duas formas e o painel desenha cada uma de um jeito:
-
-- **numérica** — `{ emp, unidade, de, para, data }`: desenha as duas cifras e o
-  selo "↓ Diminuiu R$ X · −Y%". **O campo `texto` é ignorado nessa forma.**
-- **narrativa** — `{ emp, tipoMudanca, dir, texto, data }`: desenha um selo com
-  o rótulo do tipo (`preco` → "Preços", `condicao` → "Condições de pagamento",
-  qualquer outra coisa → "Disponibilidade") e o texto ao lado.
-
-Nas duas, `unidade` serve para o cartão resolver no card certo — sem ela, uma
-mudança sobre a cobertura cai no card de apartamento tipo.
-
-**Um card por evento, nunca um por unidade.** Quando cinco lotes do Imperial
-Park baixaram, o certo é um card sobre os lotes em geral, não cinco quase
-idênticos — o feed é para escanear o mês. Isso empurra para a forma narrativa
-sempre que o evento envolve mais de uma unidade, porque a numérica ignora o
-`texto`.
 
 ### Tabelas da Cetor (DUO, Bothanic, Imperial Park, Terraço Sky)
 
