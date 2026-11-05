@@ -1006,7 +1006,7 @@ const SALES_VALORES = {
   "Ed. Toulouse": ["Valor total"],
   "Ed. Edimburgo": ["Valor total"],
   "Princess Tower": ["Valor total"],
-  "Alameda Giardini": ["Valor total","Financiamento bancário (−10%)","À vista (−15%)"],
+  "Alameda Giardini": ["Valor total"],
   "Lisbon": ["Valor total","Valor total 36x"],
   "Lago di Garda": ["Investimento"],
   "Cipriani Tower": ["Valor total"],
