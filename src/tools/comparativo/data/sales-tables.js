@@ -1100,7 +1100,7 @@ const SALES_TABLES = {
   "Imperial Park": {
     "folderId": "1-LRwkJkBx_HoeBMq93gjetb77mp1d1HS",
     "source": "Tabela da construtora (Cetor)",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Lote",
@@ -1115,44 +1115,44 @@ const SALES_TABLES = {
         "19",
         "14,21 m",
         "316,56 m²",
-        "R$ 408.393,61",
-        "R$ 451.141,53",
-        "R$ 487.232,85"
+        "R$ 409.808,59",
+        "R$ 452.704,61",
+        "R$ 488.920,98"
       ],
       [
         "20",
         "12,41 m",
         "294,27 m²",
-        "R$ 408.393,61",
-        "R$ 451.141,53",
-        "R$ 487.232,85"
+        "R$ 409.808,59",
+        "R$ 452.704,61",
+        "R$ 488.920,98"
       ],
       [
         "21",
         "12,41 m",
         "293,37 m²",
-        "R$ 408.393,61",
-        "R$ 451.141,53",
-        "R$ 487.232,85"
+        "R$ 409.808,59",
+        "R$ 452.704,61",
+        "R$ 488.920,98"
       ],
       [
         "31",
         "12,50 m",
         "285,68 m²",
-        "R$ 484.967,41",
-        "R$ 535.730,56",
-        "R$ 578.589,01"
+        "R$ 486.647,70",
+        "R$ 537.586,73",
+        "R$ 580.593,67"
       ],
       [
         "32",
         "12,50 m",
         "284,76 m²",
-        "R$ 484.967,41",
-        "R$ 535.730,56",
-        "R$ 578.589,01"
+        "R$ 486.647,70",
+        "R$ 537.586,73",
+        "R$ 580.593,67"
       ]
     ],
-    "note": "Loteamento — 5 lotes disponíveis, os mesmos de setembro. Em outubro os cinco subiram exatamente 0,4141% nas três condições, a variação do CUB do mês, sem reprecificação: lotes 19, 20 e 21 a R$ 408.393,61 à vista (especial), R$ 451.141,53 em 12 meses e R$ 487.232,85 em 36 meses; lotes 31 e 32 a R$ 484.967,41, R$ 535.730,56 e R$ 578.589,01. A razão entre as colunas se manteve (36 meses = 1,08 × 12 meses). Atenção: a coluna de à vista segue rotulada como \"ESPECIAL\" — confirmar com a Cetor se o preço especial continua valendo antes de ofertar. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Loteamento — 5 lotes disponíveis, os mesmos de outubro. Em novembro os cinco subiram exatamente 0,3465% nas três condições, a variação do CUB do mês, sem reprecificação: lotes 19, 20 e 21 a R$ 409.808,59 à vista (especial), R$ 452.704,61 em 12 meses e R$ 488.920,98 em 36 meses; lotes 31 e 32 a R$ 486.647,70, R$ 537.586,73 e R$ 580.593,67. A razão entre as colunas se manteve (36 meses = 1,08 × 12 meses). Atenção: a coluna de à vista segue rotulada como \"ESPECIAL\" — confirmar com a Cetor se o preço especial continua valendo antes de ofertar. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "tipoDefault": "Lote",
       "andar": false,
@@ -1185,13 +1185,12 @@ const SALES_TABLES = {
   "Terraço Sky": {
     "folderId": "1Vt5PunscKc8s8e3NQZM2A-oxvnYJ1_ks",
     "source": "Tabela da construtora (Cetor)",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
       "Área priv.",
       "Vagas",
-      "À vista",
       "36 meses / financ.",
       "60 meses"
     ],
@@ -1200,12 +1199,11 @@ const SALES_TABLES = {
         "2101",
         "301,76 m²",
         "74, 128, 129 D",
-        "R$ 2.999.000,00",
-        "R$ 3.278.642,43",
-        "R$ 3.565.723,01"
+        "R$ 3.290.002,06",
+        "R$ 3.578.077,29"
       ]
     ],
-    "note": "Resta a cobertura 2101 (com piscina, 301,76 m², 4 vagas: 74, 128 e 129 dupla). Em outubro o à vista ficou parado em R$ 2.999.000,00 — o mesmo número redondo de campanha de setembro — e as condições parceladas subiram exatamente 0,4141%, a variação do CUB do mês: 36 meses ou financiamento R$ 3.278.642,43 e 60 meses R$ 3.565.723,01. Os aptos 604 e 704 saíram da tabela em setembro. Vagas avulsas à venda (36x / 48x), conforme a tabela de agosto — os prints de setembro e outubro não trazem esse bloco: vaga 45 R$ 69.917,73 / R$ 76.039,78; vaga 57 R$ 83.901,28 / R$ 91.247,74; vaga 61 dupla R$ 90.892,71 / R$ 98.851,35; vagas 69 e 73 R$ 69.917,73 / R$ 76.039,78; vaga 76 R$ 73.413,62 / R$ 79.841,77; vaga 77 dupla R$ 90.892,71 / R$ 98.851,35. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Resta a cobertura 2101 (com piscina, 301,76 m², 4 vagas: 74, 128 e 129 dupla). Em novembro as duas condições parceladas subiram exatamente 0,3465%, a variação do CUB do mês: 36 meses ou financiamento R$ 3.290.002,06 e 60 meses R$ 3.578.077,29. A tabela de novembro não traz mais o à vista de campanha (R$ 2.999.000,00 em setembro e outubro), por isso a coluna saiu. Os aptos 604 e 704 saíram da tabela em setembro. Vagas avulsas à venda (36x / 48x), conforme a tabela de agosto — os prints seguintes não trazem esse bloco: vaga 45 R$ 69.917,73 / R$ 76.039,78; vaga 57 R$ 83.901,28 / R$ 91.247,74; vaga 61 dupla R$ 90.892,71 / R$ 98.851,35; vagas 69 e 73 R$ 69.917,73 / R$ 76.039,78; vaga 76 R$ 73.413,62 / R$ 79.841,77; vaga 77 dupla R$ 90.892,71 / R$ 98.851,35. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -1218,16 +1216,12 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "60 meses",
-        "col": 5
+        "col": 4
       },
       "alternativas": [
         {
-          "bold": "À vista",
-          "col": 3
-        },
-        {
           "bold": "36 meses / financiamento",
-          "col": 4
+          "col": 3
         }
       ]
     }
@@ -1235,7 +1229,7 @@ const SALES_TABLES = {
   "Bothanic - torre A": {
     "folderId": "1IG3ZM4gNMpMW1wkVMov0ruhiPok0mcF3",
     "source": "Tabela da construtora (Cetor) · Torre A",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1251,51 +1245,51 @@ const SALES_TABLES = {
         "156,07 m²",
         "224,65 m²",
         "110, 111",
-        "R$ 1.574.389,05",
-        "R$ 1.667.511,10"
+        "R$ 1.579.843,89",
+        "R$ 1.673.288,58"
       ],
       [
         "1501",
         "156,07 m²",
         "224,65 m²",
         "29, 30",
-        "R$ 1.950.658,13",
-        "R$ 2.066.035,77"
+        "R$ 1.957.416,64",
+        "R$ 2.073.194,03"
       ],
       [
         "1602",
         "140,59 m²",
         "202,37 m²",
         "112, 113",
-        "R$ 1.739.340,25",
-        "R$ 1.842.218,85"
+        "R$ 1.745.366,61",
+        "R$ 1.848.601,65"
       ],
       [
         "1702",
         "140,59 m²",
         "202,37 m²",
         "22 (c/ box 01), 23",
-        "R$ 1.828.537,19",
-        "R$ 1.936.691,61"
+        "R$ 1.834.872,59",
+        "R$ 1.943.401,73"
       ],
       [
         "1802",
         "140,59 m²",
         "202,37 m²",
         "24, 25 (c/ box)",
-        "R$ 1.895.434,89",
-        "R$ 2.007.546,18"
+        "R$ 1.902.002,07",
+        "R$ 2.014.501,79"
       ],
       [
         "1901",
         "327,56 m²",
         "458,07 m²",
         "52 (c/ box 13), 53, 54 (c/ box 15)",
-        "R$ 4.845.686,60",
-        "R$ 5.132.299,54"
+        "R$ 4.862.475,62",
+        "R$ 5.150.081,60"
       ]
     ],
-    "note": "Torre A — entrega prevista 30/09/2028. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC; valores e condições podem mudar sem aviso. Em outubro as seis unidades subiram exatamente 0,4141% nas duas colunas, o índice do mês, sem reprecificação. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Torre A — entrega prevista 30/09/2028. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC; valores e condições podem mudar sem aviso. Em novembro as seis unidades subiram exatamente 0,3465% nas duas colunas, o índice do mês, sem reprecificação. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -1326,7 +1320,7 @@ const SALES_TABLES = {
   "Bothanic - torre B": {
     "folderId": "1IG3ZM4gNMpMW1wkVMov0ruhiPok0mcF3",
     "source": "Tabela especial de lançamento (Cetor) · Torre B",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1337,126 +1331,119 @@ const SALES_TABLES = {
     ],
     "rows": [
       [
-        "203",
-        "156,07 m²",
-        "140, 142",
-        "R$ 1.470.419,96",
-        "R$ 1.557.392,44"
-      ],
-      [
         "204",
         "193,54 m²",
         "56, 57",
-        "R$ 1.748.363,64",
-        "R$ 1.851.775,95"
+        "R$ 1.754.421,26",
+        "R$ 1.858.191,87"
       ],
       [
         "303",
         "156,07 m²",
         "136, 138",
-        "R$ 1.500.125,42",
-        "R$ 1.588.854,92"
+        "R$ 1.505.322,95",
+        "R$ 1.594.359,88"
       ],
       [
         "403",
         "156,07 m²",
         "137, 139",
-        "R$ 1.514.978,14",
-        "R$ 1.604.586,15"
+        "R$ 1.520.227,14",
+        "R$ 1.610.145,62"
       ],
       [
         "503",
         "156,07 m²",
         "134, 135",
-        "R$ 1.529.830,87",
-        "R$ 1.620.317,39"
+        "R$ 1.535.131,33",
+        "R$ 1.625.931,36"
       ],
       [
         "603",
         "156,07 m²",
         "133, 156",
-        "R$ 1.544.683,60",
-        "R$ 1.636.048,63"
+        "R$ 1.550.035,51",
+        "R$ 1.641.717,10"
       ],
       [
         "703",
         "156,07 m²",
         "131, 132",
-        "R$ 1.559.536,32",
-        "R$ 1.651.779,86"
+        "R$ 1.564.939,70",
+        "R$ 1.657.502,84"
       ],
       [
         "803",
         "156,07 m²",
         "127, 128",
-        "R$ 1.574.389,05",
-        "R$ 1.667.511,10"
+        "R$ 1.579.843,89",
+        "R$ 1.673.288,58"
       ],
       [
         "1203",
         "156,07 m²",
         "20, 21",
-        "R$ 1.782.327,23",
-        "R$ 1.887.748,42"
+        "R$ 1.788.502,52",
+        "R$ 1.894.288,96"
       ],
       [
         "1303",
         "156,07 m²",
         "18, 19",
-        "R$ 1.782.327,23",
-        "R$ 1.887.748,42"
+        "R$ 1.788.502,52",
+        "R$ 1.894.288,96"
       ],
       [
         "1304",
         "140,59 m²",
         "73, 74",
-        "R$ 1.605.544,85",
-        "R$ 1.700.509,71"
+        "R$ 1.611.107,64",
+        "R$ 1.706.401,52"
       ],
       [
         "1504",
         "140,59 m²",
         "77, 78",
-        "R$ 1.712.581,17",
-        "R$ 1.813.877,02"
+        "R$ 1.718.514,81",
+        "R$ 1.820.161,62"
       ],
       [
         "1603",
         "156,07 m²",
         "124, 125 (c/ box 27) — 3 carros",
-        "R$ 1.930.854,49",
-        "R$ 2.045.060,78"
+        "R$ 1.937.544,39",
+        "R$ 2.052.146,38"
       ],
       [
         "1604",
         "140,59 m²",
         "79, 80",
-        "R$ 1.739.340,25",
-        "R$ 1.842.218,85"
+        "R$ 1.745.366,61",
+        "R$ 1.848.601,65"
       ],
       [
         "1704",
         "140,59 m²",
         "89, 90",
-        "R$ 1.806.237,96",
-        "R$ 1.913.073,42"
+        "R$ 1.812.496,09",
+        "R$ 1.919.701,71"
       ],
       [
         "1803",
         "156,07 m²",
         "67 (dupla), 68",
-        "R$ 2.079.381,76",
-        "R$ 2.202.373,15"
+        "R$ 2.086.586,27",
+        "R$ 2.210.003,79"
       ],
       [
         "1804",
         "140,59 m²",
         "87, 93",
-        "R$ 1.873.135,66",
-        "R$ 1.983.927,99"
+        "R$ 1.879.625,58",
+        "R$ 1.990.801,77"
       ]
     ],
-    "note": "Torre B — entrega prevista 30/09/2029. 17 unidades disponíveis, as mesmas de setembro. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC: em outubro todas subiram exatamente 0,4141% nas duas colunas, sem reprecificação. Preços de tabela cheia. Vagas que mudaram em outubro: a 603 passou a ter a 133 e a 156 (em setembro a 132 aparecia ao mesmo tempo na 603 e na 703 — agora está só na 703, como devia), e a 1603 passou a ter as vagas 124 e 125 com o box 27, para 3 carros (eram a 129 dupla e a 130). As vagas da 1504 não estão legíveis no print de outubro; seguem as de setembro (77 e 78) — confirmar. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Torre B — entrega prevista 30/09/2029. 16 unidades disponíveis: a 203 saiu da tabela em novembro. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC: em novembro todas subiram exatamente 0,3465% nas duas colunas, sem reprecificação. Preços de tabela cheia. As vagas da 1504 (77 e 78), que não estavam legíveis no print de outubro, vieram confirmadas na tabela de novembro; a 603 segue com a 133 e a 156, e a 1603 com a 124 e a 125 mais o box 27, para 3 carros. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -1482,7 +1469,7 @@ const SALES_TABLES = {
   "DUO - Torre 1": {
     "folderId": "1P0v-dXRIuTq-nFrR8dFkNO-trR3POrmg",
     "source": "Tabela da construtora (Cetor) · Torre 1",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1490,8 +1477,7 @@ const SALES_TABLES = {
       "Área total",
       "Vagas",
       "60 meses",
-      "DUO EXTRA (48 meses)",
-      "Em 6 meses (desconto de outubro)"
+      "DUO EXTRA (48 meses)"
     ],
     "rows": [
       [
@@ -1500,47 +1486,42 @@ const SALES_TABLES = {
         "233,04 m²",
         "238 (dupla)",
         "—",
-        "R$ 1.532.676,14",
-        "—"
+        "R$ 1.532.676,14"
       ],
       [
         "1702",
         "159,75 m²",
         "233,04 m²",
         "153, 154",
-        "R$ 1.962.899,00",
-        "—",
-        "R$ 1.662.899,00"
+        "R$ 1.969.699,92",
+        "—"
       ],
       [
         "2101",
         "159,75 m²",
         "233,04 m²",
         "137, 138",
-        "R$ 2.804.141,42",
-        "—",
-        "R$ 2.399.141,42"
+        "R$ 2.813.857,03",
+        "—"
       ],
       [
         "2802",
         "159,75 m²",
         "233,04 m²",
         "74 (c/ dep.), 98, 99",
-        "R$ 2.505.033,00",
-        "—",
-        "R$ 2.100.033,00"
+        "R$ 2.513.712,28",
+        "—"
       ],
       [
         "2902",
         "159,75 m²",
         "233,04 m²",
         "82 (c/ dep.), 83, 84",
-        "R$ 2.710.670,04",
-        "—",
-        "R$ 2.305.670,04"
+        "R$ 2.720.061,79",
+        "—"
       ]
     ],
-    "note": "Torre 1 — término previsto 30/11/2026. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC: em outubro as quatro unidades com preço em 60 meses subiram exatamente 0,4141%, o índice do mês. Desconto de outubro para pagamento em 6 meses: R$ 300.000,00 na 1702 e R$ 405.000,00 na 2101, na 2802 e na 2902 — valor já descontado na coluna \"Em 6 meses\", válido só em outubro. A unidade 1502 segue em bloco separado (DUO EXTRA), em 48 meses e pelo mesmo valor desde agosto. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Torre 1 — término previsto 30/11/2026. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC: em novembro as quatro unidades com preço em 60 meses subiram exatamente 0,3465%, o índice do mês. O desconto de outubro para pagamento em 6 meses não veio na tabela de novembro e saiu. A unidade 1502 segue em bloco separado (DUO EXTRA), em 48 meses e pelo mesmo valor desde agosto. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -1564,11 +1545,6 @@ const SALES_TABLES = {
         {
           "bold": "DUO EXTRA (48 meses)",
           "col": 5
-        },
-        {
-          "bold": "Em 6 meses",
-          "nota": "(desconto de outubro)",
-          "col": 6
         }
       ]
     }
@@ -1576,7 +1552,7 @@ const SALES_TABLES = {
   "DUO - Torre 2": {
     "folderId": "1P0v-dXRIuTq-nFrR8dFkNO-trR3POrmg",
     "source": "Tabela da construtora (Cetor) · Torre 2",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -1590,95 +1566,95 @@ const SALES_TABLES = {
         "304",
         "339,50 m²",
         "454,02 m²",
-        "22, 239 D (c/ box)",
-        "R$ 3.205.084,81"
+        "24, 239 D (c/ box)",
+        "R$ 3.216.189,58"
       ],
       [
         "1203",
         "159,75 m²",
         "233,04 m²",
         "104, 105",
-        "R$ 1.981.593,27"
+        "R$ 1.988.458,97"
       ],
       [
         "1403",
         "159,75 m²",
         "233,04 m²",
         "94, 95",
-        "R$ 2.056.370,38"
+        "R$ 2.063.495,15"
       ],
       [
         "1503",
         "159,75 m²",
         "233,04 m²",
         "100, 101",
-        "R$ 2.205.924,59"
+        "R$ 2.213.567,53"
       ],
       [
         "1903",
         "159,75 m²",
         "233,04 m²",
         "202, 203",
-        "R$ 2.729.364,32"
+        "R$ 2.738.820,84"
       ],
       [
         "2004",
         "159,75 m²",
         "233,04 m²",
         "175, 176",
-        "R$ 2.056.370,38"
+        "R$ 2.063.495,15"
       ],
       [
         "2103",
         "159,75 m²",
         "233,04 m²",
         "173, 174",
-        "R$ 2.804.141,42"
+        "R$ 2.813.857,03"
       ],
       [
         "2703",
         "159,75 m²",
         "233,04 m²",
         "81, 171, 172",
-        "R$ 2.804.141,42"
+        "R$ 2.813.857,03"
       ],
       [
         "2803",
         "159,75 m²",
         "233,04 m²",
         "216, 166 D (c/ box)",
-        "R$ 2.897.612,80"
+        "R$ 2.907.652,26"
       ],
       [
         "2804",
         "159,75 m²",
         "233,04 m²",
         "89, 90, 91",
-        "R$ 2.505.033,00"
+        "R$ 2.513.712,28"
       ],
       [
         "2903",
         "159,75 m²",
         "233,04 m²",
         "233, 232 D",
-        "R$ 3.084.555,57"
+        "R$ 3.095.242,73"
       ],
       [
         "2904",
         "159,75 m²",
         "233,04 m²",
         "78 (c/ dep.), 221, 222",
-        "R$ 2.710.670,04"
+        "R$ 2.720.061,79"
       ],
       [
         "3004",
         "319,50 m²",
         "453,92 m²",
         "18, 240 D (c/ box)",
-        "R$ 5.789.802,72"
+        "R$ 5.809.862,85"
       ]
     ],
-    "note": "Torre 2 — término previsto 30/11/2028. Valores em 60 meses, contratuais em CUB e reajustados pela variação positiva do CUB/SC. Doze das treze unidades subiram exatamente 0,4141% em outubro, o índice do mês. A exceção é a 2804, que baixou 0,33% (de R$ 2.513.320,35 para R$ 2.505.033,00) e foi parar exatamente no valor da 2802 da torre 1. Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
+    "note": "Torre 2 — término previsto 30/11/2028. Valores em 60 meses, contratuais em CUB e reajustados pela variação positiva do CUB/SC. As treze unidades são as mesmas de outubro e todas subiram exatamente 0,3465% em novembro, o índice do mês. A 304 aparece com as vagas 24 e 239 dupla com box (em outubro eram a 22 e a 239). Venda e comissão validadas somente com proposta por escrito e após pagamento de 10% do valor do negócio.",
     "summary": {
       "bits": [
         {
@@ -1703,13 +1679,12 @@ const SALES_TABLES = {
   "Sunset Boulevard": {
     "folderId": "1d5VUoalANoJlegsMHvKhcIdP0IILacIP",
     "source": "Tabela da construtora (Speranzini)",
-    "ref": "Setembro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
       "Área priv.",
       "Entrada",
-      "Reforço dez/26",
       "Reforço jun/27",
       "65 parcelas",
       "Valor total"
@@ -1718,140 +1693,125 @@ const SALES_TABLES = {
       [
         "502",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 14.000,00",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 14.615,38",
         "R$ 1.360.000,00"
       ],
       [
         "602",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 14.000,00",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 14.615,38",
         "R$ 1.360.000,00"
       ],
       [
         "801",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 14.923,08",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 15.538,46",
         "R$ 1.420.000,00"
       ],
       [
         "802",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 14.923,08",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 15.538,46",
         "R$ 1.420.000,00"
       ],
       [
         "901",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 15.584,62",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 16.200,00",
         "R$ 1.463.000,00"
       ],
       [
         "902",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 15.584,62",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 16.200,00",
         "R$ 1.463.000,00"
       ],
       [
         "1001",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 15.584,62",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 16.200,00",
         "R$ 1.463.000,00"
       ],
       [
         "1101",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 15.584,62",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 16.200,00",
         "R$ 1.463.000,00"
       ],
       [
         "1301",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 18.123,08",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 18.738,46",
         "R$ 1.628.000,00"
       ],
       [
         "1302",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 18.123,08",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 18.738,46",
         "R$ 1.628.000,00"
       ],
       [
         "1401",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 18.123,08",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 18.738,46",
         "R$ 1.628.000,00"
       ],
       [
         "1402",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 18.123,08",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 18.738,46",
         "R$ 1.628.000,00"
       ],
       [
         "1502",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 18.123,08",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 18.738,46",
         "R$ 1.628.000,00"
       ],
       [
         "1601",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 18.615,38",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 19.230,77",
         "R$ 1.660.000,00"
       ],
       [
         "1702",
         "156,20 m²",
-        "R$ 250.000,00",
-        "R$ 100.000,00",
-        "R$ 100.000,00",
-        "R$ 19.138,46",
+        "R$ 280.000,00",
+        "R$ 130.000,00",
+        "R$ 19.753,85",
         "R$ 1.694.000,00"
       ]
     ],
-    "note": "Tabela de setembro/2026 — 15 unidades, todas com 156,20 m² de área privativa. Saíram as unidades 202 e 501, vendidas desde a Rev. 55 de julho; a 502 também tinha saído em setembro e voltou à pauta em 07/10/2026, no mesmo preço (R$ 1.360.000,00) e na mesma condição das demais. Os preços não mudaram desde julho; mudou a condição: a entrada passou a ser R$ 250.000,00 em todas (era R$ 200.000,00 até o 1101 e R$ 220.000,00 do 1301 para cima) e o saldo passou de 70 para 65 parcelas, com os dois reforços de R$ 100.000,00 (dez/26 e jun/27) mantidos — no 602, por exemplo, a parcela foi de R$ 13.714,29 para R$ 14.000,00. Entrada + reforços + 65 parcelas devolvem o total em todas as linhas (diferença máxima de R$ 0,30, arredondamento da parcela). Entrega prevista: novembro/2027. Preço dos apartamentos com 01 vaga dupla, 01 vaga simples e 01 box; para 03 vagas simples de garagem e box, acrescentar R$ 30.000,00 no preço final. Depósitos independentes: 21, 22, 23, 24, 25, 26 e 28. Vagas simples sobrando: 89 e 90. Vagas em vermelho na tabela original são para 2 veículos (gaveta); sujeitas a disponibilidade. A área privativa foi mantida da revisão anterior, porque a tabela nova não traz coluna de área.",
+    "note": "Tabela de novembro/2026 — 15 unidades, todas com 156,20 m² de área privativa, as mesmas de setembro e com os mesmos preços (congelados desde abril). Mudou a condição: entrada de R$ 280.000,00 + um reforço de R$ 130.000,00 em jun/27 + 65 parcelas, no lugar de R$ 250.000,00 + dois reforços de R$ 100.000,00 (dez/26 e jun/27) + 65 parcelas — no 602, por exemplo, a parcela foi de R$ 14.000,00 para R$ 14.615,38. Entrada + reforço + 65 parcelas devolvem o total em todas as linhas (diferença máxima de R$ 0,30, arredondamento da parcela). Entrega prevista: novembro/2027. Preço dos apartamentos com 01 vaga dupla, 01 vaga simples e 01 box; para 03 vagas simples de garagem e box, acrescentar R$ 30.000,00 no preço final. Depósitos independentes: 21, 22, 23, 24, 25, 26 e 28. Vagas simples sobrando: 89 e 90. Vagas em vermelho na tabela original são para 2 veículos (gaveta); sujeitas a disponibilidade. A área privativa foi mantida da revisão anterior, porque a tabela nova não traz coluna de área.",
     "summary": {
       "bits": [
         {
@@ -1861,7 +1821,7 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Condição padrão",
-        "col": 6
+        "col": 5
       },
       "parcelas": [
         {
@@ -1870,15 +1830,11 @@ const SALES_TABLES = {
         },
         {
           "label": "65 parcelas",
-          "col": 5
-        },
-        {
-          "label": "Reforço dez/26",
-          "col": 3
+          "col": 4
         },
         {
           "label": "Reforço jun/27",
-          "col": 4
+          "col": 3
         }
       ]
     }
@@ -1931,64 +1887,58 @@ const SALES_TABLES = {
   "Ed. Edimburgo": {
     "folderId": "1ll9B4L6TwYt_wp5xkMYB0nSEqAbOOgHH",
     "source": "Tabela de vendas (Speranzini)",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Apto",
       "Entrada",
-      "Reforço dez/26",
       "Reforço jun/27",
-      "75 parcelas",
+      "60 parcelas",
       "Valor total"
     ],
     "rows": [
       [
         "205",
-        "R$ 85.000,00",
-        "R$ 20.000,00",
-        "R$ 20.000,00",
-        "R$ 5.506,67",
+        "R$ 100.000,00",
+        "R$ 25.000,00",
+        "R$ 6.883,33",
         "R$ 538.000,00"
       ],
       [
         "206",
-        "R$ 85.000,00",
-        "R$ 20.000,00",
-        "R$ 20.000,00",
-        "R$ 5.506,67",
+        "R$ 100.000,00",
+        "R$ 25.000,00",
+        "R$ 6.883,33",
         "R$ 538.000,00"
       ],
       [
         "305",
-        "R$ 85.000,00",
-        "R$ 20.000,00",
-        "R$ 20.000,00",
-        "R$ 5.666,67",
+        "R$ 100.000,00",
+        "R$ 25.000,00",
+        "R$ 7.083,33",
         "R$ 550.000,00"
       ],
       [
         "605",
-        "R$ 85.000,00",
-        "R$ 20.000,00",
-        "R$ 20.000,00",
-        "R$ 6.000,00",
+        "R$ 100.000,00",
+        "R$ 25.000,00",
+        "R$ 7.500,00",
         "R$ 575.000,00"
       ],
       [
-        "705",
-        "R$ 85.000,00",
-        "R$ 20.000,00",
-        "R$ 20.000,00",
-        "R$ 6.066,67",
-        "R$ 580.000,00"
+        "805",
+        "R$ 100.000,00",
+        "R$ 25.000,00",
+        "R$ 7.683,33",
+        "R$ 586.000,00"
       ]
     ],
-    "note": "Tabela de outubro/2026: desde a Rev. 44 (12/05/2026) saíram o apto 702 e, em 23/10/2026, o 805 (vendido); as outras cinco unidades seguem com o mesmo preço e as mesmas condições. Entrega prevista: agosto/2027. Preço a valor fechado; parcelas corrigidas pelo CUB (dia 05 do mês seguinte). Preço com 1 vaga dupla; para 2 vagas individuais, acrescentar R$ 25.000,00. Vagas sobrando: 02 e 21 (duplas), sujeitas a disponibilidade. Aptos 205 e 206 nas mesmas condições. Conferir disponibilidade no fechamento (vários corretores atuando).",
+    "note": "Tabela de novembro/2026 — 5 unidades. Em relação a outubro saiu o apto 705 e voltou o 805, que tinha saído vendido em 23/10/2026, pelo mesmo preço de antes (R$ 586.000,00); os preços seguem os da Rev. 42. Mudou a condição: entrada de R$ 100.000,00 + reforço de R$ 25.000,00 em jun/27 + 60 parcelas, no lugar de R$ 85.000,00 + dois reforços de R$ 20.000,00 (dez/26 e jun/27) + 75 parcelas — mais entrada e parcela maior (no 205, de R$ 5.506,67 para R$ 6.883,33). Entrega prevista: agosto/2027. Preço a valor fechado; parcelas corrigidas pelo CUB (dia 05 do mês seguinte). Preço com 1 vaga dupla; para 2 vagas individuais, acrescentar R$ 25.000,00. Vagas sobrando: 02 e 21 (duplas), sujeitas a disponibilidade. Conferir disponibilidade no fechamento (vários corretores atuando).",
     "summary": {
       "bits": [],
       "principal": {
         "label": "Condição padrão",
-        "col": 5
+        "col": 4
       },
       "parcelas": [
         {
@@ -1996,16 +1946,12 @@ const SALES_TABLES = {
           "col": 1
         },
         {
-          "label": "Reforço dez/26",
+          "label": "Reforço jun/27",
           "col": 2
         },
         {
-          "label": "Reforço jun/27",
+          "label": "60 parcelas",
           "col": 3
-        },
-        {
-          "label": "75 parcelas",
-          "col": 4
         }
       ]
     }
@@ -2013,15 +1959,15 @@ const SALES_TABLES = {
   "Princess Tower": {
     "folderId": "1GCOItkxK0vCnbI1yKp_ACFwy7XekOJfk",
     "source": "Planilha de valores e condições (Speranzini)",
-    "ref": "Setembro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
       "Área priv.",
       "Cob. aberta",
       "Vagas",
-      "Entrada (15%)",
-      "Reforços dez/26 a jun/29 (6x)",
+      "Entrada",
+      "Semestrais jun/27 a jun/29 (5x)",
       "75 parcelas",
       "Valor total"
     ],
@@ -2032,7 +1978,7 @@ const SALES_TABLES = {
         "63,28 m²",
         "3",
         "R$ 175.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 12.866,67",
         "R$ 1.320.000,00"
       ],
@@ -2042,7 +1988,7 @@ const SALES_TABLES = {
         "57,58 m²",
         "3",
         "R$ 175.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 12.866,67",
         "R$ 1.320.000,00"
       ],
@@ -2052,7 +1998,7 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 130.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 8.480,00",
         "R$ 946.000,00"
       ],
@@ -2062,19 +2008,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 130.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 8.480,00",
         "R$ 946.000,00"
-      ],
-      [
-        "203",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 130.000,00",
-        "R$ 25.000,00",
-        "R$ 7.266,67",
-        "R$ 825.000,00"
       ],
       [
         "301",
@@ -2082,7 +2018,7 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 130.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 8.480,00",
         "R$ 946.000,00"
       ],
@@ -2092,29 +2028,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 130.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 8.480,00",
         "R$ 946.000,00"
-      ],
-      [
-        "303",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 130.000,00",
-        "R$ 25.000,00",
-        "R$ 7.413,33",
-        "R$ 836.000,00"
-      ],
-      [
-        "304",
-        "118,95 m²",
-        "—",
-        "3",
-        "R$ 130.000,00",
-        "R$ 25.000,00",
-        "R$ 7.413,33",
-        "R$ 836.000,00"
       ],
       [
         "401",
@@ -2122,29 +2038,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 133.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 8.440,00",
         "R$ 946.000,00"
-      ],
-      [
-        "403",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 133.000,00",
-        "R$ 25.000,00",
-        "R$ 7.373,33",
-        "R$ 836.000,00"
-      ],
-      [
-        "404",
-        "118,95 m²",
-        "—",
-        "3",
-        "R$ 133.000,00",
-        "R$ 25.000,00",
-        "R$ 7.373,33",
-        "R$ 836.000,00"
       ],
       [
         "501",
@@ -2152,7 +2048,7 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 133.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 8.440,00",
         "R$ 946.000,00"
       ],
@@ -2162,39 +2058,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 133.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 8.440,00",
         "R$ 946.000,00"
-      ],
-      [
-        "603",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 133.000,00",
-        "R$ 25.000,00",
-        "R$ 7.373,33",
-        "R$ 836.000,00"
-      ],
-      [
-        "701",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 140.000,00",
-        "R$ 30.000,00",
-        "R$ 8.346,67",
-        "R$ 946.000,00"
-      ],
-      [
-        "703",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 140.000,00",
-        "R$ 25.000,00",
-        "R$ 7.280,00",
-        "R$ 836.000,00"
       ],
       [
         "802",
@@ -2202,19 +2068,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 140.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 9.666,67",
         "R$ 1.045.000,00"
-      ],
-      [
-        "803",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 140.000,00",
-        "R$ 25.000,00",
-        "R$ 7.866,67",
-        "R$ 880.000,00"
       ],
       [
         "901",
@@ -2222,19 +2078,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 140.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 9.666,67",
         "R$ 1.045.000,00"
-      ],
-      [
-        "903",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 140.000,00",
-        "R$ 25.000,00",
-        "R$ 7.866,67",
-        "R$ 880.000,00"
       ],
       [
         "1001",
@@ -2242,19 +2088,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 150.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 9.533,33",
         "R$ 1.045.000,00"
-      ],
-      [
-        "1003",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 150.000,00",
-        "R$ 25.000,00",
-        "R$ 7.733,33",
-        "R$ 880.000,00"
       ],
       [
         "1101",
@@ -2262,19 +2098,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 150.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 9.826,67",
         "R$ 1.067.000,00"
-      ],
-      [
-        "1103",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 150.000,00",
-        "R$ 25.000,00",
-        "R$ 8.466,67",
-        "R$ 935.000,00"
       ],
       [
         "1201",
@@ -2282,19 +2108,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 150.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 9.973,33",
         "R$ 1.078.000,00"
-      ],
-      [
-        "1203",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 150.000,00",
-        "R$ 25.000,00",
-        "R$ 8.466,67",
-        "R$ 935.000,00"
       ],
       [
         "1301",
@@ -2302,7 +2118,7 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 150.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 10.120,00",
         "R$ 1.089.000,00"
       ],
@@ -2312,19 +2128,9 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 150.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 10.120,00",
         "R$ 1.089.000,00"
-      ],
-      [
-        "1303",
-        "118,51 m²",
-        "—",
-        "3",
-        "R$ 150.000,00",
-        "R$ 25.000,00",
-        "R$ 8.466,67",
-        "R$ 935.000,00"
       ],
       [
         "1401",
@@ -2332,9 +2138,129 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 160.000,00",
-        "R$ 30.000,00",
+        "R$ 36.000,00",
         "R$ 10.066,67",
         "R$ 1.095.000,00"
+      ],
+      [
+        "203",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 130.000,00",
+        "R$ 30.000,00",
+        "R$ 7.266,67",
+        "R$ 825.000,00"
+      ],
+      [
+        "303",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 130.000,00",
+        "R$ 30.000,00",
+        "R$ 7.413,33",
+        "R$ 836.000,00"
+      ],
+      [
+        "304",
+        "118,95 m²",
+        "—",
+        "3",
+        "R$ 130.000,00",
+        "R$ 30.000,00",
+        "R$ 7.413,33",
+        "R$ 836.000,00"
+      ],
+      [
+        "403",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 133.000,00",
+        "R$ 30.000,00",
+        "R$ 7.373,33",
+        "R$ 836.000,00"
+      ],
+      [
+        "404",
+        "118,95 m²",
+        "—",
+        "3",
+        "R$ 133.000,00",
+        "R$ 30.000,00",
+        "R$ 7.373,33",
+        "R$ 836.000,00"
+      ],
+      [
+        "603",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 133.000,00",
+        "R$ 30.000,00",
+        "R$ 7.373,33",
+        "R$ 836.000,00"
+      ],
+      [
+        "703",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 140.000,00",
+        "R$ 30.000,00",
+        "R$ 7.280,00",
+        "R$ 836.000,00"
+      ],
+      [
+        "803",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 140.000,00",
+        "R$ 30.000,00",
+        "R$ 7.866,67",
+        "R$ 880.000,00"
+      ],
+      [
+        "903",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 140.000,00",
+        "R$ 30.000,00",
+        "R$ 7.866,67",
+        "R$ 880.000,00"
+      ],
+      [
+        "1103",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 150.000,00",
+        "R$ 30.000,00",
+        "R$ 8.466,67",
+        "R$ 935.000,00"
+      ],
+      [
+        "1203",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 150.000,00",
+        "R$ 30.000,00",
+        "R$ 8.466,67",
+        "R$ 935.000,00"
+      ],
+      [
+        "1303",
+        "118,51 m²",
+        "—",
+        "3",
+        "R$ 150.000,00",
+        "R$ 30.000,00",
+        "R$ 8.466,67",
+        "R$ 935.000,00"
       ],
       [
         "1403",
@@ -2342,7 +2268,7 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 160.000,00",
-        "R$ 25.000,00",
+        "R$ 30.000,00",
         "R$ 9.800,00",
         "R$ 1.045.000,00"
       ],
@@ -2352,7 +2278,7 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 175.000,00",
-        "R$ 25.000,00",
+        "R$ 30.000,00",
         "R$ 11.066,67",
         "R$ 1.155.000,00"
       ],
@@ -2362,12 +2288,12 @@ const SALES_TABLES = {
         "—",
         "3",
         "R$ 175.000,00",
-        "R$ 25.000,00",
+        "R$ 30.000,00",
         "R$ 11.066,67",
         "R$ 1.155.000,00"
       ]
     ],
-    "note": "Tabela a preço fechado de setembro/2026 — restam 34 unidades. Em relação à Rev. 16 de 27/07/2026, a única mudança foi a saída das unidades 1202 e 1402; valores e condições seguem iguais. Condição: entrada (15%) + 6 reforços semestrais nas datas dez/26, jun/27, dez/27, jun/28, dez/28 e jun/29 + 75 parcelas. Parcelas corrigidas pela variação do CUB ponderado, no dia 05 do mês seguinte. Entrega prevista: dezembro/2029. Preço com 01 vaga dupla + 01 vaga simples; para 03 vagas simples acrescentar R$ 25.000,00 no preço final. Vagas sujeitas a disponibilidade; as vagas 51 e 52 ficam no pavimento térreo. Unidade 204 saiu da tabela; a 804 foi vendida em 15/09/2026, depois da revisão, e segue no histórico de preços, que vai até abril/2026. As áreas foram mantidas da revisão anterior, porque as tabelas de julho e setembro/2026 não trazem coluna de área. Unidades sujeitas a conferência no fechamento, há vários corretores negociando.",
+    "note": "Tabela a preço fechado de novembro/2026 — restam 32 unidades. Em relação a setembro saíram a 701 e a 1003; os preços seguem iguais. Mudou a condição: entrada + 5 reforços semestrais (jun/27, dez/27, jun/28, dez/28 e jun/29) + 75 parcelas, no lugar de 6 reforços (de dez/26 a jun/29). Os reforços ficaram maiores e somam o mesmo: R$ 36.000,00 nos finais 01 e 02 (eram 6 de R$ 30.000,00) e R$ 30.000,00 nos finais 03 e 04 (eram 6 de R$ 25.000,00); entrada e parcela não mudaram. Parcelas corrigidas pela variação do CUB ponderado, no dia 05 do mês seguinte. Entrega prevista: dezembro/2029. Preço com 01 vaga dupla + 01 vaga simples; para 03 vagas simples acrescentar R$ 25.000,00 no preço final. Vagas sujeitas a disponibilidade; as vagas 51 e 52 ficam no pavimento térreo. As áreas foram mantidas da revisão de abril/2026, porque as tabelas seguintes não trazem coluna de área. Unidades sujeitas a conferência no fechamento, há vários corretores negociando.",
     "summary": {
       "bits": [
         {
@@ -2389,7 +2315,7 @@ const SALES_TABLES = {
       },
       "parcelas": [
         {
-          "label": "Entrada (15%)",
+          "label": "Entrada",
           "col": 4
         },
         {
@@ -2397,7 +2323,7 @@ const SALES_TABLES = {
           "col": 6
         },
         {
-          "label": "6 reforços semestrais",
+          "label": "5 reforços semestrais",
           "col": 5
         }
       ]

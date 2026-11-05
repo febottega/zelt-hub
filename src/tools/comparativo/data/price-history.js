@@ -501,43 +501,48 @@ const PRICE_HISTORY = {
     "1108": [480800.31,489649.39,503187.97,507968.25,509187.38,511275.04]
    }
   },
-  "DUO - Torre 1": {"datas": ["2025-12", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09", "2026-10"], "fontes": ["Tabela dez/2025", "Tabela mar/2026", "Tabela abr/2026 (rev. 426.2, 20/04)", "Tabela mai/2026 (13/05)", "Tabela jun/2026 (02/06)", "Tabela jul/2026 (10/07)", "Tabela ago/2026 (04/08)", "Tabela set/2026", "Tabela out/2026"], "obs": "Série pela coluna de 60 meses, a mesma condição dos cards. Três fases distintas: de dez/25 a mar/26 o preço ficou praticamente parado (+0,65% em três meses, só CUB); em abr/26 a Cetor fez uma reprecificação comercial para baixo, unidade por unidade (a 1702 caiu 4,25% e a 2802 caiu 6,61%, enquanto a 2101 não foi tocada); de abr/26 em diante volta a subir pelo CUB, cerca de 0,9% ao mês. As unidades 2802 e 2902 ganharam uma terceira vaga entre jun e ago/26, entao parte da diferença nessas duas é composição de garagem e não preço. A 2101 trocou de vagas (94/95 para 137/138) mantendo duas. A 1502 voltou à tabela em ago/26 só na condição à vista e por isso não entra na série. Em out/2026 todas subiram 0,4141% (CUB do mês).", "unidades": {"1702": [1950620.26, 1963333.35, 1879827.47, 1896152.16, 1916047.5, 1931747.17, 1950076.87, 1954804.72, 1962899], "2101": [2659936.72, 2677272.76, 2685467.81, 2708788.8, 2737210.71, 2759638.82, 2785824.1, 2792578.17, 2804141.42], "2802": [2571272.16, 2588030.33, 2416921.03, 2419851.33, 2445241.57, 2465277.35, 2488669.53, 2494703.17, 2505033], "2902": [2659936.72, 2677272.76, 2595952.22, 2618495.84, 2645970.35, 2667650.86, 2692963.3, 2699492.23, 2710670.04]}},
-  "DUO - Torre 2": {"datas": ["2025-12", "2026-03", "2026-04", "2026-06", "2026-07", "2026-08", "2026-09", "2026-10"], "fontes": ["Tabela dez/2025", "Tabela mar/2026", "Tabela abr/2026 (rev. 426.2, 20/04)", "Tabela jun/2026 (02/06)", "Tabela jul/2026 (10/07)", "Tabela ago/2026 (04/08)", "Tabela set/2026", "Tabela out/2026"], "obs": "Série pela coluna de 60 meses, a mesma condição dos cards. Mesmo movimento da Torre 1: parada de dez/25 a mar/26 (+0,65%, só CUB), reprecificação comercial para baixo em abr/26 (a 1203 caiu 9,21% e a 1503 caiu 8,95%) e alta pelo CUB de abr/26 em diante. Três unidades escaparam do corte e subiram direto do início ao fim: 304, 1903 e 3004, todas +4,73% em oito meses. Maio/26 foi excluído da série: naquela tabela a coluna da Torre 2 traz todos os valores multiplicados por um fator constante de 0,8057, o que é troca de base e não movimento de preço - abril e junho fecham entre si sem ela. As unidades 2703 e 2804 ganharam uma terceira vaga entre jun e ago/26, entao parte da diferença nessas duas é garagem e não preço. Em out/2026 doze unidades subiram 0,4141% (CUB) e a 2804 baixou 0,33%, para o mesmo valor da 2802 da torre 1.", "unidades": {"304": [3040261.35, 3060076.14, 3069442.94, 3128584.17, 3154219.11, 3184148.43, 3191868.22, 3205084.81], "1203": [2057017.73, 2070424.26, 1879827.47, 1916047.5, 1931747.17, 1950076.87, 1973421.91, 1981593.27], "1403": [2163415.2, 2177515.18, 1969343.06, 2007287.85, 2023735.13, 2042937.67, 2047890.66, 2056370.38], "1503": [2305278.49, 2320303.06, 2112568.01, 2153272.42, 2170915.87, 2191514.96, 2196828.16, 2205924.59], "1903": [2589005.07, 2605878.82, 2613855.34, 2664218.42, 2686048.45, 2711535.46, 2718109.42, 2729364.32], "2004": [2092483.55, 2106121.24, 1969343.06, 2007287.85, 2023735.13, 2042937.67, 2047890.66, 2056370.38], "2103": [2659936.72, 2677272.76, 2506436.63, 2554730.0, 2575662.9, 2600102.49, 2792578.17, 2804141.42], "2703": [2872731.66, 2891454.58, 2685467.81, 2737210.71, 2759638.82, 2785824.1, 2792578.17, 2804141.42], "2803": [2943663.3, 2962848.52, 2774983.41, 2828451.07, 2851626.78, 2878684.91, 2885664.11, 2897612.8], "2804": [2571272.16, 2588030.33, 2416921.03, 2463489.64, 2483674.94, 2507241.69, 2513320.35, 2505033], "2903": [3014594.95, 3034242.46, 2954014.59, 3010931.78, 3035602.7, 3064406.51, 3071835.99, 3084555.57], "2904": [2659936.72, 2677272.76, 2595952.22, 2645970.35, 2667650.86, 2692963.3, 2699492.23, 2710670.04], "3004": [5492058.54, 5527852.82, 5544773.42, 5651608.68, 5697916.73, 5751982.34, 5765927.69, 5789802.72]}},
+  "DUO - Torre 1": {"datas": ["2025-12", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09", "2026-10", "2026-11"], "fontes": ["Tabela dez/2025", "Tabela mar/2026", "Tabela abr/2026 (rev. 426.2, 20/04)", "Tabela mai/2026 (13/05)", "Tabela jun/2026 (02/06)", "Tabela jul/2026 (10/07)", "Tabela ago/2026 (04/08)", "Tabela set/2026", "Tabela out/2026", "Tabela nov/2026"], "obs": "Série pela coluna de 60 meses, a mesma condição dos cards. Três fases distintas: de dez/25 a mar/26 o preço ficou praticamente parado (+0,65% em três meses, só CUB); em abr/26 a Cetor fez uma reprecificação comercial para baixo, unidade por unidade (a 1702 caiu 4,25% e a 2802 caiu 6,61%, enquanto a 2101 não foi tocada); de abr/26 em diante volta a subir pelo CUB, cerca de 0,9% ao mês. As unidades 2802 e 2902 ganharam uma terceira vaga entre jun e ago/26, entao parte da diferença nessas duas é composição de garagem e não preço. A 2101 trocou de vagas (94/95 para 137/138) mantendo duas. A 1502 voltou à tabela em ago/26 só na condição à vista e por isso não entra na série. Em out/2026 todas subiram 0,4141% (CUB do mês). Em nov/2026 todas subiram 0,3465% (CUB do mês); a 1502 (DUO EXTRA) seguiu pelo mesmo valor.", "unidades": {"1702": [1950620.26, 1963333.35, 1879827.47, 1896152.16, 1916047.5, 1931747.17, 1950076.87, 1954804.72, 1962899, 1969699.92], "2101": [2659936.72, 2677272.76, 2685467.81, 2708788.8, 2737210.71, 2759638.82, 2785824.1, 2792578.17, 2804141.42, 2813857.03], "2802": [2571272.16, 2588030.33, 2416921.03, 2419851.33, 2445241.57, 2465277.35, 2488669.53, 2494703.17, 2505033, 2513712.28], "2902": [2659936.72, 2677272.76, 2595952.22, 2618495.84, 2645970.35, 2667650.86, 2692963.3, 2699492.23, 2710670.04, 2720061.79]}},
+  "DUO - Torre 2": {"datas": ["2025-12", "2026-03", "2026-04", "2026-06", "2026-07", "2026-08", "2026-09", "2026-10", "2026-11"], "fontes": ["Tabela dez/2025", "Tabela mar/2026", "Tabela abr/2026 (rev. 426.2, 20/04)", "Tabela jun/2026 (02/06)", "Tabela jul/2026 (10/07)", "Tabela ago/2026 (04/08)", "Tabela set/2026", "Tabela out/2026", "Tabela nov/2026"], "obs": "Série pela coluna de 60 meses, a mesma condição dos cards. Mesmo movimento da Torre 1: parada de dez/25 a mar/26 (+0,65%, só CUB), reprecificação comercial para baixo em abr/26 (a 1203 caiu 9,21% e a 1503 caiu 8,95%) e alta pelo CUB de abr/26 em diante. Três unidades escaparam do corte e subiram direto do início ao fim: 304, 1903 e 3004, todas +4,73% em oito meses. Maio/26 foi excluído da série: naquela tabela a coluna da Torre 2 traz todos os valores multiplicados por um fator constante de 0,8057, o que é troca de base e não movimento de preço - abril e junho fecham entre si sem ela. As unidades 2703 e 2804 ganharam uma terceira vaga entre jun e ago/26, entao parte da diferença nessas duas é garagem e não preço. Em out/2026 doze unidades subiram 0,4141% (CUB) e a 2804 baixou 0,33%, para o mesmo valor da 2802 da torre 1. Em nov/2026 todas subiram 0,3465% (CUB do mês).", "unidades": {"304": [3040261.35, 3060076.14, 3069442.94, 3128584.17, 3154219.11, 3184148.43, 3191868.22, 3205084.81, 3216189.58], "1203": [2057017.73, 2070424.26, 1879827.47, 1916047.5, 1931747.17, 1950076.87, 1973421.91, 1981593.27, 1988458.97], "1403": [2163415.2, 2177515.18, 1969343.06, 2007287.85, 2023735.13, 2042937.67, 2047890.66, 2056370.38, 2063495.15], "1503": [2305278.49, 2320303.06, 2112568.01, 2153272.42, 2170915.87, 2191514.96, 2196828.16, 2205924.59, 2213567.53], "1903": [2589005.07, 2605878.82, 2613855.34, 2664218.42, 2686048.45, 2711535.46, 2718109.42, 2729364.32, 2738820.84], "2004": [2092483.55, 2106121.24, 1969343.06, 2007287.85, 2023735.13, 2042937.67, 2047890.66, 2056370.38, 2063495.15], "2103": [2659936.72, 2677272.76, 2506436.63, 2554730.0, 2575662.9, 2600102.49, 2792578.17, 2804141.42, 2813857.03], "2703": [2872731.66, 2891454.58, 2685467.81, 2737210.71, 2759638.82, 2785824.1, 2792578.17, 2804141.42, 2813857.03], "2803": [2943663.3, 2962848.52, 2774983.41, 2828451.07, 2851626.78, 2878684.91, 2885664.11, 2897612.8, 2907652.26], "2804": [2571272.16, 2588030.33, 2416921.03, 2463489.64, 2483674.94, 2507241.69, 2513320.35, 2505033, 2513712.28], "2903": [3014594.95, 3034242.46, 2954014.59, 3010931.78, 3035602.7, 3064406.51, 3071835.99, 3084555.57, 3095242.73], "2904": [2659936.72, 2677272.76, 2595952.22, 2645970.35, 2667650.86, 2692963.3, 2699492.23, 2710670.04, 2720061.79], "3004": [5492058.54, 5527852.82, 5544773.42, 5651608.68, 5697916.73, 5751982.34, 5765927.69, 5789802.72, 5809862.85]}},
   "Terraço Sky": {
     "datas": [
       "2026-01",
       "2026-07",
       "2026-08",
       "2026-09",
-      "2026-10"
+      "2026-10",
+      "2026-11"
     ],
     "fontes": [
       "Tabela jan/2026",
       "Tabela jul/2026 (10/07)",
       "Tabela ago/2026 (04/08)",
       "Tabela set/2026",
-      "Tabela out/2026"
+      "Tabela out/2026",
+      "Tabela nov/2026"
     ],
-    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. A cobertura 2101 é reajustada pelo CUB; os aptos 604 e 704 têm preço fechado em reais e não subiram. Em janeiro só a cobertura estava na tabela, por isso os aptos começam em julho. Em out/2026 o à vista da 2101 ficou parado em R$ 2.999.000,00 e as condições parceladas subiram 0,4141% (CUB).",
+    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. A cobertura 2101 é reajustada pelo CUB; os aptos 604 e 704 têm preço fechado em reais e não subiram. Em janeiro só a cobertura estava na tabela, por isso os aptos começam em julho. Em out/2026 o à vista da 2101 ficou parado em R$ 2.999.000,00 e as condições parceladas subiram 0,4141% (CUB). Em nov/2026 a 2101 subiu 0,3465% (CUB do mês) nas duas condições parceladas; a tabela não trouxe mais o à vista de R$ 2.999.000,00.",
     "unidades": {
       "2101": [
         3499512.74,
         3626104.99,
         3660511.88,
         3551019.27,
-        3565723.01
+        3565723.01,
+        3578077.29
       ],
       "604": [
         null,
         880000.0,
         880000.0,
         880000.0,
+        null,
         null
       ],
       "704": [
         null,
         900000.0,
         900000.0,
+        null,
         null,
         null
       ]
@@ -623,7 +628,8 @@ const PRICE_HISTORY = {
       "2026-07",
       "2026-08",
       "2026-09",
-      "2026-10"
+      "2026-10",
+      "2026-11"
     ],
     "fontes": [
       "Tabela nov/2025",
@@ -631,9 +637,10 @@ const PRICE_HISTORY = {
       "Tabela jul/2026 (10/07)",
       "Tabela ago/2026 (04/08)",
       "Tabela set/2026",
-      "Tabela out/2026"
+      "Tabela out/2026",
+      "Tabela nov/2026"
     ],
-    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC — a evolução acompanha o índice, sem reprecificação comercial. As vagas do apto 1602 mudaram de 96 e 97 para 112 e 113 entre março e julho, sem efeito no preço. Em out/2026 todas subiram 0,4141% (CUB do mês).",
+    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC — a evolução acompanha o índice, sem reprecificação comercial. As vagas do apto 1602 mudaram de 96 e 97 para 112 e 113 entre março e julho, sem efeito no preço. Em out/2026 todas subiram 0,4141% (CUB do mês). Em nov/2026 todas subiram 0,3465% (CUB do mês).",
     "unidades": {
       "201": [
         1578698.72,
@@ -641,7 +648,8 @@ const PRICE_HISTORY = {
         1641047.18,
         1656618.52,
         1660634.9,
-        1667511.1
+        1667511.1,
+        1673288.58
       ],
       "1501": [
         1955997.78,
@@ -649,7 +657,8 @@ const PRICE_HISTORY = {
         2033247.13,
         2052539.93,
         2057516.19,
-        2066035.77
+        2066035.77,
+        2073194.03
       ],
       "1602": [
         1744101.45,
@@ -657,7 +666,8 @@ const PRICE_HISTORY = {
         1812982.26,
         1830185.03,
         1834622.21,
-        1842218.85
+        1842218.85,
+        1848601.65
       ],
       "1702": [
         1833542.55,
@@ -665,7 +675,8 @@ const PRICE_HISTORY = {
         1905955.71,
         1924040.68,
         1928705.4,
-        1936691.61
+        1936691.61,
+        1943401.73
       ],
       "1802": [
         1900623.38,
@@ -673,7 +684,8 @@ const PRICE_HISTORY = {
         1975685.79,
         1994432.41,
         1999267.8,
-        2007546.18
+        2007546.18,
+        2014501.79
       ],
       "1901": [
         4858950.98,
@@ -681,7 +693,8 @@ const PRICE_HISTORY = {
         5050848.34,
         5098774.13,
         5111135.82,
-        5132299.54
+        5132299.54,
+        5150081.6
       ]
     }
   },
@@ -691,135 +704,154 @@ const PRICE_HISTORY = {
       "2026-07",
       "2026-08",
       "2026-09",
-      "2026-10"
+      "2026-10",
+      "2026-11"
     ],
     "fontes": [
       "Tabela mar/2026",
       "Tabela jul/2026 (10/07)",
       "Tabela ago/2026 (04/08)",
       "Tabela set/2026",
-      "Tabela out/2026"
+      "Tabela out/2026",
+      "Tabela nov/2026"
     ],
-    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC — a evolução acompanha o índice, sem reprecificação comercial. Usada a coluna de preço cheio; as colunas promocionais da planilha original (JAN-FEV-MAR e ABR-MAI-JUN) já venceram e não entram na série. Em out/2026 todas subiram 0,4141% (CUB do mês).",
+    "obs": "Série pela coluna de 60 meses, a mesma condição usada nos cards. Valores contratuais em CUB, reajustados pela variação positiva do CUB/SC — a evolução acompanha o índice, sem reprecificação comercial. Usada a coluna de preço cheio; as colunas promocionais da planilha original (JAN-FEV-MAR e ABR-MAI-JUN) já venceram e não entram na série. Em out/2026 todas subiram 0,4141% (CUB do mês). Em nov/2026 todas subiram 0,3465% (CUB do mês) e a 203 saiu da tabela.",
     "unidades": {
       "203": [
         1486930.84,
         1532676.14,
         1547219.18,
         1550970.33,
-        1557392.44
+        1557392.44,
+        null
       ],
       "204": [
         1767995.46,
         1822387.69,
         1839679.71,
         1844139.91,
-        1851775.95
+        1851775.95,
+        1858191.87
       ],
       "303": [
         1516969.85,
         1563639.29,
         1578476.14,
         1582303.06,
-        1588854.92
+        1588854.92,
+        1594359.88
       ],
       "403": [
         1531989.35,
         1579120.87,
         1594104.61,
         1597969.43,
-        1604586.15
+        1604586.15,
+        1610145.62
       ],
       "503": [
         1547008.85,
         1594602.44,
         1609733.09,
         1613635.79,
-        1620317.39
+        1620317.39,
+        1625931.36
       ],
       "603": [
         1562028.36,
         1610084.02,
         1625361.57,
         1629302.16,
-        1636048.63
+        1636048.63,
+        1641717.1
       ],
       "703": [
         1577047.86,
         1625565.6,
         1640990.04,
         1644968.53,
-        1651779.86
+        1651779.86,
+        1657502.84
       ],
       "803": [
         1592067.36,
         1641047.18,
         1656618.52,
         1660634.9,
-        1667511.1
+        1667511.1,
+        1673288.58
       ],
       "1203": [
         1802340.41,
         1857789.26,
         1875417.19,
         1879964.03,
-        1887748.42
+        1887748.42,
+        1894288.96
       ],
       "1303": [
         1802340.41,
         1857789.26,
         1875417.19,
         1879964.03,
-        1887748.42
+        1887748.42,
+        1894288.96
       ],
       "1304": [
         1623573.0,
         1673522.08,
         1689401.57,
         1693497.43,
-        1700509.71
+        1700509.71,
+        1706401.52
       ],
       "1504": [
         1731811.2,
         1785090.22,
         1802028.34,
         1806397.25,
-        1813877.02
+        1813877.02,
+        1820161.62
       ],
       "1603": [
         1952535.44,
         2012605.03,
         2031701.96,
         2036627.7,
-        2045060.78
+        2045060.78,
+        2052146.38
       ],
       "1604": [
         1758870.75,
         1812982.26,
         1830185.03,
         1834622.21,
-        1842218.85
+        1842218.85,
+        1848601.65
       ],
       "1704": [
         1826519.63,
         1882712.34,
         1900576.77,
         1905184.6,
-        1913073.42
+        1913073.42,
+        1919701.71
       ],
       "1803": [
         2102730.48,
         2167420.8,
         2187986.72,
         2193291.37,
-        2202373.15
+        2202373.15,
+        2210003.79
       ],
       "1804": [
         1894168.5,
         1952442.43,
         1970968.5,
         1975747.0,
-        1983927.99
+        1983927.99,
+        1990801.77
       ]
     }
   },
@@ -833,7 +865,8 @@ const PRICE_HISTORY = {
       "2026-07",
       "2026-08",
       "2026-09",
-      "2026-10"
+      "2026-10",
+      "2026-11"
     ],
     "fontes": [
       "Tabela out/2025",
@@ -844,9 +877,10 @@ const PRICE_HISTORY = {
       "Tabela jul/2026 (10/07)",
       "Tabela ago/2026 (04/08)",
       "Tabela set/2026",
-      "Tabela out/2026"
+      "Tabela out/2026",
+      "Tabela nov/2026"
     ],
-    "obs": "Série pela coluna à vista, a mesma usada nos cards. O preço ficou praticamente parado entre outubro/2025 e abril/2026, subiu levemente em junho e julho, e caiu forte em agosto, quando a Cetor passou a rotular a coluna como \"ESPECIAL\". A queda leva os lotes 19, 20 e 21 para abaixo do valor de outubro/2025 — não é devolução de valorização acumulada, é redução real. A planilha traz \"fim: 31/06/2026\" como validade dessa condição, data inválida e já vencida: confirmar com a construtora se o preço reduzido segue valendo. Os lotes 7, 12, 22, 23 e 28 saíram da tabela ao longo do período. Em out/2026 todas subiram 0,4141% (CUB do mês).",
+    "obs": "Série pela coluna à vista, a mesma usada nos cards. O preço ficou praticamente parado entre outubro/2025 e abril/2026, subiu levemente em junho e julho, e caiu forte em agosto, quando a Cetor passou a rotular a coluna como \"ESPECIAL\". A queda leva os lotes 19, 20 e 21 para abaixo do valor de outubro/2025 — não é devolução de valorização acumulada, é redução real. A planilha traz \"fim: 31/06/2026\" como validade dessa condição, data inválida e já vencida: confirmar com a construtora se o preço reduzido segue valendo. Os lotes 7, 12, 22, 23 e 28 saíram da tabela ao longo do período. Em out/2026 todas subiram 0,4141% (CUB do mês). Em nov/2026 todos subiram 0,3465% (CUB do mês).",
     "unidades": {
       "19": [
         500780.83,
@@ -857,7 +891,8 @@ const PRICE_HISTORY = {
         513221.96,
         422721.63,
         406709.55,
-        408393.61
+        408393.61,
+        409808.59
       ],
       "20": [
         500780.83,
@@ -868,7 +903,8 @@ const PRICE_HISTORY = {
         513221.96,
         422721.63,
         406709.55,
-        408393.61
+        408393.61,
+        409808.59
       ],
       "21": [
         500780.83,
@@ -879,7 +915,8 @@ const PRICE_HISTORY = {
         499428.06,
         422721.63,
         406709.55,
-        408393.61
+        408393.61,
+        409808.59
       ],
       "31": [
         500780.83,
@@ -890,7 +927,8 @@ const PRICE_HISTORY = {
         513221.96,
         489738.47,
         482967.59,
-        484967.41
+        484967.41,
+        486647.7
       ],
       "32": [
         500780.83,
@@ -901,14 +939,15 @@ const PRICE_HISTORY = {
         513221.96,
         489738.47,
         482967.59,
-        484967.41
+        484967.41,
+        486647.7
       ]
     }
   },
   "Villaggio di Fiori": {"datas": ["2026-06", "2026-07", "2026-08", "2026-09", "2026-10"], "fontes": ["Tabela jun/2026 – CUB R$ 3.096,25", "Tabela jul/2026 – CUB R$ 3.121,62", "Tabela ago/2026 – CUB R$ 3.151,24", "Tabela set/2026 – CUB R$ 3.158,88", "Tabela out/2026 – CUB R$ 3.171,96"], "obs": "A Sforza precifica os lotes em cotas de CUB, não em reais: valor = Qt. CUB × CUB do mês. Então quase todo o movimento aqui é índice, e o que interessa são as duas exceções. O CUB/SC subiu de R$ 3.096,25 (jun/2026) para R$ 3.121,62 (jul, +0,82%) e R$ 3.151,24 (ago, +0,95%) — os mesmos valores usados nas séries da Gard, da Kaisergarten e do Egon Belz. Nove dos onze lotes mantiveram a cota idêntica nos três levantamentos e por isso dão exatamente +1,78% de jun a ago, puro CUB. Os dois que a Sforza reprecificou para baixo em julho foram o lote 17, cuja cota caiu de 180,950 para 167,950 (−7,18%), e o lote 38, de 194,784 para 171,180 (−12,12%); em reais isso deu −5,54% e −10,56% no período, na contramão do índice. São as duas únicas decisões de preço do trimestre. E não é aleatório quais foram: o 38 é o maior lote do estoque (690,34 m²) e já era o mais barato por metro, R$ 874/m² em junho contra R$ 1.210 a R$ 1.318 dos demais, e depois do corte está em R$ 781/m²; o 17 era o segundo mais barato por metro. Ou seja, o desconto foi nos dois lotes que o mercado não absorveu, não uma correção geral de tabela. Ressalvas: a série tem só três pontos, todos dentro do mesmo trimestre, e não há tabela de lotes de 2025 na pasta — não dá para medir valorização de médio prazo aqui. O cabeçalho da coluna de CUB vem escrito \"CUB 05/26\" nas tabelas de junho e de julho, mas em ambas o valor confere com o CUB do próprio mês, então é rótulo desatualizado e não erro de cálculo. O ponto de ago/2026 não vem de PDF: é a tabela de vendas que já estava na base do comparativo, e ela fecha exatamente com a cota de julho multiplicada pelo CUB de agosto. O PDF de casas de jan/2025 não entra nesta série — são as casas do Condomínio Residencial Villaggio di Fiori, produto diferente dos lotes, e este empreendimento está cadastrado como Terreno. O quarto ponto, set/2026, entra com o CUB a R$ 3.158,88: alta de 0,24% sobre agosto, a menor variação da série (jun→jul +0,82%, jul→ago +0,95%), e nenhuma cota mexida — os onze lotes escalaram exatamente pelo índice, então setembro não trouxe nenhuma decisão de preço. Os nove lotes de cota estável acumulam +2,02% de junho a setembro. O cabeçalho da tabela de setembro vem escrito \"CUB 08/26\", repetindo o rótulo atrasado de junho e julho. Gard, Kaisergarten e Egon Belz seguem no CUB de agosto porque as tabelas de setembro desses empreendimentos ainda não chegaram. O quinto ponto, out/2026, entra com o CUB a R$ 3.171,96 (+0,41% sobre setembro) e de novo nenhuma cota mexida: os onze lotes subiram só o índice. Os nove lotes de cota estável acumulam +2,45% de junho a outubro.", "unidades": {"17": [560265.03, 524276.08, 529250.76, 530533.90, 532730.68], "18": [504361.39, 508494.02, 513318.95, 514563.46, 516694.12], "20": [517960.44, 522204.5, 527159.52, 528437.59, 530625.70], "36": [464889.41, 468698.61, 473145.93, 474293.05, 476256.96], "37": [495895.76, 499959.02, 504702.96, 505926.59, 508021.48], "38": [603101.4, 534358.91, 539429.26, 540737.08, 542976.11], "39": [444420.07, 448061.55, 452313.06, 453409.66, 455287.10], "41": [416784.53, 420199.58, 424186.71, 425215.12, 426975.82], "42": [511656.25, 515848.65, 520743.36, 522005.87, 524167.35], "43": [444330.01, 447970.75, 452221.4, 453317.78, 455194.84], "44": [462509.25, 466298.95, 470723.51, 471864.75, 473818.60]}},
-  "Sunset Boulevard": {"datas": ["2025-07", "2025-08", "2025-10", "2025-11", "2025-12", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-09"], "fontes": ["Tabela jul/2025 – Rev. 20 (18/07)", "Tabela ago/2025 – Rev. 20 (29/08)", "Tabela out/2025 – Rev. 21 (07/10)", "Tabela nov/2025 – Rev. 23 (04/11)", "Tabela dez/2025 – Rev. 29 (17/12)", "Tabela mar/2026 – Rev. 37 (27/03)", "Tabela abr/2026 – Rev. 45 (20/04)", "Tabela mai/2026 – Rev. 47 (20/05)", "Tabela jun/2026 – Rev. 53 (22/06)", "Tabela jul/2026 – Rev. 55 (22/07)", "Tabela set/2026"], "obs": "Tabela de preço fechado: o total não é indexado (só as parcelas são corrigidas pelo CUB), então cada mudança de valor aqui é decisão de preço da Speranzini. ATENÇÃO na leitura da queda de 2025 — ela é real em valor nominal, mas parte dela é reestruturação do plano de pagamento e não desconto no imóvel. A Speranzini mexeu no plano três vezes em doze meses: jul e ago/2025 tinham entrada + quatro reforços de R$ 95.000 + 80x; de out a dez/2025 passou a três reforços de R$ 80.000 + 80x; em mar/2026 encurtou o parcelamento para 70x; e de abr/2026 em diante ficou em dois reforços de R$ 100.000 + 70x. O apto 101 ilustra bem: R$ 180.000 + 4 × 95.000 + 80 × 9.250 = R$ 1.300.000 em jul/2025, contra R$ 180.000 + 3 × 80.000 + 80 × 8.500 = R$ 1.100.000 em out/2025 — o comprador paga R$ 200.000 menos, mas um reforço inteiro desapareceu da conta. Com essa ressalva, o desenho da série é claro e igual para todas as unidades: pico em jul-ago/2025, piso em nov/2025 (o 202 caiu 22,2%, de R$ 1.350.000 para R$ 1.050.000), recuperação parcial até abr/2026 e congelamento absoluto de abr a jul/2026 — quatro tabelas seguidas sem um real de diferença em nenhuma unidade. E ninguém voltou ao preço de 2025: de jul/2025 a jul/2026 todas as unidades estão abaixo, entre −4,2% (1302 e 1702) e −13,8% (402). Houve ainda dois descontos pontuais em jun/2026, os dois em unidades que saíram da tabela no mês seguinte: o 101 caiu de R$ 1.100.000 para R$ 930.000 (−15,45%) e o 301 de R$ 1.250.000 para R$ 1.170.000 (−6,40%) — queima dos dois andares mais baixos. O estoque encolheu de 27 unidades em jul/2025 para 19 em jul/2026, mas com movimento nos dois sentidos: cinco unidades entraram na tabela só em abr/2026 (602, 901, 1001, 1401 e 1601), provavelmente distratos, e por isso a linha delas começa vazia. Sobre as fontes: são dez tabelas, Rev. 20 a 55. Onde havia mais de uma tabela do mesmo mês usei sempre a revisão mais alta, descartando as Rev. 28 (dez/2025), 33 (mar/2026), 39 e 43 (abr/2026), 46 (mai/2026), 49 e 50 (jun/2026) e 54 (jul/2026). As tabelas de jul e ago/2025 trazem as duas o número Rev. 20 com datas de revisão diferentes (18/07 e 29/08), e os valores são idênticos nas duas. Faltam set/2025, jan/2026, fev/2026 e ago/2026; set/2025 é a mais importante, porque é dentro desse vão que a queda começou e sem ela não há como datá-la. A série foi conferida de duas formas independentes: as 160 linhas das dez tabelas fecham todas em entrada + reforços + N × parcela = total, e a coluna de jul/2026 bate unidade por unidade com a tabela de vendas que já estava na base do comparativo. Em set/2026 os preços das 14 unidades restantes se repetiram — o congelamento já vai de abril a setembro — e a condição mudou: entrada de R$ 250.000 e 65 parcelas no lugar de 70. Saíram 202, 501 e 502. Ago/2026 não tem tabela na pasta.", "unidades": {"101": [1300000, 1300000, 1100000, 990000, 1050000, 1050000, 1100000, 1100000, 930000, null, null], "102": [1300000, 1300000, 1100000, 990000, 1050000, 1050000, 1100000, 1100000, null, null, null], "201": [1350000, 1350000, 1150000, 1050000, null, null, null, null, null, null, null], "202": [1350000, 1350000, 1150000, 1050000, 1110000, 1110000, 1170000, 1170000, 1170000, 1170000, null], "301": [1400000, 1400000, 1200000, 1100000, 1170000, 1170000, 1250000, 1250000, 1170000, null, null], "402": [1450000, 1450000, 1200000, 1100000, 1170000, 1170000, 1250000, 1250000, 1250000, 1250000, null], "501": [1480000, 1480000, 1200000, 1200000, 1270000, 1270000, 1360000, 1360000, 1360000, 1360000, null], "502": [1480000, 1480000, 1200000, 1200000, 1270000, 1270000, 1360000, 1360000, 1360000, 1360000, null], "601": [1500000, 1500000, 1200000, 1200000, 1270000, 1270000, 1360000, 1360000, 1360000, 1360000, null], "602": [null, null, null, null, null, null, 1360000, 1360000, 1360000, 1360000, 1360000], "701": [1500000, 1500000, 1200000, 1200000, null, null, null, null, null, null, null], "702": [1500000, 1500000, 1200000, 1200000, 1270000, 1270000, null, null, null, null, null], "801": [1550000, 1550000, 1250000, 1250000, 1330000, 1330000, 1420000, 1420000, 1420000, 1420000, 1420000], "802": [1550000, 1550000, 1250000, 1250000, 1330000, 1330000, 1420000, 1420000, 1420000, 1420000, 1420000], "901": [null, null, null, null, null, null, 1463000, 1463000, 1463000, 1463000, 1463000], "902": [1570000, 1570000, 1250000, 1250000, 1330000, 1330000, 1463000, 1463000, 1463000, 1463000, 1463000], "1001": [null, null, null, null, null, null, 1463000, 1463000, 1463000, 1463000, 1463000], "1002": [1600000, 1600000, 1250000, 1250000, 1330000, 1330000, null, null, null, null, null], "1101": [1650000, 1650000, 1250000, 1250000, 1330000, 1330000, 1463000, 1463000, 1463000, 1463000, 1463000], "1102": [1650000, 1650000, 1250000, 1250000, 1330000, 1330000, null, null, null, null, null], "1201": [1700000, 1700000, 1250000, 1250000, 1330000, null, null, null, null, null, null], "1301": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, 1628000, 1628000, 1628000, 1628000, 1628000], "1302": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, 1628000, 1628000, 1628000, 1628000, 1628000], "1401": [null, null, null, null, null, null, 1628000, 1628000, 1628000, 1628000, 1628000], "1402": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, 1628000, 1628000, 1628000, 1628000, 1628000], "1501": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, null, null, null, null, null], "1502": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, 1628000, 1628000, 1628000, 1628000, 1628000], "1601": [null, null, null, null, null, null, 1660000, 1660000, 1660000, 1660000, 1660000], "1602": [1750000, 1750000, 1400000, 1400000, null, null, null, null, null, null, null], "1701": [1770000, 1770000, 1450000, 1450000, null, null, null, null, null, null, null], "1702": [1770000, 1770000, 1450000, 1450000, 1540000, 1540000, 1694000, 1694000, 1694000, 1694000, 1694000], "1802": [1780000, 1780000, 1450000, 1450000, 1540000, null, null, null, null, null, null]}},
-  "Ed. Edimburgo": {"datas": ["2025-09", "2025-11", "2025-12", "2026-04-02", "2026-04-10", "2026-10"], "fontes": ["Tabela set/2025 – Rev. 31 (01/09)", "Tabela nov/2025 – Rev. 35 (07/11)", "Tabela dez/2025 – Rev. 36 (03/12)", "Tabela abr/2026 – Rev. 41 (02/04)", "Tabela abr/2026 – Rev. 42 (10/04)", "Tabela out/2026"], "obs": "Tabela de preço fechado, não indexada (só as parcelas são corrigidas pelo CUB), então cada mudança aqui é decisão de preço da Speranzini. Este é o reajuste mais precisamente datável de todo o material que temos: o preço ficou parado sete meses, de set/2025 até a Rev. 41 de 02/04/2026, e subiu cerca de 10% na Rev. 42 de 10/04/2026 — uma janela de oito dias. Por isso os dois pontos de abril entram na série com data completa em vez de só o mês; sem eles o salto pareceria diluído entre dezembro e abril, quando na verdade foi de uma vez. O aumento foi praticamente linear em toda a tabela, de +9,85% (702 e 705) a +10,11% (o 102), sem tratamento diferente por unidade ou por andar. E enquanto o total ficava congelado, a condição de pagamento endureceu três vezes: set/2025 era entrada de R$ 80.000 + três reforços de R$ 15.000 + 85x de R$ 3.764,71; nov e dez/2025 passaram a entrada de R$ 85.000 + dois reforços de R$ 20.000 + 80x de R$ 4.000; e abr/2026 encurtou para 75x de R$ 4.266,67. Os três dão o mesmo total de R$ 445.000 no apto 102, mas a parcela mensal subiu 13% e um reforço desapareceu — mesmo preço, mais caixa antecipado, exatamente o padrão que a tabela do Ed. Toulouse já mostrava. O estoque caiu de 16 unidades em set/2025 para 10 em abr/2026: saíram 101, 103, 202, 502, 604 e 706. Hoje a tabela de vendas na base do comparativo tem sete, e os valores dela são idênticos aos da Rev. 42 — ou seja, o preço se manteve nos quatro meses seguintes ao reajuste. Ressalvas: as tabelas do Edimburgo não trazem linha de \"mês de referência\" como as do Sunset, só a data da revisão, e foi dela que derivei as datas da série. Faltam out/2025 e jan a mar/2026, mas isso não prejudica a leitura porque a Rev. 41 prova que o preço não se moveu nesse vão; o que falta de verdade é de mai/2026 em diante. Uma correção para o card: o cadastro em DATA traz condicao \"Entrada + 85x\", que era a condição de set/2025 — a tabela vigente é 75x. A série foi conferida de duas formas: as 49 linhas das cinco tabelas fecham todas em entrada + reforços + N × parcela = total, e a Rev. 42 bate unidade por unidade com a tabela de vendas nas sete unidades que restam. Em out/2026 a tabela repetiu os preços da Rev. 44 e só perdeu o apto 702.", "unidades": {"101": [445000, 445000, 445000, null, null, null], "102": [445000, 445000, 445000, 445000, 490000, null], "103": [445000, null, null, null, null, null], "202": [489000, null, null, null, null, null], "205": [489000, 489000, 489000, 489000, 538000, 538000], "206": [489000, 489000, 489000, 489000, 538000, 538000], "305": [500000, 500000, 500000, 500000, 550000, 550000], "502": [511000, 511000, 511000, null, null, null], "505": [511000, 511000, 511000, 511000, 562000, null], "604": [523000, 523000, null, null, null, null], "605": [523000, 523000, 523000, 523000, 575000, 575000], "702": [528000, 528000, 528000, 528000, 580000, null], "705": [528000, 528000, 528000, 528000, 580000, 580000], "706": [528000, null, null, null, null, null], "802": [533000, 533000, 533000, 533000, 586000, null], "805": [533000, 533000, 533000, 533000, 586000, 586000]}},
-  "Princess Tower": {"datas": ["2025-08", "2025-10", "2025-11", "2026-02", "2026-04"], "fontes": ["Tabela ago/2025 – Rev. 00 (20/08)", "Tabela out/2025 – Rev. 05 (28/10)", "Tabela nov/2025 – Rev. 07 (25/11)", "Tabela fev/2026 – Rev. 10 (11/02)", "Tabela abr/2026 – Rev. 14 (10/04)"], "obs": "Tabela de preço fechado, não indexada (só as parcelas são corrigidas pelo CUB). A descoberta mais importante aqui só aparece cruzando com o Ed. Edimburgo: a Rev. 14 do Princess Tower é datada de 10/04/2026, exatamente a mesma data da Rev. 42 do Edimburgo, e as duas trazem o mesmo aumento linear de 10%. Não é coincidência de leitura — foi uma reprecificação de carteira da Speranzini naquele dia. No Princess o +10% é exato em praticamente toda a tabela: 1.200.000 para 1.320.000, 860.000 para 946.000, 750.000 para 825.000, 950.000 para 1.045.000, 1.050.000 para 1.155.000. Antes disso, porém, o movimento tinha sido para baixo, e é aí que a leitura fica interessante. De ago para out/2025 quase toda a tabela caiu: os aptos de final 01 e 02 foram de 870.000 para 800.000 (−8,0%), os de final 03 e 04 de 800.000 para 750.000 (−6,3%) e o 703 caiu 9,5%, de 840.000 para 760.000. Ficou tudo parado em nov/2025, houve recuperação parcial em fev/2026 concentrada nos finais 01 e 02 e nos andares acima do oitavo, e então veio o +10% de abril. O resultado líquido de ago/2025 a abr/2026 é muito desigual e vale olhar unidade por unidade: as coberturas 101 e 102 e os aptos 1503 e 1504 fizeram exatamente +10,0%, porque não participaram da queda de outubro; os finais 01 e 02 dos andares 8 a 14 fizeram entre +11,7% e +17,3%; e os finais 03 e 04 dos andares baixos ficaram de lado ou negativos — o 703 está em −0,5%, o 903 em −1,1% e o 1003 em −1,7%. Ou seja, quem comprou em agosto de 2025 um final 03 de andar baixo tem hoje o mesmo preço de tabela ou menos, enquanto quem comprou um final 01 de andar alto acumulou 17%. Três tipologias convivem na mesma tabela: o grosso é de 118 m², e os aptos 101 (183,91 m²) e 102 (177,93 m²) são as unidades com cobertura aberta adicional, o que explica partirem de 1.200.000 enquanto o resto começa entre 750.000 e 950.000. O parcelamento encurtou de 80x para 75x na Rev. 14 e o cronograma de reforços foi antecipado em seis meses: na Rev. 00 os seis reforços iam de jun/2027 a dez/2029, na Rev. 14 vão de dez/2026 a jun/2029. Somado ao +10%, é mais dinheiro e mais cedo. O estoque caiu de 50 unidades em ago/2025 para 38 em abr/2026, e a tabela de vendas atual tem 37 — saiu o 204. O apto 1402 saiu da tabela entre ago e out/2025 e voltou em fev/2026 pelo mesmo preço do 1401, daí o vão na linha dele. Sobre as fontes: foram oito arquivos, sete únicos, porque a Rev. 02 veio duas vezes (arquivos idênticos byte a byte). Descartei a Rev. 02 de 07/10 em favor da Rev. 05 de 28/10 — mesmo mês, valores idênticos, só com unidades vendidas a menos — e a Rev. 10 de 02/02 em favor da Rev. 10 de 11/02, cuja única diferença é a volta do 1402. Faltam set/2025, dez/2025, jan/2026, mar/2026 e tudo de mai/2026 em diante; como a tabela de vendas vigente é idêntica à Rev. 14, o preço não se moveu nos quatro meses seguintes ao reajuste. A série foi conferida de duas formas: as 190 linhas das sete tabelas fecham em entrada + reforços + N × parcela = total, e a coluna de abr/2026 bate 37 de 37 unidades com a tabela de vendas do comparativo.", "unidades": {"101": [1200000, 1200000, 1200000, 1200000, 1320000], "102": [1200000, 1200000, 1200000, 1200000, 1320000], "201": [870000, 800000, 800000, 860000, 946000], "202": [870000, 800000, 800000, 860000, 946000], "203": [800000, 750000, 750000, 750000, 825000], "204": [800000, 750000, 750000, 750000, 825000], "301": [872000, 800000, 800000, 860000, 946000], "302": [872000, 800000, 800000, 860000, 946000], "303": [805000, 760000, 760000, 760000, 836000], "304": [805000, 760000, 760000, 760000, 836000], "401": [875000, 800000, 800000, 860000, 946000], "403": [807000, 760000, 760000, 760000, 836000], "404": [807000, 760000, 760000, 760000, 836000], "501": [877000, 800000, 800000, 860000, 946000], "502": [877000, 800000, 800000, 860000, null], "504": [809000, null, null, null, null], "601": [889000, 800000, 800000, 860000, 946000], "602": [889000, 800000, 800000, null, null], "603": [815000, 760000, 760000, 760000, 836000], "604": [815000, null, null, null, null], "701": [890000, 800000, 800000, 860000, 946000], "702": [890000, null, null, null, null], "703": [840000, 760000, 760000, 760000, 836000], "704": [840000, 760000, null, null, null], "802": [891000, 850000, 850000, 950000, 1045000], "803": [850000, 800000, 800000, 800000, 880000], "804": [850000, 800000, 800000, 800000, 880000], "901": [900000, 850000, 850000, 950000, 1045000], "902": [900000, 850000, 850000, null, null], "903": [890000, 800000, 800000, 800000, 880000], "904": [890000, 800000, null, null, null], "1001": [905000, 850000, 850000, 950000, 1045000], "1002": [905000, null, null, null, null], "1003": [895000, 800000, 800000, 800000, 880000], "1004": [895000, null, null, null, null], "1101": [910000, 910000, 910000, 970000, 1067000], "1103": [905000, 850000, 850000, 850000, 935000], "1104": [905000, 850000, 850000, 850000, null], "1201": [920000, 920000, 920000, 980000, 1078000], "1202": [920000, 920000, 920000, 980000, 1078000], "1203": [910000, 850000, 850000, 850000, 935000], "1301": [950000, 950000, 950000, 990000, 1089000], "1302": [950000, 950000, 950000, 990000, 1089000], "1303": [920000, 850000, 850000, 850000, 935000], "1304": [920000, 850000, 850000, null, null], "1401": [980000, 980000, 980000, 995000, 1095000], "1402": [980000, null, null, 995000, 1095000], "1403": [940000, 950000, 950000, 950000, 1045000], "1503": [1050000, 1050000, 1050000, 1050000, 1155000], "1504": [1050000, 1050000, 1050000, 1050000, 1155000]}},
+  "Sunset Boulevard": {"datas": ["2025-07", "2025-08", "2025-10", "2025-11", "2025-12", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-09", "2026-11"], "fontes": ["Tabela jul/2025 – Rev. 20 (18/07)", "Tabela ago/2025 – Rev. 20 (29/08)", "Tabela out/2025 – Rev. 21 (07/10)", "Tabela nov/2025 – Rev. 23 (04/11)", "Tabela dez/2025 – Rev. 29 (17/12)", "Tabela mar/2026 – Rev. 37 (27/03)", "Tabela abr/2026 – Rev. 45 (20/04)", "Tabela mai/2026 – Rev. 47 (20/05)", "Tabela jun/2026 – Rev. 53 (22/06)", "Tabela jul/2026 – Rev. 55 (22/07)", "Tabela set/2026", "Tabela nov/2026"], "obs": "Tabela de preço fechado: o total não é indexado (só as parcelas são corrigidas pelo CUB), então cada mudança de valor aqui é decisão de preço da Speranzini. ATENÇÃO na leitura da queda de 2025 — ela é real em valor nominal, mas parte dela é reestruturação do plano de pagamento e não desconto no imóvel. A Speranzini mexeu no plano três vezes em doze meses: jul e ago/2025 tinham entrada + quatro reforços de R$ 95.000 + 80x; de out a dez/2025 passou a três reforços de R$ 80.000 + 80x; em mar/2026 encurtou o parcelamento para 70x; e de abr/2026 em diante ficou em dois reforços de R$ 100.000 + 70x. O apto 101 ilustra bem: R$ 180.000 + 4 × 95.000 + 80 × 9.250 = R$ 1.300.000 em jul/2025, contra R$ 180.000 + 3 × 80.000 + 80 × 8.500 = R$ 1.100.000 em out/2025 — o comprador paga R$ 200.000 menos, mas um reforço inteiro desapareceu da conta. Com essa ressalva, o desenho da série é claro e igual para todas as unidades: pico em jul-ago/2025, piso em nov/2025 (o 202 caiu 22,2%, de R$ 1.350.000 para R$ 1.050.000), recuperação parcial até abr/2026 e congelamento absoluto de abr a jul/2026 — quatro tabelas seguidas sem um real de diferença em nenhuma unidade. E ninguém voltou ao preço de 2025: de jul/2025 a jul/2026 todas as unidades estão abaixo, entre −4,2% (1302 e 1702) e −13,8% (402). Houve ainda dois descontos pontuais em jun/2026, os dois em unidades que saíram da tabela no mês seguinte: o 101 caiu de R$ 1.100.000 para R$ 930.000 (−15,45%) e o 301 de R$ 1.250.000 para R$ 1.170.000 (−6,40%) — queima dos dois andares mais baixos. O estoque encolheu de 27 unidades em jul/2025 para 19 em jul/2026, mas com movimento nos dois sentidos: cinco unidades entraram na tabela só em abr/2026 (602, 901, 1001, 1401 e 1601), provavelmente distratos, e por isso a linha delas começa vazia. Sobre as fontes: são dez tabelas, Rev. 20 a 55. Onde havia mais de uma tabela do mesmo mês usei sempre a revisão mais alta, descartando as Rev. 28 (dez/2025), 33 (mar/2026), 39 e 43 (abr/2026), 46 (mai/2026), 49 e 50 (jun/2026) e 54 (jul/2026). As tabelas de jul e ago/2025 trazem as duas o número Rev. 20 com datas de revisão diferentes (18/07 e 29/08), e os valores são idênticos nas duas. Faltam set/2025, jan/2026, fev/2026 e ago/2026; set/2025 é a mais importante, porque é dentro desse vão que a queda começou e sem ela não há como datá-la. A série foi conferida de duas formas independentes: as 160 linhas das dez tabelas fecham todas em entrada + reforços + N × parcela = total, e a coluna de jul/2026 bate unidade por unidade com a tabela de vendas que já estava na base do comparativo. Em set/2026 os preços das 14 unidades restantes se repetiram — o congelamento já vai de abril a setembro — e a condição mudou: entrada de R$ 250.000 e 65 parcelas no lugar de 70. Saíram 202, 501 e 502. Ago/2026 não tem tabela na pasta. Em nov/2026 os preços das 15 unidades se repetiram de novo (congelados desde abril) e mudou só a condição: entrada de R$ 280.000 + um reforço de R$ 130.000 em jun/27 + 65 parcelas, no lugar de R$ 250.000 + dois reforços de R$ 100.000 (dez/26 e jun/27).", "unidades": {"101": [1300000, 1300000, 1100000, 990000, 1050000, 1050000, 1100000, 1100000, 930000, null, null, null], "102": [1300000, 1300000, 1100000, 990000, 1050000, 1050000, 1100000, 1100000, null, null, null, null], "201": [1350000, 1350000, 1150000, 1050000, null, null, null, null, null, null, null, null], "202": [1350000, 1350000, 1150000, 1050000, 1110000, 1110000, 1170000, 1170000, 1170000, 1170000, null, null], "301": [1400000, 1400000, 1200000, 1100000, 1170000, 1170000, 1250000, 1250000, 1170000, null, null, null], "402": [1450000, 1450000, 1200000, 1100000, 1170000, 1170000, 1250000, 1250000, 1250000, 1250000, null, null], "501": [1480000, 1480000, 1200000, 1200000, 1270000, 1270000, 1360000, 1360000, 1360000, 1360000, null, null], "502": [1480000, 1480000, 1200000, 1200000, 1270000, 1270000, 1360000, 1360000, 1360000, 1360000, null, 1360000], "601": [1500000, 1500000, 1200000, 1200000, 1270000, 1270000, 1360000, 1360000, 1360000, 1360000, null, null], "602": [null, null, null, null, null, null, 1360000, 1360000, 1360000, 1360000, 1360000, 1360000], "701": [1500000, 1500000, 1200000, 1200000, null, null, null, null, null, null, null, null], "702": [1500000, 1500000, 1200000, 1200000, 1270000, 1270000, null, null, null, null, null, null], "801": [1550000, 1550000, 1250000, 1250000, 1330000, 1330000, 1420000, 1420000, 1420000, 1420000, 1420000, 1420000], "802": [1550000, 1550000, 1250000, 1250000, 1330000, 1330000, 1420000, 1420000, 1420000, 1420000, 1420000, 1420000], "901": [null, null, null, null, null, null, 1463000, 1463000, 1463000, 1463000, 1463000, 1463000], "902": [1570000, 1570000, 1250000, 1250000, 1330000, 1330000, 1463000, 1463000, 1463000, 1463000, 1463000, 1463000], "1001": [null, null, null, null, null, null, 1463000, 1463000, 1463000, 1463000, 1463000, 1463000], "1002": [1600000, 1600000, 1250000, 1250000, 1330000, 1330000, null, null, null, null, null, null], "1101": [1650000, 1650000, 1250000, 1250000, 1330000, 1330000, 1463000, 1463000, 1463000, 1463000, 1463000, 1463000], "1102": [1650000, 1650000, 1250000, 1250000, 1330000, 1330000, null, null, null, null, null, null], "1201": [1700000, 1700000, 1250000, 1250000, 1330000, null, null, null, null, null, null, null], "1301": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, 1628000, 1628000, 1628000, 1628000, 1628000, 1628000], "1302": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, 1628000, 1628000, 1628000, 1628000, 1628000, 1628000], "1401": [null, null, null, null, null, null, 1628000, 1628000, 1628000, 1628000, 1628000, 1628000], "1402": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, 1628000, 1628000, 1628000, 1628000, 1628000, 1628000], "1501": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, null, null, null, null, null, null], "1502": [1700000, 1700000, 1400000, 1400000, 1480000, 1480000, 1628000, 1628000, 1628000, 1628000, 1628000, 1628000], "1601": [null, null, null, null, null, null, 1660000, 1660000, 1660000, 1660000, 1660000, 1660000], "1602": [1750000, 1750000, 1400000, 1400000, null, null, null, null, null, null, null, null], "1701": [1770000, 1770000, 1450000, 1450000, null, null, null, null, null, null, null, null], "1702": [1770000, 1770000, 1450000, 1450000, 1540000, 1540000, 1694000, 1694000, 1694000, 1694000, 1694000, 1694000], "1802": [1780000, 1780000, 1450000, 1450000, 1540000, null, null, null, null, null, null, null]}},
+  "Ed. Edimburgo": {"datas": ["2025-09", "2025-11", "2025-12", "2026-04-02", "2026-04-10", "2026-10", "2026-11"], "fontes": ["Tabela set/2025 – Rev. 31 (01/09)", "Tabela nov/2025 – Rev. 35 (07/11)", "Tabela dez/2025 – Rev. 36 (03/12)", "Tabela abr/2026 – Rev. 41 (02/04)", "Tabela abr/2026 – Rev. 42 (10/04)", "Tabela out/2026", "Tabela nov/2026"], "obs": "Tabela de preço fechado, não indexada (só as parcelas são corrigidas pelo CUB), então cada mudança aqui é decisão de preço da Speranzini. Este é o reajuste mais precisamente datável de todo o material que temos: o preço ficou parado sete meses, de set/2025 até a Rev. 41 de 02/04/2026, e subiu cerca de 10% na Rev. 42 de 10/04/2026 — uma janela de oito dias. Por isso os dois pontos de abril entram na série com data completa em vez de só o mês; sem eles o salto pareceria diluído entre dezembro e abril, quando na verdade foi de uma vez. O aumento foi praticamente linear em toda a tabela, de +9,85% (702 e 705) a +10,11% (o 102), sem tratamento diferente por unidade ou por andar. E enquanto o total ficava congelado, a condição de pagamento endureceu três vezes: set/2025 era entrada de R$ 80.000 + três reforços de R$ 15.000 + 85x de R$ 3.764,71; nov e dez/2025 passaram a entrada de R$ 85.000 + dois reforços de R$ 20.000 + 80x de R$ 4.000; e abr/2026 encurtou para 75x de R$ 4.266,67. Os três dão o mesmo total de R$ 445.000 no apto 102, mas a parcela mensal subiu 13% e um reforço desapareceu — mesmo preço, mais caixa antecipado, exatamente o padrão que a tabela do Ed. Toulouse já mostrava. O estoque caiu de 16 unidades em set/2025 para 10 em abr/2026: saíram 101, 103, 202, 502, 604 e 706. Hoje a tabela de vendas na base do comparativo tem sete, e os valores dela são idênticos aos da Rev. 42 — ou seja, o preço se manteve nos quatro meses seguintes ao reajuste. Ressalvas: as tabelas do Edimburgo não trazem linha de \"mês de referência\" como as do Sunset, só a data da revisão, e foi dela que derivei as datas da série. Faltam out/2025 e jan a mar/2026, mas isso não prejudica a leitura porque a Rev. 41 prova que o preço não se moveu nesse vão; o que falta de verdade é de mai/2026 em diante. Uma correção para o card: o cadastro em DATA traz condicao \"Entrada + 85x\", que era a condição de set/2025 — a tabela vigente é 75x. A série foi conferida de duas formas: as 49 linhas das cinco tabelas fecham todas em entrada + reforços + N × parcela = total, e a Rev. 42 bate unidade por unidade com a tabela de vendas nas sete unidades que restam. Em out/2026 a tabela repetiu os preços da Rev. 44 e só perdeu o apto 702. Em nov/2026 os preços se repetiram; o 705 saiu e o 805, que tinha saído vendido em 23/10, voltou à tabela pelo mesmo preço. A condição mudou: entrada de R$ 100.000 + reforço de R$ 25.000 em jun/27 + 60 parcelas.", "unidades": {"101": [445000, 445000, 445000, null, null, null, null], "102": [445000, 445000, 445000, 445000, 490000, null, null], "103": [445000, null, null, null, null, null, null], "202": [489000, null, null, null, null, null, null], "205": [489000, 489000, 489000, 489000, 538000, 538000, 538000], "206": [489000, 489000, 489000, 489000, 538000, 538000, 538000], "305": [500000, 500000, 500000, 500000, 550000, 550000, 550000], "502": [511000, 511000, 511000, null, null, null, null], "505": [511000, 511000, 511000, 511000, 562000, null, null], "604": [523000, 523000, null, null, null, null, null], "605": [523000, 523000, 523000, 523000, 575000, 575000, 575000], "702": [528000, 528000, 528000, 528000, 580000, null, null], "705": [528000, 528000, 528000, 528000, 580000, 580000, null], "706": [528000, null, null, null, null, null, null], "802": [533000, 533000, 533000, 533000, 586000, null, null], "805": [533000, 533000, 533000, 533000, 586000, 586000, 586000]}},
+  "Princess Tower": {"datas": ["2025-08", "2025-10", "2025-11", "2026-02", "2026-04", "2026-11"], "fontes": ["Tabela ago/2025 – Rev. 00 (20/08)", "Tabela out/2025 – Rev. 05 (28/10)", "Tabela nov/2025 – Rev. 07 (25/11)", "Tabela fev/2026 – Rev. 10 (11/02)", "Tabela abr/2026 – Rev. 14 (10/04)", "Tabela nov/2026"], "obs": "Tabela de preço fechado, não indexada (só as parcelas são corrigidas pelo CUB). A descoberta mais importante aqui só aparece cruzando com o Ed. Edimburgo: a Rev. 14 do Princess Tower é datada de 10/04/2026, exatamente a mesma data da Rev. 42 do Edimburgo, e as duas trazem o mesmo aumento linear de 10%. Não é coincidência de leitura — foi uma reprecificação de carteira da Speranzini naquele dia. No Princess o +10% é exato em praticamente toda a tabela: 1.200.000 para 1.320.000, 860.000 para 946.000, 750.000 para 825.000, 950.000 para 1.045.000, 1.050.000 para 1.155.000. Antes disso, porém, o movimento tinha sido para baixo, e é aí que a leitura fica interessante. De ago para out/2025 quase toda a tabela caiu: os aptos de final 01 e 02 foram de 870.000 para 800.000 (−8,0%), os de final 03 e 04 de 800.000 para 750.000 (−6,3%) e o 703 caiu 9,5%, de 840.000 para 760.000. Ficou tudo parado em nov/2025, houve recuperação parcial em fev/2026 concentrada nos finais 01 e 02 e nos andares acima do oitavo, e então veio o +10% de abril. O resultado líquido de ago/2025 a abr/2026 é muito desigual e vale olhar unidade por unidade: as coberturas 101 e 102 e os aptos 1503 e 1504 fizeram exatamente +10,0%, porque não participaram da queda de outubro; os finais 01 e 02 dos andares 8 a 14 fizeram entre +11,7% e +17,3%; e os finais 03 e 04 dos andares baixos ficaram de lado ou negativos — o 703 está em −0,5%, o 903 em −1,1% e o 1003 em −1,7%. Ou seja, quem comprou em agosto de 2025 um final 03 de andar baixo tem hoje o mesmo preço de tabela ou menos, enquanto quem comprou um final 01 de andar alto acumulou 17%. Três tipologias convivem na mesma tabela: o grosso é de 118 m², e os aptos 101 (183,91 m²) e 102 (177,93 m²) são as unidades com cobertura aberta adicional, o que explica partirem de 1.200.000 enquanto o resto começa entre 750.000 e 950.000. O parcelamento encurtou de 80x para 75x na Rev. 14 e o cronograma de reforços foi antecipado em seis meses: na Rev. 00 os seis reforços iam de jun/2027 a dez/2029, na Rev. 14 vão de dez/2026 a jun/2029. Somado ao +10%, é mais dinheiro e mais cedo. O estoque caiu de 50 unidades em ago/2025 para 38 em abr/2026, e a tabela de vendas atual tem 37 — saiu o 204. O apto 1402 saiu da tabela entre ago e out/2025 e voltou em fev/2026 pelo mesmo preço do 1401, daí o vão na linha dele. Sobre as fontes: foram oito arquivos, sete únicos, porque a Rev. 02 veio duas vezes (arquivos idênticos byte a byte). Descartei a Rev. 02 de 07/10 em favor da Rev. 05 de 28/10 — mesmo mês, valores idênticos, só com unidades vendidas a menos — e a Rev. 10 de 02/02 em favor da Rev. 10 de 11/02, cuja única diferença é a volta do 1402. Faltam set/2025, dez/2025, jan/2026, mar/2026 e tudo de mai/2026 em diante; como a tabela de vendas vigente é idêntica à Rev. 14, o preço não se moveu nos quatro meses seguintes ao reajuste. A série foi conferida de duas formas: as 190 linhas das sete tabelas fecham em entrada + reforços + N × parcela = total, e a coluna de abr/2026 bate 37 de 37 unidades com a tabela de vendas do comparativo. Em nov/2026 (a série pula de abr para nov, porque as tabelas de jul e set/2026 repetiram os preços de abril) os 32 preços restantes continuam os de abril; desde abril saíram 204, 804, 1202 e 1402 e, de set para nov, 701 e 1003. A condição passou de 6 reforços semestrais (dez/26 a jun/29) para 5 (jun/27 a jun/29), maiores — R$ 36.000 nos finais 01 e 02, R$ 30.000 nos 03 e 04 —, com a mesma soma.", "unidades": {"101": [1200000, 1200000, 1200000, 1200000, 1320000, 1320000], "102": [1200000, 1200000, 1200000, 1200000, 1320000, 1320000], "201": [870000, 800000, 800000, 860000, 946000, 946000], "202": [870000, 800000, 800000, 860000, 946000, 946000], "203": [800000, 750000, 750000, 750000, 825000, 825000], "204": [800000, 750000, 750000, 750000, 825000, null], "301": [872000, 800000, 800000, 860000, 946000, 946000], "302": [872000, 800000, 800000, 860000, 946000, 946000], "303": [805000, 760000, 760000, 760000, 836000, 836000], "304": [805000, 760000, 760000, 760000, 836000, 836000], "401": [875000, 800000, 800000, 860000, 946000, 946000], "403": [807000, 760000, 760000, 760000, 836000, 836000], "404": [807000, 760000, 760000, 760000, 836000, 836000], "501": [877000, 800000, 800000, 860000, 946000, 946000], "502": [877000, 800000, 800000, 860000, null, null], "504": [809000, null, null, null, null, null], "601": [889000, 800000, 800000, 860000, 946000, 946000], "602": [889000, 800000, 800000, null, null, null], "603": [815000, 760000, 760000, 760000, 836000, 836000], "604": [815000, null, null, null, null, null], "701": [890000, 800000, 800000, 860000, 946000, null], "702": [890000, null, null, null, null, null], "703": [840000, 760000, 760000, 760000, 836000, 836000], "704": [840000, 760000, null, null, null, null], "802": [891000, 850000, 850000, 950000, 1045000, 1045000], "803": [850000, 800000, 800000, 800000, 880000, 880000], "804": [850000, 800000, 800000, 800000, 880000, null], "901": [900000, 850000, 850000, 950000, 1045000, 1045000], "902": [900000, 850000, 850000, null, null, null], "903": [890000, 800000, 800000, 800000, 880000, 880000], "904": [890000, 800000, null, null, null, null], "1001": [905000, 850000, 850000, 950000, 1045000, 1045000], "1002": [905000, null, null, null, null, null], "1003": [895000, 800000, 800000, 800000, 880000, null], "1004": [895000, null, null, null, null, null], "1101": [910000, 910000, 910000, 970000, 1067000, 1067000], "1103": [905000, 850000, 850000, 850000, 935000, 935000], "1104": [905000, 850000, 850000, 850000, null, null], "1201": [920000, 920000, 920000, 980000, 1078000, 1078000], "1202": [920000, 920000, 920000, 980000, 1078000, null], "1203": [910000, 850000, 850000, 850000, 935000, 935000], "1301": [950000, 950000, 950000, 990000, 1089000, 1089000], "1302": [950000, 950000, 950000, 990000, 1089000, 1089000], "1303": [920000, 850000, 850000, 850000, 935000, 935000], "1304": [920000, 850000, 850000, null, null, null], "1401": [980000, 980000, 980000, 995000, 1095000, 1095000], "1402": [980000, null, null, 995000, 1095000, null], "1403": [940000, 950000, 950000, 950000, 1045000, 1045000], "1503": [1050000, 1050000, 1050000, 1050000, 1155000, 1155000], "1504": [1050000, 1050000, 1050000, 1050000, 1155000, 1155000]}},
   "Lago di Garda": {"datas": ["2025-01", "2026-06"], "fontes": ["Lista de lotes jan/2025", "Lista de lotes jun/2026"], "obs": "ATENÇÃO: esta é a única série do comparativo com só dois pontos, e é de propósito. Recebi cinco listas do Lago di Garda (jan/2025, out/2025, mar/2026, abr/2026 e jun/2026) e só consegui validar duas delas; as outras três entrariam com preço errado por lote, então ficaram fora. O que valida jan/2025: a soma dos 97 lotes que extraí dá R$ 58.731.557,00, exatamente o total impresso no próprio documento, sem um centavo de diferença. O que valida jun/2026: ela é a base da tabela de vendas que já está no comparativo, e obedece à regra de preço R$ 1.250,00 por m² com piso de R$ 450.000,00 em 85 dos 86 lotes (a única exceção é o lote 32, que ficou em R$ 449.650 sem o piso). Por que descartei out/2025, mar/2026 e abr/2026: nenhuma das três traz total declarado, logo não há como conferir, e as três têm a coluna de valor desalinhada em relação ao número do lote na extração do PDF. Em abr/2026 dá para ver os valores trocando de lugar comparando com mar/2026 — o lote 20 aparece com R$ 621.200 e o 23 com R$ 706.500, exatamente invertidos entre as duas tabelas — e o lote 1 exibe o texto \"ABR.26\" no lugar do valor. Em out/2025 o lote 64 aparece com R$ 686.800, que é o valor do lote 63 em janeiro, e o lote 86 (1.005,87 m²) sai a R$ 582 por m², um terço do resto da tabela. Usar esses meses seria atribuir a cada lote o preço do vizinho, e num material que vai para cliente isso não é aceitável. Agora o que os dois pontos válidos mostram, que é a informação importante: o preço CAIU cerca de 20% em dezessete meses. Um lote padrão de 350 m² saiu de R$ 565.600 para R$ 450.000, −20,0% na média dos 47 lotes dessa faixa; entre 356 e 420 m² a queda média é de 21,3% em 32 lotes; e acima de 420 m², onde o piso não pega, 21,1% em 7 lotes. O 53, de 480,38 m², foi de R$ 767.600 para R$ 600.475. A mediana do R$/m² caiu de 1.616 para 1.286. E não foi só o número que mudou, foi a lógica de precificação: até mar/2026 as listas traziam valores em faixas por área, com a matrícula de cada lote e coluna \"VALOR TOTAL\" ou \"VALOR LOTE\"; o documento de jun/2026 se chama \"LOTES LAGO Di GARDA\", a coluna virou \"Investimento\", a matrícula desapareceu e o preço passou a ser uma conta única de R$ 1.250 por m². Junto disso o financiamento direto foi de 60x em jan/2025 para até 120x, que é o que o card já registra. Ou seja, a leitura não é reajuste negativo: é liquidação de estoque, com preço menor e prazo dobrado. Para melhorar esta série basta qualquer lista do Lago que traga total declarado, como a de jan/2025 — ou as mesmas de out/2025, mar e abr/2026 em Excel ou CSV em vez de PDF, porque o problema está na extração, não nos dados.", "unidades": {"1": [565600, 450000], "2": [565600, 450000], "3": [565600, 450000], "4": [565600, 450000], "5": [565600, 450000], "6": [565600, 450000], "7": [565600, 450000], "8": [565600, 450000], "9": [565600, 450000], "10": [565600, null], "11": [643370, null], "12": [626200, 480562], "13": [585800, 453812], "14": [565600, 450000], "15": [565600, 450000], "16": [565600, 450000], "17": [565600, 450000], "18": [565600, 450000], "19": [565600, 450000], "20": [656500, 535162], "21": [666600, 515187], "22": [565600, 450000], "23": [565600, 450000], "24": [565600, 450000], "25": [565600, 450000], "26": [565600, 450000], "27": [565600, 450000], "28": [565600, 450000], "29": [545400, 450000], "30": [531502, null], "31": [535300, 450000], "32": [565600, 449650], "33": [565600, 462250], "34": [666600, 516750], "35": [676700, null], "36": [676700, 525000], "37": [676700, 525000], "38": [676700, 525000], "39": [676700, 525000], "40": [656500, 508950], "41": [531260, 450000], "42": [757500, 581625], "43": [565600, 450000], "44": [560000, 450000], "45": [565600, 450000], "46": [565600, 450000], "47": [565600, 450000], "48": [565600, 450000], "49": [565600, 450000], "50": [565600, 450000], "51": [545400, 468000], "52": [595900, 467500], "53": [767600, 600475], "54": [565600, 450000], "55": [565600, 450000], "56": [565600, 450000], "57": [565600, null], "58": [560000, null], "59": [565600, 450000], "60": [565600, 450000], "61": [549440, 450000], "62": [545400, 487500], "63": [686800, 545187], "64": [565600, 450000], "65": [565600, 450000], "66": [565600, 450000], "67": [757500, 612500], "68": [676700, 525000], "69": [565600, null], "70": [727200, 563625], "71": [565600, 450000], "72": [565600, 450000], "73": [560000, null], "74": [565600, 450000], "75": [565600, 450000], "76": [545400, null], "77": [606000, 490000], "78": [600000, null], "79": [606000, 490000], "80": [606000, 490000], "81": [585800, 455000], "82": [585800, 455000], "83": [585800, 455000], "84": [585800, 453075], "85": [686800, 535562], "86": [1625485, null], "87": [535300, 450000], "88": [606000, 470475], "89": [626200, 486150], "90": [626200, 486150], "91": [626200, 486150], "92": [626200, 486150], "93": [626200, 486150], "94": [626200, 486150], "95": [626200, 486150], "96": [626200, 486150], "97": [626200, 486150]}},
    "Vista 43 - 2 dormitórios": {
       "datas": [
