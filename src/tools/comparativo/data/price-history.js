@@ -952,44 +952,54 @@ const PRICE_HISTORY = {
    "Vista 43 - 2 dormitórios": {
       "datas": [
         "2026-09",
-        "2026-10"
+        "2026-10",
+        "2026-11"
       ],
       "fontes": [
         "Tabela zero 09-26 (lista de espera)",
-        "Tabela 09-26 com o CUB de out/2026 (+0,41%)"
+        "Tabela 09-26 com o CUB de out/2026 (+0,41%)",
+        "Tabela 09-26 com o CUB de nov/2026 (+0,35%)"
       ],
-      "obs": "Unidades de 2 dormitórios do Vista 43, 8 das 59 da tabela — uma de cada área distinta, para a amostra cobrir a planta inteira (79,02 m², 79,27 m², 79,81 m², 80,06 m², 80,10 m², 86,57 m², 86,80 m², 88,32 m²). Base: o valor total da condição padrão, a mesma dos cards e a mesma regra das outras séries. O segundo ponto, out/2026, é a mesma tabela com o CUB de outubro: todas as unidades subiram exatamente 0,4141%, sem reprecificação. As da amostra que saíram da tabela ficam sem valor nesse mês. Vale lembrar que são preços referenciais: o empreendimento ainda não está disponível para comercialização.",
+      "obs": "Unidades de 2 dormitórios do Vista 43, 8 das 59 da tabela — uma de cada área distinta, para a amostra cobrir a planta inteira (79,02 m², 79,27 m², 79,81 m², 80,06 m², 80,10 m², 86,57 m², 86,80 m², 88,32 m²). Base: o valor total da condição padrão, a mesma dos cards e a mesma regra das outras séries. O segundo ponto, out/2026, é a mesma tabela com o CUB de outubro: todas as unidades subiram exatamente 0,4141%, sem reprecificação. As da amostra que saíram da tabela ficam sem valor nesse mês. Vale lembrar que são preços referenciais: o empreendimento ainda não está disponível para comercialização. O terceiro ponto, nov/2026, é a mesma tabela com o CUB de novembro: todas subiram exatamente 0,3465%, de novo sem reprecificação.",
       "unidades": {
         "L3103": [
           972081.73,
-          976106.84
+          976106.84,
+          979488.79
         ],
         "L1003": [
           886988.05,
-          890660.81
+          890660.81,
+          893746.71
         ],
         "L3102": [
           978886.1,
-          982939.38
+          982939.38,
+          986345
         ],
         "L1002": [
           893163.57,
-          896861.9
+          896861.9,
+          899969.29
         ],
         "L1001": [
           895123.54,
-          898829.99
+          898829.99,
+          901944.2
         ],
         "L1004": [
           956845.75,
-          960807.77
+          960807.77,
+          964136.71
         ],
         "L1901": [
           1028887.97,
-          1033148.29
+          1033148.29,
+          1036727.87
         ],
         "L3404": [
           1077429.58,
+          null,
           null
         ]
       }
@@ -997,61 +1007,84 @@ const PRICE_HISTORY = {
    "Vista 43 - Studios": {
       "datas": [
         "2026-09",
-        "2026-10"
+        "2026-10",
+        "2026-11"
       ],
       "fontes": [
         "Tabela zero 09-26 (lista de espera)",
-        "Tabela 09-26 com o CUB de out/2026 (+0,41%)"
+        "Tabela 09-26 com o CUB de out/2026 (+0,41%)",
+        "Tabela 09-26 com o CUB de nov/2026 (+0,35%)"
       ],
-      "obs": "Studios do Vista 43, 5 dos 55 do tipo — uma unidade de cada área distinta (26,85 m², 27,67 m², 29,53 m², 37,14 m², 40,26 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. O segundo ponto, out/2026, é a mesma tabela com o CUB de outubro: todas as unidades subiram exatamente 0,4141%, sem reprecificação. As da amostra que saíram da tabela ficam sem valor nesse mês.",
+      "obs": "Studios do Vista 43, 5 dos 55 do tipo — uma unidade de cada área distinta (26,85 m², 27,67 m², 29,53 m², 37,14 m², 40,26 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. O segundo ponto, out/2026, é a mesma tabela com o CUB de outubro: todas as unidades subiram exatamente 0,4141%, sem reprecificação. As da amostra que saíram da tabela ficam sem valor nesse mês. Em nov/2026 nenhuma das cinco estava mais na tabela, então a amostra ganhou a S1205 (26,85 m², com vaga) e a S1311 (40,26 m²), com os valores de outubro e novembro. O terceiro ponto, nov/2026, é a mesma tabela com o CUB de novembro: todas subiram exatamente 0,3465%, de novo sem reprecificação.",
       "unidades": {
         "S1004": [
           288402.51,
+          null,
           null
         ],
         "S1002": [
           297210.33,
-          298440.99
+          298440.99,
+          null
         ],
         "S3005": [
           402312.93,
+          null,
           null
         ],
         "S1112": [
           407467.89,
+          null,
           null
         ],
         "S1010": [
           433729.18,
+          null,
           null
+        ],
+        "S1205": [
+          null,
+          352205.23,
+          353425.53
+        ],
+        "S1311": [
+          null,
+          446393.15,
+          447939.78
         ]
       }
     },
    "Vista 43 - Loft Duplex": {
       "datas": [
         "2026-09",
-        "2026-10"
+        "2026-10",
+        "2026-11"
       ],
       "fontes": [
         "Tabela zero 09-26 (lista de espera)",
-        "Tabela 09-26 com o CUB de out/2026 (+0,41%)"
+        "Tabela 09-26 com o CUB de out/2026 (+0,41%)",
+        "Tabela 09-26 com o CUB de nov/2026 (+0,35%)"
       ],
-      "obs": "Loft duplex do Vista 43, 4 dos 28 do tipo — uma unidade de cada área distinta (46,84 m², 48,83 m², 50,32 m², 50,64 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. O segundo ponto, out/2026, é a mesma tabela com o CUB de outubro: todas as unidades subiram exatamente 0,4141%, sem reprecificação. As da amostra que saíram da tabela ficam sem valor nesse mês.",
+      "obs": "Loft duplex do Vista 43, 4 dos 28 do tipo — uma unidade de cada área distinta (46,84 m², 48,83 m², 50,32 m², 50,64 m²). Base: o valor total da condição padrão, a mesma dos cards. As unidades com terraço ficam de fora, como nos cards. O segundo ponto, out/2026, é a mesma tabela com o CUB de outubro: todas as unidades subiram exatamente 0,4141%, sem reprecificação. As da amostra que saíram da tabela ficam sem valor nesse mês. O terceiro ponto, nov/2026, é a mesma tabela com o CUB de novembro: todas subiram exatamente 0,3465%, de novo sem reprecificação.",
       "unidades": {
         "S1804": [
           504237.73,
-          506325.63
+          506325.63,
+          508079.91
         ],
         "S1802": [
           523323.62,
-          525490.55
+          525490.55,
+          527311.24
         ],
         "S2208": [
           547678.05,
+          null,
           null
         ],
         "S1801": [
           541655.49,
+          null,
           null
         ]
       }
