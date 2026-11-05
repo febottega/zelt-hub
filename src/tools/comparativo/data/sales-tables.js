@@ -2815,7 +2815,7 @@ const SALES_TABLES = {
   "Cipriani Tower": {
     "folderId": "15Vy0NNYnRatgWewAmS5IE1TERxkejUr3",
     "source": "Disponibilidade (O.M.A.)",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -2984,7 +2984,7 @@ const SALES_TABLES = {
         "Disponível"
       ]
     ],
-    "note": "14 unidades na tabela de outubro/2026: 11 disponíveis e 3 reservadas (604, 1404 e 1604). Condição: entrada + 5 reforços de R$ 30.000,00 + 84 parcelas — entrada + reforços + parcelas devolvem o total em todas as linhas (diferença máxima de R$ 0,40, arredondamento da parcela). Tipologias: 2 suítes com 86,46 m² (finais 01), 86,35 m² (finais 02) e 84,00 m² (finais 04), e a 2501, de 2 suítes com 150,06 m², que entrou nesta tabela por R$ 2.100.000,00 — fica só aqui, fora do card dos 2 suítes, por ser bem maior que as outras. Os valores foram arredondados em outubro: todos passaram a fechar em milhares redondos (o 504 foi de R$ 912.783,56 para R$ 915.000,00, o 1604 de R$ 1.046.284,59 para R$ 1.025.000,00), e na prática quase todos baixaram: de −0,05% (604) a −2,03% (1604), mais nos andares altos; só o 504 subiu (+0,24%). Saíram da tabela 1201, 1204, 1301, 1304 e a 1503, a única de 3 dormitórios.",
+    "note": "14 unidades na tabela de novembro/2026, com os mesmos valores e a mesma situação de outubro: 11 disponíveis e 3 reservadas (604, 1404 e 1604). Condição: entrada + 5 reforços de R$ 30.000,00 + 84 parcelas — entrada + reforços + parcelas devolvem o total em todas as linhas (diferença máxima de R$ 0,40, arredondamento da parcela). Tipologias: 2 suítes com 86,46 m² (finais 01), 86,35 m² (finais 02) e 84,00 m² (finais 04), e a 2501, de 2 suítes com 150,06 m², que entrou nesta tabela por R$ 2.100.000,00 — fica só aqui, fora do card dos 2 suítes, por ser bem maior que as outras. Os valores foram arredondados em outubro: todos passaram a fechar em milhares redondos (o 504 foi de R$ 912.783,56 para R$ 915.000,00, o 1604 de R$ 1.046.284,59 para R$ 1.025.000,00), e na prática quase todos baixaram: de −0,05% (604) a −2,03% (1604), mais nos andares altos; só o 504 subiu (+0,24%). Saíram da tabela 1201, 1204, 1301, 1304 e a 1503, a única de 3 dormitórios.",
     "summary": {
       "bits": [
         {
@@ -4826,7 +4826,7 @@ const SALES_TABLES = {
   "San Blas": {
     "folderId": "1A6LaiIS1Esu5_szcNDY1xmBwN_jus82u",
     "source": "Disponibilidade (O.M.A.)",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -4863,7 +4863,7 @@ const SALES_TABLES = {
         "R$ 795.000,00"
       ]
     ],
-    "note": "Residencial San Blas — Rua Hermann Huscher, 790, Garcia. 2 unidades disponíveis na tabela de outubro/2026: a 1701 e a 2006, com os mesmos valores de setembro. Uma vaga dupla já inclusa no valor do apartamento. Duas tipologias: a diferenciada 1701 (219,25 m², 4 suítes) em 84 parcelas, e as de 2 dormitórios com duas suítes (89,31 m²) em 60 parcelas — em todas, entrada + 5 reforços + parcelas mensais. Na tabela de outubro saiu a 2205; antes já tinham saído a 1602, a 2005 e a 2206. Lazer: piscina, quadra esportiva, academia, salão de festas, sala de jogos, espaço pet. Empreendimento entregue (confirmado pelo Felipe em 30/10/2026; a previsão das tabelas de dez/2023 e fev/2024 era setembro/2026).",
+    "note": "Residencial San Blas — Rua Hermann Huscher, 790, Garcia. 2 unidades disponíveis na tabela de novembro/2026: a 1701 e a 2006, com os mesmos valores de setembro e outubro. Uma vaga dupla já inclusa no valor do apartamento. Duas tipologias: a diferenciada 1701 (219,25 m², 4 suítes) em 84 parcelas, e as de 2 dormitórios com duas suítes (89,31 m²) em 60 parcelas — em todas, entrada + 5 reforços + parcelas mensais. Na tabela de outubro saiu a 2205; antes já tinham saído a 1602, a 2005 e a 2206. Lazer: piscina, quadra esportiva, academia, salão de festas, sala de jogos, espaço pet. Empreendimento entregue (confirmado pelo Felipe em 30/10/2026; a previsão das tabelas de dez/2023 e fev/2024 era setembro/2026).",
     "summary": {
       "bits": [
         {
