@@ -2,7 +2,7 @@ const SALES_TABLES = {
   "Wissen": {
     "folderId": "1TQxbJtsFgqECLvO2y0Pja2REXij3cGwm",
     "source": "Tabela da construtora",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -13,7 +13,7 @@ const SALES_TABLES = {
       "Ato (1x)",
       "Parcelas mensais",
       "Reforços anuais",
-      "À vista (−15%)",
+      "À vista (−20%, Black November)",
       "Até 48x / financ. (−6%)"
     ],
     "rows": [
@@ -22,27 +22,27 @@ const SALES_TABLES = {
         "2 dormitórios · 84x + 7 reforços",
         "58,49 m²",
         "19",
-        "R$ 562.326,90",
-        "R$ 112.465,46",
-        "R$ 4.016,62",
-        "R$ 16.066,48",
-        "R$ 477.977,87",
-        "R$ 528.587,29"
+        "R$ 564.275,21",
+        "R$ 112.854,80",
+        "R$ 4.030,54",
+        "R$ 16.122,15",
+        "R$ 451.420,17",
+        "R$ 530.418,70"
       ],
       [
         "1301",
         "2 dormitórios · 84x + 7 reforços",
         "58,33 m²",
         "09 (Box 04)",
-        "R$ 581.751,80",
-        "R$ 116.350,36",
-        "R$ 4.155,37",
-        "R$ 16.621,48",
-        "R$ 494.489,03",
-        "R$ 546.846,69"
+        "R$ 583.767,42",
+        "R$ 116.753,25",
+        "R$ 4.169,77",
+        "R$ 16.679,07",
+        "R$ 467.013,94",
+        "R$ 548.741,37"
       ]
     ],
-    "note": "Últimas unidades — em outubro/2026 restam dois apartamentos de 2 dormitórios, o 1201 e o 1301, os dois disponíveis; o studio 1003 saiu da tabela. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%). Descontos: 15% à vista (era 12% em setembro) e 6% pagando em até 48 parcelas ou com financiamento bancário nas chaves. Entrega: outubro/2028. Em outubro os dois subiram exatamente 0,4141% sobre setembro — a variação do CUB (R$ 3.158,88 → R$ 3.171,96), o mesmo índice do Balsini, do N Studios e do Vista 43 —, sem reprecificação; ato + parcelas + reforços devolvem o total ao centavo. Saíram da tabela a 0701, antes de agosto, a 1101 em setembro e o studio 1003 em outubro.",
+    "note": "Últimas unidades — em novembro/2026 restam os dois apartamentos de 2 dormitórios, o 1201 e o 1301, os dois disponíveis. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%) — ato em 30/11/2026, primeira parcela em 14/12/2026, primeiro reforço em 14/11/2027. Descontos: BLACK NOVEMBER, 20% exclusivo para pagamento à vista (era 15% em outubro e 12% em setembro), e 6% pagando em até 48 parcelas ou com financiamento bancário nas chaves. As duas colunas de desconto são calculadas sobre o valor total. Entrega: outubro/2028. Em novembro os dois subiram exatamente 0,3465% sobre outubro — a variação do CUB (R$ 3.171,96 → R$ 3.182,95), o mesmo índice do Balsini, do N Studios e do Vista 43 —, sem reprecificação; ato + parcelas + reforços devolvem o total ao centavo. Saíram da tabela a 0701, antes de agosto, a 1101 em setembro e o studio 1003 em outubro.",
     "summary": {
       "bits": [
         {
@@ -78,7 +78,7 @@ const SALES_TABLES = {
       "alternativas": [
         {
           "bold": "À vista",
-          "nota": "(−15%)",
+          "nota": "(−20%, Black November)",
           "col": 8
         },
         {
@@ -3506,7 +3506,7 @@ const SALES_TABLES = {
   "N Studios": {
     "folderId": "1hjuaDdLupfXwOHNexAUvI5eeumAYYxzs",
     "source": "Tabela de lançamento (Novo Rumo · N Studios by Housi)",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -3524,169 +3524,169 @@ const SALES_TABLES = {
         "107",
         "35,40 m²",
         "—",
-        "R$ 67.645,71",
-        "R$ 3.382,28",
-        "R$ 13.529,13",
-        "R$ 338.228,16",
-        "R$ 321.316,75",
-        "R$ 304.405,34"
+        "R$ 67.880,03",
+        "R$ 3.394,00",
+        "R$ 13.576,00",
+        "R$ 339.400,03",
+        "R$ 322.430,03",
+        "R$ 305.460,03"
       ],
       [
         "201",
         "30,72 m²",
         "—",
-        "R$ 63.905,41",
-        "R$ 3.195,29",
-        "R$ 12.781,14",
-        "R$ 319.528,51",
-        "R$ 303.552,08",
-        "R$ 287.575,66"
+        "R$ 64.126,89",
+        "R$ 3.206,36",
+        "R$ 12.825,42",
+        "R$ 320.635,59",
+        "R$ 304.603,81",
+        "R$ 288.572,03"
       ],
       [
         "203",
         "35,25 m²",
         "—",
-        "R$ 69.066,14",
-        "R$ 3.453,31",
-        "R$ 13.813,24",
-        "R$ 345.330,94",
-        "R$ 328.064,39",
-        "R$ 310.797,85"
+        "R$ 69.305,72",
+        "R$ 3.465,27",
+        "R$ 13.861,10",
+        "R$ 346.527,42",
+        "R$ 329.201,05",
+        "R$ 311.874,68"
       ],
       [
         "204",
         "32,21 m²",
         "—",
-        "R$ 66.190,15",
-        "R$ 3.309,52",
-        "R$ 13.238,07",
-        "R$ 330.951,70",
-        "R$ 314.404,12",
-        "R$ 297.856,53"
+        "R$ 66.419,91",
+        "R$ 3.320,98",
+        "R$ 13.283,93",
+        "R$ 332.098,36",
+        "R$ 315.493,44",
+        "R$ 298.888,52"
       ],
       [
         "207",
         "34,24 m²",
         "—",
-        "R$ 68.063,06",
-        "R$ 3.403,14",
-        "R$ 13.612,57",
-        "R$ 340.314,31",
-        "R$ 323.298,59",
-        "R$ 306.282,88"
+        "R$ 68.298,91",
+        "R$ 3.414,93",
+        "R$ 13.659,74",
+        "R$ 341.493,41",
+        "R$ 324.418,74",
+        "R$ 307.344,07"
       ],
       [
         "304",
         "32,21 m²",
         "—",
-        "R$ 67.719,65",
-        "R$ 3.385,99",
-        "R$ 13.543,95",
-        "R$ 338.598,80",
-        "R$ 321.668,86",
-        "R$ 304.738,92"
+        "R$ 67.954,36",
+        "R$ 3.397,72",
+        "R$ 13.590,88",
+        "R$ 339.771,96",
+        "R$ 322.783,36",
+        "R$ 305.794,76"
       ],
       [
         "401",
         "30,72 m²",
         "—",
-        "R$ 66.901,40",
-        "R$ 3.345,08",
-        "R$ 13.380,31",
-        "R$ 334.507,75",
-        "R$ 317.782,36",
-        "R$ 301.056,98"
+        "R$ 67.133,18",
+        "R$ 3.356,67",
+        "R$ 13.426,67",
+        "R$ 335.666,73",
+        "R$ 318.883,39",
+        "R$ 302.100,06"
       ],
       [
         "403",
         "30,90 m²",
         "—",
-        "R$ 65.251,71",
-        "R$ 3.262,58",
-        "R$ 13.050,32",
-        "R$ 326.258,11",
-        "R$ 309.945,20",
-        "R$ 293.632,30"
+        "R$ 65.477,41",
+        "R$ 3.273,89",
+        "R$ 13.095,54",
+        "R$ 327.388,51",
+        "R$ 311.019,08",
+        "R$ 294.649,66"
       ],
       [
         "405",
         "34,24 m²",
         "10",
-        "R$ 84.378,58",
-        "R$ 4.218,93",
-        "R$ 16.875,72",
-        "R$ 421.892,98",
-        "R$ 400.798,33",
-        "R$ 379.703,68"
+        "R$ 84.670,78",
+        "R$ 4.233,55",
+        "R$ 16.934,19",
+        "R$ 423.354,73",
+        "R$ 402.186,99",
+        "R$ 381.019,26"
       ],
       [
         "501",
         "30,72 m²",
         "—",
-        "R$ 68.362,38",
-        "R$ 3.418,11",
-        "R$ 13.672,45",
-        "R$ 341.811,23",
-        "R$ 324.720,67",
-        "R$ 307.630,11"
+        "R$ 68.598,82",
+        "R$ 3.429,96",
+        "R$ 13.719,82",
+        "R$ 342.995,52",
+        "R$ 325.845,74",
+        "R$ 308.695,97"
       ],
       [
         "601",
         "30,72 m²",
         "—",
-        "R$ 68.798,45",
-        "R$ 3.439,92",
-        "R$ 13.759,68",
-        "R$ 343.992,05",
-        "R$ 326.792,45",
-        "R$ 309.592,84"
+        "R$ 69.036,69",
+        "R$ 3.451,84",
+        "R$ 13.807,36",
+        "R$ 345.183,89",
+        "R$ 327.924,70",
+        "R$ 310.665,50"
       ],
       [
         "602",
         "29,94 m²",
         "16",
-        "R$ 76.741,04",
-        "R$ 3.837,07",
-        "R$ 15.348,26",
-        "R$ 383.706,54",
-        "R$ 364.521,21",
-        "R$ 345.335,89"
+        "R$ 77.007,18",
+        "R$ 3.850,36",
+        "R$ 15.401,44",
+        "R$ 385.035,98",
+        "R$ 365.784,18",
+        "R$ 346.532,38"
       ],
       [
         "604",
         "29,90 m²",
         "18",
-        "R$ 73.890,83",
-        "R$ 3.694,54",
-        "R$ 14.778,16",
-        "R$ 369.454,03",
-        "R$ 350.981,33",
-        "R$ 332.508,63"
+        "R$ 74.146,89",
+        "R$ 3.707,34",
+        "R$ 14.829,36",
+        "R$ 370.734,09",
+        "R$ 352.197,39",
+        "R$ 333.660,68"
       ],
       [
         "802",
         "29,94 m²",
         "38",
-        "R$ 79.841,83",
-        "R$ 3.992,08",
-        "R$ 15.968,33",
-        "R$ 399.208,28",
-        "R$ 379.247,87",
-        "R$ 359.287,45"
+        "R$ 80.118,53",
+        "R$ 4.005,91",
+        "R$ 16.023,66",
+        "R$ 400.591,43",
+        "R$ 380.561,86",
+        "R$ 360.532,29"
       ],
       [
         "1001",
         "56,00 m²",
         "07",
-        "R$ 123.663,16",
-        "R$ 6.183,17",
-        "R$ 24.732,67",
-        "R$ 618.316,71",
-        "R$ 587.400,87",
-        "R$ 556.485,04"
+        "R$ 124.091,81",
+        "R$ 6.204,59",
+        "R$ 24.818,36",
+        "R$ 620.459,01",
+        "R$ 589.436,06",
+        "R$ 558.413,11"
       ]
     ],
-    "note": "Tabela de outubro/2026 — 15 unidades, todas disponíveis. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%). Alternativas, agora em colunas próprias: 36 parcelas com 3 reforços anuais e 5% de desconto, ou à vista com 10% de desconto (os dois sobre o valor total). Entrega: outubro/2029. Em outubro todas as unidades subiram exatamente 0,4141% sobre setembro — a variação do CUB (R$ 3.158,88 → R$ 3.171,96) —, sem reprecificação; saíram a 306, a 307 e a 901. Ato + 60 parcelas + 5 reforços devolvem o total em todas as linhas (diferença máxima de R$ 0,00, arredondamento). As unidades 107, 203 e 207 seguem sem vaga desde setembro (eram a 03, a 06 e a 09).",
+    "note": "Tabela de novembro/2026 — 15 unidades, todas disponíveis, as mesmas de outubro. Condição: ato + 60 parcelas mensais + 5 reforços anuais (20% / 60% / 20%) — ato em 30/11/2026, primeira parcela em 14/12/2026, primeiro reforço em 14/11/2027. Alternativas, em colunas próprias: 36 parcelas com 3 reforços anuais e 5% de desconto, ou à vista com 10% de desconto (os dois sobre o valor total). Entrega: outubro/2029. Em novembro todas as unidades subiram exatamente 0,3465% sobre outubro — a variação do CUB (R$ 3.171,96 → R$ 3.182,95) —, sem reprecificação. Ato + 60 parcelas + 5 reforços devolvem o total em todas as linhas. Em outubro saíram a 306, a 307 e a 901. As unidades 107, 203 e 207 seguem sem vaga desde setembro (eram a 03, a 06 e a 09).",
     "summary": {
       "bits": [
         {
@@ -3733,7 +3733,7 @@ const SALES_TABLES = {
   "Balsini 195": {
     "folderId": "1lc4I6Okb2hVvpt6og6nl1yOd7iC_yoBa",
     "source": "Tabela de vendas (Novo Rumo)",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -3750,34 +3750,34 @@ const SALES_TABLES = {
         "1305",
         "60,51 m²",
         "03 (simples)",
-        "R$ 112.775,40",
-        "R$ 4.027,69",
-        "R$ 16.110,76",
-        "R$ 563.876,68",
-        "R$ 496.211,48"
+        "R$ 113.165,70",
+        "R$ 4.041,65",
+        "R$ 16.166,58",
+        "R$ 565.830,36",
+        "R$ 497.930,72"
       ],
       [
         "1401",
         "61,86 m²",
         "21 (dupla)",
-        "R$ 122.833,60",
-        "R$ 4.386,92",
-        "R$ 17.547,67",
-        "R$ 614.168,57",
-        "R$ 540.468,34"
+        "R$ 123.259,13",
+        "R$ 4.402,12",
+        "R$ 17.608,47",
+        "R$ 616.296,50",
+        "R$ 542.340,92"
       ],
       [
         "1501",
         "61,86 m²",
         "45 (dupla)",
-        "R$ 124.575,95",
-        "R$ 4.449,15",
-        "R$ 17.796,59",
-        "R$ 622.880,68",
-        "R$ 548.135,00"
+        "R$ 125.008,01",
+        "R$ 4.464,56",
+        "R$ 17.858,25",
+        "R$ 625.038,80",
+        "R$ 550.034,14"
       ]
     ],
-    "note": "Tabela de vendas de outubro/2026 — as mesmas três unidades de setembro, todas disponíveis. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%). À vista: 12% de desconto sobre o valor total (era 10% em setembro). Localização das vagas: hall (3º pavimento) vagas 01 a 21; garagem -1 (2º pavimento) vagas 22 a 37; garagem -2 (1º pavimento) vagas 38 a 57. Entrega: outubro/2029. Em outubro as três subiram exatamente 1,00% sobre setembro — acima do CUB do mês (0,41%), então desta vez houve reajuste de preço, e não só indexação. Ato + 84 parcelas + 7 reforços devolvem o total em todas as linhas.",
+    "note": "Tabela de vendas de novembro/2026 — as mesmas três unidades de outubro, todas disponíveis. Condição: ato + 84 parcelas mensais + 7 reforços anuais (20% / 60% / 20%) — ato em 30/11/2026, primeira parcela em 14/12/2026, primeiro reforço em 14/11/2027. À vista: 12% de desconto sobre o valor total. Localização das vagas: hall (3º pavimento) vagas 01 a 21; garagem -1 (2º pavimento) vagas 22 a 37; garagem -2 (1º pavimento) vagas 38 a 57. Entrega: outubro/2029. Em novembro as três subiram exatamente 0,3465% sobre outubro — a variação do CUB (R$ 3.171,96 → R$ 3.182,95), sem reprecificação; em outubro tinham subido 1,00%, acima do CUB daquele mês. Ato + 84 parcelas + 7 reforços devolvem o total em todas as linhas.",
     "summary": {
       "bits": [
         {
@@ -4890,444 +4890,435 @@ const SALES_TABLES = {
   "Tulum - Studios": {
     "folderId": "15XiT_Sg4FvhcHBzDcaRLIrsZScNh_rpw",
     "source": "Tabela de vendas (Hill)",
-    "ref": "Setembro/2026 · tabela 00",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
       "Área priv.",
-      "À vista",
-      "Na entrega das chaves",
+      "Na entrega das chaves (−6,09%)",
       "Total em 72x",
       "Entrada (15%)",
       "72 parcelas",
-      "6 reforços"
+      "6 reforços",
+      "Situação"
     ],
     "rows": [
       [
         "503",
         "35,84 m²",
-        "R$ 329.728,00",
         "R$ 356.106,24",
         "R$ 379.187,20",
         "R$ 56.878,08",
         "R$ 2.580,58",
-        "R$ 22.751,23"
+        "R$ 22.751,23",
+        "Disponível"
       ],
       [
         "504",
         "34,83 m²",
-        "R$ 320.436,00",
         "R$ 346.070,88",
         "R$ 368.501,40",
         "R$ 55.275,21",
         "R$ 2.507,86",
-        "R$ 22.110,08"
+        "R$ 22.110,08",
+        "Disponível"
       ],
       [
         "505",
         "70,66 m²",
-        "R$ 455.050,40",
         "R$ 491.454,43",
         "R$ 523.307,96",
         "R$ 78.496,19",
         "R$ 3.561,40",
-        "R$ 31.398,48"
+        "R$ 31.398,48",
+        "Disponível"
       ],
       [
         "508",
         "36,32 m²",
-        "R$ 334.144,00",
         "R$ 360.875,52",
         "R$ 384.265,60",
         "R$ 57.639,84",
         "R$ 2.615,14",
-        "R$ 23.055,94"
+        "R$ 23.055,94",
+        "Disponível"
       ],
       [
         "509",
         "36,32 m²",
-        "R$ 334.144,00",
         "R$ 360.875,52",
         "R$ 384.265,60",
         "R$ 57.639,84",
         "R$ 2.615,14",
-        "R$ 23.055,94"
+        "R$ 23.055,94",
+        "Disponível"
       ],
       [
         "604",
         "34,83 m²",
-        "R$ 323.640,36",
         "R$ 349.531,59",
         "R$ 372.186,41",
         "R$ 55.827,96",
         "R$ 2.532,94",
-        "R$ 22.331,18"
+        "R$ 22.331,18",
+        "Disponível"
       ],
       [
         "605",
         "35,84 m²",
-        "R$ 333.025,28",
         "R$ 359.667,30",
         "R$ 382.979,07",
         "R$ 57.446,86",
         "R$ 2.606,39",
-        "R$ 22.978,74"
+        "R$ 22.978,74",
+        "Disponível"
       ],
       [
         "608",
         "36,32 m²",
-        "R$ 337.485,44",
         "R$ 364.484,28",
         "R$ 388.108,26",
         "R$ 58.216,24",
         "R$ 2.641,29",
-        "R$ 23.286,50"
+        "R$ 23.286,50",
+        "Disponível"
       ],
       [
         "609",
         "36,32 m²",
-        "R$ 337.485,44",
         "R$ 364.484,28",
         "R$ 388.108,26",
         "R$ 58.216,24",
         "R$ 2.641,29",
-        "R$ 23.286,50"
+        "R$ 23.286,50",
+        "Disponível"
       ],
       [
         "703",
         "35,84 m²",
-        "R$ 336.322,56",
         "R$ 363.228,36",
         "R$ 386.770,94",
         "R$ 58.015,64",
         "R$ 2.632,19",
-        "R$ 23.206,26"
+        "R$ 23.206,26",
+        "Disponível"
       ],
       [
         "704",
         "34,83 m²",
-        "R$ 326.844,72",
         "R$ 352.992,30",
         "R$ 375.871,43",
         "R$ 56.380,71",
         "R$ 2.558,01",
-        "R$ 22.552,29"
+        "R$ 22.552,29",
+        "Disponível"
       ],
       [
         "705",
         "35,84 m²",
-        "R$ 336.322,56",
         "R$ 363.228,36",
         "R$ 386.770,94",
         "R$ 58.015,64",
         "R$ 2.632,19",
-        "R$ 23.206,26"
+        "R$ 23.206,26",
+        "Disponível"
       ],
       [
         "708",
         "36,32 m²",
-        "R$ 340.826,88",
         "R$ 368.093,03",
         "R$ 391.950,91",
         "R$ 58.792,64",
         "R$ 2.667,44",
-        "R$ 23.517,05"
+        "R$ 23.517,05",
+        "Disponível"
       ],
       [
         "709",
         "36,32 m²",
-        "R$ 340.826,88",
         "R$ 368.093,03",
         "R$ 391.950,91",
         "R$ 58.792,64",
         "R$ 2.667,44",
-        "R$ 23.517,05"
+        "R$ 23.517,05",
+        "Disponível"
       ],
       [
         "803",
         "35,84 m²",
-        "R$ 339.619,84",
         "R$ 366.789,43",
         "R$ 390.562,82",
         "R$ 58.584,42",
         "R$ 2.658,00",
-        "R$ 23.433,77"
+        "R$ 23.433,77",
+        "Disponível"
       ],
       [
         "804",
         "34,83 m²",
-        "R$ 330.049,08",
         "R$ 356.453,01",
         "R$ 379.556,44",
         "R$ 56.933,47",
         "R$ 2.583,09",
-        "R$ 22.773,39"
+        "R$ 22.773,39",
+        "Disponível"
       ],
       [
         "805",
         "35,84 m²",
-        "R$ 339.619,84",
         "R$ 366.789,43",
         "R$ 390.562,82",
         "R$ 58.584,42",
         "R$ 2.658,00",
-        "R$ 23.433,77"
+        "R$ 23.433,77",
+        "Disponível"
       ],
       [
         "808",
         "36,32 m²",
-        "R$ 344.168,32",
         "R$ 371.701,79",
         "R$ 395.793,57",
         "R$ 59.369,04",
         "R$ 2.693,60",
-        "R$ 23.747,61"
+        "R$ 23.747,61",
+        "Disponível"
       ],
       [
         "809",
         "36,32 m²",
-        "R$ 344.168,32",
         "R$ 371.701,79",
         "R$ 395.793,57",
         "R$ 59.369,04",
         "R$ 2.693,60",
-        "R$ 23.747,61"
+        "R$ 23.747,61",
+        "Disponível"
       ],
       [
         "1009",
         "36,32 m²",
-        "R$ 347.509,76",
         "R$ 375.310,54",
         "R$ 399.636,22",
         "R$ 59.945,43",
         "R$ 2.719,75",
-        "R$ 23.978,17"
+        "R$ 23.978,17",
+        "Disponível"
       ],
       [
         "1103",
         "35,84 m²",
-        "R$ 346.214,40",
         "R$ 373.911,55",
         "R$ 398.146,56",
         "R$ 59.721,98",
         "R$ 2.709,61",
-        "R$ 23.888,79"
+        "R$ 23.888,79",
+        "Disponível"
       ],
       [
         "1104",
         "34,83 m²",
-        "R$ 336.457,80",
         "R$ 363.374,42",
         "R$ 386.926,47",
         "R$ 58.038,97",
         "R$ 2.633,25",
-        "R$ 23.215,59"
+        "R$ 23.215,59",
+        "Disponível"
       ],
       [
         "1105",
         "35,84 m²",
-        "R$ 346.214,40",
         "R$ 373.911,55",
         "R$ 398.146,56",
         "R$ 59.721,98",
         "R$ 2.709,61",
-        "R$ 23.888,79"
+        "R$ 23.888,79",
+        "Disponível"
       ],
       [
         "1108",
         "36,32 m²",
-        "R$ 350.851,20",
         "R$ 378.919,30",
         "R$ 403.478,88",
         "R$ 60.521,83",
         "R$ 2.745,90",
-        "R$ 24.208,73"
+        "R$ 24.208,73",
+        "Disponível"
       ],
       [
         "1109",
         "36,32 m²",
-        "R$ 350.851,20",
         "R$ 378.919,30",
         "R$ 403.478,88",
         "R$ 60.521,83",
         "R$ 2.745,90",
-        "R$ 24.208,73"
+        "R$ 24.208,73",
+        "Disponível"
       ],
       [
         "1203",
         "35,84 m²",
-        "R$ 349.511,68",
         "R$ 377.472,61",
         "R$ 401.938,43",
         "R$ 60.290,76",
         "R$ 2.735,41",
-        "R$ 24.116,31"
+        "R$ 24.116,31",
+        "Disponível"
       ],
       [
         "1204",
         "34,83 m²",
-        "R$ 339.662,16",
         "R$ 366.835,13",
         "R$ 390.611,48",
         "R$ 58.591,72",
         "R$ 2.658,33",
-        "R$ 23.436,69"
+        "R$ 23.436,69",
+        "Disponível"
       ],
       [
         "1205",
         "35,84 m²",
-        "R$ 349.511,68",
         "R$ 377.472,61",
         "R$ 401.938,43",
         "R$ 60.290,76",
         "R$ 2.735,41",
-        "R$ 24.116,31"
+        "R$ 24.116,31",
+        "Disponível"
       ],
       [
         "1208",
         "36,32 m²",
-        "R$ 354.192,64",
         "R$ 382.528,05",
         "R$ 407.321,54",
         "R$ 61.098,23",
         "R$ 2.772,05",
-        "R$ 24.439,29"
+        "R$ 24.439,29",
+        "Disponível"
       ],
       [
         "1209",
         "36,32 m²",
-        "R$ 354.192,64",
         "R$ 382.528,05",
         "R$ 407.321,54",
         "R$ 61.098,23",
         "R$ 2.772,05",
-        "R$ 24.439,29"
+        "R$ 24.439,29",
+        "Disponível"
       ],
       [
         "1302",
         "49,55 m²",
-        "R$ 450.657,25",
         "R$ 486.709,83",
         "R$ 518.255,84",
         "R$ 77.738,38",
         "R$ 3.527,02",
-        "R$ 31.095,35"
+        "R$ 31.095,35",
+        "Disponível"
       ],
       [
         "1303",
         "35,84 m²",
-        "R$ 352.808,96",
         "R$ 381.033,68",
         "R$ 405.730,30",
         "R$ 60.859,55",
         "R$ 2.761,22",
-        "R$ 24.343,82"
+        "R$ 24.343,82",
+        "Disponível"
       ],
       [
         "1304",
         "34,83 m²",
-        "R$ 342.866,52",
         "R$ 370.295,84",
         "R$ 394.296,50",
         "R$ 59.144,47",
         "R$ 2.683,41",
-        "R$ 23.657,79"
+        "R$ 23.657,79",
+        "Disponível"
       ],
       [
         "1305",
         "35,84 m²",
-        "R$ 352.808,96",
         "R$ 381.033,68",
         "R$ 405.730,30",
         "R$ 60.859,55",
         "R$ 2.761,22",
-        "R$ 24.343,82"
+        "R$ 24.343,82",
+        "Disponível"
       ],
       [
         "1308",
         "36,32 m²",
-        "R$ 357.534,08",
         "R$ 386.136,81",
         "R$ 411.164,19",
         "R$ 61.674,63",
         "R$ 2.798,20",
-        "R$ 24.669,85"
+        "R$ 24.669,85",
+        "Disponível"
       ],
       [
         "1309",
         "36,32 m²",
-        "R$ 357.534,08",
         "R$ 386.136,81",
         "R$ 411.164,19",
         "R$ 61.674,63",
         "R$ 2.798,20",
-        "R$ 24.669,85"
+        "R$ 24.669,85",
+        "Disponível"
       ],
       [
         "1402",
         "49,55 m²",
-        "R$ 454.869,00",
         "R$ 491.258,52",
         "R$ 523.099,35",
         "R$ 78.464,90",
         "R$ 3.559,98",
-        "R$ 31.385,96"
+        "R$ 31.385,96",
+        "Reservada (vaga 94, simples)"
       ],
       [
         "1403",
         "35,84 m²",
-        "R$ 356.106,24",
         "R$ 384.594,74",
         "R$ 409.522,18",
         "R$ 61.428,33",
         "R$ 2.787,03",
-        "R$ 24.571,33"
+        "R$ 24.571,33",
+        "Disponível"
       ],
       [
         "1404",
         "34,83 m²",
-        "R$ 346.070,88",
         "R$ 373.756,55",
         "R$ 397.981,51",
         "R$ 59.697,23",
         "R$ 2.708,49",
-        "R$ 23.878,89"
+        "R$ 23.878,89",
+        "Disponível"
       ],
       [
         "1405",
         "35,84 m²",
-        "R$ 356.106,24",
         "R$ 384.594,74",
         "R$ 409.522,18",
         "R$ 61.428,33",
         "R$ 2.787,03",
-        "R$ 24.571,33"
+        "R$ 24.571,33",
+        "Disponível"
       ],
       [
         "1408",
         "36,32 m²",
-        "R$ 360.875,52",
         "R$ 389.745,56",
         "R$ 415.006,85",
         "R$ 62.251,03",
         "R$ 2.824,35",
-        "R$ 24.900,41"
-      ],
-      [
-        "1409",
-        "36,32 m²",
-        "R$ 360.875,52",
-        "R$ 389.745,56",
-        "R$ 415.006,85",
-        "R$ 62.251,03",
-        "R$ 2.824,35",
-        "R$ 24.900,41"
+        "R$ 24.900,41",
+        "Disponível"
       ]
     ],
-    "note": "Unidades de 1 dormitório: 42 das 43 do tipo estão disponíveis (1 reservada pela Hill). Em 11/09/2026 as unidades 505, 1302 e 1402 vieram da tabela de 2 dormitórios — são de 1 dormitório, e estavam classificadas errado na leitura da tabela 00. O preço delas não mudou; a 505, com 70,66 m², é bem maior que os studios de 34 a 36 m² e puxa a faixa de área desta tabela. Os apartamentos de 2 dormitórios estão na tabela \"Tulum - 2 dormitórios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
+    "note": "Unidades de 1 dormitório: 41 na tabela de novembro/2026, 40 disponíveis e 1 reservada — a 1402 (49,55 m², vaga 94, simples). Os preços não mudaram em relação a outubro; saiu a 1409. A 505, com 70,66 m², e a 1302 e a 1402, com 49,55 m², são de 1 dormitório, maiores que os studios de 34 a 36 m², e puxam a faixa de área desta tabela. Os apartamentos de 2 dormitórios estão na tabela \"Tulum - 2 dormitórios\". A tabela de novembro tem 60 unidades nas duas tipologias: 57 disponíveis e 3 reservadas. Condição: o total em 72x, pago durante a obra direto com a construtora — entrada de 15% + 72 parcelas mensais + 6 reforços, que somam o total com diferença de no máximo R$ 0,38 (arredondamento das parcelas). Quitando na entrega das chaves, desconto de 6,09% sobre o total em 72x; quitando à vista, desconto de 13,04%. Desde novembro/2026 a tabela da construtora não traz mais a coluna de valor à vista, só o percentual, por isso a coluna saiu daqui; o valor \"na entrega das chaves\" segue calculado pela mesma regra (é o mesmo que à vista + 8%). O card do comparativo usa o total em 72x. Valores já com uma vaga de garagem inclusa, de cerca de 11 m² de área privativa; vagas reservadas podem ser negociadas em conversa com a construtora. Lançamento exclusivo ZELT; a tabela 00 é de setembro/2026. Entrega prevista: dezembro/2030.",
     "summary": {
       "tipoDefault": "Studio (1 dormitório)",
       "situacao": "Disponível",
+      "situacaoCol": 7,
       "bits": [
         {
           "pre": "Área privativa: ",
@@ -5336,30 +5327,27 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Total em 72x",
-        "col": 4
+        "col": 3
       },
       "parcelas": [
         {
           "label": "Entrada (15%)",
-          "col": 5
+          "col": 4
         },
         {
           "label": "72 parcelas",
-          "col": 6
+          "col": 5
         },
         {
           "label": "6 reforços",
-          "col": 7
+          "col": 6
         }
       ],
       "alternativas": [
         {
-          "bold": "À vista",
-          "col": 2
-        },
-        {
           "bold": "Na entrega das chaves",
-          "col": 3
+          "nota": "(−6,09%)",
+          "col": 2
         }
       ]
     }
@@ -5367,13 +5355,12 @@ const SALES_TABLES = {
   "Tulum - 2 dormitórios": {
     "folderId": "15XiT_Sg4FvhcHBzDcaRLIrsZScNh_rpw",
     "source": "Tabela de vendas (Hill)",
-    "ref": "Outubro/2026 · situação de 19/10/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
       "Área priv.",
-      "À vista",
-      "Na entrega das chaves",
+      "Na entrega das chaves (−6,09%)",
       "Total em 72x",
       "Entrada (15%)",
       "72 parcelas",
@@ -5384,7 +5371,6 @@ const SALES_TABLES = {
       [
         "501",
         "59,05 m²",
-        "R$ 501.925,00",
         "R$ 542.079,00",
         "R$ 577.213,75",
         "R$ 86.582,06",
@@ -5395,7 +5381,6 @@ const SALES_TABLES = {
       [
         "502",
         "65,19 m²",
-        "R$ 554.115,00",
         "R$ 598.444,20",
         "R$ 637.232,25",
         "R$ 95.584,84",
@@ -5406,7 +5391,6 @@ const SALES_TABLES = {
       [
         "506",
         "91,70 m²",
-        "R$ 674.912,00",
         "R$ 728.904,96",
         "R$ 776.148,80",
         "R$ 116.422,32",
@@ -5417,7 +5401,6 @@ const SALES_TABLES = {
       [
         "507",
         "80,59 m²",
-        "R$ 548.012,00",
         "R$ 591.852,96",
         "R$ 630.213,80",
         "R$ 94.532,07",
@@ -5428,7 +5411,6 @@ const SALES_TABLES = {
       [
         "602",
         "65,19 m²",
-        "R$ 605.745,48",
         "R$ 654.205,12",
         "R$ 696.607,30",
         "R$ 104.491,10",
@@ -5439,7 +5421,6 @@ const SALES_TABLES = {
       [
         "606",
         "65,19 m²",
-        "R$ 559.656,15",
         "R$ 604.428,64",
         "R$ 643.604,57",
         "R$ 96.540,69",
@@ -5450,7 +5431,6 @@ const SALES_TABLES = {
       [
         "607",
         "59,05 m²",
-        "R$ 506.944,25",
         "R$ 547.499,79",
         "R$ 582.985,89",
         "R$ 87.447,88",
@@ -5461,18 +5441,16 @@ const SALES_TABLES = {
       [
         "701",
         "59,05 m²",
-        "R$ 499.917,30",
-        "R$ 539.910,68",
-        "R$ 574.904,90",
-        "R$ 86.235,73",
-        "R$ 3.912,55",
-        "R$ 34.494,29",
+        "R$ 598.455,22",
+        "R$ 637.243,98",
+        "R$ 95.586,60",
+        "R$ 4.336,80",
+        "R$ 38.234,64",
         "Disponível"
       ],
       [
         "706",
         "65,19 m²",
-        "R$ 565.197,30",
         "R$ 610.413,08",
         "R$ 649.976,90",
         "R$ 97.496,53",
@@ -5483,7 +5461,6 @@ const SALES_TABLES = {
       [
         "806",
         "65,19 m²",
-        "R$ 570.738,45",
         "R$ 616.397,53",
         "R$ 656.349,22",
         "R$ 98.452,38",
@@ -5494,7 +5471,6 @@ const SALES_TABLES = {
       [
         "1007",
         "59,05 m²",
-        "R$ 522.002,00",
         "R$ 563.762,16",
         "R$ 600.302,30",
         "R$ 90.045,35",
@@ -5505,7 +5481,6 @@ const SALES_TABLES = {
       [
         "1102",
         "65,19 m²",
-        "R$ 568.130,85",
         "R$ 613.581,32",
         "R$ 653.350,48",
         "R$ 98.002,57",
@@ -5516,7 +5491,6 @@ const SALES_TABLES = {
       [
         "1106",
         "65,19 m²",
-        "R$ 581.820,75",
         "R$ 628.366,41",
         "R$ 669.093,86",
         "R$ 100.364,08",
@@ -5527,7 +5501,6 @@ const SALES_TABLES = {
       [
         "1206",
         "65,19 m²",
-        "R$ 587.361,90",
         "R$ 634.350,85",
         "R$ 675.466,19",
         "R$ 101.319,93",
@@ -5538,7 +5511,6 @@ const SALES_TABLES = {
       [
         "1207",
         "59,05 m²",
-        "R$ 532.040,50",
         "R$ 574.603,74",
         "R$ 611.846,58",
         "R$ 91.776,99",
@@ -5549,7 +5521,6 @@ const SALES_TABLES = {
       [
         "1306",
         "65,19 m²",
-        "R$ 592.903,05",
         "R$ 640.335,29",
         "R$ 681.838,51",
         "R$ 102.275,78",
@@ -5560,7 +5531,6 @@ const SALES_TABLES = {
       [
         "1307",
         "59,05 m²",
-        "R$ 537.059,75",
         "R$ 580.024,53",
         "R$ 617.618,71",
         "R$ 92.642,81",
@@ -5571,7 +5541,6 @@ const SALES_TABLES = {
       [
         "1401",
         "59,05 m²",
-        "R$ 586.720,80",
         "R$ 633.658,46",
         "R$ 674.728,92",
         "R$ 101.209,34",
@@ -5582,7 +5551,6 @@ const SALES_TABLES = {
       [
         "1406",
         "65,19 m²",
-        "R$ 598.444,20",
         "R$ 646.319,74",
         "R$ 688.210,83",
         "R$ 103.231,62",
@@ -5591,11 +5559,11 @@ const SALES_TABLES = {
         "Disponível"
       ]
     ],
-    "note": "Apartamentos de 2 dormitórios: 19 na tabela, 17 disponíveis e 2 reservados — 501 e 1102 (vaga 29, simples); o 701, que estava reservado, voltou a ficar disponível. Na atualização de 19/10/2026 entrou a 1401 (59,05 m², R$ 674.728,92 no total em 72x, R$ 9.936/m² à vista) e três unidades subiram de preço: 506 e 602 +10,84% (à vista de R$ 6.640 para R$ 7.360/m² e de R$ 8.383 para R$ 9.292/m²) e 607 +2,41% (de R$ 8.383 para R$ 8.585/m²); as outras 15 ficaram iguais. O à vista e o \"na entrega das chaves\" das que mudaram ou entraram seguem a regra da tabela (à vista = total ÷ 1,15; entrega = à vista × 1,08) e fecham num R$/m² redondo à vista. Na atualização de 30/09/2026, com os valores sem mudança, entraram 506, 602, 607, 701 e 1102 e saiu o 707. O à vista e o \"na entrega das chaves\" das que entraram vêm do total em 72x pela mesma regra da tabela (à vista = total ÷ 1,15; entrega = à vista × 1,08), e fecham num R$/m² redondo à vista (602 e 607 a R$ 8.383, 701 a R$ 8.466, 1102 a R$ 8.715). O 506 tem 91,70 m² (área confirmada pelo Felipe em 30/09/2026), bem acima dos 59 a 81 m² dos outros, e sai a R$ 6.640/m² à vista — o menor da tabela. Ela entra no card como as demais — é ela que leva a faixa de área até 91,70 m² e o valor até R$ 776.148,80. Em 11/09/2026 as unidades 505, 1302 e 1402 saíram daqui para a tabela de 1 dormitório, onde é o lugar delas. Os studios estão na tabela \"Tulum - Studios\". Lançamento exclusivo ZELT, tabela 00 de setembro/2026 — a primeira do empreendimento. Três condições para a mesma unidade: à vista, na entrega das chaves (+8% sobre a de à vista) e o total em 72x (+15%), este último pago durante a obra direto com a construtora, com 15% de entrada, 72 parcelas mensais e 6 reforços. As três colunas são alternativas entre si, não somam. O card do comparativo usa o total em 72x, que é a base parcelada, a mesma dos outros empreendimentos. Valores já com uma vaga de garagem inclusa: todo apartamento leva uma vaga, escolhida na proposta, e a tabela da construtora anota que a vaga tem cerca de 11 m² de área privativa. As demais unidades reservadas pela Hill não aparecem aqui — podem ser negociadas em conversa com a construtora. Entrega prevista: dezembro/2030.",
+    "note": "Apartamentos de 2 dormitórios: 19 na tabela de novembro/2026, 17 disponíveis e 2 reservados — 501 e 1102 (vaga 29, simples). As mesmas unidades de outubro, e só uma mudou de preço: a 701 subiu 10,84%, de R$ 574.904,90 para R$ 637.243,98 no total em 72x (de R$ 9.736 para R$ 10.792/m²) — a mesma alta que a 506 e a 602 tiveram em 19/10/2026. Em 19/10/2026 entrou a 1401 e subiram a 506 e a 602 (+10,84%) e a 607 (+2,41%); em 30/09/2026 entraram 506, 602, 607, 701 e 1102 e saiu o 707. O 506 tem 91,70 m² (área confirmada pelo Felipe em 30/09/2026), bem acima dos 59 a 81 m² dos outros, e entra no card como as demais — é ela que leva a faixa de área até 91,70 m². Em 11/09/2026 as unidades 505, 1302 e 1402 saíram daqui para a tabela de 1 dormitório. Os studios estão na tabela \"Tulum - Studios\". Condição: o total em 72x, pago durante a obra direto com a construtora — entrada de 15% + 72 parcelas mensais + 6 reforços, que somam o total com diferença de no máximo R$ 0,38 (arredondamento das parcelas). Quitando na entrega das chaves, desconto de 6,09% sobre o total em 72x; quitando à vista, desconto de 13,04%. Desde novembro/2026 a tabela da construtora não traz mais a coluna de valor à vista, só o percentual, por isso a coluna saiu daqui; o valor \"na entrega das chaves\" segue calculado pela mesma regra (é o mesmo que à vista + 8%). O card do comparativo usa o total em 72x. Valores já com uma vaga de garagem inclusa, de cerca de 11 m² de área privativa; vagas reservadas podem ser negociadas em conversa com a construtora. Lançamento exclusivo ZELT; a tabela 00 é de setembro/2026. Entrega prevista: dezembro/2030.",
     "summary": {
       "tipoDefault": "Apartamento 2 dormitórios",
       "situacao": "Disponível",
-      "situacaoCol": 8,
+      "situacaoCol": 7,
       "bits": [
         {
           "pre": "Área privativa: ",
@@ -5604,30 +5572,27 @@ const SALES_TABLES = {
       ],
       "principal": {
         "label": "Total em 72x",
-        "col": 4
+        "col": 3
       },
       "parcelas": [
         {
           "label": "Entrada (15%)",
-          "col": 5
+          "col": 4
         },
         {
           "label": "72 parcelas",
-          "col": 6
+          "col": 5
         },
         {
           "label": "6 reforços",
-          "col": 7
+          "col": 6
         }
       ],
       "alternativas": [
         {
-          "bold": "À vista",
-          "col": 2
-        },
-        {
           "bold": "Na entrega das chaves",
-          "col": 3
+          "nota": "(−6,09%)",
+          "col": 2
         }
       ]
     }

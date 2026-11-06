@@ -987,7 +987,7 @@ function fallbackCopy(txt, done){
    só para o desenho: os dados guardam a ordem da construtora e o resumo lê pelo índice.
    Por nome de coluna; tabela fora do mapa usa o principal + alternativas do summary. */
 const SALES_VALORES = {
-  "Wissen": ["Valor total","Até 48x / financ. (−6%)","À vista (−15%)"],
+  "Wissen": ["Valor total","Até 48x / financ. (−6%)","À vista (−20%, Black November)"],
   "San Vito": ["Valor de venda"],
   "Malta": ["Em 60x (valor total)","Nas chaves","À vista"],
   "Villa Toscana": ["Parcelado até 30x","À vista / financ."],
@@ -1018,8 +1018,8 @@ const SALES_VALORES = {
   "Vista 43 - Studios e Loft Duplex": ["Valor total","À vista (−12%)"],
   "San Blas": ["Valor total"],
   "Central Park": ["Lançamento","Investidor","Pré-venda"],
-  "Tulum - Studios": ["Total em 72x","Na entrega das chaves","À vista"],
-  "Tulum - 2 dormitórios": ["Total em 72x","Na entrega das chaves","À vista"],
+  "Tulum - Studios": ["Total em 72x","Na entrega das chaves (−6,09%)"],
+  "Tulum - 2 dormitórios": ["Total em 72x","Na entrega das chaves (−6,09%)"],
   "Amani 53": ["Valor de venda"],
   "Villaggio Treviso": ["Valor de tabela","À vista (−10%)"],
   "Criatto": ["Total financiado (até 84 meses)","Até as chaves"],

@@ -60,7 +60,8 @@ const PRICE_HISTORY = {
       "2026-07",
       "2026-08",
       "2026-09",
-      "2026-10"
+      "2026-10",
+      "2026-11"
     ],
     "fontes": [
       "Lançamento jan/2026 (22/01)",
@@ -72,9 +73,10 @@ const PRICE_HISTORY = {
       "Vendas jul/2026 (13/07)",
       "Vendas ago/2026 (05/08)",
       "Vendas set/2026",
-      "Tabela out/2026"
+      "Tabela out/2026",
+      "Tabela nov/2026"
     ],
-    "obs": "Série mensal completa de jan a set/2026, nove pontos sem falha. A tabela é indexada, então cada degrau aqui é correção e não decisão de preço: no acumulado de janeiro a setembro as três unidades que restam fizeram exatamente os mesmos +5,08%, e o reajuste de setembro foi de 0,2424% em todas. Em set/2026 saíram a 802, a 1005, a 1205 e a 1301 — a série guarda os números delas, mas a aba Investimentos só mostra o que ainda está na tabela de vendas. A 1501 trocou a vaga 14 pela 45 no mesmo mês, as duas duplas, e o preço não se moveu além do índice.",
+    "obs": "Série mensal completa de jan a set/2026, nove pontos sem falha. A tabela é indexada, então cada degrau aqui é correção e não decisão de preço: no acumulado de janeiro a setembro as três unidades que restam fizeram exatamente os mesmos +5,08%, e o reajuste de setembro foi de 0,2424% em todas. Em set/2026 saíram a 802, a 1005, a 1205 e a 1301 — a série guarda os números delas, mas a aba Investimentos só mostra o que ainda está na tabela de vendas. A 1501 trocou a vaga 14 pela 45 no mesmo mês, as duas duplas, e o preço não se moveu além do índice. Em nov/2026 as três subiram 0,3465%, só o CUB de novembro.",
     "unidades": {
       "802": [
         499352.62,
@@ -85,6 +87,7 @@ const PRICE_HISTORY = {
         514063.19,
         518275.31,
         523458.06,
+        null,
         null,
         null
       ],
@@ -98,6 +101,7 @@ const PRICE_HISTORY = {
         527341.08,
         532614.49,
         null,
+        null,
         null
       ],
       "1205": [
@@ -109,6 +113,7 @@ const PRICE_HISTORY = {
         538864.62,
         543279.96,
         548712.76,
+        null,
         null,
         null
       ],
@@ -122,6 +127,7 @@ const PRICE_HISTORY = {
         593300.93,
         599233.94,
         null,
+        null,
         null
       ],
       "1305": [
@@ -134,7 +140,8 @@ const PRICE_HISTORY = {
         551429.17,
         556943.46,
         558293.74,
-        563876.68
+        563876.68,
+        565830.36
       ],
       "1401": [
         578682.03,
@@ -146,7 +153,8 @@ const PRICE_HISTORY = {
         600610.87,
         606616.98,
         608087.69,
-        614168.57
+        614168.57,
+        616296.5
       ],
       "1501": [
         586890.74,
@@ -158,7 +166,8 @@ const PRICE_HISTORY = {
         609130.66,
         615221.97,
         616713.54,
-        622880.68
+        622880.68,
+        625038.8
       ]
     }
   },
@@ -174,7 +183,8 @@ const PRICE_HISTORY = {
       "2026-07",
       "2026-08",
       "2026-09",
-      "2026-10"
+      "2026-10",
+      "2026-11"
     ],
     "fontes": [
       "Studios dez/2025 (03/12)",
@@ -187,9 +197,10 @@ const PRICE_HISTORY = {
       "2D jul/2026 (02/07)",
       "2D e Studios ago/2026 (05/08)",
       "2D set/2026 (10/09)",
-      "Tabela out/2026"
+      "Tabela out/2026",
+      "Tabela nov/2026"
     ],
-    "obs": "Em abril/2026 as unidades 1201 e 1301 trocaram de vaga e box entre si, e o preço acompanhou a troca — o degrau nesse mês é realocação de garagem, não desvalorização. Em maio voltaram à configuração original. Os 2 dormitórios ficaram congelados de junho a agosto/2026 e em setembro subiram exatamente 0,2424%, o mesmo índice que a Novo Rumo aplicou no Balsini 195 e no N Studios no mesmo mês; a 1101 saiu da tabela nesse mês. O studio 1003 saiu da tabela entre janeiro e julho e voltou em agosto, por isso a lacuna; em setembro ele não acompanhou o reajuste dos 2 dormitórios e segue no valor de agosto, então a linha reta nesse mês é isso, não falta de dado.",
+    "obs": "Em abril/2026 as unidades 1201 e 1301 trocaram de vaga e box entre si, e o preço acompanhou a troca — o degrau nesse mês é realocação de garagem, não desvalorização. Em maio voltaram à configuração original. Os 2 dormitórios ficaram congelados de junho a agosto/2026 e em setembro subiram exatamente 0,2424%, o mesmo índice que a Novo Rumo aplicou no Balsini 195 e no N Studios no mesmo mês; a 1101 saiu da tabela nesse mês. O studio 1003 saiu da tabela entre janeiro e julho e voltou em agosto, por isso a lacuna; em setembro ele não acompanhou o reajuste dos 2 dormitórios e segue no valor de agosto, então a linha reta nesse mês é isso, não falta de dado. Em nov/2026 os dois subiram 0,3465%, só o CUB de novembro.",
     "unidades": {
       "1003": [
         332741.16,
@@ -202,6 +213,7 @@ const PRICE_HISTORY = {
         null,
         345213.26,
         345213.26,
+        null,
         null
       ],
       "1101": [
@@ -214,6 +226,7 @@ const PRICE_HISTORY = {
         545648.22,
         545648.22,
         545648.22,
+        null,
         null,
         null
       ],
@@ -228,7 +241,8 @@ const PRICE_HISTORY = {
         558653.65,
         558653.65,
         560008.07,
-        562326.9
+        562326.9,
+        564275.21
       ],
       "1301": [
         null,
@@ -241,7 +255,8 @@ const PRICE_HISTORY = {
         577951.66,
         577951.66,
         579352.87,
-        581751.8
+        581751.8,
+        583767.42
       ]
     }
   },
@@ -252,7 +267,8 @@ const PRICE_HISTORY = {
       "2026-07-14",
       "2026-08-05",
       "2026-09-09",
-      "2026-10"
+      "2026-10",
+      "2026-11"
     ],
     "fontes": [
       "Lançamento jun/2026 (18/06)",
@@ -260,15 +276,17 @@ const PRICE_HISTORY = {
       "Lançamento jul/2026 – 2ª revisão (14/07)",
       "Lançamento ago/2026 (05/08)",
       "Lançamento set/2026 (09/09)",
-      "Tabela out/2026"
+      "Tabela out/2026",
+      "Tabela nov/2026"
     ],
-    "obs": "Leia primeiro: as linhas da 107, da 203 e da 207 caem cerca de 15% em set/2026 e isso NÃO é queda de preço — as três perderam a vaga de garagem (a 03, a 06 e a 09) e passaram a ser um produto diferente. Aplicando o índice do mês no valor de agosto e descontando o de setembro, a diferença é de R$ 60.145,46 nas três, ao centavo: é o preço da vaga nesta tabela. A valorização média do empreendimento fica em −4,08% por causa delas; nas outras doze unidades, que não mudaram de configuração, é −1,13%. Fora isso: a Novo Rumo reajustou a tabela em 02/07 (+0,82% em todas as unidades) e depois fez uma revisão em 14/07 que reduziu o preço da maior parte das unidades — algumas voltaram para abaixo do valor de junho. Os valores de agosto são iguais aos dessa 2ª revisão de julho, e setembro é o primeiro reajuste desde então: +0,2424% em todas. As unidades 305, 403 e 405 entraram na tabela depois de junho, por isso as lacunas; em set/2026 entraram a 602, a 604 e a 802 e saíram 101, 106, 206, 301, 303, 305 e 1003. Em out/2026 todas subiram 0,4141% (CUB de outubro) e saíram a 306, a 307 e a 901.",
+    "obs": "Leia primeiro: as linhas da 107, da 203 e da 207 caem cerca de 15% em set/2026 e isso NÃO é queda de preço — as três perderam a vaga de garagem (a 03, a 06 e a 09) e passaram a ser um produto diferente. Aplicando o índice do mês no valor de agosto e descontando o de setembro, a diferença é de R$ 60.145,46 nas três, ao centavo: é o preço da vaga nesta tabela. A valorização média do empreendimento fica em −4,08% por causa delas; nas outras doze unidades, que não mudaram de configuração, é −1,13%. Fora isso: a Novo Rumo reajustou a tabela em 02/07 (+0,82% em todas as unidades) e depois fez uma revisão em 14/07 que reduziu o preço da maior parte das unidades — algumas voltaram para abaixo do valor de junho. Os valores de agosto são iguais aos dessa 2ª revisão de julho, e setembro é o primeiro reajuste desde então: +0,2424% em todas. As unidades 305, 403 e 405 entraram na tabela depois de junho, por isso as lacunas; em set/2026 entraram a 602, a 604 e a 802 e saíram 101, 106, 206, 301, 303, 305 e 1003. Em out/2026 todas subiram 0,4141% (CUB de outubro) e saíram a 306, a 307 e a 901. Em nov/2026 todas subiram 0,3465% (CUB de novembro), sem entrada nem saída de unidade.",
     "unidades": {
       "101": [
         322530.39,
         325173.13,
         310223.04,
         310223.04,
+        null,
         null,
         null
       ],
@@ -278,6 +296,7 @@ const PRICE_HISTORY = {
         311913.67,
         311913.67,
         null,
+        null,
         null
       ],
       "107": [
@@ -286,7 +305,8 @@ const PRICE_HISTORY = {
         396018.77,
         396018.77,
         336833.43,
-        338228.16
+        338228.16,
+        339400.03
       ],
       "201": [
         329690.64,
@@ -294,7 +314,8 @@ const PRICE_HISTORY = {
         317441.27,
         317441.27,
         318210.89,
-        319528.51
+        319528.51,
+        320635.59
       ],
       "203": [
         412203.74,
@@ -302,7 +323,8 @@ const PRICE_HISTORY = {
         403075.15,
         403075.15,
         343906.92,
-        345330.94
+        345330.94,
+        346527.42
       ],
       "204": [
         340948.07,
@@ -310,13 +332,15 @@ const PRICE_HISTORY = {
         328789.85,
         328789.85,
         329586.98,
-        330951.7
+        330951.7,
+        332098.36
       ],
       "206": [
         307640.01,
         310160.75,
         295212.1,
         295212.1,
+        null,
         null,
         null
       ],
@@ -326,13 +350,15 @@ const PRICE_HISTORY = {
         398091.3,
         398091.3,
         338910.98,
-        340314.31
+        340314.31,
+        341493.41
       ],
       "301": [
         336997.02,
         339758.3,
         324806.8,
         324806.8,
+        null,
         null,
         null
       ],
@@ -342,6 +368,7 @@ const PRICE_HISTORY = {
         424062.5,
         424062.5,
         null,
+        null,
         null
       ],
       "304": [
@@ -350,13 +377,15 @@ const PRICE_HISTORY = {
         336386.99,
         336386.99,
         337202.54,
-        338598.8
+        338598.8,
+        339771.96
       ],
       "305": [
         null,
         303200.78,
         293327.14,
         293327.14,
+        null,
         null,
         null
       ],
@@ -366,6 +395,7 @@ const PRICE_HISTORY = {
         302123.98,
         302123.98,
         302856.46,
+        null,
         null
       ],
       "307": [
@@ -374,6 +404,7 @@ const PRICE_HISTORY = {
         405859.91,
         405859.91,
         406843.89,
+        null,
         null
       ],
       "401": [
@@ -382,7 +413,8 @@ const PRICE_HISTORY = {
         332322.66,
         332322.66,
         333128.36,
-        334507.75
+        334507.75,
+        335666.73
       ],
       "403": [
         null,
@@ -390,7 +422,8 @@ const PRICE_HISTORY = {
         324126.91,
         324126.91,
         324912.74,
-        326258.11
+        326258.11,
+        327388.51
       ],
       "405": [
         null,
@@ -398,7 +431,8 @@ const PRICE_HISTORY = {
         null,
         419137.08,
         420153.25,
-        421892.98
+        421892.98,
+        423354.73
       ],
       "501": [
         342402.0,
@@ -406,7 +440,8 @@ const PRICE_HISTORY = {
         339578.44,
         339578.44,
         340401.73,
-        341811.23
+        341811.23,
+        342995.52
       ],
       "601": [
         331032.6,
@@ -414,7 +449,8 @@ const PRICE_HISTORY = {
         341745.01,
         341745.01,
         342573.55,
-        343992.05
+        343992.05,
+        345183.89
       ],
       "602": [
         null,
@@ -422,7 +458,8 @@ const PRICE_HISTORY = {
         null,
         null,
         382124.27,
-        383706.54
+        383706.54,
+        385035.98
       ],
       "604": [
         null,
@@ -430,7 +467,8 @@ const PRICE_HISTORY = {
         null,
         null,
         367930.54,
-        369454.03
+        369454.03,
+        370734.09
       ],
       "802": [
         null,
@@ -438,7 +476,8 @@ const PRICE_HISTORY = {
         null,
         null,
         397562.09,
-        399208.28
+        399208.28,
+        400591.43
       ],
       "901": [
         424807.63,
@@ -446,6 +485,7 @@ const PRICE_HISTORY = {
         415071.49,
         415071.49,
         416077.81,
+        null,
         null
       ],
       "1001": [
@@ -454,13 +494,15 @@ const PRICE_HISTORY = {
         614277.72,
         614277.72,
         615767.0,
-        618316.71
+        618316.71,
+        620459.01
       ],
       "1003": [
         589321.99,
         594150.77,
         594150.77,
         594150.77,
+        null,
         null,
         null
       ]
@@ -1090,35 +1132,36 @@ const PRICE_HISTORY = {
       }
     },
   "Tulum - Studios": {
-   datas: ["2026-09","2026-10"],
-   fontes: ["Tabela set/2026 · tabela 00 (lançamento)","Tabela out/2026 · situação de 19/10"],
-   obs: "Studios de 1 dormitório do Tulum, 9 das 42 disponíveis. Base: o total em 72x, a mesma dos cards e a mesma regra das outras séries (o total da condição principal). Só existe um levantamento até agora — a tabela 00, de lançamento, de setembro/2026 —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a tabela de outubro. A amostra não é a tabela inteira: são unidades escolhidas para cobrir todas as áreas do tipo, os extremos de preço e o maior espalhamento de andares, do jeito que as outras séries longas fazem. Preço de tabela fechada com uma vaga inclusa; o total não é indexado ao CUB, só as parcelas. Em out/2026 (situação de 19/10) os preços se repetiram em todas as unidades.",
+   datas: ["2026-09","2026-10","2026-11"],
+   fontes: ["Tabela set/2026 · tabela 00 (lançamento)","Tabela out/2026 · situação de 19/10","Tabela nov/2026"],
+   obs: "Studios de 1 dormitório do Tulum, 9 das 42 disponíveis. Base: o total em 72x, a mesma dos cards e a mesma regra das outras séries (o total da condição principal). Só existe um levantamento até agora — a tabela 00, de lançamento, de setembro/2026 —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a tabela de outubro. A amostra não é a tabela inteira: são unidades escolhidas para cobrir todas as áreas do tipo, os extremos de preço e o maior espalhamento de andares, do jeito que as outras séries longas fazem. Preço de tabela fechada com uma vaga inclusa; o total não é indexado ao CUB, só as parcelas. Em out/2026 (situação de 19/10) os preços se repetiram em todas as unidades. Em nov/2026 nenhum studio mudou de preço.",
    unidades: {
-    "504": [368501.4,368501.4],
-    "505": [523307.96,523307.96],
-    "609": [388108.26,388108.26],
-    "709": [391950.91,391950.91],
-    "809": [395793.57,395793.57],
-    "1009": [399636.22,399636.22],
-    "1103": [398146.56,398146.56],
-    "1302": [518255.84,518255.84],
-    "1408": [415006.85,415006.85]
+    "504": [368501.4,368501.4,368501.4],
+    "505": [523307.96,523307.96,523307.96],
+    "609": [388108.26,388108.26,388108.26],
+    "709": [391950.91,391950.91,391950.91],
+    "809": [395793.57,395793.57,395793.57],
+    "1009": [399636.22,399636.22,399636.22],
+    "1103": [398146.56,398146.56,398146.56],
+    "1302": [518255.84,518255.84,518255.84],
+    "1408": [415006.85,415006.85,415006.85]
    }
   },
   "Tulum - 2 dormitórios": {
-   datas: ["2026-09","2026-10"],
-   fontes: ["Tabela set/2026 · tabela 00 (lançamento)","Tabela out/2026 · situação de 19/10"],
-   obs: "Apartamentos de 2 dormitórios do Tulum, 5 dos 14 disponíveis. Base: o total em 72x, a mesma dos cards e a mesma regra das outras séries (o total da condição principal). Só existe um levantamento até agora — a tabela 00, de lançamento, de setembro/2026 —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a tabela de outubro. A amostra não é a tabela inteira: são unidades escolhidas para cobrir todas as áreas do tipo, os extremos de preço e o maior espalhamento de andares, do jeito que as outras séries longas fazem. Preço de tabela fechada com uma vaga inclusa; o total não é indexado ao CUB, só as parcelas. Em out/2026 (situação de 19/10) entraram na série 506, 602 e 607, as três que subiram de preço (+10,84%, +10,84% e +2,41%), e a 1401, que entrou na tabela; as cinco originais ficaram iguais e a 707 saiu da tabela em 30/09.",
+   datas: ["2026-09","2026-10","2026-11"],
+   fontes: ["Tabela set/2026 · tabela 00 (lançamento)","Tabela out/2026 · situação de 19/10","Tabela nov/2026"],
+   obs: "Apartamentos de 2 dormitórios do Tulum, 5 dos 14 disponíveis. Base: o total em 72x, a mesma dos cards e a mesma regra das outras séries (o total da condição principal). Só existe um levantamento até agora — a tabela 00, de lançamento, de setembro/2026 —, então ainda não há variação para medir: a aba compara a mesma unidade entre tabelas e precisa de dois pontos. O empreendimento entra na comparação quando chegar a tabela de outubro. A amostra não é a tabela inteira: são unidades escolhidas para cobrir todas as áreas do tipo, os extremos de preço e o maior espalhamento de andares, do jeito que as outras séries longas fazem. Preço de tabela fechada com uma vaga inclusa; o total não é indexado ao CUB, só as parcelas. Em out/2026 (situação de 19/10) entraram na série 506, 602 e 607, as três que subiram de preço (+10,84%, +10,84% e +2,41%), e a 1401, que entrou na tabela; as cinco originais ficaram iguais e a 707 saiu da tabela em 30/09. Em nov/2026 só a 701 mudou: +10,84%, a mesma alta que a 506 e a 602 tiveram em outubro — por isso ela entrou na amostra, com o valor de outubro.",
    unidades: {
-    "507": [630213.8,630213.8],
-    "707": [588758.03,null],
-    "806": [656349.22,656349.22],
-    "1007": [600302.3,600302.3],
-    "1406": [688210.83,688210.83],
-    "506": [700221.2,776148.8],
-    "602": [628460.94,696607.3],
-    "607": [569268.57,582985.89],
-    "1401": [null,674728.92]
+    "507": [630213.8,630213.8,630213.8],
+    "707": [588758.03,null,null],
+    "806": [656349.22,656349.22,656349.22],
+    "1007": [600302.3,600302.3,600302.3],
+    "1406": [688210.83,688210.83,688210.83],
+    "506": [700221.2,776148.8,776148.8],
+    "602": [628460.94,696607.3,696607.3],
+    "607": [569268.57,582985.89,582985.89],
+    "1401": [null,674728.92,674728.92],
+    "701": [null,574904.9,637243.98]
    }
   },
   "Amani 53": {
