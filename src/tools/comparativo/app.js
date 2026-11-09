@@ -922,6 +922,10 @@ function buildResumo(emp, ri){
      entrega logo abaixo */
   const constr = s.construtora || d0.construtora;
   if(constr) b1.push(`*Construtora ${constr}*`);
+  /* bairro (pedido do Felipe em 09/11/2026): do card, ou do summary quando nao ha card
+     com o nome da tabela; "Vila nova" do card sai "Vila Nova" */
+  const bairro = s.bairro || d0.bairro;
+  if(bairro) b1.push(`Bairro: ${String(bairro).replace(/(^|\s)(\S)/g,(m,a,c)=>a+c.toUpperCase()).replace(/ (D[aeo]s?) /g,(m,p)=>" "+p.toLowerCase()+" ")}`);
   const andar = (s.andar===false) ? null : andarDeUnidade(un);
   const grp = grupoDe(t, ri);
   b1.push(`*${rotuloUnidade(t)} ${un}*${grp&&grp.rotulo?` \u00b7 ${grp.rotulo}`:""}${andar?` \u00b7 ${andar}`:""}`);

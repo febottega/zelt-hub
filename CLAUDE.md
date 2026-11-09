@@ -211,6 +211,10 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   e a mais larga é a do Alameda (1248px de mínimo para 1270 disponíveis). Abaixo de ~1280px
   o Alameda, o Central Park e o Criatto voltam a rolar um pouco. **Tabela nova: ponha o nome dela no `SALES_VALORES`**
   (sem isso ele cai no principal + alternativas do `summary`, com o à vista por último).
+  **O "Copiar Resumo" diz o bairro** (09/11/2026, pedido do Felipe): linha "Bairro: …" logo
+  abaixo da construtora, do `bairro` do card de mesmo nome ou do `summary.bairro` quando a
+  tabela não tem card com o nome dela (Vista 43 Studios, Criatto). Tabela nova sem card de
+  mesmo nome: ponha `bairro` no `summary`.
 - **gerador** — 5 documentos (proposta, autorização/captação, locação, entrega de
   chaves, checklist). Rascunhos em `localStorage` (`zelt_*_v1`); exporta com
   html2canvas + pdf-lib.
@@ -290,10 +294,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (27 payloads, 17.424.500 bytes):
+Hash de referência (27 payloads, 17.424.968 bytes):
 
 ```
-57201A37B7F15206AF9307A6E1492FB2E474A0F84CDAA118239FC181E9927474
+AF3DBBE70D6331ECA57DB8ECA0BC83152A07F65672022B34C4B96967CD65F341
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
