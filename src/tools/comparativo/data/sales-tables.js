@@ -92,7 +92,7 @@ const SALES_TABLES = {
   "San Vito": {
     "folderId": "1dI6c3bo7nUM47TfvNrpfgzerssDc4CLp",
     "source": "Tabela da construtora (HR Sul) · Bloco A",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Apto",
@@ -186,7 +186,7 @@ const SALES_TABLES = {
         "R$ 1.745.000,00"
       ]
     ],
-    "note": "Bloco A (João Pessoa). Mostrando apenas unidades disponíveis; 601, 602, 803, 902, 1004 e 1501 estão reservadas e as demais indisponíveis. Vaga extra de garagem: R$ 65.000,00. Valores vigentes em outubro/2026: as mesmas nove unidades de setembro; subiram 402 (R$ 990 mil → R$ 999 mil), 403 e 404 (R$ 650 mil → R$ 660 mil), 1204 (R$ 585 mil → R$ 590 mil), 1304 (R$ 590 mil → R$ 595 mil) e 1404 (R$ 595 mil → R$ 599 mil); 1503, 1701 e 1704 ficaram iguais. A tabela de outubro passou a trazer também a área do apartamento somada à da vaga, nas colunas \"com vaga\". Obs.: a HR Sul não atualiza os rótulos internos do arquivo, que ainda traz título de maio e \"válida até 31/06/2026\"; desconsiderar. Disponibilidade e número da vaga devem ser confirmados na negociação. Entrega: dezembro/2027 (confirmado pelo Felipe em 10/11/2026; era julho/2027 no card). As tabelas de 2026 não trazem a linha de previsão; a de fev/2025 já dizia dez/2027.",
+    "note": "Bloco A (João Pessoa). Mostrando apenas unidades disponíveis; 601, 602, 803, 902, 1004 e 1501 estão reservadas e as demais indisponíveis. Vaga extra de garagem: R$ 65.000,00. Valores vigentes em novembro/2026 (tabela válida até 30/11/2026): as mesmas nove unidades, com os mesmos valores de outubro. Em outubro, frente a setembro, subiram 402 (R$ 990 mil → R$ 999 mil), 403 e 404 (R$ 650 mil → R$ 660 mil), 1204 (R$ 585 mil → R$ 590 mil), 1304 (R$ 590 mil → R$ 595 mil) e 1404 (R$ 595 mil → R$ 599 mil); 1503, 1701 e 1704 ficaram iguais. A tabela de outubro passou a trazer também a área do apartamento somada à da vaga, nas colunas \"com vaga\". Obs.: a HR Sul não atualiza os rótulos internos do arquivo, que ainda traz título de maio e \"válida até 31/06/2026\"; desconsiderar. Disponibilidade e número da vaga devem ser confirmados na negociação. Entrega: dezembro/2027 (confirmado pelo Felipe em 10/11/2026; era julho/2027 no card). As tabelas de 2026 não trazem a linha de previsão; a de fev/2025 já dizia dez/2027.",
     "summary": {"tipos": {"404": "Terraço"}, 
       "bits": [
         {
