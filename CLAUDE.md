@@ -186,6 +186,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   metade do preço) por algumas horas em 30/10/2026; revisto, o CUB acompanha a inflação e não é custo real.
   O **San Blas** (Oma) fica no **Garcia** e está **entregue** (Felipe, 30/10/2026): os dois cards eram "Vila
   Formosa" e "A definir". O Garcia entrou no `M2_BAIRRO` (R$ 5.260, mesma fonte) e a Vila Formosa saiu, sem card.
+  O **Villa Toscana** (Andraus) fica no **Centro** nos dois cards (Felipe, 10/11/2026; o apto tipo dizia Vila nova).
   O **Grand Park** (Andraus) fica na **Vila Nova** (Rua Almirante Barroso, 739); até 29/10/2026 o
   card dizia Velha.
   O **Egon Belz** (Castelo) se chamava "Residencial EB" até 06/10/2026; o nome mudou em
@@ -294,10 +295,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (28 payloads, 18.141.088 bytes):
+Hash de referência (28 payloads, 18.143.472 bytes):
 
 ```
-AA7A7E19F0FD16FE3D52475F7513BDB7AF3462FCC14B0EE6E7FBF75DA2B05D44
+DB716E20D126AE0AE890BD9A5FD2F287F549D4CD27E8825131E4306A06639D71
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

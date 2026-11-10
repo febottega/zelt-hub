@@ -329,7 +329,7 @@ const SALES_TABLES = {
   },
   "Villa Toscana": {
     "source": "Tabela da construtora (Andraus)",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -339,6 +339,7 @@ const SALES_TABLES = {
       "Parcelado até 30x",
       "Entrada (35%)",
       "Anuais (6%, 3x)",
+      "30 parcelas (47%)",
       "Situação"
     ],
     "rows": [
@@ -346,34 +347,37 @@ const SALES_TABLES = {
         "1201",
         "2 vagas",
         "106,24 m²",
-        "R$ 992.278,89",
-        "R$ 1.071.660,55",
-        "R$ 375.081,19",
-        "R$ 64.299,63",
+        "R$ 995.751,26",
+        "R$ 1.075.411,36",
+        "R$ 376.393,98",
+        "R$ 64.524,68",
+        "R$ 16.848,11",
         "Disponível"
       ],
       [
         "1203",
         "3 vagas",
         "106,91 m²",
-        "R$ 1.050.752,88",
-        "R$ 1.134.813,11",
-        "R$ 397.184,59",
-        "R$ 68.088,79",
+        "R$ 1.054.430,52",
+        "R$ 1.138.784,96",
+        "R$ 398.574,73",
+        "R$ 68.327,10",
+        "R$ 17.840,96",
         "Revenda"
       ],
       [
         "1402",
         "4 vagas",
         "287,93 m²",
-        "R$ 3.510.458,08",
-        "R$ 3.791.294,73",
-        "R$ 1.326.953,15",
-        "R$ 227.477,68",
+        "R$ 3.522.744,68",
+        "R$ 3.804.564,26",
+        "R$ 1.331.597,49",
+        "R$ 228.273,86",
+        "R$ 59.604,84",
         "Disponível"
       ]
     ],
-    "note": "Villa Toscana Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. Aceita automóvel como parte do pagamento. Vaga extra: R$ 70.000,00 (consultar disponibilidade). Apto tipo: 106,91 m² privativos + 66,20 m² de comum = 173,11 m², mais 31,09 m² de duas vagas — total aprox. 204,20 m². Cobertura Duplex 1402: boxes 44/44A/44B/44C, 287,93 m² privativos, área total aprox. 523,92 m² com as quatro vagas. Em outubro/2026 as mesmas unidades, com todos os valores 0,41% acima de setembro e entrada (35%) e anuais (6%) fechando ao centavo sobre o parcelado.",
+    "note": "Villa Toscana Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. Aceita automóvel como parte do pagamento. Vaga extra: R$ 70.000,00 (consultar disponibilidade). Apto tipo: 106,91 m² privativos + 66,20 m² de comum = 173,11 m², mais 31,09 m² de duas vagas — total aprox. 204,20 m². Cobertura Duplex 1402: boxes 44/44A/44B/44C, 287,93 m² privativos, área total aprox. 523,92 m² com as quatro vagas. Em outubro/2026 as mesmas unidades, com todos os valores 0,41% acima de setembro e entrada (35%) e anuais (6%) fechando ao centavo sobre o parcelado. Em novembro/2026 as mesmas três unidades, com todos os valores 0,35% acima de outubro. A coluna \"30 parcelas\" é o saldo de 47% dividido por 30 (calculada, não vem impressa na tabela); entrada + 3 anuais + 30 parcelas devolvem o parcelado com diferença de no máximo R$ 0,13, do arredondamento.",
     "summary": {
       "bits": [
         {
@@ -384,7 +388,7 @@ const SALES_TABLES = {
           "col": 1
         }
       ],
-      "situacaoCol": 7,
+      "situacaoCol": 8,
       "principal": {
         "label": "Parcelado até 30x",
         "col": 4
@@ -397,6 +401,10 @@ const SALES_TABLES = {
         {
           "label": "Reforços anuais (6%, 3×)",
           "col": 6
+        },
+        {
+          "label": "30 parcelas",
+          "col": 7
         }
       ],
       "alternativas": [
@@ -409,7 +417,7 @@ const SALES_TABLES = {
   },
   "Grand Park": {
     "source": "Tabela da construtora (Andraus)",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -419,6 +427,7 @@ const SALES_TABLES = {
       "Parcelado até 30x",
       "Entrada (35%)",
       "Anuais (6%, 3x)",
+      "30 parcelas (47%)",
       "Situação"
     ],
     "rows": [
@@ -426,14 +435,15 @@ const SALES_TABLES = {
         "1803",
         "2 vagas",
         "111,09 m²",
-        "R$ 1.077.789,21",
-        "R$ 1.164.012,34",
-        "R$ 407.404,32",
-        "R$ 69.840,74",
+        "R$ 1.081.561,47",
+        "R$ 1.168.086,39",
+        "R$ 408.830,24",
+        "R$ 70.085,18",
+        "R$ 18.300,02",
         "Revenda"
       ]
     ],
-    "note": "Grand Park Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. A cobertura 1801 foi vendida em agosto/2026 — restou apenas o apto tipo 1803, em revenda. Apto tipo (5º ao 17º pav.): 111,09 m² privativos + 25,82 m² das duas vagas + 67,36 m² de área comum, total aprox. 204,27 m². A cobertura 1801 tinha 222,18 m² privativos e área total aprox. 376,20 m². Em outubro/2026 a mesma unidade, com todos os valores 0,41% acima de setembro e entrada (35%) e anuais (6%) fechando ao centavo sobre o parcelado.",
+    "note": "Grand Park Residence Club (entregue). Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Liberado financiamento bancário. A cobertura 1801 foi vendida em agosto/2026 — restou apenas o apto tipo 1803, em revenda. Apto tipo (5º ao 17º pav.): 111,09 m² privativos + 25,82 m² das duas vagas + 67,36 m² de área comum, total aprox. 204,27 m². A cobertura 1801 tinha 222,18 m² privativos e área total aprox. 376,20 m². Em outubro/2026 a mesma unidade, com todos os valores 0,41% acima de setembro e entrada (35%) e anuais (6%) fechando ao centavo sobre o parcelado. Em novembro/2026 a mesma unidade, com todos os valores 0,35% acima de outubro. A coluna \"30 parcelas\" é o saldo de 47% dividido por 30 (calculada, não vem impressa na tabela); entrada + 3 anuais + 30 parcelas devolvem o parcelado com diferença de R$ 0,01.",
     "summary": {
       "bits": [
         {
@@ -444,7 +454,7 @@ const SALES_TABLES = {
           "col": 1
         }
       ],
-      "situacaoCol": 7,
+      "situacaoCol": 8,
       "principal": {
         "label": "Parcelado até 30x",
         "col": 4
@@ -457,6 +467,10 @@ const SALES_TABLES = {
         {
           "label": "Reforços anuais (6%, 3×)",
           "col": 6
+        },
+        {
+          "label": "30 parcelas",
+          "col": 7
         }
       ],
       "alternativas": [
@@ -469,7 +483,7 @@ const SALES_TABLES = {
   },
   "Carbono": {
     "source": "Tabela da construtora (Andraus) · Investidores",
-    "ref": "Outubro/2026",
+    "ref": "Novembro/2026",
     "unitCol": 0,
     "columns": [
       "Unidade",
@@ -480,6 +494,7 @@ const SALES_TABLES = {
       "Parcelado até 30x",
       "Entrada (35%)",
       "Anuais (6%, 3x)",
+      "30 parcelas (47%)",
       "Situação"
     ],
     "rows": [
@@ -488,10 +503,11 @@ const SALES_TABLES = {
         "Double Loft (2 dorm./garden)",
         "1 vaga",
         "121,15 m²",
-        "R$ 827.676,72",
-        "R$ 901.060,56",
-        "R$ 315.371,20",
-        "R$ 54.063,63",
+        "R$ 843.978,94",
+        "R$ 918.177,89",
+        "R$ 321.362,26",
+        "R$ 55.090,67",
+        "R$ 14.384,79",
         "Disponível"
       ],
       [
@@ -499,10 +515,11 @@ const SALES_TABLES = {
         "—",
         "1 vaga",
         "36,05 m²",
-        "R$ 516.065,82",
-        "R$ 541.869,11",
-        "R$ 189.654,19",
-        "R$ 32.512,15",
+        "R$ 519.995,33",
+        "R$ 545.995,09",
+        "R$ 191.098,28",
+        "R$ 32.759,71",
+        "R$ 8.553,92",
         "Disponível"
       ],
       [
@@ -510,10 +527,11 @@ const SALES_TABLES = {
         "Sacada, home office, dep./dorm.",
         "1 vaga",
         "57,41 m²",
-        "R$ 723.167,16",
-        "R$ 766.325,52",
-        "R$ 268.213,93",
-        "R$ 45.979,53",
+        "R$ 728.673,61",
+        "R$ 772.107,29",
+        "R$ 270.237,55",
+        "R$ 46.326,44",
+        "R$ 12.096,35",
         "Disponível"
       ],
       [
@@ -521,10 +539,11 @@ const SALES_TABLES = {
         "Dif. sacada",
         "1 vaga",
         "38,18 m²",
-        "R$ 504.459,55",
-        "R$ 535.682,52",
-        "R$ 187.488,88",
-        "R$ 32.140,95",
+        "R$ 508.300,68",
+        "R$ 539.715,71",
+        "R$ 188.900,50",
+        "R$ 32.382,94",
+        "R$ 8.455,55",
         "Revenda"
       ],
       [
@@ -532,10 +551,11 @@ const SALES_TABLES = {
         "Dif. sacada",
         "1 vaga",
         "49,86 m²",
-        "R$ 641.833,61",
-        "R$ 672.925,29",
-        "R$ 235.523,85",
-        "R$ 40.375,52",
+        "R$ 646.720,76",
+        "R$ 678.056,80",
+        "R$ 237.319,88",
+        "R$ 40.683,41",
+        "R$ 10.622,89",
         "Disponível"
       ],
       [
@@ -543,25 +563,15 @@ const SALES_TABLES = {
         "Grand Duplex com sacada",
         "1 vaga",
         "68,73 m²",
-        "R$ 827.130,22",
-        "R$ 880.486,74",
-        "R$ 308.170,36",
-        "R$ 52.829,20",
+        "R$ 833.428,28",
+        "R$ 887.099,70",
+        "R$ 310.484,89",
+        "R$ 53.225,98",
+        "R$ 13.897,90",
         "Disponível"
-      ],
-      [
-        "1108",
-        "—",
-        "1 vaga",
-        "37,54 m²",
-        "R$ 486.928,61",
-        "R$ 511.275,04",
-        "R$ 178.946,27",
-        "R$ 30.676,50",
-        "Revenda"
       ]
     ],
-    "note": "Tabela de investidores. Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Cada unidade tem 1 vaga exclusiva. Empreendimento concluído, com convenção preparada para locação por temporada (apps). Registro de incorporação R-2-52.614. Em setembro/2026 a tabela caiu de dez para sete unidades: saíram a 1102 e as duas 100% mobiliadas, a 903 e a 905 — com elas sai também a única referência de aluguel que tínhamos aqui (as mobiliadas eram as que constavam na lista de locação). O desconto do à vista sobre o parcelado varia muito por unidade, de 4,62% na 1006 a 8,16% na 509 — vale conferir unidade por unidade em vez de assumir um percentual único. Em outubro/2026 as mesmas sete unidades: o à vista subiu exatamente 0,41% em todas sobre setembro; o parcelado subiu entre 0,40% e 0,41%, e entrada (35%) e anuais (6%) seguem o parcelado ao centavo.",
+    "note": "Tabela de investidores. Parcelas corrigidas por INPC-IBGE + 0,90% a.m., vencimento dia 8. Cada unidade tem 1 vaga exclusiva. Empreendimento concluído, com convenção preparada para locação por temporada (apps). Registro de incorporação R-2-52.614. Em setembro/2026 a tabela caiu de dez para sete unidades: saíram a 1102 e as duas 100% mobiliadas, a 903 e a 905 — com elas sai também a única referência de aluguel que tínhamos aqui (as mobiliadas eram as que constavam na lista de locação). O desconto do à vista sobre o parcelado varia muito por unidade, de 4,62% na 1006 a 8,16% na 509 — vale conferir unidade por unidade em vez de assumir um percentual único. Em outubro/2026 as mesmas sete unidades: o à vista subiu exatamente 0,41% em todas sobre setembro; o parcelado subiu entre 0,40% e 0,41%, e entrada (35%) e anuais (6%) seguem o parcelado ao centavo. Em novembro/2026 saiu a 1108 (revenda) e ficaram seis unidades. O à vista subiu 0,76% em cinco delas e 1,97% na 509, que foi reprecificada; o parcelado acompanhou (+0,75% a +0,76%, e +1,90% na 509). A tabela de novembro passou a trazer a condição detalhada — entrada de 35% + 3 anuais de 6% + saldo de 47% em 30 parcelas —, e a coluna \"30 parcelas\" é esse saldo dividido por 30 (calculada, não vem impressa na tabela); entrada + 3 anuais + 30 parcelas devolvem o parcelado com diferença de no máximo R$ 0,13, do arredondamento.",
     "summary": {
       "bits": [
         {
@@ -575,7 +585,7 @@ const SALES_TABLES = {
           "col": 1
         }
       ],
-      "situacaoCol": 8,
+      "situacaoCol": 9,
       "principal": {
         "label": "Parcelado até 30x",
         "col": 5
@@ -588,6 +598,10 @@ const SALES_TABLES = {
         {
           "label": "Reforços anuais (6%, 3×)",
           "col": 7
+        },
+        {
+          "label": "30 parcelas",
+          "col": 8
         }
       ],
       "alternativas": [
