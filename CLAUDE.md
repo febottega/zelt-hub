@@ -43,11 +43,11 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 27 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 28 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          20 relatórios históricos em base64 — nunca ler; editar só por script
+   └─ frozen/          21 relatórios históricos em base64 — nunca ler; editar só por script
 ```
 
 **`src/frozen/` não é intocável, é ilegível.** Cada `.b64` é uma linha de 500 a
@@ -128,7 +128,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   avaliado naquela rodada. Numa semana nova, procure código repetido antes de emendar o `DADOS`.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
-- **avaliacao** + 20 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 21 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
   Desde 26/10/2026 as abas "Relatório / Comparativo" de cada relatório (`.tabbar`, radios
   `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
   `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
@@ -294,10 +294,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (27 payloads, 17.424.968 bytes):
+Hash de referência (28 payloads, 18.140.856 bytes):
 
 ```
-AF3DBBE70D6331ECA57DB8ECA0BC83152A07F65672022B34C4B96967CD65F341
+0360D4A85B1C4B65456D2FDFDD0552F921125421ABF03C550E0B200ED0F2C39F
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
