@@ -80,7 +80,6 @@ Resolução de cada nome em `order.txt`, nesta ordem:
 | padrão e lazer por empreendimento | `tools/comparativo/data/padrao.js` | 6 KB |
 | tabelas de vendas | `tools/comparativo/data/sales-tables.js` | 131 KB |
 | logos das construtoras | `tools/comparativo/data/logos.js` | 44 KB |
-| busca rápida do comparativo (frase → filtros) | `tools/comparativo/agente.js` | 20 KB |
 | CSS do comparativo | `tools/comparativo/style.css` | 46 KB |
 | HTML/estrutura do comparativo | `tools/comparativo/layout.html` | 75 KB |
 | gerador de documentos | `tools/gerador.html` | 288 KB |
@@ -133,7 +132,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   Desde 26/10/2026 as abas "Relatório / Comparativo" de cada relatório (`.tabbar`, radios
   `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
   `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
-- **comparativo** — 75 empreendimentos. **Busca rápida** (11/11/2026): caixa no topo dos filtros onde o corretor escreve o que o cliente quer ("apartamento 3 dormitórios na Velha ou Água Verde até 700 mil"); o `agente.js` lê a frase **sem IA** (regras e listas de palavras, no navegador), liga os filtros da página e responde num balão com o que entendeu, o que não usou e as opções (sem os esgotados; com zero resultado, diz quantos sairiam afrouxando cada critério). O que não tem controle na página — preço, ano de entrega, padrão, lazer, nome do empreendimento, "na planta" — vira filtro do assistente, com chip "Busca rápida" na barra de filtros ativos (`agenteFiltra`/`agenteChips`/`agenteRemove`/`agenteLimpa`, chamados pelo `matches`, `renderActiveChips`, `removeFilter` e `clearAll` do `app.js`). Preço da busca = card com **alguma unidade** na faixa (`vmin`/`vmax`), não o preço médio do campo da página. Lazer vem do `PADRAO_LAZER`; item novo (o Felipe vai mandar o lazer completo, com coisas como aquecimento a gás) entra no `AG_LAZER` do `agente.js` com as palavras que o corretor usaria. Opção com IA de verdade (Claude) ficou para depois: exige um servidor intermediário para guardar a chave, porque o site é público. Abas: comparativo, custo-benefício, tabelas de vendas,
+- **comparativo** — 75 empreendimentos. Abas: comparativo, custo-benefício, tabelas de vendas,
   investimentos (a aba **Mudanças** e o `price-changes.js` foram excluídos em 05/11/2026, a pedido
   do Felipe: ninguém usava; o link antigo `#comparativo/mudancas` abre o comparativo). **Toda mudança no comparativo atualiza a data em
   dois lugares**: o `#updated-date` do cabeçalho (`tools/comparativo/layout.html`,
@@ -296,10 +295,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (28 payloads, 18.184.824 bytes):
+Hash de referência (28 payloads, 18.149.776 bytes):
 
 ```
-68AA5CD67D54574A23C9107C913CBF9041A1B38D18ABD20A4FDF071CC9DA3824
+C69BD824EEF00D72B1B5F16FB7CC7539A66EF25C906C24D78F9250588C000622
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que

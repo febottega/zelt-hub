@@ -213,8 +213,6 @@ function matches(d){
     const q=state.search.toLowerCase();
     if(!(d.empreendimento.toLowerCase().includes(q) || d.construtora.toLowerCase().includes(q))) return false;
   }
-  /* filtros da busca rápida que não têm controle na página (agente.js) */
-  if(typeof agenteFiltra==="function" && !agenteFiltra(d)) return false;
   return true;
 }
 
@@ -346,11 +344,9 @@ function clearAll(){
   ["price-min","price-max","area-min","area-max","search"].forEach(id=>document.getElementById(id).value="");
   document.getElementById("pronto-check").checked=false;
   document.getElementById("pronto-toggle").classList.remove("on");
-  if(typeof agenteLimpa==="function") agenteLimpa();
   render();
 }
 function removeFilter(kind,v){
-  if(kind==="agente"){ agenteRemove(v); render(); return; }
   if(["bairro","quartos","suites","tipo","construtora","vagas","ano"].includes(kind)){
     state[kind].delete(v);
     const sv=String(v);
@@ -376,7 +372,6 @@ function renderActiveChips(){
   if(state.areaMax!=null) chips.push({kind:"areaMax",cat:"Área",text:"≤ "+state.areaMax+" m²"});
   if(state.pronto) chips.push({kind:"pronto",cat:"",text:"Entregue"});
   if(state.search) chips.push({kind:"search",cat:"Busca",text:`“${state.search}”`});
-  if(typeof agenteChips==="function") chips.push(...agenteChips());
   if(chips.length===0){ box.innerHTML=""; return; }
   box.innerHTML = `<span class="lead">Filtros ativos</span>` + chips.map((c,i)=>
     `<span class="achip">${c.cat?`<span class="cat">${c.cat}:</span>`:""}${c.text}<button data-i="${i}" aria-label="Remover">×</button></span>`
