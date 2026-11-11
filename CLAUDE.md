@@ -295,10 +295,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (28 payloads, 18.143.468 bytes):
+Hash de referência (28 payloads, 18.149.776 bytes):
 
 ```
-FDDBCA12DF4275064961135824A5A7066E10C3B82CE7F8A23F1A49548F08FA57
+C69BD824EEF00D72B1B5F16FB7CC7539A66EF25C906C24D78F9250588C000622
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -562,6 +562,8 @@ média real do total em 72x de todas as unidades (studios R$ 404.093,32 em vez
 de 445.904,68). Quando a tabela do Tulum mudar, recalcule os dois do mesmo jeito. O **506** dos 2
 dormitórios (91,70 m², área confirmada) **entra no card** como as demais: ficou fora
 numa publicação de 30/09/2026 e o Felipe pediu para voltar no mesmo dia.
+
+O **Lago di Garda** (lotes) tem a condição desde 11/11/2026 (Felipe): entrada de 20% + até 120 parcelas fixas com juros de 1% a.m. A parcela é calculada pela Tabela Price sobre os 80% (não vem na tabela). Com os juros, entrada + 120 parcelas dá mais que o investimento; a coluna "Total pago em 120x" chegou a existir e saiu a pedido do Felipe no mesmo dia. O "Investimento" segue como base do card.
 
 O **Amani 53** (Mestra, entrou em 23/09/2026) tem a entrega só com o ano, `"2031"`,
 porque a construtora não informa o mês. O `entregaAno` do `app.js` antes só
