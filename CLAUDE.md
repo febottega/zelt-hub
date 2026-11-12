@@ -240,10 +240,14 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
 
 No topo do hub, à direita do logo — no lugar do antigo selo "Uso interno ·
 Equipe de corretores", tirado em 25/09/2026 —, fica a caixa `.hero-links`
-com dois links externos de crédito da SB, que abrem em aba nova: **Simulação e
-Pré Aprovação** (store.bpotech.com.br) e **Calculadora de Poder de Compra**
-(sbcreditoimobiliario.com/parceiros). Abaixo de 760px a caixa desce para uma
-linha própria e abaixo de 640px os botões ficam um sobre o outro.
+com a caixinha de arquivos e, desde 12/11/2026, **um botão só, "Simulações e Juros de
+Obra"** (`#heroSim`, `.hero-menu`), que abre uma lista com três links externos em aba nova:
+**Simulação e Pré Aprovação** (store.bpotech.com.br), **Calculadora de Poder de Compra**
+(sbcreditoimobiliario.com/parceiros) — os dois de crédito da SB, que antes eram botões
+separados — e **Calculadora de Juros de Obra** (uweradloff.github.io/simulador-zelt/).
+A lista fecha no clique fora, no Esc e ao escolher um link. Abaixo de 760px a caixa desce
+para uma linha própria e abaixo de 640px os botões ficam um sobre o outro e a lista abre
+no fluxo, embaixo do botão.
 
 Zero bibliotecas externas em runtime além do que está em `vendor/`. Gráficos são
 HTML/CSS/SVG próprios.
@@ -295,10 +299,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (28 payloads, 18.149.776 bytes):
+Hash de referência (28 payloads, 18.153.268 bytes):
 
 ```
-C69BD824EEF00D72B1B5F16FB7CC7539A66EF25C906C24D78F9250588C000622
+EB0FF86B1186C792D85050FC7DE5C979C6DC8EA35F0713529F49B2EE5F76C5A6
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
