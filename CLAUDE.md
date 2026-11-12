@@ -126,6 +126,13 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   antigos do AP8437 (13/10), AP8435 (06/10), TE1029 (04/08) e AP8100 (16/06); ficou o da semana mais recente
   de cada um. Os KPIs e os relatórios congelados daquelas semanas continuam contando o imóvel, porque ele foi
   avaliado naquela rodada. Numa semana nova, procure código repetido antes de emendar o `DADOS`.
+  **Endereço sem número** (Felipe, 12/11/2026, depois que um corretor saiu da ZELT com o link do hub):
+  nem o número da rua nem o da unidade aparecem — "Rua X, 162 · Ap 204 · Maison · Bairro" virou
+  "Rua X · Maison · Bairro"; Ap/Apto/Sl/Lt/Lote com número somem, "Casa 02"/"Sobrado 01"/"Loft 02 e 03"
+  ficam só "Casa"/"Sobrado"/"Loft". O nome do prédio fica, mesmo com número ("Hugel 642"). Valeu no
+  `DADOS` (`e` e `cm`; `cm` pode ficar vazio) e no `local` do `DETALHES` e no `.dw-loc` do relatório atual
+  e dos 20 congelados que têm endereço (o 16/06 não tem). Os relatórios novos já vêm assim do Felipe;
+  confira antes de emendar o `DADOS`. Script: `oculta.js`, no scratchpad da sessão de 12/11.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 21 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
@@ -299,10 +306,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (28 payloads, 18.153.268 bytes):
+Hash de referência (28 payloads, 18.134.076 bytes):
 
 ```
-EB0FF86B1186C792D85050FC7DE5C979C6DC8EA35F0713529F49B2EE5F76C5A6
+FC81947ABACBDA70F549A5D7DD84D945D4D4E8A2F630E49243A7C27D552E0E8E
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
