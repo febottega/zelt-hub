@@ -133,6 +133,14 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   `DADOS` (`e` e `cm`; `cm` pode ficar vazio) e no `local` do `DETALHES` e no `.dw-loc` do relatório atual
   e dos 20 congelados que têm endereço (o 16/06 não tem). Os relatórios novos já vêm assim do Felipe;
   confira antes de emendar o `DADOS`. Script: `oculta.js`, no scratchpad da sessão de 12/11.
+  **AP8381 (29/09) sem a avaliação do Ricardo da Silva** (Felipe, 13/11/2026): os R$ 450.000 dele saíram e o
+  consenso foi recalculado com as outras 8 — R$ 398.750, gap −11,4% (segue Leve ajuste). A nota 8,0 ficou, porque
+  a nota de cada corretor não está guardada. Mudaram: `DADOS` (k, g, dr), KPI de 29/09 (gap médio −8,9 → −9,0) e o
+  `gap_delta` de 06/10 (+0,8 → +0,9); no relatório de 29/09 o `EXEMPLO`, o `AVALIACOES` e a ficha; nos seis
+  relatórios seguintes o `SEMANAS_ANTERIORES` (`gapMedio`/`gapAgregado`) e, nos de 06/10, 13/10 e 20/10, a
+  tabela estática. **Nos congelados a ficha do imóvel (`.dw-body`) é HTML pronto e o `gerar()` não a refaz**
+  — a tabela e o ranking ele refaz a partir do `EXEMPLO`. Corrigir um número antigo é mexer nos dois.
+  Scripts: `ap8381.js` e `ap8381-ficha.js`, no scratchpad da sessão de 12/11.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 21 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
@@ -306,10 +314,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (28 payloads, 18.134.076 bytes):
+Hash de referência (28 payloads, 18.133.904 bytes):
 
 ```
-FC81947ABACBDA70F549A5D7DD84D945D4D4E8A2F630E49243A7C27D552E0E8E
+0E124F8E46A3A050B6C693408B935C4EAAE7FE4B795041C1F341398763225DDD
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
