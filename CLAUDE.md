@@ -252,7 +252,8 @@ Obra"** (`#heroSim`, `.hero-menu`), que abre uma lista com três links externos 
 **Simulação e Pré Aprovação** (store.bpotech.com.br), **Calculadora de Poder de Compra**
 (sbcreditoimobiliario.com/parceiros) — os dois de crédito da SB, que antes eram botões
 separados — e **Calculadora de Juros de Obra** (uweradloff.github.io/simulador-zelt/).
-A lista fecha no clique fora, no Esc e ao escolher um link. Abaixo de 760px a caixa desce
+A lista fecha no clique fora, no Esc e ao escolher um link. À direita dele, desde 13/11/2026,
+o botão **Tulum Interativo** (`.hero-link`, aba nova) leva a tulum-experiencia-3d.uwe.chatgpt.site. Abaixo de 760px a caixa desce
 para uma linha própria e abaixo de 640px os botões ficam um sobre o outro e a lista abre
 no fluxo, embaixo do botão.
 
@@ -306,10 +307,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (28 payloads, 18.134.076 bytes):
+Hash de referência (28 payloads, 18.134.261 bytes):
 
 ```
-FC81947ABACBDA70F549A5D7DD84D945D4D4E8A2F630E49243A7C27D552E0E8E
+9DA7FB272C0B911980681F53D930905AB408DCD94BF627E45AD365E2F5A68656
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
