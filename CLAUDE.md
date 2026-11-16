@@ -133,6 +133,11 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   `DADOS` (`e` e `cm`; `cm` pode ficar vazio) e no `local` do `DETALHES` e no `.dw-loc` do relatório atual
   e dos 20 congelados que têm endereço (o 16/06 não tem). Os relatórios novos já vêm assim do Felipe;
   confira antes de emendar o `DADOS`. Script: `oculta.js`, no scratchpad da sessão de 12/11.
+  **Jaison saiu da ZELT** (Felipe, 16/11/2026): os 22 imóveis que ele captou passaram para **ZELT** — no
+  `DADOS` (`cap`) e nos relatórios (ficha, tabela, ranking, destaques, `EXEMPLO`); o nome dele saiu do
+  `CAP_ROSTER` e do filtro de captador. **As avaliações que ele fez nos imóveis dos outros ficaram** (`AVALIACOES`,
+  `CORRETORES_SEMANA`, chips), porque são histórico da rodada. Corretor que sair: mesmo roteiro, script
+  `jaison.js` no scratchpad da sessão de 12/11.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
 - **avaliacao** + 21 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
@@ -244,6 +249,8 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   arquivo. O cabeçalho, as fontes (Oswald + Atkinson) e o logo de 30px foram padronizados com
   o painel de avaliações por script (`cxa-padroniza.js`, no scratchpad da sessão de 20/10):
   numa versão nova, refaça essa padronização e reemende o bloco do fim.
+  A linha do **Jaison Klann** saiu em 16/11/2026 (ele deixou a ZELT); as posições prontas (`rc`, `qr`, `vr`)
+  foram renumeradas de 1 a 15. Os totais do topo são da imobiliária inteira e não mudaram.
 
 No topo do hub, à direita do logo — no lugar do antigo selo "Uso interno ·
 Equipe de corretores", tirado em 25/09/2026 —, fica a caixa `.hero-links`
@@ -307,10 +314,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (28 payloads, 18.134.261 bytes):
+Hash de referência (28 payloads, 18.130.653 bytes):
 
 ```
-9DA7FB272C0B911980681F53D930905AB408DCD94BF627E45AD365E2F5A68656
+BF7CF66AFF3D983B48B44143B86D61BA1BCBA45221BEE7AF9EF176E63D973910
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
