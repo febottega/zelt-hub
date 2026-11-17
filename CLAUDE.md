@@ -43,11 +43,11 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 28 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 29 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          21 relatórios históricos em base64 — nunca ler; editar só por script
+   └─ frozen/          22 relatórios históricos em base64 — nunca ler; editar só por script
 ```
 
 **`src/frozen/` não é intocável, é ilegível.** Cada `.b64` é uma linha de 500 a
@@ -131,7 +131,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   "Rua X · Maison · Bairro"; Ap/Apto/Sl/Lt/Lote com número somem, "Casa 02"/"Sobrado 01"/"Loft 02 e 03"
   ficam só "Casa"/"Sobrado"/"Loft". O nome do prédio fica, mesmo com número ("Hugel 642"). Valeu no
   `DADOS` (`e` e `cm`; `cm` pode ficar vazio) e no `local` do `DETALHES` e no `.dw-loc` do relatório atual
-  e dos 20 congelados que têm endereço (o 16/06 não tem). Os relatórios novos já vêm assim do Felipe;
+  e dos 20 congelados que têm endereço (o 16/06 não tem). Os relatórios novos deveriam vir assim, mas o de 17/11 veio com número e captador Jaison: a limpeza e a troca entraram no script da semana (`av1711-aplica.js`, que também pega "Ap102" sem espaço);
   confira antes de emendar o `DADOS`. Script: `oculta.js`, no scratchpad da sessão de 12/11.
   **Jaison saiu da ZELT** (Felipe, 16/11/2026): os 22 imóveis que ele captou passaram para **ZELT** — no
   `DADOS` (`cap`) e nos relatórios (ficha, tabela, ranking, destaques, `EXEMPLO`); o nome dele saiu do
@@ -140,7 +140,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   `jaison.js` no scratchpad da sessão de 12/11.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
-- **avaliacao** + 21 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 22 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
   Desde 26/10/2026 as abas "Relatório / Comparativo" de cada relatório (`.tabbar`, radios
   `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
   `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
@@ -314,10 +314,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (28 payloads, 18.131.201 bytes):
+Hash de referência (29 payloads, 18.890.405 bytes):
 
 ```
-A75870F16107764BEF6A6ACB5164CAA4A72F3217E925CC542128E01620F5E303
+AAC3D61E61C5F8692C10B4A3839902CBABDCF86CE60ED71C60812976ED10E7D1
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
