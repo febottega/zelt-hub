@@ -8461,14 +8461,14 @@ const SALES_TABLES = {
       "Área priv.",
       "Vaga",
       "Tabela",
-      "Direta: ato (20%)",
-      "Direta: 72 parcelas mensais",
-      "Direta: 5 parcelas anuais",
-      "Direta: parcela de chaves",
-      "Financ.: ato (3%)",
-      "Financ.: 42 parcelas mensais",
-      "Financ.: 3 parcelas anuais",
-      "Financ.: parcela pós-chaves (36x)",
+      "Ato (20%)",
+      "72 parcelas mensais",
+      "5 parcelas anuais",
+      "Parcela de chaves",
+      "Ato (3%)",
+      "42 parcelas mensais",
+      "3 parcelas anuais",
+      "Parcela pós-chaves (36x)",
       "Financiamento"
     ],
     "rows": [
@@ -8865,7 +8865,7 @@ const SALES_TABLES = {
       [
         "1406",
         "19,27 m²",
-        "104 D · pilotis",
+        "104 D",
         "R$ 282.000,00",
         "R$ 56.400,24",
         "R$ 1.958,33",
@@ -8880,7 +8880,7 @@ const SALES_TABLES = {
       [
         "1506",
         "19,27 m²",
-        "136 D · pilotis",
+        "136 D",
         "R$ 285.000,00",
         "R$ 56.999,76",
         "R$ 1.979,17",
@@ -8895,7 +8895,7 @@ const SALES_TABLES = {
       [
         "1509",
         "19,27 m²",
-        "137 D · pilotis",
+        "137 D",
         "R$ 285.000,00",
         "R$ 56.999,76",
         "R$ 1.979,17",
@@ -8910,7 +8910,7 @@ const SALES_TABLES = {
       [
         "1606",
         "19,27 m²",
-        "138 D · pilotis",
+        "138 D",
         "R$ 285.000,00",
         "R$ 56.999,76",
         "R$ 1.979,17",
@@ -8925,7 +8925,7 @@ const SALES_TABLES = {
       [
         "1609",
         "19,27 m²",
-        "139 D · pilotis",
+        "139 D",
         "R$ 285.000,00",
         "R$ 56.999,76",
         "R$ 1.979,17",
@@ -8940,7 +8940,7 @@ const SALES_TABLES = {
       [
         "1706",
         "19,27 m²",
-        "140 D · pilotis",
+        "140 D",
         "R$ 287.000,00",
         "R$ 57.399,68",
         "R$ 1.993,06",
@@ -8955,7 +8955,7 @@ const SALES_TABLES = {
       [
         "1709",
         "19,27 m²",
-        "141 D · pilotis",
+        "141 D",
         "R$ 287.000,00",
         "R$ 57.399,68",
         "R$ 1.993,06",
@@ -8970,7 +8970,7 @@ const SALES_TABLES = {
       [
         "1806",
         "19,27 m²",
-        "142 D · pilotis",
+        "142 D",
         "R$ 287.000,00",
         "R$ 57.399,68",
         "R$ 1.993,06",
@@ -8985,7 +8985,7 @@ const SALES_TABLES = {
       [
         "1809",
         "19,27 m²",
-        "143 D · pilotis",
+        "143 D",
         "R$ 287.000,00",
         "R$ 57.399,68",
         "R$ 1.993,06",
@@ -9000,7 +9000,7 @@ const SALES_TABLES = {
       [
         "1904",
         "19,27 m²",
-        "2 C · subsolo",
+        "2 C",
         "R$ 297.000,00",
         "R$ 59.400,00",
         "R$ 2.062,50",
@@ -9013,7 +9013,7 @@ const SALES_TABLES = {
         "R$ 237.600,00"
       ]
     ],
-    "note": "Vangard, da Scire, na Vila Nova — tabela de studios de novembro/2026, entrega prevista em maio/2030 (42 meses): 36 unidades de 19,27 m². É a TABELA ZERO, ainda não aprovada pela construtora. A Scire publica duas tabelas para as mesmas unidades, de venda direta e de financiamento; aqui elas estão lado a lado e o valor é o mesmo nas duas. Venda direta: ato de 20% em 25/11/2026 + 72 parcelas mensais a partir de 10/12/2026 + 5 parcelas anuais a partir de 10/12/2027 + parcela de chaves em 25/05/2030. Financiamento: ato de 3% em 25/11/2026 + 42 parcelas mensais a partir de 10/12/2026 + 3 parcelas anuais a partir de 10/12/2027 + 36 parcelas pós-chaves a partir de 10/06/2030 + financiamento bancário de 80% em 31/05/2030. Nas duas condições as parcelas fecham o valor ao centavo, e o financiamento é 80% em todas. Na coluna de vaga, C é coberta e D é descoberta, com o local. Sem vaga: 26 de 36 studios (até o 13º andar). À vista no lançamento, até 31/12/2026: 4% de desconto. Venda direta com ato mínimo de 20% e parcelamento em até 72 meses. Correção pelo CUB/SC até as chaves e, depois, IPCA + 1% a.m. Não constam na tabela os aptos 708, 808, 907, 908, 1409, 1601, 1604 e 1701.",
+    "note": "Vangard, da Scire, na Vila Nova — tabela de studios de novembro/2026, entrega prevista em maio/2030 (42 meses): 36 unidades de 19,27 m². É a TABELA ZERO, ainda não aprovada pela construtora. A Scire publica duas tabelas para as mesmas unidades, de venda direta e de financiamento; aqui elas estão lado a lado e o valor é o mesmo nas duas. Venda direta: ato de 20% em 25/11/2026 + 72 parcelas mensais a partir de 10/12/2026 + 5 parcelas anuais a partir de 10/12/2027 + parcela de chaves em 25/05/2030. Financiamento: ato de 3% em 25/11/2026 + 42 parcelas mensais a partir de 10/12/2026 + 3 parcelas anuais a partir de 10/12/2027 + 36 parcelas pós-chaves a partir de 10/06/2030 + financiamento bancário de 80% em 31/05/2030. Nas duas condições as parcelas fecham o valor ao centavo, e o financiamento é 80% em todas. Na coluna de vaga, C é coberta e D é descoberta. Sem vaga: 26 de 36 studios (até o 13º andar). À vista no lançamento, até 31/12/2026: 4% de desconto. Venda direta com ato mínimo de 20% e parcelamento em até 72 meses. Correção pelo CUB/SC até as chaves e, depois, IPCA + 1% a.m. Não constam na tabela os aptos 708, 808, 907, 908, 1409, 1601, 1604 e 1701.",
     "summary": {
       "tipoDefault": "Studio",
       "bits": [
@@ -9025,8 +9025,8 @@ const SALES_TABLES = {
           "pre": "Vaga ",
           "col": 2,
           "troca": {
-            " C · ": " coberta, ",
-            " D · ": " descoberta, "
+            " C": " (coberta)",
+            " D": " (descoberta)"
           }
         }
       ],
@@ -9089,7 +9089,28 @@ const SALES_TABLES = {
           "pct": 4
         }
       ]
-    }
+    },
+    "colGrupos": [
+      {
+        "titulo": "Venda direta",
+        "cols": [
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "titulo": "Financiamento",
+        "cols": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    ]
   },
   "Vangard - 1 dormitório": {
     "source": "Tabela de vendas (Scire Empreendimentos)",
@@ -9100,21 +9121,21 @@ const SALES_TABLES = {
       "Área priv.",
       "Vaga",
       "Tabela",
-      "Direta: ato (20%)",
-      "Direta: 72 parcelas mensais",
-      "Direta: 5 parcelas anuais",
-      "Direta: parcela de chaves",
-      "Financ.: ato (3%)",
-      "Financ.: 42 parcelas mensais",
-      "Financ.: 3 parcelas anuais",
-      "Financ.: parcela pós-chaves (36x)",
+      "Ato (20%)",
+      "72 parcelas mensais",
+      "5 parcelas anuais",
+      "Parcela de chaves",
+      "Ato (3%)",
+      "42 parcelas mensais",
+      "3 parcelas anuais",
+      "Parcela pós-chaves (36x)",
       "Financiamento"
     ],
     "rows": [
       [
         "107",
         "29,94 m²",
-        "145 D · pilotis",
+        "145 D",
         "R$ 316.000,00",
         "R$ 63.200,32",
         "R$ 2.194,44",
@@ -9129,7 +9150,7 @@ const SALES_TABLES = {
       [
         "108",
         "31,36 m²",
-        "134 D · pilotis",
+        "134 D",
         "R$ 326.000,00",
         "R$ 65.199,92",
         "R$ 2.263,89",
@@ -9144,7 +9165,7 @@ const SALES_TABLES = {
       [
         "207",
         "29,94 m²",
-        "146 D · pilotis",
+        "146 D",
         "R$ 319.000,00",
         "R$ 63.799,84",
         "R$ 2.215,28",
@@ -9159,7 +9180,7 @@ const SALES_TABLES = {
       [
         "208",
         "31,36 m²",
-        "133 D · pilotis",
+        "133 D",
         "R$ 329.000,00",
         "R$ 65.800,16",
         "R$ 2.284,72",
@@ -9174,7 +9195,7 @@ const SALES_TABLES = {
       [
         "307",
         "29,94 m²",
-        "147 D · pilotis",
+        "147 D",
         "R$ 322.000,00",
         "R$ 64.400,08",
         "R$ 2.236,11",
@@ -9189,7 +9210,7 @@ const SALES_TABLES = {
       [
         "308",
         "31,36 m²",
-        "132 D · pilotis",
+        "132 D",
         "R$ 332.000,00",
         "R$ 66.399,68",
         "R$ 2.305,56",
@@ -9204,7 +9225,7 @@ const SALES_TABLES = {
       [
         "407",
         "29,94 m²",
-        "148 D · pilotis",
+        "148 D",
         "R$ 325.000,00",
         "R$ 65.000,32",
         "R$ 2.256,94",
@@ -9219,7 +9240,7 @@ const SALES_TABLES = {
       [
         "408",
         "31,36 m²",
-        "131 D · pilotis",
+        "131 D",
         "R$ 335.000,00",
         "R$ 66.999,92",
         "R$ 2.326,39",
@@ -9234,7 +9255,7 @@ const SALES_TABLES = {
       [
         "507",
         "29,94 m²",
-        "149 D · pilotis",
+        "149 D",
         "R$ 328.000,00",
         "R$ 65.599,84",
         "R$ 2.277,78",
@@ -9249,7 +9270,7 @@ const SALES_TABLES = {
       [
         "508",
         "31,36 m²",
-        "130 D · pilotis",
+        "130 D",
         "R$ 328.000,00",
         "R$ 65.599,84",
         "R$ 2.277,78",
@@ -9264,7 +9285,7 @@ const SALES_TABLES = {
       [
         "607",
         "29,94 m²",
-        "114 D · pilotis",
+        "114 D",
         "R$ 331.000,00",
         "R$ 66.200,08",
         "R$ 2.298,61",
@@ -9279,7 +9300,7 @@ const SALES_TABLES = {
       [
         "608",
         "31,36 m²",
-        "115 D · pilotis",
+        "115 D",
         "R$ 330.000,00",
         "R$ 65.999,76",
         "R$ 2.291,67",
@@ -9294,7 +9315,7 @@ const SALES_TABLES = {
       [
         "707",
         "29,94 m²",
-        "107 D · pilotis",
+        "107 D",
         "R$ 334.000,00",
         "R$ 66.800,32",
         "R$ 2.319,44",
@@ -9309,7 +9330,7 @@ const SALES_TABLES = {
       [
         "807",
         "29,94 m²",
-        "105 D · pilotis",
+        "105 D",
         "R$ 337.000,00",
         "R$ 67.399,84",
         "R$ 2.340,28",
@@ -9324,7 +9345,7 @@ const SALES_TABLES = {
       [
         "1007",
         "29,94 m²",
-        "109 D · pilotis",
+        "109 D",
         "R$ 349.000,00",
         "R$ 69.800,08",
         "R$ 2.423,61",
@@ -9339,7 +9360,7 @@ const SALES_TABLES = {
       [
         "1008",
         "31,36 m²",
-        "126 D · pilotis",
+        "126 D",
         "R$ 355.000,00",
         "R$ 70.999,84",
         "R$ 2.465,28",
@@ -9354,7 +9375,7 @@ const SALES_TABLES = {
       [
         "1107",
         "29,94 m²",
-        "113 D · pilotis",
+        "113 D",
         "R$ 353.000,00",
         "R$ 70.599,92",
         "R$ 2.451,39",
@@ -9369,7 +9390,7 @@ const SALES_TABLES = {
       [
         "1108",
         "31,36 m²",
-        "153 D · pilotis",
+        "153 D",
         "R$ 358.000,00",
         "R$ 71.600,08",
         "R$ 2.486,11",
@@ -9384,7 +9405,7 @@ const SALES_TABLES = {
       [
         "1207",
         "29,94 m²",
-        "106 D · pilotis",
+        "106 D",
         "R$ 355.000,00",
         "R$ 70.999,84",
         "R$ 2.465,28",
@@ -9399,7 +9420,7 @@ const SALES_TABLES = {
       [
         "1208",
         "31,36 m²",
-        "120 D · pilotis",
+        "120 D",
         "R$ 360.000,00",
         "R$ 72.000,00",
         "R$ 2.500,00",
@@ -9414,7 +9435,7 @@ const SALES_TABLES = {
       [
         "1307",
         "29,94 m²",
-        "144 D · pilotis",
+        "144 D",
         "R$ 357.000,00",
         "R$ 71.399,76",
         "R$ 2.479,17",
@@ -9429,7 +9450,7 @@ const SALES_TABLES = {
       [
         "1308",
         "31,36 m²",
-        "121 D · pilotis",
+        "121 D",
         "R$ 362.000,00",
         "R$ 72.399,92",
         "R$ 2.513,89",
@@ -9444,7 +9465,7 @@ const SALES_TABLES = {
       [
         "1407",
         "29,94 m²",
-        "158 D · pilotis",
+        "158 D",
         "R$ 359.000,00",
         "R$ 71.799,68",
         "R$ 2.493,06",
@@ -9459,7 +9480,7 @@ const SALES_TABLES = {
       [
         "1408",
         "31,36 m²",
-        "108 D · pilotis",
+        "108 D",
         "R$ 364.000,00",
         "R$ 72.799,84",
         "R$ 2.527,78",
@@ -9474,7 +9495,7 @@ const SALES_TABLES = {
       [
         "1507",
         "29,94 m²",
-        "161 D · pilotis",
+        "161 D",
         "R$ 361.000,00",
         "R$ 72.200,32",
         "R$ 2.506,94",
@@ -9489,7 +9510,7 @@ const SALES_TABLES = {
       [
         "1508",
         "31,36 m²",
-        "116 D · pilotis",
+        "116 D",
         "R$ 366.000,00",
         "R$ 73.199,76",
         "R$ 2.541,67",
@@ -9504,7 +9525,7 @@ const SALES_TABLES = {
       [
         "1607",
         "29,94 m²",
-        "160 D · pilotis",
+        "160 D",
         "R$ 363.000,00",
         "R$ 72.600,24",
         "R$ 2.520,83",
@@ -9519,7 +9540,7 @@ const SALES_TABLES = {
       [
         "1608",
         "31,36 m²",
-        "119 D · pilotis",
+        "119 D",
         "R$ 368.000,00",
         "R$ 73.599,68",
         "R$ 2.555,56",
@@ -9534,7 +9555,7 @@ const SALES_TABLES = {
       [
         "1707",
         "29,94 m²",
-        "154 D · pilotis",
+        "154 D",
         "R$ 365.000,00",
         "R$ 73.000,16",
         "R$ 2.534,72",
@@ -9549,7 +9570,7 @@ const SALES_TABLES = {
       [
         "1708",
         "31,36 m²",
-        "125 D · pilotis",
+        "125 D",
         "R$ 370.000,00",
         "R$ 74.000,32",
         "R$ 2.569,44",
@@ -9564,7 +9585,7 @@ const SALES_TABLES = {
       [
         "1807",
         "29,94 m²",
-        "117 D · pilotis",
+        "117 D",
         "R$ 367.000,00",
         "R$ 73.400,08",
         "R$ 2.548,61",
@@ -9579,7 +9600,7 @@ const SALES_TABLES = {
       [
         "1808",
         "31,36 m²",
-        "118 D · pilotis",
+        "118 D",
         "R$ 372.000,00",
         "R$ 74.400,24",
         "R$ 2.583,33",
@@ -9594,7 +9615,7 @@ const SALES_TABLES = {
       [
         "1903",
         "31,36 m²",
-        "102 C · pilotis",
+        "102 C",
         "R$ 377.000,00",
         "R$ 75.399,68",
         "R$ 2.618,06",
@@ -9607,7 +9628,7 @@ const SALES_TABLES = {
         "R$ 301.600,00"
       ]
     ],
-    "note": "Vangard, da Scire, na Vila Nova — tabela de 1 dormitório de novembro/2026, entrega prevista em maio/2030 (42 meses): 33 unidades de 29,94, 31,36 m². É a TABELA ZERO, ainda não aprovada pela construtora. A Scire publica duas tabelas para as mesmas unidades, de venda direta e de financiamento; aqui elas estão lado a lado e o valor é o mesmo nas duas. Venda direta: ato de 20% em 25/11/2026 + 72 parcelas mensais a partir de 10/12/2026 + 5 parcelas anuais a partir de 10/12/2027 + parcela de chaves em 25/05/2030. Financiamento: ato de 3% em 25/11/2026 + 42 parcelas mensais a partir de 10/12/2026 + 3 parcelas anuais a partir de 10/12/2027 + 36 parcelas pós-chaves a partir de 10/06/2030 + financiamento bancário de 80% em 31/05/2030. Nas duas condições as parcelas fecham o valor ao centavo, e o financiamento é 80% em todas. Na coluna de vaga, C é coberta e D é descoberta, com o local. À vista no lançamento, até 31/12/2026: 4% de desconto. Venda direta com ato mínimo de 20% e parcelamento em até 72 meses. Correção pelo CUB/SC até as chaves e, depois, IPCA + 1% a.m. Não constam na tabela os aptos 708, 808, 907, 908, 1409, 1601, 1604 e 1701.",
+    "note": "Vangard, da Scire, na Vila Nova — tabela de 1 dormitório de novembro/2026, entrega prevista em maio/2030 (42 meses): 33 unidades de 29,94, 31,36 m². É a TABELA ZERO, ainda não aprovada pela construtora. A Scire publica duas tabelas para as mesmas unidades, de venda direta e de financiamento; aqui elas estão lado a lado e o valor é o mesmo nas duas. Venda direta: ato de 20% em 25/11/2026 + 72 parcelas mensais a partir de 10/12/2026 + 5 parcelas anuais a partir de 10/12/2027 + parcela de chaves em 25/05/2030. Financiamento: ato de 3% em 25/11/2026 + 42 parcelas mensais a partir de 10/12/2026 + 3 parcelas anuais a partir de 10/12/2027 + 36 parcelas pós-chaves a partir de 10/06/2030 + financiamento bancário de 80% em 31/05/2030. Nas duas condições as parcelas fecham o valor ao centavo, e o financiamento é 80% em todas. Na coluna de vaga, C é coberta e D é descoberta. À vista no lançamento, até 31/12/2026: 4% de desconto. Venda direta com ato mínimo de 20% e parcelamento em até 72 meses. Correção pelo CUB/SC até as chaves e, depois, IPCA + 1% a.m. Não constam na tabela os aptos 708, 808, 907, 908, 1409, 1601, 1604 e 1701.",
     "summary": {
       "tipoDefault": "Apartamento",
       "bits": [
@@ -9619,8 +9640,8 @@ const SALES_TABLES = {
           "pre": "Vaga ",
           "col": 2,
           "troca": {
-            " C · ": " coberta, ",
-            " D · ": " descoberta, "
+            " C": " (coberta)",
+            " D": " (descoberta)"
           }
         }
       ],
@@ -9683,7 +9704,28 @@ const SALES_TABLES = {
           "pct": 4
         }
       ]
-    }
+    },
+    "colGrupos": [
+      {
+        "titulo": "Venda direta",
+        "cols": [
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "titulo": "Financiamento",
+        "cols": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    ]
   },
   "Vangard - 2 dormitórios": {
     "source": "Tabela de vendas (Scire Empreendimentos)",
@@ -9694,21 +9736,21 @@ const SALES_TABLES = {
       "Área priv.",
       "Vaga",
       "Tabela",
-      "Direta: ato (20%)",
-      "Direta: 72 parcelas mensais",
-      "Direta: 5 parcelas anuais",
-      "Direta: parcela de chaves",
-      "Financ.: ato (3%)",
-      "Financ.: 42 parcelas mensais",
-      "Financ.: 3 parcelas anuais",
-      "Financ.: parcela pós-chaves (36x)",
+      "Ato (20%)",
+      "72 parcelas mensais",
+      "5 parcelas anuais",
+      "Parcela de chaves",
+      "Ato (3%)",
+      "42 parcelas mensais",
+      "3 parcelas anuais",
+      "Parcela pós-chaves (36x)",
       "Financiamento"
     ],
     "rows": [
       [
         "101",
         "52,85 m²",
-        "51 C · térreo, PCD",
+        "51 C",
         "R$ 535.000,00",
         "R$ 106.999,84",
         "R$ 3.715,28",
@@ -9723,7 +9765,7 @@ const SALES_TABLES = {
       [
         "102",
         "51,30 m²",
-        "150 D · pilotis",
+        "150 D",
         "R$ 515.000,00",
         "R$ 102.999,92",
         "R$ 3.576,39",
@@ -9738,7 +9780,7 @@ const SALES_TABLES = {
       [
         "103",
         "50,82 m²",
-        "129 D · pilotis",
+        "129 D",
         "R$ 490.000,00",
         "R$ 97.999,84",
         "R$ 3.402,78",
@@ -9753,7 +9795,7 @@ const SALES_TABLES = {
       [
         "104",
         "52,85 m²",
-        "123 D · pilotis",
+        "123 D",
         "R$ 525.000,00",
         "R$ 105.000,24",
         "R$ 3.645,83",
@@ -9768,7 +9810,7 @@ const SALES_TABLES = {
       [
         "105",
         "52,85 m²",
-        "155 D · pilotis",
+        "155 D",
         "R$ 525.000,00",
         "R$ 105.000,24",
         "R$ 3.645,83",
@@ -9783,7 +9825,7 @@ const SALES_TABLES = {
       [
         "110",
         "52,85 m²",
-        "124 D · pilotis",
+        "124 D",
         "R$ 525.000,00",
         "R$ 105.000,24",
         "R$ 3.645,83",
@@ -9798,7 +9840,7 @@ const SALES_TABLES = {
       [
         "201",
         "52,85 m²",
-        "52 C · térreo, PCD",
+        "52 C",
         "R$ 538.000,00",
         "R$ 107.600,08",
         "R$ 3.736,11",
@@ -9813,7 +9855,7 @@ const SALES_TABLES = {
       [
         "202",
         "51,30 m²",
-        "151 D · pilotis",
+        "151 D",
         "R$ 518.000,00",
         "R$ 103.600,16",
         "R$ 3.597,22",
@@ -9828,7 +9870,7 @@ const SALES_TABLES = {
       [
         "203",
         "50,82 m²",
-        "128 D · pilotis",
+        "128 D",
         "R$ 493.000,00",
         "R$ 98.600,08",
         "R$ 3.423,61",
@@ -9843,7 +9885,7 @@ const SALES_TABLES = {
       [
         "204",
         "52,85 m²",
-        "157 D · pilotis",
+        "157 D",
         "R$ 528.000,00",
         "R$ 105.599,76",
         "R$ 3.666,67",
@@ -9858,7 +9900,7 @@ const SALES_TABLES = {
       [
         "205",
         "52,85 m²",
-        "122 D · pilotis",
+        "122 D",
         "R$ 528.000,00",
         "R$ 105.599,76",
         "R$ 3.666,67",
@@ -9873,7 +9915,7 @@ const SALES_TABLES = {
       [
         "210",
         "52,85 m²",
-        "156 D · pilotis",
+        "156 D",
         "R$ 528.000,00",
         "R$ 105.599,76",
         "R$ 3.666,67",
@@ -9888,7 +9930,7 @@ const SALES_TABLES = {
       [
         "301",
         "52,85 m²",
-        "53 C · térreo, PCD",
+        "53 C",
         "R$ 541.000,00",
         "R$ 108.200,32",
         "R$ 3.756,94",
@@ -9903,7 +9945,7 @@ const SALES_TABLES = {
       [
         "302",
         "51,30 m²",
-        "152 D · pilotis",
+        "152 D",
         "R$ 521.000,00",
         "R$ 104.199,68",
         "R$ 3.618,06",
@@ -9918,7 +9960,7 @@ const SALES_TABLES = {
       [
         "303",
         "50,82 m²",
-        "127 D · pilotis",
+        "127 D",
         "R$ 496.000,00",
         "R$ 99.200,32",
         "R$ 3.444,44",
@@ -9933,7 +9975,7 @@ const SALES_TABLES = {
       [
         "304",
         "52,85 m²",
-        "101 C · pilotis",
+        "101 C",
         "R$ 531.000,00",
         "R$ 106.200,00",
         "R$ 3.687,50",
@@ -9948,7 +9990,7 @@ const SALES_TABLES = {
       [
         "305",
         "52,85 m²",
-        "87 C · térreo",
+        "87 C",
         "R$ 531.000,00",
         "R$ 106.200,00",
         "R$ 3.687,50",
@@ -9963,7 +10005,7 @@ const SALES_TABLES = {
       [
         "310",
         "52,85 m²",
-        "86 C · térreo",
+        "86 C",
         "R$ 531.000,00",
         "R$ 106.200,00",
         "R$ 3.687,50",
@@ -9978,7 +10020,7 @@ const SALES_TABLES = {
       [
         "401",
         "52,85 m²",
-        "54 C · térreo, PCD",
+        "54 C",
         "R$ 544.000,00",
         "R$ 108.799,84",
         "R$ 3.777,78",
@@ -9993,7 +10035,7 @@ const SALES_TABLES = {
       [
         "402",
         "51,30 m²",
-        "81 C · térreo",
+        "81 C",
         "R$ 524.000,00",
         "R$ 104.799,92",
         "R$ 3.638,89",
@@ -10008,7 +10050,7 @@ const SALES_TABLES = {
       [
         "403",
         "50,82 m²",
-        "80 C · térreo",
+        "80 C",
         "R$ 499.000,00",
         "R$ 99.799,84",
         "R$ 3.465,28",
@@ -10023,7 +10065,7 @@ const SALES_TABLES = {
       [
         "404",
         "52,85 m²",
-        "70 C · térreo",
+        "70 C",
         "R$ 534.000,00",
         "R$ 106.800,24",
         "R$ 3.708,33",
@@ -10038,7 +10080,7 @@ const SALES_TABLES = {
       [
         "405",
         "52,85 m²",
-        "65 C · térreo",
+        "65 C",
         "R$ 534.000,00",
         "R$ 106.800,24",
         "R$ 3.708,33",
@@ -10053,7 +10095,7 @@ const SALES_TABLES = {
       [
         "410",
         "52,85 m²",
-        "61 C · térreo",
+        "61 C",
         "R$ 534.000,00",
         "R$ 106.800,24",
         "R$ 3.708,33",
@@ -10068,7 +10110,7 @@ const SALES_TABLES = {
       [
         "501",
         "52,85 m²",
-        "57 C · térreo",
+        "57 C",
         "R$ 537.000,00",
         "R$ 107.399,76",
         "R$ 3.729,17",
@@ -10083,7 +10125,7 @@ const SALES_TABLES = {
       [
         "502",
         "51,30 m²",
-        "50 C · térreo",
+        "50 C",
         "R$ 527.000,00",
         "R$ 105.400,16",
         "R$ 3.659,72",
@@ -10098,7 +10140,7 @@ const SALES_TABLES = {
       [
         "503",
         "50,82 m²",
-        "46 C · térreo",
+        "46 C",
         "R$ 502.000,00",
         "R$ 100.400,08",
         "R$ 3.486,11",
@@ -10113,7 +10155,7 @@ const SALES_TABLES = {
       [
         "504",
         "52,85 m²",
-        "44 C · térreo",
+        "44 C",
         "R$ 537.000,00",
         "R$ 107.399,76",
         "R$ 3.729,17",
@@ -10128,7 +10170,7 @@ const SALES_TABLES = {
       [
         "505",
         "52,85 m²",
-        "43 C · térreo",
+        "43 C",
         "R$ 537.000,00",
         "R$ 107.399,76",
         "R$ 3.729,17",
@@ -10143,7 +10185,7 @@ const SALES_TABLES = {
       [
         "510",
         "52,85 m²",
-        "36 C · térreo",
+        "36 C",
         "R$ 537.000,00",
         "R$ 107.399,76",
         "R$ 3.729,17",
@@ -10158,7 +10200,7 @@ const SALES_TABLES = {
       [
         "601",
         "52,85 m²",
-        "34 C · térreo",
+        "34 C",
         "R$ 540.000,00",
         "R$ 108.000,00",
         "R$ 3.750,00",
@@ -10173,7 +10215,7 @@ const SALES_TABLES = {
       [
         "602",
         "51,30 m²",
-        "28 C · subsolo",
+        "28 C",
         "R$ 530.000,00",
         "R$ 105.999,68",
         "R$ 3.680,56",
@@ -10188,7 +10230,7 @@ const SALES_TABLES = {
       [
         "603",
         "50,82 m²",
-        "27 C · subsolo",
+        "27 C",
         "R$ 505.000,00",
         "R$ 101.000,32",
         "R$ 3.506,94",
@@ -10203,7 +10245,7 @@ const SALES_TABLES = {
       [
         "604",
         "52,85 m²",
-        "15 C · subsolo",
+        "15 C",
         "R$ 540.000,00",
         "R$ 108.000,00",
         "R$ 3.750,00",
@@ -10218,7 +10260,7 @@ const SALES_TABLES = {
       [
         "605",
         "52,85 m²",
-        "13 C · subsolo",
+        "13 C",
         "R$ 540.000,00",
         "R$ 108.000,00",
         "R$ 3.750,00",
@@ -10233,7 +10275,7 @@ const SALES_TABLES = {
       [
         "610",
         "52,85 m²",
-        "7 C · subsolo",
+        "7 C",
         "R$ 540.000,00",
         "R$ 108.000,00",
         "R$ 3.750,00",
@@ -10248,7 +10290,7 @@ const SALES_TABLES = {
       [
         "701",
         "52,85 m²",
-        "24 C · subsolo",
+        "24 C",
         "R$ 553.000,00",
         "R$ 110.599,84",
         "R$ 3.840,28",
@@ -10263,7 +10305,7 @@ const SALES_TABLES = {
       [
         "702",
         "51,30 m²",
-        "17 C · subsolo",
+        "17 C",
         "R$ 543.000,00",
         "R$ 108.600,24",
         "R$ 3.770,83",
@@ -10278,7 +10320,7 @@ const SALES_TABLES = {
       [
         "703",
         "50,82 m²",
-        "18 C · subsolo",
+        "18 C",
         "R$ 515.000,00",
         "R$ 102.999,92",
         "R$ 3.576,39",
@@ -10293,7 +10335,7 @@ const SALES_TABLES = {
       [
         "704",
         "52,85 m²",
-        "23 C · subsolo",
+        "23 C",
         "R$ 553.000,00",
         "R$ 110.599,84",
         "R$ 3.840,28",
@@ -10308,7 +10350,7 @@ const SALES_TABLES = {
       [
         "705",
         "52,85 m²",
-        "14 C · subsolo",
+        "14 C",
         "R$ 553.000,00",
         "R$ 110.599,84",
         "R$ 3.840,28",
@@ -10323,7 +10365,7 @@ const SALES_TABLES = {
       [
         "710",
         "52,85 m²",
-        "5 C · subsolo",
+        "5 C",
         "R$ 543.000,00",
         "R$ 108.600,24",
         "R$ 3.770,83",
@@ -10338,7 +10380,7 @@ const SALES_TABLES = {
       [
         "801",
         "52,85 m²",
-        "26 C · subsolo",
+        "26 C",
         "R$ 556.000,00",
         "R$ 111.200,08",
         "R$ 3.861,11",
@@ -10353,7 +10395,7 @@ const SALES_TABLES = {
       [
         "802",
         "51,30 m²",
-        "20 C · subsolo",
+        "20 C",
         "R$ 546.000,00",
         "R$ 109.199,76",
         "R$ 3.791,67",
@@ -10368,7 +10410,7 @@ const SALES_TABLES = {
       [
         "803",
         "50,82 m²",
-        "16 C · subsolo",
+        "16 C",
         "R$ 518.000,00",
         "R$ 103.600,16",
         "R$ 3.597,22",
@@ -10383,7 +10425,7 @@ const SALES_TABLES = {
       [
         "804",
         "52,85 m²",
-        "25 C · subsolo",
+        "25 C",
         "R$ 556.000,00",
         "R$ 111.200,08",
         "R$ 3.861,11",
@@ -10398,7 +10440,7 @@ const SALES_TABLES = {
       [
         "805",
         "52,85 m²",
-        "12 C · subsolo",
+        "12 C",
         "R$ 556.000,00",
         "R$ 111.200,08",
         "R$ 3.861,11",
@@ -10413,7 +10455,7 @@ const SALES_TABLES = {
       [
         "810",
         "52,85 m²",
-        "103 C · pilotis",
+        "103 C",
         "R$ 556.000,00",
         "R$ 111.200,08",
         "R$ 3.861,11",
@@ -10428,7 +10470,7 @@ const SALES_TABLES = {
       [
         "901",
         "52,85 m²",
-        "9 C · subsolo",
+        "9 C",
         "R$ 559.000,00",
         "R$ 111.800,32",
         "R$ 3.881,94",
@@ -10443,7 +10485,7 @@ const SALES_TABLES = {
       [
         "902",
         "51,30 m²",
-        "22 C · subsolo",
+        "22 C",
         "R$ 549.000,00",
         "R$ 109.800,00",
         "R$ 3.812,50",
@@ -10458,7 +10500,7 @@ const SALES_TABLES = {
       [
         "903",
         "50,82 m²",
-        "21 C · subsolo",
+        "21 C",
         "R$ 521.000,00",
         "R$ 104.199,68",
         "R$ 3.618,06",
@@ -10473,7 +10515,7 @@ const SALES_TABLES = {
       [
         "904",
         "52,85 m²",
-        "10 C · subsolo",
+        "10 C",
         "R$ 559.000,00",
         "R$ 111.800,32",
         "R$ 3.881,94",
@@ -10488,7 +10530,7 @@ const SALES_TABLES = {
       [
         "905",
         "52,85 m²",
-        "11 C · subsolo",
+        "11 C",
         "R$ 559.000,00",
         "R$ 111.800,32",
         "R$ 3.881,94",
@@ -10503,7 +10545,7 @@ const SALES_TABLES = {
       [
         "910",
         "52,85 m²",
-        "19 C · subsolo",
+        "19 C",
         "R$ 559.000,00",
         "R$ 111.800,32",
         "R$ 3.881,94",
@@ -10518,7 +10560,7 @@ const SALES_TABLES = {
       [
         "1001",
         "52,85 m²",
-        "72 C · térreo",
+        "72 C",
         "R$ 562.000,00",
         "R$ 112.399,84",
         "R$ 3.902,78",
@@ -10533,7 +10575,7 @@ const SALES_TABLES = {
       [
         "1002",
         "51,30 m²",
-        "8 C · subsolo",
+        "8 C",
         "R$ 552.000,00",
         "R$ 110.400,24",
         "R$ 3.833,33",
@@ -10548,7 +10590,7 @@ const SALES_TABLES = {
       [
         "1003",
         "50,82 m²",
-        "30 C · subsolo",
+        "30 C",
         "R$ 524.000,00",
         "R$ 104.799,92",
         "R$ 3.638,89",
@@ -10563,7 +10605,7 @@ const SALES_TABLES = {
       [
         "1004",
         "52,85 m²",
-        "73 C · térreo",
+        "73 C",
         "R$ 562.000,00",
         "R$ 112.399,84",
         "R$ 3.902,78",
@@ -10578,7 +10620,7 @@ const SALES_TABLES = {
       [
         "1005",
         "52,85 m²",
-        "74 C · térreo",
+        "74 C",
         "R$ 562.000,00",
         "R$ 112.399,84",
         "R$ 3.902,78",
@@ -10593,7 +10635,7 @@ const SALES_TABLES = {
       [
         "1010",
         "52,85 m²",
-        "29 C · subsolo",
+        "29 C",
         "R$ 562.000,00",
         "R$ 112.399,84",
         "R$ 3.902,78",
@@ -10608,7 +10650,7 @@ const SALES_TABLES = {
       [
         "1101",
         "52,85 m²",
-        "83 C · térreo",
+        "83 C",
         "R$ 565.000,00",
         "R$ 113.000,08",
         "R$ 3.923,61",
@@ -10623,7 +10665,7 @@ const SALES_TABLES = {
       [
         "1102",
         "51,30 m²",
-        "77 C · térreo",
+        "77 C",
         "R$ 555.000,00",
         "R$ 110.999,76",
         "R$ 3.854,17",
@@ -10638,7 +10680,7 @@ const SALES_TABLES = {
       [
         "1103",
         "50,82 m²",
-        "3 C · subsolo",
+        "3 C",
         "R$ 527.000,00",
         "R$ 105.400,16",
         "R$ 3.659,72",
@@ -10653,7 +10695,7 @@ const SALES_TABLES = {
       [
         "1104",
         "52,85 m²",
-        "82 C · térreo",
+        "82 C",
         "R$ 565.000,00",
         "R$ 113.000,08",
         "R$ 3.923,61",
@@ -10668,7 +10710,7 @@ const SALES_TABLES = {
       [
         "1105",
         "52,85 m²",
-        "71 C · térreo",
+        "71 C",
         "R$ 565.000,00",
         "R$ 113.000,08",
         "R$ 3.923,61",
@@ -10683,7 +10725,7 @@ const SALES_TABLES = {
       [
         "1110",
         "52,85 m²",
-        "6 C · subsolo",
+        "6 C",
         "R$ 565.000,00",
         "R$ 113.000,08",
         "R$ 3.923,61",
@@ -10698,7 +10740,7 @@ const SALES_TABLES = {
       [
         "1201",
         "52,85 m²",
-        "85 C · térreo",
+        "85 C",
         "R$ 568.000,00",
         "R$ 113.600,32",
         "R$ 3.944,44",
@@ -10713,7 +10755,7 @@ const SALES_TABLES = {
       [
         "1202",
         "51,30 m²",
-        "75 C · térreo",
+        "75 C",
         "R$ 558.000,00",
         "R$ 111.600,00",
         "R$ 3.875,00",
@@ -10728,7 +10770,7 @@ const SALES_TABLES = {
       [
         "1203",
         "50,82 m²",
-        "76 C · térreo",
+        "76 C",
         "R$ 530.000,00",
         "R$ 105.999,68",
         "R$ 3.680,56",
@@ -10743,7 +10785,7 @@ const SALES_TABLES = {
       [
         "1204",
         "52,85 m²",
-        "84 C · térreo",
+        "84 C",
         "R$ 568.000,00",
         "R$ 113.600,32",
         "R$ 3.944,44",
@@ -10758,7 +10800,7 @@ const SALES_TABLES = {
       [
         "1205",
         "52,85 m²",
-        "69 C · térreo",
+        "69 C",
         "R$ 568.000,00",
         "R$ 113.600,32",
         "R$ 3.944,44",
@@ -10773,7 +10815,7 @@ const SALES_TABLES = {
       [
         "1210",
         "52,85 m²",
-        "4 C · subsolo",
+        "4 C",
         "R$ 568.000,00",
         "R$ 113.600,32",
         "R$ 3.944,44",
@@ -10788,7 +10830,7 @@ const SALES_TABLES = {
       [
         "1301",
         "52,85 m²",
-        "66 C · térreo",
+        "66 C",
         "R$ 571.000,00",
         "R$ 114.199,84",
         "R$ 3.965,28",
@@ -10803,7 +10845,7 @@ const SALES_TABLES = {
       [
         "1302",
         "51,30 m²",
-        "79 C · térreo",
+        "79 C",
         "R$ 561.000,00",
         "R$ 112.200,24",
         "R$ 3.895,83",
@@ -10818,7 +10860,7 @@ const SALES_TABLES = {
       [
         "1303",
         "50,82 m²",
-        "78 C · térreo",
+        "78 C",
         "R$ 533.000,00",
         "R$ 106.599,92",
         "R$ 3.701,39",
@@ -10833,7 +10875,7 @@ const SALES_TABLES = {
       [
         "1304",
         "52,85 m²",
-        "67 C · térreo",
+        "67 C",
         "R$ 571.000,00",
         "R$ 114.199,84",
         "R$ 3.965,28",
@@ -10848,7 +10890,7 @@ const SALES_TABLES = {
       [
         "1305",
         "52,85 m²",
-        "68 C · térreo",
+        "68 C",
         "R$ 571.000,00",
         "R$ 114.199,84",
         "R$ 3.965,28",
@@ -10863,7 +10905,7 @@ const SALES_TABLES = {
       [
         "1310",
         "52,85 m²",
-        "1 C · subsolo",
+        "1 C",
         "R$ 571.000,00",
         "R$ 114.199,84",
         "R$ 3.965,28",
@@ -10878,7 +10920,7 @@ const SALES_TABLES = {
       [
         "1401",
         "52,85 m²",
-        "58 C · térreo",
+        "58 C",
         "R$ 574.000,00",
         "R$ 114.800,08",
         "R$ 3.986,11",
@@ -10893,7 +10935,7 @@ const SALES_TABLES = {
       [
         "1402",
         "51,30 m²",
-        "90 C · térreo",
+        "90 C",
         "R$ 564.000,00",
         "R$ 112.799,76",
         "R$ 3.916,67",
@@ -10908,7 +10950,7 @@ const SALES_TABLES = {
       [
         "1403",
         "50,82 m²",
-        "89 C · térreo",
+        "89 C",
         "R$ 536.000,00",
         "R$ 107.200,16",
         "R$ 3.722,22",
@@ -10923,7 +10965,7 @@ const SALES_TABLES = {
       [
         "1404",
         "52,85 m²",
-        "59 C · térreo",
+        "59 C",
         "R$ 574.000,00",
         "R$ 114.800,08",
         "R$ 3.986,11",
@@ -10938,7 +10980,7 @@ const SALES_TABLES = {
       [
         "1405",
         "52,85 m²",
-        "60 C · térreo",
+        "60 C",
         "R$ 574.000,00",
         "R$ 114.800,08",
         "R$ 3.986,11",
@@ -10953,7 +10995,7 @@ const SALES_TABLES = {
       [
         "1410",
         "52,85 m²",
-        "88 C · térreo",
+        "88 C",
         "R$ 574.000,00",
         "R$ 114.800,08",
         "R$ 3.986,11",
@@ -10968,7 +11010,7 @@ const SALES_TABLES = {
       [
         "1501",
         "52,85 m²",
-        "35 C · térreo",
+        "35 C",
         "R$ 577.000,00",
         "R$ 115.400,32",
         "R$ 4.006,94",
@@ -10983,7 +11025,7 @@ const SALES_TABLES = {
       [
         "1502",
         "51,30 m²",
-        "62 C · térreo",
+        "62 C",
         "R$ 567.000,00",
         "R$ 113.400,00",
         "R$ 3.937,50",
@@ -10998,7 +11040,7 @@ const SALES_TABLES = {
       [
         "1503",
         "50,82 m²",
-        "63 C · térreo",
+        "63 C",
         "R$ 539.000,00",
         "R$ 107.799,68",
         "R$ 3.743,06",
@@ -11013,7 +11055,7 @@ const SALES_TABLES = {
       [
         "1504",
         "52,85 m²",
-        "55 C · térreo",
+        "55 C",
         "R$ 577.000,00",
         "R$ 115.400,32",
         "R$ 4.006,94",
@@ -11028,7 +11070,7 @@ const SALES_TABLES = {
       [
         "1505",
         "52,85 m²",
-        "56 C · térreo",
+        "56 C",
         "R$ 577.000,00",
         "R$ 115.400,32",
         "R$ 4.006,94",
@@ -11043,7 +11085,7 @@ const SALES_TABLES = {
       [
         "1510",
         "52,85 m²",
-        "64 C · térreo",
+        "64 C",
         "R$ 577.000,00",
         "R$ 115.400,32",
         "R$ 4.006,94",
@@ -11058,7 +11100,7 @@ const SALES_TABLES = {
       [
         "1602",
         "51,30 m²",
-        "33 C · térreo",
+        "33 C",
         "R$ 570.000,00",
         "R$ 114.000,24",
         "R$ 3.958,33",
@@ -11073,7 +11115,7 @@ const SALES_TABLES = {
       [
         "1603",
         "50,82 m²",
-        "32 C · térreo",
+        "32 C",
         "R$ 542.000,00",
         "R$ 108.399,92",
         "R$ 3.763,89",
@@ -11088,7 +11130,7 @@ const SALES_TABLES = {
       [
         "1605",
         "52,85 m²",
-        "37 C · térreo",
+        "37 C",
         "R$ 580.000,00",
         "R$ 115.999,84",
         "R$ 4.027,78",
@@ -11103,7 +11145,7 @@ const SALES_TABLES = {
       [
         "1610",
         "52,85 m²",
-        "31 C · térreo",
+        "31 C",
         "R$ 580.000,00",
         "R$ 115.999,84",
         "R$ 4.027,78",
@@ -11118,7 +11160,7 @@ const SALES_TABLES = {
       [
         "1702",
         "51,30 m²",
-        "47 C · térreo",
+        "47 C",
         "R$ 573.000,00",
         "R$ 114.599,76",
         "R$ 3.979,17",
@@ -11133,7 +11175,7 @@ const SALES_TABLES = {
       [
         "1703",
         "50,82 m²",
-        "48 C · térreo",
+        "48 C",
         "R$ 545.000,00",
         "R$ 109.000,16",
         "R$ 3.784,72",
@@ -11148,7 +11190,7 @@ const SALES_TABLES = {
       [
         "1704",
         "52,85 m²",
-        "41 C · térreo",
+        "41 C",
         "R$ 583.000,00",
         "R$ 116.600,08",
         "R$ 4.048,61",
@@ -11163,7 +11205,7 @@ const SALES_TABLES = {
       [
         "1705",
         "52,85 m²",
-        "40 C · térreo",
+        "40 C",
         "R$ 583.000,00",
         "R$ 116.600,08",
         "R$ 4.048,61",
@@ -11178,7 +11220,7 @@ const SALES_TABLES = {
       [
         "1710",
         "52,85 m²",
-        "49 C · térreo",
+        "49 C",
         "R$ 583.000,00",
         "R$ 116.600,08",
         "R$ 4.048,61",
@@ -11193,7 +11235,7 @@ const SALES_TABLES = {
       [
         "1801",
         "52,85 m²",
-        "97 C · pilotis",
+        "97 C",
         "R$ 586.000,00",
         "R$ 117.200,32",
         "R$ 4.069,44",
@@ -11208,7 +11250,7 @@ const SALES_TABLES = {
       [
         "1802",
         "51,30 m²",
-        "96 C · pilotis",
+        "96 C",
         "R$ 576.000,00",
         "R$ 115.200,00",
         "R$ 4.000,00",
@@ -11223,7 +11265,7 @@ const SALES_TABLES = {
       [
         "1803",
         "50,82 m²",
-        "95 C · pilotis",
+        "95 C",
         "R$ 548.000,00",
         "R$ 109.599,68",
         "R$ 3.805,56",
@@ -11238,7 +11280,7 @@ const SALES_TABLES = {
       [
         "1804",
         "52,85 m²",
-        "94 C · pilotis",
+        "94 C",
         "R$ 586.000,00",
         "R$ 117.200,32",
         "R$ 4.069,44",
@@ -11253,7 +11295,7 @@ const SALES_TABLES = {
       [
         "1805",
         "52,85 m²",
-        "93 C · pilotis",
+        "93 C",
         "R$ 586.000,00",
         "R$ 117.200,32",
         "R$ 4.069,44",
@@ -11268,7 +11310,7 @@ const SALES_TABLES = {
       [
         "1810",
         "52,85 m²",
-        "45 C · térreo",
+        "45 C",
         "R$ 586.000,00",
         "R$ 117.200,32",
         "R$ 4.069,44",
@@ -11283,7 +11325,7 @@ const SALES_TABLES = {
       [
         "1902",
         "51,30 m²",
-        "100 C · pilotis",
+        "100 C",
         "R$ 579.000,00",
         "R$ 115.800,24",
         "R$ 4.020,83",
@@ -11296,7 +11338,7 @@ const SALES_TABLES = {
         "R$ 463.200,00"
       ]
     ],
-    "note": "Vangard, da Scire, na Vila Nova — tabela de 2 dormitórios (1 suíte) de novembro/2026, entrega prevista em maio/2030 (42 meses): 106 unidades de 50,82, 51,30, 52,85 m². É a TABELA ZERO, ainda não aprovada pela construtora. A Scire publica duas tabelas para as mesmas unidades, de venda direta e de financiamento; aqui elas estão lado a lado e o valor é o mesmo nas duas. Venda direta: ato de 20% em 25/11/2026 + 72 parcelas mensais a partir de 10/12/2026 + 5 parcelas anuais a partir de 10/12/2027 + parcela de chaves em 25/05/2030. Financiamento: ato de 3% em 25/11/2026 + 42 parcelas mensais a partir de 10/12/2026 + 3 parcelas anuais a partir de 10/12/2027 + 36 parcelas pós-chaves a partir de 10/06/2030 + financiamento bancário de 80% em 31/05/2030. Nas duas condições as parcelas fecham o valor ao centavo, e o financiamento é 80% em todas. Na coluna de vaga, C é coberta e D é descoberta, com o local. À vista no lançamento, até 31/12/2026: 5% de desconto. Venda direta com ato mínimo de 10% e parcelamento em até 72 meses. Correção pelo CUB/SC até as chaves e, depois, IPCA + 1% a.m. Não constam na tabela os aptos 708, 808, 907, 908, 1409, 1601, 1604 e 1701.",
+    "note": "Vangard, da Scire, na Vila Nova — tabela de 2 dormitórios (1 suíte) de novembro/2026, entrega prevista em maio/2030 (42 meses): 106 unidades de 50,82, 51,30, 52,85 m². É a TABELA ZERO, ainda não aprovada pela construtora. A Scire publica duas tabelas para as mesmas unidades, de venda direta e de financiamento; aqui elas estão lado a lado e o valor é o mesmo nas duas. Venda direta: ato de 20% em 25/11/2026 + 72 parcelas mensais a partir de 10/12/2026 + 5 parcelas anuais a partir de 10/12/2027 + parcela de chaves em 25/05/2030. Financiamento: ato de 3% em 25/11/2026 + 42 parcelas mensais a partir de 10/12/2026 + 3 parcelas anuais a partir de 10/12/2027 + 36 parcelas pós-chaves a partir de 10/06/2030 + financiamento bancário de 80% em 31/05/2030. Nas duas condições as parcelas fecham o valor ao centavo, e o financiamento é 80% em todas. Na coluna de vaga, C é coberta e D é descoberta. As vagas PCD (cobertas, no térreo) são as dos aptos 101, 201, 301, 401. À vista no lançamento, até 31/12/2026: 5% de desconto. Venda direta com ato mínimo de 10% e parcelamento em até 72 meses. Correção pelo CUB/SC até as chaves e, depois, IPCA + 1% a.m. Não constam na tabela os aptos 708, 808, 907, 908, 1409, 1601, 1604 e 1701.",
     "summary": {
       "tipoDefault": "Apartamento",
       "bits": [
@@ -11308,8 +11350,8 @@ const SALES_TABLES = {
           "pre": "Vaga ",
           "col": 2,
           "troca": {
-            " C · ": " coberta, ",
-            " D · ": " descoberta, "
+            " C": " (coberta)",
+            " D": " (descoberta)"
           }
         }
       ],
@@ -11372,6 +11414,27 @@ const SALES_TABLES = {
           "pct": 5
         }
       ]
-    }
+    },
+    "colGrupos": [
+      {
+        "titulo": "Venda direta",
+        "cols": [
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "titulo": "Financiamento",
+        "cols": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    ]
   }
 };

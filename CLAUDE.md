@@ -314,10 +314,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (29 payloads, 18.992.141 bytes):
+Hash de referência (29 payloads, 18.992.193 bytes):
 
 ```
-61498669C4BCF7930E4FB9B6B2A485410E539227A865871FE38B6CB5651DDC0C
+3A1F75C13513E38B40538A6286CBDF31D89FBA8F4ACDE93CA1894F24338BB305
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -671,12 +671,17 @@ aprovada pela construtora): 175 unidades em três tabelas e três cards, "Vangar
 "- 1 dormitório" (33) e "- 2 dormitórios" (106, todos com 1 suíte), regra dos Tulum, padrão Econômico,
 10 por andar, `lazer: null` (a lista não veio). **A Scire tem duas condições para as mesmas unidades**
 (venda direta: ato 20% + 72x + 5 anuais + chaves; financiamento: ato 3% + 42x + 3 anuais + 36x pós +
-80% de financiamento), e o Felipe pediu as duas **lado a lado na mesma tabela**, 13 colunas com prefixo
-"Direta:"/"Financ.:". As 175 linhas fecham ao centavo nas duas. Para o "Copiar Resumo" sair com as duas
+80% de financiamento), e o Felipe pediu as duas **lado a lado na mesma tabela**, no padrão do Solare:
+cabeçalhos curtos ("Ato (20%)", "72 parcelas mensais"… "Ato (3%)", "42 parcelas mensais"…) e uma **faixa acima
+do cabeçalho** dizendo "Venda direta" e "Financiamento" sobre as colunas de cada uma — `colGrupos:
+[{titulo, cols}]` na tabela (índices originais), desenhada pelo `salesTableHTML` como `tr.th-grp`. A primeira
+versão, com prefixo "Direta:"/"Financ.:" em cada cabeçalho e o local na vaga, ele achou poluída. As 175 linhas fecham ao centavo nas duas. Para o "Copiar Resumo" sair com as duas
 separadas, o `summary` ganhou **`parcelasGrupos: [{titulo, parcelas}]`** (cada grupo com título e linha em
 branco antes; o `parcelas` comum segue igual). À vista no lançamento: −4% studio e 1D, −5% 2D, até
-31/12/2026 (`alternativas`). Sem coluna de avaliação, como as outras da Scire. A vaga é "51 C · térreo,
-PCD" e o `troca` escreve "coberta"/"descoberta". Em 1280px a tabela rola ~40px. Dados lidos por script
+31/12/2026 (`alternativas`). Sem coluna de avaliação, como as outras da Scire. A vaga é "51 C"/"150 D",
+como no Solare, e o `troca` escreve "(coberta)"/"(descoberta)"; as vagas PCD (aptos 101 a 401) ficam na nota.
+Em 1366px a tabela cabe sem rolar. A condição do card é curta, "Direta em 72x ou
+financiamento" (Felipe, 19/11: a versão com todas as parcelas poluía o card). Dados lidos por script
 (`vangard-le.js` + `vangard-aplica.js`, scratchpad da sessão de 12/11).
 
 **Colunas das tabelas da Scire** (pedido do Felipe em 29/10/2026, nas seis): sem Desconto,

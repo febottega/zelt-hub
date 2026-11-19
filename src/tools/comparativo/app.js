@@ -1089,7 +1089,18 @@ function salesTableHTML(emp, t){
               : "Ordenar pelo valor: do mais barato para o mais caro";
     return `<th class="th-sort th-valor${sortDir?" on":""}"><button type="button" class="btn-sort" data-emp="${emp.replace(/"/g,'&quot;')}" title="${tit}">${c}<span class="sort-ic">${ic}</span></button></th>`;
   };
-  const head = `<tr>${cols.map(ci=>{ const c=t.columns[ci];
+  /* faixa acima do cabecalho dizendo a que condicao cada coluna pertence (Vangard, 19/11/2026:
+     venda direta e financiamento na mesma tabela). t.colGrupos = [{titulo, cols:[indices originais]}];
+     colunas fora de grupo ficam com a faixa vazia */
+  let faixa = "";
+  if(t.colGrupos){
+    const gDe = ci => t.colGrupos.find(g=>g.cols.includes(ci)) || null;
+    const runs = [];
+    cols.forEach(ci=>{ const g=gDe(ci); const u=runs[runs.length-1]; if(u && u.g===g) u.n++; else runs.push({g,n:1}); });
+    if(hasSum){ const u=runs[runs.length-1]; if(u && !u.g) u.n++; else runs.push({g:null,n:1}); }
+    faixa = `<tr class="th-grp">${runs.map(r=>`<th colspan="${r.n}"${r.g?' class="on"':""}>${r.g?r.g.titulo:""}</th>`).join("")}</tr>`;
+  }
+  const head = faixa + `<tr>${cols.map(ci=>{ const c=t.columns[ci];
     return ci===sortCol?thSort(c):`<th${vcols.includes(ci)?' class="th-valor"':""}>${c}</th>`; }).join("")}${hasSum?`<th class="th-resumo">Resumo</th>`:""}</tr>`;
   /* cabecalho de cada bloco, so na ordem da construtora (ordenado por valor, os blocos se misturam) */
   const nCols = t.columns.length + (hasSum?1:0);

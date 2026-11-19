@@ -2383,7 +2383,7 @@ const DATA = [
     "entrega": "05/2030",
     "entregaKey": 24365,
     "pronto": false,
-    "condicao": "Direta: ato + 72x + 5 anuais + chaves · Financ.: ato + 42x + 3 anuais + 36x pós + financiamento",
+    "condicao": "Direta em 72x ou financiamento",
     "correcao": "CUB/SC até as chaves",
     "quartos": [
       1
@@ -2413,7 +2413,7 @@ const DATA = [
     "entrega": "05/2030",
     "entregaKey": 24365,
     "pronto": false,
-    "condicao": "Direta: ato + 72x + 5 anuais + chaves · Financ.: ato + 42x + 3 anuais + 36x pós + financiamento",
+    "condicao": "Direta em 72x ou financiamento",
     "correcao": "CUB/SC até as chaves",
     "quartos": [
       1
@@ -2443,7 +2443,7 @@ const DATA = [
     "entrega": "05/2030",
     "entregaKey": 24365,
     "pronto": false,
-    "condicao": "Direta: ato + 72x + 5 anuais + chaves · Financ.: ato + 42x + 3 anuais + 36x pós + financiamento",
+    "condicao": "Direta em 72x ou financiamento",
     "correcao": "CUB/SC até as chaves",
     "quartos": [
       2
