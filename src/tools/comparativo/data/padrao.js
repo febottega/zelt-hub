@@ -57,5 +57,6 @@ const PADRAO_LAZER = {
   "Scire Fortaleza": { padrao: "Econômico", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "coworking", "pet_place", "bicicletario"], andar: 8 },
   "Norden": { padrao: "Econômico", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "coworking", "pet_place", "cinema_jogos", "bicicletario"], andar: 8 },
   "Solare": { padrao: "Econômico", lazer: ["piscina", "academia", "espaco_gourmet", "playground", "rooftop", "coworking", "pet_place", "cinema_jogos", "bicicletario", "lavanderia"], andar: 10 },
-  "Terrasse": { padrao: "Econômico", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "rooftop", "coworking", "pet_place", "cinema_jogos", "bicicletario", "lavanderia", "mercado_autonomo"], andar: 10 }
+  "Terrasse": { padrao: "Econômico", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "rooftop", "coworking", "pet_place", "cinema_jogos", "bicicletario", "lavanderia", "mercado_autonomo"], andar: 10 },
+  "Vangard": { padrao: "Econômico", lazer: null, andar: 10 },
 };

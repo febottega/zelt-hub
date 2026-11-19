@@ -314,10 +314,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (29 payloads, 18.890.405 bytes):
+Hash de referência (29 payloads, 18.992.141 bytes):
 
 ```
-AAC3D61E61C5F8692C10B4A3839902CBABDCF86CE60ED71C60812976ED10E7D1
+61498669C4BCF7930E4FB9B6B2A485410E539227A865871FE38B6CB5651DDC0C
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -665,6 +665,19 @@ O **Terrasse** (com dois R, como na tabela; Vorstadt, torre única, entrega 06/2
 o mesmo modelo do Solare: tabelas e cards "Terrasse - 1 dormitório" e "- 2 dormitórios"; o de 1
 dormitório tem uma unidade só (a 1408). Condição: ato + 20 mensais (11%) + 3 semestrais (2%
 cada) + 36x pós-chaves (10%) + financiamento — 69% nas de 2D (ato 4%) e 68% na de 1D (ato 5%).
+
+O **Vangard** (Scire, Vila Nova, entrega 05/2030, entrou em 19/11/2026 com a "tabela zero", ainda não
+aprovada pela construtora): 175 unidades em três tabelas e três cards, "Vangard - Studio" (36),
+"- 1 dormitório" (33) e "- 2 dormitórios" (106, todos com 1 suíte), regra dos Tulum, padrão Econômico,
+10 por andar, `lazer: null` (a lista não veio). **A Scire tem duas condições para as mesmas unidades**
+(venda direta: ato 20% + 72x + 5 anuais + chaves; financiamento: ato 3% + 42x + 3 anuais + 36x pós +
+80% de financiamento), e o Felipe pediu as duas **lado a lado na mesma tabela**, 13 colunas com prefixo
+"Direta:"/"Financ.:". As 175 linhas fecham ao centavo nas duas. Para o "Copiar Resumo" sair com as duas
+separadas, o `summary` ganhou **`parcelasGrupos: [{titulo, parcelas}]`** (cada grupo com título e linha em
+branco antes; o `parcelas` comum segue igual). À vista no lançamento: −4% studio e 1D, −5% 2D, até
+31/12/2026 (`alternativas`). Sem coluna de avaliação, como as outras da Scire. A vaga é "51 C · térreo,
+PCD" e o `troca` escreve "coberta"/"descoberta". Em 1280px a tabela rola ~40px. Dados lidos por script
+(`vangard-le.js` + `vangard-aplica.js`, scratchpad da sessão de 12/11).
 
 **Colunas das tabelas da Scire** (pedido do Felipe em 29/10/2026, nas seis): sem Desconto,
 sem "Valor (com desconto)", sem Avaliação e sem Situação. A coluna

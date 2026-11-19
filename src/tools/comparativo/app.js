@@ -952,6 +952,12 @@ function buildResumo(emp, ri){
     const v = parseBRL(r[p.col]);
     if(v!=null) b2.push(`* ${(grp && grp.parcelaRotulos && grp.parcelaRotulos[p.label]) || p.label}: ${fmtBRL(v)}`);
   });
+  /* duas condições para a mesma unidade (Vangard, 19/11/2026: venda direta e financiamento):
+     cada grupo sai com o título e as parcelas dele, separado por uma linha em branco */
+  (s.parcelasGrupos||[]).forEach(g=>{
+    const ls = g.parcelas.map(p=>{ const v = parseBRL(r[p.col]); return v!=null ? `* ${p.label}: ${fmtBRL(v)}` : null; }).filter(Boolean);
+    if(ls.length){ b2.push(""); b2.push(`*${g.titulo}*`); ls.forEach(x=>b2.push(x)); }
+  });
 
   const b3 = [];
   (s.alternativas||[]).forEach(a=>{
@@ -1034,7 +1040,10 @@ const SALES_VALORES = {
   "Solare - 1 dormitório": ["Tabela"],
   "Solare - 2 dormitórios": ["Tabela"],
   "Terrasse - 1 dormitório": ["Tabela"],
-  "Terrasse - 2 dormitórios": ["Tabela"]
+  "Terrasse - 2 dormitórios": ["Tabela"],
+  "Vangard - Studio": ["Tabela"],
+  "Vangard - 1 dormitório": ["Tabela"],
+  "Vangard - 2 dormitórios": ["Tabela"]
 };
 function valorCols(emp, t){
   const nomes = SALES_VALORES[emp];
@@ -1138,7 +1147,7 @@ function salesTableHTML(emp, t){
 const salesState = { q:"", constr:"" };
 /* tabelas com a coluna de valor ordenavel e a ordem escolhida em cada uma
    ("asc" | "desc"; ausente = ordem da tabela da construtora) */
-const SALES_ORDENAVEL = new Set(["Vista 43 - 2 dormitórios","Vista 43 - Studios e Loft Duplex","Tulum - Studios","Tulum - 2 dormitórios","Central Park"]);
+const SALES_ORDENAVEL = new Set(["Vista 43 - 2 dormitórios","Vista 43 - Studios e Loft Duplex","Tulum - Studios","Tulum - 2 dormitórios","Central Park","Vangard - Studio","Vangard - 1 dormitório","Vangard - 2 dormitórios"]);
 const salesSort = {};
 function bindSalesSection(root){
   root.querySelectorAll(".btn-resumo").forEach(b=>{
