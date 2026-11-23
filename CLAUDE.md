@@ -314,10 +314,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (29 payloads, 18.992.193 bytes):
+Hash de referência (29 payloads, 18.994.905 bytes):
 
 ```
-3A1F75C13513E38B40538A6286CBDF31D89FBA8F4ACDE93CA1894F24338BB305
+F2250B485BAC619D72F8FD5EFE2761472DA98D569D47E69B04ACBF757894C805
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -581,6 +581,10 @@ média real do total em 72x de todas as unidades (studios R$ 404.093,32 em vez
 de 445.904,68). Quando a tabela do Tulum mudar, recalcule os dois do mesmo jeito. O **506** dos 2
 dormitórios (91,70 m², área confirmada) **entra no card** como as demais: ficou fora
 numa publicação de 30/09/2026 e o Felipe pediu para voltar no mesmo dia.
+Desde nov/2026 a construtora publica só o total em 72x e os percentuais; as colunas **"Na entrega das
+chaves (−6,09%)"** e **"À vista (−13,04%)"** (esta voltou em 23/11/2026, a pedido do Felipe) são calculadas:
+**à vista = total ÷ 1,15** e **chaves = à vista × 1,08**, que fecham ao centavo nas 60 unidades (os
+valores à vista saem redondos). As duas vão nas `alternativas` do resumo, chaves e depois à vista.
 
 O **Lago di Garda** (lotes) tem a condição desde 11/11/2026 (Felipe): entrada de 20% + até 120 parcelas fixas com juros de 1% a.m. A parcela é calculada pela Tabela Price sobre os 80% (não vem na tabela). Com os juros, entrada + 120 parcelas dá mais que o investimento; a coluna "Total pago em 120x" chegou a existir e saiu a pedido do Felipe no mesmo dia. O "Investimento" segue como base do card.
 
