@@ -2454,5 +2454,69 @@ const DATA = [
     "terreno": false,
     "sold": false,
     "id": 80
+  },
+  {
+    "tipo": "Apartamento Tipo",
+    "construtora": "Alleati",
+    "empreendimento": "Palazzo Fontana",
+    "bairro": "Victor Konder",
+    "unidade": null,
+    "config": "4 suítes",
+    "vagas": "3 + depósito",
+    "vagasN": 3,
+    "apriv": 202.64,
+    "atotal": 202.64,
+    "faixaArea": true,
+    "vmin": 1846111.0,
+    "vmax": 2164406.0,
+    "media": 2032313.58,
+    "rpriv": 10029.18,
+    "rtotal": null,
+    "entrega": "11/2031",
+    "entregaKey": 24383,
+    "pronto": false,
+    "condicao": "Entrada + 60x + 5 reforços",
+    "correcao": "Somente CUB",
+    "quartos": [
+      4
+    ],
+    "suites": [
+      4
+    ],
+    "terreno": false,
+    "sold": false,
+    "id": 81
+  },
+  {
+    "tipo": "Terraço",
+    "construtora": "Alleati",
+    "empreendimento": "Palazzo Fontana",
+    "bairro": "Victor Konder",
+    "unidade": "301",
+    "config": "4 suítes",
+    "vagas": "3 + depósito",
+    "vagasN": 3,
+    "apriv": 249.12,
+    "atotal": null,
+    "faixaArea": false,
+    "vmin": 2243979.75,
+    "vmax": 2243979.75,
+    "media": 2243979.75,
+    "rpriv": 9007.63,
+    "rtotal": null,
+    "entrega": "11/2031",
+    "entregaKey": 24383,
+    "pronto": false,
+    "condicao": "Entrada + 60x + 5 reforços",
+    "correcao": "Somente CUB",
+    "quartos": [
+      4
+    ],
+    "suites": [
+      4
+    ],
+    "terreno": false,
+    "sold": false,
+    "id": 82
   }
 ];

@@ -314,10 +314,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (29 payloads, 18.994.905 bytes):
+Hash de referência (29 payloads, 19.005.269 bytes):
 
 ```
-F2250B485BAC619D72F8FD5EFE2761472DA98D569D47E69B04ACBF757894C805
+67DA94568ED517B36E29D019CC5B635A7E35E9B76350C0FB700012E5DBB40881
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -687,6 +687,16 @@ como no Solare, e o `troca` escreve "(coberta)"/"(descoberta)"; as vagas PCD (ap
 Em 1366px a tabela cabe sem rolar. A condição do card é curta, "Direta em 72x ou
 financiamento" (Felipe, 19/11: a versão com todas as parcelas poluía o card). Dados lidos por script
 (`vangard-le.js` + `vangard-aplica.js`, scratchpad da sessão de 12/11).
+
+O **Palazzo Fontana** (Alleati, Victor Konder, entrega 11/2031, entrou em 24/11/2026): 14 unidades de 4
+suítes, um por andar, 3 vagas + depósito; obra por administração (SPE), valores em cotas de CUB (valor = cota ×
+CUB do mês, fecha ao centavo). Uma tabela e **dois cards** com o mesmo nome: o tipo (401 a 1601, 202,64 m²
+privativos e 395 m² de área total), regra dos Tulum só sobre as disponíveis, e o **garden 301** (249,12 m²)
+como card de "Terraço" com `unidade: "301"`; na tabela e no resumo ele aparece como "Garden" (`summary.tipos`).
+Condição: entrada 15% + 60x (45%) + 5 reforços de 8% (40%), que fecham com até R$ 0,30 de arredondamento (em
+CUB, exato). **Reservadas (701, 1201, 1401) só como "Reservada"**: a tabela diz "pré-reserva para sócio" e o
+Felipe pediu para não mostrar isso. Padrão Altíssimo (Felipe), 1 por andar, `lazer: null` (a pasta do Drive só
+tem a tabela). Script: `fontana.js`, scratchpad da sessão de 12/11.
 
 **Colunas das tabelas da Scire** (pedido do Felipe em 29/10/2026, nas seis): sem Desconto,
 sem "Valor (com desconto)", sem Avaliação e sem Situação. A coluna

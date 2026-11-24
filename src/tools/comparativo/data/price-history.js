@@ -2353,5 +2353,58 @@ const PRICE_HISTORY = {
         579000
       ]
     }
+  },
+  "Palazzo Fontana": {
+    "datas": [
+      "2026-11"
+    ],
+    "fontes": [
+      "Tabela nov/2026 – CUB R$ 3.182,95"
+    ],
+    "obs": "Unidades do Palazzo Fontana na tabela de novembro/2026, a primeira levantada. Os valores são cotas de CUB × CUB do mês, então a variação daqui em diante vai ser quase toda índice; o que interessa é quando a cota de alguma unidade mudar.",
+    "unidades": {
+      "301": [
+        2243979.75
+      ],
+      "401": [
+        1846111
+      ],
+      "501": [
+        1909770
+      ],
+      "601": [
+        1973429
+      ],
+      "701": [
+        2005258.5
+      ],
+      "801": [
+        2021173.25
+      ],
+      "901": [
+        2037088
+      ],
+      "1001": [
+        2053002.75
+      ],
+      "1101": [
+        2068917.5
+      ],
+      "1201": [
+        2084832.25
+      ],
+      "1301": [
+        2100747
+      ],
+      "1401": [
+        2132576.5
+      ],
+      "1501": [
+        2148491.25
+      ],
+      "1601": [
+        2164406
+      ]
+    }
   }
 };

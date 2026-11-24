@@ -59,4 +59,5 @@ const PADRAO_LAZER = {
   "Solare": { padrao: "Econômico", lazer: ["piscina", "academia", "espaco_gourmet", "playground", "rooftop", "coworking", "pet_place", "cinema_jogos", "bicicletario", "lavanderia"], andar: 10 },
   "Terrasse": { padrao: "Econômico", lazer: ["piscina", "academia", "salao_festas", "espaco_gourmet", "playground", "quadra", "rooftop", "coworking", "pet_place", "cinema_jogos", "bicicletario", "lavanderia", "mercado_autonomo"], andar: 10 },
   "Vangard": { padrao: "Econômico", lazer: null, andar: 10 },
+  "Palazzo Fontana": { padrao: "Altíssimo", lazer: null, andar: 1 },
 };

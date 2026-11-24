@@ -11508,5 +11508,220 @@ const SALES_TABLES = {
         ]
       }
     ]
+  },
+  "Palazzo Fontana": {
+    "folderId": "1OfEJYTNHmAM8CUt9eP-AXDNsq0poabcw",
+    "source": "Tabela de vendas (SPE Palazzo Fontana, por administração)",
+    "ref": "Novembro/2026 · CUB R$ 3.182,95",
+    "unitCol": 0,
+    "columns": [
+      "Apto",
+      "Área priv.",
+      "Vagas",
+      "Qt. CUB",
+      "Entrada (15%)",
+      "60 parcelas mensais",
+      "5 reforços (8% cada)",
+      "Valor",
+      "Situação"
+    ],
+    "rows": [
+      [
+        "301",
+        "249,12 m²",
+        "3 + depósito",
+        "705,000",
+        "R$ 336.596,96",
+        "R$ 16.829,85",
+        "R$ 179.518,38",
+        "R$ 2.243.979,75",
+        "Disponível"
+      ],
+      [
+        "401",
+        "202,64 m²",
+        "3 + depósito",
+        "580,000",
+        "R$ 276.916,65",
+        "R$ 13.845,83",
+        "R$ 147.688,88",
+        "R$ 1.846.111,00",
+        "Disponível"
+      ],
+      [
+        "501",
+        "202,64 m²",
+        "3 + depósito",
+        "600,000",
+        "R$ 286.465,50",
+        "R$ 14.323,28",
+        "R$ 152.781,60",
+        "R$ 1.909.770,00",
+        "Disponível"
+      ],
+      [
+        "601",
+        "202,64 m²",
+        "3 + depósito",
+        "620,000",
+        "R$ 296.014,35",
+        "R$ 14.800,72",
+        "R$ 157.874,32",
+        "R$ 1.973.429,00",
+        "Disponível"
+      ],
+      [
+        "701",
+        "202,64 m²",
+        "3 + depósito",
+        "630,000",
+        "R$ 300.788,78",
+        "R$ 15.039,44",
+        "R$ 160.420,68",
+        "R$ 2.005.258,50",
+        "Reservada"
+      ],
+      [
+        "801",
+        "202,64 m²",
+        "3 + depósito",
+        "635,000",
+        "R$ 303.175,99",
+        "R$ 15.158,80",
+        "R$ 161.693,86",
+        "R$ 2.021.173,25",
+        "Disponível"
+      ],
+      [
+        "901",
+        "202,64 m²",
+        "3 + depósito",
+        "640,000",
+        "R$ 305.563,20",
+        "R$ 15.278,16",
+        "R$ 162.967,04",
+        "R$ 2.037.088,00",
+        "Disponível"
+      ],
+      [
+        "1001",
+        "202,64 m²",
+        "3 + depósito",
+        "645,000",
+        "R$ 307.950,41",
+        "R$ 15.397,52",
+        "R$ 164.240,22",
+        "R$ 2.053.002,75",
+        "Disponível"
+      ],
+      [
+        "1101",
+        "202,64 m²",
+        "3 + depósito",
+        "650,000",
+        "R$ 310.337,63",
+        "R$ 15.516,88",
+        "R$ 165.513,40",
+        "R$ 2.068.917,50",
+        "Disponível"
+      ],
+      [
+        "1201",
+        "202,64 m²",
+        "3 + depósito",
+        "655,000",
+        "R$ 312.724,84",
+        "R$ 15.636,24",
+        "R$ 166.786,58",
+        "R$ 2.084.832,25",
+        "Reservada"
+      ],
+      [
+        "1301",
+        "202,64 m²",
+        "3 + depósito",
+        "660,000",
+        "R$ 315.112,05",
+        "R$ 15.755,60",
+        "R$ 168.059,76",
+        "R$ 2.100.747,00",
+        "Disponível"
+      ],
+      [
+        "1401",
+        "202,64 m²",
+        "3 + depósito",
+        "670,000",
+        "R$ 319.886,48",
+        "R$ 15.994,32",
+        "R$ 170.606,12",
+        "R$ 2.132.576,50",
+        "Reservada"
+      ],
+      [
+        "1501",
+        "202,64 m²",
+        "3 + depósito",
+        "675,000",
+        "R$ 322.273,69",
+        "R$ 16.113,68",
+        "R$ 171.879,30",
+        "R$ 2.148.491,25",
+        "Disponível"
+      ],
+      [
+        "1601",
+        "202,64 m²",
+        "3 + depósito",
+        "680,000",
+        "R$ 324.660,90",
+        "R$ 16.233,05",
+        "R$ 173.152,48",
+        "R$ 2.164.406,00",
+        "Disponível"
+      ]
+    ],
+    "note": "Residencial Palazzo Fontana, da Alleati, no Victor Konder — tabela de novembro/2026, entrega prevista em novembro/2031: 14 unidades, 11 disponíveis e 3 reservadas (701, 1201 e 1401). Um apartamento por andar, todos com 4 suítes, 3 vagas de garagem e 1 depósito privativo. Os tipo, do 401 ao 1601, têm 202,64 m² privativos e 395 m² de área total; o 301 é garden, com 249,12 m² privativos. Empreendimento por administração (SPE Palazzo Fontana), com os valores em CUB, atualizados todo mês: valor = quantidade de CUB × CUB do mês (R$ 3.182,95 em novembro/2026). Condição: entrada de 15% + 60 parcelas mensais (45%) + 5 reforços de 8% (40%), que somam o valor com diferença de no máximo R$ 0,30 (arredondamento das parcelas); em CUB a conta fecha exata. A reserva só vale com depósito de 20 CUB (R$ 63.659,00 no CUB de novembro) em nome da SPE Palazzo Fontana.",
+    "summary": {
+      "tipoDefault": "Apartamento",
+      "tipos": {
+        "301": "Garden"
+      },
+      "situacao": "Disponível",
+      "situacaoCol": 8,
+      "bits": [
+        {
+          "pre": "Área privativa: ",
+          "col": 1
+        },
+        {
+          "pre": "Vagas: ",
+          "col": 2
+        },
+        {
+          "pre": "",
+          "col": 3,
+          "pos": " CUBs"
+        }
+      ],
+      "principal": {
+        "label": "Valor",
+        "col": 7
+      },
+      "parcelas": [
+        {
+          "label": "Entrada (15%)",
+          "col": 4
+        },
+        {
+          "label": "60 parcelas mensais",
+          "col": 5
+        },
+        {
+          "label": "5 reforços (8% cada)",
+          "col": 6
+        }
+      ]
+    }
   }
 };
