@@ -43,11 +43,11 @@ HUB/
 ├─ .gitattributes      * -text  (impede LF→CRLF; o Windows tem autocrlf=true)
 └─ src/
    ├─ hub.html         shell do hub (84 KB). Marcador <!--@PAYLOADS@-->
-   ├─ order.txt        os 29 nomes, um por linha, NA ORDEM de injeção
+   ├─ order.txt        os 30 nomes, um por linha, NA ORDEM de injeção
    ├─ assets/fonts/    8 fontes TTF em base64, COMPARTILHADAS — nunca ler
    ├─ vendor/          pdf-lib (512 KB) e html2canvas (193 KB) — nunca ler
    ├─ tools/           ferramentas (arquivo único OU pasta)
-   └─ frozen/          22 relatórios históricos em base64 — nunca ler; editar só por script
+   └─ frozen/          23 relatórios históricos em base64 — nunca ler; editar só por script
 ```
 
 **`src/frozen/` não é intocável, é ilegível.** Cada `.b64` é uma linha de 500 a
@@ -131,7 +131,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   "Rua X · Maison · Bairro"; Ap/Apto/Sl/Lt/Lote com número somem, "Casa 02"/"Sobrado 01"/"Loft 02 e 03"
   ficam só "Casa"/"Sobrado"/"Loft". O nome do prédio fica, mesmo com número ("Hugel 642"). Valeu no
   `DADOS` (`e` e `cm`; `cm` pode ficar vazio) e no `local` do `DETALHES` e no `.dw-loc` do relatório atual
-  e dos 20 congelados que têm endereço (o 16/06 não tem). Os relatórios novos deveriam vir assim, mas o de 17/11 veio com número e captador Jaison: a limpeza e a troca entraram no script da semana (`av1711-aplica.js`, que também pega "Ap102" sem espaço);
+  e dos 20 congelados que têm endereço (o 16/06 não tem). Os relatórios novos deveriam vir assim, mas o de 17/11 e o de 24/11 vieram com número (e o de 17/11 com captador Jaison): a limpeza e a troca entraram no script da semana (`av1711-aplica.js`, que também pega "Ap102" sem espaço);
   confira antes de emendar o `DADOS`. Script: `oculta.js`, no scratchpad da sessão de 12/11.
   **Jaison saiu da ZELT** (Felipe, 16/11/2026): os 22 imóveis que ele captou passaram para **ZELT** — no
   `DADOS` (`cap`) e nos relatórios (ficha, tabela, ranking, destaques, `EXEMPLO`); o nome dele saiu do
@@ -140,7 +140,7 @@ Seis cards. Cinco são payloads embutidos; o **Painel de Pauta** é externo
   `jaison.js` no scratchpad da sessão de 12/11.
   ZELT e Maria Helena ficam fora da tabela por corretor (`CV_FORA`), a pedido do Felipe; os
   imóveis deles continuam na visão geral e na busca.
-- **avaliacao** + 22 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
+- **avaliacao** + 23 arquivados — relatórios semanais paginados; os antigos em `frozen/`.
   Desde 26/10/2026 as abas "Relatório / Comparativo" de cada relatório (`.tabbar`, radios
   `#rad-rel`/`#rad-cmp`) e o `#tab-comparativo` ficam escondidos: o painel emenda o
   `CSS_SEM_CMP` no texto do HTML ao abrir (`semComparativo`), o que vale também para os arquivados.
@@ -314,10 +314,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (29 payloads, 19.005.269 bytes):
+Hash de referência (30 payloads, 19.650.405 bytes):
 
 ```
-67DA94568ED517B36E29D019CC5B635A7E35E9B76350C0FB700012E5DBB40881
+3FD81A2ED7E8F076DFA573C833C5549AEDE41949FC1529A872FD0C3953E2DBB5
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
