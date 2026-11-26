@@ -314,10 +314,10 @@ com o card no `hub.html`.
 Determinístico e byte-exato. Se nenhum fonte mudou, rebuildar produz um
 `index.html` com **SHA256 idêntico**. Divergência sem mudança de fonte = bug.
 
-Hash de referência (30 payloads, 19.650.417 bytes):
+Hash de referência (30 payloads, 19.657.937 bytes):
 
 ```
-900E28D26CE0B5A2343B8670F3CE04F4110AFA1AD2C66F533669BBE817C4415C
+0B38959E78E4F2733A52471CD817363240F0C81B1A5527D40C0D76E912DD2A20
 ```
 
 **Atualize esse bloco a cada mudança de conteúdo** — ele só serve para provar que
@@ -697,6 +697,13 @@ Condição: entrada 15% + 60x (45%) + 5 reforços de 8% (40%), que fecham com at
 CUB, exato). **Reservadas (701, 1201, 1401) só como "Reservada"**: a tabela diz "pré-reserva para sócio" e o
 Felipe pediu para não mostrar isso. Padrão Altíssimo (Felipe), 1 por andar, `lazer: null` (a pasta do Drive só
 tem a tabela). Script: `fontana.js`, scratchpad da sessão de 12/11.
+
+O **Alameda Sky** (Raymundi, Jardim Blumenau, Alameda Rio Branco, entrega 12/2029, entrou em 26/11/2026; a entrega veio como 06/2031 e o Felipe corrigiu no mesmo dia):
+9 unidades de 4 suítes e 3 vagas, 2 por andar (final 1 posição Centro, final 2 posição Garcia), 155 m²
+privativos (270 m² de área total; o 802 tem 254) e o 102 com 180/290 m². Administração (SPE), valores em CUB
+(fecha com até 1 centavo). Um card só, regra dos Tulum, faixa 155–180 m². Condição: entrada 25% + 30 mensais
+(55%) + 4 semestrais (20%), até R$ 0,15 de arredondamento. Padrão Alto (Felipe), `lazer: null`; pasta do Drive 16tl8kRO… no `folderId` e no `DRIVE_LINKS`. No Custo-benefício saiu com **nota 10** (R$ 8.890/m², 31% abaixo do esperado — o mais barato do Jardim
+Blumenau). Script: `alamedasky.js`, scratchpad da sessão de 12/11.
 
 **Colunas das tabelas da Scire** (pedido do Felipe em 29/10/2026, nas seis): sem Desconto,
 sem "Valor (com desconto)", sem Avaliação e sem Situação. A coluna

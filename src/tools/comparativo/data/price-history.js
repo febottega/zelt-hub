@@ -2406,5 +2406,43 @@ const PRICE_HISTORY = {
         2164406
       ]
     }
+  },
+  "Alameda Sky": {
+    "datas": [
+      "2026-11"
+    ],
+    "fontes": [
+      "Tabela nov/2026 – CUB R$ 3.182,95"
+    ],
+    "obs": "Unidades do Alameda Sky na tabela de novembro/2026, a primeira levantada. Os valores são cotas de CUB × CUB do mês, então a variação daqui em diante vai ser quase toda índice; o que interessa é quando a cota de alguma unidade mudar.",
+    "unidades": {
+      "102": [
+        1480071.75
+      ],
+      "201": [
+        1368668.5
+      ],
+      "202": [
+        1336839
+      ],
+      "302": [
+        1355936.7
+      ],
+      "401": [
+        1406863.9
+      ],
+      "402": [
+        1375034.4
+      ],
+      "501": [
+        1425961.6
+      ],
+      "502": [
+        1394132.1
+      ],
+      "802": [
+        1463838.71
+      ]
+    }
   }
 };

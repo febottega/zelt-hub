@@ -67,6 +67,7 @@ const DRIVE_LINKS = {
   "Terrasse - 1 dormitório": "https://drive.google.com/drive/folders/1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
   "Terrasse - 2 dormitórios": "https://drive.google.com/drive/folders/1y0JH0Tp12PbHP-W1lD32ayzGdRTuh9mU",
   "Palazzo Fontana": "https://drive.google.com/drive/folders/1OfEJYTNHmAM8CUt9eP-AXDNsq0poabcw",
+  "Alameda Sky": "https://drive.google.com/drive/folders/16tl8kRO9iG0Ojy-de2Us_4DOtnomZWYt",
   "Villaggio Treviso": "https://drive.google.com/drive/folders/1RLOudeck3dBTWh0PMG6tNtRaThBOV6Pd"
 };
 const driveLinkFor = d => DRIVE_LINKS[d.empreendimento] || null;
@@ -1045,7 +1046,8 @@ const SALES_VALORES = {
   "Vangard - Studio": ["Tabela"],
   "Vangard - 1 dormitório": ["Tabela"],
   "Vangard - 2 dormitórios": ["Tabela"],
-  "Palazzo Fontana": ["Valor"]
+  "Palazzo Fontana": ["Valor"],
+  "Alameda Sky": ["Valor"]
 };
 function valorCols(emp, t){
   const nomes = SALES_VALORES[emp];

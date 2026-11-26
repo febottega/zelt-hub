@@ -2518,5 +2518,37 @@ const DATA = [
     "terreno": false,
     "sold": false,
     "id": 82
+  },
+  {
+    "tipo": "Apartamento Tipo",
+    "construtora": "Raymundi",
+    "empreendimento": "Alameda Sky",
+    "bairro": "Jardim Blumenau",
+    "unidade": null,
+    "config": "4 suítes",
+    "vagas": "3",
+    "vagasN": 3,
+    "apriv": 155.0,
+    "atotal": 180.0,
+    "faixaArea": true,
+    "vmin": 1336839.0,
+    "vmax": 1480071.75,
+    "media": 1400816.3,
+    "rpriv": 8890.17,
+    "rtotal": null,
+    "entrega": "12/2029",
+    "entregaKey": 24360,
+    "pronto": false,
+    "condicao": "Entrada + 30x + 4 semestrais",
+    "correcao": "Somente CUB",
+    "quartos": [
+      4
+    ],
+    "suites": [
+      4
+    ],
+    "terreno": false,
+    "sold": false,
+    "id": 83
   }
 ];

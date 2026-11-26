@@ -11723,5 +11723,174 @@ const SALES_TABLES = {
         }
       ]
     }
+  },
+  "Alameda Sky": {
+    "folderId": "16tl8kRO9iG0Ojy-de2Us_4DOtnomZWYt",
+    "source": "Tabela de vendas (SPE Alameda Sky, por administração)",
+    "ref": "Novembro/2026 · CUB R$ 3.182,95",
+    "unitCol": 0,
+    "columns": [
+      "Apto",
+      "Posição",
+      "Área priv.",
+      "Área total",
+      "Vagas",
+      "Qt. CUB",
+      "Entrada (25%)",
+      "30 parcelas mensais",
+      "4 parcelas semestrais",
+      "Valor"
+    ],
+    "rows": [
+      [
+        "802",
+        "Garcia",
+        "155 m²",
+        "254 m²",
+        "3",
+        "459,90",
+        "R$ 365.959,68",
+        "R$ 26.837,04",
+        "R$ 73.191,94",
+        "R$ 1.463.838,71"
+      ],
+      [
+        "502",
+        "Garcia",
+        "155 m²",
+        "270 m²",
+        "3",
+        "438,00",
+        "R$ 348.533,03",
+        "R$ 25.559,09",
+        "R$ 69.706,61",
+        "R$ 1.394.132,10"
+      ],
+      [
+        "501",
+        "Centro",
+        "155 m²",
+        "270 m²",
+        "3",
+        "448,00",
+        "R$ 356.490,40",
+        "R$ 26.142,63",
+        "R$ 71.298,08",
+        "R$ 1.425.961,60"
+      ],
+      [
+        "402",
+        "Garcia",
+        "155 m²",
+        "270 m²",
+        "3",
+        "432,00",
+        "R$ 343.758,60",
+        "R$ 25.208,96",
+        "R$ 68.751,72",
+        "R$ 1.375.034,40"
+      ],
+      [
+        "401",
+        "Centro",
+        "155 m²",
+        "270 m²",
+        "3",
+        "442,00",
+        "R$ 351.715,98",
+        "R$ 25.792,50",
+        "R$ 70.343,20",
+        "R$ 1.406.863,90"
+      ],
+      [
+        "302",
+        "Garcia",
+        "155 m²",
+        "270 m²",
+        "3",
+        "426,00",
+        "R$ 338.984,18",
+        "R$ 24.858,84",
+        "R$ 67.796,84",
+        "R$ 1.355.936,70"
+      ],
+      [
+        "202",
+        "Garcia",
+        "155 m²",
+        "270 m²",
+        "3",
+        "420,00",
+        "R$ 334.209,75",
+        "R$ 24.508,72",
+        "R$ 66.841,95",
+        "R$ 1.336.839,00"
+      ],
+      [
+        "201",
+        "Centro",
+        "155 m²",
+        "270 m²",
+        "3",
+        "430,00",
+        "R$ 342.167,13",
+        "R$ 25.092,26",
+        "R$ 68.433,43",
+        "R$ 1.368.668,50"
+      ],
+      [
+        "102",
+        "Garcia",
+        "180 m²",
+        "290 m²",
+        "3",
+        "465,00",
+        "R$ 370.017,94",
+        "R$ 27.134,65",
+        "R$ 74.003,59",
+        "R$ 1.480.071,75"
+      ]
+    ],
+    "note": "Ed. Alameda Sky, da Raymundi, na Alameda Rio Branco, Jardim Blumenau — tabela de novembro/2026, entrega prevista em dezembro/2029: 9 unidades disponíveis (o 301 foi vendido). Dois apartamentos por andar, de frente para o Garcia (final 2) ou para o Centro (final 1), todos com 4 suítes e 3 vagas. Os aptos de 155 m² privativos têm 270 m² de área total, menos o 802, com 254 m²; o 102 tem 180 m² privativos e 290 m² de área total. Empreendimento por administração, com SPE própria e valores em CUB: valor = quantidade de CUB × CUB do mês (R$ 3.182,95 em novembro/2026), corrigido todo mês pela variação positiva do CUB/SC. Condição: entrada de 25% + 55% em 30 parcelas mensais + 20% em 4 parcelas semestrais, que somam o valor com diferença de no máximo R$ 0,15 (arredondamento das parcelas).",
+    "summary": {
+      "tipoDefault": "Apartamento",
+      "situacao": "Disponível",
+      "bits": [
+        {
+          "pre": "Área privativa: ",
+          "col": 2
+        },
+        {
+          "pre": "Área total: ",
+          "col": 3
+        },
+        {
+          "pre": "Posição ",
+          "col": 1
+        },
+        {
+          "pre": "Vagas: ",
+          "col": 4
+        }
+      ],
+      "principal": {
+        "label": "Valor",
+        "col": 9
+      },
+      "parcelas": [
+        {
+          "label": "Entrada (25%)",
+          "col": 6
+        },
+        {
+          "label": "30 parcelas mensais",
+          "col": 7
+        },
+        {
+          "label": "4 parcelas semestrais",
+          "col": 8
+        }
+      ]
+    }
   }
 };
